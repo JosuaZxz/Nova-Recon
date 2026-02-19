@@ -2,8 +2,8 @@ name: Stealth Automated Recon (Unlimited)
 
 on:
   schedule:
-    - cron: '0 */1 * * *' # Jalan tiap 1 jam sekali (GRATIS/UNLIMITED)
-  workflow_dispatch: # Tombol manual
+    - cron: '0 */1 * * *' # Jalan tiap 1 jam sekali (Gratis/Unlimited karena Public)
+  workflow_dispatch:
 
 jobs:
   recon-job:
@@ -49,10 +49,10 @@ jobs:
             # 1. Cari Subdomain
             subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
             
-            # 2. Cek yang Hidup
-            cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
+            # 2. Cek yang Hidup & Catat IP Address (-ip)
+            cat "data/$program_name/subdomains.txt" | httpx -silent -ip -o "data/$program_name/active_hosts.txt"
             
-            # 3. Scan Celah (Nuclei)
+            # 3. Scan Celah Keamanan (Nuclei)
             nuclei -l "data/$program_name/active_hosts.txt" -tags exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
             
             # 4. Kirim ke AI & HackerOne Draft
