@@ -33,16 +33,18 @@ jobs:
           python-version: '3.9'
 
       - name: Install Python Dependencies
-        run: pip install google-generativeai
+        run: pip install google-generativeai requests
 
       - name: Run Multi-Program Recon
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          H1_USERNAME: ${{ secrets.H1_USERNAME }}
+          H1_API_KEY: ${{ secrets.H1_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
           for target_file in targets/*.txt; do
             program_name=$(basename "$target_file" .txt)
-            echo "--- Processing: $program_name ---"
+            echo "Processing program: $program_name"
             
             mkdir -p "data/$program_name"
             
@@ -50,6 +52,7 @@ jobs:
             cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
             nuclei -l "data/$program_name/active_hosts.txt" -t exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
             
+            # Jalankan AI & HackerOne Draft
             PROGRAM_NAME=$program_name python scripts/validate.py
             
             echo "$NOTIFY_CONF" > notify-config.yaml
@@ -70,5 +73,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add data/*
-          git commit -m "Auto-update Recon Data: $(date)" || echo "No changes to commit"
+          git commit -m "Auto-update Recon & Drafts: $(date)" || echo "No changes"
           git push
