@@ -1,36 +1,71 @@
-- name: Run Multi-Program Recon
+name: Automated Recon & AI Validation
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  recon-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '>=1.20'
+
+      - name: Install ProjectDiscovery Tools
+        run: |
+          go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+          go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+          go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+          go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+          echo "$HOME/go/bin" >> $GITHUB_PATH
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Python Dependencies
+        run: pip install google-generativeai
+
+      - name: Run Multi-Program Recon
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
-          # Loop semua file .txt di folder targets
           for target_file in targets/*.txt; do
-            # Ambil nama program (misal: paypal dari targets/paypal.txt)
             program_name=$(basename "$target_file" .txt)
             echo "Processing program: $program_name"
             
-            # Buat folder khusus untuk program tersebut
             mkdir -p "data/$program_name"
             
-            # 1. Subfinder (mencari subdomain)
             subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
-            
-            # 2. HTTPX (cek yang aktif)
             cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
-            
-            # 3. Nuclei (scan kerentanan)
-            # Output disimpan dengan nama program agar AI tahu ini punya siapa
             nuclei -l "data/$program_name/active_hosts.txt" -t exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
             
-            # 4. Jalankan AI Validation dengan passing Nama Program
-            # Kita kirim nama program sebagai environment variable
+            # Jalankan script AI
             PROGRAM_NAME=$program_name python scripts/validate.py
             
-            # 5. Kirim Notifikasi jika ada temuan AI
+            # Kirim Notifikasi
             if [ -f "data/$program_name/ai_findings.txt" ]; then
-              echo "Sending notification for $program_name..."
               echo "$NOTIFY_CONF" > notify-config.yaml
-              # Tambahkan label [PROGRAM NAME] di depan pesan
-              echo -e "Target: $program_name\n$(cat data/$program_name/ai_findings.txt)" | notify -config notify-config.yaml
+              echo -e "Target Program: $program_name\n" > temp_msg.txt
+              cat "data/$program_name/ai_findings.txt" >> temp_msg.txt
+              cat temp_msg.txt | notify -config notify-config.yaml
             fi
           done
+
+      - name: Save Results to Repo
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/*
+          git commit -m "Automated Recon Update: $(date)" || echo "No changes to commit"
+          git push
