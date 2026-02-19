@@ -44,27 +44,30 @@ jobs:
         run: |
           for target_file in targets/*.txt; do
             program_name=$(basename "$target_file" .txt)
-            echo "Processing program: $program_name"
+            echo "--- Processing: $program_name ---"
             
             mkdir -p "data/$program_name"
             
+            # 1. Subdomain Discovery
             subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
-            cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
-            nuclei -l "data/$program_name/active_hosts.txt" -t exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
             
-            # Jalankan AI & HackerOne Draft
+            # 2. Live Host Discovery
+            cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
+            
+            # 3. Nuclei Scan (FIXED: Menggunakan -tags agar tidak error)
+            nuclei -l "data/$program_name/active_hosts.txt" -tags exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
+            
+            # 4. AI Validation & HackerOne Draft
             PROGRAM_NAME=$program_name python scripts/validate.py
             
+            # 5. Notifikasi Telegram
             echo "$NOTIFY_CONF" > notify-config.yaml
-
             if [ -f "data/$program_name/high_findings.txt" ]; then
               (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
             fi
-
             if [ -f "data/$program_name/low_findings.txt" ]; then
               (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/low_findings.txt") | notify -config notify-config.yaml -id general_alerts
             fi
-            
             rm -f notify-config.yaml
           done
 
@@ -73,5 +76,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add data/*
-          git commit -m "Auto-update Recon & Drafts: $(date)" || echo "No changes"
+          git commit -m "Auto-recon update & H1 Drafts: $(date)" || echo "No changes"
           git push
