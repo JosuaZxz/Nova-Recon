@@ -70,11 +70,3 @@ jobs:
             fi
             rm -f notify-config.yaml
           done
-
-      - name: Save Results to Repository
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
-          git add data/*
-          git commit -m "Auto-recon update & H1 Drafts: $(date)" || echo "No changes"
-          git push
