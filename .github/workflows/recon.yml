@@ -2,8 +2,8 @@ name: Automated Recon & AI Validation
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *' # Berjalan otomatis setiap 6 jam
+  workflow_dispatch: # Bisa dijalankan manual dari tab Actions
 
 jobs:
   recon-job:
@@ -40,32 +40,50 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
+          # Loop setiap file target di folder targets/
           for target_file in targets/*.txt; do
             program_name=$(basename "$target_file" .txt)
-            echo "Processing program: $program_name"
+            echo "--- Processing Program: $program_name ---"
             
+            # Buat folder penyimpanan hasil per program
             mkdir -p "data/$program_name"
             
+            # 1. Subdomain Enumeration
             subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
+            
+            # 2. Check Live Hosts
             cat "data/$program_name/subdomains.txt" | httpx -silent -o "data/$program_name/active_hosts.txt"
+            
+            # 3. Nuclei Scan (Mencari celah keamanan)
+            # Menggunakan template default: exposures, misconfiguration, dan vulnerabilities
             nuclei -l "data/$program_name/active_hosts.txt" -t exposures,misconfiguration,vulnerabilities -jsonl -o "data/$program_name/nuclei_results.json"
             
-            # Jalankan script AI
+            # 4. AI Validation (Memanggil script python)
             PROGRAM_NAME=$program_name python scripts/validate.py
             
-            # Kirim Notifikasi
-            if [ -f "data/$program_name/ai_findings.txt" ]; then
-              echo "$NOTIFY_CONF" > notify-config.yaml
-              echo -e "Target Program: $program_name\n" > temp_msg.txt
-              cat "data/$program_name/ai_findings.txt" >> temp_msg.txt
-              cat temp_msg.txt | notify -config notify-config.yaml
+            # Persiapkan file config notify
+            echo "$NOTIFY_CONF" > notify-config.yaml
+
+            # 5. Notifikasi Grup A (P1 & P2 - Critical/High)
+            if [ -f "data/$program_name/high_findings.txt" ]; then
+              echo "Sending High Severity Alerts for $program_name..."
+              cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
             fi
+
+            # 6. Notifikasi Grup B (P3 & P4 - Medium/Low)
+            if [ -f "data/$program_name/low_findings.txt" ]; then
+              echo "Sending Low Severity Alerts for $program_name..."
+              cat "data/$program_name/low_findings.txt" | notify -config notify-config.yaml -id general_alerts
+            fi
+            
+            # Hapus file config sementara agar aman
+            rm notify-config.yaml
           done
 
-      - name: Save Results to Repo
+      - name: Save Results to Repository
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "GitHub Action Bot"
           git add data/*
-          git commit -m "Automated Recon Update: $(date)" || echo "No changes to commit"
+          git commit -m "Auto-update Recon Data: $(date)" || echo "No new changes to commit"
           git push
