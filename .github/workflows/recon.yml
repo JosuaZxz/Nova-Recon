@@ -2,7 +2,7 @@ name: Automation Recon (Every 20 Mins)
 
 on:
   schedule:
-    - cron: '*/20 * * * *' # JALAN SETIAP 20 MENIT (NONSTOP 24 JAM)
+    - cron: '*/10 * * * *' # JALAN SETIAP 10 MENIT (NONSTOP 24 JAM)
   workflow_dispatch: # Bisa dijalankan manual
 
 jobs:
