@@ -1,8 +1,8 @@
-name: Automated Recon (Fast & Furious)
+name: Sniper Recon (Every 20 Mins)
 
 on:
   schedule:
-    - cron: '0 */1 * * *'
+    - cron: '*/20 * * * *' # JALAN SETIAP 20 MENIT (72x Sehari!)
   workflow_dispatch:
 
 jobs:
@@ -33,45 +33,78 @@ jobs:
       - name: Install Python Dependencies
         run: pip install google-generativeai requests
 
-      - name: Run Multi-Program Recon
+      - name: Run Sniper Recon (One Shot)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           H1_USERNAME: ${{ secrets.H1_USERNAME }}
           H1_API_KEY: ${{ secrets.H1_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
-          # ACAK PERUSAHAAN BIAR GAK AIRBNB TERUS
-          for target_file in $(ls targets/*.txt | shuf); do
-            program_name=$(basename "$target_file" .txt)
-            echo "-----------------------------------------------"
-            echo "🔥 HUNTING STARTED: $program_name"
-            echo "-----------------------------------------------"
+          # 1. PILIH SATU TARGET ACAK
+          # shuf = ngacak, head -n 1 = ambil satu aja
+          target_file=$(ls targets/*.txt | shuf | head -n 1)
+          program_name=$(basename "$target_file" .txt)
+          
+          echo "=================================================="
+          echo "🎯 SNIPER TARGET: $program_name"
+          echo "⏰ Time: $(date)"
+          echo "=================================================="
+          
+          mkdir -p "data/$program_name"
+          
+          # 2. SUBFINDER (Mode: Sikat Habis tapi Silent)
+          # -silent: Biar terminal gak penuh sampah
+          # timeout 30m: Kalau 30 menit gak kelar, paksa berhenti biar lanjut
+          echo "[+] 🔍 Running Subfinder (Max 30m)..."
+          timeout 30m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" || echo "⚠️ Subfinder stopped by timeout"
+          
+          # Cek hasil: Kalau 0, langsung STOP mesin (Hemat waktu)
+          count_sub=$(wc -l < "data/$program_name/subdomains.txt")
+          echo "✅ Subfinder Done. Found: $count_sub subdomains."
+          
+          if [ "$count_sub" -gt 0 ]; then
+          
+            # 3. HTTPX (Mode: Cek Nyawa)
+            echo "[+] 🌐 Running HTTPX (Filtering Alive Hosts)..."
+            # -silent: Terminal bersih
+            timeout 45m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" || echo "⚠️ HTTPX stopped by timeout"
             
-            mkdir -p "data/$program_name"
+            count_live=$(wc -l < "data/$program_name/active_hosts.txt")
+            echo "✅ HTTPX Done. Live Targets: $count_live"
             
-            # 1. SUBFINDER
-            subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
+            if [ "$count_live" -gt 0 ]; then
             
-            # 2. HTTPX (Cepat)
-            cat "data/$program_name/subdomains.txt" | httpx -silent -ip -o "data/$program_name/active_hosts.txt"
+                # 4. NUCLEI (Mode: Los Dol + Info Progress)
+                echo "[+] ☢️ Running Nuclei (Deep Scan)..."
+                # -stats -si 60: INI PENTING! Dia bakal ngomong tiap 1 menit: "Masih jalan bos, progress 10%"
+                # Biar kamu tau dia gak stuck.
+                nuclei -l "data/$program_name/active_hosts.txt" \
+                  -tags exposure,misconfig,takeover,cve,tech \
+                  -c 50 -timeout 5 -retries 1 \
+                  -stats -si 60 \
+                  -silent \
+                  -jsonl -o "data/$program_name/nuclei_results.json"
+                
+                # 5. AI VALIDATION
+                echo "[+] 🧠 Asking Gemini AI..."
+                PROGRAM_NAME=$program_name python scripts/validate.py
+                
+                # 6. NOTIFIKASI
+                echo "$NOTIFY_CONF" > notify-config.yaml
+                if [ -f "data/$program_name/high_findings.txt" ]; then
+                  (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+                else
+                  echo "💤 Scan selesai. Tidak ada bug valid untuk dilapor."
+                fi
+                rm -f notify-config.yaml
             
-            # 3. NUCLEI (Bawa 6500+ Template, Gak Pake Rem, Anti-Stuck)
-            # -c 50: Buka 50 jalur paralel biar ngebut
-            # -timeout 5: Kalau server ngelag 5 detik, langsung buang/skip!
-            # -stats -si 60: Munculin progress tiap 1 menit di log
-            nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 5 -retries 1 -stats -si 60 -jsonl -o "data/$program_name/nuclei_results.json"
-            
-            # 4. VALIDASI AI
-            PROGRAM_NAME=$program_name python scripts/validate.py
-            
-            # 5. NOTIFIKASI TELEGRAM
-            echo "$NOTIFY_CONF" > notify-config.yaml
-            
-            # CEK APAKAH ADA DRAF BUG YANG DITEMUKAN
-            if [ -f "data/$program_name/high_findings.txt" ]; then
-              (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+            else
+                echo "❌ HTTPX selesai tapi 0 website yang hidup. Target ini mati suri."
             fi
-            
-            # Bersihkan config
-            rm -f notify-config.yaml
-          done
+          else
+            echo "❌ Subfinder selesai tapi 0 subdomain. Target ini kosong."
+          fi
+          
+          echo "=================================================="
+          echo "🏁 MISSION COMPLETE: $program_name"
+          echo "=================================================="
