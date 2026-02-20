@@ -1,8 +1,8 @@
-name: Automated Recon (Pure Power)
+name: Automated Recon (Fast & Furious)
 
 on:
   schedule:
-    - cron: '0 */1 * * *' # Jalan tiap 1 jam
+    - cron: '0 */1 * * *'
   workflow_dispatch:
 
 jobs:
@@ -40,6 +40,7 @@ jobs:
           H1_API_KEY: ${{ secrets.H1_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
+          # ACAK PERUSAHAAN BIAR GAK AIRBNB TERUS
           for target_file in $(ls targets/*.txt | shuf); do
             program_name=$(basename "$target_file" .txt)
             echo "-----------------------------------------------"
@@ -48,28 +49,29 @@ jobs:
             
             mkdir -p "data/$program_name"
             
-            # 1. SUBFINDER (Mode: Sedot Semua)
-            # -all: Ambil dari semua sumber
-            # Gak pake timeout, biar dia selesaiin tugasnya mau berapa ribu pun.
+            # 1. SUBFINDER
             subfinder -dL "$target_file" -all -o "data/$program_name/subdomains.txt"
             
-            # 2. HTTPX (Mode: Cek Nyawa)
-            # Gak pake User-Agent Chrome biar koneksi lebih stabil/cepat default.
+            # 2. HTTPX (Cepat)
             cat "data/$program_name/subdomains.txt" | httpx -silent -ip -o "data/$program_name/active_hosts.txt"
             
-            # 3. NUCLEI (Mode: Ganas)
-            # Tags lengkap: exposure, misconfig, takeover, cve, tech
-            # HAPUS RATE LIMIT (-rl). Biarkan dia lari secepat koneksi GitHub.
-            nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -jsonl -o "data/$program_name/nuclei_results.json"
+            # 3. NUCLEI (Bawa 6500+ Template, Gak Pake Rem, Anti-Stuck)
+            # -c 50: Buka 50 jalur paralel biar ngebut
+            # -timeout 5: Kalau server ngelag 5 detik, langsung buang/skip!
+            # -stats -si 60: Munculin progress tiap 1 menit di log
+            nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 5 -retries 1 -stats -si 60 -jsonl -o "data/$program_name/nuclei_results.json"
             
-            # 4. VALIDASI AI (Pake script Python kamu yang sekarang)
+            # 4. VALIDASI AI
             PROGRAM_NAME=$program_name python scripts/validate.py
             
             # 5. NOTIFIKASI TELEGRAM
             echo "$NOTIFY_CONF" > notify-config.yaml
-            if [ -f "data/$program_name/high_findings.txt" ]; then
+            
+            # CEK APAKAH ADA DRAF BUG YANG DITEMUKAN
+            if; then
               (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
             fi
-            # Hapus config biar bersih buat target selanjutnya
+            
+            # Bersihkan config
             rm -f notify-config.yaml
           done
