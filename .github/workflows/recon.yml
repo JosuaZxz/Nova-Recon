@@ -68,7 +68,7 @@ jobs:
             echo "$NOTIFY_CONF" > notify-config.yaml
             
             # CEK APAKAH ADA DRAF BUG YANG DITEMUKAN
-            if; then
+            if [ -f "data/$program_name/high_findings.txt" ]; then
               (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
             fi
             
