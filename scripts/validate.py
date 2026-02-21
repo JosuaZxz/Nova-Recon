@@ -124,7 +124,7 @@ The vulnerability was detected using an automated scanner (Nuclei) with template
         ai_out = res.json()['choices'][0]['message']['content'].strip()
 
         if "NO_VALID_BUG" in ai_out: return
-        match = re.search(r'\[.*\]', ai_out, re.DOTALL)
+        match = re.search(r'\[.*\]|\{.*\}', ai_out, re.DOTALL)
         if match:
             reports = json.loads(match.group(0), strict=False)
             final_high = ""
