@@ -54,28 +54,36 @@ jobs:
           
           mkdir -p "data/$program_name"
 
-          # --- 2. LOGIKA KHUSUS MODE TEST (PASTI BUNYI) ---
-          if [ "$program_name" == "00_test" ]; then
-            echo "[!] TEST MODE: Injecting Fake Critical Bug for AI..."
-            echo '[{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}]' > "data/$program_name/nuclei_results.json"
-            
-            echo "[+] Running AI Validation (Test)..."
-            PROGRAM_NAME=$program_name python scripts/validate.py
-            
-            # Kirim Notif Sirine (Grup Critical)
-            if [ -f "data/$program_name/high_findings.txt" ]; then
-              echo "[!] Sending Test Alert to CRITICAL Group..."
-              MSG=$(cat data/$program_name/high_findings.txt)
-              curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG"
-            fi
-            
-            # Kirim ZIP (Grup Data)
-            echo "[!] Sending Test ZIP to DATA Group..."
-            zip -j "${program_name}_data.zip" data/$program_name/*
-            curl -F chat_id="$TG_DATA" -F document=@"${program_name}_data.zip" -F caption="📦 DATABASE TEST: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
-            rm -f "${program_name}_data.zip"
-            
-            echo "✅ TEST COMPLETED."
+          # --- 2. LOGIKA KHUSUS MODE TEST API HACKERONE (PASTI BUNYI & MASUK DRAFT) ---
+          # Kita pake nama program 'hackerone' karena ini handle asli di HackerOne
+          target_file="targets/hackerone.txt"
+          program_name="hackerone"
+          
+          echo "=================================================="
+          echo "🎯 REAL API TESTING: $program_name"
+          echo "=================================================="
+          
+          mkdir -p "data/$program_name"
+
+          # SUNTIK BUG PALSU KE TARGET HACKERONE (Biar AI mau bikin draft asli)
+          echo '[{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"https://hackerone.com/test-logic","ip":"104.16.99.163"}]' > "data/$program_name/nuclei_results.json"
+          
+          echo "[+] Running AI Validation (Real API Call to H1)..."
+          PROGRAM_NAME=$program_name python scripts/validate.py
+          
+          # Kirim Notif ke Telegram (Grup Critical)
+          if [ -f "data/$program_name/high_findings.txt" ]; then
+            echo "[!] Sending Real Alert to Telegram..."
+            MSG=$(cat data/$program_name/high_findings.txt)
+            curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG"
+          fi
+          
+          # Kirim ZIP Database ke Telegram (Grup Data)
+          zip -j "${program_name}_data.zip" data/$program_name/*
+          curl -F chat_id="$TG_DATA" -F document=@"${program_name}_data.zip" -F caption="📦 REAL API TEST: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+          rm -f "${program_name}_data.zip"
+          
+          echo "✅ REAL API TEST COMPLETED."
           
           else
             # --- 3. LOGIKA BERBURU ASLI (REAL HUNTING) ---
