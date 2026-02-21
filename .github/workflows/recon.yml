@@ -2,7 +2,7 @@ name: Automation Recon (No-Stuck)
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Nembak tiap 5 menit (Unlimited)
+    - cron: '*/5 * * * *' 
   workflow_dispatch:
 
 jobs:
@@ -42,23 +42,12 @@ jobs:
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
         run: |
-          # --- 1. CONFIG NOTIFY TELEGRAM ---
-          cat <<EOF > notify-config.yaml
-          telegram:
-            - id: "critical_alerts"
-              telegram_apikey: "$TG_TOKEN"
-              telegram_chatid: "$TG_CRIT"
-              format: "{{data}}"
-          EOF
-
-          # --- 2. PILIH TARGET (MODE TEST HACKERONE) ---
-          # Nanti hapus 2 baris ini dan aktifkan baris shuf di bawahnya untuk tempur asli
+          # --- 1. TARGET (PAKAI HACKERONE UNTUK TES KONEKSI ASLI) ---
           target_file="targets/hackerone.txt"
           program_name="hackerone"
           
-          # BARIS TEMPUR ASLI (Aktifkan ini nanti):
-          # target_file=\$(ls targets/*.txt | shuf | head -n 1)
-          # program_name=\$(basename "\$target_file" .txt)
+          # target_file=$(ls targets/*.txt | shuf | head -n 1)
+          # program_name=$(basename "$target_file" .txt)
           
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
@@ -66,45 +55,40 @@ jobs:
           
           mkdir -p "data/$program_name"
 
-          # --- 3. LOGIKA TES VS HUNT ---
+          # --- 2. LOGIKA TES KHUSUS (SUNTIK 2 BUG: HIGH & LOW) ---
           if [ "$program_name" == "hackerone" ]; then
-            echo "[!] TEST MODE: Injecting fake bug for REAL API test..."
-            echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"https://hackerone.com/test-logic","ip":"104.16.99.163"}' > "data/$program_name/nuclei_results.json"
+            echo "[!] TEST MODE: Injecting 2 Bugs (High & Low) for API test..."
+            # Kita suntik 2 baris: 1 Critical, 1 Medium
+            echo '{"template-id":"fake-critical","info":{"severity":"critical"},"matched-at":"https://hackerone.com/critical","ip":"1.1.1.1"}' > "data/$program_name/nuclei_results.json"
+            echo '{"template-id":"fake-medium","info":{"severity":"medium"},"matched-at":"https://hackerone.com/medium","ip":"2.2.2.2"}' >> "data/$program_name/nuclei_results.json"
             
             PROGRAM_NAME=$program_name python scripts/validate.py
           else
-            echo "[+] Step 1: Subfinder Starting..."
+            # MODE HUNTING ASLI
             timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1
-            
             if [ -s "data/$program_name/subdomains.txt" ]; then
-              echo "[+] Step 2: HTTPX Live Check..."
               timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1
-              
               if [ -s "data/$program_name/active_hosts.txt" ]; then
-                echo "[+] Step 3: Nuclei Deep Scan..."
                 timeout 2h nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 3 -retries 0 -stats -si 60 -silent -jsonl -o "data/$program_name/nuclei_results.json"
-                
-                echo "[+] Step 4: AI Analysis..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
               fi
             fi
           fi
 
-          # --- 4. KIRIM NOTIFIKASI TELEGRAM ---
+          # --- 3. PENGIRIMAN NOTIFIKASI (PAKAI CURL AGAR PASTI JALAN) ---
           if [ -f "data/$program_name/high_findings.txt" ]; then
-            echo "[!] Sending Alert to Group A..."
-            cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
+            echo "[!] Sending CRITICAL Alert to Group A..."
+            MSG=$(cat data/$program_name/high_findings.txt)
+            curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG"
           fi
           
           if [ -f "data/$program_name/low_findings.txt" ]; then
-            echo "[!] Sending Alert to Group B..."
+            echo "[!] Sending GENERAL Alert to Group B..."
             MSG=$(cat data/$program_name/low_findings.txt)
             curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_GEN" -d "text=$MSG"
           fi
 
-          # --- 5. BACKUP DATABASE ZIP (Grup C) ---
-          zip_name="${program_name}_data.zip"
-          zip -j "$zip_name" data/$program_name/*
-          curl -v -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
-          
-          rm -f notify-config.yaml "$zip_name"
+          # --- 4. BACKUP DATA (Grup C) ---
+          zip -j "${program_name}_data.zip" data/$program_name/*
+          curl -v -F chat_id="$TG_DATA" -F document=@"${program_name}_data.zip" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+          rm -f "${program_name}_data.zip"
