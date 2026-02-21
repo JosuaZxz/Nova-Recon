@@ -127,6 +127,7 @@ The vulnerability was detected using an automated scanner (Nuclei) with template
         match = re.search(r'\[.*\]|\{.*\}', ai_out, re.DOTALL)
         if match:
             reports = json.loads(match.group(0), strict=False)
+            if isinstance(reports, dict): reports = [reports]
             final_high = ""
             final_low = ""
             for rep in reports:
