@@ -2,7 +2,7 @@ name: Automation Recon (No-Stuck)
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Nembak tiap 5 menit (Unlimited)
+    - cron: '*/5 * * * *' # Cek tiap 5 menit
   workflow_dispatch:
 
 jobs:
@@ -38,81 +38,86 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           H1_USERNAME: ${{ secrets.H1_USERNAME }}
           H1_API_KEY: ${{ secrets.H1_API_KEY }}
-          NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
           TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # --- 1. CONFIG NOTIFY (DIBUAT MENTOK KIRI AGAR TIDAK ERROR) ---
-          cat <<EOF > notify-config.yaml
-          ${{ secrets.NOTIFY_CONFIG }}
-          EOF
+          # --- 1. BIKIN CONFIG TELEGRAM OTOMATIS (ANTI ERROR) ---
+          # Kita tulis manual baris per baris biar gak ada masalah spasi/EOF
+          echo "telegram:" > notify-config.yaml
+          echo "  - id: \"critical_alerts\"" >> notify-config.yaml
+          echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
+          echo "    telegram_chatid: \"$TG_CHAT\"" >> notify-config.yaml
+          echo "    format: \"{{data}}\"" >> notify-config.yaml
+          
+          # Cek apakah file berhasil dibuat (Debugging)
+          ls -l notify-config.yaml
 
-          # --- 2. PILIH TARGET (RANDOM SNIPER MODE) ---
+          # --- 2. PILIH TARGET (TES MODE: 00_test) ---
           target_file="targets/00_test.txt"
           program_name=$(basename "$target_file" .txt)
           
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
-          echo "⏰ START TIME: $(date)"
           echo "=================================================="
           
           mkdir -p "data/$program_name"
 
-          # 3. INJEKSI BUG PALSU
-          echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
+          # --- 3. LOGIKA TES ---
+          if [ "$program_name" == "00_test" ]; then
+            echo "[!] TEST MODE: Injecting fake bug..."
+            echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
+            
+            echo "[!] Running AI Validation..."
+            PROGRAM_NAME=$program_name python scripts/validate.py
+            
+            # Kirim Notif (Menggunakan config yang baru dibuat di atas)
+            if [ -f "data/$program_name/high_findings.txt" ]; then
+              echo "[!] Sending Telegram Alert..."
+              cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
+            else
+              echo "[!] File high_findings.txt not found!"
+            fi
+            
+            # Backup ZIP
+            zip -j "${program_name}_data.zip" data/$program_name/*
+            curl -F document=@"${program_name}_data.zip" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE TEST: ${program_name^^}"
+            rm -f "${program_name}_data.zip"
+            echo "✅ Test completed."
           
-          # 4. PANGGIL AI
-          echo "[+] Running AI Validation..."
-          PROGRAM_NAME=$program_name python scripts/validate.py
-          
-          # 5. KIRIM NOTIFIKASI BUG (Sirine)
-          if [ -f "data/$program_name/high_findings.txt" ]; then
-            cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
-          fi
+          else
+            # --- 4. LOGIKA ASLI (BERBURU) ---
+            echo "[+] Step 1: Subfinder (Max 20m)..."
+            timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1
+            
+            count_sub=$(wc -l < "data/$program_name/subdomains.txt" || echo 0)
+            
+            if [ "$count_sub" -gt 0 ]; then
+              echo "[+] Step 2: HTTPX Live Check (Max 30m)..."
+              timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1
+              
+              count_live=$(wc -l < "data/$program_name/active_hosts.txt" || echo 0)
+              
+              if [ "$count_live" -gt 0 ]; then
+                echo "[+] Step 3: Nuclei Deep Scan (Max 2h)..."
+                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 3 -retries 0 -stats -si 60 -silent -jsonl -o "data/$program_name/nuclei_results.json"
+                
+                echo "[+] Step 4: AI Validation..."
+                PROGRAM_NAME=$program_name python scripts/validate.py
+                
+                if [ -f "data/$program_name/high_findings.txt" ]; then
+                  (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+                fi
 
-          # 6. KIRIM ZIP DATABASE (Pake format URL yang lebih aman)
-          zip_name="${program_name}_data.zip"
-          zip -j "$zip_name" data/$program_name/*
-          
-          echo "[+] Sending Backup to Telegram..."
-          # Kita pake tanda kutip ganda di variabel biar aman
-          curl -v -F document=@"$zip_name" "https://api.telegram.org/bot${TG_TOKEN}/sendDocument?chat_id=${TG_CHAT}&caption=📦_DATABASE_${program_name^^}"
-          
-          rm -f notify-config.yaml "$zip_name"
-          
-          # 3. RECON & SCAN (Silent & Fast)
-          echo "[+] Step 1: Subfinder (Max 20m)..."
-          timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1
-          
-          count_sub=$(wc -l < "data/$program_name/subdomains.txt" || echo 0)
-          echo "   ✅ Found: $count_sub subdomains"
-          
-          if [ "$count_sub" -gt 0 ]; then
-            echo "[+] Step 2: HTTPX Live Check (Max 30m)..."
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1
-            
-            count_live=$(wc -l < "data/$program_name/active_hosts.txt" || echo 0)
-            echo "   ✅ Live Targets: $count_live"
-            
-            if [ "$count_live" -gt 0 ]; then
-              echo "[+] Step 3: Nuclei Deep Scan (Max 2h)..."
-              timeout 2h nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 3 -retries 0 -stats -si 60 -silent -jsonl -o "data/$program_name/nuclei_results.json"
-              
-              echo "[+] Step 4: AI Analysis & H1 Drafting..."
-              PROGRAM_NAME=$program_name python scripts/validate.py
-              
-              if [ -f "data/$program_name/high_findings.txt" ]; then
-                (echo -e "🚨 BUG DISCOVERED: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+                # Backup ZIP
+                zip_name="${program_name}_data.zip"
+                zip -j "$zip_name" data/$program_name/*
+                curl -F document=@"$zip_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE: ${program_name^^}"
+                rm -f "$zip_name"
               fi
-
-              # BACKUP DATABASE ZIP KE TELEGRAM
-              zip_name="${program_name}_data.zip"
-              zip -j "$zip_name" data/$program_name/*
-              curl -F document=@"$zip_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE: ${program_name^^}"
-              rm -f "$zip_name"
             fi
           fi
 
+          # Hapus config
           rm -f notify-config.yaml
           echo "=================================================="
           echo "🏁 MISSION FINISHED: $(date)"
