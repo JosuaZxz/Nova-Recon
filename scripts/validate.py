@@ -2,16 +2,16 @@ import os
 import json
 import requests
 import subprocess
+import re
 
 # --- [1. KONFIGURASI] ---
-# Kita ambil GROQ_API_KEY sekarang, bukan Gemini lagi
 AI_KEY = os.environ.get("GROQ_API_KEY")
 H1_USER = os.environ.get("H1_USERNAME")
 H1_API_KEY = os.environ.get("H1_API_KEY")
 PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
 
 def get_verification_context(data):
-    """Mengecek bukti teknis (IP & DNS) secara real-time"""
+    """Mengecek bukti teknis secara real-time"""
     host = data.get("host", "")
     domain = host.replace("https://", "").replace("http://", "").split(":")[0]
     context = {
@@ -20,84 +20,85 @@ def get_verification_context(data):
         "template_id": data.get("template-id", "Unknown"),
         "matched_at": data.get("matched-at", "Unknown")
     }
-    # Cek DNS CNAME jika terdeteksi indikasi Subdomain Takeover
     if "takeover" in data.get("template-id", "").lower():
         try:
             cname = subprocess.check_output(['dig', 'CNAME', '+short', domain], timeout=5).decode('utf-8').strip()
             context["dns_cname"] = cname if cname else "No CNAME found"
-        except: context["dns_cname"] = "DNS lookup failed"
+        except: context["dns_cname"] = "Failed"
     return context
 
 def create_h1_draft(title, description, impact):
-    """Mengirim laporan valid langsung ke Draft HackerOne"""
+    """Kirim draf laporan ke HackerOne"""
     url = "https://api.hackerone.com/v1/hackers/report_intents"
     auth = (H1_USER, H1_API_KEY)
-    payload = {"data": {"type": "report-intent", "attributes": {"team_handle": PROGRAM_NAME, "title": title, "description": description, "impact": impact}}}
+    payload = {
+        "data": {
+            "type": "report-intent",
+            "attributes": {
+                "team_handle": PROGRAM_NAME,
+                "title": title,
+                "description": description,
+                "impact": impact
+            }
+        }
+    }
     try:
-        response = requests.post(url, auth=auth, headers={"Accept": "application/json"}, json=payload)
-        return response.json()['data']['id'] if response.status_code == 201 else None
+        res = requests.post(url, auth=auth, headers={"Accept": "application/json"}, json=payload)
+        return res.json()['data']['id'] if res.status_code == 201 else None
     except: return None
 
 def validate_findings():
-    """Proses Triage menggunakan GROQ (Llama 3.3 70B)"""
-    results_path = f'data/{PROGRAM_NAME}/nuclei_results.json'
-    if not os.path.exists(results_path) or os.stat(results_path).st_size == 0:
+    """Proses Triage AI menggunakan GROQ (Anti-Error Version)"""
+    path = f'data/{PROGRAM_NAME}/nuclei_results.json'
+    if not os.path.exists(path) or os.stat(path).st_size == 0:
         return
 
     findings_list = []
-    with open(results_path, 'r') as f:
+    with open(path, 'r') as f:
         for i, line in enumerate(f):
-            if i < 25: 
-                raw_data = json.loads(line)
-                raw_data["verification_context"] = get_verification_context(raw_data)
-                findings_list.append(raw_data)
+            if i < 25:
+                data = json.loads(line)
+                data["verification_context"] = get_verification_context(data)
+                findings_list.append(data)
 
-    # PROMPT TERBAIK UNTUK LLAMA 3.3
-    prompt = f"""
-    ROLE: Senior Security Researcher & Triage Lead.
-    PROGRAM: {PROGRAM_NAME}
-    DATA: {json.dumps(findings_list)}
-
-    TASK:
-    1. ANALYZE: Filter out false positives and low-impact noise.
-    2. CONSOLIDATE: If multiple assets have the SAME bug, combine them into ONE single report.
-    3. LABEL: If the bug is High/Critical, start the title with [URGENT].
-    4. POC: Provide clear technical steps (1, 2, 3) to reproduce.
-    5. INFO: Include Resolved IP and DNS CNAME.
-
-    FORMAT: Return ONLY a raw JSON with keys: "title", "description", "impact". 
-    If nothing is truly valid, return: NO_VALID_BUG
-    """
+    # PROMPT DENGAN INSTRUKSI FORMAT KETAT
+    prompt = f"Role: Senior H1 Triage. Program: {PROGRAM_NAME}. Data: {json.dumps(findings_list)}. " \
+             "Task: 1. Filter false positives. 2. Consolidate same bugs. 3. Title with [URGENT] if Critical. " \
+             "4. Write pro report in English. Output ONLY a valid JSON object with keys: title, description, impact. " \
+             "No conversational text. If no valid bug, return ONLY: NO_VALID_BUG"
 
     try:
-        # PANGGIL API GROQ
         url = "https://api.groq.com/openai/v1/chat/completions"
         headers = {"Authorization": f"Bearer {AI_KEY}", "Content-Type": "application/json"}
         data = {
-            "model": "llama-3.3-70b-versatile", # Model paling cerdas di Groq
+            "model": "llama-3.3-70b-versatile",
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.2
+            "temperature": 0.1 # Suhu rendah agar AI lebih patuh format
         }
         
         response = requests.post(url, headers=headers, json=data)
         ai_output = response.json()['choices'][0]['message']['content'].strip()
 
         if "NO_VALID_BUG" in ai_output:
-            print(f"[{PROGRAM_NAME}] AI Analysis: Safe.")
+            print(f"[{PROGRAM_NAME}] Safe target.")
             return
 
-        # Parsing JSON dari AI
-        clean_json = ai_output.replace('```json', '').replace('```', '').strip()
-        report_data = json.loads(clean_json)
-        
-        # Kirim ke HackerOne
-        draft_id = create_h1_draft(report_data['title'], report_data['description'], report_data['impact'])
-        
-        if draft_id:
-            # Notifikasi Telegram
-            msg = f"💎 **VALID BUG FOUND!**\n\nTarget: {PROGRAM_NAME.upper()}\nDraft ID: `{draft_id}`\nTitle: {report_data['title']}"
-            with open(f'data/{PROGRAM_NAME}/high_findings.txt', 'w') as f:
-                f.write(msg)
+        # --- [PROSES PEMBERSIHAN JSON SUPER KUAT] ---
+        # 1. Ambil teks di antara kurung kurawal { ... }
+        json_match = re.search(r'\{.*\}', ai_output, re.DOTALL)
+        if json_match:
+            clean_json = json_match.group(0)
+            # 2. Gunakan strict=False untuk mengabaikan karakter kontrol (Enter/Tab) yang rusak
+            report_data = json.loads(clean_json, strict=False)
+            
+            draft_id = create_h1_draft(report_data['title'], report_data['description'], report_data['impact'])
+            
+            if draft_id:
+                msg = f"💎 **BUG FOUND (GROQ)!**\n🎯 Target: {PROGRAM_NAME.upper()}\n🆔 Draft ID: `{draft_id}`\n📝 Title: {report_data['title']}"
+                with open(f'data/{PROGRAM_NAME}/high_findings.txt', 'w') as f:
+                    f.write(msg)
+        else:
+            print("AI didn't return valid JSON format.")
                 
     except Exception as e:
         print(f"AI/Process Error: {e}")
