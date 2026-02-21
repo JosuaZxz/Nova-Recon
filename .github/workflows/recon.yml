@@ -2,7 +2,7 @@ name: Automation Recon (No-Stuck)
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Cek tiap 5 menit
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-          go install -v github.com/projectdiscovery/notify/cmd/notify@latest
+          # Kita HAPUS notify karena rewel
           echo "$HOME/go/bin" >> $GITHUB_PATH
 
       - name: Set up Python
@@ -41,20 +41,10 @@ jobs:
           TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # --- 1. BIKIN CONFIG TELEGRAM OTOMATIS (ANTI ERROR) ---
-          # Kita tulis manual baris per baris biar gak ada masalah spasi/EOF
-          echo "telegram:" > notify-config.yaml
-          echo "  - id: \"critical_alerts\"" >> notify-config.yaml
-          echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
-          echo "    telegram_chatid: \"$TG_CHAT\"" >> notify-config.yaml
-          echo "    format: \"{{data}}\"" >> notify-config.yaml
-          
-          # Cek apakah file berhasil dibuat (Debugging)
-          ls -l notify-config.yaml
-
-          # --- 2. PILIH TARGET (TES MODE: 00_test) ---
+          # --- 1. PILIH TARGET (TEST MODE) ---
+          # Nanti kembalikan baris ini ke mode shuf kalau tes sudah sukses
           target_file="targets/00_test.txt"
-          program_name=$(basename "$target_file" .txt)
+          program_name="00_test"
           
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
@@ -62,7 +52,7 @@ jobs:
           
           mkdir -p "data/$program_name"
 
-          # --- 3. LOGIKA TES ---
+          # --- 2. LOGIKA MODE TES ---
           if [ "$program_name" == "00_test" ]; then
             echo "[!] TEST MODE: Injecting fake bug..."
             echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
@@ -70,12 +60,16 @@ jobs:
             echo "[!] Running AI Validation..."
             PROGRAM_NAME=$program_name python scripts/validate.py
             
-            # Kirim Notif (Menggunakan config yang baru dibuat di atas)
+            # KIRIM NOTIFIKASI PAKAI CURL (ANTI-ERROR)
             if [ -f "data/$program_name/high_findings.txt" ]; then
-              echo "[!] Sending Telegram Alert..."
-              cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
-            else
-              echo "[!] File high_findings.txt not found!"
+              echo "[!] Sending Telegram Alert via CURL..."
+              # Baca isi file pesan
+              MSG_CONTENT=$(cat data/$program_name/high_findings.txt)
+              # Kirim langsung ke API Telegram (Gak butuh config file)
+              curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" \
+                -d "chat_id=$TG_CHAT" \
+                -d "text=$MSG_CONTENT" \
+                -d "parse_mode=Markdown"
             fi
             
             # Backup ZIP
@@ -85,7 +79,7 @@ jobs:
             echo "✅ Test completed."
           
           else
-            # --- 4. LOGIKA ASLI (BERBURU) ---
+            # --- 3. LOGIKA BERBURU ASLI ---
             echo "[+] Step 1: Subfinder (Max 20m)..."
             timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1
             
@@ -104,8 +98,13 @@ jobs:
                 echo "[+] Step 4: AI Validation..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
                 
+                # KIRIM NOTIFIKASI PAKAI CURL (ANTI-ERROR)
                 if [ -f "data/$program_name/high_findings.txt" ]; then
-                  (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+                  MSG_CONTENT=$(cat data/$program_name/high_findings.txt)
+                  curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" \
+                    -d "chat_id=$TG_CHAT" \
+                    -d "text=$MSG_CONTENT" \
+                    -d "parse_mode=Markdown"
                 fi
 
                 # Backup ZIP
@@ -117,8 +116,6 @@ jobs:
             fi
           fi
 
-          # Hapus config
-          rm -f notify-config.yaml
           echo "=================================================="
           echo "🏁 MISSION FINISHED: $(date)"
           echo "=================================================="
