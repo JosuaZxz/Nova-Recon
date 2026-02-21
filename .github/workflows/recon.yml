@@ -2,10 +2,9 @@ name: Automation Recon (No-Stuck)
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Frekuensi maksimal: Cek target tiap 30 menit
+    - cron: '*/30 * * * *' # Cek tiap 30 menit (Aman buat kuota AI)
   workflow_dispatch:
 
-# --- FITUR ANTI-TABRAKAN (Mencegah Error 429) ---
 concurrency:
   group: recon-group
   cancel-in-progress: false
@@ -37,99 +36,83 @@ jobs:
 
       - name: Install Python Dependencies
         run: pip install requests
-        
+
       - name: Run Predator Recon
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           H1_USERNAME: ${{ secrets.H1_USERNAME }}
           H1_API_KEY: ${{ secrets.H1_API_KEY }}
-          NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
           TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # 1. PILIH 1 TARGET SECARA ACAK
+          # --- 1. CONFIG NOTIFY (DIBUAT MENTOK KIRI AGAR TIDAK ERROR) ---
+          cat <<EOF > notify-config.yaml
+          ${{ secrets.NOTIFY_CONFIG }}
+          EOF
+
+          # --- 2. PILIH TARGET (PAKAI 00_test UNTUK PENGUJIAN) ---
           target_file="targets/00_test.txt"
           program_name=$(basename "$target_file" .txt)
           
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
-          echo "⏰ START TIME: $(date)"
           echo "=================================================="
           
           mkdir -p "data/$program_name"
 
-          # --- PERINTAH TES (URUTAN BENAR) ---
-            if [ "$program_name" == "00_test" ]; then
-              mkdir -p "data/$program_name"
-              echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
-              echo "[!] TEST MODE: Running AI..."
-              PROGRAM_NAME=$program_name python scripts/validate.py
-              
-              cat <<EOF > notify-config.yaml
-                        ${{ secrets.NOTIFY_CONFIG }}
-              EOF
-                
-              if [ -f "data/$program_name/high_findings.txt" ]; then
-                cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
-              fi
+          # --- 3. LOGIKA MODE TES (PASTI BUNYI) ---
+          if [ "$program_name" == "00_test" ]; then
+            echo "[!] TEST MODE: Injecting fake bug and forcing AI..."
+            echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
+            PROGRAM_NAME=$program_name python scripts/validate.py
+            
+            if [ -f "data/$program_name/high_findings.txt" ]; then
+              cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id critical_alerts
             fi
-          
-          # 2. SUBFINDER (Max 20m - Silent)
-          echo "[+] Step 1: Gathering Subdomains (Max 20m)..."
-          timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || echo "⚠️ Subfinder Timeout"
-          
-          count_sub=$(wc -l < "data/$program_name/subdomains.txt" || echo 0)
-          echo "   ✅ Found: $count_sub subdomains"
-          
-          if [ "$count_sub" -gt 0 ]; then
-          
-            # 3. HTTPX (Max 30m - Silent)
-            echo "[+] Step 2: Filtering Live Hosts (Max 30m)..."
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || echo "⚠️ HTTPX Timeout"
             
-            count_live=$(wc -l < "data/$program_name/active_hosts.txt" || echo 0)
-            echo "   ✅ Live Targets: $count_live"
+            # Backup ZIP Tes
+            zip -j "${program_name}_data.zip" data/$program_name/*
+            curl -F document=@"${program_name}_data.zip" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE TEST: ${program_name^^}"
+            rm -f "${program_name}_data.zip"
+            echo "✅ Test completed."
+          
+          else
+            # --- 4. LOGIKA BERBURU ASLI (OTOMATIS) ---
+            echo "[+] Step 1: Subfinder (Max 20m)..."
+            timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || echo "⚠️ Timeout"
             
-            if [ "$count_live" -gt 0 ]; then
+            count_sub=$(wc -l < "data/$program_name/subdomains.txt" || echo 0)
+            echo "   ✅ Found: $count_sub subdomains"
             
-                # 4. NUCLEI (Max 2 Jam - Silent with Progress Bar)
-                echo "[+] Step 3: Deep Scanning 6,500+ Templates (Max 2h)..."
-                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -tags exposure,misconfig,takeover,cve,tech \
-                  -c 50 -timeout 3 -retries 0 \
-                  -stats -si 60 \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || echo "⚠️ Nuclei Timeout"
+            if [ "$count_sub" -gt 0 ]; then
+              echo "[+] Step 2: HTTPX Live Check (Max 30m)..."
+              timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || echo "⚠️ Timeout"
+              
+              count_live=$(wc -l < "data/$program_name/active_hosts.txt" || echo 0)
+              echo "   ✅ Live Targets: $count_live"
+              
+              if [ "$count_live" -gt 0 ]; then
+                echo "[+] Step 3: Nuclei Deep Scan (Max 2h)..."
+                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve,tech -c 50 -timeout 3 -retries 0 -stats -si 60 -silent -jsonl -o "data/$program_name/nuclei_results.json" || echo "⚠️ Timeout"
                 
-                # 5. AI TRIAGE & DRAFTING
-                echo "[+] Step 4: AI Validation & H1 Drafting..."
+                echo "[+] Step 4: AI Validation..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
                 
-                # 6. TELEGRAM NOTIFICATION
-                cat <<EOF > notify-config.yaml
-                          ${{ secrets.NOTIFY_CONFIG }}
-                EOF
-                
-                if [[ -f "data/$program_name/high_findings.txt" ]]; then
-                  (echo -e "🎯 TARGET: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
-                else
-                  echo "💤 Putaran ini bersih. Tidak ada bug valid."
+                if [ -f "data/$program_name/high_findings.txt" ]; then
+                  (echo -e "🚨 BUG DISCOVERED: ${program_name^^}\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
                 fi
 
-                # --- [FITUR BACKUP DATA KE TELEGRAM] ---
-                # 1. Bungkus folder data menjadi file ZIP
+                # Backup Database ZIP
                 zip_name="${program_name}_data.zip"
                 zip -j "$zip_name" data/$program_name/*
-          
-                # 2. Kirim file ZIP ke Telegram (Grup Database)
-                curl -v -F document=@"$zip_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE: ${program_name^^}"
-          
-                # 3. Hapus file ZIP dari memori sementara agar bersih
+                curl -F document=@"$zip_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE: ${program_name^^}"
                 rm -f "$zip_name"
-                
-                rm -f notify-config.yaml
-            
+              fi
             fi
           fi
+
+          # Pembersihan akhir
+          rm -f notify-config.yaml
           echo "=================================================="
           echo "🏁 MISSION FINISHED: $(date)"
           echo "=================================================="
