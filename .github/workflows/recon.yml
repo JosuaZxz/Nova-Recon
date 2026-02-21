@@ -44,6 +44,8 @@ jobs:
           H1_USERNAME: ${{ secrets.H1_USERNAME }}
           H1_API_KEY: ${{ secrets.H1_API_KEY }}
           NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
+          TG_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           # 1. PILIH 1 TARGET SECARA ACAK
           target_file="targets/00_test.txt"
@@ -101,6 +103,18 @@ jobs:
                 else
                   echo "💤 Putaran ini bersih. Tidak ada bug valid."
                 fi
+
+                # --- [FITUR BACKUP DATA KE TELEGRAM] ---
+                # 1. Bungkus folder data menjadi file ZIP
+                zip_name="${program_name}_data.zip"
+                zip -j "$zip_name" data/$program_name/*
+          
+                # 2. Kirim file ZIP ke Telegram (Grup Database)
+                curl -v -F document=@"$zip_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument?chat_id=$TG_CHAT&caption=📦 DATABASE: ${program_name^^}"
+          
+                # 3. Hapus file ZIP dari memori sementara agar bersih
+                rm -f "$zip_name"
+                
                 rm -f notify-config.yaml
             
             fi
