@@ -5,17 +5,16 @@ import subprocess
 import re
 from datetime import datetime
 
-# --- KONFIGURASI ---
+# --- [1. KONFIGURASI] ---
 AI_KEY = os.environ.get("GROQ_API_KEY")
 H1_USER = os.environ.get("H1_USERNAME")
 H1_API_KEY = os.environ.get("H1_API_KEY")
 PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
 
 def get_verification_context(data):
-    """Ambil bukti teknis + Waktu Testing"""
+    """Ambil bukti teknis (IP & DNS)"""
     host = data.get("host", "")
     domain = host.replace("https://", "").replace("http://", "").split(":")[0]
-    
     current_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     
     context = {
@@ -28,14 +27,15 @@ def get_verification_context(data):
     if "takeover" in data.get("template-id", "").lower():
         try:
             cname = subprocess.check_output(['dig', 'CNAME', '+short', domain], timeout=5).decode('utf-8').strip()
-            context["cname"] = cname if cname else "No CNAME"
+            context["cname"] = cname if cname else "No CNAME found"
         except: context["dns_error"] = "Lookup failed"
     return context
 
 def create_h1_draft(title, description, impact, severity):
-    """Kirim Draf ke HackerOne"""
-    if PROGRAM_NAME == "00_test": return "TEST-ID-123"
-
+    """Kirim Draf ke HackerOne (Auto-Switch Handle untuk Tes)"""
+    # Jika program 'hackerone', maka API H1 akan menerima request kita
+    target_handle = "hackerone" if PROGRAM_NAME == "hackerone" else PROGRAM_NAME
+    
     url = "https://api.hackerone.com/v1/hackers/report_intents"
     auth = (H1_USER, H1_API_KEY)
     
@@ -43,7 +43,18 @@ def create_h1_draft(title, description, impact, severity):
     if severity.lower() in ["critical", "high"]: h1_sev = "high"
     elif severity.lower() == "medium": h1_sev = "medium"
     
-    payload = {"data": {"type": "report-intent", "attributes": {"team_handle": PROGRAM_NAME, "title": title, "description": description, "impact": impact, "severity_rating": h1_sev}}}
+    payload = {
+        "data": {
+            "type": "report-intent",
+            "attributes": {
+                "team_handle": target_handle,
+                "title": title,
+                "description": description,
+                "impact": impact,
+                "severity_rating": h1_sev
+            }
+        }
+    }
     
     try:
         res = requests.post(url, auth=auth, headers={"Accept": "application/json"}, json=payload)
@@ -51,63 +62,50 @@ def create_h1_draft(title, description, impact, severity):
     except: return None
 
 def validate_findings():
-    # --- [LOGIKA KHUSUS TES: DENGAN LABEL SEVERITY] ---
-    if PROGRAM_NAME == "00_test":
-        msg = "🚨 **[CRITICAL BUG FOUND]**\n🎯 Target: 00_TEST\n🆔 ID: `DRAFT-PRO-123`\n📝 Status: Jalur Notifikasi High Aktif!"
-        with open(f'data/{PROGRAM_NAME}/high_findings.txt', 'w') as f: f.write(msg)
-        return
-
+    print(f"🔍 Starting Professional Triage for: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
     findings = []
     with open(path, 'r') as f:
         for i, line in enumerate(f):
-            if i < 20: 
+            if i < 25: 
                 d = json.loads(line)
+                # --- FIX ERROR: 'list' object has no attribute 'get' ---
+                if isinstance(d, list): d = d[0]
+                
                 d["context"] = get_verification_context(d)
                 findings.append(d)
 
-    # --- TEMPLATE LAPORAN PRO (PAYPAL STYLE) ---
+    # --- TEMPLATE LAPORAN PRO PAYPAL ---
     report_template = """
 ## Vulnerability Details
-**Title:** {{Suggested Title}}
-**Severity:** {{Severity}}
-**Category:** {{Vulnerability Type}}
-**Affected Asset:** {{Vulnerable URL}}
+**Title:** {title}
+**Severity:** {severity}
+**Affected Asset:** {url}
 
 ## Summary
-{{Brief summary of the vulnerability}}
+{summary}
 
 ## Technical Details
-{{Detailed technical explanation, showing how the bug works}}
+{tech_details}
 
 ## Steps To Reproduce
-1. Open a terminal or browser.
-2. Access the following URL: {{Vulnerable URL}}
-3. Observe the response: {{Evidence from data}}
-
-## Proof of Concept
-The vulnerability was detected using an automated scanner (Nuclei) with template: {{Template ID}}.
-
-## Remediation
-**Recommendation:** Secure the affected endpoint immediately.
+1. Access {url}
+2. Observe match for template {template}
+3. IP Address identified: {ip}
 
 ## Testing Environment
-- **IP Address(es):** {{Target IP Address}}
-- **User Agent:** Mozilla/5.0 (Automated Scanner)
-- **Testing Timezone:** UTC
-- **Testing Period:** {{Scan Time}}
+- **IP:** {ip}
+- **Testing Period:** {time}
     """
 
     prompt = f"""
-    ROLE: Senior Triage. PROGRAM: {PROGRAM_NAME}. DATA: {json.dumps(findings)}
-    TASK: 
-    1. Filter noise. 
-    2. Write separate reports using the template below.
+    ROLE: Senior Triage Lead. PROGRAM: {PROGRAM_NAME}. DATA: {json.dumps(findings)}
+    TASK: 1. Filter false positives. 2. Write SEPARATE reports for EACH bug using the template below.
     3. Categorize as 'Critical', 'High', 'Medium', or 'Low' under key 'severity'.
     
-    TEMPLATE:
+    TEMPLATE TO FILL:
     {report_template}
 
     FORMAT: Return ONLY a raw JSON ARRAY:
@@ -128,16 +126,15 @@ The vulnerability was detected using an automated scanner (Nuclei) with template
         if match:
             reports = json.loads(match.group(0), strict=False)
             if isinstance(reports, dict): reports = [reports]
+            
             final_high = ""
             final_low = ""
             for rep in reports:
                 d_id = create_h1_draft(rep['title'], rep['description'], rep['impact'], rep['severity'])
                 if d_id:
-                    # --- [UPDATE: PENAMBAHAN LABEL SEVERITY DI NOTIFIKASI] ---
                     sev = rep.get('severity', 'Medium').upper()
                     emoji = "🚨" if sev in ["CRITICAL", "HIGH"] else "⚠️"
                     msg_line = f"{emoji} **[{sev} BUG FOUND]**\n🎯 {PROGRAM_NAME.upper()}\n🆔 Draft ID: `{d_id}`\n📝 Title: {rep['title']}\n\n"
-                    
                     if sev in ["CRITICAL", "HIGH"]: final_high += msg_line
                     else: final_low += msg_line
 
