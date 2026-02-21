@@ -12,7 +12,7 @@ PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
 
 # --- [BAGIAN 2: SETUP AI GEMINI 2.0 FLASH] ---
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 def get_verification_context(data):
     """Mengecek bukti teknis (IP & DNS) secara real-time"""
