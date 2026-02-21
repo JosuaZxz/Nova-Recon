@@ -58,12 +58,19 @@ jobs:
           
           mkdir -p "data/$program_name"
 
-          # --- PERINTAH TES (VERSI PAKSA) ---
+          # --- PERINTAH TES (VERSI PAKSA JALAN AI) ---
             if [ "$program_name" == "00_test" ]; then
               echo '{"template-id":"fake-critical-bug","info":{"severity":"critical"},"matched-at":"http://testphp.vulnweb.com/admin","ip":"127.0.0.1"}' > "data/$program_name/nuclei_results.json"
-              echo "[!] TEST MODE: Forced AI validation..."
-              # Kita paksa panggil script AI-nya di sini
+              echo "[!] TEST MODE: Injecting bug and FORCING AI validation..."
+              
+              # PAKSA PANGGIL AI DI SINI (Keluar dari jalur antrean biasa)
               PROGRAM_NAME=$program_name python scripts/validate.py
+              
+              # PAKSA KIRIM NOTIFIKASI TEST KE TELEGRAM
+              echo "$NOTIFY_CONF" > notify-config.yaml
+              if [ -f "data/$program_name/high_findings.txt" ]; then
+                (echo -e "🚨 TEST NOTIFICATION\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id critical_alerts
+              fi
             fi
           
           # 2. SUBFINDER (Max 20m - Silent)
