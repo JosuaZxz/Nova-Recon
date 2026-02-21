@@ -75,7 +75,6 @@ jobs:
                   -tags exposure,misconfig,takeover,cve,tech \
                   -c 50 -timeout 3 -retries 0 \
                   -stats -si 60 \
-                  -silent \
                   -jsonl -o "data/$program_name/nuclei_results.json" || echo "⚠️ Nuclei Timeout"
                 
                 # 5. AI TRIAGE & DRAFTING
