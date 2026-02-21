@@ -45,7 +45,7 @@ jobs:
           # --- 1. PILIH TARGET (TEST MODE) ---
           # Baris bawah ini dipaksa ke 00_test untuk pengujian
           target_file="targets/hackerone.txt"
-          program_name="00_test"
+          program_name="hackerone"
           
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
