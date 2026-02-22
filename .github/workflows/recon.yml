@@ -1,8 +1,8 @@
-name: Automation Recon (24/7)
+name: Automation Recon (Pro Hunter Edition)
 
 on:
   schedule:
-    - cron: '*/5 * * * *' # Nembak tiap 10 menit
+    - cron: '*/10 * * * *' 
   workflow_dispatch:
 
 jobs:
@@ -11,6 +11,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+
+      # --- [STATE MANAGEMENT: BIAR TARGET GAK ITU-ITU AJA] ---
+      - name: Restore Scan State
+        uses: actions/cache@v3
+        with:
+          path: .last_scan
+          key: scan-state-${{ github.run_id }}
+          restore-keys: |
+            scan-state-
 
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -22,7 +31,6 @@ jobs:
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-          go install -v github.com/projectdiscovery/notify/cmd/notify@latest
           echo "$HOME/go/bin" >> $GITHUB_PATH
 
       - name: Set up Python
@@ -42,69 +50,61 @@ jobs:
           TG_CRIT: ${{ secrets.TELEGRAM_CRITICAL_ID }}
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
-          NOTIFY_CONF: ${{ secrets.NOTIFY_CONFIG }}
         run: |
-          # --- 1. CONFIG NOTIFY ---
-          cat <<EOF > notify-config.yaml
-          telegram:
-            - id: "p1_p2_alerts"
-              telegram_apikey: "$TG_TOKEN"
-              telegram_chatid: "$TG_CRIT"
-              format: "{{data}}"
-          EOF
-
-          # --- 2. PILIH TARGET ACAK ---
-          target_file=$(ls targets/*.txt | shuf | head -n 1)
+          # 1. PILIH TARGET YANG BELUM DI-SCAN (SMART SELECT)
+          touch .last_scan
+          # Pilih file yang namanya tidak ada di .last_scan
+          target_file=$(ls targets/*.txt | shuf | while read f; do grep -q "$(basename $f)" .last_scan || { echo "$f"; break; }; done)
+          
+          # Jika semua sudah di-scan, reset state
+          if [ -z "$target_file" ]; then echo "" > .last_scan; target_file=$(ls targets/*.txt | shuf | head -n 1); fi
+          
           program_name=$(basename "$target_file" .txt)
+          echo "$program_name" >> .last_scan # Simpan state
+          
           echo "=================================================="
           echo "🎯 TARGETING: $program_name"
           echo "=================================================="
           mkdir -p "data/$program_name"
 
-          # --- 3. SUBFINDER (Ditambah || true agar tidak merah) ---
+          # 2. SUBFINDER (Max 20m)
           echo "[+] Step 1: Subfinder Starting..."
-          timeout 40m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
           
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            
-            # --- 4. HTTPX (Ditambah || true) ---
-            echo "[+] Step 2: HTTPX Live Check..."
-            timeout 50m httpx -l "data/$program_name/subdomains.txt" -silent -ip -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+            # 3. HTTPX (PRO MODE: TECH DETECT & 403 CHECK)
+            echo "[+] Step 2: HTTPX Live Check (Tech Detect ON)..."
+            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,403 -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                
-                # --- 5. NUCLEI (Output JSON untuk AI & TXT untuk Bos Josua) ---
-                echo "[+] Step 3: Nuclei Deep Scan..."
-                # Kita tambah || true agar kalau 3 jam habis, dia tetap lanjut ke AI
+                # 4. NUCLEI (PRO MODE: NEW TEMPLATES & SPEED CONTROL)
+                echo "[+] Step 3: Nuclei Deep Scan (New Templates & P-Level focus)..."
+                # -nt: New Templates, -rl 80: Stealth Speed, -severity: High focus
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -tags exposure,misconfig,takeover,cve,tech \
-                  -c 50 -timeout 3 -retries 0 -stats -si 60 -silent \
-                  -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
+                  -tags exposure,misconfig,takeover,cve2023,cve2024,cve2025 \
+                  -severity critical,high,medium \
+                  -nt -rl 80 -c 15 -timeout 3 -retries 1 -stats -si 60 -silent \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
-                # --- 6. AI VALIDATION (Pasti Jalan walau Nuclei Timeout) ---
-                echo "[+] Step 4: AI Analysis & H1 Drafting..."
-                PROGRAM_NAME=$program_name python scripts/validate.py || true
+                # 5. AI VALIDATION (Kirim Context Lengkap)
+                echo "[+] Step 4: AI Analysis (Context Mode)..."
+                PROGRAM_NAME=$program_name python scripts/validate.py
                 
-                # --- 7. NOTIFIKASI TELEGRAM ---
+                # 6. NOTIFIKASI TELEGRAM
                 if [ -f "data/$program_name/high_findings.txt" ]; then
-                  cat "data/$program_name/high_findings.txt" | notify -config notify-config.yaml -id p1_p2_alerts || true
+                  (echo -e "🚨 BUG DISCOVERED\n"; cat "data/$program_name/high_findings.txt") | notify -config notify-config.yaml -id p1_p2_alerts || (MSG=$(cat data/$program_name/high_findings.txt) && curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG")
                 fi
                 if [ -f "data/$program_name/low_findings.txt" ]; then
                   MSG_LOW=$(cat "data/$program_name/low_findings.txt")
                   curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_GEN" -d "text=$MSG_LOW" > /dev/null 2>&1 || true
                 fi
 
-                # --- 8. ZIP DATABASE (TXT MODE) ---
-                echo "[+] Step 5: Sending FULL DATA ZIP..."
-                zip_name="${program_name}_FULL_DATA.zip"
-                # Kita bungkus Subdomains, Active Hosts, dan Hasil Scan TXT
+                # 7. BACKUP ZIP (TXT MODE)
+                if [ -s "data/$program_name/nuclei_results.json" ]; then
+                   cat "data/$program_name/nuclei_results.json" | grep -oP '"matched-at":"\K[^"]+' > "data/$program_name/HASIL_SCAN_NUCLEI.txt"
+                fi
+                zip_name="${program_name}_data.zip"
                 zip -j "$zip_name" data/$program_name/subdomains.txt data/$program_name/active_hosts.txt data/$program_name/HASIL_SCAN_NUCLEI.txt > /dev/null 2>&1 || true
-                curl -v -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 FULL DATABASE: ${program_name^^}" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1 || true
-                rm -f "$zip_name"
+                curl -v -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1 || true
             fi
           fi
-          rm -f notify-config.yaml
-          echo "=================================================="
-          echo "🏁 MISSION FINISHED"
-          echo "=================================================="
