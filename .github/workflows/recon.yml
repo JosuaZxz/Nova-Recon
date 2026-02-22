@@ -65,56 +65,53 @@ jobs:
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # 2. DOUBLE RECON (GATHERING)
+          # 2. DOUBLE RECON (Subfinder + Assetfinder)
           echo "[+] Step 1: Gathering Subdomains..."
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" || true
           cat "$target_file" | assetfinder --subs-only >> "data/$program_name/s1.txt" || true
           
-          # --- [FIX PEMBERSIH DOMAIN: ANTI KOCAK] ---
-          # Cara paling aman hapus *. dan spasi
+          # PEMBERSIH DOMAIN (Wajib biar Nuclei gak skip)
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | sed 's/https\?:\/\///g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
           echo "    ✅ Found: $(wc -l < data/$program_name/subdomains.txt) subdomains."
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # 3. HTTPX (PRO FILTER)
+            # 3. HTTPX
             echo "[+] Step 2: HTTPX Live Check..."
             timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,401,403,405 -H "User-Agent: SniperRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # 4. URL MINING
+                # 4. URL MINING (Mencari file lama/arsip)
                 echo "[+] Step 2.5: Mining Wayback/GAU..."
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 
-                # 5. NUCLEI SCAN (VERSI PALING BRUTAL)
-                echo "[+] Step 3: Nuclei Deep Scan (BRUTE FORCE ALL TEMPLATES)..."
-                # Hapus -tags. Kita suruh Nuclei bawa SEMUA template (6000+) kecuali yang lambat (fuzz)
-                # -tags kita ganti dengan -as (Automatic Scan) agar dia pinter sendiri
+                # 5. NUCLEI SCAN (BALIK KE TAGS BANYAK - ANTI KOCAK)
+                echo "[+] Step 3: Nuclei Deep Scan (6000+ Templates)..."
+                # Kita hapus -as, kita pake tags manual yang super lengkap
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -as -severity critical,high,medium \
+                  -tags exposure,misconfig,takeover,cve,tech,fuzz,token-leak \
+                  -severity critical,high,medium \
+                  -H "User-Agent: SniperRecon/2026" \
                   -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent \
+                  -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
                 # 6. AI ANALYSIS
-                echo "[+] Step 4: AI Analysis..."
+                echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
 
-                # 7. NOTIFIKASI TELEGRAM
+                # 7. NOTIFIKASI TELEGRAM (.md)
                 if [ -d "data/$program_name/alerts/high" ]; then
-                  echo "🚀 Bug Found! Sending to Telegram..."
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
-                    # Pakai Curl aja biar pasti masuk
                     MSG_HIGH=$(cat "$f")
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG_HIGH" > /dev/null 2>&1
                   done
                 fi
 
-                # 8. BACKUP ZIP
-                if [ -s "data/$program_name/nuclei_results.json" ]; then
-                   cat "data/$program_name/nuclei_results.json" | grep -oP '"matched-at":"\K[^"]+' > "data/$program_name/HITS_LOG.txt" || true
-                fi
+                # 8. BACKUP ZIP LENGKAP
                 zip_name="${program_name}_FULL_DATA.zip"
+                # Masukkan semua file penting termasuk urls.txt (Wayback)
                 zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls > /dev/null 2>&1 || true
-                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
             fi
           fi
