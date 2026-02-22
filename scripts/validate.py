@@ -11,159 +11,95 @@ AI_KEY = os.environ.get("GROQ_API_KEY")
 H1_USER = os.environ.get("H1_USERNAME")
 H1_API_KEY = os.environ.get("H1_API_KEY")
 PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
-SEEN_DB = ".seen_urls" # Memori rahasia anti-duplikat
+SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
-    """Mengambil data teknis mendalam dari Nuclei untuk AI"""
+    """Mengecek bukti teknis (IP & DNS) secara real-time"""
     host = data.get("host", "")
+    domain = host.replace("https://", "").replace("http://", "").split(":")[0]
     info = data.get("info", {})
     current_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     
     context = {
         "template_id": data.get("template-id", "Unknown"),
         "template_name": info.get("name", "Unknown"),
-        "template_desc": info.get("description", "No description"),
-        "severity": info.get("severity", "unknown"),
-        "matched_url": data.get("matched-at", host),
-        "extracted_results": data.get("extracted-results", []),
+        "template_desc": info.get("description", "No description provided"),
         "ip": data.get("ip", "Unknown IP"),
         "status": data.get("info", {}).get("status-code", "Unknown"),
+        "matched_url": data.get("matched-at", host),
+        "extracted": data.get("extracted-results", []),
         "time": current_time
     }
     
-    # Cek CNAME jika takeover
     if "takeover" in data.get("template-id", "").lower():
         try:
-            cname = subprocess.check_output(['dig', 'CNAME', '+short', host.replace("https://","").replace("http://","")], timeout=5).decode('utf-8').strip()
+            cname = subprocess.check_output(['dig', 'CNAME', '+short', domain], timeout=5).decode('utf-8').strip()
             context["dns_cname"] = cname if cname else "No CNAME found"
-        except: context["dns_cname"] = "DNS check failed"
+        except: context["dns_cname"] = "Failed"
     return context
 
 def create_h1_draft(title, description, impact, severity, url):
-    """Kirim laporan ke HackerOne Draft (Report Intent)"""
-    # Cek Duplikat: Jika URL ini sudah pernah dilaporkan, batalkan.
+    """Kirim laporan valid ke HackerOne dengan perlindungan duplikat"""
     if os.path.exists(SEEN_DB):
         with open(SEEN_DB, "r") as f:
-            if url in f.read():
-                print(f"[-] DUPLICATE SKIPPED: {url}")
-                return "DUPLICATE"
+            if url in f.read(): return "ALREADY_REPORTED"
 
-    if PROGRAM_NAME == "00_test": return "TEST-DRAFT-ID"
+    if PROGRAM_NAME == "00_test": return "TEST-DRAFT-ID-2026"
 
     target_handle = "hackerone" if PROGRAM_NAME == "hackerone" else PROGRAM_NAME
     auth = (H1_USER, H1_API_KEY)
+    h1_sev = "high" if severity.lower() in ["critical", "high"] else "medium"
     
-    h1_sev = "low"
-    if severity.lower() in ["critical", "high"]: h1_sev = "high"
-    elif severity.lower() == "medium": h1_sev = "medium"
-    
-    payload = {
-        "data": {
-            "type": "report-intent",
-            "attributes": {
-                "team_handle": target_handle,
-                "title": title,
-                "description": description,
-                "impact": impact,
-                "severity_rating": h1_sev
-            }
-        }
-    }
+    payload = {"data": {"type": "report-intent", "attributes": {"team_handle": target_handle, "title": title, "description": description, "impact": impact, "severity_rating": h1_sev}}}
     
     try:
-        # Delay 2 detik agar tidak dianggap spam oleh API H1
-        time.sleep(2)
+        time.sleep(2) # Anti-Spam API Delay
         res = requests.post("https://api.hackerone.com/v1/hackers/report_intents", auth=auth, headers={"Accept": "application/json"}, json=payload)
         if res.status_code == 201:
-            # Simpan URL ke memori anti-duplikat
             with open(SEEN_DB, "a") as f: f.write(f"{url}\n")
             return res.json()['data']['id']
     except: pass
     return None
 
 def validate_findings():
-    print(f"🔍 Starting Professional Triage for: {PROGRAM_NAME}")
+    print(f"🔍 Starting Elite Triage for: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
-    # --- [PRE-FILTER: HANYA MEDIUM+ YANG DIKIRIM KE AI] ---
+    # FILTER: Hanya kirim yang Medium ke atas & bukan template sampah
     findings_list = []
-    # Template yang sering false positive kita buang duluan
-    trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers"]
+    trash_list = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers"]
     
     with open(path, 'r') as f:
         for line in f:
             try:
                 d = json.loads(line)
-                if isinstance(d, list): d = d[0]
                 tid = d.get("template-id", "").lower()
                 sev = d.get("info", {}).get("severity", "info").lower()
-                
-                if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
+                if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash_list):
                     findings_list.append(get_verification_context(d))
                 if len(findings_list) >= 15: break
             except: continue
 
-    if not findings_list:
-        print("✅ No high-quality findings found.")
-        return
+    if not findings_list: return
 
-    # --- [TEMPLATE LAPORAN PROFESIONAL (PAYPAL STYLE)] ---
-    report_template = """
-## Vulnerability Details
-**Title:** {title}
-**Severity:** {severity}
-**Category:** {category}
-**Affected Asset:** {url}
-
+    report_template = """## Vulnerability Details
+**Severity:** {severity} | **Asset:** {url}
 ## Summary
 {summary}
-
-## Impact
-### Business Impact:
-{business_impact}
-
-### Technical Impact:
-{technical_impact}
-
 ## Technical Details
-{technical_explanation}
-
+{tech_explanation}
+- Template ID: {tid}
+- DNS/IP Context: {context}
 ## Steps To Reproduce
 1. Navigate to {url}
-2. {step_2}
-3. {step_3}
-
-## Proof of Concept
-Vulnerability detected via Nuclei with template: {template_id}
-Evidence: {evidence}
-
+2. Observe finding
+## Environment
+- IP: {ip} | Time: {time}
 ## Remediation
-{remediation_plan}
+{remediation}"""
 
-## Discovery Process
-Automated discovery using customized ProjectDiscovery Nuclei sniper drones.
-
-## Testing Environment
-- **IP Address(es):** {ip}
-- **User Agent:** Mozilla/5.0 (Windows NT 10.0; Win64; x64) SniperRecon/2026
-- **Testing Period:** {time}
-"""
-
-    prompt = f"""
-    ROLE: Senior Triage Specialist at HackerOne.
-    PROGRAM: {PROGRAM_NAME}. DATA: {json.dumps(findings_list)}
-    
-    TASK: Write a professional HackerOne report for each valid bug using this template:
-    {report_template}
-
-    INSTRUCTIONS:
-    - Determine Severity (P1/P2/P3/P4).
-    - Provide a detailed POC.
-    - Output ONLY a JSON ARRAY: [{{title, description, impact, severity, url}}]
-    - Impact field should only contain the business/technical impact text.
-    - If no valid bug: NO_VALID_BUG
-    """
+    prompt = f"Role: Senior Triage Lead. Data: {json.dumps(findings_list)}. Write detailed technical reports using template: {report_template}. Output ONLY a JSON ARRAY of objects [{{title, description, impact, severity, url}}]. description must be full markdown. If nothing valid: NO_VALID_BUG"
 
     try:
         url = "https://api.groq.com/openai/v1/chat/completions"
@@ -181,19 +117,15 @@ Automated discovery using customized ProjectDiscovery Nuclei sniper drones.
 
             for idx, rep in enumerate(reports):
                 d_id = create_h1_draft(rep['title'], rep['description'], rep['impact'], rep['severity'], rep.get('url', ''))
-                
-                if d_id in [None, "DUPLICATE"]: continue
+                if d_id == "ALREADY_REPORTED" or d_id is None: continue
                 
                 sev = rep.get('severity', 'Medium').upper()
                 p_label = "P1-P2" if any(x in sev for x in ["CRITICAL", "HIGH", "P1", "P2"]) else "P3-P4"
                 folder = "high" if p_label == "P1-P2" else "low"
                 
-                # Simpan File .md
                 safe_title = re.sub(r'\W+', '_', rep['title'])[:50]
-                file_name = f"{p_label}_{safe_title}_{idx}.md"
-                with open(f"data/{PROGRAM_NAME}/alerts/{folder}/{file_name}", 'w') as f:
+                with open(f"data/{PROGRAM_NAME}/alerts/{folder}/{p_label}_{safe_title}_{idx}.md", 'w') as f:
                     f.write(f"# {rep['title']}\n\nDraft ID: `{d_id}`\n\n{rep['description']}\n\n## Impact\n{rep['impact']}")
-
     except Exception as e: print(f"Error: {e}")
 
 if __name__ == "__main__":
