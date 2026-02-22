@@ -65,58 +65,56 @@ jobs:
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # 2. DOUBLE RECON
+          # 2. DOUBLE RECON (GATHERING)
           echo "[+] Step 1: Gathering Subdomains..."
-          subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
-          cat "$target_file" | assetfinder --subs-only | anew "data/$program_name/s1.txt" > /dev/null 2>&1 || true
+          subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" || true
+          cat "$target_file" | assetfinder --subs-only >> "data/$program_name/s1.txt" || true
           
-          # --- [PEMBERSIH WILDCARD: ANTI-SKIP] ---
-          # Menghapus '*.' dan 'https://' agar target bersih dan bisa di-scan
-          sed -i 's/\*\.//g; s/https\?:\/\///g' "data/$program_name/s1.txt"
-          sort -u "data/$program_name/s1.txt" > "data/$program_name/subdomains.txt"
-          
+          # --- [FIX PEMBERSIH DOMAIN: ANTI KOCAK] ---
+          # Cara paling aman hapus *. dan spasi
+          cat "data/$program_name/s1.txt" | sed 's/*.//g' | sed 's/https\?:\/\///g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
+          echo "    ✅ Found: $(wc -l < data/$program_name/subdomains.txt) subdomains."
+
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # 3. HTTPX (mc: 200,301,302,401,403,405)
+            # 3. HTTPX (PRO FILTER)
             echo "[+] Step 2: HTTPX Live Check..."
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: SniperRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,401,403,405 -H "User-Agent: SniperRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
                 # 4. URL MINING
                 echo "[+] Step 2.5: Mining Wayback/GAU..."
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
-                timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
-
-                # 5. NUCLEI SCAN (MODE RAKUS TOTAL)
-                echo "[+] Step 3: Deep Scan (6500+ Templates)..."
+                
+                # 5. NUCLEI SCAN (VERSI PALING BRUTAL)
+                echo "[+] Step 3: Nuclei Deep Scan (BRUTE FORCE ALL TEMPLATES)..."
+                # Hapus -tags. Kita suruh Nuclei bawa SEMUA template (6000+) kecuali yang lambat (fuzz)
+                # -tags kita ganti dengan -as (Automatic Scan) agar dia pinter sendiri
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -tags exposure,misconfig,takeover,cve,fuzz,exposed-panels \
+                  -as -severity critical,high,medium \
                   -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
-
                 
-                # 6. SCAN URLS (Mencari Token/API Key Bocor)
-                if [ -s "data/$program_name/urls.txt" ]; then
-                  echo "[+] Step 3.5: Scanning Historical URLs for Secrets..."
-                  timeout 45m nuclei -l "data/$program_name/urls.txt" \
-                    -tags token-leak,extracted-tokens \
-                    -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
-                fi
-                
-                # 7. AI ANALYSIS
+                # 6. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
 
-                # 8. NOTIFIKASI (.md files)
+                # 7. NOTIFIKASI TELEGRAM
                 if [ -d "data/$program_name/alerts/high" ]; then
+                  echo "🚀 Bug Found! Sending to Telegram..."
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
-                    cat "$f" | notify -config notify-config.yaml -id p1_p2_alerts || (MSG=$(cat "$f") && curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG")
+                    # Pakai Curl aja biar pasti masuk
+                    MSG_HIGH=$(cat "$f")
+                    curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendMessage" -d "chat_id=$TG_CRIT" -d "text=$MSG_HIGH" > /dev/null 2>&1
                   done
                 fi
 
-                # 9. BACKUP ZIP
+                # 8. BACKUP ZIP
+                if [ -s "data/$program_name/nuclei_results.json" ]; then
+                   cat "data/$program_name/nuclei_results.json" | grep -oP '"matched-at":"\K[^"]+' > "data/$program_name/HITS_LOG.txt" || true
+                fi
                 zip_name="${program_name}_FULL_DATA.zip"
                 zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls > /dev/null 2>&1 || true
-                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
             fi
           fi
