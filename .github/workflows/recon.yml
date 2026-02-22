@@ -1,4 +1,4 @@
-name: Automation Recon (No-Stuck 24/7)
+name: Automation Recon (1 Day 1 Bug - Ultimate Predator)
 
 on:
   schedule:
@@ -8,11 +8,12 @@ on:
 jobs:
   recon-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # --- [PERSISTENSI DATABASE: ANTI-DUPLIKAT] ---
       - name: Cache Seen URLs
         uses: actions/cache@v3
         with:
@@ -32,6 +33,10 @@ jobs:
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+          go install -v github.com/tomnomnom/assetfinder@latest
+          go install -v github.com/tomnomnom/waybackurls@latest
+          go install -v github.com/lc/gau/v2/cmd/gau@latest
+          go install -v github.com/tomnomnom/anew@latest
           echo "$HOME/go/bin" >> $GITHUB_PATH
 
       - name: Set up Python
@@ -52,35 +57,57 @@ jobs:
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
         run: |
-          # 1. KONFIGURASI NOTIFIKASI
+          # 1. SETUP CONFIG NOTIFY
           echo "telegram:" > notify-config.yaml
           echo "  - id: \"p1_p2_alerts\"" >> notify-config.yaml
           echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
           echo "    telegram_chatid: \"$TG_CRIT\"" >> notify-config.yaml
           echo "    format: \"{{data}}\"" >> notify-config.yaml
 
-          # 2. TARGET SELECTION (RANDOM SNIPER)
+          # 2. TARGET SELECTION
           target_file=$(ls targets/*.txt | shuf | head -n 1)
           program_name=$(basename "$target_file" .txt)
           echo "🎯 TARGETING: $program_name"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # 3. SCANNING (PRO FILTER)
-          timeout 20m subfinder -dL "$target_file" -all -silent -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          # 3. DOUBLE RECON (Gathering Subdomains)
+          echo "[+] Step 1: Gathering Subdomains (Double Power)..."
+          subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
+          cat "$target_file" | assetfinder --subs-only | anew "data/$program_name/s1.txt" > /dev/null 2>&1 || true
+          sort -u "data/$program_name/s1.txt" > "data/$program_name/subdomains.txt"
           
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # Hanya scan host yang responnya 200, 401, 403, atau 405 (Mc-Filter)
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,401,403,405 -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+            # 4. HTTPX LIVE CHECK
+            echo "[+] Step 2: Filtering Live Hosts..."
+            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,401,403,405 -H "User-Agent: SniperRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # -nt (New Templates) + -me 10 (WAF Detection)
-                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" -tags exposure,misconfig,takeover,cve2023,cve2024,cve2025 -severity critical,high,medium -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent -jsonl -o "data/$program_name/nuclei_results.json" || true
+                # 5. URL MINING (Wayback & GAU) - Mencari file masa lalu
+                echo "[+] Step 2.5: Mining Historical URLs (Wayback/GAU)..."
+                timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
+                timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
+
+                # 6. NUCLEI SCAN 1: Main Assets (Gawat & Fuzzing)
+                echo "[+] Step 3: Deep Scan (Cve2024-25, Fuzzing, Admin Panels)..."
+                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" \
+                  -tags exposure,misconfig,takeover,cve2023,cve2024,cve2025,fuzz,exposed-panels \
+                  -severity critical,high,medium -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent -jsonl -o "data/$program_name/results_main.json" || true
                 
-                # 4. AI ANALYSIS (Llama 3.3)
+                # 7. NUCLEI SCAN 2: URL Secrets (Mining API Keys in JS)
+                if [ -s "data/$program_name/urls.txt" ]; then
+                  echo "[+] Step 3.5: Scanning Historical URLs for Secret Leaks..."
+                  timeout 45m nuclei -l "data/$program_name/urls.txt" -tags token-leak,generic-extractors,extracted-tokens -severity high,critical -silent -jsonl >> "data/$program_name/results_main.json" || true
+                fi
+
+                # Gabungkan hasil untuk diolah AI
+                mv "data/$program_name/results_main.json" "data/$program_name/nuclei_results.json"
+
+                # 8. AI ANALYSIS
+                echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
 
-                # 5. NOTIFIKASI TELEGRAM (.md files)
+                # 9. SEND NOTIFICATIONS (.md files)
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
@@ -95,12 +122,18 @@ jobs:
                   done
                 fi
 
-                # 6. BACKUP DATABASE ZIP & SEEN_DB
-                if [ -s "data/$program_name/nuclei_results.json" ]; then
-                   cat "data/$program_name/nuclei_results.json" | grep -oP '"matched-at":"\K[^"]+' > "data/$program_name/HITS_LOG.txt"
-                fi
-                zip_name="${program_name}_data.zip"
+                # 10. BACKUP DATA
+                zip_name="${program_name}_FINAL_DATA.zip"
                 zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls > /dev/null 2>&1 || true
-                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name (with .seen_urls)" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DB: $program_name (Grandmaster Edition)" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
             fi
           fi
+
+      # --- [11. AUTO-SYNC DATABASE (STEALTH HASHED)] ---
+      - name: Sync Database to Repo
+        run: |
+          git config --local user.email "bot@sniper-recon.ai"
+          git config --local user.name "Recon-Sniper-Bot"
+          git add .seen_urls
+          git commit -m "database: update seen_urls [skip ci]" || exit 0
+          git push
