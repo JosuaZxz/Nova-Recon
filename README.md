@@ -1,4 +1,4 @@
-🎯 ## **NovaRecon: Powerfull Recon Edition (2026)**
+🎯 <h1><b>NovaRecon: Powerfull Recon Edition (2026)</b></h1>
 
 **NovaRecon** is an autonomous, high-speed Bug Bounty reconnaissance and vulnerability scanning engine powered by **GitHub Actions** and **Llama 3.3 70B AI**. Designed for the modern bug hunter, it operates in "Sniper Mode"—randomly selecting and neutralizing targets from your list every 10 minutes, 24/7.
 
