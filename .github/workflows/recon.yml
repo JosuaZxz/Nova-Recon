@@ -2,7 +2,7 @@ name: Automation Recon (24/7)
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Nembak tiap 10 menit
+    - cron: '*/10 * * * *' # Runs every 10 minutes
   workflow_dispatch:
 
 jobs:
@@ -75,18 +75,19 @@ jobs:
           # --- [STEP 1: GATHERING SUBDOMAINS - SILENT MODE] ---
           echo "[+] Step 1: Gathering Subdomains (Double Power)..."
           
-          # Subfinder (Sikat semua database)
+          # Subfinder (Brush all databases)
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
           
-          # Assetfinder (Looping agar semua domain di list kena sikat)
+          # Assetfinder (Looping so that all domains in the list are brushed)
           while read -r domain; do
             echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
           done < "$target_file"
 
-          # Bersihkan wildcard, spasi, dan duplikat (Hasilnya masuk ke subdomains.txt)
+          # Clean wildcards, spaces, and duplicates (Results go to subdomains.txt)
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
           
           echo "    ✅ Step 1 Done. Found: $(wc -l < data/$program_name/subdomains.txt) unique subdomains."
+          
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # 4. HTTPX LIVE CHECK
             echo "[+] Step 2: HTTPX Live Check (Pro Filter)..."
@@ -98,16 +99,15 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 5. NUCLEI SCAN (MODE BRUTAL - SEMUA SENJATA DIBAWA)
+                # 5. NUCLEI SCAN (BRUTAL MODE - ALL WEAPONS CARRY)
                 echo "[+] Step 3: Deep Scan (Loading 6500+ Templates)..."
-                # KITA HAPUS -nt DAN -severity BIAR GAK TUMPUL
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -rl 80 -c 15 -me 10 -stats -si 60 -silent \
                   -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
-                # 7. SCAN URLS DARI WAYBACK (Mencari Secret Leaks)
+                # 7. SCAN URLS FROM WAYBACK (Looking for Secret Leaks)
                 if [ -s "data/$program_name/urls.txt" ]; then
                   echo "[+] Step 3.5: Scanning Historical URLs..."
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
@@ -119,7 +119,7 @@ jobs:
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
 
-                # 9. NOTIFIKASI TELEGRAM (.md files)
+                # 9. TELEGRAM NOTIFICATION (.md files)
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
@@ -128,7 +128,7 @@ jobs:
                   done
                 fi
 
-                # 10. BACKUP ZIP LENGKAP
+                # 10. COMPLETE ZIP BACKUP
                 zip_name="${program_name}_FULL_DATA.zip"
                 zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
                 curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
