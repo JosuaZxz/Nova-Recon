@@ -92,25 +92,22 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 6. NUCLEI SCAN (MODE RAKUS - TANPA SEVERITY FILTER)
-                echo "[+] Step 3: Nuclei Deep Scan (BRUTE FORCE ALL TEMPLATES)..."
-                # HAPUS -severity agar semua senjata dibawa
-                # Tambah -et headless biar runner gak berat
+                # 5. NUCLEI SCAN (MODE BRUTAL - SEMUA SENJATA DIBAWA)
+                echo "[+] Step 3: Deep Scan (Loading 6500+ Templates)..."
+                # KITA HAPUS -nt DAN -severity BIAR GAK TUMPUL
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -t cves/,exposures/,misconfiguration/,takeovers/,vulnerabilities/,default-logins/ \
-                  -severity critical,high,medium \
-                  -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent \
+                  -t /home/runner/nuclei-templates/ \
+                  -rl 80 -c 15 -me 10 -stats -si 60 -silent \
                   -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
                 # 7. SCAN URLS DARI WAYBACK (Mencari Secret Leaks)
                 if [ -s "data/$program_name/urls.txt" ]; then
-                  echo "[+] Step 3.5: Scanning Secrets in Historical URLs..."
+                  echo "[+] Step 3.5: Scanning Historical URLs..."
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
-                    -t http/exposed-tokens/,http/token-leak/ \
-                    -severity critical,high,medium -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
+                    -t /home/runner/nuclei-templates/http/exposed-tokens/ \
+                    -rl 80 -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
                 fi
-
 
                 # 8. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
