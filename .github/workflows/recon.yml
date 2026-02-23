@@ -104,6 +104,7 @@ jobs:
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -rl 80 -c 15 -me 10 -stats -si 60 -silent \
+                  -H "User-Agent: NovaRecon/2026" \
                   -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
@@ -112,6 +113,7 @@ jobs:
                   echo "[+] Step 3.5: Scanning Historical URLs..."
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
                     -t /home/runner/nuclei-templates/http/exposed-tokens/ \
+                    -H "User-Agent: NovaRecon/2026" \
                     -rl 80 -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
                 fi
 
