@@ -38,6 +38,7 @@ jobs:
           go install -v github.com/lc/gau/v2/cmd/gau@latest
           go install -v github.com/tomnomnom/anew@latest
           echo "$HOME/go/bin" >> $GITHUB_PATH
+          nuclei -ut -silent
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -96,18 +97,20 @@ jobs:
                 # HAPUS -severity agar semua senjata dibawa
                 # Tambah -et headless biar runner gak berat
                 timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
-                  -tags exposure,misconfig,takeover,cve,tech,fuzz,token-leak \
+                  -t cves/,exposures/,misconfiguration/,takeovers/,vulnerabilities/,default-logins/ \
+                  -severity critical,high,medium \
                   -nt -rl 80 -c 15 -me 10 -stats -si 60 -silent \
                   -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
                 
                 # 7. SCAN URLS DARI WAYBACK (Mencari Secret Leaks)
                 if [ -s "data/$program_name/urls.txt" ]; then
-                  echo "[+] Step 3.5: Scanning Historical URLs for Secrets..."
+                  echo "[+] Step 3.5: Scanning Secrets in Historical URLs..."
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
-                    -tags token-leak,extracted-tokens \
-                    -nt -rl 80 -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
+                    -t http/exposed-tokens/,http/token-leak/ \
+                    -severity critical,high,medium -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
                 fi
+
 
                 # 8. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
@@ -124,7 +127,7 @@ jobs:
 
                 # 10. BACKUP ZIP LENGKAP
                 zip_name="${program_name}_FULL_DATA.zip"
-                zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls > /dev/null 2>&1 || true
+                zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
                 curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
             fi
           fi
