@@ -91,7 +91,7 @@ jobs:
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # 4. HTTPX LIVE CHECK
             echo "[+] Step 2: HTTPX Live Check (Pro Filter)..."
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: SniperRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
                 # 5. URL MINING
