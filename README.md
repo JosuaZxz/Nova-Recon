@@ -52,3 +52,6 @@ Example: `airbnb.txt` containing:
 ```bash
 airbnb.com
 airbnb.co.uk
+```
+**4. Deploy**
+The machine will start automatically based on the cron schedule. To test immediately, go to **Actions > Automation Recon > Run Workflow**.
