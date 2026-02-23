@@ -120,7 +120,7 @@ def validate_findings():
 ## Remediation
 {remediation_plan}"""
 
-prompt = f"""Role: Senior Triage Lead. 
+    prompt = f"""Role: Senior Triage Lead. 
 Data: {json.dumps(findings_list)}. 
 Write technical reports using template: {report_template}. 
 Use the provided 'request_evidence' to write a highly accurate and realistic 'Steps to Reproduce' section.
