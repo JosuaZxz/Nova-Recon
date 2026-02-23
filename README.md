@@ -38,10 +38,17 @@ Navigate to `Settings > Secrets and Variables > Actions` and add the following k
 
 | Secret Name | Description |
 | :--- | :--- |
-| GROQ_API_KEY | API Key for Llama 3.3 70B (from Groq) |
-| H1_USERNAME | Your HackerOne Username |
-| H1_API_KEY | Your HackerOne API Identifier/Token |
-| TELEGRAM_TOKEN | Your Telegram Bot Token (@BotFather) |
-| TELEGRAM_CRITICAL_ID | Chat ID for P1-P2 Alerts |
-| TELEGRAM_GENERAL_ID | Chat ID for P3-P4 Alerts |
-| TELEGRAM_DATA_ID | Chat ID for Database ZIP storage |
+| `GROQ_API_KEY` | API Key for Llama 3.3 70B (from Groq) |
+| `H1_USERNAME` | Your HackerOne Username |
+| `H1_API_KEY` | Your HackerOne API Identifier/Token |
+| `TELEGRAM_TOKEN` | Your Telegram Bot Token (@BotFather) |
+| `TELEGRAM_CRITICAL_ID` | Chat ID for P1-P2 Alerts |
+| `TELEGRAM_GENERAL_ID` | Chat ID for P3-P4 Alerts |
+| `TELEGRAM_DATA_ID` | Chat ID for Database ZIP storage |
+
+**3. Add Your Targets**
+Create `.txt` files in the `targets/` folder.
+Example: `airbnb.txt` containing:
+'''bash
+airbnb.com
+airbnb.co.uk
