@@ -15,20 +15,21 @@ PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
 SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
-    """Mengumpulkan bukti teknis IP, DNS, dan Deskripsi Template"""
     host = data.get("host", "")
     info = data.get("info", {})
-    current_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
-    
+    raw_req = data.get("request", "")
+    raw_res = data.get("response", "")
+    short_req = (raw_req[:800] + '..[truncated]') if len(raw_req) > 800 else raw_req
+    short_res = (raw_res[:800] + '..[truncated]') if len(raw_res) > 800 else raw_res
+
     return {
         "template_id": data.get("template-id", "Unknown"),
-        "template_name": info.get("name", "Unknown"),
-        "template_desc": info.get("description", "No description"),
         "severity": info.get("severity", "unknown"),
         "matched_url": data.get("matched-at", host),
         "ip": data.get("ip", "Unknown IP"),
-        "status": data.get("info", {}).get("status-code", "Unknown"),
-        "time": current_time
+        "request_evidence": short_req,
+        "response_evidence": short_res,
+        "time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     }
 
 def create_h1_draft(title, description, impact, severity, url):
@@ -63,6 +64,19 @@ def validate_findings():
     print(f"🔍 Starting Grandmaster Triage: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
+
+    all_findings = []
+    with open(path, 'r') as f:
+        for line in f:
+            try:
+                d = json.loads(line)
+                if isinstance(d, list): d = d[0]
+                all_findings.append(d)
+            except: continue
+
+    # Sort: Critical top
+    sev_rank = {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0}
+    all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
 
     findings_list = []
     # Quality filter: Only Medium and above & discard the noisy ones
