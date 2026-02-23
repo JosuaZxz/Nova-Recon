@@ -49,6 +49,6 @@ Navigate to `Settings > Secrets and Variables > Actions` and add the following k
 **3. Add Your Targets**
 Create `.txt` files in the `targets/` folder.
 Example: `airbnb.txt` containing:
-'''bash
+```bash
 airbnb.com
 airbnb.co.uk
