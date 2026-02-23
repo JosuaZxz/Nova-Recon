@@ -1,1 +1,1 @@
-🎯 ## NovaRecon: Supreme Sniper Edition (2026)
+🎯 **NovaRecon: Powerfull Recon Edition (2026)
