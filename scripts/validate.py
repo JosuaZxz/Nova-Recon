@@ -104,6 +104,10 @@ def validate_findings():
 **Affected Asset:** {url}
 ## Summary
 {summary}
+##Technical Evidence (Request):
+```http
+{request_evidence}
+```
 ## Impact
 ### Business Impact:
 {business_impact}
@@ -120,7 +124,12 @@ def validate_findings():
 ## Remediation
 {remediation_plan}"""
 
-    prompt = f"Role: Senior Triage Lead. Data: {json.dumps(findings_list)}. Write technical reports using template: {report_template}. Output ONLY a JSON ARRAY: [{{title, description, impact, severity, url}}]. If nothing valid: NO_VALID_BUG"
+    prompt = f"""Role: Senior Triage Lead. 
+    Data: {json.dumps(findings_list)}. 
+    Write technical reports using template: {report_template}. 
+    Use the provided 'request_evidence' to write a highly accurate and realistic 'Steps to Reproduce' section.
+    Output ONLY a JSON ARRAY: [{{ "title": "...", "description": "...", "impact": "...", "severity": "...", "url": "..." }}]. 
+    If nothing valid: NO_VALID_BUG"""
 
     try:
         url = "https://api.groq.com/openai/v1/chat/completions"
