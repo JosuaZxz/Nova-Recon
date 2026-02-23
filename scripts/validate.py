@@ -7,7 +7,7 @@ import time
 import hashlib
 from datetime import datetime
 
-# --- [1. KONFIGURASI] ---
+# --- [1. CONFIGURATION] ---
 AI_KEY = os.environ.get("GROQ_API_KEY")
 H1_USER = os.environ.get("H1_USERNAME")
 H1_API_KEY = os.environ.get("H1_API_KEY")
@@ -33,7 +33,7 @@ def get_verification_context(data):
 
 def create_h1_draft(title, description, impact, severity, url):
     """Kirim laporan ke H1 dengan sistem Hashing URL (Stealth)"""
-    # Gunakan MD5 Hash agar list URL di repo Public tidak bisa dibaca manusia
+    # Use MD5 Hash to make the URL list in the Public repo unreadable to humans
     url_hash = hashlib.md5(url.encode()).hexdigest()
     
     if os.path.exists(SEEN_DB):
@@ -65,7 +65,7 @@ def validate_findings():
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
     findings_list = []
-    # Filter kualitas: Cuma Medium ke atas & buang yang berisik
+    # Quality filter: Only Medium and above & discard the noisy ones
     trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers"]
     
     with open(path, 'r') as f:
@@ -83,7 +83,7 @@ def validate_findings():
 
     if not findings_list: return
 
-    # --- [REPORT TEMPLATE PRO BOS JOSUA] ---
+    # --- [REPORT TEMPLATE] ---
     report_template = """## Vulnerability Details
 **Title:** {title}
 **Severity:** {severity}
