@@ -72,15 +72,21 @@ jobs:
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # 3. DOUBLE RECON (GATHERING)
-          echo "[+] Step 1: Gathering Subdomains..."
-          subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" || true
-          cat "$target_file" | assetfinder --subs-only | anew "data/$program_name/s1.txt" || true
+          # --- [STEP 1: GATHERING SUBDOMAINS - SILENT MODE] ---
+          echo "[+] Step 1: Gathering Subdomains (Double Power)..."
           
-          # FIX PEMBERSIH DOMAIN
-          cat "data/$program_name/s1.txt" | sed 's/*.//g' | sed 's/https\?:\/\///g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
-          echo "    ✅ Found: $(wc -l < data/$program_name/subdomains.txt) unique subdomains."
+          # Subfinder (Sikat semua database)
+          subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
+          
+          # Assetfinder (Looping agar semua domain di list kena sikat)
+          while read -r domain; do
+            echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
+          done < "$target_file"
 
+          # Bersihkan wildcard, spasi, dan duplikat (Hasilnya masuk ke subdomains.txt)
+          cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
+          
+          echo "    ✅ Step 1 Done. Found: $(wc -l < data/$program_name/subdomains.txt) unique subdomains."
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # 4. HTTPX LIVE CHECK
             echo "[+] Step 2: HTTPX Live Check (Pro Filter)..."
