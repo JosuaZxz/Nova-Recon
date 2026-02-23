@@ -5,19 +5,19 @@
 **Current Build**: v2.0 (Powerfull Edition)
 **User-Agent**: NovaRecon/2026
 
-🚀 **Key Features**
+**🚀 Key Features**
 
-* ⚡ **24/7 Autonomous Sniper**: Runs on GitHub Actions with a 10-minute cron interval. Zero infrastructure cost, maximum uptime.
-* 🛡️ **Double-Power Discovery**: Concurrent subdomain gathering using `Subfinder` (all sources) and `Assetfinder`.
-* 🔍 **Advanced URL Mining**: Deep historical URL extraction via `Waybackurls` and `GAU` to uncover hidden endpoints and sensitive parameters.
-* 🔫 **Ranked Severity Scanning**: Nuclei engine optimized for "Gold Hunting"—prioritizing **Critical, High, and Medium** vulnerabilities first.
-* 🏎️ **Ultra-Fast Performance**: Running at **200 RPS** (Requests Per Second) with optimized concurrency to beat other hunters to the report.
-* 🧠 **AI Triage Lead (Llama 3.3)**: Every finding is analyzed by AI. It validates technical evidence (Raw Request/Response) and writes professional reports.
-* 📝 **Automated HackerOne Drafting**: Directly creates report intents on HackerOne with full standard templates (Summary, Impact, Steps to Reproduce, Remediation).
-* 📟 **Stealth Memory (Anti-Spam)**: Uses **MD5 Hashing** for `.seen_urls` database to ensure you never report the same bug twice.
-* 📲 **Modular Telegram Alerts**: Smart notifications split into dedicated channels: `Critical (P1-P2)`, `General (P3-P4)`, and `Database Backups`.
+* **⚡ 24/7 Autonomous Sniper**: Runs on GitHub Actions with a 10-minute cron interval. Zero infrastructure cost, maximum uptime.
+* **🛡️ Double-Power Discovery**: Concurrent subdomain gathering using `Subfinder` (all sources) and `Assetfinder`.
+* **🔍 Advanced URL Mining**: Deep historical URL extraction via `Waybackurls` and `GAU` to uncover hidden endpoints and sensitive parameters.
+* **🔫 Ranked Severity Scanning**: Nuclei engine optimized for "Gold Hunting"—prioritizing **Critical, High, and Medium** vulnerabilities first.
+* **🏎️ Ultra-Fast Performance**: Running at **200 RPS** (Requests Per Second) with optimized concurrency to beat other hunters to the report.
+* **🧠 AI Triage Lead (Llama 3.3)**: Every finding is analyzed by AI. It validates technical evidence (Raw Request/Response) and writes professional reports.
+* **📝 Automated HackerOne Drafting**: Directly creates report intents on HackerOne with full standard templates (Summary, Impact, Steps to Reproduce, Remediation).
+* **📟 Stealth Memory (Anti-Spam)**: Uses **MD5 Hashing** for `.seen_urls` database to ensure you never report the same bug twice.
+* **📲 Modular Telegram Alerts**: Smart notifications split into dedicated channels: `Critical (P1-P2)`, `General (P3-P4)`, and `Database Backups`.
 
-🏗️ **Architecture & Workflow**
+**🏗️ Architecture & Workflow**
 
 1. **Selection**: Randomly picks a target file from the `targets/` directory.
 2. **Reconnaissance**: Horizontal & Vertical subdomain enumeration + `httpx` live host filtering.
@@ -27,12 +27,14 @@
 6. **AI Analysis**: The `validate.py` script sends technical data to Groq AI for professional triage.
 7. **Fulfillment**: Creates HackerOne drafts and pings Telegram with the full report.
 
-🛠️ Installation & Setup
+**🛠️ Installation & Setup**
 
 **1. Fork the Repo**
+
 Click the Fork button to create your own instance of the Sniper.
 
 **2. Configure Secrets**
+
 Navigate to `Settings > Secrets and Variables > Actions` and add the following keys:
 
 
@@ -47,6 +49,7 @@ Navigate to `Settings > Secrets and Variables > Actions` and add the following k
 | `TELEGRAM_DATA_ID` | Chat ID for Database ZIP storage |
 
 **3. Add Your Targets**
+
 Create `.txt` files in the `targets/` folder.
 Example: `airbnb.txt` containing:
 ```bash
@@ -54,4 +57,24 @@ airbnb.com
 airbnb.co.uk
 ```
 **4. Deploy**
+
 The machine will start automatically based on the cron schedule. To test immediately, go to **Actions > Automation Recon > Run Workflow**.
+
+**📂 Repository Structure**
+
+```bash
+├── .github/workflows/
+│   └── recon.yml       # The Automation Engine (CI/CD)
+├── scripts/
+│   └── validate.py    # The AI Brain (Triage & Reporting)
+├── targets/           # Your Target Lists (.txt)
+├── .seen_urls         # Stealth Memory DB (Auto-sync)
+└── README.md          # Documentation
+```
+
+<h1><b>⚠️ Disclaimer</b></h1>
+
+``This tool is for educational and authorized security testing purposes only. Usage of NovaRecon for attacking targets without prior consent is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this program.``
+
+**Developed by**: JosuaZxz
+**Status**: Operational 🟢 | Powerfull Mode Active
