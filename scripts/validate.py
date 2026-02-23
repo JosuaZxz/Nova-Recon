@@ -79,21 +79,18 @@ def validate_findings():
     all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
 
     findings_list = []
-    # Quality filter: Only Medium and above & discard the noisy ones
-    trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers"]
+    # Quality filter: Gunakan all_findings (yang sudah rapi di-sort), jangan buka file lagi!
+    trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers", "dns-sec"]
     
-    with open(path, 'r') as f:
-        for line in f:
-            try:
-                d = json.loads(line)
-                if isinstance(d, list): d = d[0]
-                sev = d.get("info", {}).get("severity", "info").lower()
-                tid = d.get("template-id", "").lower()
-                
-                if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
-                    findings_list.append(get_verification_context(d))
-                if len(findings_list) >= 15: break
-            except: continue
+    for d in all_findings:
+        sev = d.get("info", {}).get("severity", "info").lower()
+        tid = d.get("template-id", "").lower()
+        
+        if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
+            findings_list.append(get_verification_context(d))
+        
+        # Kalau sudah dapet 15 bug terbaik (paling parah), stop.
+        if len(findings_list) >= 15: break
 
     if not findings_list: return
 
@@ -125,11 +122,11 @@ def validate_findings():
 {remediation_plan}"""
 
     prompt = f"""Role: Senior Triage Lead. 
-    Data: {json.dumps(findings_list)}. 
-    Write technical reports using template: {report_template}. 
-    Use the provided 'request_evidence' to write a highly accurate and realistic 'Steps to Reproduce' section.
-    Output ONLY a JSON ARRAY: [{{ "title": "...", "description": "...", "impact": "...", "severity": "...", "url": "..." }}]. 
-    If nothing valid: NO_VALID_BUG"""
+Data: {json.dumps(findings_list)}. 
+Write technical reports using template: {report_template}. 
+Use the provided 'request_evidence' to write a highly accurate and realistic 'Steps to Reproduce' section.
+Output ONLY a JSON ARRAY: [{{ "title": "...", "description": "...", "impact": "...", "severity": "...", "url": "..." }}]. 
+If nothing valid: NO_VALID_BUG"""
 
     try:
         url = "https://api.groq.com/openai/v1/chat/completions"
