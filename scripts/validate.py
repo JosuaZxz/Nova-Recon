@@ -19,7 +19,7 @@ def get_verification_context(data):
     info = data.get("info", {})
     raw_req = data.get("request", "")
     raw_res = data.get("response", "")
-    short_req = (raw_req[:800] + '..[truncated]') if len(raw_req) > 800 else raw_req
+    short_req = (raw_req[:1500] + '..[truncated]') if len(raw_req) > 1500 else raw_req
     short_res = (raw_res[:800] + '..[truncated]') if len(raw_res) > 800 else raw_res
 
     return {
