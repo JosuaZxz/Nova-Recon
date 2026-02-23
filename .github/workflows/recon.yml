@@ -99,14 +99,26 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 5. NUCLEI SCAN (BRUTAL MODE - ALL WEAPONS CARRY)
-                echo "[+] Step 3: Deep Scan (Loading 6500+ Templates)..."
-                timeout 3h nuclei -l "data/$program_name/active_hosts.txt" \
+                # 5. NUCLEI SCAN (PREDATOR MODE - ULTRA FAST)
+                # TAHAP 1: THE KILLSHOT (Critical, High, Medium) - Prioritas Cuan
+                echo "[+] Phase 1: Hunting Gold (Critical, High, Medium) at 200 RPS..."
+                nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
-                  -rl 80 -c 15 -me 10 -stats -si 60 -silent \
+                  -severity critical,high,medium \
+                  -et dns,ssl,whois -es info \
+                  -rl 200 -c 100 -bs 35 -me 2 \
+                  -stats -si 60 -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -o "data/$program_name/HASIL_SCAN_NUCLEI.txt" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
+
+                # TAHAP 2: THE SWEEP (Low & Unknown) - Sisa waktu
+                echo "[+] Phase 2: Cleaning up (Low & Unknown) at 200 RPS..."
+                timeout 45m nuclei -l "data/$program_name/active_hosts.txt" \
+                  -t /home/runner/nuclei-templates/ \
+                  -severity low,unknown \
+                  -et dns,ssl,whois -es info \
+                  -rl 200 -c 100 -bs 35 -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
                 
                 # 7. SCAN URLS FROM WAYBACK (Looking for Secret Leaks)
                 if [ -s "data/$program_name/urls.txt" ]; then
