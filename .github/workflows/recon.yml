@@ -129,12 +129,17 @@ jobs:
                 # 7. SCAN URLS FROM WAYBACK (Looking for Secret Leaks)
                 if [ -s "data/$program_name/urls.txt" ]; then
                   echo "[+] Step 3.5: Scanning Historical URLs..."
+                  # Kita pakai file temp lagi biar gak tabrakan
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
                     -t /home/runner/nuclei-templates/http/exposed-tokens/ \
                     -H "User-Agent: NovaRecon/2026" \
-                    -rl 80 -silent -jsonl >> "data/$program_name/nuclei_results.json" || true
+                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" || true
+                  
+                  if [ -f "data/$program_name/url_leaks.json" ]; then
+                    cat "data/$program_name/url_leaks.json" >> "data/$program_name/nuclei_results.json"
+                  fi
                 fi
-
+                
                 # 8. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py
