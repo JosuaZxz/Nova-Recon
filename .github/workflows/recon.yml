@@ -58,39 +58,35 @@ jobs:
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
         run: |
-          # 1. SETUP NOTIF CONFIG
+          # 1. SETUP NOTIF CONFIG (Silent)
           echo "telegram:" > notify-config.yaml
           echo "  - id: \"p1_p2_alerts\"" >> notify-config.yaml
           echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
           echo "    telegram_chatid: \"$TG_CRIT\"" >> notify-config.yaml
           echo "    format: \"{{data}}\"" >> notify-config.yaml
 
-          # 2. TARGET SELECTION (RANDOM SNIPER)
+          # 2. TARGET SELECTION (RANDOM SNIPER - GHOST MODE)
           target_file=$(ls targets/*.txt | shuf | head -n 1)
           program_name=$(basename "$target_file" .txt)
-          echo "🎯 TARGETING: $program_name"
+          echo "🎯 Sniper Mode: Engaging Random Target..." # Nama target asli disembunyikan
           mkdir -p "data/$program_name"
           touch .seen_urls
 
           # --- [STEP 1: GATHERING SUBDOMAINS - SILENT MODE] ---
-          echo "[+] Step 1: Gathering Subdomains (Double Power)..."
+          echo "[+] Step 1: Gathering Subdomains..."
           
-          # Subfinder (Brush all databases)
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
           
-          # Assetfinder (Looping so that all domains in the list are brushed)
           while read -r domain; do
             echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
           done < "$target_file"
 
-          # Clean wildcards, spaces, and duplicates (Results go to subdomains.txt)
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
-          
-          echo "    ✅ Step 1 Done. Found: $(wc -l < data/$program_name/subdomains.txt) unique subdomains."
-          
+          echo "    ✅ Step 1 Done." # Angka jumlah subdomain dihapus agar tidak memberi petunjuk skala target
+
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # 4. HTTPX LIVE CHECK
-            echo "[+] Step 2: HTTPX Live Check (Pro Filter)..."
+            echo "[+] Step 2: HTTPX Live Check..."
             timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
@@ -101,7 +97,7 @@ jobs:
 
                 # 5. NUCLEI SCAN (PREDATOR MODE - STEALTH VERSION)
                 # TAHAP 1: THE KILLSHOT
-                echo "[+] Phase 1: Hunting Gold..."
+                echo "[+] Phase 1: Hunting Gold (P1-P3)..."
                 nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity critical,high,medium \
@@ -112,7 +108,7 @@ jobs:
                   -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # TAHAP 2: THE SWEEP
-                echo "[+] Phase 2: Cleaning up..."
+                echo "[+] Phase 2: Cleaning up (Low/Info)..."
                 timeout 45m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity low,unknown \
