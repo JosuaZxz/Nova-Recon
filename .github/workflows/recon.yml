@@ -99,7 +99,7 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 5. NUCLEI SCAN (PREDATOR MODE - FIX VERSION)
+                # 5. NUCLEI SCAN (PREDATOR MODE - STEALTH VERSION)
                 # TAHAP 1: THE KILLSHOT
                 echo "[+] Phase 1: Hunting Gold..."
                 nuclei -l "data/$program_name/active_hosts.txt" \
@@ -109,31 +109,28 @@ jobs:
                   -rl 200 -c 100 -bs 35 -me 2 \
                   -mhe 100 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # TAHAP 2: THE SWEEP
                 echo "[+] Phase 2: Cleaning up..."
-                # Gunakan file sementara dulu agar tidak korupsi file utama
                 timeout 45m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity low,unknown \
                   -et dns,ssl,whois -es info \
                   -rl 200 -c 100 -bs 35 -mhe 100 -no-color -silent \
-                  -jsonl -o "data/$program_name/temp_results.json" || true
+                  -jsonl -o "data/$program_name/temp_results.json" > /dev/null 2>&1 || true
                 
-                # Gabungkan hanya jika file sementara ada isinya
                 if [ -f "data/$program_name/temp_results.json" ]; then
                   cat "data/$program_name/temp_results.json" >> "data/$program_name/nuclei_results.json"
                 fi
                 
-                # 7. SCAN URLS FROM WAYBACK (Looking for Secret Leaks)
+                # 7. SCAN URLS FROM WAYBACK
                 if [ -s "data/$program_name/urls.txt" ]; then
                   echo "[+] Step 3.5: Scanning Historical URLs..."
-                  # Kita pakai file temp lagi biar gak tabrakan
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
                     -t /home/runner/nuclei-templates/http/exposed-tokens/ \
                     -H "User-Agent: NovaRecon/2026" \
-                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" || true
+                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" > /dev/null 2>&1 || true
                   
                   if [ -f "data/$program_name/url_leaks.json" ]; then
                     cat "data/$program_name/url_leaks.json" >> "data/$program_name/nuclei_results.json"
@@ -142,9 +139,9 @@ jobs:
                 
                 # 8. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
-                PROGRAM_NAME=$program_name python scripts/validate.py
+                PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1
 
-                # 9. TELEGRAM NOTIFICATION (.md files)
+                # 9. TELEGRAM NOTIFICATION (Silent Curl)
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
@@ -153,10 +150,10 @@ jobs:
                   done
                 fi
 
-                # 10. COMPLETE ZIP BACKUP
+                # 10. COMPLETE ZIP BACKUP (Silent Zip & Curl)
                 zip_name="${program_name}_FULL_DATA.zip"
-                zip -j "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
-                curl -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument"
+                zip -qj "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
+                curl -s -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
             fi
           fi
 
