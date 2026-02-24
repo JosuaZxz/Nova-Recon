@@ -145,7 +145,7 @@ jobs:
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
                     -t /home/runner/nuclei-templates/http/exposed-tokens/ \
                     -H "User-Agent: NovaRecon/2026" \
-                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" > /dev/null 2>&1 || true
+                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" || true
                   
                   if [ -f "data/$program_name/url_leaks.json" ]; then
                     cat "data/$program_name/url_leaks.json" >> "data/$program_name/nuclei_results.json"
