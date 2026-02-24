@@ -2,12 +2,19 @@ name: Automation Recon (24/7)
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # Runs every 10 minutes
+    # Menggunakan menit ganjil untuk menghindari jam sibuk antrean GitHub
+    - cron: '13,33,53 * * * *' 
   workflow_dispatch:
 
 jobs:
   recon-job:
     runs-on: ubuntu-latest
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        # Menjalankan 3 sniper sekaligus secara paralel (Aman & Kencang)
+        sniper_id: [1, 2, 3]
     permissions:
       contents: write
     steps:
@@ -65,16 +72,26 @@ jobs:
           echo "    telegram_chatid: \"$TG_CRIT\"" >> notify-config.yaml
           echo "    format: \"{{data}}\"" >> notify-config.yaml
 
-          # 2. TARGET SELECTION (RANDOM SNIPER - GHOST MODE)
-          target_file=$(ls targets/*.txt | shuf | head -n 1)
+          # 2. ANTI-COLLISION DELAY
+          # Memberi jeda agar tiap sniper mengambil target yang berbeda dari antrean
+          SLEEP_TIME=$(( (${{ matrix.sniper_id }} - 1) * 40 ))
+          echo "⏳ Sniper ${{ matrix.sniper_id }} waiting for $SLEEP_TIME seconds..."
+          sleep $SLEEP_TIME
+
+          # 3. TARGET SELECTION (ROUND ROBIN - ANTREAN SISTEMATIS)
+          # Mengambil perusahaan yang paling lama tidak disentuh (Oldest First)
+          target_file=$(ls -rt targets/*.txt | head -n 1)
           program_name=$(basename "$target_file" .txt)
-          echo "🎯 Sniper Mode: Engaging Random Target..." 
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Ghost Mode)" 
+          
+          # UPDATE TIMESTAMP: Geser target ini ke urutan paling belakang untuk putaran berikutnya
+          touch "$target_file"
+          
           mkdir -p "data/$program_name"
           touch .seen_urls
 
           # --- [STEP 1: GATHERING SUBDOMAINS - SILENT MODE] ---
           echo "[+] Step 1: Gathering Subdomains..."
-          
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
           
           while read -r domain; do
@@ -95,10 +112,10 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 5. NUCLEI SCAN (PREDATOR MODE - STEALTH VERSION)
-                # TAHAP 1: THE KILLSHOT (Kasih timeout biar gak macet 5 jam!)
+                # 5. NUCLEI SCAN (PREDATOR MODE - HIT & RUN)
+                # TAHAP 1: THE KILLSHOT (Set 1 Jam agar mesin cepat rotasi mencari bug matang)
                 echo "[+] Phase 1: Hunting Gold (P1-P3)..."
-                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" \
+                timeout 1h nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
@@ -107,9 +124,9 @@ jobs:
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
-                # TAHAP 2: THE SWEEP
+                # TAHAP 2: THE SWEEP (Set 30 Menit)
                 echo "[+] Phase 2: Cleaning up (Low/Info)..."
-                timeout 45m nuclei -l "data/$program_name/active_hosts.txt" \
+                timeout 30m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity low,unknown \
                   -et dns,ssl,whois -es info \
@@ -146,7 +163,7 @@ jobs:
                   done
                 fi
 
-                # 10. COMPLETE ZIP BACKUP (Silent Zip & Curl)
+                # 10. COMPLETE ZIP BACKUP (Always send for Data History)
                 zip_name="${program_name}_FULL_DATA.zip"
                 zip -qj "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
                 curl -s -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
