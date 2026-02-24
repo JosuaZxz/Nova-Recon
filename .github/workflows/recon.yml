@@ -68,7 +68,7 @@ jobs:
           # 2. TARGET SELECTION (RANDOM SNIPER - GHOST MODE)
           target_file=$(ls targets/*.txt | shuf | head -n 1)
           program_name=$(basename "$target_file" .txt)
-          echo "🎯 Sniper Mode: Engaging Random Target..." # Nama target asli disembunyikan
+          echo "🎯 Sniper Mode: Engaging Random Target..." 
           mkdir -p "data/$program_name"
           touch .seen_urls
 
@@ -82,7 +82,7 @@ jobs:
           done < "$target_file"
 
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
-          echo "    ✅ Step 1 Done." # Angka jumlah subdomain dihapus agar tidak memberi petunjuk skala target
+          echo "    ✅ Step 1 Done." 
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # 4. HTTPX LIVE CHECK
