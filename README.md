@@ -77,5 +77,4 @@ The machine will start automatically based on the cron schedule. To test immedia
 ``This tool is for educational and authorized security testing purposes only. Usage of NovaRecon for attacking targets without prior consent is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this program.``
 
 **Developed by**: JosuaZxz
-
 **Status**: Operational 🟢 | Powerfull Mode Active
