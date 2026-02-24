@@ -1,11 +1,11 @@
-<h1><b>🎯 NovaRecon: Powerfull Recon Edition (2026)</b></h1>
+<h1>🎯 NovaRecon: Powerfull Recon Edition (2026)</h1>
 
 **NovaRecon** is an autonomous, high-speed Bug Bounty reconnaissance and vulnerability scanning engine powered by **GitHub Actions** and **Llama 3.3 70B AI**. Designed for the modern bug hunter, it operates in "Sniper Mode"—randomly selecting and neutralizing targets from your list every 10 minutes, 24/7.
 
 **Current Build**: v2.0 (Powerfull Edition)
 **User-Agent**: NovaRecon/2026
 
-**🚀 Key Features**
+<h2>🚀 Key Features</h2>
 
 * **⚡ 24/7 Autonomous Sniper**: Runs on GitHub Actions with a 10-minute cron interval. Zero infrastructure cost, maximum uptime.
 * **🛡️ Double-Power Discovery**: Concurrent subdomain gathering using `Subfinder` (all sources) and `Assetfinder`.
@@ -17,7 +17,7 @@
 * **📟 Stealth Memory (Anti-Spam)**: Uses **MD5 Hashing** for `.seen_urls` database to ensure you never report the same bug twice.
 * **📲 Modular Telegram Alerts**: Smart notifications split into dedicated channels: `Critical (P1-P2)`, `General (P3-P4)`, and `Database Backups`.
 
-**🏗️ Architecture & Workflow**
+<h2>🏗️ Architecture & Workflow</h2>
 
 1. **Selection**: Randomly picks a target file from the `targets/` directory.
 2. **Reconnaissance**: Horizontal & Vertical subdomain enumeration + `httpx` live host filtering.
@@ -27,7 +27,7 @@
 6. **AI Analysis**: The `validate.py` script sends technical data to Groq AI for professional triage.
 7. **Fulfillment**: Creates HackerOne drafts and pings Telegram with the full report.
 
-**🛠️ Installation & Setup**
+<h2>🛠️ Installation & Setup</h2>
 
 **1. Fork the Repo**
 
@@ -60,7 +60,7 @@ airbnb.co.uk
 
 The machine will start automatically based on the cron schedule. To test immediately, go to **Actions > Automation Recon > Run Workflow**.
 
-**📂 Repository Structure**
+<h2>📂 Repository Structure</h2>
 
 ```bash
 ├── .github/workflows/
@@ -72,7 +72,7 @@ The machine will start automatically based on the cron schedule. To test immedia
 └── README.md          # Documentation
 ```
 
-<h1><b>⚠️ Disclaimer</b></h1>
+<b>⚠️ Disclaimer</h1>
 
 ``This tool is for educational and authorized security testing purposes only. Usage of NovaRecon for attacking targets without prior consent is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this program.``
 
