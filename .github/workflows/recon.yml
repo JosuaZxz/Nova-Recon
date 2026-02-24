@@ -82,7 +82,7 @@ jobs:
           # Mengambil perusahaan yang paling lama tidak disentuh (Oldest First)
           target_file=$(ls -rt targets/*.txt | head -n 1)
           program_name=$(basename "$target_file" .txt)
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Ghost Mode)" 
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: A Random Target (Ghost Mode)" 
           
           # UPDATE TIMESTAMP: Geser target ini ke urutan paling belakang untuk putaran berikutnya
           touch "$target_file"
@@ -121,9 +121,8 @@ jobs:
                   -et dns,ssl,whois -es info \
                   -rl 200 -c 100 -bs 35 -me 2 \
                   -mhe 100 -no-color -silent \
-                  -stats -si 60 \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # TAHAP 2: THE SWEEP (Set 30 Menit)
                 echo "[+] Phase 2: Cleaning up (Low/Info)..."
@@ -132,8 +131,7 @@ jobs:
                   -severity low,unknown \
                   -et dns,ssl,whois -es info \
                   -rl 200 -c 100 -bs 35 -mhe 100 -no-color -silent \
-                  -stats -si 60 \
-                  -jsonl -o "data/$program_name/temp_results.json" || true
+                  -jsonl -o "data/$program_name/temp_results.json" > /dev/null 2>&1 || true
                 
                 if [ -f "data/$program_name/temp_results.json" ]; then
                   cat "data/$program_name/temp_results.json" >> "data/$program_name/nuclei_results.json"
@@ -145,7 +143,7 @@ jobs:
                   timeout 45m nuclei -l "data/$program_name/urls.txt" \
                     -t /home/runner/nuclei-templates/http/exposed-tokens/ \
                     -H "User-Agent: NovaRecon/2026" \
-                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" || true
+                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" > /dev/null 2>&1 || true
                   
                   if [ -f "data/$program_name/url_leaks.json" ]; then
                     cat "data/$program_name/url_leaks.json" >> "data/$program_name/nuclei_results.json"
