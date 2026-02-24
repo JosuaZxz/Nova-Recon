@@ -8,6 +8,7 @@ on:
 jobs:
   recon-job:
     runs-on: ubuntu-latest
+    timeout-minutes: 340 
     permissions:
       contents: write
     steps:
@@ -96,9 +97,9 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
                 # 5. NUCLEI SCAN (PREDATOR MODE - STEALTH VERSION)
-                # TAHAP 1: THE KILLSHOT
+                # TAHAP 1: THE KILLSHOT (Kasih timeout biar gak macet 5 jam!)
                 echo "[+] Phase 1: Hunting Gold (P1-P3)..."
-                nuclei -l "data/$program_name/active_hosts.txt" \
+                timeout 2h nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
