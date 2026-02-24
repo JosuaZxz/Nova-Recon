@@ -58,7 +58,8 @@ airbnb.co.uk
 ```
 **4. Deploy**
 
-The machine will start automatically based on the cron schedule. To test immediately, go to **Actions > Automation Recon > Run Workflow**.
+The machine will start automatically based on the cron schedule. <br>
+To test immediately, go to **Actions > Automation Recon > Run Workflow**.
 
 <h2>📂 Repository Structure</h2>
 
@@ -74,7 +75,9 @@ The machine will start automatically based on the cron schedule. To test immedia
 
 <h1>⚠️ Disclaimer</h1>
 
-``This tool is for educational and authorized security testing purposes only. Usage of NovaRecon for attacking targets without prior consent is illegal. The developers assume no liability and are not responsible for any misuse or damage caused by this program.``
+``This tool is for educational and authorized security testing purposes only. <br>
+Usage of NovaRecon for attacking targets without prior consent is illegal. <br>
+The developers assume no liability and are not responsible for any misuse or damage caused by this program.``
 
 **Developed by**: JosuaZxz <br>
 **Status**: Operational 🟢 | Powerfull Mode Active
