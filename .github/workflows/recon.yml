@@ -133,7 +133,7 @@ jobs:
                   -et dns,ssl,whois -es info \
                   -rl 200 -c 100 -bs 35 -mhe 100 -no-color -silent \
                   -stats -si 60 \
-                  -jsonl -o "data/$program_name/temp_results.json" > || true
+                  -jsonl -o "data/$program_name/temp_results.json" || true
                 
                 if [ -f "data/$program_name/temp_results.json" ]; then
                   cat "data/$program_name/temp_results.json" >> "data/$program_name/nuclei_results.json"
