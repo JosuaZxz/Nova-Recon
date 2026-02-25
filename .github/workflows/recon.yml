@@ -78,16 +78,22 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} waiting for $SLEEP_TIME seconds..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (THE UNBREAKABLE MATRIX SPLIT)
-          # 1. Ambil semua file .txt
-          # 2. Urutkan (sort) agar urutannya identik di semua komputer
-          # 3. Acak (shuf) pakai Kunci yang SAMA di semua komputer (github.run_id)
-          # 4. Ambil file ke-N sesuai nomor ID Sniper
+          # 3. TARGET SELECTION (DETERMINISTIC SNIPER - ANTI COLLISION 100%)
+          # Kita pakai Logika Matematika agar 3 mesin dapet jatah beda tanpa rebutan
           
-          target_file=$(ls targets/*.txt | sort | shuf --random-source=<(echo "${{ github.run_id }}") | sed -n "${{ matrix.sniper_id }}p")
+          # 1. List semua target dan hitung totalnya
+          ls targets/*.txt | sort > targets_sorted.tmp
+          TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
+          
+          # 2. Logika Modulo: (ID Run + ID Sniper) dibagi Total Target
+          # Ini menjamin Sniper 1, 2, dan 3 dapet urutan yang beda tapi kompak
+          INDEX=$(( ( (${{ github.run_id }} % 100) + ${{ matrix.sniper_id }} ) % TOTAL_TARGETS + 1 ))
+          
+          # 3. Ambil file sesuai hasil hitungan INDEX
+          target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: A Secret Target (Anti-Collision Active)" 
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Fixed Anti-Collision)"
           
           mkdir -p "data/$program_name"
           touch .seen_urls
