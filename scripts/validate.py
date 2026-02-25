@@ -116,7 +116,7 @@ def validate_findings():
 2. {step_2}
 3. {step_3}
 ## Environment
-- IP: {ip} | User-Agent: SniperRecon/2026
+- IP: {ip} | User-Agent: NovaRecon/2026
 ## Remediation
 {remediation_plan}"""
 
