@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         # Menjalankan 3 sniper sekaligus secara paralel (Aman & Kencang)
-        sniper_id: [1, 2, 3]
+        sniper_id: [1, 2, 3, 4, 5]
     permissions:
       contents: write
     steps:
@@ -125,7 +125,7 @@ jobs:
                 # 5. NUCLEI SCAN (PREDATOR MODE - HIT & RUN)
                 # TAHAP 1: THE KILLSHOT (Set 1 Jam agar mesin cepat rotasi mencari bug matang)
                 echo "[+] Phase 1: Hunting Gold (P1-P3)..."
-                timeout 1h nuclei -l "data/$program_name/active_hosts.txt" \
+                timeout 30m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
@@ -136,7 +136,7 @@ jobs:
 
                 # TAHAP 2: THE SWEEP (Set 30 Menit)
                 echo "[+] Phase 2: Cleaning up (Low/Info)..."
-                timeout 30m nuclei -l "data/$program_name/active_hosts.txt" \
+                timeout 20m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates/ \
                   -severity low,unknown \
                   -et dns,ssl,whois -es info \
