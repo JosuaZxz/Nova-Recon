@@ -95,7 +95,7 @@ jobs:
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper $SNIPER_ID Engaging: A Random Target (Ghost Mode)"
+          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
           
           mkdir -p "data/$program_name"
           touch .seen_urls
