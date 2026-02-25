@@ -78,22 +78,24 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} waiting for $SLEEP_TIME seconds..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (DETERMINISTIC SNIPER - ANTI COLLISION 100%)
-          # Kita pakai Logika Matematika agar 3 mesin dapet jatah beda tanpa rebutan
-          
-          # 1. List semua target dan hitung totalnya
+          # 3. TARGET SELECTION (THE SEQUENTIAL PREDATOR - NO OVERLAP)
+          # 1. List target dan urutkan agar semua mesin punya daftar yang sama
           ls targets/*.txt | sort > targets_sorted.tmp
           TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
           
-          # 2. Logika Modulo: (ID Run + ID Sniper) dibagi Total Target
-          # Ini menjamin Sniper 1, 2, dan 3 dapet urutan yang beda tapi kompak
-          INDEX=$(( ( (${{ github.run_id }} % 100) + ${{ matrix.sniper_id }} ) % TOTAL_TARGETS + 1 ))
+          # 2. Ambil data kontekstual dari GitHub
+          RUN_NUM=${{ github.run_number }}
+          SNIPER_ID=${{ matrix.sniper_id }}
+          SNIPER_COUNT=5  # Jumlah total sniper Bos
           
-          # 3. Ambil file sesuai hasil hitungan INDEX
+          # 3. MATH LOGIC: Pastikan tiap run mengambil 5 target yang BERBEDA TOTAL dari run sebelumnya
+          # Contoh: Run 1 ambil 1-5, Run 2 ambil 6-10, dst.
+          INDEX=$(( ((RUN_NUM - 1) * SNIPER_COUNT + (SNIPER_ID - 1)) % TOTAL_TARGETS + 1 ))
+          
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Fixed Anti-Collision)"
+          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
           
           mkdir -p "data/$program_name"
           touch .seen_urls
