@@ -78,14 +78,16 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} waiting for $SLEEP_TIME seconds..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (ROUND ROBIN - ANTREAN SISTEMATIS)
-          # Mengambil perusahaan yang paling lama tidak disentuh (Oldest First)
-          target_file=$(ls -rt targets/*.txt | head -n 1)
-          program_name=$(basename "$target_file" .txt)
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: A Random Target (Ghost Mode)" 
+          # 3. TARGET SELECTION (THE UNBREAKABLE MATRIX SPLIT)
+          # 1. Ambil semua file .txt
+          # 2. Urutkan (sort) agar urutannya identik di semua komputer
+          # 3. Acak (shuf) pakai Kunci yang SAMA di semua komputer (github.run_id)
+          # 4. Ambil file ke-N sesuai nomor ID Sniper
           
-          # UPDATE TIMESTAMP: Geser target ini ke urutan paling belakang untuk putaran berikutnya
-          touch "$target_file"
+          target_file=$(ls targets/*.txt | sort | shuf --random-source=<(echo "${{ github.run_id }}") | sed -n "${{ matrix.sniper_id }}p")
+          program_name=$(basename "$target_file" .txt)
+          
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: A Secret Target (Anti-Collision Active)" 
           
           mkdir -p "data/$program_name"
           touch .seen_urls
