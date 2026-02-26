@@ -162,7 +162,7 @@ jobs:
                 
                 # 8. AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
-                PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1
+                PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1 || true
 
                 # 9. TELEGRAM NOTIFICATION (Silent Curl)
                 if [ -d "data/$program_name/alerts/high" ]; then
