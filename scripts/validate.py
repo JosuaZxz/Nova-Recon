@@ -129,43 +129,44 @@ If nothing valid: NO_VALID_BUG"""
 
     try:
         # --- [ AI EXECUTION WITH SEQUENTIAL RETRY ] ---
-    ai_out = None
-    url = "https://api.groq.com/openai/v1/chat/completions"
-    headers = {"Authorization": f"Bearer {AI_KEY}"}
-    payload = {
-        "model": "llama-3.3-70b-versatile",
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.1
-    }
+        ai_out = None
+        url = "https://api.groq.com/openai/v1/chat/completions"
+        headers = {"Authorization": f"Bearer {AI_KEY}"}
+        payload = {
+            "model": "llama-3.3-70b-versatile",
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": 0.1
+        }
 
-    print(f"[*] Sending findings to AI for {PROGRAM_NAME}...")
-    
-    for attempt in range(3): # Coba sampai 3 kali jika gagal
-        try:
-            res = requests.post(url, headers=headers, json=payload, timeout=90)
-            
-            if res.status_code == 200:
-                ai_out = res.json()['choices'][0]['message']['content'].strip()
-                break # Sukses! Keluar dari loop retry
-            
-            elif res.status_code == 429: # Terlalu cepat (Rate Limit)
-                print(f" [!] AI busy (Rate Limit). Waiting 15s... (Attempt {attempt+1}/3)")
-                time.sleep(15)
-            
-            else:
-                print(f" [!] AI Server Error ({res.status_code}). Retrying... (Attempt {attempt+1}/3)")
-                time.sleep(5)
+        print(f"[*] Sending findings to AI for {PROGRAM_NAME}...")
+
+        for attempt in range(3): # Coba sampai 3 kali jika gagal
+            try:
+                # Timeout 90 detik karena laporan kita sekarang sangat detil
+                res = requests.post(url, headers=headers, json=payload, timeout=90)
                 
-        except Exception as e:
-            print(f" [!] Connection Error: {e}. Retrying... (Attempt {attempt+1}/3)")
-            time.sleep(5)
+                if res.status_code == 200:
+                    ai_out = res.json()['choices'][0]['message']['content'].strip()
+                    break # Sukses! Keluar dari loop
+                
+                elif res.status_code == 429: # Rate Limit
+                    print(f" [!] AI busy (Rate Limit). Waiting 15s... (Attempt {attempt+1}/3)")
+                    time.sleep(15)
+                
+                else:
+                    print(f" [!] AI Server Error ({res.status_code}). Retrying... (Attempt {attempt+1}/3)")
+                    time.sleep(5)
+                    
+            except Exception as e:
+                print(f" [!] Connection Error: {e}. Retrying... (Attempt {attempt+1}/3)")
+                time.sleep(5)
 
-    # --- [ POST-PROCESSING ] ---
-    if not ai_out or "NO_VALID_BUG" in ai_out:
-        print(f"[-] No valid bugs found by AI for {PROGRAM_NAME}.")
-        return
+        # --- [ POST-PROCESSING ] ---
+        if not ai_out or "NO_VALID_BUG" in ai_out:
+            print(f"[-] No valid bugs found by AI for {PROGRAM_NAME}.")
+            return
 
-    try:
+        # Mencari JSON di dalam output AI
         match = re.search(r'\[.*\]|\{.*\}', ai_out, re.DOTALL)
         if match:
             reports = json.loads(match.group(0), strict=False)
@@ -175,13 +176,13 @@ If nothing valid: NO_VALID_BUG"""
             os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
 
             for idx, rep in enumerate(reports):
-                # Kirim ke H1
+                # Kirim ke HackerOne (Draf Otomatis)
                 d_id = create_h1_draft(rep['title'], rep['description'], rep['impact'], rep['severity'], rep.get('url', ''))
                 
                 if d_id in [None, "ALREADY_REPORTED"]: 
                     continue
                 
-                # Labeling Severity
+                # Labeling Severity untuk folder Telegram
                 sev = rep.get('severity', 'Medium').upper()
                 p_label = "P1-P2" if any(x in sev for x in ["CRITICAL", "HIGH", "P1", "P2"]) else "P3-P4"
                 folder = "high" if p_label == "P1-P2" else "low"
@@ -191,12 +192,12 @@ If nothing valid: NO_VALID_BUG"""
                 report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{p_label}_{safe_title}_{idx}.md"
                 
                 with open(report_path, 'w') as f:
-                    f.write(f"# {rep['title']}\n\nDraft ID: `{d_id}`\n\n{rep['description']}\n\n## Impact\n{rep['impact']}")
+                    f.write(f"# {rep['title']}\n\n**Draft ID:** `{d_id}`\n\n{rep['description']}\n\n## Impact\n{rep['impact']}")
                 
                 print(f"[+] SUCCESS: Report generated for {rep['title']} (Draft: {d_id})")
 
     except Exception as e: 
-        print(f"Error parsing AI output: {e}")
+        print(f"Error in AI/Drafting process: {e}")
 
 if __name__ == "__main__":
     validate_findings()
