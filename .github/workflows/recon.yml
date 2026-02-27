@@ -122,17 +122,17 @@ jobs:
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
                 timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
 
-                # 5. NUCLEI SCAN (PREDATOR MODE - HIT & RUN)
-                # TAHAP 1: THE KILLSHOT (Set 1 Jam agar mesin cepat rotasi mencari bug matang)
-                echo "[+] Phase 1: Hunting Gold (P1-P3)..."
+                # 5. NUCLEI SCAN (AUDIT MODE - KITA BUKA SEMUA LOG UNTUK CEK PENYAKIT)
+                echo "[+] Phase 1: Hunting Gold..."
+                # 1. Kita hapus redirect /dev/null biar kita bisa liat errornya di Actions
+                # 2. Kita hapus path folder template agar Nuclei pakai path default-nya sendiri
+                # 3. Kita turunkan severity ke 'low' agar kita dapet bukti kalau mesin ini beneran nembak
                 timeout 30m nuclei -l "data/$program_name/active_hosts.txt" \
-                  -t /home/runner/nuclei-templates/ \
-                  -severity critical,high,medium \
-                  -et dns,ssl,whois -es info \
-                  -rl 200 -c 100 -bs 35 -me 2 \
-                  -mhe 100 -no-color -silent \
+                  -severity critical,high,medium,low \
+                  -et dns,ssl,whois \
+                  -rl 150 -c 70 -bs 25 -mhe 100 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" || true
 
                 # TAHAP 2: THE SWEEP (Set 30 Menit)
                 echo "[+] Phase 2: Cleaning up (Low/Info)..."
