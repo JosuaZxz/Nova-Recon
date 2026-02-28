@@ -109,7 +109,7 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - FIX CHROME PATH] ---
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - SIMPLE & POWERFUL] ---
                 echo "[+] Step 3: Mining All Hidden Endpoints..."
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
@@ -118,11 +118,11 @@ jobs:
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - FIX FLAG -chrome-path
+                # 2. Crawler Aktif (Katana) - HANYA PAKAI FLAG STANDAR
                 echo "    (Crawling with Katana Headless...)"
-                # Kita ganti -path menjadi -chrome-path
+                # Kita hapus -chrome-path, biarkan dia cari otomatis karena Chrome sudah di-install ke sistem
                 timeout 25m katana -list data/$program_name/active_hosts.txt \
-                  -headless -system-chrome -chrome-path /usr/bin/google-chrome -no-sandbox \
+                  -headless -system-chrome -no-sandbox \
                   -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
                 # 3. Gabungkan
