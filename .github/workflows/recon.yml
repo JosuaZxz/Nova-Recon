@@ -2,7 +2,6 @@ name: Automation Recon (24/7)
 
 on:
   schedule:
-    # Menggunakan menit ganjil untuk menghindari jam sibuk antrean GitHub
     - cron: '13,33,53 * * * *' 
   workflow_dispatch:
 
@@ -13,7 +12,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Menjalankan 3 sniper sekaligus secara paralel (Aman & Kencang)
         sniper_id: [1, 2, 3, 4, 5]
     permissions:
       contents: write
@@ -37,9 +35,11 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # PASANG CHROME DAN DEPENDENSINYA (WAJIB ADA!)
-          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils
+          # 1. PASANG CHROME + SEMUA DEPENDENSI AGAR STABIL DI GITHUB
+          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils \
+            libasound2 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1
           
+          # 2. INSTALL TOOLS PD & LAINNYA
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
@@ -68,16 +68,20 @@ jobs:
           TG_CRIT: ${{ secrets.TELEGRAM_CRITICAL_ID }}
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
-          # JURUS RAHASIA: Paksa Katana pakai Chrome sistem (Anti-Download!)
+          # TUNJUK LANGSUNG CHROME-NYA
           KATANA_CHROME_PATH: /usr/bin/google-chrome
         run: |
-          # ... (Setup Notif tetap sama) ...
+          echo "telegram:" > notify-config.yaml
+          echo "  - id: \"p1_p2_alerts\"" >> notify-config.yaml
+          echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
+          echo "    telegram_chatid: \"$TG_CRIT\"" >> notify-config.yaml
+          echo "    format: \"{{data}}\"" >> notify-config.yaml
 
-          # 2. ANTI-COLLISION DELAY
+          # ANTI-COLLISION DELAY
           SLEEP_TIME=$(( (${{ matrix.sniper_id }} - 1) * 40 ))
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION
+          # TARGET SELECTION (SEQUENTIAL NO-OVERLAP)
           ls targets/*.txt | sort > targets_sorted.tmp
           TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
           RUN_NUM=${{ github.run_number }}
@@ -85,12 +89,11 @@ jobs:
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name"
+          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # --- [STEP 1: SUBDOMAINS] ---
-          # Tips: Pastikan isi truecaller.txt adalah 'truecaller.com'
+          # STEP 1: GATHERING SUBDOMAINS
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
           while read -r domain; do
             echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
@@ -98,51 +101,45 @@ jobs:
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
+            # STEP 2: HTTPX
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT - FIX VERSION] ---
-                echo "[+] Step 3: Mining Endpoints..."
-                # Pastikan file ada agar perintah 'cat' di bawah tidak error
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - FIX VERSION] ---
+                echo "[+] Step 3: Mining All Hidden Endpoints..."
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
                 
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                echo "    (Crawling with Katana...)"
-                # Kita arahkan secara paksa ke /usr/bin/google-chrome
+                echo "    (Crawling with Katana System Chrome...)"
+                # PAKAI FLAG GEMINI: -system-chrome, -no-sandbox, -display-error
                 timeout 25m katana -list data/$program_name/active_hosts.txt \
                   -system-chrome -headless -no-sandbox \
-                  -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                  -display-error -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # Gabungkan semuanya
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
+                # FALLBACK: Jika tetap zonk, pakai active_hosts
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
+                echo "    ✅ Done. Total unique endpoints found: $(wc -l < data/$program_name/all_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI SCAN] ---
-                echo "[+] Phase 1: Scanning Gold..."
-                # Kita tembak all_endpoints.txt
+                # STEP 4: NUCLEI SCAN
                 timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" -severity critical,high,medium -et dns,ssl,whois -es info -rl 150 -c 70 -mhe 100 -no-color -silent -H "User-Agent: NovaRecon/2026" -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
-                # --- [STEP 5: SECRET LEAKS SCAN] ---
-                echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" \
-                  -t http/exposed-tokens/ \
-                  -H "User-Agent: NovaRecon/2026" \
-                  -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
+                # STEP 5: TOKEN SCAN
+                timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" -t http/exposed-tokens/ -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
-                # --- [STEP 6: AI ANALYSIS] ---
+                # STEP 6: AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1 || true
 
-                # --- [STEP 7: TELEGRAM & BACKUP] ---
+                # STEP 7: TELEGRAM NOTIF
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
