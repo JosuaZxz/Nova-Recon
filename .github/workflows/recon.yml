@@ -40,6 +40,7 @@ jobs:
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+          go install -v github.com/projectdiscovery/katana/cmd/katana@latest # <--- TAMBAH INI
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
@@ -73,98 +74,76 @@ jobs:
           echo "    format: \"{{data}}\"" >> notify-config.yaml
 
           # 2. ANTI-COLLISION DELAY
-          # Memberi jeda agar tiap sniper mengambil target yang berbeda dari antrean
           SLEEP_TIME=$(( (${{ matrix.sniper_id }} - 1) * 40 ))
-          echo "⏳ Sniper ${{ matrix.sniper_id }} waiting for $SLEEP_TIME seconds..."
+          echo "⏳ Sniper ${{ matrix.sniper_id }} preparing deep-scan tools..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (THE SEQUENTIAL PREDATOR - NO OVERLAP)
-          # 1. List target dan urutkan agar semua mesin punya daftar yang sama
+          # 3. TARGET SELECTION (SEQUENTIAL NO-OVERLAP)
           ls targets/*.txt | sort > targets_sorted.tmp
           TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
-          
-          # 2. Ambil data kontekstual dari GitHub
           RUN_NUM=${{ github.run_number }}
           SNIPER_ID=${{ matrix.sniper_id }}
-          SNIPER_COUNT=5  # Jumlah total sniper Bos
+          SNIPER_COUNT=5 
           
-          # 3. MATH LOGIC: Pastikan tiap run mengambil 5 target yang BERBEDA TOTAL dari run sebelumnya
-          # Contoh: Run 1 ambil 1-5, Run 2 ambil 6-10, dst.
           INDEX=$(( ((RUN_NUM - 1) * SNIPER_COUNT + (SNIPER_ID - 1)) % TOTAL_TARGETS + 1 ))
-          
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
           echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
-          
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # --- [STEP 1: GATHERING SUBDOMAINS - SILENT MODE] ---
+          # --- [STEP 1: SUBDOMAIN DISCOVERY] ---
           echo "[+] Step 1: Gathering Subdomains..."
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
-          
           while read -r domain; do
             echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
           done < "$target_file"
-
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
-          echo "    ✅ Step 1 Done." 
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # 4. HTTPX LIVE CHECK
-            echo "[+] Step 2: HTTPX Live Check..."
-            timeout 30m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+            # --- [STEP 2: LIVE CHECK] ---
+            echo "[+] Step 2: Filtering Live Hosts..."
+            timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # 5. URL MINING
-                echo "[+] Step 2.5: Mining Wayback/GAU..."
-                timeout 20m bash -c "cat data/$program_name/active_hosts.txt | waybackurls | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
-                timeout 20m bash -c "cat data/$program_name/active_hosts.txt | gau --subs --threads 10 | anew data/$program_name/urls.txt" > /dev/null 2>&1 || true
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback)] ---
+                echo "[+] Step 3: Mining All Hidden Endpoints..."
+                # 1. Ambil sejarah URL (Wayback/GAU)
+                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
+                
+                # 2. Crawler Aktif (Katana) - Menjelajah isi website secara real-time
+                echo "    (Crawling with Katana...)"
+                timeout 15m katana -l data/$program_name/active_hosts.txt -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt > /dev/null 2>&1 || true
+                
+                # 3. Gabungkan semua URL & Endpoint yang ditemukan
+                cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
+                echo "    ✅ Done. Total unique endpoints found: $(wc -l < data/$program_name/all_endpoints.txt)"
 
-                # 5. NUCLEI SCAN (AUDIT MODE - KITA BUKA SEMUA LOG UNTUK CEK PENYAKIT)
-                echo "[+] Phase 1: Hunting Gold..."
-                # 1. Kita hapus redirect /dev/null biar kita bisa liat errornya di Actions
-                # 2. Kita hapus path folder template agar Nuclei pakai path default-nya sendiri
-                # 3. Kita turunkan severity ke 'low' agar kita dapet bukti kalau mesin ini beneran nembak
-                timeout 30m nuclei -l "data/$program_name/active_hosts.txt" \
-                  -severity critical,high,medium,low \
-                  -et dns,ssl,whois \
-                  -rl 150 -c 70 -bs 25 -mhe 100 -no-color \
-                  -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
-
-                # TAHAP 2: THE SWEEP (Set 30 Menit)
-                echo "[+] Phase 2: Cleaning up (Low/Info)..."
-                timeout 20m nuclei -l "data/$program_name/active_hosts.txt" \
-                  -t /home/runner/nuclei-templates/ \
-                  -severity low,unknown \
+                # --- [STEP 4: NUCLEI 2.0 (THE KILLSHOT)] ---
+                echo "[+] Phase 1: Deep Scanning ALL Endpoints..."
+                # Kita tembak SEMUA endpoint yang ditemukan, bukan cuma pintu depan!
+                timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" \
+                  -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -rl 200 -c 100 -bs 35 -mhe 100 -no-color -silent \
-                  -jsonl -o "data/$program_name/temp_results.json" > /dev/null 2>&1 || true
-                
-                if [ -f "data/$program_name/temp_results.json" ]; then
-                  cat "data/$program_name/temp_results.json" >> "data/$program_name/nuclei_results.json"
-                fi
-                
-                # 7. SCAN URLS FROM WAYBACK
-                if [ -s "data/$program_name/urls.txt" ]; then
-                  echo "[+] Step 3.5: Scanning Historical URLs..."
-                  timeout 45m nuclei -l "data/$program_name/urls.txt" \
-                    -t /home/runner/nuclei-templates/http/exposed-tokens/ \
-                    -H "User-Agent: NovaRecon/2026" \
-                    -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/url_leaks.json" > /dev/null 2>&1 || true
-                  
-                  if [ -f "data/$program_name/url_leaks.json" ]; then
-                    cat "data/$program_name/url_leaks.json" >> "data/$program_name/nuclei_results.json"
-                  fi
-                fi
-                
-                # 8. AI ANALYSIS
+                  -rl 150 -c 70 -mhe 100 -no-color -silent \
+                  -H "User-Agent: NovaRecon/2026" \
+                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
+
+                # --- [STEP 5: SECRET LEAKS SCAN] ---
+                echo "[+] Phase 2: Scanning for Sensitive Tokens..."
+                timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" \
+                  -t /home/runner/nuclei-templates/http/exposed-tokens/ \
+                  -H "User-Agent: NovaRecon/2026" \
+                  -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
+                [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
+
+                # --- [STEP 6: AI ANALYSIS] ---
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1 || true
 
-                # 9. TELEGRAM NOTIFICATION (Silent Curl)
+                # --- [STEP 7: TELEGRAM & BACKUP] ---
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
@@ -173,14 +152,11 @@ jobs:
                   done
                 fi
 
-                # 10. COMPLETE ZIP BACKUP (Always send for Data History)
-                zip_name="${program_name}_FULL_DATA.zip"
-                zip -qj "$zip_name" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
-                curl -s -F chat_id="$TG_DATA" -F document=@"$zip_name" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
+                zip -qj "${program_name}_FULL_DATA.zip" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
+                curl -s -F chat_id="$TG_DATA" -F document=@"${program_name}_FULL_DATA.zip" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
             fi
           fi
 
-      # --- [11. AUTO-SYNC DATABASE (HIDDEN)] ---
       - name: Sync Database to Repo
         run: |
           git config --local user.email "bot@sniper-recon.ai"
