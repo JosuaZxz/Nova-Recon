@@ -36,11 +36,13 @@ jobs:
 
       - name: Install Tools
         run: |
-          sudo apt-get update && sudo apt-get install dnsutils -y
+          sudo apt-get update
+          # Pasang Google Chrome agar Katana bisa langsung pakai (System Chrome)
+          sudo apt-get install -y google-chrome-stable dnsutils
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-          go install -v github.com/projectdiscovery/katana/cmd/katana@latest # <--- TAMBAH INI
+          go install -v github.com/projectdiscovery/katana/cmd/katana@latest
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
@@ -117,10 +119,10 @@ jobs:
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 3. Crawler Aktif (Katana) - FIX FLAG -list
-                echo "    (Crawling with Katana Headless...)"
-                # Ganti -l menjadi -list
-                timeout 15m katana -list data/$program_name/active_hosts.txt -hl -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                # 3. Crawler Aktif (Katana) - GUNAKAN SYSTEM CHROME
+                echo "[+] Crawling with Katana (System Chrome)..."
+                # Tambahkan flag -system-chrome dan -no-sandbox agar lancar di GitHub
+                timeout 25m katana -list data/$program_name/active_hosts.txt -hl -system-chrome -no-sandbox -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
                 # 4. Gabungkan (Anti-Error)
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
