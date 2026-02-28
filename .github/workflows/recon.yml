@@ -108,25 +108,32 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # STEP 3: DEEP SIGHT (Katana + Wayback)
-                echo "[+] Step 3: Mining Endpoints..."
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - STABLE VERSION] ---
+                echo "[+] Step 3: Mining All Hidden Endpoints..."
+                touch data/$program_name/urls.txt
+                touch data/$program_name/katana_urls.txt
+                
+                # 1. Ambil sejarah URL (Wayback/GAU)
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # JURUS PAMUNGKAS: xvfb-run (Layar Virtual) + display-error (Biar tau penyakitnya)
-                echo "    (Crawling with Katana...)"
+                # 2. Crawler Aktif (Katana) - KITA BUANG FLAG YANG ERROR
+                echo "[+] Step 4: (Crawling with Katana...)"
+                # HAPUS: -display-error (Karena ini bikin mogok)
+                # PAKAI: xvfb-run (Virtual Display) + -sc (System Chrome)
                 timeout 25m xvfb-run katana -list data/$program_name/active_hosts.txt \
-                  -system-chrome -headless -no-sandbox -display-error \
+                  -system-chrome -headless -no-sandbox \
                   -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                touch data/$program_name/katana_urls.txt
+                # 3. Gabungkan
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
+                # Fallback: Jika Katana zonk, tetap tembak pintu depan
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
+                echo "✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
 
                 # STEP 4: NUCLEI SCAN
                 timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" -severity critical,high,medium -et dns,ssl,whois -es info -rl 150 -c 70 -mhe 100 -no-color -silent -H "User-Agent: NovaRecon/2026" -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
