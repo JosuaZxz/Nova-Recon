@@ -37,13 +37,9 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # 1. Pasang Chrome Stable & Dependensi
-          sudo apt-get install -y google-chrome-stable dnsutils
-          # 2. JURUS RAHASIA: Buat Symlink agar Katana mengenali Chrome sistem
-          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
-          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/chromium
+          # PASANG CHROME DAN DEPENDENSINYA (WAJIB ADA!)
+          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils
           
-          # 3. Install Tools ProjectDiscovery
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
@@ -75,35 +71,26 @@ jobs:
           # JURUS RAHASIA: Paksa Katana pakai Chrome sistem (Anti-Download!)
           KATANA_CHROME_PATH: /usr/bin/google-chrome
         run: |
-          # 1. SETUP NOTIF CONFIG (Silent)
-          echo "telegram:" > notify-config.yaml
-          echo "  - id: \"p1_p2_alerts\"" >> notify-config.yaml
-          echo "    telegram_apikey: \"$TG_TOKEN\"" >> notify-config.yaml
-          echo "    telegram_chatid: \"$TG_CRIT\"" >> notify-config.yaml
-          echo "    format: \"{{data}}\"" >> notify-config.yaml
+          # ... (Setup Notif tetap sama) ...
 
           # 2. ANTI-COLLISION DELAY
           SLEEP_TIME=$(( (${{ matrix.sniper_id }} - 1) * 40 ))
-          echo "⏳ Sniper ${{ matrix.sniper_id }} preparing deep-scan tools..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (SEQUENTIAL NO-OVERLAP)
+          # 3. TARGET SELECTION
           ls targets/*.txt | sort > targets_sorted.tmp
           TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
           RUN_NUM=${{ github.run_number }}
-          SNIPER_ID=${{ matrix.sniper_id }}
-          SNIPER_COUNT=5 
-          
-          INDEX=$(( ((RUN_NUM - 1) * SNIPER_COUNT + (SNIPER_ID - 1)) % TOTAL_TARGETS + 1 ))
+          INDEX=$(( ((RUN_NUM - 1) * 5 + (${{ matrix.sniper_id }} - 1)) % TOTAL_TARGETS + 1 ))
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name (Ghost Mode)"
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # --- [STEP 1: SUBDOMAIN DISCOVERY] ---
-          echo "[+] Step 1: Gathering Subdomains..."
+          # --- [STEP 1: SUBDOMAINS] ---
+          # Tips: Pastikan isi truecaller.txt adalah 'truecaller.com'
           subfinder -dL "$target_file" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
           while read -r domain; do
             echo "$domain" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
@@ -111,48 +98,37 @@ jobs:
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | sort -u > "data/$program_name/subdomains.txt"
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # --- [STEP 2: LIVE CHECK] ---
-            echo "[+] Step 2: Filtering Live Hosts..."
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - ULTRA STABLE] ---
-                echo "[+] Step 3: Mining All Hidden Endpoints..."
-                # Pastikan file penampung ada
-                touch data/$program_name/urls_raw.txt
-                touch data/$program_name/urls_katana.txt
+                # --- [STEP 3: DEEP SIGHT - FIX VERSION] ---
+                echo "[+] Step 3: Mining Endpoints..."
+                # Pastikan file ada agar perintah 'cat' di bawah tidak error
+                touch data/$program_name/urls.txt
+                touch data/$program_name/katana_urls.txt
                 
-                # 1. Ambil sejarah URL
-                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls_raw.txt 2>/dev/null || true
-                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls_raw.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - GUNAKAN FLAG SINGKAT & STABIL
-                echo "[+] Step 4: (Crawling with Katana...)"
-                # -sc (system-chrome), -hl (headless), -nc (no-color)
-                timeout 20m katana -list data/$program_name/active_hosts.txt \
-                  -sc -hl -no-sandbox -jc -kf all -d 3 -silent -nc \
-                  -o data/$program_name/urls_katana.txt || true
+                echo "    (Crawling with Katana...)"
+                # Kita arahkan secara paksa ke /usr/bin/google-chrome
+                timeout 25m katana -list data/$program_name/active_hosts.txt \
+                  -system-chrome -headless -no-sandbox \
+                  -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 3. Gabungkan (Anti-Error)
-                # Pastikan file katana_urls tidak kosong sebelum digabung
-                touch data/$program_name/urls_katana.txt
-                cat data/$program_name/urls_raw.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
+                # Gabungkan semuanya
+                cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback Sakti: Jika Katana/Wayback gagal, tetap tembak pintu depan
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
                 echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
 
-                # --- [STEP 4: NUCLEI 2.0 (THE KILLSHOT)] ---
-                echo "[+] Phase 1: Deep Scanning ALL Endpoints..."
-                timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" \
-                  -severity critical,high,medium \
-                  -et dns,ssl,whois -es info \
-                  -rl 150 -c 70 -mhe 100 -no-color -silent \
-                  -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
+                # --- [STEP 4: NUCLEI SCAN] ---
+                echo "[+] Phase 1: Scanning Gold..."
+                # Kita tembak all_endpoints.txt
+                timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" -severity critical,high,medium -et dns,ssl,whois -es info -rl 150 -c 70 -mhe 100 -no-color -silent -H "User-Agent: NovaRecon/2026" -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # --- [STEP 5: SECRET LEAKS SCAN] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
