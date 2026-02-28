@@ -67,6 +67,8 @@ jobs:
           TG_CRIT: ${{ secrets.TELEGRAM_CRITICAL_ID }}
           TG_GEN: ${{ secrets.TELEGRAM_GENERAL_ID }}
           TG_DATA: ${{ secrets.TELEGRAM_DATA_ID }}
+          # JURUS RAHASIA: Paksa Katana pakai Chrome sistem (Anti-Download!)
+          KATANA_CHROME_PATH: /usr/bin/google-chrome
         run: |
           # 1. SETUP NOTIF CONFIG (Silent)
           echo "telegram:" > notify-config.yaml
@@ -91,7 +93,7 @@ jobs:
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
+          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name (Ghost Mode)"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
@@ -109,7 +111,7 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - SIMPLE & POWERFUL] ---
+                # --- [STEP 3: DEEP SIGHT (Katana Fix)] ---
                 echo "[+] Step 3: Mining All Hidden Endpoints..."
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
@@ -118,26 +120,26 @@ jobs:
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - HANYA PAKAI FLAG STANDAR
+                # 2. Crawler Aktif (Katana) - TANPA DOWNLOAD
                 echo "    (Crawling with Katana Headless...)"
-                # Kita hapus -chrome-path, biarkan dia cari otomatis karena Chrome sudah di-install ke sistem
+                # Kita pakai flag minimalis & headless agar stabil
                 timeout 25m katana -list data/$program_name/active_hosts.txt \
-                  -headless -system-chrome -no-sandbox \
+                  -system-chrome -headless -no-sandbox \
                   -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 3. Gabungkan
+                # 3. Gabungkan (Anti-Error)
+                touch data/$program_name/katana_urls.txt
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback jika zonk
+                # Fallback: Jika Katana zonk, pakai active_hosts biar mesin gak berhenti!
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "    ✅ Done. Total unique endpoints found: $(wc -l < data/$program_name/all_endpoints.txt)"
+                echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
 
                 # --- [STEP 4: NUCLEI 2.0 (THE KILLSHOT)] ---
                 echo "[+] Phase 1: Deep Scanning ALL Endpoints..."
-                # Kita tembak SEMUA endpoint yang ditemukan, bukan cuma pintu depan!
                 timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
