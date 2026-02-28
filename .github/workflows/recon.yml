@@ -106,42 +106,48 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT 2.3 - REALITY VERSION] ---
+                # --- [STEP 3: MINING ENDPOINTS - SIMPLE & STABLE] ---
                 echo "[+] Step 3: Mining Endpoints..."
-                # 1. Bersihkan format URL menjadi domain (Hapus http://) agar tool tidak bingung
+                # Bersihkan domain untuk Wayback
                 sed 's|http[s]*://||g' data/$program_name/active_hosts.txt | cut -d' ' -f1 | sort -u > data/$program_name/domains_only.txt
                 
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
                 touch data/$program_name/hak_urls.txt
 
-                # 2. Passive Mining (Wayback/GAU) pakai domain bersih
-                cat data/$program_name/domains_only.txt | waybackurls >> data/$program_name/urls.txt 2>/dev/null || true
+                # 1. Passive Mining (SUDAH TERBUKTI BERHASIL NEMU 15K URL)
+                cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 3. Crawler 1: Hakrawler (PASTI JALAN - Gak pake drama Browser)
+                # 2. Hakrawler (Simple Mode)
                 echo "    (Crawling with Hakrawler...)"
-                cat data/$program_name/active_hosts.txt | hakrawler -subs -u > data/$program_name/hak_urls.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | hakrawler -u -subs > data/$program_name/hak_urls.txt 2>/dev/null || true
 
-                # 4. Crawler 2: Katana (Headless dengan Memori Fix)
+                # 3. Katana (HAPUS SEMUA FLAG BERBAHAYA)
                 echo "    (Crawling with Katana...)"
-                timeout 15m katana -list data/$program_name/active_hosts.txt \
-                  -system-chrome -headless -no-sandbox \
-                  -proxy-flags "--no-sandbox,--disable-dev-shm-usage,--disable-gpu" \
-                  -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
+                # Kita hapus -proxy-flags, -system-chrome, dll. Kita biarkan Katana jalan versi standar saja.
+                timeout 15m katana -list data/$program_name/active_hosts.txt -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 5. Gabungkan SEMUA (Data Sejarah + Hakrawler + Katana)
+                # 4. Gabungkan SEMUA (15.000 URL tadi masuk sini)
                 cat data/$program_name/urls.txt data/$program_name/hak_urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # JIKA ZONK, TETAP PAKAI ACTIVE HOSTS (Biar Nuclei tetep nembak)
+                # Fallback jika zonk
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) unique endpoints."
+                echo "    ✅ Done. Total targets for Nuclei: $(wc -l < data/$program_name/all_endpoints.txt)"
 
-                # STEP 4: NUCLEI SCAN
-                timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" -severity critical,high,medium -et dns,ssl,whois -es info -rl 150 -c 70 -mhe 100 -no-color -silent -H "User-Agent: NovaRecon/2026" -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
+                # --- [STEP 4: NUCLEI SCAN - WAJIB JALAN!] ---
+                echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
+                # Pakai timeout lebih lama karena targetnya 15.000 URL!
+                timeout 1h nuclei -l "data/$program_name/all_endpoints.txt" \
+                  -severity critical,high,medium \
+                  -et dns,ssl,whois -es info \
+                  -rl 150 -c 70 -mhe 100 -no-color -silent \
+                  -stats -si 60 \
+                  -H "User-Agent: NovaRecon/2026" \
+                  -jsonl -o "data/$program_name/nuclei_results.json" || true
 
                 # STEP 5: TOKEN SCAN
                 timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" -t http/exposed-tokens/ -H "User-Agent: NovaRecon/2026" -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
