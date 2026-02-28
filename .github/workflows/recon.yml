@@ -117,9 +117,10 @@ jobs:
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 3. Crawler Aktif (Katana) - KITA BUKA LOG-NYA BIAR KELIHATAN
-                echo "    (Crawling with Katana...)"
-                timeout 15m katana -l data/$program_name/active_hosts.txt -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                # 3. Crawler Aktif (Katana) - UPGRADE KE HEADLESS MODE
+                echo "    (Crawling with Katana Headless...)"
+                # Kita tambah flag -hl (headless) dan -d 5 (kedalaman lebih dalam)
+                timeout 15m katana -l data/$program_name/active_hosts.txt -hl -jc -kf all -d 5 -silent -o data/$program_name/katana_urls.txt || true
                 
                 # 4. Gabungkan (Anti-Error)
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
