@@ -37,8 +37,8 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # Pasang Google Chrome agar Katana bisa langsung pakai (System Chrome)
-          sudo apt-get install -y google-chrome-stable dnsutils
+          # Pasang Chrome dan library pendukungnya biar gak error saat running
+          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
@@ -118,12 +118,11 @@ jobs:
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - PAKSA PAKE GOOGLE CHROME BAWAAN GITHUB
-                echo "    (Crawling with Katana Headless...)"
-                # Kita arahkan path-nya ke Chrome bawaan GitHub Actions
-                export PATH=$PATH:/usr/bin/google-chrome
+                # 2. Crawler Aktif (Katana) - PAKSA PAKAI SYSTEM CHROME
+                echo "[+] (Crawling with Katana Headless...)"
+                # Kita kasih tau lokasinya: /usr/bin/google-chrome
                 timeout 25m katana -list data/$program_name/active_hosts.txt \
-                  -hl -system-chrome -no-sandbox \
+                  -hl -system-chrome -path /usr/bin/google-chrome -no-sandbox \
                   -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
                 # 3. Gabungkan
