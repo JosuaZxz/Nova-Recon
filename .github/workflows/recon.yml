@@ -35,21 +35,19 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # FIX: Gunakan libasound2t64 untuk Ubuntu 24.04 Noble & xvfb untuk layar virtual
-          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils \
-            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1
-          
+          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils xvfb
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
           go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+          go install -v github.com/hakluke/hakrawler@latest # <--- BACKUP CRAWLER SAKTI
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
           go install -v github.com/tomnomnom/anew@latest
           echo "$HOME/go/bin" >> $GITHUB_PATH
           nuclei -ut -silent
-
+          
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -108,32 +106,39 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - STABLE VERSION] ---
-                echo "[+] Step 3: Mining All Hidden Endpoints..."
+                # --- [STEP 3: DEEP SIGHT 2.3 - REALITY VERSION] ---
+                echo "[+] Step 3: Mining Endpoints..."
+                # 1. Bersihkan format URL menjadi domain (Hapus http://) agar tool tidak bingung
+                sed 's|http[s]*://||g' data/$program_name/active_hosts.txt | cut -d' ' -f1 | sort -u > data/$program_name/domains_only.txt
+                
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
+                touch data/$program_name/hak_urls.txt
+
+                # 2. Passive Mining (Wayback/GAU) pakai domain bersih
+                cat data/$program_name/domains_only.txt | waybackurls >> data/$program_name/urls.txt 2>/dev/null || true
+                cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 1. Ambil sejarah URL (Wayback/GAU)
-                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
-                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
-                
-                # 2. Crawler Aktif (Katana) - KITA BUANG FLAG YANG ERROR
-                echo "[+] Step 4: (Crawling with Katana...)"
-                # HAPUS: -display-error (Karena ini bikin mogok)
-                # PAKAI: xvfb-run (Virtual Display) + -sc (System Chrome)
-                timeout 25m xvfb-run katana -list data/$program_name/active_hosts.txt \
+                # 3. Crawler 1: Hakrawler (PASTI JALAN - Gak pake drama Browser)
+                echo "    (Crawling with Hakrawler...)"
+                cat data/$program_name/active_hosts.txt | hakrawler -subs -u > data/$program_name/hak_urls.txt 2>/dev/null || true
+
+                # 4. Crawler 2: Katana (Headless dengan Memori Fix)
+                echo "    (Crawling with Katana...)"
+                timeout 15m katana -list data/$program_name/active_hosts.txt \
                   -system-chrome -headless -no-sandbox \
-                  -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                  -proxy-flags "--no-sandbox,--disable-dev-shm-usage,--disable-gpu" \
+                  -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 3. Gabungkan
-                cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
+                # 5. Gabungkan SEMUA (Data Sejarah + Hakrawler + Katana)
+                cat data/$program_name/urls.txt data/$program_name/hak_urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback: Jika Katana zonk, tetap tembak pintu depan
+                # JIKA ZONK, TETAP PAKAI ACTIVE HOSTS (Biar Nuclei tetep nembak)
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) targets for Nuclei."
+                echo "    ✅ Done. Found $(wc -l < data/$program_name/all_endpoints.txt) unique endpoints."
 
                 # STEP 4: NUCLEI SCAN
                 timeout 45m nuclei -l "data/$program_name/all_endpoints.txt" -severity critical,high,medium -et dns,ssl,whois -es info -rl 150 -c 70 -mhe 100 -no-color -silent -H "User-Agent: NovaRecon/2026" -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
