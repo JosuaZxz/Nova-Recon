@@ -147,7 +147,7 @@ jobs:
                 # --- [STEP 5: SECRET LEAKS SCAN] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
                 timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" \
-                  -t /home/runner/nuclei-templates/http/exposed-tokens/ \
+                  -t http/exposed-tokens/ \
                   -H "User-Agent: NovaRecon/2026" \
                   -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
