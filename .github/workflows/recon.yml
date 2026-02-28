@@ -109,25 +109,27 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - FIX VERSION] ---
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - ULTRA FIX] ---
                 echo "[+] Step 3: Mining All Hidden Endpoints..."
-                # 1. Pastikan file ada (biar cat gak error)
                 touch data/$program_name/urls.txt
                 touch data/$program_name/katana_urls.txt
                 
-                # 2. Ambil sejarah URL (Wayback/GAU)
+                # 1. Ambil sejarah URL
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 3. Crawler Aktif (Katana) - GUNAKAN SYSTEM CHROME
-                echo "[+] Crawling with Katana (System Chrome)..."
-                # Tambahkan flag -system-chrome dan -no-sandbox agar lancar di GitHub
-                timeout 25m katana -list data/$program_name/active_hosts.txt -hl -system-chrome -no-sandbox -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                # 2. Crawler Aktif (Katana) - PAKSA PAKE GOOGLE CHROME BAWAAN GITHUB
+                echo "    (Crawling with Katana Headless...)"
+                # Kita arahkan path-nya ke Chrome bawaan GitHub Actions
+                export PATH=$PATH:/usr/bin/google-chrome
+                timeout 25m katana -list data/$program_name/active_hosts.txt \
+                  -hl -system-chrome -no-sandbox \
+                  -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 4. Gabungkan (Anti-Error)
+                # 3. Gabungkan
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # CEK: Kalau all_endpoints tetep kosong, kita masukin active_hosts sebagai cadangan!
+                # Fallback sakti
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
