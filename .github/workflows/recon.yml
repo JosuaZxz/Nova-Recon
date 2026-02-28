@@ -37,8 +37,13 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # Pasang Chrome dan library pendukungnya biar gak error saat running
-          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils
+          # 1. Pasang Chrome Stable & Dependensi
+          sudo apt-get install -y google-chrome-stable dnsutils
+          # 2. JURUS RAHASIA: Buat Symlink agar Katana mengenali Chrome sistem
+          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
+          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/chromium
+          
+          # 3. Install Tools ProjectDiscovery
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
@@ -111,27 +116,29 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana Fix)] ---
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - ULTRA STABLE] ---
                 echo "[+] Step 3: Mining All Hidden Endpoints..."
-                touch data/$program_name/urls.txt
-                touch data/$program_name/katana_urls.txt
+                # Pastikan file penampung ada
+                touch data/$program_name/urls_raw.txt
+                touch data/$program_name/urls_katana.txt
                 
                 # 1. Ambil sejarah URL
-                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
-                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls_raw.txt 2>/dev/null || true
+                cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls_raw.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - TANPA DOWNLOAD
-                echo "    (Crawling with Katana Headless...)"
-                # Kita pakai flag minimalis & headless agar stabil
-                timeout 25m katana -list data/$program_name/active_hosts.txt \
-                  -system-chrome -headless -no-sandbox \
-                  -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
+                # 2. Crawler Aktif (Katana) - GUNAKAN FLAG SINGKAT & STABIL
+                echo "[+] Step 4: (Crawling with Katana...)"
+                # -sc (system-chrome), -hl (headless), -nc (no-color)
+                timeout 20m katana -list data/$program_name/active_hosts.txt \
+                  -sc -hl -no-sandbox -jc -kf all -d 3 -silent -nc \
+                  -o data/$program_name/urls_katana.txt || true
                 
                 # 3. Gabungkan (Anti-Error)
-                touch data/$program_name/katana_urls.txt
-                cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
+                # Pastikan file katana_urls tidak kosong sebelum digabung
+                touch data/$program_name/urls_katana.txt
+                cat data/$program_name/urls_raw.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback: Jika Katana zonk, pakai active_hosts biar mesin gak berhenti!
+                # Fallback Sakti: Jika Katana/Wayback gagal, tetap tembak pintu depan
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
