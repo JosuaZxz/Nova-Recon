@@ -126,7 +126,7 @@ jobs:
                 # 3. Katana (HAPUS SEMUA FLAG BERBAHAYA)
                 echo "    (Crawling with Katana...)"
                 # Kita hapus -proxy-flags, -system-chrome, dll. Kita biarkan Katana jalan versi standar saja.
-                timeout 15m katana -list data/$program_name/active_hosts.txt -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
+                timeout 15m katana -list data/$program_name/active_hosts.txt -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
                 
                 # 4. Gabungkan SEMUA (Pastikan semua file ada biar gak error)
                 touch data/$program_name/urls.txt
