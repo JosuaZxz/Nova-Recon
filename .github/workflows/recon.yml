@@ -107,18 +107,28 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT (Katana + Wayback)] ---
+                # --- [STEP 3: DEEP SIGHT (Katana + Wayback) - FIX VERSION] ---
                 echo "[+] Step 3: Mining All Hidden Endpoints..."
-                # 1. Ambil sejarah URL (Wayback/GAU)
+                # 1. Pastikan file ada (biar cat gak error)
+                touch data/$program_name/urls.txt
+                touch data/$program_name/katana_urls.txt
+                
+                # 2. Ambil sejarah URL (Wayback/GAU)
                 cat data/$program_name/active_hosts.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
                 cat data/$program_name/active_hosts.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
                 
-                # 2. Crawler Aktif (Katana) - Menjelajah isi website secara real-time
+                # 3. Crawler Aktif (Katana) - KITA BUKA LOG-NYA BIAR KELIHATAN
                 echo "    (Crawling with Katana...)"
-                timeout 15m katana -l data/$program_name/active_hosts.txt -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt > /dev/null 2>&1 || true
+                timeout 15m katana -l data/$program_name/active_hosts.txt -jc -kf all -d 3 -silent -o data/$program_name/katana_urls.txt || true
                 
-                # 3. Gabungkan semua URL & Endpoint yang ditemukan
+                # 4. Gabungkan (Anti-Error)
                 cat data/$program_name/urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
+                
+                # CEK: Kalau all_endpoints tetep kosong, kita masukin active_hosts sebagai cadangan!
+                if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
+                  cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
+                fi
+                
                 echo "    ✅ Done. Total unique endpoints found: $(wc -l < data/$program_name/all_endpoints.txt)"
 
                 # --- [STEP 4: NUCLEI 2.0 (THE KILLSHOT)] ---
