@@ -34,15 +34,25 @@ jobs:
 
       - name: Install Tools
         run: |
-          sudo apt-get update && sudo apt-get install -y dnsutils
+          sudo apt-get update
+          # 1. Pasang Google Chrome & Library pendukung agar Crawler Headless stabil
+          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils \
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1
+          
+          # 2. Install Tools ProjectDiscovery
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+          go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+          
+          # 3. Install Crawler & Mining Tools lainnya
           go install -v github.com/hakluke/hakrawler@latest
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
           go install -v github.com/tomnomnom/anew@latest
+          
+          # 4. Set PATH & Update Nuclei Templates
           echo "$HOME/go/bin" >> $GITHUB_PATH
           nuclei -ut -silent
           
