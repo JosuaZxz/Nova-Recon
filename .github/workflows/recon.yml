@@ -117,40 +117,44 @@ jobs:
                 # --- [STEP 3: DEEP SIGHT 3.1 - THE CLEAN RECON] ---
                 echo "[+] Step 3: Mining Endpoints (Deep Scan Mode)..."
                 
-                # 1. PEMBERSIH JALUR (Kunci Cuan): Ambil URL murni saja (Tanpa IP/Server Info)
-                # Dari: http://target.com [1.2.3.4] [Nginx] -> Jadi: http://target.com
+                # 1. PEMBERSIH JALUR (KUNCI UTAMA): Ambil URL murni saja
+                # Dari: http://target.com [1.2.3.4] -> Jadi: http://target.com
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
                 
-                # 2. Bersihkan domain murni untuk Wayback/GAU
-                sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d' ' -f1 | sort -u > data/$program_name/domains_only.txt
+                # 2. Bikin Domain murni (Tanpa http) khusus buat Wayback/GAU
+                sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
                 touch data/$program_name/urls_wayback.txt
                 touch data/$program_name/urls_hak.txt
                 touch data/$program_name/urls_katana.txt
 
-                # 3. Mata Sejarah (Wayback/GAU) - SAKTI (63rb URL!)
+                # 3. ALIRAN 1: Mata Sejarah (Wayback/GAU) - Sekarang inputnya bener!
+                echo "    (Mining Wayback/GAU...)"
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls_wayback.txt" || true
                 
-                # 4. Mata Cepat (Hakrawler) - SEKARANG GAK AKAN ERROR LAGI
+                # 4. ALIRAN 2: Mata Cepat (Hakrawler) - Sekarang inputnya URL murni!
                 echo "    (Crawling with Hakrawler...)"
                 timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs -u > data/$program_name/urls_hak.txt" || true
 
-                # 5. Mata Dalam (Katana) - KITA PAKAI CARA PALING STANDAR & AMAN
+                # 5. ALIRAN 3: Mata Dalam (Katana) - KITA KUNCI CHROME SISTEM
                 echo "    (Crawling with Katana Headless...)"
-                timeout 20m katana -list data/$program_name/active_urls_clean.tmp \
+                # Kita buat link chrome agar katana langsung nemu (Anti-Download!)
+                sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome || true
+                timeout 25m katana -list data/$program_name/active_urls_clean.tmp \
                   -system-chrome -headless -no-sandbox \
-                  -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
+                  -jc -kf all -d 3 -silent -o data/$program_name/urls_katana.txt || true
                 
-                # 6. GABUNGKAN SEMUA (Mata Sejarah + Mata Cepat + Mata Dalam)
+                # 6. PENGGABUNGAN RAKSASA (The Lake)
+                # Kita gabungkan 3 aliran data tadi jadi satu file besar
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback: Jika semua zonk (gak mungkin), tetep pake active_hosts
+                # Fallback jika (sangat tidak mungkin) semuanya zonk
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_urls_clean.tmp data/$program_name/all_endpoints.txt
                 fi
                 
-                echo "    ✅ Done. Total targets for Nuclei: $(wc -l < data/$program_name/all_endpoints.txt)"
+                echo "✅ Done. Total targets for Nuclei: $(wc -l < data/$program_name/all_endpoints.txt)"
 
                 # --- [STEP 4: NUCLEI KILLSHOT] ---
                 echo "[+] Phase 1: Scanning Gold (P1-P3)..."
