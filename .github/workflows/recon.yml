@@ -126,24 +126,25 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - FIX PATH] ---
+                # --- [STEP 4: NUCLEI KILLSHOT - FIX VERSION] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # GUNAKAN filtered_endpoints.txt (Biar gak nembak gambar/CSS)
+                # 1. Kita JANGAN arahkan ke folder spesifik, biarkan Nuclei cari di database pusatnya
+                # 2. Turunkan RL ke 50 khusus buat tes ini agar tidak diblokir server vulnweb
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -rl 100 -c 50 -mhe 100 -no-color \
+                  -rl 50 -c 20 -mhe 300 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
-                # --- [STEP 5: SENSITIVE TOKENS SCAN - FIX PATH] ---
+                # --- [STEP 5: SENSITIVE TOKENS SCAN - FIX VERSION] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Kita arahkan ke folder spesifik di dalam $HOME
+                # Gunakan TAGS saja daripada PATH folder, ini jauh lebih akurat dan anti-error
                 timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates/http/exposed-tokens/ \
+                  -tags token,exposure,secret \
+                  -rl 50 -c 20 -no-color -mhe 300 \
                   -H "User-Agent: NovaRecon/2026" \
-                  -rl 100 -c 50 -no-color -mhe 100 -jsonl -o "data/$program_name/token_results.json" || true
+                  -jsonl -o "data/$program_name/token_results.json" || true
                 
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
