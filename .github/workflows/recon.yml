@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        sniper_id: [1, 2, 3, 4, 5]
+        sniper_id: [1] # Cukup 1 mesin untuk testing
     permissions:
       contents: write
     steps:
@@ -81,15 +81,11 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} preparing hyper-speed tools..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (SEQUENTIAL)
-          ls targets/*.txt | sort > targets_sorted.tmp
-          TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
-          RUN_NUM=${{ github.run_number }}
-          INDEX=$(( ((RUN_NUM - 1) * 5 + (${{ matrix.sniper_id }} - 1)) % TOTAL_TARGETS + 1 ))
-          target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
-          program_name=$(basename "$target_file" .txt)
+          # --- [MODE TESTING: TARGET KHUSUS VULNWEB] ---
+          target_file="targets/test_target.txt"
+          program_name="test_target"
           
-          echo "🎯 Sniper $SNIPER_ID Engaging: $program_name"
+          echo "🎯 Sniper Special Mission: Engaging $program_name (VULNWEB TEST)"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
@@ -130,14 +126,15 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI HYPER-SPEED SCAN] ---
-                echo "[+] Phase 1: Scanning Gold (P1-P3) at 300 RPS..."
+                # --- [STEP 4: NUCLEI KILLSHOT] ---
+                echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
+                # Kita buang peredam suara (> /dev/null) biar kelihatan sangarnya!
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -rl 300 -c 100 -mhe 100 -no-color -silent \
+                  -rl 150 -c 70 -mhe 100 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
+                  -jsonl -o "data/$program_name/nuclei_results.json"
 
                 # STEP 5: TOKEN SCAN
                 timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" -t http/exposed-tokens/ -rl 150 -no-color -silent -jsonl -o "data/$program_name/token_results.json" || true
