@@ -35,9 +35,12 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # 1. Pasang Google Chrome & Library pendukung agar Crawler Headless stabil
+          # 1. Pasang Google Chrome & Library pendukung
           sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils \
             libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1
+          
+          # JURUS KUNCI: Symlink agar Katana langsung nemu Chrome sistem
+          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
           
           # 2. Install Tools ProjectDiscovery
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
@@ -45,25 +48,16 @@ jobs:
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
           go install -v github.com/projectdiscovery/katana/cmd/katana@latest
           
-          # 3. Install Crawler & Mining Tools lainnya
+          # 3. Install Crawler & Mining Tools
           go install -v github.com/hakluke/hakrawler@latest
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
           go install -v github.com/tomnomnom/anew@latest
           
-          # 4. Set PATH & Update Nuclei Templates
           echo "$HOME/go/bin" >> $GITHUB_PATH
           nuclei -ut -silent
           
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Install Python Dependencies
-        run: pip install requests
-
       - name: Run Predator Recon
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -84,21 +78,18 @@ jobs:
 
           # 2. ANTI-COLLISION DELAY
           SLEEP_TIME=$(( (${{ matrix.sniper_id }} - 1) * 40 ))
-          echo "⏳ Sniper ${{ matrix.sniper_id }} preparing deep-scan tools..."
+          echo "⏳ Sniper ${{ matrix.sniper_id }} preparing hyper-speed tools..."
           sleep $SLEEP_TIME
 
-          # 3. TARGET SELECTION (SEQUENTIAL NO-OVERLAP)
+          # 3. TARGET SELECTION (SEQUENTIAL)
           ls targets/*.txt | sort > targets_sorted.tmp
           TOTAL_TARGETS=$(wc -l < targets_sorted.tmp)
           RUN_NUM=${{ github.run_number }}
-          SNIPER_ID=${{ matrix.sniper_id }}
-          SNIPER_COUNT=5 
-          
-          INDEX=$(( ((RUN_NUM - 1) * SNIPER_COUNT + (SNIPER_ID - 1)) % TOTAL_TARGETS + 1 ))
+          INDEX=$(( ((RUN_NUM - 1) * 5 + (${{ matrix.sniper_id }} - 1)) % TOTAL_TARGETS + 1 ))
           target_file=$(sed -n "${INDEX}p" targets_sorted.tmp)
           program_name=$(basename "$target_file" .txt)
           
-          echo "🎯 Sniper $SNIPER_ID Engaging Mission #$RUN_NUM: $program_name"
+          echo "🎯 Sniper $SNIPER_ID Engaging: $program_name"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
@@ -114,67 +105,49 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT 3.1 - THE CLEAN RECON] ---
-                echo "[+] Step 3: Mining Endpoints (Deep Scan Mode)..."
-                
-                # 1. PEMBERSIH JALUR (KUNCI UTAMA): Ambil URL murni saja
-                # Dari: http://target.com [1.2.3.4] -> Jadi: http://target.com
+                # --- [STEP 3: DEEP SIGHT 3.2 - HYPER SPEED FILTRATION] ---
+                echo "[+] Step 3: Mining Endpoints..."
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
-                
-                # 2. Bikin Domain murni (Tanpa http) khusus buat Wayback/GAU
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                touch data/$program_name/urls_wayback.txt
-                touch data/$program_name/urls_hak.txt
-                touch data/$program_name/urls_katana.txt
-
-                # 3. ALIRAN 1: Mata Sejarah (Wayback/GAU) - Sekarang inputnya bener!
-                echo "    (Mining Wayback/GAU...)"
+                touch data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt
+                
+                # Mining
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls_wayback.txt" || true
+                timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
                 
-                # 4. ALIRAN 2: Mata Cepat (Hakrawler) - Sekarang inputnya URL murni!
-                echo "    (Crawling with Hakrawler...)"
-                timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs -u > data/$program_name/urls_hak.txt" || true
-
-                # 5. ALIRAN 3: Mata Dalam (Katana) - KITA KUNCI CHROME SISTEM
-                echo "    (Crawling with Katana Headless...)"
-                # Kita buat link chrome agar katana langsung nemu (Anti-Download!)
-                sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome || true
-                timeout 25m katana -list data/$program_name/active_urls_clean.tmp \
-                  -system-chrome -headless -no-sandbox \
-                  -jc -kf all -d 3 -silent -o data/$program_name/urls_katana.txt || true
+                # Katana (Fixed Chrome Path)
+                echo "    (Crawling with Katana...)"
+                timeout 25m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
                 
-                # 6. PENGGABUNGAN RAKSASA (The Lake)
-                # Kita gabungkan 3 aliran data tadi jadi satu file besar
+                # GABUNGKAN
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # Fallback jika (sangat tidak mungkin) semuanya zonk
-                if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
-                  cp data/$program_name/active_urls_clean.tmp data/$program_name/all_endpoints.txt
-                fi
+                # --- SMART FILTER (BUANG SAMPAH) ---
+                # Cuma ambil yang berpotensi ada bug (JS, PHP, API, Parameter)
+                grep -iE '\.js|\.php|\.aspx|\.jsp|\.json|\/api\/|\?|=' data/$program_name/all_endpoints.txt > data/$program_name/filtered_endpoints.txt || cp data/$program_name/all_endpoints.txt data/$program_name/filtered_endpoints.txt
                 
-                echo "✅ Done. Total targets for Nuclei: $(wc -l < data/$program_name/all_endpoints.txt)"
+                echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT] ---
-                echo "[+] Phase 1: Scanning Gold (P1-P3)..."
-                # Kita tembak data all_endpoints yang isinya ribuan tadi!
-                timeout 50m nuclei -l "data/$program_name/all_endpoints.txt" \
+                # --- [STEP 4: NUCLEI HYPER-SPEED SCAN] ---
+                echo "[+] Phase 1: Scanning Gold (P1-P3) at 300 RPS..."
+                timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -rl 150 -c 70 -mhe 100 -no-color -silent \
+                  -rl 300 -c 100 -mhe 100 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
                 # STEP 5: TOKEN SCAN
-                timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" -t http/exposed-tokens/ -H "User-Agent: NovaRecon/2026" -rl 80 -no-color -mhe 100 -silent -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
+                timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" -t http/exposed-tokens/ -rl 150 -no-color -silent -jsonl -o "data/$program_name/token_results.json" || true
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
                 # STEP 6: AI ANALYSIS
                 echo "[+] Step 4: AI Analysis & H1 Drafting..."
                 PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1 || true
 
-                # STEP 7: TELEGRAM NOTIF & BACKUP
+                # STEP 7: NOTIF
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
@@ -194,6 +167,5 @@ jobs:
           git config --local user.name "Recon-Sniper-Bot"
           git add .seen_urls
           git commit -m "database: update seen_urls [skip ci]" || exit 0
-          # FIX: Gunakan --rebase agar 5 sniper tidak saling tabrak saat push
           git pull --rebase origin main
           git push
