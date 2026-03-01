@@ -128,7 +128,7 @@ jobs:
 
                 # --- [STEP 4: NUCLEI KILLSHOT - FIX PATH] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # Kita pakai $HOME agar Nuclei nemu foldernya sendiri
+                # GUNAKAN filtered_endpoints.txt (Biar gak nembak gambar/CSS)
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t $HOME/nuclei-templates \
                   -severity critical,high,medium \
