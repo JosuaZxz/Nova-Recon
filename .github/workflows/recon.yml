@@ -128,13 +128,13 @@ jobs:
 
                 # --- [STEP 4: NUCLEI KILLSHOT] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # Kita buang peredam suara (> /dev/null) biar kelihatan sangarnya!
+                # Kita tambahkan logika: Jika error 124 (timeout), tetap dianggap sukses (true) agar lanjut ke AI
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -rl 150 -c 70 -mhe 100 -no-color \
+                  -rl 100 -c 50 -mhe 100 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json"
+                  -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
                 # STEP 5: TOKEN SCAN
                 timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" -t http/exposed-tokens/ -rl 150 -no-color -silent -jsonl -o "data/$program_name/token_results.json" || true
