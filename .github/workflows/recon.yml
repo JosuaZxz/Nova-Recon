@@ -115,7 +115,7 @@ jobs:
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
                 timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs > data/$program_name/urls_gau.txt" || true
                 
-                echo "    (Crawling with Hakrawler...)"
+                echo "[+] Step 4: (Crawling with Hakrawler...)"
                 # Gunakan URL yang sudah bersih tadi
                 timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
 
