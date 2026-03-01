@@ -128,9 +128,9 @@ jobs:
 
                 # --- [STEP 4: NUCLEI KILLSHOT - FIX PATH] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # Tambahkan flag -t secara manual ke folder template
-                timeout 1h nuclei -l "data/$program_name/all_endpoints.txt" \
-                  -t /home/runner/nuclei-templates \
+                # Kita pakai $HOME agar Nuclei nemu foldernya sendiri
+                timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                  -t $HOME/nuclei-templates \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
                   -rl 100 -c 50 -mhe 100 -no-color \
@@ -139,9 +139,9 @@ jobs:
 
                 # --- [STEP 5: SENSITIVE TOKENS SCAN - FIX PATH] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Gunakan path lengkap agar tidak "FTL" lagi
-                timeout 15m nuclei -l "data/$program_name/all_endpoints.txt" \
-                  -t /home/runner/nuclei-templates/http/exposed-tokens/ \
+                # Kita arahkan ke folder spesifik di dalam $HOME
+                timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                  -t $HOME/nuclei-templates/http/exposed-tokens/ \
                   -H "User-Agent: NovaRecon/2026" \
                   -rl 100 -c 50 -no-color -mhe 100 -jsonl -o "data/$program_name/token_results.json" || true
                 
