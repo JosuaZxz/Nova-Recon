@@ -34,13 +34,11 @@ jobs:
 
       - name: Install Tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils xvfb
+          sudo apt-get update && sudo apt-get install -y dnsutils
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-          go install -v github.com/projectdiscovery/katana/cmd/katana@latest
-          go install -v github.com/hakluke/hakrawler@latest # <--- BACKUP CRAWLER SAKTI
+          go install -v github.com/hakluke/hakrawler@latest
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
           go install -v github.com/lc/gau/v2/cmd/gau@latest
@@ -106,50 +104,37 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: MINING ENDPOINTS - SIMPLE & STABLE] ---
+                # --- [STEP 3: DEEP SIGHT 3.0 - NO-CHROME VERSION] ---
                 echo "[+] Step 3: Mining Endpoints..."
-                # Bersihkan domain untuk Wayback
+                # Bersihkan domain agar tool tidak bingung
                 sed 's|http[s]*://||g' data/$program_name/active_hosts.txt | cut -d' ' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                touch data/$program_name/urls.txt
-                touch data/$program_name/katana_urls.txt
-                touch data/$program_name/hak_urls.txt
-
-                # 1. Passive Mining (SUDAH TERBUKTI BERHASIL NEMU 15K URL)
-                cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls.txt 2>/dev/null || true
-                cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls.txt 2>/dev/null || true
+                # Gunakan timeout di SETIAP baris agar tidak hang 5 jam lagi!
+                timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
+                timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs > data/$program_name/urls_gau.txt" || true
                 
-                # 2. Hakrawler (Simple Mode)
+                # Gunakan Hakrawler (Ringan & Cepat, Gak pake drama Browser)
                 echo "    (Crawling with Hakrawler...)"
-                cat data/$program_name/active_hosts.txt | hakrawler -u -subs > data/$program_name/hak_urls.txt 2>/dev/null || true
+                timeout 15m bash -c "cat data/$program_name/active_hosts.txt | hakrawler -subs -u > data/$program_name/urls_hak.txt" || true
 
-                # 3. Katana (HAPUS SEMUA FLAG BERBAHAYA)
-                echo "    (Crawling with Katana...)"
-                # Kita hapus -proxy-flags, -system-chrome, dll. Kita biarkan Katana jalan versi standar saja.
-                timeout 15m katana -list data/$program_name/active_hosts.txt -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/katana_urls.txt || true
+                # Gabungkan SEMUA temuan (Bahan baku 300KB+ tadi masuk sini)
+                touch data/$program_name/urls_wayback.txt data/$program_name/urls_gau.txt data/$program_name/urls_hak.txt
+                cat data/$program_name/urls_wayback.txt data/$program_name/urls_gau.txt data/$program_name/urls_hak.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # 4. Gabungkan SEMUA (Pastikan semua file ada biar gak error)
-                touch data/$program_name/urls.txt
-                touch data/$program_name/hak_urls.txt
-                touch data/$program_name/katana_urls.txt
-                
-                cat data/$program_name/urls.txt data/$program_name/hak_urls.txt data/$program_name/katana_urls.txt | sort -u > data/$program_name/all_endpoints.txt
-                
-                # Fallback jika zonk
+                # Fallback: Jika zonk, tetap pakai active_hosts
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_hosts.txt data/$program_name/all_endpoints.txt
                 fi
                 
                 echo "    ✅ Done. Total targets for Nuclei: $(wc -l < data/$program_name/all_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI SCAN - WAJIB JALAN!] ---
-                echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # Pakai timeout lebih lama karena targetnya 15.000 URL!
-                timeout 1h nuclei -l "data/$program_name/all_endpoints.txt" \
+                # --- [STEP 4: NUCLEI KILLSHOT] ---
+                echo "[+] Phase 1: Scanning Gold (P1-P3)..."
+                # Kita tembak data all_endpoints yang isinya ribuan tadi!
+                timeout 50m nuclei -l "data/$program_name/all_endpoints.txt" \
                   -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
                   -rl 150 -c 70 -mhe 100 -no-color -silent \
-                  -stats -si 60 \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
