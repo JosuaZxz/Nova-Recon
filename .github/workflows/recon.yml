@@ -104,26 +104,38 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT 3.0 - CLEAN VERSION] ---
-                echo "[+] Step 3: Mining Endpoints..."
-                # Ambil hanya kolom pertama (URL murni) dari active_hosts agar crawler gak bingung
-                awk '{print $1}' data/$program_name/active_hosts.txt > data/$program_name/active_urls_clean.tmp
+                # --- [STEP 3: DEEP SIGHT 3.1 - THE CLEAN RECON] ---
+                echo "[+] Step 3: Mining Endpoints (Deep Scan Mode)..."
                 
-                # Bersihkan domain untuk Wayback/GAU
+                # 1. PEMBERSIH JALUR (Kunci Cuan): Ambil URL murni saja (Tanpa IP/Server Info)
+                # Dari: http://target.com [1.2.3.4] [Nginx] -> Jadi: http://target.com
+                awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
+                
+                # 2. Bersihkan domain murni untuk Wayback/GAU
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d' ' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
-                timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs > data/$program_name/urls_gau.txt" || true
-                
-                echo "[+] Step 4: (Crawling with Hakrawler...)"
-                # Gunakan URL yang sudah bersih tadi
-                timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
+                touch data/$program_name/urls_wayback.txt
+                touch data/$program_name/urls_hak.txt
+                touch data/$program_name/urls_katana.txt
 
-                # Gabungkan SEMUA temuan
-                touch data/$program_name/urls_wayback.txt data/$program_name/urls_gau.txt data/$program_name/urls_hak.txt
-                cat data/$program_name/urls_wayback.txt data/$program_name/urls_gau.txt data/$program_name/urls_hak.txt | sort -u > data/$program_name/all_endpoints.txt
+                # 3. Mata Sejarah (Wayback/GAU) - SAKTI (63rb URL!)
+                timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
+                timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls_wayback.txt" || true
                 
-                # Fallback: Jika zonk, tetap pakai active_hosts
+                # 4. Mata Cepat (Hakrawler) - SEKARANG GAK AKAN ERROR LAGI
+                echo "    (Crawling with Hakrawler...)"
+                timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs -u > data/$program_name/urls_hak.txt" || true
+
+                # 5. Mata Dalam (Katana) - KITA PAKAI CARA PALING STANDAR & AMAN
+                echo "    (Crawling with Katana Headless...)"
+                timeout 20m katana -list data/$program_name/active_urls_clean.tmp \
+                  -system-chrome -headless -no-sandbox \
+                  -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
+                
+                # 6. GABUNGKAN SEMUA (Mata Sejarah + Mata Cepat + Mata Dalam)
+                cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
+                
+                # Fallback: Jika semua zonk (gak mungkin), tetep pake active_hosts
                 if [ ! -s "data/$program_name/all_endpoints.txt" ]; then
                   cp data/$program_name/active_urls_clean.tmp data/$program_name/all_endpoints.txt
                 fi
