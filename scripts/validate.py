@@ -66,7 +66,7 @@ def create_h1_draft(title, description, impact, severity, url):
     return None
 
 def validate_findings():
-    print(f"🔍 Starting Grandmaster Triage: {PROGRAM_NAME}")
+    print(f"🔍 Starting Professional Triage: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
@@ -86,15 +86,12 @@ def validate_findings():
     findings_list = []
     trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers", "dns-sec"]
     
-    # Langsung pakai data all_findings yang sudah di-sort
     for d in all_findings:
         sev = d.get("info", {}).get("severity", "info").lower()
         tid = d.get("template-id", "").lower()
-        
         if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
             findings_list.append(get_verification_context(d))
-        
-        if len(findings_list) >= 15: break
+        if len(findings_list) >= 10: break
 
     if not findings_list: return
 
@@ -125,12 +122,34 @@ def validate_findings():
 ## Remediation
 {remediation_plan}"""
 
-    prompt = f"""Role: Senior Triage Lead. 
-Data: {json.dumps(findings_list)}. 
-Write technical reports using template: {report_template}. 
-Use the provided 'request_evidence' to write a highly accurate and realistic 'Steps to Reproduce' section.
-Output ONLY a JSON ARRAY: [{{ "title": "...", "description": "...", "impact": "...", "severity": "...", "url": "..." }}]. 
-If nothing valid: NO_VALID_BUG"""
+    # --- [ PROMPT ULTIMATE & PROFESIONAL ] ---
+    prompt = f"""Role: Senior Security Researcher & Lead Triage.
+Data Findings: {json.dumps(findings_list)}.
+
+Task: Create a highly professional, detailed, and technical vulnerability report for each bug found in the provided Data. 
+These reports are for a professional Triage Team, so they must be clear, actionable, and include all technical evidence.
+
+Instructions:
+1. Fill the provided 'report_template' below for each valid vulnerability.
+2. Use the 'request_evidence' and 'response_evidence' to write a realistic 'Steps to Reproduce' section.
+3. In the 'Environment' section, you MUST map the 'ip' and 'time' from the Data findings.
+4. Ensure the Technical Explanation explains WHY this is a vulnerability.
+
+--- REPORT TEMPLATE TO FILL ---
+{report_template}
+------------------------------
+
+Output MUST be ONLY a JSON ARRAY of objects with these exact keys:
+[
+  {{
+    "title": "Concise Technical Title",
+    "severity": "CRITICAL/HIGH/MEDIUM",
+    "url": "The Affected URL",
+    "full_markdown": "PASTE THE ENTIRE FILLED MARKDOWN REPORT HERE (From Details to Remediation)"
+  }}
+]
+
+If no valid security bugs are found, output: NO_VALID_BUG"""
 
     try:
         # --- [ AI EXECUTION WITH SEQUENTIAL RETRY ] ---
@@ -181,13 +200,13 @@ If nothing valid: NO_VALID_BUG"""
             os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
 
             for idx, rep in enumerate(reports):
-                # Kirim ke HackerOne (Draf Otomatis)
-                d_id = create_h1_draft(rep['title'], rep['description'], rep['impact'], rep['severity'], rep.get('url', ''))
+                # --- FIX 1: Kirim 'full_markdown' ke HackerOne ---
+                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "Detail impact ada di laporan.", rep['severity'], rep.get('url', ''))
                 
                 if d_id in [None, "ALREADY_REPORTED"]: 
                     continue
                 
-                # Labeling Severity untuk folder Telegram
+                # Labeling Severity
                 sev = rep.get('severity', 'Medium').upper()
                 p_label = "P1-P2" if any(x in sev for x in ["CRITICAL", "HIGH", "P1", "P2"]) else "P3-P4"
                 folder = "high" if p_label == "P1-P2" else "low"
@@ -196,10 +215,12 @@ If nothing valid: NO_VALID_BUG"""
                 safe_title = re.sub(r'\W+', '_', rep['title'])[:50]
                 report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{p_label}_{safe_title}_{idx}.md"
                 
+                # --- FIX 2: Tulis 'full_markdown' ke File Telegram ---
                 with open(report_path, 'w') as f:
-                    f.write(f"# {rep['title']}\n\n**Draft ID:** `{d_id}`\n\n{rep['description']}\n\n## Impact\n{rep['impact']}")
+                    f.write(f"🆔 **Draft ID:** `{d_id}`\n\n")
+                    f.write(rep['full_markdown']) # <--- Ini yang bikin laporan panjang & pro
                 
-                print(f"[+] SUCCESS: Report generated for {rep['title']} (Draft: {d_id})")
+                print(f"[+] SUCCESS: Professional Report for {rep['title']}")
 
     except Exception as e: 
         print(f"Error in AI/Drafting process: {e}")
