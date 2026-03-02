@@ -126,24 +126,24 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - VERSI ANTI-MOGOK] ---
+                # --- [STEP 4: NUCLEI KILLSHOT - ALAMAT GUDANG SENJATA HARUS BENER] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # 1. KITA HAPUS FLAG -t (Biar Nuclei cari otomatis di folder aslinya)
-                # 2. RL set ke 20 dan Concurrency 10 agar tidak diblokir server vulnweb
-                # 3. Tambahkan -timeout 20 agar Nuclei sabar nunggu jawaban server lemot
+                # Kita tunjuk ke folder yang Bos buat di Install Tools ($HOME/nuclei-templates)
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                  -t $HOME/nuclei-templates \
                   -severity critical,high,medium,low \
                   -et dns,ssl,whois -es info \
-                  -ni -rl 20 -c 10 -timeout 20 -mhe 500 -no-color \
+                  -ni -rl 50 -c 20 -mhe 300 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
-                # --- [STEP 5: SENSITIVE TOKENS SCAN - VERSI TAGS] ---
+                # --- [STEP 5: SENSITIVE TOKENS SCAN - ALAMAT GUDANG SENJATA HARUS BENER] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Kita suruh Nuclei cari semua senjata yang ada label 'token' atau 'secret'
+                # Sama, kita tunjuk ke folder $HOME/nuclei-templates biar dia nemu TAGS-nya
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -tags token,secret,exposure,keys \
-                  -ni -rl 20 -c 10 -timeout 20 -no-color -mhe 500 -silent \
+                  -t $HOME/nuclei-templates \
+                  -tags token,keys,credential,exposure \
+                  -ni -rl 50 -c 20 -no-color -mhe 300 -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
