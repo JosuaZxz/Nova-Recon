@@ -126,27 +126,24 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - ANTI-BLOCK VERSION] ---
+                # --- [STEP 4: NUCLEI KILLSHOT - NO-LIMIT VERSION] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # 1. Kita tambahkan flag -ni (No Interactivity) biar Nuclei gak cek ulang host (langsung tembak!)
-                # 2. Kita turunkan RL ke 20 agar server target gak pingsan/ngeblock
-                # 3. Kita masukkan severity 'low' dulu buat PEMBUKTIAN kalau mesin ini beneran dapet bug
+                # 1. HAPUS path folder manual agar Nuclei cari sendiri secara otomatis
+                # 2. TAMBAH flag -ni (No Interactivity) agar tidak cek nyawa (langsung tembak!)
+                # 3. TURUNKAN RL ke 50 agar tidak diblokir server
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates \
-                  -severity critical,high,medium,low \
+                  -severity critical,high,medium \
                   -et dns,ssl,whois -es info \
-                  -ni -rl 20 -c 10 -mhe 500 -no-color \
+                  -ni -rl 50 -c 20 -mhe 300 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
-                # --- [STEP 5: SENSITIVE TOKENS SCAN - ANTI-BLOCK VERSION] ---
+                # --- [STEP 5: SENSITIVE TOKENS SCAN - TAGS VERSION] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # 1. Gunakan path lengkap $HOME agar tidak error 'no templates'
-                # 2. Tambahkan -ni (No Interactivity) agar tidak cek ulang host
-                # 3. RL 20 agar tidak diblokir firewall target
-                timeout 15m nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates/http/exposed-tokens/ \
-                  -ni -rl 20 -c 10 -no-color -mhe 500 \
+                # Jangan pakai path folder lagi, pakai TAGS agar anti-error selamanya
+                timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                  -tags token,exposure,secret,file \
+                  -ni -rl 50 -c 20 -no-color -mhe 300 -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
