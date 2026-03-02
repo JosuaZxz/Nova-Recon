@@ -128,23 +128,22 @@ jobs:
 
                 # --- [STEP 4: NUCLEI KILLSHOT - VERSI ANTI-MOGOK] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # Kita arahkan ke folder $HOME/nuclei-templates yang sudah kita download di atas
-                # Kita pakai flag -ni (No Interactivity) agar tidak ada skip target
+                # 1. KITA HAPUS FLAG -t (Biar Nuclei cari otomatis di folder aslinya)
+                # 2. RL set ke 20 dan Concurrency 10 agar tidak diblokir server vulnweb
+                # 3. Tambahkan -timeout 20 agar Nuclei sabar nunggu jawaban server lemot
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates \
                   -severity critical,high,medium,low \
                   -et dns,ssl,whois -es info \
-                  -ni -rl 50 -c 20 -mhe 300 -no-color \
+                  -ni -rl 20 -c 10 -timeout 20 -mhe 500 -no-color \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
-                # --- [STEP 5: SENSITIVE TOKENS SCAN - VERSI ANTI-ZONK] ---
+                # --- [STEP 5: SENSITIVE TOKENS SCAN - VERSI TAGS] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Gunakan -tags agar Nuclei cari sendiri senjatanya di gudang, tidak perlu path folder manual!
+                # Kita suruh Nuclei cari semua senjata yang ada label 'token' atau 'secret'
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t $HOME/nuclei-templates \
-                  -tags token,keys,credential,exposure \
-                  -ni -rl 50 -c 20 -no-color -mhe 300 \
+                  -tags token,secret,exposure,keys \
+                  -ni -rl 20 -c 10 -timeout 20 -no-color -mhe 500 -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
