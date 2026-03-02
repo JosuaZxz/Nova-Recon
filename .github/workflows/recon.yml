@@ -35,20 +35,23 @@ jobs:
       - name: Install Tools
         run: |
           sudo apt-get update
-          # 1. Pasang Google Chrome & Library pendukung
+          # 1. Chrome & Deps
           sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils \
-            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1
+            libasound2t64 libatk-bridge2.0-0 libgtk-3-0 libxss1 xvfb libgbm1 python3-pip
           
-          # JURUS KUNCI: Symlink agar Katana langsung nemu Chrome sistem
+          # Symlink Chrome
           sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
           
-          # 2. Install Tools ProjectDiscovery
+          # 2. Install Python Utils (JURUS BARU: URO)
+          pip3 install uro
+          
+          # 3. Install Tools ProjectDiscovery
           go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
           go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
           go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
           go install -v github.com/projectdiscovery/katana/cmd/katana@latest
           
-          # 3. Install Crawler & Mining Tools
+          # 4. Install Crawler
           go install -v github.com/hakluke/hakrawler@latest
           go install -v github.com/tomnomnom/assetfinder@latest
           go install -v github.com/tomnomnom/waybackurls@latest
@@ -56,7 +59,9 @@ jobs:
           go install -v github.com/tomnomnom/anew@latest
           
           echo "$HOME/go/bin" >> $GITHUB_PATH
-          nuclei -update-templates -ud $HOME/nuclei-templates
+          # Pastikan path python ada agar uro terbaca
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          nuclei -update-templates
           
       - name: Run Predator Recon
         env:
@@ -101,51 +106,61 @@ jobs:
             timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
             
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT 3.2 - HYPER SPEED FILTRATION] ---
+                # --- [STEP 3: DEEP SIGHT 3.5 - SMART REDUCTION] ---
                 echo "[+] Step 3: Mining Endpoints..."
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                touch data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt
+                # Mining (Dipersingkat waktunya agar tidak kena Ban)
+                timeout 5m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
+                timeout 5m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
                 
-                # Mining
-                timeout 10m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
-                timeout 10m bash -c "cat data/$program_name/domains_only.txt | gau --subs >> data/$program_name/urls_wayback.txt" || true
-                timeout 15m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
-                
-                # Katana (Fixed Chrome Path)
+                # Katana (Sedikit lebih santai - Depth 2)
                 echo "    (Crawling with Katana...)"
-                timeout 25m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
+                timeout 10m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
                 
                 # GABUNGKAN
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | sort -u > data/$program_name/all_endpoints.txt
                 
-                # --- SMART FILTER (BUANG SAMPAH) ---
-                # Cuma ambil yang berpotensi ada bug (JS, PHP, API, Parameter)
-                grep -iE '\.js|\.php|\.aspx|\.jsp|\.json|\/api\/|\?|=' data/$program_name/all_endpoints.txt > data/$program_name/filtered_endpoints.txt || cp data/$program_name/all_endpoints.txt data/$program_name/filtered_endpoints.txt
+                # --- SMART FILTER (JURUS URO) ---
+                echo "[+] Reducing noise with URO..."
+                # 1. Filter ekstensi menarik dulu
+                grep -iE '\.js|\.php|\.aspx|\.jsp|\.json|\/api\/|\?|=' data/$program_name/all_endpoints.txt > data/$program_name/pre_uro.txt || cp data/$program_name/all_endpoints.txt data/$program_name/pre_uro.txt
+                
+                # 2. Pangkas parameter duplikat dengan Uro
+                # Tambahkan '|| true' dan fallback cp jika uro gagal/not found
+                cat data/$program_name/pre_uro.txt | uro > data/$program_name/filtered_endpoints.txt || cp data/$program_name/pre_uro.txt data/$program_name/filtered_endpoints.txt
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - VERSI NMHE (NO SKIP)] ---
+                # --- [STEP 4: NUCLEI KILLSHOT - FORCE MODE] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # 1. GANTI -ni JADI -nmhe (Supaya TIDAK ADA LAGI TARGET DI-SKIP)
-                # 2. Tambah -retries 2 biar Nuclei nyoba lagi kalau koneksi gagal
-                # 3. Tetap RL 50 agar server vulnweb tidak kaget
-                timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                
+                # JURUS ANTI-ZONK: 
+                # RL 20 agar tidak diblokir. Disable Clustering agar stabil.
+                timeout 50m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t $HOME/nuclei-templates \
                   -severity critical,high,medium,low \
                   -et dns,ssl,whois -es info \
-                  -nmhe -rl 50 -c 20 -retries 2 -timeout 15 -no-color \
+                  -rl 20 -c 10 -retries 2 -timeout 10 -no-color \
+                  -disable-clustering \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 5: SENSITIVE TOKENS SCAN - VERSI NMHE (NO SKIP)] ---
+                # Cek manual apakah file kosong
+                if [ ! -s "data/$program_name/nuclei_results.json" ]; then
+                   echo "⚠️ WARNING: Nuclei result is empty. Possible IP Ban or WAF."
+                else
+                   echo "✅ SUCCESS: Nuclei found $(wc -l < data/$program_name/nuclei_results.json) potential bugs."
+                fi
+
+                # --- [STEP 5: SENSITIVE TOKENS SCAN] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Sama, pakai -nmhe dan -tags agar deteksi token maksimal
+                # Gunakan RL 20 juga agar konsisten stealth
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t $HOME/nuclei-templates \
                   -tags token,keys,credential,exposure \
-                  -nmhe -rl 50 -c 20 -retries 2 -timeout 15 -no-color -silent \
+                  -nmhe -rl 20 -c 10 -retries 2 -timeout 15 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
