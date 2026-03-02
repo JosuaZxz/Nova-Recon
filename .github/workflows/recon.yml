@@ -126,22 +126,20 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - AUTO PATH] ---
+                # --- [STEP 4: NUCLEI KILLSHOT - AUTO PATH FIX] ---
                 echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
-                # HAPUS flag -t $HOME/... biarkan Nuclei pakai default path
                 timeout 1h nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -severity critical,high,medium \
+                  -severity critical,high,medium,low \
                   -et dns,ssl,whois -es info \
-                  -rl 150 -c 50 -mhe 100 -no-color -silent \
+                  -ni -rl 50 -c 20 -mhe 300 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" || [ $? -eq 124 ] || true
 
                 # --- [STEP 5: SENSITIVE TOKENS SCAN - TAGS MODE] ---
                 echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # GANTI path folder menjadi TAGS (Lebih akurat & Anti-Error)
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -tags token,keys,credential,exposure \
-                  -rl 150 -c 50 -no-color -mhe 100 -silent \
+                  -ni -rl 50 -c 20 -no-color -mhe 300 -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
