@@ -15,22 +15,15 @@ PROGRAM_NAME = os.environ.get("PROGRAM_NAME", "Unknown")
 SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
-    host = data.get("host", "")
     info = data.get("info", {})
-    raw_req = data.get("request", "")
-    raw_res = data.get("response", "")
-    
-    # Potong agar tidak melebihi kuota token AI tapi tetep dapet bukti kuat
-    short_req = (raw_req[:1500] + '..[truncated]') if len(raw_req) > 1500 else raw_req
-    short_res = (raw_res[:1000] + '..[truncated]') if len(raw_res) > 1000 else raw_res
-
     return {
         "template_id": data.get("template-id", "Unknown"),
+        "template_name": info.get("name", "Unknown Bug Type"), # Tambahkan ini!
         "severity": info.get("severity", "unknown"),
-        "matched_url": data.get("matched-at", host),
+        "matched_url": data.get("matched-at", data.get("host", "")),
         "ip": data.get("ip", "Unknown IP"),
-        "request_evidence": short_req,
-        "response_evidence": short_res,
+        "request_evidence": data.get("request", "")[:1500],
+        "response_evidence": data.get("response", "")[:1000],
         "time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     }
 
@@ -89,7 +82,7 @@ def validate_findings():
 
     if not findings_list: return
 
-    # 2. Luxury Template (Sultan Edition)
+    # 2. Luxury Template (Sultan Edition - Spacing Updated)
     luxury_template = """
 .# {title}
 
@@ -118,43 +111,42 @@ def validate_findings():
 {request_evidence}
 .```
 
-.### HTTP Response:
+.### HTTP Response (Vulnerable Response):
 .```http
 {response_evidence}
 .```
 
 .## ⚠️ Impact Analysis
-- **Business Impact:** {business_impact}
-- **Technical Impact:** {technical_impact}
+
+.### 🏢 Business Impact:
+{business_impact}
+
+.### 💻 Technical Impact:
+{technical_impact}
 
 .## ✅ Remediation
 {remediation_plan}
 """
 
     # 3. Prompt AI dengan Instruksi REPRODUCTION URL (Tinggal Klik)
-    prompt = f"""Role: Senior Bug Bounty Hunter.
+    prompt = f"""Role: Elite Cyber Security Analyst.
 Data Findings: {json.dumps(findings_list)}.
 
-Task: Create a Professional Technical Report for EACH UNIQUE vulnerability type.
-
-PENTING (INSTRUKSI KERAS):
-1. JANGAN PERNAH menggabungkan dua tipe bug yang berbeda (misal SQL Injection dan XSS) ke dalam satu laporan.
-2. Jika ada bug yang sama di banyak URL (misal XSS di 5 endpoint berbeda), kamu BOLEH menggabungkannya menjadi satu laporan "Multiple Endpoints".
-3. Setiap objek dalam JSON ARRAY harus mewakili SATU tipe kerentanan yang unik.
-4. Gunakan 'Reproduction URL' yang spesifik untuk setiap bug.
-
-Output MUST be ONLY a JSON ARRAY of objects:
-[
-  {{
-    "title": "Technical Title",
-    "severity": "CRITICAL/HIGH",
-    "url": "URL",
-    "full_markdown": "FILLED LUXURY TEMPLATE"
-  }}
-]
+Task: Write a Professional Bug Bounty Report.
+STRICT RULES:
+1. BUG TYPE: You MUST identify the bug type BASED ON 'template_name' and 'template_id'. 
+   - If template is 'Cross Site Scripting', the title and analysis MUST be about XSS.
+   - If template is 'SQL Injection', the title MUST be about SQLi.
+   - DO NOT be fooled by database errors if the payload used is a <script> tag.
+2. PAYLOAD: Identify the exact payload used from the 'request_evidence'. 
+3. REPRODUCTION: Provide a 'reproduction_url' that is the 'matched_url' from the data.
+4. CVE: Only mention a CVE if it is explicitly listed in the 'template_id'.
+5. VERBOSE: Make the 'Technical Analysis' and 'Impact' sections long, technical, and accurate.
 
 Template:
-{luxury_template}"""
+{luxury_template}
+
+Output ONLY a JSON ARRAY of objects: ["title", "severity", "url", "full_markdown"]."""
     try:
         # 4. AI Execution
         url = "https://api.groq.com/openai/v1/chat/completions"
