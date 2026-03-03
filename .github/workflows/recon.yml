@@ -133,63 +133,59 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI KILLSHOT - FORCE MODE] ---
-                echo "[+] Phase 1: Deep Scanning Gold (P1-P3)..."
+                # --- [STEP 4: NUCLEI CORE SCAN (STEALTH & ANTI-SKIP)] ---
+                echo "[+] Step 4: Core Scanning with Anti-Skip Logic..."
                 
-                # JURUS ANTI-ZONK: 
-                # RL 20 agar tidak diblokir. Disable Clustering agar stabil.
-                timeout 50m nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                # JURUS KUNCI: Filter ulang pakai httpx sebelum masuk Nuclei 
+                # agar tidak ada error 'no address found'
+                cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405 -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
+
+                # Eksekusi Nuclei pada target yang benar-benar LIVE
+                timeout 50m nuclei -l "data/$program_name/final_live_targets.txt" \
                   -t $HOME/nuclei-templates \
                   -severity critical,high,medium,low \
                   -et dns,ssl,whois -es info \
-                  -rl 20 -c 10 -retries 2 -timeout 10 -no-color \
+                  -rl 10 -c 5 -retries 3 -timeout 15 -no-color -silent \
                   -disable-clustering \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # Cek manual apakah file kosong
-                if [ ! -s "data/$program_name/nuclei_results.json" ]; then
-                   echo "⚠️ WARNING: Nuclei result is empty. Possible IP Ban or WAF."
-                else
-                   echo "✅ SUCCESS: Nuclei found $(wc -l < data/$program_name/nuclei_results.json) potential bugs."
-                fi
-
-                # --- [STEP 5: SENSITIVE TOKENS SCAN] ---
-                echo "[+] Phase 2: Scanning for Sensitive Tokens..."
-                # Gunakan RL 20 juga agar konsisten stealth
+                # --- [STEP 5: SENSITIVE TOKENS SCAN (STEALTH)] ---
+                echo "[+] Step 5: Token Discovery..."
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t $HOME/nuclei-templates \
                   -tags token,keys,credential,exposure \
-                  -nmhe -rl 20 -c 10 -retries 2 -timeout 15 -no-color -silent \
+                  -nmhe -rl 10 -c 5 -no-color -silent \
                   -H "User-Agent: NovaRecon/2026" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
                 # STEP 6: AI ANALYSIS
-                echo "[+] Step 4: AI Analysis & H1 Drafting..."
+                echo "[+] Step 6: Grandmaster AI Triage processing..."
                 PROGRAM_NAME=$program_name python scripts/validate.py > /dev/null 2>&1 || true
 
-                # STEP 7: NOTIF (KIRIM SEBAGAI FILE AGAR TIDAK TERPOTONG)
+                # STEP 7: SULTAN NOTIFICATION (SMART CAPTION)
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
-                    # JURUS BARU: Kirim sebagai Document (.md)
+                    # Ambil baris pertama (Judul Bug) sebagai caption
+                    TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-60)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
                       -F chat_id="$TG_CRIT" \
                       -F document=@"$f" \
-                      -F caption="🚨 NEW CRITICAL/HIGH BUG FOUND!" > /dev/null 2>&1
+                      -F caption="🚨 CRITICAL: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
                 if [ -d "data/$program_name/alerts/low" ]; then
                   for f in data/$program_name/alerts/low/*.md; do
                     [ -e "$f" ] || continue
-                    # Kirim sebagai Document ke channel General/Low
+                    TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-60)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
                       -F chat_id="$TG_GEN" \
                       -F document=@"$f" \
-                      -F caption="⚠️ NEW MEDIUM/LOW BUG FOUND" > /dev/null 2>&1
+                      -F caption="⚠️ MEDIUM: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
