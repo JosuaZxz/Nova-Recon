@@ -135,16 +135,26 @@ def validate_findings():
     prompt = f"""Role: Senior Bug Bounty Hunter.
 Data Findings: {json.dumps(findings_list)}.
 
-Task: Create a Professional Technical Report.
-SPECIAL INSTRUCTION for PoC:
-- In 'Steps to Reproduce', PROVIDE A CLEAR REPRODUCTION URL. 
-- The URL must include the payload so the Triage team can JUST CLICK IT to see the bug.
-- If it's a POST request, explain clearly which parameters to change.
+Task: Create a Professional Technical Report for EACH UNIQUE vulnerability type.
+
+PENTING (INSTRUKSI KERAS):
+1. JANGAN PERNAH menggabungkan dua tipe bug yang berbeda (misal SQL Injection dan XSS) ke dalam satu laporan.
+2. Jika ada bug yang sama di banyak URL (misal XSS di 5 endpoint berbeda), kamu BOLEH menggabungkannya menjadi satu laporan "Multiple Endpoints".
+3. Setiap objek dalam JSON ARRAY harus mewakili SATU tipe kerentanan yang unik.
+4. Gunakan 'Reproduction URL' yang spesifik untuk setiap bug.
+
+Output MUST be ONLY a JSON ARRAY of objects:
+[
+  {{
+    "title": "Technical Title",
+    "severity": "CRITICAL/HIGH",
+    "url": "URL",
+    "full_markdown": "FILLED LUXURY TEMPLATE"
+  }}
+]
 
 Template:
-{luxury_template}
-
-Output ONLY a JSON ARRAY..."""
+{luxury_template}"""
     try:
         # 4. AI Execution
         url = "https://api.groq.com/openai/v1/chat/completions"
