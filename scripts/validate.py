@@ -18,7 +18,7 @@ def get_verification_context(data):
     info = data.get("info", {})
     return {
         "template_id": data.get("template-id", "Unknown"),
-        "template_name": info.get("name", "Unknown Bug Type"), # Tambahkan ini!
+        "template_name": info.get("name", "Unknown Bug Type"),
         "severity": info.get("severity", "unknown"),
         "matched_url": data.get("matched-at", data.get("host", "")),
         "ip": data.get("ip", "Unknown IP"),
@@ -36,6 +36,8 @@ def create_h1_draft(title, description, impact, severity, url):
 
     # Bypass H1 API jika program testing
     if PROGRAM_NAME in ["00_test", "test_target"]: 
+        print(f"[+] Test Mode: NOT saving hash (Memory disabled for testing)")
+        # HAPUS BARIS with open...
         return "TEST-DRAFT-ID-2026"
 
     target_handle = "hackerone" if PROGRAM_NAME == "hackerone" else PROGRAM_NAME
@@ -54,7 +56,7 @@ def create_h1_draft(title, description, impact, severity, url):
     return None
 
 def validate_findings():
-    print(f"🔍 Starting Ultimate Triage for: {PROGRAM_NAME}")
+    print(f"🔍 Starting Professional Triage for: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
@@ -67,6 +69,7 @@ def validate_findings():
                 all_findings.append(d)
             except: continue
 
+    # Sorting
     sev_rank = {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0}
     all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
 
@@ -77,11 +80,12 @@ def validate_findings():
         tid = d.get("template-id", "").lower()
         if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
             findings_list.append(get_verification_context(d))
-        if len(findings_list) >= 10: break
+        # LIMIT KITA NAIKKAN JADI 20
+        if len(findings_list) >= 20: break
 
     if not findings_list: return
 
-    # --- [ 1. TEMPLATE SULTAN ] ---
+    # --- [ TEMPLATE SULTAN ] ---
     luxury_template = """
 .# {title}
 
@@ -100,7 +104,7 @@ def validate_findings():
 .## 🚀 Steps To Reproduce (PoC)
 1. **Target Navigation:** Navigate to {url}
 2. **Attack Vector:** Inject payload `{payload_used}` into the parameter.
-3. **Reproduction URL (CLICK TO VERIFY):** {reproduction_url}
+3. **Reproduction URL:** {reproduction_url}
 4. **Observation:** {step_3}
 
 .## 🛡️ Proof of Concept (Evidence)
@@ -110,7 +114,7 @@ def validate_findings():
 {request_evidence}
 .```
 
-.### HTTP Response (Vulnerable Response):
+.### HTTP Response:
 .```http
 {response_evidence}
 .```
@@ -130,29 +134,31 @@ def validate_findings():
 *Reported by NovaRecon v5.1 (Platinum Sniper Edition)*
 """
 
-    # --- [ 2. PROMPT AI ANTI-HALU (FINAL VERSION) ] ---
-    # Perhatikan penggunaan {{ }} untuk payload agar Python tidak error
-    prompt = f"""Role: Senior Cyber Security Researcher.
+    # --- [ PROMPT VERSI "PATUH / OBEDIENT" ] ---
+    # Kita hapus instruksi "Analisa", ganti jadi "Format Ulang"
+    prompt = f"""Role: Professional Report Writer.
 Data Findings: {json.dumps(findings_list)}.
 
-Task: Write a Professional Pentest Report for EACH unique vulnerability.
+Task: Format the provided findings into a Professional Bug Bounty Report using the template below.
 
-STRICT RULES:
-1. BUG CLASSIFICATION: You MUST identify the bug type BASED ON 'template_name'. If template is 'Cross Site Scripting', the report MUST be about XSS.
-2. ANTI-HALLUCINATION: Do NOT call it SQL Injection just because you see an SQL error if the template is for XSS. Explain the SQL error as a 'backend anomaly' caused by the XSS payload.
-3. REPRODUCTION URL: Provide the full URL with the payload included so it can be clicked.
-4. HIGHLIGHT PAYLOAD: Always wrap payloads in backticks (example: `<script>alert(1)</script>`).
-5. VERBOSE: Make the 'Technical Analysis' and 'Impact' sections long, technical, and accurate.
+STRICT RULES (DO NOT THINK, JUST DO):
+1. BUG TITLE: Use the exact 'template_name' from the data as the title. DO NOT CHANGE IT.
+2. VULNERABILITY TYPE: If the template says XSS, write about XSS. If SQLi, write about SQLi. Ignore the response errors if they contradict the template ID.
+3. REPRODUCTION URL: Combine the 'matched_url' with the payload to make a clickable link.
+4. PAYLOADS: Always wrap payloads in backticks like `<script>`.
+5. NO DUPLICATES: Group same bugs into one report.
 
 Template:
 {luxury_template}
 
 Output ONLY a JSON ARRAY of objects: ["title", "severity", "url", "full_markdown"]."""
+
     try:
         url = "https://api.groq.com/openai/v1/chat/completions"
         headers = {"Authorization": f"Bearer {AI_KEY}"}
-        payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.0} # Temp 0 biar kaku/ga halu
+        payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.0} # Kaku total
         
+        print(f"[*] Sending findings to AI for {PROGRAM_NAME}...")
         res = requests.post(url, headers=headers, json=payload, timeout=120)
         if res.status_code != 200: return
         ai_out = res.json()['choices'][0]['message']['content'].strip()
@@ -178,10 +184,11 @@ Output ONLY a JSON ARRAY of objects: ["title", "severity", "url", "full_markdown
                 with open(report_path, 'w') as f:
                     f.write(f"# {rep['title']} in {PROGRAM_NAME}\n\n")
                     f.write(f"🆔 **Draft ID:** `{d_id}`\n\n")
-                    # Auto Clean titik
+                    # Bersihkan titik otomatis
                     f.write(rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```"))
                 
-                print(f"[+] Sultan Report Ready: {rep['title']}")
+                print(f"[+] Success: {rep['title']}")
+
     except Exception as e: print(f"Error: {e}")
 
 if __name__ == "__main__":
