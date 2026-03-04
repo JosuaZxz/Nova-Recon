@@ -125,11 +125,15 @@ jobs:
                 # --- [STEP 4: NUCLEI CORE SCAN (NO-SKIP & VERIFIED)] ---
           echo "[+] Step 4: Core Scanning... (Checking Peluru First)"
 
-          # Verifikasi peluru: Kita hitung jumlah template yang terinstall
+          # Verifikasi peluru
           TEMPLATE_COUNT=$(find /home/runner/nuclei-templates -name "*.yaml" | wc -l)
-          echo "✅ Peluru Check: Found $TEMPLATE_COUNT templates in /home/runner/nuclei-templates"
+          echo "✅ Peluru Check: Found $TEMPLATE_COUNT templates"
 
-          # Eksekusi dengan -stats agar kita bisa pantau progress di log GitHub tiap 60 detik
+          # JURUS KUNCI: Membuat ulang file target yang hilang (HANYA URL YANG HIDUP)
+          echo "[+] Filtering live targets with httpx..."
+          cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405 -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
+
+          # Eksekusi Nuclei dengan -stats
           timeout 50m nuclei -l "data/$program_name/final_live_targets.txt" \
             -t /home/runner/nuclei-templates \
             -severity critical,high,medium,low \
@@ -150,13 +154,12 @@ jobs:
             -H "User-Agent: NovaRecon/2026" \
             -jsonl -o "data/$program_name/token_results.json" || true
           
-          # Gabungkan hasil token ke hasil utama jika ada
           [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
           # --- [STEP 6: AI ANALYSIS] ---
           echo "[+] Step 6: Grandmaster AI Triage processing..."
           PROGRAM_NAME=$program_name python3 scripts/validate.py > /dev/null 2>&1 || true
-
+          
                 # STEP 7: SULTAN NOTIFIKASI (SMART CAPTION & ALL SEVERITIES)
                 # 1. Kirim Bug HIGH / CRITICAL ke Grup Critical
                 if [ -d "data/$program_name/alerts/high" ]; then
