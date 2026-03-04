@@ -54,7 +54,7 @@ def create_h1_draft(title, description, impact, severity, url):
     return None
 
 def validate_findings():
-    print(f"🔍 Starting Professional Triage for: {PROGRAM_NAME}")
+    print(f"🔍 Starting Ultimate Triage for: {PROGRAM_NAME}")
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
@@ -67,7 +67,6 @@ def validate_findings():
                 all_findings.append(d)
             except: continue
 
-    # 1. Priority Ranking
     sev_rank = {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0}
     all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
 
@@ -78,11 +77,11 @@ def validate_findings():
         tid = d.get("template-id", "").lower()
         if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
             findings_list.append(get_verification_context(d))
-        if len(findings_list) >= 15: break
+        if len(findings_list) >= 10: break
 
     if not findings_list: return
 
-    # 2. Luxury Template (Sultan Edition - Spacing Updated)
+    # --- [ 1. TEMPLATE SULTAN ] ---
     luxury_template = """
 .# {title}
 
@@ -101,7 +100,7 @@ def validate_findings():
 .## 🚀 Steps To Reproduce (PoC)
 1. **Target Navigation:** Navigate to {url}
 2. **Attack Vector:** Inject payload `{payload_used}` into the parameter.
-3. **Reproduction URL:** {reproduction_url}
+3. **Reproduction URL (CLICK TO VERIFY):** {reproduction_url}
 4. **Observation:** {step_3}
 
 .## 🛡️ Proof of Concept (Evidence)
@@ -126,38 +125,38 @@ def validate_findings():
 
 .## ✅ Remediation
 {remediation_plan}
+
+---
+*Reported by NovaRecon v5.1 (Platinum Sniper Edition)*
 """
 
-    # 3. Prompt AI dengan Instruksi REPRODUCTION URL (Tinggal Klik)
-    # 3. Prompt AI: Versi Anti-Ngaco & Pro PoC
-    prompt = f"""Role: Senior Bug Bounty Hunter (Triage Specialist).
+    # --- [ 2. PROMPT AI ANTI-HALU (FINAL VERSION) ] ---
+    # Perhatikan penggunaan {{ }} untuk payload agar Python tidak error
+    prompt = f"""Role: Senior Cyber Security Researcher.
 Data Findings: {json.dumps(findings_list)}.
 
-Task: Create a highly technical and professional bug report for each UNIQUE vulnerability.
+Task: Write a Professional Pentest Report for EACH unique vulnerability.
 
 STRICT RULES:
-1. SINKRONISASI BUKTI: Jika template_name adalah 'Cross Site Scripting' tapi response_evidence hanya menunjukkan 'SQL Syntax Error', jelaskan dalam Technical Analysis bahwa input tersebut menyebabkan anomali pada backend, namun tetap kategorikan sesuai template_id.
-2. PAYLOAD HIGHLIGHT: Selalu bungkus payload dengan backticks (contoh: `<script>alert(1)</script>`).
-3. REPRODUCTION URL: Wajib membuat URL lengkap yang sudah terpasang payload agar Triage bisa LANGSUNG KLIK.
-4. EVIDENCE ANALYSIS: Di bagian Technical Analysis, jelaskan bagian mana dari HTTP Response yang membuktikan bug tersebut (misal: payload terefleksi di HTML atau memicu error database).
-5. NO DUPLICATE: Jangan membuat dua laporan untuk bug yang sama.
-
-Output ONLY a JSON ARRAY of objects: ["title", "severity", "url", "full_markdown"].
+1. BUG CLASSIFICATION: You MUST identify the bug type BASED ON 'template_name'. If template is 'Cross Site Scripting', the report MUST be about XSS.
+2. ANTI-HALLUCINATION: Do NOT call it SQL Injection just because you see an SQL error if the template is for XSS. Explain the SQL error as a 'backend anomaly' caused by the XSS payload.
+3. REPRODUCTION URL: Provide the full URL with the payload included so it can be clicked.
+4. HIGHLIGHT PAYLOAD: Always wrap payloads in backticks (example: `<script>alert(1)</script>`).
+5. VERBOSE: Make the 'Technical Analysis' and 'Impact' sections long, technical, and accurate.
 
 Template:
-{luxury_template}"""
+{luxury_template}
+
+Output ONLY a JSON ARRAY of objects: ["title", "severity", "url", "full_markdown"]."""
     try:
-        # 4. AI Execution
         url = "https://api.groq.com/openai/v1/chat/completions"
         headers = {"Authorization": f"Bearer {AI_KEY}"}
-        payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.1}
+        payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.0} # Temp 0 biar kaku/ga halu
         
-        print(f"[*] Sending to AI...")
         res = requests.post(url, headers=headers, json=payload, timeout=120)
         if res.status_code != 200: return
         ai_out = res.json()['choices'][0]['message']['content'].strip()
 
-        # 5. Parsing & Penulisan Laporan (Loop yang kamu tanyakan)
         match = re.search(r'\[.*\]|\{.*\}', ai_out, re.DOTALL)
         if match:
             reports = json.loads(match.group(0), strict=False)
@@ -167,8 +166,7 @@ Template:
             os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
 
             for idx, rep in enumerate(reports):
-                # Buat draf di HackerOne
-                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "See detail.", rep['severity'], rep.get('url', ''))
+                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "Check report.", rep['severity'], rep.get('url', ''))
                 if d_id in [None, "ALREADY_REPORTED"]: continue
                 
                 sev = rep.get('severity', 'Medium').upper()
@@ -178,16 +176,12 @@ Template:
                 report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{safe_title}_{idx}.md"
                 
                 with open(report_path, 'w') as f:
-                    # JUDUL DI BARIS PERTAMA (PENTING UNTUK NOTIF TELEGRAM)
                     f.write(f"# {rep['title']} in {PROGRAM_NAME}\n\n")
                     f.write(f"🆔 **Draft ID:** `{d_id}`\n\n")
-                    
-                    # Bersihkan titik penanda secara otomatis
-                    final_report = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
-                    f.write(final_report)
+                    # Auto Clean titik
+                    f.write(rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```"))
                 
-                print(f"[+] Success: {rep['title']} for {PROGRAM_NAME}")
-
+                print(f"[+] Sultan Report Ready: {rep['title']}")
     except Exception as e: print(f"Error: {e}")
 
 if __name__ == "__main__":
