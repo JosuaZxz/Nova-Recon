@@ -122,33 +122,35 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: NUCLEI CORE SCAN (RAMPING & MEMATIKAN)] ---
-          echo "[+] Step 4: Core Scanning... (Bazooka Only Mode)"
+                # --- [STEP 4: NUCLEI CORE SCAN (SMART BAZOOKA)] ---
+          echo "[+] Step 4: Core Scanning... (High Impact Focus)"
 
           # JURUS KUNCI: Membuat ulang file target yang hidup
           cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405 -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
 
-          # Eksekusi: HANYA Critical, High, Medium. 
-          # Kecepatan dinaikkan ke -rl 40 dan -c 20 agar selesai sebelum timeout.
+          # Kita gunakan TAGS daripada Folder agar lebih akurat dan CEPAT.
+          # Menghapus template yang cuma buang-buang waktu.
           timeout 50m nuclei -l "data/$program_name/final_live_targets.txt" \
             -t /home/runner/nuclei-templates \
+            -tags sqli,xss,lfi,ssrf,rce,takeover,exposure \
             -severity critical,high,medium \
             -exclude-severity low,info \
-            -et dns,ssl,whois,tech-detect,ssl-issuer \
-            -nmhe -rl 40 -c 20 -retries 2 -timeout 10 -no-color \
+            -et dns,ssl,whois,tech-detect \
+            -nmhe -rl 50 -c 20 -retries 2 -timeout 10 -no-color \
             -stats -stats-interval 60 \
             -disable-clustering \
             -H "User-Agent: NovaRecon/2026" \
             -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-          # --- [STEP 5: SENSITIVE TOKENS SCAN (FOCUS)] ---
+          # --- [STEP 5: SENSITIVE TOKENS SCAN (VERIFIED PATH)] ---
           echo "[+] Step 5: Token Discovery... (Cari Kunci Brankas)"
+          # Kita gunakan path root /nuclei-templates/ tapi filternya pakai TAGS 
+          # supaya tidak error "Directory not found" lagi.
           timeout 20m nuclei -l "data/$program_name/final_live_targets.txt" \
-            -t /home/runner/nuclei-templates/vulnerabilities \
-            -t /home/runner/nuclei-templates/exposures \
-            -tags token,keys,credential,exposure \
+            -t /home/runner/nuclei-templates \
+            -tags token,keys,credential,exposure,generic-exposure \
             -severity critical,high,medium \
-            -nmhe -rl 40 -c 20 -no-color \
+            -nmhe -rl 50 -c 20 -no-color \
             -stats -stats-interval 60 \
             -H "User-Agent: NovaRecon/2026" \
             -jsonl -o "data/$program_name/token_results.json" || true
