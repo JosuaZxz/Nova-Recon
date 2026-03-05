@@ -36,7 +36,6 @@ def create_h1_draft(title, description, impact, severity, url):
 
     # Bypass H1 API jika program testing (TAPI TETAP CATAT KE MEMORI)
     if PROGRAM_NAME in ["00_test", "test_target"]: 
-        with open(SEEN_DB, "a") as f: f.write(f"{url_hash}\n")
         return "TEST-DRAFT-ID-2026"
 
     target_handle = "hackerone" if PROGRAM_NAME == "hackerone" else PROGRAM_NAME
