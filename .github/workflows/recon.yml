@@ -122,29 +122,32 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: CORE VULNERABILITY SCAN (FIXED FLAG)] ---
+                # --- [STEP 4: CORE VULNERABILITY SCAN (ULTRA-STEALTH)] ---
           echo "[+] Step 4: Core Scanning... (High Impact Focus)"
           
+          # Jembatan target - Menangkap status 500 (Emas SQLi)
           cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405,500 -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
 
-          # PERBAIKAN: -u-a diganti jadi -ua
+          # JURUS SULTAN: Cek flag valid di log (Biar gak debat sama AI)
+          nuclei -h | grep -i "agent" || true
+
+          # LOGIKA DEWASA: -ra (Random Agent), -interactsh (Blind Bugs), -stats (Progress)
           timeout 50m nuclei -l "data/$program_name/final_live_targets.txt" \
             -t /home/runner/nuclei-templates \
             -severity critical,high,medium \
-            -ua -nmhe -rl 25 -c 10 -retries 2 -timeout 10 -no-color -silent \
+            -ra -nmhe -rl 25 -c 10 -retries 2 -timeout 10 -no-color -silent \
             -interactsh-server oast.pro \
             -stats -stats-interval 60 \
             -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-          # --- [STEP 5: SENSITIVE SECRETS SCAN (FIXED FLAG)] ---
+          # --- [STEP 5: SENSITIVE SECRETS SCAN (KEY FINDER)] ---
           echo "[+] Step 5: Token Discovery... (Looking for Keys)"
           
-          # PERBAIKAN: -u-a diganti jadi -ua
           timeout 25m nuclei -l "data/$program_name/final_live_targets.txt" \
             -t /home/runner/nuclei-templates \
             -tags token,keys,credential,exposure,generic-exposure \
             -severity critical,high,medium \
-            -ua -nmhe -rl 25 -c 10 -no-color -silent \
+            -ra -nmhe -rl 25 -c 10 -no-color -silent \
             -stats -stats-interval 60 \
             -jsonl -o "data/$program_name/token_results.json" || true
           
