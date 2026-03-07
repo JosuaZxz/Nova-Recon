@@ -122,46 +122,44 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (FILTER HARTA KARUN)] ---
-                echo "[*] Filtering trash endpoints for High Priority Mission..."
+                # --- [STEP 4: ENDPOINT SANITIZER (PENYARING HARTA KARUN)] ---
+                echo "[*] Filtering trash for Elite Sniper Mission..."
                 
-                # JURUS PENYARINGAN CERDAS:
-                # 1. Ambil yang ada ? atau = (Lubang Input)
-                # 2. Ambil ekstensi backend & config (Pintu Belakang)
-                # 3. Buang sampah statis (Tembok Beton)
+                # JURUS SULTAN: Kita ambil URL yang punya input (?) atau file backend (.jsp, .php, dll)
+                # Serta file sensitif (.env, .conf, .git). SEMUA SAMPAH STATIS DIBUANG.
                 cat data/$program_name/filtered_endpoints.txt | \
                 grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.conf|\.env|\.yaml|\.git" | \
-                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico|\.ttf|\.otf" | \
+                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico|\.ttf" | \
                 sort -u > data/$program_name/high_priority_targets.txt
 
-                # Hitung target untuk laporan log
-                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/high_priority_targets.txt) High Priority Endpoints Found."
+                echo "🎯 ELITE BATTLE MAP: $(wc -l < data/$program_name/high_priority_targets.txt) Targets Ready."
 
-                # --- [STEP 5: CORE FUZZING & VULN SCAN (FIXED PELURU)] ---
-                echo "[+] Step 5: Core Scanning... (High Speed & Polite Mode)"
+                # --- [STEP 5: CORE VULNERABILITY SCAN (BAZOOKA MODE)] ---
+                echo "[+] Step 5: Core Scanning... (High Impact Focus)"
                 
-                # Kita arahkan ke folder root templates, lalu filter pakai TAGS
-                # Ini cara paling aman agar tidak error "No templates provided" lagi
+                # LOGIKA DEWASA: 
+                # 1. -tags : Langsung tembak jenis bug-nya, jangan nunggu load 5000 folder.
+                # 2. -rl 50 : Kita naikkan RPM mesin ke 50 req/sec biar selesai 100%.
+                # 3. -ua : Random User-Agent (WAJIB BIAR LOLOS WAF)
                 timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags sqli,xss,lfi,ssrf,rce,takeover,fuzz,vulnerability \
+                  -tags sqli,xss,lfi,ssrf,rce,fuzz,vulnerability \
                   -severity critical,high,medium \
                   -exclude-severity low,info \
-                  -nmhe -rl 15 -bs 5 -retries 2 -timeout 10 -no-color -silent \
-                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
-                  -interactsh-server oast.pro \
+                  -nmhe -rl 50 -c 15 -retries 2 -timeout 10 -no-color -silent \
+                  -ua -interactsh-server oast.pro \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 6: SENSITIVE SECRETS SCAN (FIXED PELURU)] ---
+                # --- [STEP 6: SENSITIVE SECRETS SCAN (KEY FINDER)] ---
                 echo "[+] Step 6: Token Discovery... (Looking for Keys)"
                 
-                timeout 25m nuclei -l "data/$program_name/final_live_targets.txt" \
+                # FIX: Gunakan file high_priority_targets.txt juga di sini
+                timeout 25m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags token,keys,credential,exposure,generic-exposure \
+                  -tags token,keys,credential,exposure \
                   -severity critical,high,medium \
-                  -nmhe -rl 15 -bs 5 -no-color -silent \
-                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
+                  -nmhe -rl 50 -c 15 -no-color -silent -ua \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
