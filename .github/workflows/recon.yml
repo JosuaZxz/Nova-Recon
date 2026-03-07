@@ -122,52 +122,51 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (PENYARING HARTA KARUN)] ---
-                echo "[*] Filtering trash for Elite Sniper Mission..."
+                # --- [STEP 4: ENDPOINT SANITIZER (FILTER SULTAN)] ---
+                echo "[*] Filtering for High Priority Targets (Real World Mode)..."
                 
-                # JURUS SULTAN: Kita ambil URL yang punya input (?) atau file backend (.jsp, .php, dll)
-                # Serta file sensitif (.env, .conf, .git). SEMUA SAMPAH STATIS DIBUANG.
-                cat data/$program_name/filtered_endpoints.txt | \
+                # JEMBATAN: Pastikan file target hidup tercipta dulu
+                cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405,500 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
+
+                # SANITASI: Hanya ambil URL yang punya potensi lubang (PHP, JSP, Parameter, dll)
+                cat data/$program_name/final_live_targets.txt | \
                 grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.conf|\.env|\.yaml|\.git" | \
                 grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico|\.ttf" | \
                 sort -u > data/$program_name/high_priority_targets.txt
 
-                echo "🎯 ELITE BATTLE MAP: $(wc -l < data/$program_name/high_priority_targets.txt) Targets Ready."
+                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/high_priority_targets.txt) High Value Targets found."
 
-                # --- [STEP 5: CORE VULNERABILITY SCAN (BAZOOKA MODE)] ---
-                echo "[+] Step 5: Core Scanning... (High Impact Focus)"
+                # --- [STEP 5: CORE VULNERABILITY (STEALTH & PERSISTENT)] ---
+                echo "[+] Step 5: Core Scanning... (Sniper Pro Mode)"
                 
-                # LOGIKA DEWASA: 
-                # 1. -tags : Langsung tembak jenis bug-nya, jangan nunggu load 5000 folder.
-                # 2. -rl 50 : Kita naikkan RPM mesin ke 50 req/sec biar selesai 100%.
-                # 3. -ua : Random User-Agent (WAJIB BIAR LOLOS WAF)
+                # LOGIKA HUTAN LIAR:
+                # -rl 25 : Kecepatan moderat (25 req/sec). Cukup pelan untuk lolos WAF, cukup cepat untuk selesai.
+                # -bs 5  : Tidak membombardir satu server sekaligus.
                 timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags sqli,xss,lfi,ssrf,rce,fuzz,vulnerability \
+                  -tags sqli,xss,lfi,ssrf,rce,takeover,fuzz,vulnerability \
                   -severity critical,high,medium \
                   -exclude-severity low,info \
-                  -nmhe -rl 50 -c 15 -retries 2 -timeout 10 -no-color -silent \
-                  -ua -interactsh-server oast.pro \
+                  -nmhe -rl 25 -bs 5 -retries 2 -timeout 10 -no-color -silent \
+                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
+                  -interactsh-server oast.pro \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 6: SENSITIVE SECRETS SCAN (KEY FINDER)] ---
+                # --- [STEP 6: SENSITIVE SECRETS (SILENT PREDATOR)] ---
                 echo "[+] Step 6: Token Discovery... (Looking for Keys)"
                 
-                # FIX: Gunakan file high_priority_targets.txt juga di sini
-                timeout 25m nuclei -l "data/$program_name/high_priority_targets.txt" \
+                # Kita tetap pakai final_live_targets di sini karena token sering di file .js
+                timeout 25m nuclei -l "data/$program_name/final_live_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags token,keys,credential,exposure \
+                  -tags token,keys,credential,exposure,generic-exposure \
                   -severity critical,high,medium \
-                  -nmhe -rl 50 -c 15 -no-color -silent -ua \
+                  -nmhe -rl 25 -bs 5 -no-color -silent \
+                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
-
-                # --- [STEP 7: AI ANALYSIS] ---
-                echo "[+] Step 7: Grandmaster AI Triage processing..."
-                PROGRAM_NAME=$program_name python3 scripts/validate.py || true
 
                 # --- [STEP 6: AI ANALYSIS] ---
                 echo "[+] Step 6: Grandmaster AI Triage processing..."
