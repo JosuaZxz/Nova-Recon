@@ -36,11 +36,9 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils python3-pip
           pip3 install uro
-          
           install_go_tool() {
             [ -f ~/go/bin/$1 ] || go install -v $2@latest
           }
-
           install_go_tool subfinder github.com/projectdiscovery/subfinder/v2/cmd/subfinder
           install_go_tool httpx github.com/projectdiscovery/httpx/cmd/httpx
           install_go_tool nuclei github.com/projectdiscovery/nuclei/v3/cmd/nuclei
@@ -49,7 +47,6 @@ jobs:
           install_go_tool assetfinder github.com/tomnomnom/assetfinder
           install_go_tool waybackurls github.com/tomnomnom/waybackurls
           install_go_tool anew github.com/tomnomnom/anew
-          
           echo "$HOME/go/bin" >> $GITHUB_PATH
           /home/runner/go/bin/nuclei -ut -ud /home/runner/nuclei-templates
           
@@ -123,66 +120,69 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (FILTER SULTAN)] ---
-                echo "[*] Filtering for High Priority Targets..."
-                
+                # --- [STEP 4: ENDPOINT SANITIZER (PENYARING DAGING)] ---
+                echo "[*] Filtering trash for Sniper Mission..."
+                # Ambil yang ada parameter (?) atau file backend (.php, .jsp, dll). Sampah statis dibuang.
                 cat data/$program_name/filtered_endpoints.txt | \
-                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.conf|\.env|\.git" | \
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env" | \
                 grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" | \
                 sort -u > data/$program_name/high_priority_targets.txt
+                
+                # Jika kosong, gunakan list asli (Bukan file hantu)
+                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
 
-                # FIX: Fallback pakai active_urls_clean.tmp (BUKAN final_live_targets yang belum ada)
-                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/active_urls_clean.tmp data/$program_name/high_priority_targets.txt
-
-                # JURUS NYAWA: Sebelum nuclei jalan, cek mana yang beneran masih hidup
-                cat data/$program_name/high_priority_targets.txt | httpx -silent -mc 200,301,302,403,500 -o data/$program_name/final_to_scan.txt || true
-                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/final_to_scan.txt) Precise Targets."
-
-                # --- [STEP 5: CORE VULNERABILITY SCAN] ---
-                # Pakai file: final_to_scan.txt
-                timeout 50m nuclei -l "data/$program_name/final_to_scan.txt" \
-                  -t /home/runner/nuclei-templates -tags sqli,xss,ssrf,rce,lfi,takeover,fuzz \
-                  -severity critical,high,medium -exclude-severity low,info \
-                  -nmhe -rl 25 -bs 5 -no-color -silent \
+                # --- [STEP 4: NUCLEI CORE SCAN (FIXED & STEALTH)] ---
+                echo "[+] Step 4: Core Scanning... (High Impact)"
+                
+                # Gunakan -H Manual Header agar tidak ada error flag provided but not defined
+                timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
+                  -t /home/runner/nuclei-templates -severity critical,high,medium \
+                  -tags sqli,xss,ssrf,rce,lfi,takeover -exclude-severity low,info \
+                  -nmhe -rl 25 -bs 5 -retries 2 -timeout 7 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -interactsh-server oast.pro -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 6: SECRETS SCAN] ---
-                # Pakai file: active_urls_clean.tmp (Biar .js ikut ke-scan tokennya)
-                timeout 25m nuclei -l "data/$program_name/active_urls_clean.tmp" \
+                # --- [STEP 5: SENSITIVE TOKENS SCAN (FIXED & STEALTH)] ---
+                echo "[+] Step 5: Token Discovery..."
+                timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t /home/runner/nuclei-templates -tags token,keys,credential,exposure \
                   -severity critical,high,medium -exclude-severity low,info \
                   -nmhe -rl 25 -bs 5 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
-                  -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
                 # --- [STEP 6: AI ANALYSIS] ---
                 echo "[+] Step 6: Grandmaster AI Triage processing..."
-                # Hapus '> /dev/null' agar kita bisa lihat jika ada error di validate.py
-                PROGRAM_NAME=$program_name python3 scripts/validate.py || true
-
-                # --- [STEP 7: SULTAN NOTIFIKASI] ---
+                # Pastikan PROGRAM_NAME dikirim ke script AI
+                PROGRAM_NAME=$program_name python3 scripts/validate.py > /dev/null 2>&1 || true
+          
+                # STEP 7: SULTAN NOTIFIKASI (SMART CAPTION & ALL SEVERITIES)
+                # 1. Kirim Bug HIGH / CRITICAL ke Grup Critical
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
+                    # Ambil baris pertama (Judul Bug) sebagai caption
                     TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-100)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
-                      -F chat_id="$TG_CRIT" -F document=@"$f" \
+                      -F chat_id="$TG_CRIT" \
+                      -F document=@"$f" \
                       -F caption="🚨 CRITICAL FOUND: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
+                # 2. Kirim Bug MEDIUM / LOW ke Grup General
                 if [ -d "data/$program_name/alerts/low" ]; then
                   for f in data/$program_name/alerts/low/*.md; do
                     [ -e "$f" ] || continue
+                    # Ambil baris pertama (Judul Bug) sebagai caption
                     TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-100)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
-                      -F chat_id="$TG_GEN" -F document=@"$f" \
-                      -F caption="⚠️ MEDIUM/LOW FOUND: $TITLE_CAPTION" > /dev/null 2>&1
+                      -F chat_id="$TG_GEN" \
+                      -F document=@"$f" \
+                      -F caption="⚠️ MEDIUM FOUND: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
