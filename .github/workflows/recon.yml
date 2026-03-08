@@ -120,13 +120,18 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (PENYARING DAGING)] ---
-                echo "[*] Filtering trash for Sniper Mission..."
-                # Ambil yang ada parameter (?) atau file backend (.php, .jsp, dll). Sampah statis dibuang.
-                cat data/$program_name/filtered_endpoints.txt | \
-                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env" | \
-                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" | \
-                sort -u > data/$program_name/high_priority_targets.txt
+                # --- [STEP 4: ENDPOINT SANITIZER (GOLDEN UPDATE)] ---
+                echo "[*] Filtering Heads & Meat for Sniper Mission..."
+                
+                # 1. Ambil "Daging" (URL berparameter/backend)
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env" data/$program_name/filtered_endpoints.txt | \
+                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
+                
+                # 2. Tambahkan "Kepala" (Root Subdomain aktif) agar bisa scan Subdomain Takeover/Config
+                cat data/$program_name/active_urls_clean.tmp >> data/$program_name/high_priority_targets.txt
+                
+                # 3. Final Sort (Pastikan tidak ada duplikat)
+                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
                 
                 # Jika kosong, gunakan list asli (Bukan file hantu)
                 [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
