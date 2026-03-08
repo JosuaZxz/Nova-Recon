@@ -138,7 +138,7 @@ jobs:
                 timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags sqli,xss,ssrf,rce,lfi,takeover -exclude-tags info -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -retries 3 -timeout 10 -no-color -silent \
+                  -nmhe -rl 20 -bs 5 -retries 2 -timeout 7 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -interactsh-server oast.pro -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
@@ -148,7 +148,7 @@ jobs:
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t /home/runner/nuclei-templates -tags token,keys,credential,exposure -exclude-tags info \
                   -severity critical,high,medium -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -no-color -silent \
+                  -nmhe -rl 20 -bs 5 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/token_results.json" || true
                 
