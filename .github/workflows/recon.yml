@@ -32,24 +32,25 @@ jobs:
         with:
           go-version: '>=1.20'
 
-      - name: Install Tools
+      - name: Install Tools (Failsafe Mode)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils python3-pip
-          sudo ln -sf /usr/bin/google-chrome-stable /usr/bin/google-chrome
+          sudo apt-get update && sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils python3-pip
           pip3 install uro
-          go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-          go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-          go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
-          go install -v github.com/projectdiscovery/katana/cmd/katana@latest
-          go install -v github.com/hakluke/hakrawler@latest
-          go install -v github.com/tomnomnom/assetfinder@latest
-          go install -v github.com/tomnomnom/waybackurls@latest
-          go install -v github.com/lc/gau/v2/cmd/gau@latest
-          go install -v github.com/tomnomnom/anew@latest
+          
+          install_go_tool() {
+            [ -f ~/go/bin/$1 ] || go install -v $2@latest
+          }
+
+          install_go_tool subfinder github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+          install_go_tool httpx github.com/projectdiscovery/httpx/cmd/httpx
+          install_go_tool nuclei github.com/projectdiscovery/nuclei/v3/cmd/nuclei
+          install_go_tool katana github.com/projectdiscovery/katana/cmd/katana
+          install_go_tool hakrawler github.com/hakluke/hakrawler
+          install_go_tool assetfinder github.com/tomnomnom/assetfinder
+          install_go_tool waybackurls github.com/tomnomnom/waybackurls
+          install_go_tool anew github.com/tomnomnom/anew
           
           echo "$HOME/go/bin" >> $GITHUB_PATH
-          # JURUS KUNCI: Download peluru ke folder yang pasti ada
           /home/runner/go/bin/nuclei -ut -ud /home/runner/nuclei-templates
           
       - name: Run Predator Recon
@@ -122,48 +123,37 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (SNIPER ELIT)] ---
-                echo "[*] Filtering for High Value Targets (Wild Jungle Ready)..."
+                # --- [STEP 4: ENDPOINT SANITIZER (FILTER SULTAN)] ---
+                echo "[*] Filtering for High Priority Targets..."
                 
-                # JURUS SULTAN: Kita HANYA ambil URL yang punya parameter (?)
-                # Di hutan liar, 99% Bounty SQLi/XSS ada di sini.
                 cat data/$program_name/filtered_endpoints.txt | \
-                grep "\?" | grep -ivE "\.jpg|\.png|\.css|\.js|\.woff|\.svg|\.pdf" | \
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.conf|\.env|\.git" | \
+                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" | \
                 sort -u > data/$program_name/high_priority_targets.txt
 
-                # Jika tidak ada parameter, baru kita ambil URL dinamis (.php, .jsp, dll)
-                if [ ! -s "data/$program_name/high_priority_targets.txt" ]; then
-                  cat data/$program_name/final_live_targets.txt | grep -iE "\.php|\.jsp|\.aspx|\.asp|\.json" > data/$program_name/high_priority_targets.txt
-                fi
+                # FIX: Fallback pakai active_urls_clean.tmp (BUKAN final_live_targets yang belum ada)
+                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/active_urls_clean.tmp data/$program_name/high_priority_targets.txt
 
-                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/high_priority_targets.txt) Daging Endpoints."
+                # JURUS NYAWA: Sebelum nuclei jalan, cek mana yang beneran masih hidup
+                cat data/$program_name/high_priority_targets.txt | httpx -silent -mc 200,301,302,403,500 -o data/$program_name/final_to_scan.txt || true
+                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/final_to_scan.txt) Precise Targets."
 
-                # --- [STEP 5: CORE VULNERABILITY (PRECISION STRIKE)] ---
-                echo "[+] Step 5: Core Scanning... (Stealth Mode)"
-                
-                # LOGIKA HUTAN LIAR:
-                # 1. -rl 30 : Kecepatan 30 req/sec (Sangat aman, lolos firewall, tapi cukup cepat).
-                # 2. -tags  : Hanya peluru paling mahal (SQLi, XSS, SSRF, RCE, LFI).
-                # 3. -bs 2  : Mengirim peluru secara perlahan (low intensity) agar tidak memicu alarm.
-                timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
-                  -t /home/runner/nuclei-templates \
-                  -tags sqli,xss,ssrf,rce,lfi,takeover \
-                  -severity critical,high,medium \
-                  -nmhe -rl 30 -bs 2 -c 10 -retries 2 -timeout 7 -no-color -silent \
+                # --- [STEP 5: CORE VULNERABILITY SCAN] ---
+                # Pakai file: final_to_scan.txt
+                timeout 50m nuclei -l "data/$program_name/final_to_scan.txt" \
+                  -t /home/runner/nuclei-templates -tags sqli,xss,ssrf,rce,lfi,takeover,fuzz \
+                  -severity critical,high,medium -exclude-severity low,info \
+                  -nmhe -rl 25 -bs 5 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
-                  -interactsh-server oast.pro \
-                  -stats -stats-interval 60 \
+                  -interactsh-server oast.pro -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 6: SECRETS SCAN (SILENT SEARCH)] ---
-                echo "[+] Step 6: Token Discovery..."
-                
-                # Token discovery biasanya lebih ringan, kita bisa scan lebih banyak endpoint.
-                timeout 25m nuclei -l "data/$program_name/final_live_targets.txt" \
-                  -t /home/runner/nuclei-templates \
-                  -tags token,keys,credential,exposure \
-                  -severity critical,high,medium \
-                  -nmhe -rl 30 -bs 2 -no-color -silent \
+                # --- [STEP 6: SECRETS SCAN] ---
+                # Pakai file: active_urls_clean.tmp (Biar .js ikut ke-scan tokennya)
+                timeout 25m nuclei -l "data/$program_name/active_urls_clean.tmp" \
+                  -t /home/runner/nuclei-templates -tags token,keys,credential,exposure \
+                  -severity critical,high,medium -exclude-severity low,info \
+                  -nmhe -rl 25 -bs 5 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/token_results.json" || true
