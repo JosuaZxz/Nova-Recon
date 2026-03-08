@@ -122,46 +122,48 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [STEP 4: ENDPOINT SANITIZER (FILTER SULTAN)] ---
-                echo "[*] Filtering for High Priority Targets (Real World Mode)..."
+                # --- [STEP 4: ENDPOINT SANITIZER (SNIPER ELIT)] ---
+                echo "[*] Filtering for High Value Targets (Wild Jungle Ready)..."
                 
-                # JEMBATAN: Pastikan file target hidup tercipta dulu
-                cat data/$program_name/filtered_endpoints.txt | httpx -silent -mc 200,301,302,403,405,500 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" -o data/$program_name/final_live_targets.txt > /dev/null 2>&1 || true
-
-                # SANITASI: Hanya ambil URL yang punya potensi lubang (PHP, JSP, Parameter, dll)
-                cat data/$program_name/final_live_targets.txt | \
-                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.conf|\.env|\.yaml|\.git" | \
-                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico|\.ttf" | \
+                # JURUS SULTAN: Kita HANYA ambil URL yang punya parameter (?)
+                # Di hutan liar, 99% Bounty SQLi/XSS ada di sini.
+                cat data/$program_name/filtered_endpoints.txt | \
+                grep "\?" | grep -ivE "\.jpg|\.png|\.css|\.js|\.woff|\.svg|\.pdf" | \
                 sort -u > data/$program_name/high_priority_targets.txt
 
-                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/high_priority_targets.txt) High Value Targets found."
+                # Jika tidak ada parameter, baru kita ambil URL dinamis (.php, .jsp, dll)
+                if [ ! -s "data/$program_name/high_priority_targets.txt" ]; then
+                  cat data/$program_name/final_live_targets.txt | grep -iE "\.php|\.jsp|\.aspx|\.asp|\.json" > data/$program_name/high_priority_targets.txt
+                fi
 
-                # --- [STEP 5: CORE VULNERABILITY (STEALTH & PERSISTENT)] ---
-                echo "[+] Step 5: Core Scanning... (Sniper Pro Mode)"
+                echo "🎯 BATTLE MAP READY: $(wc -l < data/$program_name/high_priority_targets.txt) Daging Endpoints."
+
+                # --- [STEP 5: CORE VULNERABILITY (PRECISION STRIKE)] ---
+                echo "[+] Step 5: Core Scanning... (Stealth Mode)"
                 
                 # LOGIKA HUTAN LIAR:
-                # -rl 25 : Kecepatan moderat (25 req/sec). Cukup pelan untuk lolos WAF, cukup cepat untuk selesai.
-                # -bs 5  : Tidak membombardir satu server sekaligus.
+                # 1. -rl 30 : Kecepatan 30 req/sec (Sangat aman, lolos firewall, tapi cukup cepat).
+                # 2. -tags  : Hanya peluru paling mahal (SQLi, XSS, SSRF, RCE, LFI).
+                # 3. -bs 2  : Mengirim peluru secara perlahan (low intensity) agar tidak memicu alarm.
                 timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags sqli,xss,lfi,ssrf,rce,takeover,fuzz,vulnerability \
+                  -tags sqli,xss,ssrf,rce,lfi,takeover \
                   -severity critical,high,medium \
-                  -exclude-severity low,info \
-                  -nmhe -rl 25 -bs 5 -retries 2 -timeout 10 -no-color -silent \
+                  -nmhe -rl 30 -bs 2 -c 10 -retries 2 -timeout 7 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -interactsh-server oast.pro \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/nuclei_results.json" || true
 
-                # --- [STEP 6: SENSITIVE SECRETS (SILENT PREDATOR)] ---
-                echo "[+] Step 6: Token Discovery... (Looking for Keys)"
+                # --- [STEP 6: SECRETS SCAN (SILENT SEARCH)] ---
+                echo "[+] Step 6: Token Discovery..."
                 
-                # Kita tetap pakai final_live_targets di sini karena token sering di file .js
+                # Token discovery biasanya lebih ringan, kita bisa scan lebih banyak endpoint.
                 timeout 25m nuclei -l "data/$program_name/final_live_targets.txt" \
                   -t /home/runner/nuclei-templates \
-                  -tags token,keys,credential,exposure,generic-exposure \
+                  -tags token,keys,credential,exposure \
                   -severity critical,high,medium \
-                  -nmhe -rl 25 -bs 5 -no-color -silent \
+                  -nmhe -rl 30 -bs 2 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -stats -stats-interval 60 \
                   -jsonl -o "data/$program_name/token_results.json" || true
