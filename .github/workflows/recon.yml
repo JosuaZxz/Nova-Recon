@@ -73,22 +73,28 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} preparing hyper-speed tools..."
           sleep $SLEEP_TIME
 
-          # 1. LOGIKA ROTASI OTOMATIS (1 Job = 1 Target)
-          TOTAL_TARGETS=$(wc -l < targets/test_target.txt)
+          # 1. LOGIKA MASTER SNIPER (Otomatis Ambil File dari Folder Targets)
+          # List semua file .txt di folder targets, abaikan test_target.txt
+          ls targets/*.txt | grep -v "test_target.txt" > targets_list.tmp
+          TOTAL_TARGETS=$(wc -l < targets_list.tmp)
+          
           RUN_OFFSET=$(( (${{ github.run_number }} - 1) * 5 ))
           TARGET_INDEX=$(( (RUN_OFFSET + ${{ matrix.sniper_id }} - 1) % TOTAL_TARGETS + 1 ))
 
-          # Ambil nama domain dari baris yang dihitung
-          program_name=$(sed -n "${TARGET_INDEX}p" targets/test_target.txt | tr -d '\r' | tr -d ' ')
+          # Ambil path file target (misal: targets/adobe.txt)
+          target_path=$(sed -n "${TARGET_INDEX}p" targets_list.tmp)
+          
+          # Ambil nama perusahaannya saja untuk nama folder (misal: adobe)
+          program_name=$(basename "$target_path" .txt)
 
-          # 2. PERSIAPAN TEMPUR (Wajib Ada)
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Target #$TARGET_INDEX)"
+          # 2. PERSIAPAN TEMPUR
+          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Target #$TARGET_INDEX dari $TOTAL_TARGETS)"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # STEP 1: DISCOVERY
-          subfinder -d "$program_name" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
-          echo "$program_name" | assetfinder --subs-only >> "data/$program_name/s1.txt" 2>/dev/null || true
+          # STEP 1: DISCOVERY (Membaca list dari file target asli)
+          subfinder -dL "$target_path" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
+          assetfinder --subs-only < "$target_path" >> "data/$program_name/s1.txt" 2>/dev/null || true
           cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | grep -v "localhost" | sort -u > "data/$program_name/subdomains.txt"
 
           if [ -s "data/$program_name/subdomains.txt" ]; then
