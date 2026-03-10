@@ -108,12 +108,12 @@ jobs:
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
                 # Mining (Dipersingkat waktunya agar tidak kena Ban)
-                timeout 5m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" || true
-                timeout 5m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" || true
+                timeout 5m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
+                timeout 5m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 | true
                 
                 # Katana (Sedikit lebih santai - Depth 2)
                 echo "    (Crawling with Katana...)"
-                timeout 10m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt || true
+                timeout 10m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt > /dev/null 2>&1 || true
                 
                 # GABUNGKAN
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | grep -v "localhost" | sort -u > data/$program_name/all_endpoints.txt
@@ -125,7 +125,7 @@ jobs:
                 
                 # 2. Pangkas parameter duplikat dengan Uro
                 # Tambahkan '|| true' dan fallback cp jika uro gagal/not found
-                cat data/$program_name/pre_uro.txt | uro > data/$program_name/filtered_endpoints.txt || cp data/$program_name/pre_uro.txt data/$program_name/filtered_endpoints.txt
+                cat data/$program_name/pre_uro.txt | uro > data/$program_name/filtered_endpoints.txt 2>/dev/null || cp data/$program_name/pre_uro.txt data/$program_name/filtered_endpoints.txt
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
@@ -155,7 +155,7 @@ jobs:
                   -nmhe -rl 30 -bs 10 -retries 2 -timeout 7 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -interactsh-server oast.pro -stats -stats-interval 60 \
-                  -jsonl -o "data/$program_name/nuclei_results.json" || true
+                  -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # --- [STEP 5: SENSITIVE TOKENS SCAN (FIXED & STEALTH)] ---
                 echo "[+] Step 5: Token Discovery..."
@@ -164,7 +164,7 @@ jobs:
                   -severity critical,high,medium -exclude-severity low,info \
                   -nmhe -rl 30 -bs 10 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
-                  -jsonl -o "data/$program_name/token_results.json" || true
+                  -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
                 
                 [ -f "data/$program_name/token_results.json" ] && cat "data/$program_name/token_results.json" >> "data/$program_name/nuclei_results.json"
 
@@ -205,11 +205,17 @@ jobs:
             fi
           fi
 
-      - name: Sync Database to Repo
+      - name: Sync Database (Immortal Mode)
         run: |
           git config --local user.email "bot@sniper-recon.ai"
           git config --local user.name "Recon-Sniper-Bot"
-          git add .seen_urls
-          git commit -m "database: update seen_urls [skip ci]" || exit 0
-          git pull --rebase origin main
-          git push
+          
+          # Loop 5x untuk mencoba push jika tabrakan (Race Condition)
+          for i in {1..5}; do
+            git pull origin main --rebase
+            if [ -f .seen_urls ]; then
+              sort -u .seen_urls -o .seen_urls
+            fi
+            git add .seen_urls
+            git commit -m "database: sync [skip ci]" && git push origin main && break || sleep 15
+          done
