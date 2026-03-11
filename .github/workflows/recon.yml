@@ -151,7 +151,7 @@ jobs:
                 # Gunakan -H Manual Header agar tidak ada error flag provided but not defined
                 timeout 50m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -as -tags sqli,xss,ssrf,rce,lfi,takeover,cve,cve2024,cve2025,exposure,misconfig -exclude-tags info -exclude-severity low,info \
+                  -as -tags sqli,xss,ssrf,rce,lfi,takeover,cve2024,cve2025,cve2026,exposure,misconfig -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 30 -bs 10 -retries 2 -timeout 7 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
                   -interactsh-server oast.pro -stats -stats-interval 60 \
@@ -160,7 +160,7 @@ jobs:
                 # --- [STEP 5: SENSITIVE TOKENS SCAN (FIXED & STEALTH)] ---
                 echo "[+] Step 5: Token Discovery..."
                 timeout 20m nuclei -l "data/$program_name/filtered_endpoints.txt" \
-                  -t /home/runner/nuclei-templates -tags token,keys,credential,exposure,cve,cve2024,cve2025,misconfig -exclude-tags info \
+                  -t /home/runner/nuclei-templates -tags token,keys,credential,exposure,cve2024,cve2025,cve2026,misconfig -exclude-tags info \
                   -as -severity critical,high,medium -exclude-severity low,info \
                   -nmhe -rl 30 -bs 10 -no-color -silent \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" \
