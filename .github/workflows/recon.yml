@@ -132,8 +132,8 @@ jobs:
                 # --- [STEP 4: ENDPOINT SANITIZER (GOLDEN UPDATE)] ---
                 echo "[*] Filtering Heads & Meat for Sniper Mission..."
                 
-                # 1. Ambil "Daging" (URL berparameter/backend)
-                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env" data/$program_name/filtered_endpoints.txt | \
+                # Saringan baru: Menangkap Parameter (?), File Backend (.php), dan API Modern (/api/, /v1/)
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\/api\/|\/v[0-9]\/" data/$program_name/filtered_endpoints.txt | \
                 grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
                 
                 # 2. Tambahkan "Kepala" (Root Subdomain aktif) agar bisa scan Subdomain Takeover/Config
