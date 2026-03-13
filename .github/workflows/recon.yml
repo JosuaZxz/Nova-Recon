@@ -2,7 +2,7 @@ name: Automation Recon (24/7)
 
 on:
   schedule:
-  - cron: '13,33,53 * * * *'
+  - cron: '0 * * * *'
   workflow_dispatch: # Ini yang bikin tombol "Run Workflow" tetap ada
 
 jobs:
@@ -148,26 +148,23 @@ jobs:
                 # --- [STEP 4: NUCLEI CORE SCAN (FIXED & STEALTH)] ---
                 echo "[+] Step 4: Core Scanning... (High Impact)"
                 
-                # 1. Aktifkan -headless untuk bypass WAF & tantangan JS
-                # 2. Tambahkan tag fuzzing,dast,workflow untuk bug non-CVE (Daging Segar)
-                # 3. Turunkan RPS ke 10 karena Headless sangat berat di RAM
+                # Gunakan -as bersama -headless agar RAM tidak meledak (Smart Browser Mode)
                 timeout 150m nuclei -l "data/$program_name/high_priority_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags sqli,xss,ssrf,rce,lfi,takeover,cve2024,cve2025,cve2026,exposure,misconfig,fuzzing,dast,workflow \
+                  -as -tags sqli,xss,ssrf,rce,lfi,takeover,cve2024,cve2025,cve2026,exposure,misconfig,fuzzing,dast,workflow \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 10 -bs 2 -retries 3 -timeout 20 -no-color -silent -headless \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" \
-                  -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" \
                   -jsonl -o "data/$program_name/nuclei_results.json" > /dev/null 2>&1 || true
 
                 # --- [STEP 5: SENSITIVE TOKENS SCAN (FIXED & STEALTH)] ---
                 echo "[+] Step 5: Token Discovery..."
-                # Matikan -as, aktifkan -headless. Sniper memeriksa setiap sudut file.
-                timeout 50m nuclei -l "data/$program_name/filtered_endpoints.txt" \
+                # Token scan tidak butuh browser (Tanpa -headless) agar RAM lega
+                timeout 30m nuclei -l "data/$program_name/filtered_endpoints.txt" \
                   -t /home/runner/nuclei-templates -tags token,keys,credential,exposure,cve2024,cve2025,cve2026,misconfig \
                   -severity critical,high,medium -exclude-severity low,info -exclude-tags info \
-                  -nmhe -rl 10 -bs 2 -no-color -silent -headless \
+                  -nmhe -rl 30 -bs 10 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/token_results.json" > /dev/null 2>&1 || true
@@ -210,6 +207,9 @@ jobs:
                 curl -s -F chat_id="$TG_DATA" -F document=@"${program_name}_FULL_DATA.zip" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
             fi
           fi
+
+          # Hapus folder data setelah dikirim agar penyimpanan GitHub tetap lega
+                rm -rf "data/$program_name"
 
       - name: Sync Database (Immortal Mode)
         run: |
