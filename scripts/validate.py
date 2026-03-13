@@ -159,23 +159,31 @@ Output ONLY a JSON ARRAY: ["title", "severity", "url", "full_markdown"]."""
             os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
 
             for idx, rep in enumerate(reports):
-                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "See report", rep['severity'], rep.get('url', ''))
-                if d_id in [None, "ALREADY_REPORTED"]: continue
-                
+                # 1. Cek apakah sudah pernah dilaporkan (Memory Check)
+                url_hash = hashlib.md5(rep.get('url', '').encode()).hexdigest()
+                if os.path.exists(SEEN_DB):
+                    with open(SEEN_DB, "r") as f:
+                        if url_hash in f.read(): continue
+
+                # 2. SELALU Simpan Laporan Markdown (Agar Telegram tetap kirim)
                 sev = rep.get('severity', 'Medium').upper()
                 folder = "high" if any(x in sev for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
+                os.makedirs(f"data/{PROGRAM_NAME}/alerts/{folder}", exist_ok=True)
                 
                 safe_title = re.sub(r'\W+', '_', rep['title'])[:50]
                 report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{safe_title}_{idx}.md"
                 
+                # Coba buat draft di H1 tapi simpan ID-nya (Gagal pun tidak masalah)
+                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "See report", rep['severity'], rep.get('url', ''))
+                final_d_id = d_id if d_id else "MANUAL_SUBMIT_REQUIRED"
+
                 with open(report_path, 'w') as f:
                     f.write(f"# {rep['title']} in {PROGRAM_NAME}\n\n")
-                    f.write(f"🆔 **Draft ID:** `{d_id}`\n\n")
-                    # Clean dots
+                    f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
                     f.write(rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```"))
                 
-                print(f"[+] Success: {rep['title']}")
-
+                print(f"[+] Success Saved: {rep['title']}")
+                
     except Exception as e: print(f"Error: {e}")
 
 if __name__ == "__main__":
