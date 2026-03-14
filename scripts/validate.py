@@ -67,20 +67,29 @@ def validate_findings():
                 all_findings.append(d)
             except: continue
 
+    # --- [ PRIORITASKAN CRITICAL & HIGH ] ---
     sev_rank = {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0}
     all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
 
     findings_list = []
+    # Buang sampah headers tapi jangan buang daging
     trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers", "dns-sec", "robots-txt"]
+    
     for d in all_findings:
         sev = d.get("info", {}).get("severity", "info").lower()
         tid = d.get("template-id", "").lower()
         if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
-            findings_list.append(get_verification_context(d))
-        if len(findings_list) >= 20: break
+            # Batasi bukti agar AI Groq tidak meledak (Limit 1000 char saja)
+            context = get_verification_context(d)
+            context["request_evidence"] = context["request_evidence"][:1000]
+            context["response_evidence"] = context["response_evidence"][:1000]
+            findings_list.append(context)
+        
+        # Ambil maksimal 10 temuan terbaik saja agar tidak kena Rate Limit AI
+        if len(findings_list) >= 10: break
 
     if not findings_list: return
-
+        
     # --- TEMPLATE ---
     luxury_template = """
 .# {title}
