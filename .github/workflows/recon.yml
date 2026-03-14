@@ -211,23 +211,36 @@ jobs:
           # Hapus folder data setelah dikirim agar penyimpanan GitHub tetap lega
                 rm -rf "data/$program_name"
 
-      - name: Sync Database (Safe & Cumulative)
+      - name: Sync Database (Safe & Immortal)
         run: |
           git config --local user.email "bot@sniper-recon.ai"
           git config --local user.name "Recon-Sniper-Bot"
           
+          # 1. Ambil semua perubahan lokal (hasil temuan bug)
+          git add .seen_urls
+          # 2. Commit dulu secara lokal (biar folder "bersih" sebelum pull)
+          git commit -m "database: update logs [skip ci]" || echo "No new bugs to commit"
+
+          # 3. Loop Pull dan Push agar tidak tabrakan dengan mesin lain
           for i in {1..10}; do
+            # Ambil data dari mesin lain yang sudah push duluan
             git pull origin main --rebase
-            # Gabungkan data lama dengan data baru, buang duplikat
+            
+            # Gabungkan dan rapikan database agar tidak duplikat
             if [ -f .seen_urls ]; then
               sort -u .seen_urls -o .seen_urls
             fi
-            # Hanya push jika ada perubahan dan file tidak kosong
-            if [[ -s .seen_urls ]]; then
-              git add .seen_urls
-              git commit -m "database: update seen_urls [skip ci]" && git push origin main && break || sleep 15
-            else
-              echo "Database empty or no changes, skipping push."
+            
+            # Update commit dengan data yang sudah digabung
+            git add .seen_urls
+            git commit --amend --no-edit || echo "Nothing to amend"
+            
+            # Push ke repository utama
+            if git push origin main; then
+              echo "✅ Database Synced Successfully!"
               break
+            else
+              echo "🔄 Collision detected, retrying in 15s..."
+              sleep 15
             fi
           done
