@@ -211,17 +211,23 @@ jobs:
           # Hapus folder data setelah dikirim agar penyimpanan GitHub tetap lega
                 rm -rf "data/$program_name"
 
-      - name: Sync Database (Immortal Mode)
+      - name: Sync Database (Safe & Cumulative)
         run: |
           git config --local user.email "bot@sniper-recon.ai"
           git config --local user.name "Recon-Sniper-Bot"
           
-          # Loop 5x untuk mencoba push jika tabrakan (Race Condition)
-          for i in {1..5}; do
+          for i in {1..10}; do
             git pull origin main --rebase
+            # Gabungkan data lama dengan data baru, buang duplikat
             if [ -f .seen_urls ]; then
               sort -u .seen_urls -o .seen_urls
             fi
-            git add .seen_urls
-            git commit -m "database: sync [skip ci]" && git push origin main && break || sleep 15
+            # Hanya push jika ada perubahan dan file tidak kosong
+            if [[ -s .seen_urls ]]; then
+              git add .seen_urls
+              git commit -m "database: update seen_urls [skip ci]" && git push origin main && break || sleep 15
+            else
+              echo "Database empty or no changes, skipping push."
+              break
+            fi
           done
