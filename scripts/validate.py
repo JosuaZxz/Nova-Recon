@@ -16,14 +16,20 @@ SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
     info = data.get("info", {})
+    req = data.get("request", "")
+    res = data.get("response", "")
+    
+    # Ambil 800 char awal dan 400 char akhir saja agar AI tidak overload
+    clean_req = (req[:800] + "\n[...]\n" + req[-400:]) if len(req) > 1200 else req
+    clean_res = (res[:800] + "\n[...]\n" + res[-400:]) if len(res) > 1200 else res
+
     return {
         "template_id": data.get("template-id", "Unknown"),
         "template_name": info.get("name", "Unknown Bug Type"),
         "severity": info.get("severity", "unknown"),
         "matched_url": data.get("matched-at", data.get("host", "")),
-        "ip": data.get("ip", "Unknown IP"),
-        "request_evidence": data.get("request", "")[:2000],
-        "response_evidence": data.get("response", "")[:2000],
+        "request_evidence": clean_req,
+        "response_evidence": clean_res,
         "time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     }
 
@@ -158,40 +164,59 @@ Output ONLY a JSON ARRAY: ["title", "severity", "url", "full_markdown"]."""
         res = requests.post(url, headers=headers, json=payload, timeout=120)
         if res.status_code != 200: return
         ai_out = res.json()['choices'][0]['message']['content'].strip()
+        
+        # --- [ INTEGRATED AI PARSING ] ---
+        # Gunakan regex kuat untuk menangkap array JSON
+        json_match = re.search(r'\[\s*\{.*\}\s*\]', ai_out, re.DOTALL)
+        if not json_match:
+            # Fallback jika format AI sedikit berantakan
+            json_match = re.search(r'\[.*\]', ai_out, re.DOTALL)
 
-        match = re.search(r'\[.*\]|\{.*\}', ai_out, re.DOTALL)
-        if match:
-            reports = json.loads(match.group(0), strict=False)
-            if isinstance(reports, dict): reports = [reports]
+        if not json_match:
+            print(f"[-] Critical Error: AI output is not parseable. Content: {ai_out[:200]}")
+            return # Keluar jika benar-benar tidak bisa diparsing
+
+        # Parsing JSON dengan mode strict=False agar lebih toleran
+        reports = json.loads(json_match.group(0), strict=False)
+        if isinstance(reports, dict): reports = [reports] # Pastikan bentuknya list
             
-            os.makedirs(f"data/{PROGRAM_NAME}/alerts/high", exist_ok=True)
-            os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
+        # 1. Setup Folder Laporan Utama
+        os.makedirs(f"data/{PROGRAM_NAME}/alerts/high", exist_ok=True)
+        os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
 
-            for idx, rep in enumerate(reports):
-                # 1. Cek apakah sudah pernah dilaporkan (Memory Check)
-                url_hash = hashlib.md5(rep.get('url', '').encode()).hexdigest()
-                if os.path.exists(SEEN_DB):
-                    with open(SEEN_DB, "r") as f:
-                        if url_hash in f.read(): continue
+        # 2. Proses Setiap Temuan (Single Loop)
+        for idx, rep in enumerate(reports):
+            # Ambil URL dan cek apakah sudah pernah dilaporkan (Memory Check)
+            target_url = rep.get('url', '')
+            if not target_url: continue
+            
+            url_hash = hashlib.md5(target_url.encode()).hexdigest()
+            if os.path.exists(SEEN_DB):
+                with open(SEEN_DB, "r") as f:
+                    if url_hash in f.read():
+                        print(f"[-] Skip (Already Reported): {rep.get('title')}")
+                        continue
 
-                # 2. SELALU Simpan Laporan Markdown (Agar Telegram tetap kirim)
-                sev = rep.get('severity', 'Medium').upper()
-                folder = "high" if any(x in sev for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
-                os.makedirs(f"data/{PROGRAM_NAME}/alerts/{folder}", exist_ok=True)
-                
-                safe_title = re.sub(r'\W+', '_', rep['title'])[:50]
-                report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{safe_title}_{idx}.md"
-                
-                # Coba buat draft di H1 tapi simpan ID-nya (Gagal pun tidak masalah)
-                d_id = create_h1_draft(rep['title'], rep['full_markdown'], "See report", rep['severity'], rep.get('url', ''))
-                final_d_id = d_id if d_id else "MANUAL_SUBMIT_REQUIRED"
+            # 3. Tentukan Severity Folder
+            sev = rep.get('severity', 'Medium').upper()
+            folder = "high" if any(x in sev for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
+            
+            # 4. Buat Draft di HackerOne
+            d_id = create_h1_draft(rep['title'], rep['full_markdown'], "Exploitability confirmed via automated scan.", rep['severity'], target_url)
+            final_d_id = d_id if d_id else "MANUAL_SUBMIT_REQUIRED"
 
-                with open(report_path, 'w') as f:
-                    f.write(f"# {rep['title']} in {PROGRAM_NAME}\n\n")
-                    f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-                    f.write(rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```"))
-                
-                print(f"[+] Success Saved: {rep['title']}")
+            # 5. Simpan Laporan Markdown untuk Telegram
+            safe_title = re.sub(r'\W+', '_', rep['title'])[:50]
+            report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{safe_title}_{idx}.md"
+            
+            with open(report_path, 'w') as f:
+                f.write(f"# {rep['title']} in {PROGRAM_NAME}\n\n")
+                f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
+                # Rapikan template markdown dari AI
+                clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
+                f.write(clean_md)
+            
+            print(f"[+] Success Saved: {rep['title']} (Severity: {folder})")
                 
     except Exception as e: print(f"Error: {e}")
 
