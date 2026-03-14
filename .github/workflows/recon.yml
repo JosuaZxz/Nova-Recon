@@ -173,9 +173,9 @@ jobs:
 
                 # --- [STEP 6: AI ANALYSIS] ---
                 echo "[+] Step 6: Grandmaster AI Triage processing..."
-                # Pastikan PROGRAM_NAME dikirim ke script AI
-                PROGRAM_NAME=$program_name python3 scripts/validate.py > /dev/null 2>&1 || true
-          
+                # Hapus > /dev/null agar kita bisa lihat log error AI jika ada masalah
+                PROGRAM_NAME=$program_name python3 scripts/validate.py || true
+                
                 # STEP 7: SULTAN NOTIFIKASI (SMART CAPTION & ALL SEVERITIES)
                 # 1. Kirim Bug HIGH / CRITICAL ke Grup Critical
                 if [ -d "data/$program_name/alerts/high" ]; then
