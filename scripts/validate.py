@@ -64,9 +64,9 @@ def validate_findings():
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
-    # --- AMBIL IP RUNNER UNTUK LAPORAN ---
-    try: runner_ip = requests.get('https://ifconfig.me', timeout=5).text.strip()
-    except: runner_ip = "Unknown IP"
+    # --- GANTI BAGIAN INI (IP FETCHING) ---
+    runner_ip = subprocess.getoutput("curl -s ifconfig.me")
+    if not runner_ip or len(runner_ip) > 20: runner_ip = "GitHub_Runner_Scanner"
 
     # --- LOGIC GROUPING PER TEMPLATE ID (ANTI-POINT FARMING) ---
     grouped_findings = {}
@@ -129,13 +129,20 @@ def validate_findings():
         # Gabungkan semua URL yang terkena bug yang sama
         urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
         
+        # --- PROMPT DIKUNCI (ANTI-HALLUCINATION & ANTI-NONE) ---
         prompt = f"""Role: Elite Security Researcher.
 Program: {PROGRAM_NAME}
 Vulnerability ID: {tid}
 Findings Data: {json.dumps(findings[:5])}
 
-Task: Write ONE professional bug report for ALL affected assets.
-MANDATORY: Use this EXACT structure (include the dots at start of lines):
+CRITICAL RULES:
+1. USE ONLY THE PROVIDED DATA. DO NOT invent CVE IDs or change bug names.
+2. If Template ID is 'CVE-2024-38526', the report MUST be about 'Polyfill Supply Chain Attack'.
+3. If 'request_evidence' is empty, DESCRIBE the detection based on 'template_name'.
+4. DO NOT write 'None' or 'Not Provided'. 
+5. MANDATORY: Put the exact string '{{ip}}' (with double curly braces) in the Scanner IP field so my script can replace it.
+
+MANDATORY STRUCTURE:
 {luxury_template}
 
 Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown": "..."}}
