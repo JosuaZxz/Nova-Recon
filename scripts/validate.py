@@ -64,45 +64,37 @@ def validate_findings():
     path = f'data/{PROGRAM_NAME}/nuclei_results.json'
     if not os.path.exists(path) or os.stat(path).st_size == 0: return
 
-    all_findings = []
+    # --- AMBIL IP RUNNER UNTUK LAPORAN ---
+    try: runner_ip = requests.get('https://ifconfig.me', timeout=5).text.strip()
+    except: runner_ip = "Unknown IP"
+
+    # --- LOGIC GROUPING PER TEMPLATE ID (ANTI-POINT FARMING) ---
+    grouped_findings = {}
+    trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers", "dns-sec", "robots-txt"]
+
     with open(path, 'r') as f:
         for line in f:
             try:
                 d = json.loads(line)
                 if isinstance(d, list): d = d[0]
-                all_findings.append(d)
+                tid = d.get("template-id", "Unknown")
+                sev = d.get("info", {}).get("severity", "info").lower()
+                
+                if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
+                    if tid not in grouped_findings: grouped_findings[tid] = []
+                    grouped_findings[tid].append(get_verification_context(d))
             except: continue
 
-    # --- [ PRIORITASKAN CRITICAL & HIGH ] ---
-    sev_rank = {"critical": 4, "high": 3, "medium": 2, "low": 1, "info": 0}
-    all_findings.sort(key=lambda x: sev_rank.get(x.get("info",{}).get("severity","info").lower(), 0), reverse=True)
+    if not grouped_findings: return
 
-    findings_list = []
-    # Buang sampah headers tapi jangan buang daging
-    trash = ["ssl-issuer", "tech-detect", "tls-version", "http-missing-security-headers", "dns-sec", "robots-txt"]
-    
-    for d in all_findings:
-        sev = d.get("info", {}).get("severity", "info").lower()
-        tid = d.get("template-id", "").lower()
-        if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
-            # Batasi bukti agar AI Groq tidak meledak (Limit 1000 char saja)
-            context = get_verification_context(d)
-            context["request_evidence"] = context["request_evidence"][:1000]
-            context["response_evidence"] = context["response_evidence"][:1000]
-            findings_list.append(context)
-        
-        # Ambil maksimal 10 temuan terbaik saja agar tidak kena Rate Limit AI
-        if len(findings_list) >= 10: break
-
-    if not findings_list: return
-        
-    # --- TEMPLATE ---
+    # --- TEMPLATE KERAS DENGAN TITIK (.) UNTUK FORMATTING ---
     luxury_template = """
-.# {title}
+.# {title} in {program}
 
 .## 📊 Vulnerability Details
 - **Severity:** {severity}
-- **Affected Asset:** `{url}`
+- **Affected Assets:** 
+{urls_list}
 - **Scanner IP:** {ip}
 - **User-Agent:** NovaRecon/2026
 
@@ -113,10 +105,9 @@ def validate_findings():
 {technical_explanation}
 
 .## 🚀 Steps To Reproduce (PoC)
-1. **Target:** {url}
-2. **Attack Vector:** {step_2}
-3. **Payload:** `{payload_used}`
-4. **Reproduction Link:** {reproduction_url}
+1. **Target List:** {urls_list}
+2. **Attack Vector:** {attack_vector}
+3. **Payload used:** `{payload}`
 
 .## 🛡️ Proof of Concept (Evidence)
 .```http
@@ -127,81 +118,74 @@ def validate_findings():
 .```
 
 .## ⚠️ Impact Analysis
-- **Business:** {business_impact}
-- **Technical:** {technical_impact}
+- **Technical Impact:** {technical_impact}
+- **Business Impact:** {business_impact}
 
 .## ✅ Remediation
-{remediation_plan}
-
+{remediation}
 """
 
-    # --- PROMPT DIPERKETAT (ANTI-CRASH) ---
-    prompt = f"""Role: Elite Security Researcher.
-Analyze these security findings: {json.dumps(findings_list)}.
+    for tid, findings in grouped_findings.items():
+        # Gabungkan semua URL yang terkena bug yang sama
+        urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
+        
+        prompt = f"""Role: Elite Security Researcher.
+Program: {PROGRAM_NAME}
+Vulnerability ID: {tid}
+Findings Data: {json.dumps(findings[:5])}
 
-Task: Write a Professional Bug Report.
-Return ONLY a JSON ARRAY of OBJECTS. 
-FORMAT: [ {{"title": "...", "severity": "...", "url": "...", "full_markdown": "..."}} ]
+Task: Write ONE professional bug report for ALL affected assets.
+MANDATORY: Use this EXACT structure (include the dots at start of lines):
+{luxury_template}
 
-CRITICAL RULES:
-1. Return valid JSON only.
-2. If response contains SQL errors, report as SQL Injection.
-3. Clean the matched_url from junk paths.
+Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown": "..."}}
 """
 
-    try:
-        url = "https://api.groq.com/openai/v1/chat/completions"
-        headers = {"Authorization": f"Bearer {AI_KEY}"}
-        payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.1}
-        
-        print(f"[*] Analyzing with AI...")
-        res = requests.post(url, headers=headers, json=payload, timeout=120)
-        if res.status_code != 200: return
-        ai_out = res.json()['choices'][0]['message']['content'].strip()
-        
-        # Ekstraksi JSON yang aman
-        match = re.search(r'\[\s*\{.*\}\s*\]', ai_out, re.DOTALL)
-        if not match: match = re.search(r'\[.*\]', ai_out, re.DOTALL)
-
-        if match:
-            reports = json.loads(match.group(0), strict=False)
-            if isinstance(reports, dict): reports = [reports]
+        try:
+            url = "https://api.groq.com/openai/v1/chat/completions"
+            headers = {"Authorization": f"Bearer {AI_KEY}"}
+            payload = {"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "temperature": 0.1}
             
-            os.makedirs(f"data/{PROGRAM_NAME}/alerts/high", exist_ok=True)
-            os.makedirs(f"data/{PROGRAM_NAME}/alerts/low", exist_ok=True)
-
-            for idx, rep in enumerate(reports):
-                # PELINDUNG: Pastikan 'rep' adalah Dictionary, bukan String
-                if not isinstance(rep, dict):
-                    print("[-] AI returned string instead of object, skipping this item.")
-                    continue
-
-                target_url = rep.get('url', '')
-                if not target_url: continue
-
-                url_hash = hashlib.md5(target_url.encode()).hexdigest()
+            print(f"[*] Analyzing Group: {tid}...")
+            res = requests.post(url, headers=headers, json=payload, timeout=120)
+            if res.status_code != 200: continue
+            
+            ai_data = res.json()['choices'][0]['message']['content'].strip()
+            match = re.search(r'\{.*\}', ai_data, re.DOTALL)
+            if match:
+                rep = json.loads(match.group(0), strict=False)
                 
-                # Simpan ke Database (Lakukan sebelum simpan file agar aman)
-                with open(SEEN_DB, "a") as f: f.write(f"{url_hash}\n")
-
-                # Tentukan Folder & Simpan Markdown
-                sev = rep.get('severity', 'Medium').upper()
-                folder = "high" if any(x in sev for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
+                # Gunakan hash unik gabungan Program + Template ID
+                url_hash = hashlib.md5(f"{PROGRAM_NAME}_{tid}".encode()).hexdigest()
                 
-                safe_title = re.sub(r'\W+', '_', rep.get('title', 'bug'))[:50]
-                report_path = f"data/{PROGRAM_NAME}/alerts/{folder}/{safe_title}_{idx}.md"
-                
-                # Buat Draft H1
-                d_id = create_h1_draft(rep.get('title', 'Security Finding'), rep.get('full_markdown', ''), "Automated detection", rep.get('severity', 'high'), target_url)
-                final_d_id = d_id if d_id else "MANUAL_SUBMIT_REQUIRED"
+                # Cek Database Memory
+                is_seen = False
+                if os.path.exists(SEEN_DB):
+                    with open(SEEN_DB, "r") as f:
+                        if url_hash in f.read(): is_seen = True
 
+                # Draft H1 hanya dibuat jika belum pernah dilaporkan
+                final_d_id = "ALREADY_REPORTED" if is_seen else create_h1_draft(rep['title'], rep['full_markdown'], "Multiple endpoints affected.", rep['severity'], findings[0]['matched_url'])
+                
+                if not is_seen:
+                    with open(SEEN_DB, "a") as f: f.write(f"{url_hash}\n")
+
+                # Tentukan Folder Severity
+                sev_folder = "high" if any(x in rep['severity'].upper() for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
+                os.makedirs(f"data/{PROGRAM_NAME}/alerts/{sev_folder}", exist_ok=True)
+                
+                # Simpan MD dan bersihkan tanda titik (.)
+                report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
                 with open(report_path, 'w') as f:
                     f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-                    f.write(rep.get('full_markdown', '').replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```"))
+                    # Membersihkan titik agar Markdown jadi valid
+                    clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
+                    # Isi placeholder yang tersisa
+                    final_md = clean_md.replace("{ip}", runner_ip).replace("{urls_list}", urls_list).replace("{program}", PROGRAM_NAME)
+                    f.write(final_md)
                 
-                print(f"[+] Success Saved: {rep.get('title')}")
-                
-    except Exception as e: print(f"Error: {e}")
+                print(f"[+] Grouped Report Saved: {tid}")
+        except Exception as e: print(f"Error in {tid}: {e}")
 
 if __name__ == "__main__":
     validate_findings()
