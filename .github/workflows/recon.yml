@@ -176,30 +176,26 @@ jobs:
                 # Hapus > /dev/null agar kita bisa lihat log error AI jika ada masalah
                 PROGRAM_NAME=$program_name python3 scripts/validate.py || true
                 
-                # STEP 7: SULTAN NOTIFIKASI (SMART CAPTION & ALL SEVERITIES)
-                # 1. Kirim Bug HIGH / CRITICAL ke Grup Critical
+                # STEP 7: SULTAN NOTIFIKASI
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
-                    # Ambil baris pertama (Judul Bug) sebagai caption
-                    TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-100)
+                    TITLE_CAPTION=$(grep "^# " "$f" | head -n 1 | sed 's/# //g' | cut -c1-60)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
                       -F chat_id="$TG_CRIT" \
                       -F document=@"$f" \
-                      -F caption="🚨 CRITICAL FOUND: $TITLE_CAPTION" > /dev/null 2>&1
+                      -F caption="🚨 [$program_name] FOUND: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
-                # 2. Kirim Bug MEDIUM / LOW ke Grup General
                 if [ -d "data/$program_name/alerts/low" ]; then
                   for f in data/$program_name/alerts/low/*.md; do
                     [ -e "$f" ] || continue
-                    # Ambil baris pertama (Judul Bug) sebagai caption
-                    TITLE_CAPTION=$(head -n 1 "$f" | sed 's/# //g' | cut -c1-100)
+                    TITLE_CAPTION=$(grep "^# " "$f" | head -n 1 | sed 's/# //g' | cut -c1-60)
                     curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
                       -F chat_id="$TG_GEN" \
                       -F document=@"$f" \
-                      -F caption="⚠️ MEDIUM FOUND: $TITLE_CAPTION" > /dev/null 2>&1
+                      -F caption="⚠️ [$program_name] FOUND: $TITLE_CAPTION" > /dev/null 2>&1
                   done
                 fi
 
@@ -216,26 +212,21 @@ jobs:
           git config --local user.email "bot@sniper-recon.ai"
           git config --local user.name "Recon-Sniper-Bot"
           
-          # 1. Ambil semua perubahan lokal (hasil temuan bug)
+          # 1. Ambil perubahan dan commit lokal
           git add .seen_urls
-          # 2. Commit dulu secara lokal (biar folder "bersih" sebelum pull)
-          git commit -m "database: update logs [skip ci]" || echo "No new bugs to commit"
+          git commit -m "database: update logs [skip ci]" || echo "No changes"
 
-          # 3. Loop Pull dan Push agar tidak tabrakan dengan mesin lain
+          # 2. Loop Sync agar tidak tabrakan
           for i in {1..10}; do
-            # Ambil data dari mesin lain yang sudah push duluan
-            git pull origin main --rebase
+            git pull origin main --rebase || git rebase --abort
             
-            # Gabungkan dan rapikan database agar tidak duplikat
             if [ -f .seen_urls ]; then
               sort -u .seen_urls -o .seen_urls
             fi
             
-            # Update commit dengan data yang sudah digabung
             git add .seen_urls
             git commit --amend --no-edit || echo "Nothing to amend"
             
-            # Push ke repository utama
             if git push origin main; then
               echo "✅ Database Synced Successfully!"
               break
