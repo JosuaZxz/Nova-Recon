@@ -129,18 +129,18 @@ def validate_findings():
         # Gabungkan semua URL yang terkena bug yang sama
         urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
         
-        # --- PROMPT DIKUNCI (ANTI-HALLUCINATION & ANTI-NONE) ---
+        # --- PROMPT PERBAIKAN FINAL (ANTI-LAZY AI) ---
         prompt = f"""Role: Elite Security Researcher.
 Program: {PROGRAM_NAME}
 Vulnerability ID: {tid}
 Findings Data: {json.dumps(findings[:5])}
 
 CRITICAL RULES:
-1. USE ONLY THE PROVIDED DATA. DO NOT invent CVE IDs or change bug names.
-2. If Template ID is 'CVE-2024-38526', the report MUST be about 'Polyfill Supply Chain Attack'.
-3. If 'request_evidence' is empty, DESCRIBE the detection based on 'template_name'.
-4. DO NOT write 'None' or 'Not Provided'. 
-5. MANDATORY: Put the exact string '{{ip}}' (with double curly braces) in the Scanner IP field so my script can replace it.
+1. USE ONLY PROVIDED DATA. Do not invent CVE IDs.
+2. If 'request_evidence' or 'payload' is empty/None, YOU MUST EXPLAIN THE DETECTION. 
+   Example: "Detected via Headless Browser matching of unauthorized redirect" or "Matched malicious polyfill script in DOM".
+3. NEVER write the word 'None' or 'Not Applicable'. Be descriptive.
+4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
 
 MANDATORY STRUCTURE:
 {luxury_template}
