@@ -16,19 +16,24 @@ SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
     info = data.get("info", {})
+    # Ambil alasan teknis Nuclei (Matcher) agar AI tahu 'kenapa' ini bug
+    matcher = data.get("matcher-name", "Behavioral Match")
+    extracted = data.get("extracted-results", [])
+    
     req = data.get("request", "")
     res = data.get("response", "")
     
-    # Ambil 800 char awal dan 400 char akhir saja agar AI tidak overload
-    clean_req = (req[:800] + "\n[...]\n" + req[-400:]) if len(req) > 1200 else req
-    clean_res = (res[:800] + "\n[...]\n" + res[-400:]) if len(res) > 1200 else res
+    # Ambil 1500 char awal (biasanya letak redirect/script berbahaya)
+    clean_res = res[:1500] if len(res) > 1500 else res
 
     return {
         "template_id": data.get("template-id", "Unknown"),
         "template_name": info.get("name", "Unknown Bug Type"),
+        "matcher_logic": matcher,
+        "extracted_data": extracted,
         "severity": info.get("severity", "unknown"),
         "matched_url": data.get("matched-at", data.get("host", "")),
-        "request_evidence": clean_req,
+        "request_evidence": req[:500],
         "response_evidence": clean_res,
         "time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     }
@@ -129,20 +134,24 @@ def validate_findings():
         # Gabungkan semua URL yang terkena bug yang sama
         urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
         
-        # --- PROMPT PERBAIKAN FINAL (ANTI-LAZY AI) ---
-        prompt = f"""Role: Elite Security Researcher.
+        # --- PROMPT SENIOR AUDITOR (THE SMOKING GUN) ---
+        prompt = f"""Role: Senior Security Auditor.
 Program: {PROGRAM_NAME}
-Vulnerability ID: {tid}
-Findings Data: {json.dumps(findings[:5])}
+Vulnerability Type: {tid}
+Context Data: {json.dumps(findings[:3])}
+
+TASK: Write a Surgical Bug Report based on the provided evidence.
 
 CRITICAL RULES:
-1. USE ONLY PROVIDED DATA. Do not invent CVE IDs.
-2. If 'request_evidence' or 'payload' is empty/None, YOU MUST EXPLAIN THE DETECTION. 
-   Example: "Detected via Headless Browser matching of unauthorized redirect" or "Matched malicious polyfill script in DOM".
-3. NEVER write the word 'None' or 'Not Applicable'. Be descriptive.
-4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
+1. DO NOT invent CVEs. Use the provided Template ID/Name.
+2. SMOKING GUN: In 'Technical Analysis', you MUST point out exactly why the 'response_evidence' proves the bug. 
+   - If it's a Bypass: Explain that the HTML shows a dashboard/internal content that should be behind a login.
+   - If it's Polyfill: Point out the malicious <script src='https://polyfill.io/...'> tag in the evidence.
+3. NO 'NONE' POLICY: Do not write 'None' or 'Not Provided' in payloads or evidence. 
+   - If request is empty, write: "Detected via behavioral analysis and DOM matching in headless browser."
+4. MANDATORY: Put the exact string '{{ip}}' (with double braces) in the Scanner IP field.
 
-MANDATORY STRUCTURE:
+Structure:
 {luxury_template}
 
 Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown": "..."}}
@@ -185,9 +194,9 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                 report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
                 with open(report_path, 'w') as f:
                     f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-                    # Membersihkan titik agar Markdown jadi valid
+                    # Bersihkan titik formatting
                     clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
-                    # Isi placeholder yang tersisa
+                    # Suntik data asli ke dalam laporan
                     final_md = clean_md.replace("{ip}", runner_ip).replace("{urls_list}", urls_list).replace("{program}", PROGRAM_NAME)
                     f.write(final_md)
                 
