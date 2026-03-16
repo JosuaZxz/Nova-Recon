@@ -23,9 +23,9 @@ def get_verification_context(data):
     req = data.get("request", "")
     res = data.get("response", "")
     
-    # Ambil 1500 char awal (biasanya letak redirect/script berbahaya)
-    clean_res = res[:1500] if len(res) > 1500 else res
-
+    # Ambil 1000 char saja (Cukup untuk bukti, tapi aman untuk JSON)
+    clean_res = res[:1000] if len(res) > 1000 else res
+    
     return {
         "template_id": data.get("template-id", "Unknown"),
         "template_name": info.get("name", "Unknown Bug Type"),
@@ -152,7 +152,8 @@ CRITICAL RULES:
 3. NO 'NONE' POLICY: Explain behavioral detection if request is empty.
 4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
 5. QUICK VERIFY: Pick the best URL from the data and put the exact string '{{verify_url}}' in the Primary Test URL field.
-6. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally so my script can replace them.
+6. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally.
+7. JSON INTEGRITY: You MUST escape double quotes and backslashes inside the 'full_markdown' string to prevent JSON parsing errors.
 
 Structure:
 {luxury_template}
@@ -176,39 +177,44 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                 # Gunakan hash unik gabungan Program + Template ID
                 url_hash = hashlib.md5(f"{PROGRAM_NAME}_{tid}".encode()).hexdigest()
                 
-                # Cek Database Memory
+                # --- LOGIKA MEMORI & FILTER DUPLIKAT ---
                 is_seen = False
                 if os.path.exists(SEEN_DB):
-                    with open(SEEN_DB, "r") as f:
-                        if url_hash in f.read(): is_seen = True
+                    with open(SEEN_DB, "r") as db_read:
+                        if url_hash in db_read.read(): 
+                            is_seen = True
 
-                # Draft H1 hanya dibuat jika belum pernah dilaporkan
-                final_d_id = "ALREADY_REPORTED" if is_seen else create_h1_draft(rep['title'], rep['full_markdown'], "Multiple endpoints affected.", rep['severity'], findings[0]['matched_url'])
-                
-                if not is_seen:
-                    with open(SEEN_DB, "a") as f: f.write(f"{url_hash}\n")
+                # JIKA SUDAH PERNAH DILAPORKAN, LEWATI TOTAL (ANTI-SPAM)
+                if is_seen:
+                    print(f"[-] Skip (Already Processed): {tid}")
+                    continue 
 
-                # Tentukan Folder Severity
+                # BUAT DRAFT H1 (HANYA UNTUK BUG BARU)
+                final_d_id = create_h1_draft(rep['title'], rep['full_markdown'], "Multiple endpoints affected.", rep['severity'], findings[0]['matched_url'])
+                if not final_d_id: final_d_id = "MANUAL_SUBMIT_REQUIRED"
+
+                # TENTUKAN FOLDER SEVERITY
                 sev_folder = "high" if any(x in rep['severity'].upper() for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
                 os.makedirs(f"data/{PROGRAM_NAME}/alerts/{sev_folder}", exist_ok=True)
                 
-                # Simpan MD dan bersihkan tanda titik (.)
+                # SIMPAN LAPORAN MD
                 report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
-                with open(report_path, 'w') as f:
-                    f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
+                with open(report_path, 'w') as f_report:
+                    f_report.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
                     clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
                     
-                    # AMBIL URL PERTAMA UNTUK VERIFIKASI CEPAT
                     primary_url = findings[0]['matched_url']
-                    
-                    # SUNTIK SEMUA DATA KE LAPORAN
                     final_md = clean_md.replace("{ip}", runner_ip) \
                                        .replace("{urls_list}", urls_list) \
                                        .replace("{program}", PROGRAM_NAME) \
                                        .replace("{verify_url}", primary_url)
-                    f.write(final_md)
+                    f_report.write(final_md)
+
+                # DATABASE SAFETY: Catat ke memori HANYA jika file berhasil dibuat
+                with open(SEEN_DB, "a") as db_append:
+                    db_append.write(f"{url_hash}\n")
                 
-                print(f"[+] Grouped Report Saved: {tid}")
+                print(f"[+] Success Reported & Saved: {tid}")
         except Exception as e: print(f"Error in {tid}: {e}")
 
 if __name__ == "__main__":
