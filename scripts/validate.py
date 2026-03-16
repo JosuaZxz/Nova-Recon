@@ -151,9 +151,12 @@ CRITICAL RULES:
 2. SMOKING GUN: Point out exactly why 'response_evidence' proves the bug.
 3. NO 'NONE' POLICY: Explain behavioral detection if request is empty.
 4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
-5. QUICK VERIFY: Pick the best URL from the data and put the exact string '{{verify_url}}' in the Primary Test URL field.
-6. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally.
-7. JSON INTEGRITY: You MUST escape double quotes and backslashes inside the 'full_markdown' string to prevent JSON parsing errors.
+5. ONE-CLICK PROOF: In 'Quick Verification Link', use the exact URL from the data. 
+   - FOR BYPASS: The link must lead directly to the unauthorized dashboard.
+   - FOR POLYFILL: The link must lead to the page where the malicious script is injected.
+6. MANDATORY: Put the exact string '{{verify_url}}' in the Primary Test URL field. My script will inject the direct exploit link there.
+7. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally.
+8. JSON INTEGRITY: Escape special characters properly.
 
 Structure:
 {luxury_template}
@@ -172,7 +175,18 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
             ai_data = res.json()['choices'][0]['message']['content'].strip()
             match = re.search(r'\{.*\}', ai_data, re.DOTALL)
             if match:
-                rep = json.loads(match.group(0), strict=False)
+                # --- [ JSON SANITIZER: ANTI-BACKSLASH CRASH ] ---
+                # Membersihkan karakter backslash yang merusak format JSON dari AI
+                raw_json = match.group(0)
+                # Fix common escape errors for TikTok/large HTML
+                cleaned_json = raw_json.replace('\\', '\\\\').replace('\\\\"', '\\"')
+                
+                try:
+                    rep = json.loads(cleaned_json, strict=False)
+                except Exception as e:
+                    print(f"[-] Sanitizer retry needed for {tid}: {e}")
+                    # Fallback ke raw jika cleaned gagal
+                    rep = json.loads(raw_json, strict=False)
                 
                 # Gunakan hash unik gabungan Program + Template ID
                 url_hash = hashlib.md5(f"{PROGRAM_NAME}_{tid}".encode()).hexdigest()
