@@ -92,7 +92,7 @@ def validate_findings():
 
     if not grouped_findings: return
 
-    # --- TEMPLATE KERAS DENGAN TITIK (.) UNTUK FORMATTING ---
+    # --- TEMPLATE KERAS DENGAN QUICK VERIFY ---
     luxury_template = """
 .# {title} in {program}
 
@@ -102,6 +102,10 @@ def validate_findings():
 {urls_list}
 - **Scanner IP:** {ip}
 - **User-Agent:** NovaRecon/2026
+
+.## 🔗 Quick Verification Link
+- **Primary Test URL:** {verify_url}
+- **Instructions:** Open the link above in a **Private/Incognito** browser window. If you can see dashboard content or internal data without logging in, the bug is confirmed.
 
 .## 📝 Executive Summary
 {summary}
@@ -134,29 +138,27 @@ def validate_findings():
         # Gabungkan semua URL yang terkena bug yang sama
         urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
         
-        # --- PROMPT SENIOR AUDITOR (THE SMOKING GUN) ---
+        # --- PROMPT SENIOR AUDITOR + QUICK VERIFY ---
         prompt = f"""Role: Senior Security Auditor.
 Program: {PROGRAM_NAME}
 Vulnerability Type: {tid}
 Context Data: {json.dumps(findings[:3])}
 
-TASK: Write a Surgical Bug Report based on the provided evidence.
+TASK: Write a Surgical Bug Report with a Clickable Verification Link.
 
 CRITICAL RULES:
-1. DO NOT invent CVEs. Use the provided Template ID/Name.
-2. SMOKING GUN: In 'Technical Analysis', you MUST point out exactly why the 'response_evidence' proves the bug. 
-   - If it's a Bypass: Explain that the HTML shows a dashboard/internal content that should be behind a login.
-   - If it's Polyfill: Point out the malicious <script src='https://polyfill.io/...'> tag in the evidence.
-3. NO 'NONE' POLICY: Do not write 'None' or 'Not Provided' in payloads or evidence. 
-   - If request is empty, write: "Detected via behavioral analysis and DOM matching in headless browser."
-4. MANDATORY: Put the exact string '{{ip}}' (with double braces) in the Scanner IP field.
+1. DO NOT invent CVEs.
+2. SMOKING GUN: Point out exactly why 'response_evidence' proves the bug.
+3. NO 'NONE' POLICY: Explain behavioral detection if request is empty.
+4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
+5. QUICK VERIFY: Pick the best URL from the data and put the exact string '{{verify_url}}' in the Primary Test URL field.
+6. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally so my script can replace them.
 
 Structure:
 {luxury_template}
 
 Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown": "..."}}
 """
-
         try:
             url = "https://api.groq.com/openai/v1/chat/completions"
             headers = {"Authorization": f"Bearer {AI_KEY}"}
@@ -194,10 +196,16 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                 report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
                 with open(report_path, 'w') as f:
                     f.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-                    # Bersihkan titik formatting
                     clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
-                    # Suntik data asli ke dalam laporan
-                    final_md = clean_md.replace("{ip}", runner_ip).replace("{urls_list}", urls_list).replace("{program}", PROGRAM_NAME)
+                    
+                    # AMBIL URL PERTAMA UNTUK VERIFIKASI CEPAT
+                    primary_url = findings[0]['matched_url']
+                    
+                    # SUNTIK SEMUA DATA KE LAPORAN
+                    final_md = clean_md.replace("{ip}", runner_ip) \
+                                       .replace("{urls_list}", urls_list) \
+                                       .replace("{program}", PROGRAM_NAME) \
+                                       .replace("{verify_url}", primary_url)
                     f.write(final_md)
                 
                 print(f"[+] Grouped Report Saved: {tid}")
