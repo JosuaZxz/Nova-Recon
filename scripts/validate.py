@@ -202,32 +202,36 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                     print(f"[-] Skip (Already Processed): {tid}")
                     continue 
 
-                # BUAT DRAFT H1 (HANYA UNTUK BUG BARU)
-                final_d_id = create_h1_draft(rep['title'], rep['full_markdown'], "Multiple endpoints affected.", rep['severity'], findings[0]['matched_url'])
+                # --- BAGIAN DI BAWAH INI SEKARANG SUDAH SEJAJAR DENGAN 'if' (BENAR) ---
+                # 1. SIAPKAN DATA MD YANG SUDAH BERSIH TOTAL
+                primary_url = findings[0]['matched_url']
+                clean_md_raw = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
+                
+                # REPLACING PLACEHOLDERS AGAR TIDAK ADA TANDA {ip} DI HACKERONE/TELEGRAM
+                final_clean_report = clean_md_raw.replace("{ip}", runner_ip) \
+                                                 .replace("{urls_list}", urls_list) \
+                                                 .replace("{program}", PROGRAM_NAME) \
+                                                 .replace("{verify_url}", primary_url)
+
+                # 2. BUAT DRAFT H1 PAKE LAPORAN YANG SUDAH BERSIH (HANYA SEKALI PANGGIL)
+                final_d_id = create_h1_draft(rep['title'], final_clean_report, "Automated supply chain/bypass vulnerability detection.", rep['severity'], primary_url)
                 if not final_d_id: final_d_id = "MANUAL_SUBMIT_REQUIRED"
 
-                # TENTUKAN FOLDER SEVERITY
+                # 3. SIMPAN LAPORAN MD UNTUK NOTIF TELEGRAM
                 sev_folder = "high" if any(x in rep['severity'].upper() for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
                 os.makedirs(f"data/{PROGRAM_NAME}/alerts/{sev_folder}", exist_ok=True)
-                
-                # SIMPAN LAPORAN MD
                 report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
+            
                 with open(report_path, 'w') as f_report:
                     f_report.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-                    clean_md = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
-                    
-                    primary_url = findings[0]['matched_url']
-                    final_md = clean_md.replace("{ip}", runner_ip) \
-                                       .replace("{urls_list}", urls_list) \
-                                       .replace("{program}", PROGRAM_NAME) \
-                                       .replace("{verify_url}", primary_url)
-                    f_report.write(final_md)
+                    f_report.write(final_clean_report)
 
-                # DATABASE SAFETY: Catat ke memori HANYA jika file berhasil dibuat
+                # 4. DATABASE SAFETY: Catat ke memori HANYA jika semua proses di atas sukses
                 with open(SEEN_DB, "a") as db_append:
                     db_append.write(f"{url_hash}\n")
-                
+            
                 print(f"[+] Success Reported & Saved: {tid}")
+
         except Exception as e: print(f"Error in {tid}: {e}")
 
 if __name__ == "__main__":
