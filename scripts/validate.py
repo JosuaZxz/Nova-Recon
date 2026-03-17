@@ -137,25 +137,24 @@ def validate_findings():
         # Gabungkan semua URL yang terkena bug yang sama
         urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
         
-        # --- PROMPT SENIOR AUDITOR + QUICK VERIFY ---
+        # --- PROMPT SUPER-AUDITOR (ANTI-HALLUCINATION + QUICK VERIFY + JSON INTEGRITY) ---
         prompt = f"""Role: Senior Security Auditor.
 Program: {PROGRAM_NAME}
 Vulnerability Type: {tid}
 Context Data: {json.dumps(findings[:3])}
 
-TASK: Write a Surgical Bug Report with a Clickable Verification Link.
+TASK: Write a SURGICAL, HONEST, and PROFESSIONAL Bug Report.
 
-CRITICAL RULES:
-1. DO NOT invent CVEs.
-2. SMOKING GUN: Point out exactly why 'response_evidence' proves the bug.
-3. NO 'NONE' POLICY: Explain behavioral detection if request is empty.
-4. MANDATORY: Put the exact string '{{ip}}' in the Scanner IP field.
-5. ONE-CLICK PROOF: In 'Quick Verification Link', use the exact URL from the data. 
-   - FOR BYPASS: The link must lead directly to the unauthorized dashboard.
-   - FOR POLYFILL: The link must lead to the page where the malicious script is injected.
-6. MANDATORY: Put the exact string '{{verify_url}}' in the Primary Test URL field. My script will inject the direct exploit link there.
-7. MANDATORY: Ensure all markers like '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' are included literally.
-8. JSON INTEGRITY: Escape special characters properly.
+CRITICAL LOGIC & TECHNICAL RULES:
+1. NO HALLUCINATION: DO NOT invent CVE IDs. Use only provided data.
+2. PUBLIC URL SKEPTICISM: If the URL contains '/article/', '/blog/', '/help/', or '/announcements/', it is likely a PUBLIC page. DO NOT claim it as a "Dashboard Bypass" unless you see private user data.
+3. BOILERPLATE TRAP: Do not be fooled by CSS classes like 'anticon' or 'loadingCircle'. These are standard components and NOT proof of dashboard access.
+4. SEVERITY CHECK: If the bug is only a "version match" (Next.js <= 12) without proof of stolen data, report it as "Vulnerable Framework Version" with Medium/Low severity, NOT Critical.
+5. SMOKING GUN: In 'Technical Analysis', point out exactly why 'response_evidence' proves the bug (e.g., "The presence of compromised polyfill.io link in source code").
+6. NO 'NONE' POLICY: Explain behavioral detection if request is empty. NEVER write 'None' or 'Not Applicable'.
+7. ONE-CLICK PROOF: In 'Quick Verification Link', provide the exact direct URL that proves the bug.
+8. MANDATORY PLACEHOLDERS: You MUST include the exact strings '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' literally in the fields so my script can replace them.
+9. JSON INTEGRITY: You MUST escape double quotes and backslashes properly inside the JSON string to prevent parsing errors.
 
 Structure:
 {luxury_template}
