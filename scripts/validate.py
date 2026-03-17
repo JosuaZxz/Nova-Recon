@@ -92,7 +92,7 @@ def validate_findings():
 
     if not grouped_findings: return
 
-    # --- TEMPLATE KERAS DENGAN QUICK VERIFY ---
+    # --- TEMPLATE KERAS DENGAN QUICK VERIFY (STEALTH MODE) ---
     luxury_template = """
 .# {title} in {program}
 
@@ -101,7 +101,6 @@ def validate_findings():
 - **Affected Assets:** 
 {urls_list}
 - **Scanner IP:** {ip}
-- **User-Agent:** NovaRecon/2026
 
 .## 🔗 Quick Verification Link
 - **Primary Test URL:** {verify_url}
