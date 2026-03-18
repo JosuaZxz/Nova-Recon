@@ -45,6 +45,8 @@ jobs:
           install_go_tool katana github.com/projectdiscovery/katana/cmd/katana
           install_go_tool hakrawler github.com/hakluke/hakrawler
           install_go_tool assetfinder github.com/tomnomnom/assetfinder
+          install_go_tool dnsx github.com/projectdiscovery/dnsx/cmd/dnsx
+          install_go_tool alterx github.com/projectdiscovery/alterx/cmd/alterx
           install_go_tool waybackurls github.com/tomnomnom/waybackurls
           install_go_tool anew github.com/tomnomnom/anew
           echo "$HOME/go/bin" >> $GITHUB_PATH
@@ -76,8 +78,6 @@ jobs:
           # --- FUNCTION UNTUK TIMESTAMP ---
           log_step() { echo "--- [ $(date +'%H:%M:%S') ] $1 ---"; }
 
-          log_step "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name"
-
           # 1. LOGIKA MASTER SNIPER (Otomatis Ambil File dari Folder Targets)
           # List semua file .txt di folder targets, abaikan test_target.txt
           ls targets/*.txt | grep -v "test_target.txt" > targets_list.tmp
@@ -93,19 +93,30 @@ jobs:
           program_name=$(basename "$target_path" .txt)
 
           # 2. PERSIAPAN TEMPUR
-          echo "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Target #$TARGET_INDEX dari $TOTAL_TARGETS)"
+          log_step "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Target #$TARGET_INDEX dari $TOTAL_TARGETS)"
           mkdir -p "data/$program_name"
           touch .seen_urls
 
-          # STEP 1: DISCOVERY (Membaca list dari file target asli)
-          log_step "STEP 1: Subdomain Discovery..."
+          # STEP 1: HYBRID DISCOVERY (PASSIVE + ACTIVE PERMUTATION)
+          log_step "STEP 1: Hybrid Discovery (Passive + Active)..."
           START_TIME=$(date +%s)
-          subfinder -dL "$target_path" -all -silent -o "data/$program_name/s1.txt" > /dev/null 2>&1 || true
-          assetfinder --subs-only < "$target_path" >> "data/$program_name/s1.txt" 2>/dev/null || true
-          cat "data/$program_name/s1.txt" | sed 's/*.//g' | tr -d ' ' | grep -v "localhost" | sort -u > "data/$program_name/subdomains.txt"
-          END_TIME=$(date +%s)
-          log_step "Subdomain finished in $((END_TIME - START_TIME)) seconds."
+          
+          # 1a. Passive Discovery (Existing)
+          subfinder -dL "$target_path" -all -silent -o "data/$program_name/passive.txt" > /dev/null 2>&1 || true
+          assetfinder --subs-only < "$target_path" >> "data/$program_name/passive.txt" 2>/dev/null || true
+          sort -u "data/$program_name/passive.txt" -o "data/$program_name/passive.txt"
 
+          # 1b. Smart Permutation (AlterX) - Menebak subdomain baru berdasarkan pola yang ada
+          # Kita batasi agar tidak meledak (Surgical Mode)
+          head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
+
+          # 1c. DNS Resolution (Dnsx) - Cek mana yang beneran hidup dari ribuan tebakan
+          # Menggunakan DNS publik tercepat
+          cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
+          dnsx -silent -retry 3 -t 100 -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          
+          END_TIME=$(date +%s)
+          log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
           if [ -s "data/$program_name/subdomains.txt" ]; then
             # STEP 2: HTTPX
             log_step "STEP 2: HTTPX Probing..."
