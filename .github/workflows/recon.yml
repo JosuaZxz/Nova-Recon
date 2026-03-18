@@ -73,6 +73,11 @@ jobs:
           echo "⏳ Sniper ${{ matrix.sniper_id }} preparing hyper-speed tools..."
           sleep $SLEEP_TIME
 
+          # --- FUNCTION UNTUK TIMESTAMP ---
+          log_step() { echo "--- [ $(date +'%H:%M:%S') ] $1 ---"; }
+
+          log_step "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name"
+
           # 1. LOGIKA MASTER SNIPER (Otomatis Ambil File dari Folder Targets)
           # List semua file .txt di folder targets, abaikan test_target.txt
           ls targets/*.txt | grep -v "test_target.txt" > targets_list.tmp
