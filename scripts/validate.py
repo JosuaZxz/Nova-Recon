@@ -153,8 +153,8 @@ CRITICAL LOGIC & TECHNICAL RULES:
 5. SMOKING GUN: In 'Technical Analysis', point out exactly why 'response_evidence' proves the bug (e.g., "The presence of compromised polyfill.io link in source code").
 6. NO 'NONE' POLICY: Explain behavioral detection if request is empty. NEVER write 'None' or 'Not Applicable'.
 7. ONE-CLICK PROOF: In 'Quick Verification Link', provide the exact direct URL that proves the bug.
-8. MANDATORY PLACEHOLDERS: You MUST include the exact strings '{{ip}}', '{{verify_url}}', '{{urls_list}}', and '{{program}}' literally in the fields so my script can replace them.
-9. JSON INTEGRITY: You MUST escape double quotes and backslashes properly inside the JSON string to prevent parsing errors.
+8. MANDATORY PLACEHOLDERS: You MUST include the exact strings '{ip}', '{verify_url}', '{urls_list}', '{program}', '{severity}', '{payload}', '{request_evidence}', and '{response_evidence}' LITERALLY in the markdown fields. My script will replace them with raw data.
+9. DESCRIPTIONS: You MUST write professional paragraphs for '{title}', '{summary}', '{technical_explanation}', '{attack_vector}', '{technical_impact}', '{business_impact}', and '{remediation}'. Do not leave these empty.
 
 Structure:
 {luxury_template}
@@ -201,16 +201,22 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                     print(f"[-] Skip (Already Processed): {tid}")
                     continue 
 
-                # --- BAGIAN DI BAWAH INI SEKARANG SUDAH SEJAJAR DENGAN 'if' (BENAR) ---
-                # 1. SIAPKAN DATA MD YANG SUDAH BERSIH TOTAL
+                # 1. SIAPKAN DATA TEKNIS (SUNTIKAN BUKTI ASLI)
                 primary_url = findings[0]['matched_url']
+                req_ev = findings[0].get('request_evidence', 'No request data captured.')
+                res_ev = findings[0].get('response_evidence', 'No response data captured.')
+                
                 clean_md_raw = rep['full_markdown'].replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
                 
-                # REPLACING PLACEHOLDERS AGAR TIDAK ADA TANDA {ip} DI HACKERONE/TELEGRAM
+                # 2. REPLACING PLACEHOLDERS (PEMBERSIHAN TOTAL)
                 final_clean_report = clean_md_raw.replace("{ip}", runner_ip) \
                                                  .replace("{urls_list}", urls_list) \
                                                  .replace("{program}", PROGRAM_NAME) \
-                                                 .replace("{verify_url}", primary_url)
+                                                 .replace("{verify_url}", primary_url) \
+                                                 .replace("{severity}", rep.get('severity', 'Medium')) \
+                                                 .replace("{request_evidence}", req_ev) \
+                                                 .replace("{response_evidence}", res_ev) \
+                                                 .replace("{payload}", tid) # TID adalah ID Nuclei yang asli
 
                 # 2. BUAT DRAFT H1 PAKE LAPORAN YANG SUDAH BERSIH (HANYA SEKALI PANGGIL)
                 final_d_id = create_h1_draft(rep['title'], final_clean_report, "Automated supply chain/bypass vulnerability detection.", rep['severity'], primary_url)
