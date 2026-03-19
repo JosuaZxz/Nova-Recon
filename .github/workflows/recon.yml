@@ -118,12 +118,20 @@ jobs:
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # STEP 2: HTTPX
-            log_step "STEP 2: HTTPX Probing..."
-            START_TIME=$(date +%s)
-            timeout 20m httpx -l "data/$program_name/subdomains.txt" -silent -ip -td -mc 200,301,302,401,403,405 -H "User-Agent: NovaRecon/2026" -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
-            END_TIME=$(date +%s)
-            log_step "HTTPX finished in $((END_TIME - START_TIME)) seconds."
+            # --- [ UPDATE STEP 2: SWEET SPOT PROBING (RL 25) ] ---
+                log_step "STEP 2: HTTPX Probing..."
+                START_TIME=$(date +%s)
+
+                # 1. Timeout 45m (Jaminan tuntas untuk 12rb+ domain)
+                # 2. RL 25 & Threads 50 (Angka paling aman & sopan)
+                timeout 45m httpx -l "data/$program_name/subdomains.txt" \
+                  -silent -ip -td -mc 200,301,302,401,403,405 \
+                  -t 50 -rl 25 -retries 2 \
+                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                  -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+
+                END_TIME=$(date +%s)
+                log_step "HTTPX finished in $((END_TIME - START_TIME)) seconds."
           
             if [ -s "data/$program_name/active_hosts.txt" ]; then
                 # --- [STEP 3: DEEP SIGHT 3.5 - SMART REDUCTION] ---
