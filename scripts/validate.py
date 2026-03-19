@@ -153,8 +153,8 @@ CRITICAL LOGIC & TECHNICAL RULES:
 5. SMOKING GUN: In 'Technical Analysis', point out exactly why 'response_evidence' proves the bug (e.g., "The presence of compromised polyfill.io link in source code").
 6. NO 'NONE' POLICY: Explain behavioral detection if request is empty. NEVER write 'None' or 'Not Applicable'.
 7. ONE-CLICK PROOF: In 'Quick Verification Link', provide the exact direct URL that proves the bug.
-8. MANDATORY PLACEHOLDERS: You MUST include the exact strings '{{ip}}', '{{verify_url}}', '{{urls_list}}', '{{program}}', '{{severity}}', '{{payload}}', '{{request_evidence}}', and '{{response_evidence}}' LITERALLY in the markdown fields.
-9. DESCRIPTIONS: You MUST write professional paragraphs for '{title}', '{summary}', '{technical_explanation}', '{attack_vector}', '{technical_impact}', '{business_impact}', and '{remediation}'. Do not leave these empty.
+8. MANDATORY PLACEHOLDERS: You MUST include these exact strings LITERALLY: '{{ip}}', '{{verify_url}}', '{{urls_list}}', '{{program}}', '{{severity}}', '{{payload}}', '{{request_evidence}}', and '{{response_evidence}}'.
+9. DESCRIPTIONS: You MUST write professional paragraphs for '{{title}}', '{{summary}}', '{{technical_explanation}}', '{{attack_vector}}', '{{technical_impact}}', '{{business_impact}}', and '{{remediation}}'. Do not leave ini empty.
 
 Structure:
 {luxury_template}
