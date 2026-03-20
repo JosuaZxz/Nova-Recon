@@ -164,12 +164,12 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [GELOMBANG 1: THE CRITICAL BLITZ (SURE-KILL)] ---
-                log_step "STEP 4: Gelombang 1 - Critical Blitz (28k Sweep)..."
+                # --- [GELOMBANG 1: THE CRITICAL BLITZ (SURGICAL)] ---
+                log_step "STEP 4: Gelombang 1 - Critical Blitz (Surgical Sweep)..."
                 START_TIME=$(date +%s)
 
-                # Scan SEMUA subdomain tapi HANYA peluru Critical (RCE, SQLi, SSRF, LFI)
-                timeout 60m nuclei -l "data/$program_name/subdomains.txt" \
+                # PERUBAHAN KRUSIAL: Menembak 'active_hosts.txt', bukan 'subdomains.txt'
+                timeout 60m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high \
                   -tags rce,sqli,ssrf,lfi,cve2024,cve2025 \
                   -exclude-tags info -exclude-severity low,info,medium \
