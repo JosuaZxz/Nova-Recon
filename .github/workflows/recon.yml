@@ -118,16 +118,17 @@ jobs:
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
           if [ -s "data/$program_name/subdomains.txt" ]; then
-            # --- [ UPDATE STEP 2: SWEET SPOT PROBING (RL 25) ] ---
+            # --- [ STEP 2: HTTPX SWEET SPOT + REDIRECT FOLLOWER ] ---
                 log_step "STEP 2: HTTPX Probing..."
                 START_TIME=$(date +%s)
+                
+                shuf "data/$program_name/subdomains.txt" -o "data/$program_name/shuffled.txt"
 
-                # 1. Timeout 45m (Jaminan tuntas untuk 12rb+ domain)
-                # 2. RL 25 & Threads 50 (Angka paling aman & sopan)
-                timeout 45m httpx -l "data/$program_name/subdomains.txt" \
+                # Tambahkan '-follow-host-redirects' agar target lebih akurat
+                timeout 45m httpx -l "data/$program_name/shuffled.txt" \
                   -silent -ip -td -mc 200,301,302,401,403,405 \
-                  -t 50 -rl 25 -retries 2 \
-                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                  -t 50 -rl 25 -retries 2 -follow-host-redirects \
+                  -H "User-Agent: Mozilla/5.0 Chrome/125.0.0.0" \
                   -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
 
                 END_TIME=$(date +%s)
@@ -164,16 +165,35 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [GELOMBANG 1: THE CRITICAL & MEDIUM BLITZ] ---
-                log_step "STEP 4: Gelombang 1 - Standard Blitz (Surgical Sweep)..."
+                # --- [ LOGIKA PEMBUAT HIGH PRIORITY TARGETS ] ---
+                log_step "STEP 3.5: Sanitizing Endpoints..."
+                
+                # 1. Saring endpoint yang beneran punya "Daging" (Parameter, API, Backend Files)
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\/api\/|\/v[0-9]\/" data/$program_name/filtered_endpoints.txt | \
+                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
+                
+                # 2. Tambahkan Root Subdomain aktif sebagai cadangan agar file tidak kosong
+                cat data/$program_name/active_hosts.txt >> data/$program_name/high_priority_targets.txt
+                
+                # 3. Final Sort agar bersih
+                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
+
+                # 4. Fallback: Jika saringan terlalu ketat sampai kosong, gunakan hasil URO
+                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
+                
+                log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
+                
+                # --- [ GELOMBANG 1: THE VOLUME BLITZ (FAST FUZZING) ] ---
+                log_step "STEP 4: Gelombang 1 - Standard Blitz (All Assets)..."
                 START_TIME=$(date +%s)
 
-                # TARGET: 'high_priority_targets.txt' (Roots + Juicy Endpoints)
-                # SEVERITY: Critical, High, Medium (Jangan buang cuan!)
-                timeout 60m nuclei -l "data/$program_name/high_priority_targets.txt" \
+                cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
+
+                # Masukkan 'fuzzing,dast' di sini karena lebih efisien tanpa browser
+                timeout 60m nuclei -l "data/$program_name/mass_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025 \
-                  -exclude-tags info -exclude-severity low,info \
+                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,fuzzing,dast \
+                  -exclude-tags info,headless -exclude-severity low,info \
                   -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
@@ -182,14 +202,14 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [GELOMBANG 2: SURGICAL HEADLESS (PRECISION)] ---
-                log_step "STEP 5: Gelombang 2 - Surgical Headless (Deep Scan)..."
+                # --- [ GELOMBANG 2: THE SPA DEEP-DIVE (PRECISION) ] ---
+                log_step "STEP 5: Gelombang 2 - Surgical Headless (SPA Scan)..."
                 START_TIME=$(date +%s)
 
-                # HAPUS '-as' AGAR TIDAK SKIP. Fokus ke Bypass & Supply Chain.
+                # HAPUS 'fuzzing,dast' agar browser tidak freeze dan tidak gampang di-ban
                 timeout 60m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags takeover,cve2024,cve2025,fuzzing,dast,workflow,token,keys,credential \
+                  -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 5 -bs 2 -headless -no-color -silent \
                   -interactsh-server oast.pro \
