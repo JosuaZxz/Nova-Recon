@@ -164,15 +164,16 @@ jobs:
                 
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
-                # --- [GELOMBANG 1: THE CRITICAL BLITZ (SURGICAL)] ---
-                log_step "STEP 4: Gelombang 1 - Critical Blitz (Surgical Sweep)..."
+                # --- [GELOMBANG 1: THE CRITICAL & MEDIUM BLITZ] ---
+                log_step "STEP 4: Gelombang 1 - Standard Blitz (Surgical Sweep)..."
                 START_TIME=$(date +%s)
 
-                # PERUBAHAN KRUSIAL: Menembak 'active_hosts.txt', bukan 'subdomains.txt'
-                timeout 60m nuclei -l "data/$program_name/active_hosts.txt" \
-                  -t /home/runner/nuclei-templates -severity critical,high \
-                  -tags rce,sqli,ssrf,lfi,cve2024,cve2025 \
-                  -exclude-tags info -exclude-severity low,info,medium \
+                # TARGET: 'high_priority_targets.txt' (Roots + Juicy Endpoints)
+                # SEVERITY: Critical, High, Medium (Jangan buang cuan!)
+                timeout 60m nuclei -l "data/$program_name/high_priority_targets.txt" \
+                  -t /home/runner/nuclei-templates -severity critical,high,medium \
+                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025 \
+                  -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
@@ -181,21 +182,20 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [GELOMBANG 2: SURGICAL HEADLESS (THE PRECISION)] ---
+                # --- [GELOMBANG 2: SURGICAL HEADLESS (PRECISION)] ---
                 log_step "STEP 5: Gelombang 2 - Surgical Headless (Deep Scan)..."
                 START_TIME=$(date +%s)
 
-                # Bedah target High Priority pake browser (Headless)
-                timeout 60m nuclei -l "data/$program_name/high_priority_targets.txt" \
+                # HAPUS '-as' AGAR TIDAK SKIP. Fokus ke Bypass & Supply Chain.
+                timeout 60m nuclei -l "data/$program_name/active_hosts.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -as -tags takeover,cve2024,cve2025,fuzzing,dast,workflow,token,keys,credential \
+                  -tags takeover,cve2024,cve2025,fuzzing,dast,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 5 -bs 2 -headless -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" > /dev/null 2>&1 || true
 
-                # GABUNGKAN HASIL UNTUK AI
                 cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
                 END_TIME=$(date +%s)
