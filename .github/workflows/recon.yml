@@ -183,44 +183,49 @@ jobs:
                 
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
-                # --- [ GELOMBANG 1: THE VOLUME BLITZ (FAST FUZZING) ] ---
-                log_step "STEP 4: Gelombang 1 - Standard Blitz (All Assets)..."
+                # --- [GELOMBANG 1: THE CRITICAL BLITZ (SLICE MODE)] ---
+                log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
+                
+                # ACAK DAN AMBIL 2000 TARGET SAJA (Agar Tuntas dlm 1 Jam)
+                shuf "data/$program_name/mass_targets.txt" | head -n 2000 > "data/$program_name/nuclei_targets.txt"
 
-                # Masukkan 'fuzzing,dast' di sini karena lebih efisien tanpa browser
-                timeout 60m nuclei -l "data/$program_name/mass_targets.txt" \
+                # HAPUS '> /dev/null' agar kita bisa lihat temuan secara real-time di log
+                timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
                   -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                  -jsonl -o "data/$program_name/nuclei_standard.json" > /dev/null 2>&1 || true
+                  -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [ GELOMBANG 2: THE SPA DEEP-DIVE (PRECISION) ] ---
-                log_step "STEP 5: Gelombang 2 - Surgical Headless (SPA Scan)..."
+                # --- [GELOMBANG 2: SURGICAL HEADLESS (PRECISION MODE)] ---
+                log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # HAPUS 'fuzzing,dast' agar browser tidak freeze dan tidak gampang di-ban
-                timeout 60m nuclei -l "data/$program_name/active_hosts.txt" \
+                # ACAK DAN AMBIL 50 TARGET TERBAIK (Anti-Timeout)
+                shuf "data/$program_name/active_hosts.txt" | head -n 50 > "data/$program_name/headless_targets.txt"
+
+                timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 5 -bs 2 -headless -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                  -jsonl -o "data/$program_name/nuclei_headless.json" > /dev/null 2>&1 || true
+                  -jsonl -o "data/$program_name/nuclei_headless.json" || true
 
                 cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 2 finished in $((END_TIME - START_TIME)) seconds."
-
+                
                 # --- [STEP 6: AI ANALYSIS] ---
                 echo "[+] Step 6: Grandmaster AI Triage processing..."
                 log_step "STEP 6: AI Triage processing..."
