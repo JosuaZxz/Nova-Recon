@@ -215,7 +215,7 @@ jobs:
                 # TAMBAHKAN '-system-chrome' AGAR GAK DOWNLOAD LAGI
                 timeout 55m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -as -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
+                  -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
                   -interactsh-server oast.pro \
