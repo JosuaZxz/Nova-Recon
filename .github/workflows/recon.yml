@@ -183,17 +183,17 @@ jobs:
                 
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
-                # --- [GELOMBANG 1: THE CRITICAL BLITZ (SLICE MODE)] ---
+                # --- [GELOMBANG 1: THE CRITICAL BLITZ (NO-PIPE MODE)] ---
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
                 
-                # ACAK DAN AMBIL 2000 TARGET SAJA (Agar Tuntas dlm 1 Jam)
-                shuf "data/$program_name/mass_targets.txt" | head -n 2000 > "data/$program_name/nuclei_targets.txt"
+                # GUNAKAN '-n' PADA SHUF (ANTI BROKEN PIPE)
+                shuf -n 1000 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # HAPUS '> /dev/null' agar kita bisa lihat temuan secara real-time di log
-                timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
+                # Jalankan Blitz (Standard)
+                timeout 55m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
@@ -205,18 +205,19 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [GELOMBANG 2: SURGICAL HEADLESS (PRECISION MODE)] ---
+                # --- [GELOMBANG 2: SURGICAL HEADLESS (SYSTEM-CHROME)] ---
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # ACAK DAN AMBIL 50 TARGET TERBAIK (Anti-Timeout)
-                shuf "data/$program_name/active_hosts.txt" | head -n 50 > "data/$program_name/headless_targets.txt"
+                # Ambil 20 target paling mencurigakan (Headless berat, jangan serakah)
+                shuf -n 20 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
 
-                timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
+                # TAMBAHKAN '-system-chrome' AGAR GAK DOWNLOAD LAGI
+                timeout 55m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
+                  -as -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -headless -no-color -silent \
+                  -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
