@@ -101,6 +101,7 @@ jobs:
           # 2. PERSIAPAN TEMPUR
           log_step "🎯 Sniper ${{ matrix.sniper_id }} Engaging: $program_name (Target #$TARGET_INDEX dari $TOTAL_TARGETS)"
           mkdir -p "data/$program_name"
+          touch "data/$program_name/passive.txt" "data/$program_name/permutations.tmp"
           touch .seen_urls
 
           # STEP 1: HYBRID DISCOVERY (PASSIVE + ACTIVE PERMUTATION)
@@ -114,11 +115,12 @@ jobs:
 
           # 1b. Smart Permutation (AlterX) - Menebak subdomain baru berdasarkan pola yang ada
           # Kita batasi agar tidak meledak (Surgical Mode)
-          head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
+          [ -s "data/$program_name/passive.txt" ] && head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
 
           # 1c. DNS Resolution + Wildcard Filtering (Anti-Ghost Targets)
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
           dnsx -silent -r resolvers.txt -wd -retry 3 -t 100 -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          touch "data/$program_name/subdomains.txt"
           
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
