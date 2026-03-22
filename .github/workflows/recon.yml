@@ -65,9 +65,13 @@ jobs:
         run: |
 
           # --- [ SETUP TRUSTED RESOLVERS ] ---
+          # Menambah cadangan agar tidak kena blokir/limit DNS publik
           echo "1.1.1.1" > resolvers.txt
           echo "8.8.8.8" >> resolvers.txt
           echo "9.9.9.9" >> resolvers.txt
+          echo "1.0.0.1" >> resolvers.txt
+          echo "8.8.4.4" >> resolvers.txt
+          echo "208.67.222.222" >> resolvers.txt
           
           # 1. SETUP NOTIF CONFIG
           echo "telegram:" > notify-config.yaml
@@ -117,9 +121,12 @@ jobs:
           # Kita batasi agar tidak meledak (Surgical Mode)
           [ -s "data/$program_name/passive.txt" ] && head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
 
-          # 1c. DNS Resolution + Wildcard Filtering (Anti-Ghost Targets)
+          # 1c. Optimized DNS Resolution (Speed & Precision)
+          # Kita naikkan thread ke 300 agar ribuan domain Netflix beres dlm menit
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
-          dnsx -silent -r resolvers.txt -wd -retry 3 -t 100 -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          dnsx -silent -r resolvers.txt -t 300 -rl 500 -retry 2 -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          
+          # PENGAMAN: Pastikan file selalu ada
           touch "data/$program_name/subdomains.txt"
           
           END_TIME=$(date +%s)
