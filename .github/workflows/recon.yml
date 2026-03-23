@@ -46,6 +46,7 @@ jobs:
           install_go_tool hakrawler github.com/hakluke/hakrawler
           install_go_tool assetfinder github.com/tomnomnom/assetfinder
           install_go_tool dnsx github.com/projectdiscovery/dnsx/cmd/dnsx
+          install_go_tool cf-check github.com/dwisiswant0/cf-check
           install_go_tool alterx github.com/projectdiscovery/alterx/cmd/alterx
           install_go_tool waybackurls github.com/tomnomnom/waybackurls
           install_go_tool anew github.com/tomnomnom/anew
@@ -121,10 +122,18 @@ jobs:
           # Kita batasi agar tidak meledak (Surgical Mode)
           [ -s "data/$program_name/passive.txt" ] && head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
 
-          # 1c. Optimized DNS Resolution (Speed & Precision)
-          # Kita naikkan thread ke 300 agar ribuan domain Netflix beres dlm menit
+          # 1c. DNS Resolution + IP Extraction
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
-          dnsx -silent -r resolvers.txt -t 300 -rl 500 -retry 2 -o "data/$program_name/subdomains.txt" > /dev/null 2>&1 || true
+          dnsx -silent -r resolvers.txt -a -resp-only -o "data/$program_name/all_ips.txt" > /dev/null 2>&1 || true
+
+          # --- [ STEP 1.5: ORIGIN IP DISCOVERY ] ---
+          log_step "STEP 1.5: Hunting Origin IPs..."
+          # Saring IP yang beneran 'Telanjang' (Bukan Cloudflare)
+          cat "data/$program_name/all_ips.txt" | cf-check -v > "data/$program_name/origin_ips.txt" || true
+                
+          # Masukkan IP Origin ke daftar target utama
+          cat "data/$program_name/origin_ips.txt" >> "data/$program_name/passive.txt"
+          log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
           
           # PENGAMAN: Pastikan file selalu ada
           touch "data/$program_name/subdomains.txt"
@@ -196,53 +205,42 @@ jobs:
                 
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
-                # --- [GELOMBANG 1: THE CRITICAL BLITZ (NO-PIPE MODE)] ---
+                # --- [GELOMBANG 1: STANDARD BLITZ (GHOST SNIPER)] ---
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
                 
-                # GUNAKAN '-n' PADA SHUF (ANTI BROKEN PIPE)
-                shuf -n 1000 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # AMBIL 500 TARGET SAJA (Porsi Juara: Cepat & Tuntas)
+                shuf -n 500 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # Jalankan Blitz (Standard)
-                timeout 55m nuclei -l "data/$program_name/nuclei_targets.txt" \
+                # GHOST HEADERS: Bersih total, hanya User-Agent Browser asli
+                timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
                   -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                  -H "X-Forwarded-For: 127.0.0.1" \
-                  -H "X-Real-IP: 127.0.0.1" \
-                  -H "X-Originating-IP: 127.0.0.1" \
-                  -H "X-Forwarded-Host: localhost" \
-                  -H "Client-IP: 127.0.0.1" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [GELOMBANG 2: SURGICAL HEADLESS (SYSTEM-CHROME)] ---
+                # --- [GELOMBANG 2: SURGICAL HEADLESS (GHOST SNIPER)] ---
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # Ambil 20 target paling mencurigakan (Headless berat, jangan serakah)
-                shuf -n 20 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
+                # AMBIL 15 TARGET (Agar Browser tidak lag & data tertulis sempurna)
+                shuf -n 15 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
 
-                # TAMBAHKAN '-system-chrome' AGAR GAK DOWNLOAD LAGI
-                timeout 55m nuclei -l "data/$program_name/headless_targets.txt" \
+                timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
                   -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                  -H "X-Forwarded-For: 127.0.0.1" \
-                  -H "X-Real-IP: 127.0.0.1" \
-                  -H "X-Originating-IP: 127.0.0.1" \
-                  -H "X-Forwarded-Host: localhost" \
-                  -H "Client-IP: 127.0.0.1" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
 
                 cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
