@@ -128,12 +128,22 @@ jobs:
 
           # --- [ STEP 1.5: ORIGIN IP DISCOVERY ] ---
           log_step "STEP 1.5: Hunting Origin IPs..."
-          # Saring IP yang beneran 'Telanjang' (Bukan Cloudflare)
-          cat "data/$program_name/all_ips.txt" | cf-check -v > "data/$program_name/origin_ips.txt" || true
+          # 1. Ambil IP yang beneran Cloudflare
+          cat "data/$program_name/all_ips.txt" | cf-check -cf > "data/$program_name/cf_only.txt" || true
+          
+          # 2. Ambil IP yang TIDAK ada di daftar Cloudflare (Naked IPs)
+          if [ -s "data/$program_name/cf_only.txt" ]; then
+            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/all_ips.txt" > "data/$program_name/origin_ips.txt" 2>/dev/null || true
+          else
+            cp "data/$program_name/all_ips.txt" "data/$program_name/origin_ips.txt" || true
+          fi
                 
-          # Masukkan IP Origin ke daftar target utama
-          cat "data/$program_name/origin_ips.txt" >> "data/$program_name/passive.txt"
+          # --- [ KUNCI KEMENANGAN: MENGISI SUBDOMAINS.TXT ] ---
+          # Gabungkan hasil passive discovery dan IP Origin ke target utama
+          cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u > "data/$program_name/subdomains.txt"
+          
           log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
+          log_step "Total targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
           
           # PENGAMAN: Pastikan file selalu ada
           touch "data/$program_name/subdomains.txt"
