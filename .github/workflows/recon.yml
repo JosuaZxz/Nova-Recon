@@ -226,10 +226,10 @@ jobs:
                 # GHOST HEADERS: Bersih total, hanya User-Agent Browser asli
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,cve2026,fuzzing,dast \
+                  -tags rce,sqli,ssrf,lfi,exposure,misconfig,cve2024,cve2025,cve2026 \
                   -exclude-tags info,headless -exclude-severity low,info \
-                  -nmhe -c 25 -rl 50 -bs 10 -retries 2 -mhe 3 -no-color -stats \
-                  -interactsh-server oast.pro \
+                  -nmhe -c 20 -rl 40 -bs 10 -retries 2 -mhe 3 -no-color \
+                  -interactsh-server oast.pro -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
@@ -240,14 +240,14 @@ jobs:
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # AMBIL 15 TARGET (Agar Browser tidak lag & data tertulis sempurna)
-                shuf -n 15 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
+                # AMBIL 40 TARGET (Agar Browser tidak lag & data tertulis sempurna)
+                shuf -n 40 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags headless,takeover,cve2024,cve2025,cve2026,workflow,token,keys,credential \
+                  -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential,dast \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -c 5 -rl 20 -bs 2 -retries 2 -mhe 3 -headless -system-chrome -no-color -stats \
+                  -nmhe -c 10 -rl 30 -bs 5 -retries 2 -mhe 3 -headless -system-chrome -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
