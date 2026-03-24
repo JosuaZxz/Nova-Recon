@@ -126,21 +126,23 @@ jobs:
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
           dnsx -silent -r resolvers.txt -a -resp-only -o "data/$program_name/all_ips.txt" > /dev/null 2>&1 || true
 
-          # --- [ STEP 1.5: ORIGIN IP DISCOVERY ] ---
+          # --- [ STEP 1.5: ORIGIN IP DISCOVERY - SURGICAL ] ---
           log_step "STEP 1.5: Hunting Origin IPs..."
-          # 1. Ambil IP yang beneran Cloudflare
+          sort -u "data/$program_name/all_ips.txt" -o "data/$program_name/all_ips.txt"
+          
+          # Gunakan cf-check tanpa -v, ambil naked IP
           cat "data/$program_name/all_ips.txt" | cf-check -cf > "data/$program_name/cf_only.txt" || true
           
-          # 2. Ambil IP yang TIDAK ada di daftar Cloudflare (Naked IPs)
           if [ -s "data/$program_name/cf_only.txt" ]; then
-            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/all_ips.txt" > "data/$program_name/origin_ips.txt" 2>/dev/null || true
+            # Ambil Naked IP, batasi 500 saja yang paling segar (Surgical)
+            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/all_ips.txt" | head -n 500 > "data/$program_name/origin_ips.txt" 2>/dev/null || true
           else
-            cp "data/$program_name/all_ips.txt" "data/$program_name/origin_ips.txt" || true
+            head -n 500 "data/$program_name/all_ips.txt" > "data/$program_name/origin_ips.txt" || true
           fi
                 
-          # --- [ KUNCI KEMENANGAN: MENGISI SUBDOMAINS.TXT ] ---
-          # Gabungkan hasil passive discovery dan IP Origin ke target utama
-          cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u > "data/$program_name/subdomains.txt"
+          # --- [ MENGISI SUBDOMAINS.TXT ] ---
+          # Batasi total target scan per jam agar tidak terjadi IP Explosion (Max 3000)
+          cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"
           
           log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
           log_step "Total targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
@@ -227,9 +229,9 @@ jobs:
                 # GHOST HEADERS: Bersih total, hanya User-Agent Browser asli
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,fuzzing,dast \
+                  -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,cve2026,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
-                  -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
+                  -nmhe -rl 15 -bs 5 -retries 2 -fne -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
@@ -246,9 +248,9 @@ jobs:
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags headless,takeover,cve2024,cve2025,workflow,token,keys,credential \
+                  -tags headless,takeover,cve2024,cve2025,cve2026,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
+                  -nmhe -rl 5 -bs 2 -headless -system-chrome -fne -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
@@ -259,10 +261,18 @@ jobs:
                 log_step "Gelombang 2 finished in $((END_TIME - START_TIME)) seconds."
                 
                 # --- [STEP 6: AI ANALYSIS] ---
-                echo "[+] Step 6: Grandmaster AI Triage processing..."
                 log_step "STEP 6: AI Triage processing..."
-                # Hapus > /dev/null agar kita bisa lihat log error AI jika ada masalah
-                PROGRAM_NAME=$program_name python3 scripts/validate.py || true
+                
+                # Gabungkan hasil (Standard + Headless)
+                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
+
+                # JALANKAN AI HANYA JIKA ADA HASIL (Surgical Efficiency)
+                if [ -s "data/$program_name/nuclei_results.json" ]; then
+                  echo "[+] Findings detected! Invoking Grandmaster AI..."
+                  PROGRAM_NAME=$program_name python3 scripts/validate.py || true
+                else
+                  echo "[-] No findings in this session. Skipping AI Triage."
+                fi
                 
                 # STEP 7: SULTAN NOTIFIKASI
                 if [ -d "data/$program_name/alerts/high" ]; then
