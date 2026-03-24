@@ -231,7 +231,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,cve2026,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
-                  -nmhe -rl 15 -bs 5 -retries 2 -fne -no-color -silent \
+                  -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
@@ -250,7 +250,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -headless -system-chrome -fne -no-color -silent \
+                  -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
