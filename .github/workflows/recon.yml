@@ -126,18 +126,15 @@ jobs:
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
           dnsx -silent -r resolvers.txt -a -resp-only -o "data/$program_name/all_ips.txt" > /dev/null 2>&1 || true
 
-          # --- [ STEP 1.5: ORIGIN IP DISCOVERY - SURGICAL ] ---
+          # --- [ STEP 1.5: ORIGIN IP DISCOVERY - STABLE ] ---
           log_step "STEP 1.5: Hunting Origin IPs..."
-          sort -u "data/$program_name/all_ips.txt" -o "data/$program_name/all_ips.txt"
-          
-          # Gunakan cf-check tanpa -v, ambil naked IP
-          cat "data/$program_name/all_ips.txt" | cf-check -cf > "data/$program_name/cf_only.txt" || true
+          sort -u "data/$program_name/all_ips.txt" > "data/$program_name/ips_unique.tmp"
+          cat "data/$program_name/ips_unique.tmp" | cf-check -cf > "data/$program_name/cf_only.txt" || true
           
           if [ -s "data/$program_name/cf_only.txt" ]; then
-            # Ambil Naked IP, batasi 500 saja yang paling segar (Surgical)
-            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/all_ips.txt" | head -n 500 > "data/$program_name/origin_ips.txt" 2>/dev/null || true
+            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/ips_unique.tmp" | head -n 500 > "data/$program_name/origin_ips.txt" || true
           else
-            head -n 500 "data/$program_name/all_ips.txt" > "data/$program_name/origin_ips.txt" || true
+            head -n 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" || true
           fi
                 
           # --- [ MENGISI SUBDOMAINS.TXT ] ---
@@ -231,7 +228,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,xss,exposure,misconfig,cve2024,cve2025,cve2026,fuzzing,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
-                  -nmhe -rl 15 -bs 5 -retries 2 -no-color -silent \
+                  -nmhe -c 25 -rl 50 -bs 10 -retries 2 -mhe 3 -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
@@ -250,7 +247,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -rl 5 -bs 2 -headless -system-chrome -no-color -silent \
+                  -nmhe -c 5 -rl 20 -bs 2 -retries 2 -mhe 3 -headless -system-chrome -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
