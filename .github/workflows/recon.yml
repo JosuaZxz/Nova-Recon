@@ -166,19 +166,22 @@ jobs:
                 log_step "HTTPX finished in $((END_TIME - START_TIME)) seconds."
           
             if [ -s "data/$program_name/active_hosts.txt" ]; then
-                # --- [STEP 3: DEEP SIGHT 3.5 - SMART REDUCTION] ---
+                # ---[STEP 3: DEEP SIGHT 3.5 - SMART REDUCTION] ---
                 echo "[+] Step 3: Mining Endpoints..."
                 log_step "STEP 3: Endpoint Mining..."
                 START_TIME=$(date +%s)
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                # Mining (Dipersingkat waktunya agar tidak kena Ban)
-                timeout 5m bash -c "cat data/$program_name/domains_only.txt | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
-                timeout 5m bash -c "cat data/$program_name/active_urls_clean.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 | true
+                # MENCEGAH OOM CRASH (HUBSPOT FIX): Batasi URL yang disedot maksimal 150 target
+                head -n 150 data/$program_name/active_urls_clean.tmp > data/$program_name/safe_brawl.tmp
                 
-                # Katana (Sedikit lebih santai - Depth 2)
-                timeout 10m katana -list data/$program_name/active_urls_clean.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt > /dev/null 2>&1 || true
+                # Mining menggunakan safe_brawl.tmp agar RAM GitHub Runner 7GB tidak meledak
+                timeout 5m bash -c "cat data/$program_name/safe_brawl.tmp | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
+                timeout 5m bash -c "cat data/$program_name/safe_brawl.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 || true
+                
+                # Katana (Depth 2)
+                timeout 10m katana -list data/$program_name/safe_brawl.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt > /dev/null 2>&1 || true
                 
                 # GABUNGKAN
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | grep -v "localhost" | sort -u > data/$program_name/all_endpoints.txt
@@ -214,21 +217,21 @@ jobs:
                 
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
-                # --- [GELOMBANG 1: STANDARD BLITZ (GHOST SNIPER)] ---
+                # --- [GELOMBANG 1: REALITY CHECK BLITZ] ---
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
                 
-                # AMBIL 500 TARGET SAJA (Porsi Juara: Cepat & Tuntas)
-                shuf -n 500 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # THE GENIUS PIVOT: Turunkan ke 75 Target Super Prioritas agar SELESAI 100%
+                shuf -n 75 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # GHOST HEADERS: Bersih total, hanya User-Agent Browser asli
+                # Naikkan RPS ke 75, turunkan retries ke 1 (Fokus Kecepatan Tuntas)
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags rce,sqli,ssrf,lfi,exposure,misconfig,cve2024,cve2025,cve2026 \
+                  -tags rce,sqli,ssrf,lfi,exposure,misconfig,cve2024,cve2025,cve2026,dast \
                   -exclude-tags info,headless -exclude-severity low,info \
-                  -nmhe -c 20 -rl 40 -bs 10 -retries 2 -mhe 3 -no-color \
+                  -nmhe -c 35 -rl 75 -bs 15 -retries 1 -mhe 3 -no-color \
                   -interactsh-server oast.pro -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
@@ -236,18 +239,18 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
-                # --- [GELOMBANG 2: SURGICAL HEADLESS (GHOST SNIPER)] ---
+                # ---[GELOMBANG 2: SURGICAL HEADLESS SECRETS] ---
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # AMBIL 40 TARGET (Agar Browser tidak lag & data tertulis sempurna)
-                shuf -n 40 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
+                # Turunkan ke 20 Target (Headless memakan waktu 3x lebih lama dari standard)
+                shuf -n 20 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential,dast \
+                  -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential \
                   -exclude-tags info -exclude-severity low,info \
-                  -nmhe -c 10 -rl 30 -bs 5 -retries 2 -mhe 3 -headless -system-chrome -no-color -stats \
+                  -nmhe -c 5 -rl 25 -bs 3 -retries 1 -mhe 3 -headless -system-chrome -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
