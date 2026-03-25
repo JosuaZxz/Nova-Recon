@@ -155,6 +155,8 @@ CRITICAL LOGIC & TECHNICAL RULES:
 7. ONE-CLICK PROOF: In 'Quick Verification Link', provide the exact direct URL that proves the bug.
 8. MANDATORY PLACEHOLDERS: You MUST include these exact strings LITERALLY: '{{ip}}', '{{verify_url}}', '{{urls_list}}', '{{program}}', '{{severity}}', '{{payload}}', '{{request_evidence}}', and '{{response_evidence}}'.
 9. DESCRIPTIONS: You MUST write professional paragraphs for '{{title}}', '{{summary}}', '{{technical_explanation}}', '{{attack_vector}}', '{{technical_impact}}', '{{business_impact}}', and '{{remediation}}'. Do not leave ini empty.
+10. REDIRECT SKEPTICISM (NEW): If the response evidence shows a '301/302 Found' or '401/403' that redirects to a '/login', '/signin', or SSO page, this is a FALSE POSITIVE. In this case, return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
+11. DATA VERIFICATION (NEW): If the response body only shows generic HTML/JS code without actual sensitive user data (PII like emails, cleartext passwords, or internal IDs), return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 
 Structure:
 {luxury_template}
@@ -185,6 +187,11 @@ Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown":
                     print(f"[-] Sanitizer retry needed for {tid}: {e}")
                     # Fallback ke raw jika cleaned gagal
                     rep = json.loads(raw_json, strict=False)
+
+                # JIKA AI MENDETEKSI FALSE POSITIVE, JANGAN LANJUTKAN
+                if rep.get("title") == "FALSE_POSITIVE":
+                    print(f"[-] Dropping False Positive: {tid}")
+                    continue
                 
                 # Gunakan hash unik gabungan Program + Template ID
                 url_hash = hashlib.md5(f"{PROGRAM_NAME}_{tid}".encode()).hexdigest()
