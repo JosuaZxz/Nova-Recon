@@ -224,11 +224,25 @@ jobs:
                 # 1. Gabungkan semua temuan
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets_raw.tmp"
                 
-                # 2. KUNCI KEMENANGAN: STRICT SCOPE FILTER
-                # Kita hanya ambil target yang beneran mengandung nama domain asli dari file targets
-                # Misal: Jika di adobe.txt ada 'adobe.com', maka 'blog.cloudhq.net' akan DIBUANG.
-                TARGET_DOMAIN=$(head -n 1 "$target_path" | cut -d'.' -f1)
-                grep "$TARGET_DOMAIN" "data/$program_name/mass_targets_raw.tmp" > "data/$program_name/mass_targets.txt" || cp "data/$program_name/mass_targets_raw.tmp" "data/$program_name/mass_targets.txt"
+                # 2. KUNCI KEMENANGAN: ULTRA-STRICT SCOPE FILTER
+                > "data/$program_name/mass_targets.txt" # Kosongkan file dulu
+                
+                # Looping membaca root domain langsung dari file target asli (misal: hypr.com)
+                while read -r root_domain; do
+                  # Hapus spasi kosong jika ada
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')
+                  [ -z "$root_domain" ] && continue
+                  
+                  # REGEX AJAIB: Memastikan domain HANYA ADA DI HOSTNAME, bukan di parameter
+                  # Cocok dengan: https://sub.hypr.com/ atau http://hypr.com:8080/
+                  grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/mass_targets_raw.tmp" >> "data/$program_name/mass_targets.txt" || true
+                done < "$target_path"
+                
+                # Sort unik hasil filter
+                sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"
+                
+                # Fallback: Jika setelah difilter ternyata kosong (mencegah error shuf)
+                [ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
 
                 # 3. Ambil 75 target yang sudah lolos sensor scope
                 shuf -n 75 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
