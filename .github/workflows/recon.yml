@@ -221,9 +221,16 @@ jobs:
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
-                cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets.txt"
+                # 1. Gabungkan semua temuan
+                cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets_raw.tmp"
                 
-                # THE GENIUS PIVOT: Turunkan ke 75 Target Super Prioritas agar SELESAI 100%
+                # 2. KUNCI KEMENANGAN: STRICT SCOPE FILTER
+                # Kita hanya ambil target yang beneran mengandung nama domain asli dari file targets
+                # Misal: Jika di adobe.txt ada 'adobe.com', maka 'blog.cloudhq.net' akan DIBUANG.
+                TARGET_DOMAIN=$(head -n 1 "$target_path" | cut -d'.' -f1)
+                grep "$TARGET_DOMAIN" "data/$program_name/mass_targets_raw.tmp" > "data/$program_name/mass_targets.txt" || cp "data/$program_name/mass_targets_raw.tmp" "data/$program_name/mass_targets.txt"
+
+                # 3. Ambil 75 target yang sudah lolos sensor scope
                 shuf -n 75 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
                 # Naikkan RPS ke 75, turunkan retries ke 1 (Fokus Kecepatan Tuntas)
