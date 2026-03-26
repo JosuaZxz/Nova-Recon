@@ -157,6 +157,8 @@ CRITICAL LOGIC & TECHNICAL RULES:
 9. DESCRIPTIONS: You MUST write professional paragraphs for '{{title}}', '{{summary}}', '{{technical_explanation}}', '{{attack_vector}}', '{{technical_impact}}', '{{business_impact}}', and '{{remediation}}'. Do not leave ini empty.
 10. REDIRECT SKEPTICISM (NEW): If the response evidence shows a '301/302 Found' or '401/403' that redirects to a '/login', '/signin', or SSO page, this is a FALSE POSITIVE. In this case, return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 11. DATA VERIFICATION (NEW): If the response body only shows generic HTML/JS code without actual sensitive user data (PII like emails, cleartext passwords, or internal IDs), return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
+12. WAF & FORBIDDEN SKEPTICISM (NEW): If the response status is '403 Forbidden', '401 Unauthorized', or contains WAF headers like 'Cf-Mitigated', 'Cloudflare', or 'Akamai', it means the payload was BLOCKED. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
+13. TECHNOLOGY MISMATCH (NEW): If the bug implies a specific CMS or framework (e.g., PrestaShop, WordPress, Magento) but the target is clearly a different proprietary platform (e.g., Shopify), this is a FALSE POSITIVE. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 
 Structure:
 {luxury_template}
