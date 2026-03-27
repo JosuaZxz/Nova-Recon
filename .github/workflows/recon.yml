@@ -251,7 +251,7 @@ jobs:
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags rce,sqli,ssrf,lfi,exposure,misconfig,cve2024,cve2025,cve2026,dast \
-                  -exclude-tags info,headless -exclude-severity low,info \
+                  -exclude-tags info,headless,swagger,postman,docs -exclude-severity low,info \
                   -nmhe -c 35 -rl 75 -bs 15 -retries 1 -mhe 3 -no-color \
                   -interactsh-server oast.pro -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
@@ -270,7 +270,7 @@ jobs:
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential \
-                  -exclude-tags info -exclude-severity low,info \
+                  -exclude-tags info,swagger,postman,docs -exclude-severity low,info \
                   -nmhe -c 5 -rl 25 -bs 3 -retries 1 -mhe 3 -headless -system-chrome -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
