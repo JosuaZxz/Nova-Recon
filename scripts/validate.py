@@ -16,15 +16,55 @@ SEEN_DB = ".seen_urls"
 
 def get_verification_context(data):
     info = data.get("info", {})
-    # Ambil alasan teknis Nuclei (Matcher) agar AI tahu 'kenapa' ini bug
     matcher = data.get("matcher-name", "Behavioral Match")
-    extracted = data.get("extracted-results", [])
+    extracted = data.get("extracted-results",[])
     
     req = data.get("request", "")
     res = data.get("response", "")
     
-    # Ambil 1000 char saja (Cukup untuk bukti, tapi aman untuk JSON)
-    clean_res = res[:1000] if len(res) > 1000 else res
+    # ---[ THE ANNIHILATION FILTER (ZERO TOLERANCE) ] ---
+    # 1. BUNUH: WAF, Not Found, Unauthorized, Method Not Allowed, Bad Gateway
+    status_match = re.search(r'^HTTP/\d\.\d\s+(400|401|403|404|405|406|429|502|503)', res)
+    if status_match:
+        return None 
+        
+    # 2. BUNUH: Redirect (301/302) yang menuju halaman Login/SSO/Auth
+    if re.search(r'^HTTP/\d\.\d\s+(301|302|307|308)', res):
+        if re.search(r'Location:.*(/login|/signin|/auth|/sso|oauth|redirect_uri|wp-login)', res, re.IGNORECASE):
+            return None 
+            
+    # 3. BUNUH: Halaman Dokumentasi (Postman/Swagger) & Salesforce Aura Kosong
+    noise_keywords =[
+        "phs.getpostman.com", "schema.getpostman.com", "swagger-ui",
+        "api-docs", "\"state\":\"SUCCESS\"", "salesforce.com/aura"
+    ]
+    res_lower = res.lower()
+    
+    # KAMUS REGEX API KEY (High-Fidelity)
+    # Ini memastikan AI hanya bereaksi jika menemukan format rahasia yang matematis akurat
+    secret_regex = re.compile(r'('
+        r'AKIA[0-9A-Z]{16}|'                              # AWS Access Key
+        r'ghp_[a-zA-Z0-9]{36}|'                           # GitHub Personal Access Token
+        r'AIza[0-9A-Za-z-_]{35}|'                         # Google API Key
+        r'[rs]k_live_[a-zA-Z0-9]{24}|'                    # Stripe Live Key
+        r'xox[baprs]-[0-9]{12}-[0-9]{12}|'                # Slack Token
+        r'sq0csp-[0-9A-Za-z\-_]{43}|'                     # Square Access Token
+        r'BEGIN (RSA|OPENSSH) PRIVATE KEY'                # Private Certificates
+    r')')
+
+    if any(noise in res_lower for noise in noise_keywords):
+        # Jika ada noise dokumentasi, TETAP LAPORKAN JIKA ADA API KEY YANG BENTUKNYA VALID
+        if not secret_regex.search(res):
+            return None 
+            
+    # Jika tidak ada noise, pastikan jika ini dari template 'token/keys', formatnya harus logis
+    if "token" in tid.lower() or "key" in tid.lower() or "credential" in tid.lower():
+        if not secret_regex.search(res) and not re.search(r'("email"\s*:\s*"[^"]+@[^"]+\.[^"]+")', res_lower):
+             return None # Buang jika temuan token tidak masuk akal secara format
+    # ----------------------------------------------------
+
+    # Ambil 1200 char saja untuk bukti AI
+    clean_res = res[:1200] if len(res) > 1200 else res
     
     return {
         "template_id": data.get("template-id", "Unknown"),
@@ -33,11 +73,11 @@ def get_verification_context(data):
         "extracted_data": extracted,
         "severity": info.get("severity", "unknown"),
         "matched_url": data.get("matched-at", data.get("host", "")),
-        "request_evidence": req[:500],
+        "request_evidence": req[:600],
         "response_evidence": clean_res,
         "time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     }
-
+    
 def create_h1_draft(title, description, impact, severity, url):
     url_hash = hashlib.md5(url.encode()).hexdigest()
     if os.path.exists(SEEN_DB):
