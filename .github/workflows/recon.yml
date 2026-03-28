@@ -131,14 +131,14 @@ jobs:
           sort -u "data/$program_name/all_ips.txt" > "data/$program_name/ips_unique.tmp"
           cat "data/$program_name/ips_unique.tmp" | cf-check -cf > "data/$program_name/cf_only.txt" || true
           
-          if [ -s "data/$program_name/cf_only.txt" ]; then
-            grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/ips_unique.tmp" | head -n 500 > "data/$program_name/origin_ips.txt" || true
+          if[ -s "data/$program_name/cf_only.txt" ]; then
+            # Pake kurung dan 2>/dev/null untuk mematikan log error 'Broken pipe'
+            { grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/ips_unique.tmp" | head -n 500 > "data/$program_name/origin_ips.txt"; } 2>/dev/null || true
           else
             head -n 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" || true
           fi
                 
           # --- [ MENGISI SUBDOMAINS.TXT ] ---
-          # Batasi total target scan per jam agar tidak terjadi IP Explosion (Max 3000)
           cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"
           
           log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
@@ -149,8 +149,8 @@ jobs:
           
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
-          if [ -s "data/$program_name/subdomains.txt" ]; then
-            # --- [ STEP 2: HTTPX SWEET SPOT + REDIRECT FOLLOWER ] ---
+          if[ -s "data/$program_name/subdomains.txt" ]; then
+            # ---[ STEP 2: HTTPX SWEET SPOT + REDIRECT FOLLOWER ] ---
                 log_step "STEP 2: HTTPX Probing..."
                 START_TIME=$(date +%s)
                 
@@ -161,6 +161,11 @@ jobs:
                   -t 100 -rl 60 -timeout 3 -retries 0 -follow-host-redirects \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
+
+                # [ FIX HUBSPOT ]: Jika HTTPX gagal/diblokir WAF, ambil paksa dari list subdomain agar tidak skip!
+                if[ ! -s "data/$program_name/active_hosts.txt" ]; then
+                    head -n 1000 "data/$program_name/shuffled.txt" > "data/$program_name/active_hosts.txt"
+                fi
 
                 END_TIME=$(date +%s)
                 log_step "HTTPX finished in $((END_TIME - START_TIME)) seconds."
@@ -190,69 +195,43 @@ jobs:
                 
                 # --- SMART FILTER (JURUS URO) ---
                 echo "[+] Reducing noise with URO..."
-                # 1. Filter ekstensi menarik dulu
                 grep -iE '\.js|\.php|\.aspx|\.jsp|\.json|\/api\/|\?|=' data/$program_name/all_endpoints.txt > data/$program_name/pre_uro.txt || cp data/$program_name/all_endpoints.txt data/$program_name/pre_uro.txt
-                
-                # 2. Pangkas parameter duplikat dengan Uro
-                # Tambahkan '|| true' dan fallback cp jika uro gagal/not found
                 cat data/$program_name/pre_uro.txt | uro > data/$program_name/filtered_endpoints.txt 2>/dev/null || cp data/$program_name/pre_uro.txt data/$program_name/filtered_endpoints.txt
-                
                 echo "✅ Done. Targets filtered from $(wc -l < data/$program_name/all_endpoints.txt) to $(wc -l < data/$program_name/filtered_endpoints.txt)"
 
                 # --- [ LOGIKA PEMBUAT HIGH PRIORITY TARGETS ] ---
                 log_step "STEP 3.5: Sanitizing Endpoints..."
-                
-                # 1. Saring endpoint yang beneran punya "Daging" (Parameter, API, Backend Files)
                 grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\/api\/|\/v[0-9]\/" data/$program_name/filtered_endpoints.txt | \
                 grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
-                
-                # 2. Tambahkan Root Subdomain aktif sebagai cadangan agar file tidak kosong
                 cat data/$program_name/active_hosts.txt >> data/$program_name/high_priority_targets.txt
-                
-                # 3. Final Sort agar bersih
-                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
-
-                # 4. Fallback: Jika saringan terlalu ketat sampai kosong, gunakan hasil URO
-                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
-                
+                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt[ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
                 # --- [GELOMBANG 1: REALITY CHECK BLITZ] ---
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
                 START_TIME=$(date +%s)
 
-                # 1. Gabungkan semua temuan
                 cat "data/$program_name/active_hosts.txt" "data/$program_name/high_priority_targets.txt" | sort -u > "data/$program_name/mass_targets_raw.tmp"
                 
-                # 2. KUNCI KEMENANGAN: ULTRA-STRICT SCOPE FILTER
-                > "data/$program_name/mass_targets.txt" # Kosongkan file dulu
-                
-                # Looping membaca root domain langsung dari file target asli (misal: hypr.com)
+                # STRICT SCOPE FILTER (MENCEGAH NYASAR KE JPMORGAN DLL)
+                > "data/$program_name/mass_targets.txt"
                 while read -r root_domain; do
-                  # Hapus spasi kosong jika ada
-                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')
-                  [ -z "$root_domain" ] && continue
-                  
-                  # REGEX AJAIB: Memastikan domain HANYA ADA DI HOSTNAME, bukan di parameter
-                  # Cocok dengan: https://sub.hypr.com/ atau http://hypr.com:8080/
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')[ -z "$root_domain" ] && continue
                   grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/mass_targets_raw.tmp" >> "data/$program_name/mass_targets.txt" || true
                 done < "$target_path"
-                
-                # Sort unik hasil filter
-                sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"
-                
-                # Fallback: Jika setelah difilter ternyata kosong (mencegah error shuf)
-                [ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
+                sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"[ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
 
-                # 3. Ambil 75 target yang sudah lolos sensor scope
-                shuf -n 75 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # TARGET: 200 (Angka paling aman untuk 60 menit)
+                shuf -n 200 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # Naikkan RPS ke 75, turunkan retries ke 1 (Fokus Kecepatan Tuntas)
+                # THE BROAD-SPECTRUM HUNTER:
+                # Membuang peluru bising (dast, sqli, lfi, fuzzing). 
+                # Fokus ke aset terlupakan (takeover, config, exposure, cve2026).
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags rce,sqli,ssrf,lfi,exposure,misconfig,cve2024,cve2025,cve2026,dast \
-                  -exclude-tags info,headless,swagger,postman,docs -exclude-severity low,info \
-                  -nmhe -c 35 -rl 75 -bs 15 -retries 1 -mhe 3 -no-color \
+                  -tags takeover,exposure,config,misconfig,ssrf,rce,cve2024,cve2025,cve2026 \
+                  -exclude-tags info,headless,swagger,postman,docs,dast,sqli,fuzzing,lfi \
+                  -nmhe -c 30 -rl 100 -bs 15 -retries 1 -mhe 3 -no-color \
                   -interactsh-server oast.pro -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
