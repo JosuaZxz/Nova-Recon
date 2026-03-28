@@ -131,7 +131,7 @@ jobs:
           sort -u "data/$program_name/all_ips.txt" > "data/$program_name/ips_unique.tmp"
           cat "data/$program_name/ips_unique.tmp" | cf-check -cf > "data/$program_name/cf_only.txt" || true
           
-          if[ -s "data/$program_name/cf_only.txt" ]; then
+          if [ -s "data/$program_name/cf_only.txt" ]; then
             # Pake kurung dan 2>/dev/null untuk mematikan log error 'Broken pipe'
             { grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/ips_unique.tmp" | head -n 500 > "data/$program_name/origin_ips.txt"; } 2>/dev/null || true
           else
@@ -149,7 +149,7 @@ jobs:
           
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
-          if[ -s "data/$program_name/subdomains.txt" ]; then
+          if [ -s "data/$program_name/subdomains.txt" ]; then
             # ---[ STEP 2: HTTPX SWEET SPOT + REDIRECT FOLLOWER ] ---
                 log_step "STEP 2: HTTPX Probing..."
                 START_TIME=$(date +%s)
@@ -163,7 +163,7 @@ jobs:
                   -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
 
                 # [ FIX HUBSPOT ]: Jika HTTPX gagal/diblokir WAF, ambil paksa dari list subdomain agar tidak skip!
-                if[ ! -s "data/$program_name/active_hosts.txt" ]; then
+                if [ ! -s "data/$program_name/active_hosts.txt" ]; then
                     head -n 1000 "data/$program_name/shuffled.txt" > "data/$program_name/active_hosts.txt"
                 fi
 
@@ -204,7 +204,8 @@ jobs:
                 grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\/api\/|\/v[0-9]\/" data/$program_name/filtered_endpoints.txt | \
                 grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
                 cat data/$program_name/active_hosts.txt >> data/$program_name/high_priority_targets.txt
-                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt[ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
+                sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
+                [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
                 
                 # --- [GELOMBANG 1: REALITY CHECK BLITZ] ---
@@ -216,10 +217,12 @@ jobs:
                 # STRICT SCOPE FILTER (MENCEGAH NYASAR KE JPMORGAN DLL)
                 > "data/$program_name/mass_targets.txt"
                 while read -r root_domain; do
-                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')[ -z "$root_domain" ] && continue
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')
+                  [ -z "$root_domain" ] && continue
                   grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/mass_targets_raw.tmp" >> "data/$program_name/mass_targets.txt" || true
                 done < "$target_path"
-                sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"[ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
+                sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"
+                [ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
 
                 # TARGET: 200 (Angka paling aman untuk 60 menit)
                 shuf -n 200 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
