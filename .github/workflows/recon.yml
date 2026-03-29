@@ -129,11 +129,11 @@ jobs:
           # --- [ STEP 1.5: ORIGIN IP DISCOVERY - STABLE ] ---
           log_step "STEP 1.5: Hunting Origin IPs..."
           sort -u "data/$program_name/all_ips.txt" > "data/$program_name/ips_unique.tmp"
-          cat "data/$program_name/ips_unique.tmp" | cf-check -cf > "data/$program_name/cf_only.txt" || true
+          < "data/$program_name/ips_unique.tmp" cf-check -cf > "data/$program_name/cf_only.txt" 2>/dev/null || true
           
           if [ -s "data/$program_name/cf_only.txt" ]; then
-            # Pake kurung dan 2>/dev/null untuk mematikan log error 'Broken pipe'
-            { grep -v -F -f "data/$program_name/cf_only.txt" "data/$program_name/ips_unique.tmp" | head -n 500 > "data/$program_name/origin_ips.txt"; } 2>/dev/null || true
+            # FIX: Gunakan -m 500 menggantikan pipe head agar terhindar dari Broken Pipe
+            grep -v -F -f "data/$program_name/cf_only.txt" -m 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" 2>/dev/null || true
           else
             head -n 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" || true
           fi
@@ -224,6 +224,13 @@ jobs:
                 sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"
                 [ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
 
+                # TARGET: Smart Curation (Fokus Dev/Stg/API) maks 300
+                grep -iE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets.txt" || true
+                CURRENT_NUC=$(wc -l < "data/$program_name/nuclei_targets.txt")
+                if[ "$CURRENT_NUC" -lt 300 ]; then
+                    grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
+                fi
+
                 # TARGET: 200 (Angka paling aman untuk 60 menit)
                 shuf -n 200 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
@@ -234,7 +241,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags takeover,exposure,config,misconfig,ssrf,rce,cve2024,cve2025,cve2026 \
                   -exclude-tags info,headless,swagger,postman,docs,dast,sqli,fuzzing,lfi \
-                  -nmhe -c 30 -rl 100 -bs 15 -retries 1 -mhe 3 -no-color \
+                  -nmhe -c 20 -rl 75 -bs 5 -retries 2 -mhe 15 -no-color \
                   -interactsh-server oast.pro -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
@@ -247,7 +254,7 @@ jobs:
                 START_TIME=$(date +%s)
 
                 # Turunkan ke 20 Target (Headless memakan waktu 3x lebih lama dari standard)
-                shuf -n 20 "data/$program_name/active_hosts.txt" -o "data/$program_name/headless_targets.txt"
+                shuf -n 30 "data/$program_name/high_priority_targets.txt" -o "data/$program_name/headless_targets.txt"
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
