@@ -227,12 +227,12 @@ jobs:
                 # TARGET: Smart Curation (Fokus Dev/Stg/API) maks 300
                 grep -iE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets.txt" || true
                 CURRENT_NUC=$(wc -l < "data/$program_name/nuclei_targets.txt")
-                if[ "$CURRENT_NUC" -lt 300 ]; then
+                if [ "$CURRENT_NUC" -lt 300 ]; then
                     grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
                 fi
 
-                # TARGET: 200 (Angka paling aman untuk 60 menit)
-                shuf -n 200 "data/$program_name/mass_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # ACAK HASIL KURASI AGAR TIDAK BERURUTAN (MENCEGAH WAF AUTO-BLOCK)
+                shuf "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
                 # THE BROAD-SPECTRUM HUNTER:
                 # Membuang peluru bising (dast, sqli, lfi, fuzzing). 
@@ -260,7 +260,7 @@ jobs:
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential \
                   -exclude-tags info,swagger,postman,docs -exclude-severity low,info \
-                  -nmhe -c 5 -rl 25 -bs 3 -retries 1 -mhe 3 -headless -system-chrome -no-color -stats \
+                  -nmhe -c 5 -rl 25 -bs 3 -retries 2 -mhe 15 -headless -system-chrome -no-color -stats \
                   -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
