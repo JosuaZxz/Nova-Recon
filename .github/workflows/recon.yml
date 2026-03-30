@@ -118,9 +118,8 @@ jobs:
           assetfinder --subs-only < "$target_path" >> "data/$program_name/passive.txt" 2>/dev/null || true
           sort -u "data/$program_name/passive.txt" -o "data/$program_name/passive.txt"
 
-          # 1b. Smart Permutation (AlterX) - Menebak subdomain baru berdasarkan pola yang ada
-          # Kita batasi agar tidak meledak (Surgical Mode)
-          [ -s "data/$program_name/passive.txt" ] && head -n 100 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
+          # 1b. Smart Permutation (AlterX) - Melebarkan jaring tebakan ke 1000 subdomain
+          [ -s "data/$program_name/passive.txt" ] && head -n 1000 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
 
           # 1c. DNS Resolution + IP Extraction
           cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
@@ -156,9 +155,11 @@ jobs:
                 
                 shuf "data/$program_name/subdomains.txt" -o "data/$program_name/shuffled.txt"
 
-                timeout 45m httpx -l "data/$program_name/shuffled.txt" \
+                # ESKALASI 1: DEEP PORT SCANNING (Mencari Panel Internal/Dev)
+                timeout 55m httpx -l "data/$program_name/shuffled.txt" \
+                  -p 80,443,8080,8443,3000,5000,8000,8001,9000,9200 \
                   -silent -ip -td -mc 200,301,302,401,403,405 \
-                  -t 100 -rl 60 -timeout 3 -retries 0 -follow-host-redirects \
+                  -t 100 -rl 80 -timeout 3 -retries 0 -follow-host-redirects \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -o "data/$program_name/active_hosts.txt" > /dev/null 2>&1 || true
 
@@ -234,15 +235,14 @@ jobs:
                 # ACAK HASIL KURASI AGAR TIDAK BERURUTAN (MENCEGAH WAF AUTO-BLOCK)
                 shuf "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # THE BROAD-SPECTRUM HUNTER:
-                # Membuang peluru bising (dast, sqli, lfi, fuzzing). 
-                # Fokus ke aset terlupakan (takeover, config, exposure, cve2026).
-                timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
+                # THE BROAD-SPECTRUM HUNTER (HYPER-DRIVE MODE):
+                # Timeout diperpanjang ke 120m, Kecepatan dinaikkan ke RPS 150 agar tidak berhenti di 6%
+                timeout 120m nuclei -l "data/$program_name/nuclei_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags takeover,exposure,config,misconfig,ssrf,rce,cve2024,cve2025,cve2026 \
                   -exclude-tags info,headless,swagger,postman,docs,dast,sqli,fuzzing,lfi \
-                  -nmhe -c 20 -rl 75 -bs 5 -retries 2 -mhe 15 -no-color \
-                  -interactsh-server oast.pro -stats \
+                  -nmhe -c 30 -rl 150 -bs 10 -retries 2 -mhe 15 -no-color \
+                  -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
@@ -261,7 +261,6 @@ jobs:
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential \
                   -exclude-tags info,swagger,postman,docs -exclude-severity low,info \
                   -nmhe -c 5 -rl 25 -bs 3 -retries 2 -mhe 15 -headless -system-chrome -no-color -stats \
-                  -interactsh-server oast.pro \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
 
