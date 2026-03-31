@@ -33,6 +33,7 @@ jobs:
           go-version: '>=1.20'
 
       - name: Install Tools (Failsafe Mode)
+        timeout-minutes: 15
         run: |
           sudo apt-get update && sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils python3-pip
           pip3 install uro
@@ -113,17 +114,17 @@ jobs:
           log_step "STEP 1: Hybrid Discovery (Passive + Active)..."
           START_TIME=$(date +%s)
           
-          # 1a. Passive Discovery (Existing)
-          subfinder -dL "$target_path" -all -silent -o "data/$program_name/passive.txt" > /dev/null 2>&1 || true
-          assetfinder --subs-only < "$target_path" >> "data/$program_name/passive.txt" 2>/dev/null || true
+          # 1a. Passive Discovery (Dengan Limit Waktu)
+          timeout 10m subfinder -dL "$target_path" -all -silent -o "data/$program_name/passive.txt" > /dev/null 2>&1 || true
+          timeout 5m assetfinder --subs-only < "$target_path" >> "data/$program_name/passive.txt" 2>/dev/null || true
           sort -u "data/$program_name/passive.txt" -o "data/$program_name/passive.txt"
 
-          # 1b. Smart Permutation (AlterX) - Melebarkan jaring tebakan ke 1000 subdomain
-          [ -s "data/$program_name/passive.txt" ] && head -n 1000 "data/$program_name/passive.txt" | alterx -silent > "data/$program_name/permutations.tmp" || true
+          # 1b. Smart Permutation (AlterX) - Terkontrol agar tidak Blackhole
+          # Batasi input 500, batasi waktu 5 menit, dan potong output maksimal 50.000 tebakan saja!
+          [ -s "data/$program_name/passive.txt" ] && timeout 5m bash -c "head -n 500 data/$program_name/passive.txt | alterx -silent | head -n 50000 > data/$program_name/permutations.tmp" 2>/dev/null || true
 
-          # 1c. DNS Resolution + IP Extraction
-          cat "data/$program_name/passive.txt" "data/$program_name/permutations.tmp" | \
-          dnsx -silent -r resolvers.txt -a -resp-only -o "data/$program_name/all_ips.txt" > /dev/null 2>&1 || true
+          # 1c. DNS Resolution + IP Extraction (Dengan Limit Waktu)
+          timeout 15m bash -c "cat data/$program_name/passive.txt data/$program_name/permutations.tmp | dnsx -silent -r resolvers.txt -a -resp-only -o data/$program_name/all_ips.txt" > /dev/null 2>&1 || true
 
           # --- [ STEP 1.5: ORIGIN IP DISCOVERY - STABLE ] ---
           log_step "STEP 1.5: Hunting Origin IPs..."
