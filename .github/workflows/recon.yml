@@ -233,8 +233,8 @@ jobs:
                     grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
                 fi
 
-                # ACAK HASIL KURASI AGAR TIDAK BERURUTAN (MENCEGAH WAF AUTO-BLOCK)
-                shuf "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # ACAK DAN POTONG PAKSA MAKSIMAL 300 (Mencegah Tragedi 15% Timeout)
+                shuf -n 300 "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
                 # THE BROAD-SPECTRUM HUNTER (HYPER-DRIVE MODE):
                 # Timeout diperpanjang ke 120m, Kecepatan dinaikkan ke RPS 150 agar tidak berhenti di 6%
@@ -269,12 +269,29 @@ jobs:
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 2 finished in $((END_TIME - START_TIME)) seconds."
+
+                # ---[STEP 5.5: DEEP JS SECRETS MINING (THE OP WEAPON)] ---
+                log_step "STEP 5.5: Deep JS Secrets Mining..."
+                START_TIME=$(date +%s)
+                
+                # Ekstrak 500 file Javascript tersembunyi
+                grep -iE "\.js$" "data/$program_name/all_endpoints.txt" | shuf -n 500 > "data/$program_name/js_targets.txt" || true
+                if [ -s "data/$program_name/js_targets.txt" ]; then
+                    timeout 30m nuclei -l "data/$program_name/js_targets.txt" \
+                      -t /home/runner/nuclei-templates/http/exposures/ \
+                      -c 30 -rl 150 -bs 10 -nmhe -retries 2 -mhe 15 -no-color \
+                      -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                      -jsonl -o "data/$program_name/nuclei_js.json" > /dev/null 2>&1 || true
+                fi
+                
+                END_TIME=$(date +%s)
+                log_step "JS Mining finished in $((END_TIME - START_TIME)) seconds."
                 
                 # --- [STEP 6: AI ANALYSIS] ---
                 log_step "STEP 6: AI Triage processing..."
                 
-                # Gabungkan hasil (Standard + Headless)
-                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
+                # Gabungkan hasil (Standard + Headless + JS OP Weapon)
+                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
                 # JALANKAN AI HANYA JIKA ADA HASIL (Surgical Efficiency)
                 if [ -s "data/$program_name/nuclei_results.json" ]; then
