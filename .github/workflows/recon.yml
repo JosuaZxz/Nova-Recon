@@ -239,9 +239,9 @@ jobs:
                 # THE BROAD-SPECTRUM HUNTER (HYPER-DRIVE MODE):
                 # Timeout diperpanjang ke 120m, Kecepatan dinaikkan ke RPS 150 agar tidak berhenti di 6%
                 timeout 120m nuclei -l "data/$program_name/nuclei_targets.txt" \
-                  -t /home/runner/nuclei-templates -severity critical,high,medium \
-                  -tags takeover,exposure,config,misconfig,ssrf,rce,cve2024,cve2025,cve2026 \
-                  -exclude-tags info,headless,swagger,postman,docs,dast,sqli,fuzzing,lfi \
+                  -t /home/runner/nuclei-templates -severity critical,high \
+                  -tags takeover,exposure,misconfig,ssrf,rce,cve2024,cve2025,cve2026,cloud,auth-bypass \
+                  -exclude-tags info,medium,headless,swagger,postman,docs,dast,sqli,fuzzing,lfi \
                   -nmhe -c 30 -rl 150 -bs 10 -retries 2 -mhe 15 -no-color \
                   -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
@@ -276,9 +276,9 @@ jobs:
                 
                 # Ekstrak 500 file Javascript tersembunyi
                 grep -iE "\.js$" "data/$program_name/all_endpoints.txt" | shuf -n 500 > "data/$program_name/js_targets.txt" || true
-                if [ -s "data/$program_name/js_targets.txt" ]; then
+                if[ -s "data/$program_name/js_targets.txt" ]; then
                     timeout 30m nuclei -l "data/$program_name/js_targets.txt" \
-                      -t /home/runner/nuclei-templates/http/exposures/ \
+                      -t /home/runner/nuclei-templates/http/exposures/tokens/ \
                       -c 30 -rl 150 -bs 10 -nmhe -retries 2 -mhe 15 -no-color \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                       -jsonl -o "data/$program_name/nuclei_js.json" > /dev/null 2>&1 || true
