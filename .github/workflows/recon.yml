@@ -263,7 +263,7 @@ jobs:
                       -tags sqli,lfi,ssrf,rce \
                       -nmhe -c 20 -rl 100 -bs 5 -retries 2 -mhe 15 -no-color -stats \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                      -jsonl -o "data/$program_name/nuclei_params.json" > || true
+                      -jsonl -o "data/$program_name/nuclei_params.json" || true
                 fi
                 
                 END_TIME=$(date +%s)
@@ -300,7 +300,7 @@ jobs:
                       -t /home/runner/nuclei-templates/http/exposures/tokens/ \
                       -c 30 -rl 150 -bs 10 -nmhe -retries 2 -mhe 15 -no-color \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                      -jsonl -o "data/$program_name/nuclei_js.json" > || true
+                      -jsonl -o "data/$program_name/nuclei_js.json" || true
                 fi
                 
                 END_TIME=$(date +%s)
