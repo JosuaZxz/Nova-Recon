@@ -233,8 +233,8 @@ jobs:
                     grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
                 fi
 
-                # ACAK DAN POTONG PAKSA MAKSIMAL 300 (Mencegah Tragedi 15% Timeout)
-                shuf -n 300 "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
+                # THE SNIPER SCOPE: Potong paksa maksimal 75 target Paling Berbahaya (Jaminan 100% Selesai)
+                shuf -n 75 "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
                 # THE BROAD-SPECTRUM HUNTER (HYPER-DRIVE MODE):
                 # Timeout diperpanjang ke 120m, Kecepatan dinaikkan ke RPS 150 agar tidak berhenti di 6%
@@ -250,12 +250,31 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
 
+                # ---[GELOMBANG 1.5: THE PARAMETER ASSASSIN (SQLi, LFI, SSRF)] ---
+                log_step "STEP 4.5: Gelombang 1.5 - Parameter Fuzzing..."
+                START_TIME=$(date +%s)
+                
+                # Ekstrak 50 URL yang memiliki parameter (?id=, ?url=, dll)
+                grep "=" "data/$program_name/high_priority_targets.txt" | shuf -n 50 > "data/$program_name/param_targets.txt" || true
+                if[ -s "data/$program_name/param_targets.txt" ]; then
+                    timeout 45m nuclei -l "data/$program_name/param_targets.txt" \
+                      -t /home/runner/nuclei-templates/http/vulnerabilities/ \
+                      -t /home/runner/nuclei-templates/http/cves/ \
+                      -tags sqli,lfi,ssrf,rce \
+                      -nmhe -c 20 -rl 100 -bs 5 -retries 2 -mhe 15 -no-color -stats \
+                      -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                      -jsonl -o "data/$program_name/nuclei_params.json" > /dev/null 2>&1 || true
+                fi
+                
+                END_TIME=$(date +%s)
+                log_step "Gelombang 1.5 finished in $((END_TIME - START_TIME)) seconds."
+
                 # ---[GELOMBANG 2: SURGICAL HEADLESS SECRETS] ---
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # Turunkan ke 20 Target (Headless memakan waktu 3x lebih lama dari standard)
-                shuf -n 30 "data/$program_name/high_priority_targets.txt" -o "data/$program_name/headless_targets.txt"
+                # Turunkan ke 15 Target (Headless memakan waktu 3x lebih lama dari standard)
+                shuf -n 15 "data/$program_name/high_priority_targets.txt" -o "data/$program_name/headless_targets.txt"
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
@@ -290,8 +309,8 @@ jobs:
                 # --- [STEP 6: AI ANALYSIS] ---
                 log_step "STEP 6: AI Triage processing..."
                 
-                # Gabungkan hasil (Standard + Headless + JS OP Weapon)
-                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
+                # Gabungkan hasil (Standard + Params + Headless + JS OP Weapon)
+                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_params.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
                 # JALANKAN AI HANYA JIKA ADA HASIL (Surgical Efficiency)
                 if [ -s "data/$program_name/nuclei_results.json" ]; then
