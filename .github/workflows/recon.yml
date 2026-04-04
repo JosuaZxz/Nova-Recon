@@ -139,7 +139,7 @@ jobs:
           fi
                 
           # --- [ MENGISI SUBDOMAINS.TXT ] ---
-          cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"
+          { cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
           
           log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
           log_step "Total targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
@@ -256,7 +256,7 @@ jobs:
                 
                 # Ekstrak 50 URL yang memiliki parameter (?id=, ?url=, dll)
                 grep "=" "data/$program_name/high_priority_targets.txt" | shuf -n 50 > "data/$program_name/param_targets.txt" || true
-                if[ -s "data/$program_name/param_targets.txt" ]; then
+                if [ -s "data/$program_name/param_targets.txt" ]; then
                     timeout 45m nuclei -l "data/$program_name/param_targets.txt" \
                       -t /home/runner/nuclei-templates/http/vulnerabilities/ \
                       -t /home/runner/nuclei-templates/http/cves/ \
