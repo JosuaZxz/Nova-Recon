@@ -1,0 +1,32 @@
+id: ghost-graphql-introspection
+
+info:
+  name: GraphQL Introspection Query Enabled
+  author: Sniper-Predator
+  severity: high
+  description: Mengunduh skema database rahasia dari endpoint GraphQL.
+  tags: graphql,api,exposure,custom
+
+requests:
+  - method: POST
+    path:
+      - "{{BaseURL}}/graphql"
+      - "{{BaseURL}}/api/graphql"
+      - "{{BaseURL}}/v1/graphql"
+      - "{{BaseURL}}/query"
+    headers:
+      Content-Type: "application/json"
+    body: '{"query":"query IntrospectionQuery{__schema{queryType{name}mutationType{name}subscriptionType{name}types{...FullType}directives{name description locations args{...InputValue}}}}fragment FullType on __Type{kind name description fields(includeDeprecated:true){name description args{...InputValue}type{...TypeRef}isDeprecated deprecationReason}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){name description isDeprecated deprecationReason}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{name description type{...TypeRef}defaultValue}fragment TypeRef on __Type{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name}}}}}}}}"}'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "__schema"
+          - "mutationType"
+          - "queryType"
+        condition: and
+
+      - type: status
+        status:
+          - 200
