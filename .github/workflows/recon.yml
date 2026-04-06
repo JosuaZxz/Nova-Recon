@@ -138,12 +138,15 @@ jobs:
             head -n 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" || true
           fi
                 
-          # --- [ THE DELTA MONITOR: MENGISOLASI TARGET BARU ] ---
+          # ---[ THE DELTA MONITOR: MENGISOLASI TARGET BARU (HANYA SUBDOMAIN) ] ---
           mkdir -p .known_targets
           touch ".known_targets/${program_name}.txt"
           
-          # Gabungkan semua temuan, lalu gunakan 'anew' untuk memfilter HANYA yang belum pernah dilihat sebelumnya
-          { cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 | anew ".known_targets/${program_name}.txt" > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
+          # 1. Filter HANYA subdomain baru (Abaikan IP karena Cloudflare IP selalu berotasi)
+          cat "data/$program_name/passive.txt" | sort -u | anew ".known_targets/${program_name}.txt" > "data/$program_name/new_subdomains.txt" || true
+          
+          # 2. Gabungkan subdomain BARU dengan Origin IP segar hari ini
+          { cat "data/$program_name/new_subdomains.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
           
           log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
           log_step "Total targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
