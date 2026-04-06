@@ -247,15 +247,7 @@ jobs:
                 # THE SILVER BULLET HUNTER (CUSTOM P1/P2 MODE):
                 # Fokus direktori mematikan: AWS, Azure, GCP, RCE, SSRF dan Takeover. WAF tidak akan curiga.
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
-                  -t /home/runner/nuclei-templates/http/cves/2024/ \
-                  -t /home/runner/nuclei-templates/http/cves/2025/ \
-                  -t /home/runner/nuclei-templates/http/cves/2026/ \
-                  -t /home/runner/nuclei-templates/http/exposures/ \
-                  -t /home/runner/nuclei-templates/http/vulnerabilities/ \
-                  -t /home/runner/nuclei-templates/http/misconfiguration/ \
-                  -severity critical,high \
-                  -tags takeover,aws,azure,gcp,ssrf,rce,auth-bypass,api,token,key \
-                  -exclude-tags info,low,medium,headless,dast,sqli,fuzzing \
+                  -t custom-templates/ \
                   -nmhe -c 20 -rl 100 -bs 5 -retries 2 -mhe 15 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
