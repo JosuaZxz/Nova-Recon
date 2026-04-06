@@ -1,0 +1,35 @@
+id: ghost-sourcemap-exposure
+
+info:
+  name: JavaScript Source Map Leakage
+  author: Sniper-Predator
+  severity: medium
+  description: Mencuri Source Code asli dari aplikasi frontend modern.
+  tags: sourcemap,exposure,js,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/static/js/main.js.map"
+      - "{{BaseURL}}/_next/static/chunks/pages/_app.js.map"
+      - "{{BaseURL}}/build/bundle.js.map"
+      - "{{BaseURL}}/js/app.js.map"
+      - "{{BaseURL}}/assets/index.js.map"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "\"sourcesContent\":"
+          - "\"webpack:///"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "<html>"
+          - "<!DOCTYPE html>"
+        negative: true
