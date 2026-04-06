@@ -1,0 +1,39 @@
+id: ghost-actuator-leak
+
+info:
+  name: Spring Boot / Microservices Actuator Exposure
+  author: Sniper-Predator
+  severity: critical
+  description: Mencuri konfigurasi environment dan secret dari Actuator yang terekspos.
+  tags: exposure,config,actuator,springboot,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/actuator/env"
+      - "{{BaseURL}}/env"
+      - "{{BaseURL}}/api/actuator/env"
+      - "{{BaseURL}}/management/env"
+      - "{{BaseURL}}/actuator/heapdump"
+    headers:
+      Accept: "application/json"
+      X-Forwarded-For: "127.0.0.1"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "activeProfiles"
+          - "propertySources"
+          - "systemProperties"
+          - "applicationConfig"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "<html>"
+        negative: true
