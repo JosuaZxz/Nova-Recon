@@ -1,0 +1,33 @@
+id: ghost-debug-rce-exposure
+
+info:
+  name: Framework Debug Mode Exposure (Potential RCE)
+  author: Sniper-Predator
+  severity: critical
+  description: Mendeteksi halaman Debug Mode (Laravel Ignition, Django, Werkzeug) yang dapat memicu Remote Code Execution.
+  tags: exposure,debug,rce,laravel,django,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_ignition/execute-solution"
+      - "{{BaseURL}}/?debug=true"
+      - "{{BaseURL}}/console"
+      - "{{BaseURL}}/__profiler__"
+    headers:
+      X-Forwarded-For: "127.0.0.1"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        words:
+          - "Facade\\Ignition"
+          - "Laravel"
+          - "Django Debug"
+          - "Werkzeug powered traceback interpreter"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+          - 500
