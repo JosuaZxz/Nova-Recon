@@ -1,0 +1,37 @@
+id: ghost-swagger-api-leak
+
+info:
+  name: Unauthenticated API Documentation Leak
+  author: Sniper-Predator
+  severity: high
+  description: Mengunduh peta blueprint API internal (Swagger/OpenAPI).
+  tags: exposure,api,swagger,openapi,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/swagger.json"
+      - "{{BaseURL}}/api-docs"
+      - "{{BaseURL}}/v3/api-docs"
+      - "{{BaseURL}}/openapi.json"
+      - "{{BaseURL}}/api/swagger.json"
+    headers:
+      Accept: "application/json"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "\"swagger\":"
+          - "\"openapi\":"
+          - "\"paths\":"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - "<html>"
+        negative: true
