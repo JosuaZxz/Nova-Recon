@@ -21,6 +21,9 @@ def get_verification_context(data):
     
     req = data.get("request", "")
     res = data.get("response", "")
+
+    # [+] INJEKSI SURGICAL FIX: Definisikan tid agar filter tidak NameError
+    tid = data.get("template-id", "Unknown")
     
     # ---[ THE ANNIHILATION FILTER (ZERO TOLERANCE) ] ---
     # 1. BUNUH: WAF, Not Found, Unauthorized, Method Not Allowed, Bad Gateway
