@@ -192,7 +192,7 @@ CRITICAL LOGIC & TECHNICAL RULES:
 1. NO HALLUCINATION: DO NOT invent CVE IDs. Use only provided data.
 2. PUBLIC URL SKEPTICISM: If the URL contains '/article/', '/blog/', '/help/', or '/announcements/', it is likely a PUBLIC page. DO NOT claim it as a "Dashboard Bypass" unless you see private user data.
 3. BOILERPLATE TRAP: Do not be fooled by CSS classes like 'anticon' or 'loadingCircle'. These are standard components and NOT proof of dashboard access.
-4. SEVERITY CHECK: If the bug is only a "version match" (Next.js <= 12) without proof of stolen data, report it as "Vulnerable Framework Version" with Medium/Low severity, NOT Critical.
+4. SEVERITY CHECK: If the bug is only a "version match" (like Next.js or React) without proof of stolen data, DO NOT report it. Return ONLY JSON: {"title": "FALSE_POSITIVE"}.
 5. SMOKING GUN: In 'Technical Analysis', point out exactly why 'response_evidence' proves the bug (e.g., "The presence of compromised polyfill.io link in source code").
 6. NO 'NONE' POLICY: Explain behavioral detection if request is empty. NEVER write 'None' or 'Not Applicable'.
 7. ONE-CLICK PROOF: In 'Quick Verification Link', provide the exact direct URL that proves the bug.
