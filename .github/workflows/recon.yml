@@ -216,6 +216,14 @@ jobs:
                 sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
                 [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
                 log_step "Sanitization finished. High priority targets: $(wc -l < data/$program_name/high_priority_targets.txt)"
+
+                # [+] INJEKSI STRICT SCOPE ANNIHILATOR (ANTI-TWITTER)
+                > "data/$program_name/inscope.tmp"
+                while read -r root_domain; do
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')[ -z "$root_domain" ] && continue
+                  grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/high_priority_targets.txt" >> "data/$program_name/inscope.tmp" || true
+                done < "$target_path"
+                sort -u -o "data/$program_name/high_priority_targets.txt" "data/$program_name/inscope.tmp"
                 
                 # --- [GELOMBANG 1: REALITY CHECK BLITZ] ---
                 log_step "STEP 4: Gelombang 1 - Critical Blitz..."
@@ -247,7 +255,7 @@ jobs:
                 # THE SILVER BULLET HUNTER (CUSTOM P1/P2 MODE):
                 # Fokus direktori mematikan: AWS, Azure, GCP, RCE, SSRF dan Takeover. WAF tidak akan curiga.
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets.txt" \
-                  -t custom-templates \
+                  -t "$GITHUB_WORKSPACE/custom-templates" \
                   -nmhe -c 20 -rl 100 -bs 5 -retries 2 -mhe 15 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
