@@ -220,7 +220,7 @@ jobs:
                 # [+] INJEKSI STRICT SCOPE ANNIHILATOR (ANTI-TWITTER)
                 > "data/$program_name/inscope.tmp"
                 while read -r root_domain; do
-                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')[ -z "$root_domain" ] && continue
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]') [ -z "$root_domain" ] && continue
                   grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/high_priority_targets.txt" >> "data/$program_name/inscope.tmp" || true
                 done < "$target_path"
                 sort -u -o "data/$program_name/high_priority_targets.txt" "data/$program_name/inscope.tmp"
