@@ -211,3 +211,7 @@ yyyy.dev.therapy.khealth.com
 khealth.com
 medical-record-manager.khealth.com
 khealth.io
+*.k-production.khealth.com
+*.k-test.khealth.com
+*.khealth.com
+*.web.khealth.com
