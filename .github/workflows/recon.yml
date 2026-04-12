@@ -5,6 +5,11 @@ on:
   - cron: '0 * * * *'
   workflow_dispatch: # Ini yang bikin tombol "Run Workflow" tetap ada
 
+# [+] INJEKSI ARSITEK: KONTROL ANTREAN (MENCEGAH GITHUB MEMBLOKIR CRON)
+concurrency:
+  group: sniper-squad
+  cancel-in-progress: false
+
 jobs:
   recon-job:
     runs-on: ubuntu-latest
@@ -251,9 +256,14 @@ jobs:
                 # THE SNIPER SCOPE: Potong paksa maksimal 75 target Paling Berbahaya (Jaminan 100% Selesai)
                 shuf -n 75 "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # [+] TAKTIK TROJAN HORSE: BYPASS NUCLEI PATH BUG
-                mkdir -p /home/runner/nuclei-templates/SILVER_BULLETS
-                cp -r custom-templates/* /home/runner/nuclei-templates/SILVER_BULLETS/ || true
+                # Gunakan titik (.) agar mengopi isinya secara absolut tanpa butuh bintang (*)
+                if [ -d "$GITHUB_WORKSPACE/custom-templates" ]; then
+                    cp -a "$GITHUB_WORKSPACE/custom-templates/." /home/runner/nuclei-templates/SILVER_BULLETS/ || true
+                    log_step "Peluru berhasil disuntikkan ke jantung Nuclei!"
+                else
+                    log_step "FATAL: Folder custom-templates TETAP TIDAK DITEMUKAN!"
+                    ls -la "$GITHUB_WORKSPACE" # Paksa mesin jujur menampilkan isi root directory untuk dilacak
+                fi
 
                 # THE DELTA SNIPER SCOPE: Karena target adalah ASET BARU, kita scan SEMUANYA tanpa dipotong.
                 # THE SILVER BULLET HUNTER (CUSTOM P1/P2 MODE):
