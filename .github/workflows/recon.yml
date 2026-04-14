@@ -251,9 +251,10 @@ jobs:
                 # THE SNIPER SCOPE: Potong paksa maksimal 75 target Paling Berbahaya (Jaminan 100% Selesai)
                 shuf -n 75 "data/$program_name/nuclei_targets.txt" -o "data/$program_name/nuclei_targets.txt"
 
-                # [+] TAKTIK TROJAN HORSE V3 (ABSOLUTE DIRECT COPY)
+                # [+] TAKTIK TROJAN HORSE V4 (GOD MODE: THE SEEKER)
                 mkdir -p /home/runner/nuclei-templates/SILVER_BULLETS
-                cp -a custom-templates/. /home/runner/nuclei-templates/SILVER_BULLETS/ || true
+                # Cari paksa file ghost-*.yaml dari akar hardisk server dan copy ke laras senapan!
+                find /home/runner/work -type f -name "ghost-*.yam*" -exec cp {} /home/runner/nuclei-templates/SILVER_BULLETS/ \; 2>/dev/null || true
                 ls -la /home/runner/nuclei-templates/SILVER_BULLETS/
 
                 # THE DELTA SNIPER SCOPE: Karena target adalah ASET BARU, kita scan SEMUANYA tanpa dipotong.
