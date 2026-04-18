@@ -1,0 +1,24 @@
+id: ghost-backup-archive
+info:
+  name: Exposed Backup Archive (Source Code Leak)
+  author: sniper-predator
+  severity: critical
+  tags: exposure,backup,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/backup.zip"
+      - "{{BaseURL}}/source.zip"
+      - "{{BaseURL}}/api.tar.gz"
+      - "{{BaseURL}}/{{Host}}.zip"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "application/zip"
+          - "application/x-tar"
+          - "application/gzip"
+        part: header
