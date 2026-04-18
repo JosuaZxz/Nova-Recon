@@ -1,0 +1,21 @@
+id: ghost-laravel-telescope
+info:
+  name: Laravel Telescope Exposed (Information Disclosure)
+  author: sniper-predator
+  severity: high
+  tags: exposure,laravel,high,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/telescope/requests"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Telescope"
+          - "Laravel"
+          - "requests"
+        condition: and
