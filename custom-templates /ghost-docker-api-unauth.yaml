@@ -1,0 +1,27 @@
+id: ghost-docker-api-unauth
+info:
+  name: Docker API Unauthenticated Access
+  author: sniper-predator
+  severity: critical
+  tags: exposure,docker,rce,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/v1.24/containers/json"
+      - "{{BaseURL}}/containers/json"
+      - "{{BaseURL}}/api/containers/json"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: header
+        words:
+          - "application/json"
+      - type: word
+        words:
+          - '"Command":'
+          - '"Image":'
+          - '"Ports":'
+        condition: and
