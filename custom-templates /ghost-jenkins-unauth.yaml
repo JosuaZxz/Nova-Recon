@@ -1,0 +1,21 @@
+id: ghost-jenkins-unauth
+info:
+  name: Jenkins Unauthenticated Script Console (RCE)
+  author: sniper-predator
+  severity: critical
+  tags: exposure,jenkins,rce,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/script"
+      - "{{BaseURL}}/api/json"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Jenkins"
+          - "Script Console"
+        condition: or
