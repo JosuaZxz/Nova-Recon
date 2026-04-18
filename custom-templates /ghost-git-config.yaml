@@ -1,0 +1,20 @@
+id: ghost-git-config
+info:
+  name: Exposed Git Repository (.git/config)
+  author: sniper-predator
+  severity: high
+  tags: exposure,git,high,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.git/config"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "[core]"
+          - "repositoryformatversion"
+        condition: and
