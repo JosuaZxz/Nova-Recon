@@ -1,0 +1,22 @@
+id: ghost-prometheus-metrics
+info:
+  name: Prometheus Metrics Exposure
+  author: sniper-predator
+  severity: medium
+  tags: exposure,prometheus,metrics,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/metrics"
+      - "{{BaseURL}}/actuator/prometheus"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "TYPE"
+          - "HELP"
+          - "go_gc_duration_seconds"
+        condition: and
