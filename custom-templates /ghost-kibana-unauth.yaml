@@ -1,0 +1,21 @@
+id: ghost-kibana-unauth
+info:
+  name: Kibana Unauthenticated Dashboard
+  author: sniper-predator
+  severity: high
+  tags: exposure,kibana,elastic,high,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/app/kibana"
+      - "{{BaseURL}}/api/status"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "kibanaWelcomeView"
+          - '"version":{"number":"'
+        condition: or
