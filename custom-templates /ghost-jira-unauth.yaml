@@ -1,0 +1,20 @@
+id: ghost-jira-unauth
+info:
+  name: Jira Unauthenticated System Dashboard
+  author: sniper-predator
+  severity: high
+  tags: exposure,jira,misconfig,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/secure/Dashboard.jspa"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "System Dashboard"
+          - "Atlassian Jira"
+        condition: and
