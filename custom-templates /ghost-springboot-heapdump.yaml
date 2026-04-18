@@ -1,0 +1,24 @@
+id: ghost-springboot-heapdump
+info:
+  name: Spring Boot Heapdump Exposure (Memory Leak)
+  author: sniper-predator
+  severity: critical
+  tags: exposure,springboot,heapdump,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/actuator/heapdump"
+      - "{{BaseURL}}/heapdump"
+      - "{{BaseURL}}/api/actuator/heapdump"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: header
+        words:
+          - "application/octet-stream"
+      - type: word
+        words:
+          - "JAVA PROFILE"
