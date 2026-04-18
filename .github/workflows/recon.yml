@@ -38,8 +38,13 @@ jobs:
           sudo apt-get update && sudo apt-get install -y google-chrome-stable libnss3 libgbm-dev dnsutils python3-pip
           pip3 install uro
           install_go_tool() {
-            [ -f ~/go/bin/$1 ] || go install -v $2@latest
-          }
+                      if [ ! -f ~/go/bin/$1 ]; then
+                        for i in 1 2 3; do
+                          echo "Mencoba mengunduh $1 (Percobaan $i)..."
+                          go install -v $2@latest && break || sleep 5
+                        done
+                      fi
+                   } 
           install_go_tool subfinder github.com/projectdiscovery/subfinder/v2/cmd/subfinder
           install_go_tool httpx github.com/projectdiscovery/httpx/cmd/httpx
           install_go_tool nuclei github.com/projectdiscovery/nuclei/v3/cmd/nuclei
