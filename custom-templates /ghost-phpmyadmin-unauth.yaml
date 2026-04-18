@@ -1,0 +1,22 @@
+id: ghost-phpmyadmin-unauth
+info:
+  name: PHPMyAdmin Unauthenticated Access
+  author: sniper-predator
+  severity: critical
+  tags: exposure,phpmyadmin,database,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/phpmyadmin/"
+      - "{{BaseURL}}/pma/"
+      - "{{BaseURL}}/dbadmin/"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "pma_password"
+          - "pma_username"
+        condition: and
