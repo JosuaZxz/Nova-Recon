@@ -191,10 +191,19 @@ CRITICAL LOGIC & TECHNICAL RULES:
 12. WAF & FORBIDDEN SKEPTICISM (NEW): If the response status is '403 Forbidden', '401 Unauthorized', or contains WAF headers like 'Cf-Mitigated', 'Cloudflare', or 'Akamai', it means the payload was BLOCKED. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 13. TECHNOLOGY MISMATCH (NEW): If the bug implies a specific CMS or framework (e.g., PrestaShop, WordPress, Magento) but the target is clearly a different proprietary platform (e.g., Shopify), this is a FALSE POSITIVE. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 
-Structure:
+OUTPUT FORMAT INSTRUCTIONS:
+You are a strict, emotionless security auditor. You must evaluate the response_evidence based on the rules above.
+
+IF THE FINDING IS A FALSE POSITIVE (e.g., generic HTML, redirects, WAF blocks, missing expected metadata, generic 200 OK without sensitive leakage):
+You MUST abort the report creation and return EXACTLY this JSON and nothing else:
+{{"title": "FALSE_POSITIVE"}}
+
+IF AND ONLY IF THE FINDING IS GENUINELY VALID (contains actual leaked credentials, valid stack trace, actual AWS metadata, or clear database dumps):
+You must create the full markdown report using this exact structure:
 {luxury_template}
 
-Return ONLY a JSON OBJECT: {{"title": "...", "severity": "...", "full_markdown": "..."}}
+Return ONLY the JSON object format below.
+{{"title": "Valid Vulnerability Title", "severity": "critical/high/medium", "full_markdown": "The complete markdown string here..."}}
 """
         try:
             url = "https://api.groq.com/openai/v1/chat/completions"
