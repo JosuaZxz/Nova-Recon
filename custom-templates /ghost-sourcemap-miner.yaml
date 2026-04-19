@@ -18,18 +18,12 @@ requests:
 
     matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "\"sourcesContent\":"
-          - "\"webpack:///"
-        condition: or
-
       - type: status
         status:
           - 200
-
       - type: word
         words:
-          - "<html>"
-          - "<!DOCTYPE html>"
-        negative: true
+          - "webpackJsonp"
+          - "sourcesContent"
+          - "mappings"
+        condition: and
