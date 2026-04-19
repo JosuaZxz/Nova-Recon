@@ -17,8 +17,9 @@ http:
         status:
           - 200
       - type: word
+        part: header
         words:
           - "application/zip"
           - "application/x-tar"
           - "application/gzip"
-        part: header
+        condition: or
