@@ -17,17 +17,16 @@ requests:
     headers:
       X-Forwarded-For: "127.0.0.1"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "Facade\\Ignition"
-          - "Laravel"
-          - "Django Debug"
-          - "Werkzeug powered traceback interpreter"
-        condition: or
-
       - type: status
         status:
           - 200
           - 500
+      - type: word
+        words:
+          - "Laravel Ignition"
+          - "Werkzeug powered traceback"
+          - "Django Validate"
+          - "Exception at"
+        condition: or
