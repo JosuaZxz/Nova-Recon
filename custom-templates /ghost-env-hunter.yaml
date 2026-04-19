@@ -28,24 +28,14 @@ requests:
       X-Originating-IP: "127.0.0.1"
       X-Custom-IP-Authorization: "127.0.0.1"
 
-    matchers-condition: and
+   matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "DB_PASSWORD"
-          - "AWS_ACCESS_KEY"
-          - "API_KEY"
-          - "JWT_SECRET"
-          - "STRIPE_KEY"
-          - "[core]"
-        condition: or
-
       - type: status
         status:
           - 200
-
       - type: word
         words:
-          - "<html>"
-          - "<!DOCTYPE html>"
-        negative: true
+          - "DB_PASSWORD="
+          - "AWS_ACCESS_KEY_ID="
+          - "APP_ENV="
+        condition: or
