@@ -20,18 +20,12 @@ requests:
 
     matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "\"swagger\":"
-          - "\"openapi\":"
-          - "\"paths\":"
-        condition: or
-
       - type: status
         status:
           - 200
-
       - type: word
         words:
-          - "<html>"
-        negative: true
+          - "swagger"
+          - "openapi"
+          - "paths"
+        condition: and
