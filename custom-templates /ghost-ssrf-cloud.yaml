@@ -20,20 +20,15 @@ requests:
       Metadata-Flavor: "Google"
       X-Forwarded-For: "127.0.0.1"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
+      - type: status
+        status:
+          - 200
       - type: word
         words:
-          - "AccessKeyId"
-          - "SecretAccessKey"
-          - "Token"
-        condition: and
-        part: body
-
-      - type: word
-        words:
+          - "ami-id"
           - "instance-id"
-          - "project-id"
-          - "service-accounts"
+          - "computeMetadata"
+          - "metadata-flavor"
         condition: or
-        part: body
