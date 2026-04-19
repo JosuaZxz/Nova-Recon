@@ -20,13 +20,12 @@ requests:
 
     matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "__schema"
-          - "mutationType"
-          - "queryType"
-        condition: and
-
       - type: status
         status:
           - 200
+      - type: word
+        words:
+          - "__schema"
+          - "queryType"
+          - "mutationType"
+        condition: and
