@@ -21,19 +21,12 @@ requests:
 
     matchers-condition: and
     matchers:
+      - type: status
+        status:
+          - 200
       - type: word
         words:
           - "activeProfiles"
           - "propertySources"
-          - "systemProperties"
-          - "applicationConfig"
+          - "management.endpoints"
         condition: or
-
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "<html>"
-        negative: true
