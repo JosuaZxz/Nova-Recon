@@ -243,6 +243,8 @@ jobs:
                   [ -z "$root_domain" ] && continue
                   grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/mass_targets_raw.tmp" >> "data/$program_name/mass_targets.txt" || true
                 done < "$target_path"
+                # [+] INJEKSI ARSITEK: SELAMATKAN NAKED IP DARI SCOPE FILTER
+                grep -iE "^https?://[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" "data/$program_name/mass_targets_raw.tmp" >> "data/$program_name/mass_targets.txt" || true
                 sort -u -o "data/$program_name/mass_targets.txt" "data/$program_name/mass_targets.txt"
                 [ ! -s "data/$program_name/mass_targets.txt" ] && cp "data/$program_name/active_hosts.txt" "data/$program_name/mass_targets.txt"
 
