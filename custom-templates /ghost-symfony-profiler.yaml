@@ -1,0 +1,22 @@
+id: ghost-symfony-profiler
+info:
+  name: Symfony Profiler Dashboard Exposure
+  author: sniper-predator
+  severity: high
+  tags: exposure,symfony,config,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_profiler/empty/search/results?limit=10"
+      - "{{BaseURL}}/app_dev.php/_profiler/empty/search/results?limit=10"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Symfony Profiler"
+          - "Token"
+          - "Method"
+        condition: and
