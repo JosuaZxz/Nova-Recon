@@ -1,0 +1,22 @@
+id: ghost-grafana-unauth
+info:
+  name: Grafana Unauthenticated Dashboard
+  author: sniper-predator
+  severity: medium
+  tags: exposure,grafana,dashboard,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/api/dashboards/home"
+      - "{{BaseURL}}/api/search"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "dashboard"
+          - "meta"
+          - "isStarred"
+        condition: and
