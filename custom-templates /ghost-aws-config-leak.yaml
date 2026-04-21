@@ -1,0 +1,21 @@
+id: ghost-aws-config-leak
+info:
+  name: AWS Credentials Config Leak
+  author: sniper-predator
+  severity: critical
+  tags: exposure,aws,keys,critical,custom
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.aws/credentials"
+      - "{{BaseURL}}/.aws/config"
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "aws_access_key_id"
+          - "aws_secret_access_key"
+        condition: and
