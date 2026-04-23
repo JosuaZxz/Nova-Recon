@@ -514,3 +514,17 @@ www.wwwdev.varonis.com
 wwwdev-sites.varonis.com
 wwwdev.varonis.com
 wwwqa.varonis.com
+*.api.varonis.io
+*.app.varonis.io
+*.aps1.app.varonis.io
+*.apse1.app.varonis.io
+*.apse2.app.varonis.io
+*.ca.app.varonis.io
+*.chd.varonis.io
+*.eu.app.varonis.io
+*.euw2.app.varonis.io
+*.ifva.varonis.io
+*.liveupdate.varonis.io
+*.preprod.app.varonis.io
+*.usw2.app.varonis.io
+*.varonis.io
