@@ -255,7 +255,7 @@ jobs:
                 # 3. SMART CURATION (Membuat nuclei_targets.txt)
                 grep -iE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets.txt" || true
                 CURRENT_NUC=$(wc -l < "data/$program_name/nuclei_targets.txt")
-                if[ "$CURRENT_NUC" -lt 300 ]; then
+                if [ "$CURRENT_NUC" -lt 300 ]; then
                     grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
                 fi
 
