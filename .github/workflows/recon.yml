@@ -192,15 +192,15 @@ jobs:
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                # MENCEGAH OOM CRASH (HUBSPOT FIX): Batasi URL yang disedot maksimal 150 target
-                head -n 150 data/$program_name/active_urls_clean.tmp > data/$program_name/safe_brawl.tmp
+                # FIX 1: SMART CHUNKING (Wayback 1500, Katana 150)
+                head -n 1500 data/$program_name/active_urls_clean.tmp > data/$program_name/wayback_brawl.tmp
+                head -n 150 data/$program_name/active_urls_clean.tmp > data/$program_name/katana_brawl.tmp
                 
-                # Mining menggunakan safe_brawl.tmp agar RAM GitHub Runner 7GB tidak meledak
-                timeout 5m bash -c "cat data/$program_name/safe_brawl.tmp | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
-                timeout 5m bash -c "cat data/$program_name/safe_brawl.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 || true
+                timeout 5m bash -c "cat data/$program_name/wayback_brawl.tmp | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
+                timeout 5m bash -c "cat data/$program_name/wayback_brawl.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 || true
                 
                 # Katana (Depth 2)
-                timeout 10m katana -list data/$program_name/safe_brawl.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt > /dev/null 2>&1 || true
+                timeout 10m katana -list data/$program_name/katana_brawl.tmp -system-chrome -headless -no-sandbox -jc -kf all -d 2 -silent -o data/$program_name/urls_katana.txt > /dev/null 2>&1 || true
                 
                 # GABUNGKAN
                 cat data/$program_name/urls_wayback.txt data/$program_name/urls_hak.txt data/$program_name/urls_katana.txt | grep -v "localhost" | sort -u > data/$program_name/all_endpoints.txt
@@ -215,8 +215,8 @@ jobs:
 
                 # --- [ LOGIKA PEMBUAT HIGH PRIORITY TARGETS ] ---
                 log_step "STEP 3.5: Sanitizing Endpoints..."
-                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\/api\/|\/v[0-9]\/" data/$program_name/filtered_endpoints.txt | \
-                grep -ivE "\.jpg|\.png|\.gif|\.css|\.js|\.woff|\.svg|\.pdf|\.ico" > data/$program_name/high_priority_targets.txt || true
+                grep -iE "\?|\=|\.php|\.jsp|\.aspx|\.asp|\.json|\.xml|\.env|\.yaml|\.yml|\/api\/|\/v[0-9]\/|\/graphql|\/admin|\/internal|\/metrics|\/users|\/auth|\/login|\/config" data/$program_name/filtered_endpoints.txt | \
+                grep -ivE "\.jpg|\.jpeg|\.png|\.gif|\.css|\.woff|\.woff2|\.svg|\.pdf|\.ico|\.ttf|\.eot" > data/$program_name/high_priority_targets.txt || true
                 cat data/$program_name/active_hosts.txt >> data/$program_name/high_priority_targets.txt
                 sort -u -o data/$program_name/high_priority_targets.txt data/$program_name/high_priority_targets.txt
                 [ ! -s "data/$program_name/high_priority_targets.txt" ] && cp data/$program_name/filtered_endpoints.txt data/$program_name/high_priority_targets.txt
