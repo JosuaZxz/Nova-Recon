@@ -275,6 +275,7 @@ jobs:
                   -t /home/runner/nuclei-templates/SILVER_BULLETS/ \
                   -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 10 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                  -H "Accept-Encoding: gzip, deflate" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
                 END_TIME=$(date +%s)
