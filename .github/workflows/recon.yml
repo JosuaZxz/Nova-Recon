@@ -260,7 +260,7 @@ jobs:
                 fi
 
                 # 4. FINAL CHAMBER (Membuat nuclei_targets_g1.txt)
-                head -n 3000 "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets_g1.txt"
+                shuf -n 3000 "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets_g1.txt"
 
                 # [+] TAKTIK TROJAN HORSE V4 (GOD MODE: THE SEEKER)
                 mkdir -p /home/runner/nuclei-templates/SILVER_BULLETS
@@ -273,7 +273,7 @@ jobs:
                 # Fokus direktori mematikan: AWS, Azure, GCP, RCE, SSRF dan Takeover. WAF tidak akan curiga.
                 timeout 60m nuclei -l "data/$program_name/nuclei_targets_g1.txt" \
                   -t /home/runner/nuclei-templates/SILVER_BULLETS/ \
-                  -nmhe -c 30 -rl 150 -bs 10 -retries 2 -mhe 15 -no-color -stats \
+                  -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 6 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
