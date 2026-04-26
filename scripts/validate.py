@@ -34,12 +34,14 @@ def get_verification_context(data):
         if re.search(r'Location:.*(/login|/signin|/auth|/sso|oauth|redirect_uri|wp-login)', res, re.IGNORECASE):
             return None 
             
-    # THE ANNIHILATOR NOISE FILTER: Membunuh Jebakan WAF & Vendor SaaS
+    # THE ANNIHILATOR NOISE FILTER: Precision WAF & Error Page Killer
     noise_keywords =[
         "phs.getpostman.com", "schema.getpostman.com", "swagger-ui",
         "api-docs", "\"state\":\"SUCCESS\"", "salesforce.com/aura",
-        "the nlb has been offline", "incapsula", "imperva", "cloudflare",
-        "attention required!", "server: frontify", "shopify.com"
+        "the nlb has been offline", 
+        "request was blocked by our security service", 
+        "attention required! | cloudflare",
+        "pardon our interruption"
     ]
     res_lower = res.lower()
     
