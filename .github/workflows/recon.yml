@@ -122,6 +122,10 @@ jobs:
           # 1a. Passive Discovery (Dengan Limit Waktu)
           timeout 10m subfinder -dL "$target_path" -all -silent -o "data/$program_name/passive.txt" > /dev/null 2>&1 || true
           timeout 5m assetfinder --subs-only < "$target_path" >> "data/$program_name/passive.txt" 2>/dev/null || true
+          
+          # [+] SANITASI 1: Hapus karakter wildcard (*.) yang merusak HTTPX dan Nuclei
+          sed -i 's/^\*\.//g' "data/$program_name/passive.txt" 2>/dev/null || true
+          
           sort -u "data/$program_name/passive.txt" -o "data/$program_name/passive.txt"
 
           # 1b. Smart Permutation (AlterX) - Terkontrol agar tidak Blackhole
@@ -149,6 +153,9 @@ jobs:
           
           # 1. Filter HANYA subdomain baru (Abaikan IP karena Cloudflare IP selalu berotasi)
           cat "data/$program_name/passive.txt" | sort -u | anew ".known_targets/${program_name}.txt" > "data/$program_name/new_subdomains.txt" || true
+          
+          # [+] SANITASI 2: Buang IP Lokal/Private (127.0.0.1, 10.x, 172.16-31.x, 192.168.x) agar mesin tidak menembak diri sendiri
+          sed -i -E '/^(127\.|10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/d' "data/$program_name/origin_ips.txt" 2>/dev/null || true
           
           # 2. Gabungkan subdomain BARU dengan Origin IP segar hari ini
           { cat "data/$program_name/new_subdomains.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
@@ -285,15 +292,16 @@ jobs:
                 log_step "STEP 4.5: Gelombang 1.5 - Parameter Fuzzing..."
                 START_TIME=$(date +%s)
                 
-                # Ekstrak 50 URL yang memiliki parameter (?id=, ?url=, dll)
-                grep "=" "data/$program_name/high_priority_targets.txt" | shuf -n 50 > "data/$program_name/param_targets.txt" || true
+                # OPTIMASI: Hajar 500 URL berparameter (Bukan 50 lagi!)
+                grep "=" "data/$program_name/high_priority_targets.txt" | shuf -n 500 > "data/$program_name/param_targets.txt" || true
                 if [ -s "data/$program_name/param_targets.txt" ]; then
                     timeout 45m nuclei -l "data/$program_name/param_targets.txt" \
                       -t /home/runner/nuclei-templates/http/vulnerabilities/ \
                       -t /home/runner/nuclei-templates/http/cves/ \
                       -tags sqli,lfi,ssrf,rce \
-                      -nmhe -c 20 -rl 100 -bs 5 -retries 2 -mhe 15 -no-color -stats \
+                      -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 8 -no-color -stats \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                      -H "Accept-Encoding: gzip, deflate" \
                       -jsonl -o "data/$program_name/nuclei_params.json" || true
                 fi
                 
@@ -304,14 +312,14 @@ jobs:
                 log_step "STEP 5: Gelombang 2 - Surgical Headless..."
                 START_TIME=$(date +%s)
 
-                # Turunkan ke 15 Target (Headless memakan waktu 3x lebih lama dari standard)
-                shuf -n 15 "data/$program_name/high_priority_targets.txt" -o "data/$program_name/headless_targets.txt"
+                # OPTIMASI: Naikkan ke 50 Target untuk membongkar DOM XSS & Takeover
+                shuf -n 50 "data/$program_name/high_priority_targets.txt" -o "data/$program_name/headless_targets.txt"
 
                 timeout 60m nuclei -l "data/$program_name/headless_targets.txt" \
                   -t /home/runner/nuclei-templates -severity critical,high,medium \
                   -tags headless,takeover,cve2024,cve2025,cve2026,workflow,xss,fuzzing,token,keys,credential \
                   -exclude-tags info,swagger,postman,docs -exclude-severity low,info \
-                  -nmhe -c 5 -rl 25 -bs 3 -retries 2 -mhe 15 -headless -system-chrome -no-color -stats \
+                  -nmhe -c 5 -rl 25 -bs 3 -retries 1 -mhe 15 -timeout 10 -headless -system-chrome -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -jsonl -o "data/$program_name/nuclei_headless.json" || true
 
