@@ -195,6 +195,7 @@ CRITICAL LOGIC & TECHNICAL RULES:
 11. DATA VERIFICATION (NEW): If the response body only shows generic HTML/JS code without actual sensitive user data (PII like emails, cleartext passwords, or internal IDs), return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 12. WAF & FORBIDDEN SKEPTICISM (NEW): If the response status is '403 Forbidden', '401 Unauthorized', or contains WAF headers like 'Cf-Mitigated', 'Cloudflare', or 'Akamai', it means the payload was BLOCKED. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
 13. TECHNOLOGY MISMATCH (NEW): If the bug implies a specific CMS or framework (e.g., PrestaShop, WordPress, Magento) but the target is clearly a different proprietary platform (e.g., Shopify), this is a FALSE POSITIVE. Return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
+14. SHOPIFY GRAPHQL EXCEPTION: If the program is 'shopify' and the vulnerability type indicates 'GraphQL Introspection', this is a public Storefront API by design. Return ONLY JSON: {"title": "FALSE_POSITIVE"}.
 
 OUTPUT FORMAT INSTRUCTIONS:
 You are a strict, emotionless security auditor. You must evaluate the response_evidence based on the rules above.
