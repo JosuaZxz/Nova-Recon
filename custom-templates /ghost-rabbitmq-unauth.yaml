@@ -1,0 +1,35 @@
+id: ghost-rabbitmq-unauth
+
+info:
+  name: RabbitMQ Management Unauthenticated API
+  author: Sniper-Predator
+  severity: high
+  description: Membaca antrean pesan internal microservices via RabbitMQ API.
+  tags: rabbitmq,messaging,exposure,high,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/api/whoami"
+      - "{{BaseURL}}/api/overview"
+      - "{{BaseURL}}/api/vhosts"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "rabbitmq_version"
+          - "message_stats"
+          - "management_version"
+        condition: or
+      # ANTI-HTML TRAP
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
