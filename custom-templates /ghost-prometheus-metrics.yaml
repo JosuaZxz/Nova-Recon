@@ -20,3 +20,11 @@ http:
           - "HELP"
           - "go_gc_duration_seconds"
         condition: and
+      # ANTI-HTML TRAP: Prometheus log adalah teks mentah murni, bukan HTML.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
