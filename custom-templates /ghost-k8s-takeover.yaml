@@ -1,0 +1,39 @@
+id: ghost-k8s-takeover
+
+info:
+  name: Kubernetes Unauthenticated API/Kubelet Exposure
+  author: Sniper-Predator
+  severity: critical
+  description: Mencuri konfigurasi Pods dan mengambil alih cluster Kubernetes.
+  tags: k8s,kubernetes,exposure,takeover,critical,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/pods"
+      - "{{BaseURL}}/api/v1/namespaces"
+      - "{{BaseURL}}/api/v1/pods"
+      - "{{BaseURL}}/metrics"
+    headers:
+      Accept: "application/json"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "apiVersion"
+          - "metadata"
+          - "containers"
+          - "namespace"
+        condition: and
+      # ANTI-HTML TRAP: K8s API selalu merespons dengan JSON murni.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
