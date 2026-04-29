@@ -1,0 +1,39 @@
+id: ghost-confluence-unauth
+
+info:
+  name: Confluence Unauthenticated REST API Leak
+  author: Sniper-Predator
+  severity: critical
+  description: Menyedot dokumen internal dan kredensial dari Atlassian Confluence API.
+  tags: confluence,atlassian,exposure,leak,critical,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wiki/rest/api/content/search?cql=type=page"
+      - "{{BaseURL}}/rest/api/content/search?cql=type=page"
+      - "{{BaseURL}}/confluence/rest/api/content"
+    headers:
+      Accept: "application/json"
+      X-Forwarded-For: "127.0.0.1"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - '"results":'
+          - '"expandable":'
+          - '"_links":'
+          - '"space":'
+        condition: and
+      # ANTI-HTML TRAP: REST API Confluence murni berbentuk JSON.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
