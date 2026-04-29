@@ -30,3 +30,11 @@ requests:
           - "propertySources"
           - "management.endpoints"
         condition: or
+      # ANTI-HTML TRAP: Actuator asli SELALU JSON, bukan HTML.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
