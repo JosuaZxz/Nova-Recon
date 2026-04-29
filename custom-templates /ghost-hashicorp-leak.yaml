@@ -1,0 +1,39 @@
+id: ghost-hashicorp-leak
+
+info:
+  name: HashiCorp Vault / Consul Unauthenticated API
+  author: Sniper-Predator
+  severity: critical
+  description: Mengunduh secret/keys dari manajer infrastruktur HashiCorp.
+  tags: hashicorp,vault,consul,exposure,critical,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/v1/agent/self"
+      - "{{BaseURL}}/v1/sys/health"
+      - "{{BaseURL}}/v1/kv/?keys"
+      - "{{BaseURL}}/ui/vault/auth"
+    headers:
+      Accept: "application/json"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - '"Config":'
+          - '"Member":'
+          - '"Datacenter":'
+          - '"cluster_name":'
+          - 'Vault is sealed'
+        condition: or
+      # ANTI-HTML TRAP
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+        condition: or
+        negative: true
