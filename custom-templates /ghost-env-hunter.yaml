@@ -19,16 +19,13 @@ requests:
       - "{{BaseURL}}/.env.old"
       - "{{BaseURL}}/docker-compose.yml"
       - "{{BaseURL}}/backup.sql.gz"
-      - "{{BaseURL}}/.git/config"
 
     headers:
-      # Bypass WAF dasar dengan Cache-Control dan header dinamis
       Cache-Control: "max-age=0"
       X-Forwarded-For: "127.0.0.1"
       X-Originating-IP: "127.0.0.1"
-      X-Custom-IP-Authorization: "127.0.0.1"
 
-   matchers-condition: and
+    matchers-condition: and
     matchers:
       - type: status
         status:
@@ -39,3 +36,11 @@ requests:
           - "AWS_ACCESS_KEY_ID="
           - "APP_ENV="
         condition: or
+      # ANTI-HTML TRAP: Mencegah WAF / Catch-All membohongi Nuclei
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
