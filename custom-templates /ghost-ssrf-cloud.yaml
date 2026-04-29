@@ -4,7 +4,7 @@ info:
   name: Blind Cloud Metadata SSRF (WAF Bypass)
   author: Sniper-Predator
   severity: critical
-  description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL menggunakan Decimal/IPv6 Bypass.
+  description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL.
   tags: ssrf,cloud,aws,gcp,azure,custom
 
 requests:
@@ -32,3 +32,11 @@ requests:
           - "computeMetadata"
           - "metadata-flavor"
         condition: or
+      # ANTI-HTML TRAP: Membuang False Positive dari website biasa
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
