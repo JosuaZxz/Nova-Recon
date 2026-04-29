@@ -29,3 +29,11 @@ requests:
           - "openapi"
           - "paths"
         condition: and
+      # ANTI-HTML TRAP: API blueprint berbentuk JSON/YAML, BUKAN HTML frontend.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
