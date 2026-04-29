@@ -23,3 +23,13 @@ http:
           - "application/x-tar"
           - "application/gzip"
         condition: or
+      # ANTI-TEXT TRAP: Mencegah WAF Akamai/Cloudflare membalas 200 OK dengan teks biasa
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "offline"
+          - "blocked"
+          - "error"
+        condition: or
+        negative: true
