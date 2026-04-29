@@ -1,0 +1,36 @@
+id: ghost-airflow-unauth
+
+info:
+  name: Apache Airflow Unauthenticated Dashboard (RCE)
+  author: Sniper-Predator
+  severity: critical
+  description: Mendeteksi Airflow UI yang tidak diamankan, memungkinkan eksekusi kode Python jarak jauh via DAGs.
+  tags: airflow,exposure,rce,critical,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/admin/"
+      - "{{BaseURL}}/home"
+      - "{{BaseURL}}/api/v1/dags"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - "Apache Airflow"
+          - "DAGs"
+          - "Recent Tasks"
+        condition: and
+      # Catatan: Airflow membalas HTML asli, jadi tidak memakai negative HTML trap, 
+      # tapi kita filter sangat spesifik untuk mencegah jebakan WAF.
+      - type: word
+        words:
+          - "attention required! | cloudflare"
+          - "request was blocked"
+          - "incapsula"
+        condition: or
+        negative: true
