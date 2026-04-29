@@ -1,0 +1,37 @@
+id: ghost-nextjs-data-leak
+
+info:
+  name: Next.js SSR Data Leakage (Information Disclosure)
+  author: Sniper-Predator
+  severity: high
+  description: Mengekstrak data sensitif (PII/Tokens) dari cache Next.js Server-Side Rendering.
+  tags: nextjs,exposure,ssr,leak,high,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_next/data/build/index.json"
+      - "{{BaseURL}}/_next/data/development/index.json"
+      - "{{BaseURL}}/_next/data/latest/profile.json"
+      - "{{BaseURL}}/_next/data/production/admin.json"
+    headers:
+      Accept: "application/json"
+      x-nextjs-data: "1"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - '"pageProps":'
+          - '"__N_SSP":'
+        condition: and
+      # ANTI-HTML TRAP: File _next/data HARUS berupa JSON.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+        condition: or
+        negative: true
