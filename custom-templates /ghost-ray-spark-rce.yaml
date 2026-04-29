@@ -1,0 +1,39 @@
+id: ghost-ray-spark-rce
+
+info:
+  name: Ray Dashboard / Apache Spark Unauthenticated RCE
+  author: Sniper-Predator
+  severity: critical
+  description: Mengambil alih cluster AI/ML Big Data yang tidak diamankan.
+  tags: rce,ray,spark,ai,ml,exposure,critical,custom
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/api/cluster_status"
+      - "{{BaseURL}}/api/jobs/"
+      - "{{BaseURL}}/json/"
+      - "{{BaseURL}}/api/v1/applications"
+    headers:
+      Accept: "application/json"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        words:
+          - '"ray_version":'
+          - '"node_ip_address":'
+          - '"action_state":'
+          - '"spark_version":'
+        condition: or
+      # ANTI-HTML TRAP: Output sistem ini selalu JSON.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
