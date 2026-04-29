@@ -29,3 +29,11 @@ requests:
           - "queryType"
           - "mutationType"
         condition: and
+      # ANTI-HTML TRAP: GraphQL Response SELALU JSON Murni.
+      - type: word
+        words:
+          - "<html"
+          - "<!doctype"
+          - "<body"
+        condition: or
+        negative: true
