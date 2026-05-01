@@ -266,8 +266,9 @@ jobs:
                     grep -ivE "dev|stg|test|admin|api|v1|v2|sandbox|internal|corp|beta" "data/$program_name/mass_targets.txt" | shuf -n $((300 - CURRENT_NUC)) >> "data/$program_name/nuclei_targets.txt" || true
                 fi
 
-                # 4. FINAL CHAMBER (Membuat nuclei_targets_g1.txt)
-                shuf -n 3000 "data/$program_name/mass_targets.txt" > "data/$program_name/nuclei_targets_g1.txt"
+                # 4. FINAL CHAMBER: THE GHOST SWARM (DEEP URL INVASION)
+                # BUKAN HANYA AKAR! Kita masukkan Deep URL karena 28 peluru kita sudah ANTI-HTML Catch-All!
+                cat "data/$program_name/mass_targets.txt" "data/$program_name/high_priority_targets.txt" | sort -u | shuf -n 5000 > "data/$program_name/nuclei_targets_g1.txt"
 
                 # [+] TAKTIK TROJAN HORSE V4 (GOD MODE: THE SEEKER)
                 mkdir -p /home/runner/nuclei-templates/SILVER_BULLETS
@@ -287,6 +288,23 @@ jobs:
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
+
+                # ---[GELOMBANG 1.7: THE CVE ANNIHILATOR (ZERO-DAY HUNTER)] ---
+                log_step "STEP 4.7: Gelombang 1.7 - Zero-Day CVE Hunting..."
+                START_TIME=$(date +%s)
+                
+                # Memburu celah kritis dunia (CVE terbaru) yang belum sempat di-patch oleh Raksasa Tier-1
+                timeout 45m nuclei -l "data/$program_name/nuclei_targets_g1.txt" \
+                  -t /home/runner/nuclei-templates/http/cves/ \
+                  -tags kev,cve2024,cve2025,cve2026 \
+                  -severity critical,high \
+                  -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 8 -no-color -stats \
+                  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
+                  -H "Accept-Encoding: gzip, deflate" \
+                  -jsonl -o "data/$program_name/nuclei_cves.json" || true
+                  
+                END_TIME=$(date +%s)
+                log_step "Gelombang 1.7 finished in $((END_TIME - START_TIME)) seconds."
 
                 # ---[GELOMBANG 1.5: THE PARAMETER ASSASSIN (SQLi, LFI, SSRF)] ---
                 log_step "STEP 4.5: Gelombang 1.5 - Parameter Fuzzing..."
@@ -345,11 +363,11 @@ jobs:
                 END_TIME=$(date +%s)
                 log_step "JS Mining finished in $((END_TIME - START_TIME)) seconds."
                 
-                # --- [STEP 6: AI ANALYSIS] ---
+                # ---[STEP 6: AI ANALYSIS] ---
                 log_step "STEP 6: AI Triage processing..."
                 
-                # Gabungkan hasil (Standard + Params + Headless + JS OP Weapon)
-                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_params.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
+                # Gabungkan hasil (Standard + CVEs + Params + Headless + JS OP Weapon)
+                cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_cves.json" "data/$program_name/nuclei_params.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
                 # JALANKAN AI HANYA JIKA ADA HASIL (Surgical Efficiency)
                 if [ -s "data/$program_name/nuclei_results.json" ]; then
