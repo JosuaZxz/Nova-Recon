@@ -2632,3 +2632,7 @@ prometheus.fh-services-staging.fareharbor.engineering
 thanos.fh-services-staging.fareharbor.engineering
 acdcdqs.sap.booking.com
 wwwbooking.com
+prometheus.fh-services-demo.fareharbor.engineering
+prometheus.fh-services-production.fareharbor.engineering
+thanos.fh-services-demo.fareharbor.engineering
+thanos.fh-services-production.fareharbor.engineering
