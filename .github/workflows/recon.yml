@@ -147,24 +147,21 @@ jobs:
             head -n 500 "data/$program_name/ips_unique.tmp" > "data/$program_name/origin_ips.txt" || true
           fi
                 
-          # ---[ THE DELTA MONITOR: MENGISOLASI TARGET BARU (HANYA SUBDOMAIN) ] ---
-          mkdir -p .known_targets
-          touch ".known_targets/${program_name}.txt"
-          
-          # 1. Filter HANYA subdomain baru (Abaikan IP karena Cloudflare IP selalu berotasi)
-          cat "data/$program_name/passive.txt" | sort -u | anew ".known_targets/${program_name}.txt" > "data/$program_name/new_subdomains.txt" || true
-          
-          # [+] SANITASI 2: Buang IP Lokal/Private (127.0.0.1, 10.x, 172.16-31.x, 192.168.x) agar mesin tidak menembak diri sendiri
-          sed -i -E '/^(127\.|10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/d' "data/$program_name/origin_ips.txt" 2>/dev/null || true
-          
-          # 2. Gabungkan subdomain BARU dengan Origin IP segar hari ini
-          { cat "data/$program_name/new_subdomains.txt" "data/$program_name/origin_ips.txt" | sort -u | head -n 3000 > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
-          
-          log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
-          log_step "Total targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
-          
-          # PENGAMAN: Pastikan file selalu ada
-          touch "data/$program_name/subdomains.txt"
+          # ---[ THE ROTATING BARRAGE: PENGHANCURAN DELTA MONITOR ] ---
+                # Kita TIDAK LAGI menggunakan .known_targets. Raksasa Tier-1 mengunggah bug di domain LAMA.
+                # Kita akan merotasi dan menghajar seluruh infrastruktur secara acak setiap jam!
+                
+                # [+] SANITASI 2: Buang IP Lokal/Private agar aman
+                sed -i -E '/^(127\.|10\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[0-1])\.)/d' "data/$program_name/origin_ips.txt" 2>/dev/null || true
+                
+                # [+] THE BARRAGE: Gabungkan SEMUA domain, acak (shuf), dan ambil 2000 target setiap jam!
+                { cat "data/$program_name/passive.txt" "data/$program_name/origin_ips.txt" | sort -u | shuf -n 2000 > "data/$program_name/subdomains.txt"; } 2>/dev/null || true
+                
+                log_step "Origin Hunter finished. Found $(wc -l < data/$program_name/origin_ips.txt) naked IPs."
+                log_step "Total Rotating Targets for probing: $(wc -l < data/$program_name/subdomains.txt)"
+                
+                # PENGAMAN: Pastikan file selalu ada
+                touch "data/$program_name/subdomains.txt"
           
           END_TIME=$(date +%s)
           log_step "Discovery finished in $((END_TIME - START_TIME)) seconds. Found $(wc -l < data/$program_name/subdomains.txt) live subdomains."
@@ -199,9 +196,9 @@ jobs:
                 awk '{print $1}' data/$program_name/active_hosts.txt | sort -u > data/$program_name/active_urls_clean.tmp
                 sed 's|http[s]*://||g' data/$program_name/active_urls_clean.tmp | cut -d'/' -f1 | sort -u > data/$program_name/domains_only.txt
                 
-                # FIX 1: SMART CHUNKING (Wayback 1500, Katana 150)
-                head -n 1500 data/$program_name/active_urls_clean.tmp > data/$program_name/wayback_brawl.tmp
-                head -n 150 data/$program_name/active_urls_clean.tmp > data/$program_name/katana_brawl.tmp
+                # FIX 1: SMART CHUNKING (Wayback 1500, Katana 150) - DENGAN PENGACAKAN
+                shuf "data/$program_name/active_urls_clean.tmp" | head -n 1500 > "data/$program_name/wayback_brawl.tmp" || true
+                shuf "data/$program_name/active_urls_clean.tmp" | head -n 150 > "data/$program_name/katana_brawl.tmp" || true
                 
                 timeout 5m bash -c "cat data/$program_name/wayback_brawl.tmp | waybackurls > data/$program_name/urls_wayback.txt" > /dev/null 2>&1 || true
                 timeout 5m bash -c "cat data/$program_name/wayback_brawl.tmp | hakrawler -subs > data/$program_name/urls_hak.txt" > /dev/null 2>&1 || true
@@ -413,8 +410,8 @@ jobs:
           git config --local user.email "bot@sniper-recon.ai"
           git config --local user.name "Recon-Sniper-Bot"
           
-          # 1. Ambil perubahan dan commit lokal (Termasuk Ingatan Delta Monitor)
-          git add .seen_urls .known_targets/
+          # 1. Ambil perubahan dan commit lokal
+          git add .seen_urls
           git commit -m "database: update memory and logs [skip ci]" || echo "No changes"
 
           # 2. Loop Sync agar tidak tabrakan
