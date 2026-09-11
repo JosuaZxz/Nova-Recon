@@ -95,6 +95,32 @@ jobs:
           # --- FUNCTION UNTUK TIMESTAMP ---
           log_step() { echo "--- [ $(date +'%H:%M:%S') ] $1 ---"; }
 
+          tg_send_msg() {
+            local chat="$1"
+            local text="$2"
+            local code
+            code=$(curl -sS -o /tmp/tg_msg.json -w "%{http_code}" -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${chat}" \
+              --data-urlencode "text=${text}") || true
+            echo "Telegram sendMessage HTTP ${code} chat=${chat}"
+            head -c 300 /tmp/tg_msg.json 2>/dev/null || true
+            echo
+          }
+
+          tg_send_file() {
+            local chat="$1"
+            local file="$2"
+            local caption="$3"
+            local code
+            code=$(curl -sS -o /tmp/tg_file.json -w "%{http_code}" -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendDocument" \
+              -F "chat_id=${chat}" \
+              -F "document=@${file}" \
+              -F "caption=${caption}") || true
+            echo "Telegram sendDocument HTTP ${code} file=${file}"
+            head -c 300 /tmp/tg_file.json 2>/dev/null || true
+            echo
+          }
+
           # 1. LOGIKA MASTER SNIPER (Otomatis Ambil File dari Folder Targets)
           # List semua file .txt di folder targets, abaikan test_target.txt
           ls targets/*.txt | grep -v "test_target.txt" > targets_list.tmp
@@ -229,7 +255,8 @@ jobs:
                 # [+] INJEKSI STRICT SCOPE ANNIHILATOR (ANTI-TWITTER)
                 > "data/$program_name/inscope.tmp"
                 while read -r root_domain; do
-                  root_domain=$(echo "$root_domain" | tr -d '[:space:]') [ -z "$root_domain" ] && continue
+                  root_domain=$(echo "$root_domain" | tr -d '[:space:]')
+                  [ -z "$root_domain" ] && continue
                   grep -iE "^https?://([a-zA-Z0-9.-]+\.)?${root_domain}(:[0-9]+)?(/|$)" "data/$program_name/high_priority_targets.txt" >> "data/$program_name/inscope.tmp" || true
                 done < "$target_path"
                 sort -u -o "data/$program_name/high_priority_targets.txt" "data/$program_name/inscope.tmp"
@@ -269,7 +296,7 @@ jobs:
 
                 # [+] TAKTIK TROJAN HORSE V4 (GOD MODE: THE SEEKER)
                 mkdir -p /home/runner/nuclei-templates/SILVER_BULLETS
-                # Cari paksa file ghost-*.yaml dari akar hardisk server dan copy ke laras senapan!
+                cp custom-templates/ghost-*.yaml /home/runner/nuclei-templates/SILVER_BULLETS/ 2>/dev/null || true
                 find /home/runner/work -type f -name "ghost-*.yam*" -exec cp {} /home/runner/nuclei-templates/SILVER_BULLETS/ \; 2>/dev/null || true
                 ls -la /home/runner/nuclei-templates/SILVER_BULLETS/
 
@@ -281,7 +308,7 @@ jobs:
                   -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 10 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -H "Accept-Encoding: gzip, deflate" \
-                  -jsonl -o "data/$program_name/nuclei_standard.json" || true
+                  -irr -jsonl -o "data/$program_name/nuclei_standard.json" || true
 
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1 finished in $((END_TIME - START_TIME)) seconds."
@@ -293,12 +320,12 @@ jobs:
                 # Memburu celah kritis dunia (CVE terbaru) yang belum sempat di-patch oleh Raksasa Tier-1
                 timeout 45m nuclei -l "data/$program_name/nuclei_targets_g1.txt" \
                   -t /home/runner/nuclei-templates/http/cves/ \
-                  -tags kev,cve2024,cve2025,cve2026 \
+                  -t /home/runner/nuclei-templates/http/exposures/ \
                   -severity critical,high \
                   -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 8 -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                   -H "Accept-Encoding: gzip, deflate" \
-                  -jsonl -o "data/$program_name/nuclei_cves.json" || true
+                  -irr -jsonl -o "data/$program_name/nuclei_cves.json" || true
                   
                 END_TIME=$(date +%s)
                 log_step "Gelombang 1.7 finished in $((END_TIME - START_TIME)) seconds."
@@ -317,7 +344,7 @@ jobs:
                       -nmhe -c 30 -rl 100 -bs 5 -retries 1 -mhe 15 -timeout 8 -no-color -stats \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
                       -H "Accept-Encoding: gzip, deflate" \
-                      -jsonl -o "data/$program_name/nuclei_params.json" || true
+                      -irr -jsonl -o "data/$program_name/nuclei_params.json" || true
                 fi
                 
                 END_TIME=$(date +%s)
@@ -336,7 +363,7 @@ jobs:
                   -exclude-tags info,swagger,postman,docs -exclude-severity low,info \
                   -nmhe -c 5 -rl 25 -bs 3 -retries 1 -mhe 15 -timeout 10 -headless -system-chrome -no-color -stats \
                   -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                  -jsonl -o "data/$program_name/nuclei_headless.json" || true
+                  -irr -jsonl -o "data/$program_name/nuclei_headless.json" || true
 
                 cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_headless.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
@@ -354,7 +381,7 @@ jobs:
                       -t /home/runner/nuclei-templates/http/exposures/tokens/ \
                       -c 30 -rl 150 -bs 10 -nmhe -retries 2 -mhe 15 -no-color \
                       -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" \
-                      -jsonl -o "data/$program_name/nuclei_js.json" || true
+                      -irr -jsonl -o "data/$program_name/nuclei_js.json" || true
                 fi
                 
                 END_TIME=$(date +%s)
@@ -366,23 +393,21 @@ jobs:
                 # Gabungkan hasil (Standard + CVEs + Params + Headless + JS OP Weapon)
                 cat "data/$program_name/nuclei_standard.json" "data/$program_name/nuclei_cves.json" "data/$program_name/nuclei_params.json" "data/$program_name/nuclei_headless.json" "data/$program_name/nuclei_js.json" > "data/$program_name/nuclei_results.json" 2>/dev/null || true
 
-                # JALANKAN AI HANYA JIKA ADA HASIL (Surgical Efficiency)
-                if [ -s "data/$program_name/nuclei_results.json" ]; then
-                  echo "[+] Findings detected! Invoking Grandmaster AI..."
-                  PROGRAM_NAME=$program_name python3 scripts/validate.py || true
-                else
-                  echo "[-] No findings in this session. Skipping AI Triage."
+                echo "[+] Running triage (writes alerts even if AI is down)..."
+                touch "data/$program_name/nuclei_results.json"
+                PROGRAM_NAME=$program_name python3 scripts/validate.py || true
+
+                # STEP 7: NOTIFIKASI — summary selalu, file temuan jika ada
+                if [ -f "data/$program_name/alerts/summary.txt" ]; then
+                  SUMMARY_TEXT=$(head -c 3500 "data/$program_name/alerts/summary.txt")
+                  tg_send_msg "$TG_GEN" "$SUMMARY_TEXT"
                 fi
-                
-                # STEP 7: SULTAN NOTIFIKASI
+
                 if [ -d "data/$program_name/alerts/high" ]; then
                   for f in data/$program_name/alerts/high/*.md; do
                     [ -e "$f" ] || continue
                     TITLE_CAPTION=$(grep "^# " "$f" | head -n 1 | sed 's/# //g' | cut -c1-60)
-                    curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
-                      -F chat_id="$TG_CRIT" \
-                      -F document=@"$f" \
-                      -F caption="🚨 [$program_name] FOUND: $TITLE_CAPTION" > /dev/null 2>&1
+                    tg_send_file "$TG_CRIT" "$f" "🚨 [$program_name] FOUND: $TITLE_CAPTION"
                   done
                 fi
 
@@ -390,15 +415,15 @@ jobs:
                   for f in data/$program_name/alerts/low/*.md; do
                     [ -e "$f" ] || continue
                     TITLE_CAPTION=$(grep "^# " "$f" | head -n 1 | sed 's/# //g' | cut -c1-60)
-                    curl -s -X POST "https://api.telegram.org/bot$TG_TOKEN/sendDocument" \
-                      -F chat_id="$TG_GEN" \
-                      -F document=@"$f" \
-                      -F caption="⚠️ [$program_name] FOUND: $TITLE_CAPTION" > /dev/null 2>&1
+                    tg_send_file "$TG_GEN" "$f" "⚠️ [$program_name] FOUND: $TITLE_CAPTION"
                   done
                 fi
 
                 zip -qj "${program_name}_FULL_DATA.zip" data/$program_name/*.txt data/$program_name/*.json .seen_urls || true
-                curl -s -F chat_id="$TG_DATA" -F document=@"${program_name}_FULL_DATA.zip" -F caption="📦 DATABASE: $program_name" "https://api.telegram.org/bot$TG_TOKEN/sendDocument" > /dev/null 2>&1
+                if [ -d "data/$program_name/alerts" ]; then
+                  zip -qr "${program_name}_FULL_DATA.zip" "data/$program_name/alerts" || true
+                fi
+                tg_send_file "$TG_DATA" "${program_name}_FULL_DATA.zip" "📦 DATABASE: $program_name"
             fi
           fi
 
