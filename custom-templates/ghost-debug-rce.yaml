@@ -7,7 +7,7 @@ info:
   description: Mendeteksi halaman Debug Mode (Laravel Ignition, Django, Werkzeug) yang dapat memicu Remote Code Execution.
   tags: exposure,debug,rce,laravel,django,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_ignition/execute-solution"

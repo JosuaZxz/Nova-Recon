@@ -7,7 +7,7 @@ info:
   description: Mencuri konfigurasi Spring Boot menggunakan Matrix Parameters Bypass.
   tags: exposure,config,actuator,springboot,bypass,custom
 
-requests:
+http:
   - method: GET
     path:
       # Standard

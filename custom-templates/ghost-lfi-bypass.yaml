@@ -7,7 +7,7 @@ info:
   description: Mencuri file passwd Linux melalui celah normalisasi path di Nginx/Apache.
   tags: lfi,bypass,waf,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       # Double URL Encoding & Nginx Misconfig Bypasses

@@ -7,7 +7,7 @@ info:
   description: Mengambil alih cluster AI/ML Big Data yang tidak diamankan.
   tags: rce,ray,spark,ai,ml,exposure,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/api/cluster_status"

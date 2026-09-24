@@ -7,7 +7,7 @@ info:
   description: Menyedot dokumen internal dan kredensial dari Atlassian Confluence API.
   tags: confluence,atlassian,exposure,leak,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wiki/rest/api/content/search?cql=type=page"

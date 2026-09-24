@@ -7,7 +7,7 @@ info:
   description: Mencuri token IAM AWS/GCP/Azure melalui parameter URL dengan IP Obfuscation.
   tags: ssrf,cloud,aws,gcp,azure,bypass,custom
 
-requests:
+http:
   - method: GET
     path:
       # AWS IP Obfuscation (Bypass Regex WAF)

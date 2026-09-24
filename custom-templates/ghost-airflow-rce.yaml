@@ -7,7 +7,7 @@ info:
   description: Mendeteksi Airflow UI yang tidak diamankan, memungkinkan eksekusi kode Python jarak jauh via DAGs.
   tags: airflow,exposure,rce,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/admin/"

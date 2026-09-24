@@ -7,7 +7,7 @@ info:
   description: Mengunduh peta blueprint API internal (Swagger/OpenAPI).
   tags: exposure,api,swagger,openapi,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/swagger.json"

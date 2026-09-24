@@ -7,7 +7,7 @@ info:
   description: Mengunduh skema database rahasia dari endpoint GraphQL.
   tags: graphql,api,exposure,custom
 
-requests:
+http:
   - method: POST
     path:
       - "{{BaseURL}}/graphql"

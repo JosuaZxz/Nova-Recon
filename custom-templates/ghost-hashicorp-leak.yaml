@@ -7,7 +7,7 @@ info:
   description: Mengunduh secret/keys dari manajer infrastruktur HashiCorp.
   tags: hashicorp,vault,consul,exposure,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/v1/agent/self"

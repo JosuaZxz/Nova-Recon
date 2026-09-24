@@ -7,7 +7,7 @@ info:
   description: Mengekstrak data sensitif (PII/Tokens) dari cache Next.js Server-Side Rendering.
   tags: nextjs,exposure,ssr,leak,high,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/_next/data/build/index.json"

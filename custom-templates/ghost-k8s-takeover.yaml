@@ -7,7 +7,7 @@ info:
   description: Mencuri konfigurasi Pods dan mengambil alih cluster Kubernetes.
   tags: k8s,kubernetes,exposure,takeover,critical,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/pods"

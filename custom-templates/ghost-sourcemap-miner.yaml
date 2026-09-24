@@ -7,7 +7,7 @@ info:
   description: Mencuri Source Code asli dari aplikasi frontend modern.
   tags: sourcemap,exposure,js,custom
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/static/js/main.js.map"

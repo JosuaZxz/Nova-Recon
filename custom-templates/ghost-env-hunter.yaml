@@ -7,7 +7,7 @@ info:
   description: Mengintai file konfigurasi dengan teknik WAF/Reverse Proxy Bypass.
   tags: exposure,config,backup,bypass,custom
 
-requests:
+http:
   - method: GET
     path:
       # Standard Paths
