@@ -25,10 +25,20 @@ http:
           - 200
       - type: word
         words:
-          - "__schema"
-          - "queryType"
-          - "mutationType"
+          - '"data":{'
+          - '__schema'
+          - 'queryType'
         condition: and
+      # ANTI-DISABLED TRAP: Cegah response error "introspection has been disabled" dan Shopify Storefront
+      - type: word
+        words:
+          - "has been disabled"
+          - "is not allowed"
+          - "introspection is disabled"
+          - "Powered-By: Shopify"
+          - "Shopify-Complexity-Score"
+        condition: or
+        negative: true
       # ANTI-HTML TRAP: GraphQL Response SELALU JSON Murni.
       - type: word
         words:

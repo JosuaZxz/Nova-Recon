@@ -113,6 +113,43 @@ def get_verification_context(data):
         if not extracted and not secret_regex.search(res) and not re.search(r'("email"\s*:\s*"[^"]+@[^"]+\.[^"]+")', res_lower):
             return None 
 
+    # --- [ PRECISION SANITY FILTERS (ANTI-FALSE-POSITIVE SHIELD) ] ---
+    # 1. Empty body / 0-byte backup or dump check
+    if any(k in tid.lower() for k in ["backup", "archive", "dump", "heapdump", "zip", "tar"]):
+        if "content-length: 0" in res_lower:
+            return None
+        body_split = res.split("\r\n\r\n", 1) if "\r\n\r\n" in res else res.split("\n\n", 1)
+        if len(body_split) > 1 and len(body_split[1].strip()) < 50:
+            return None
+
+    # 2. GraphQL Introspection disabled error / Shopify public storefront
+    if "graphql" in tid.lower():
+        if any(d in res_lower for d in ["has been disabled", "is not allowed", "introspection is disabled", "introspectionquery is disabled"]):
+            return None
+        if any(s in res_lower for s in ["powered-by: shopify", "shopify-complexity-score", "storefront/query"]):
+            return None
+        if '"__schema"' not in res_lower and '\"__schema\"' not in res_lower:
+            return None
+
+    # 3. Jenkins Script Console false positive (e.g. Jenkins Arena, Next.js sites)
+    if "jenkins" in tid.lower():
+        if any(ign in res_lower for ign in ["jenkins arena", "next.js", "_next/static", "cloudfront"]):
+            if not any(v in res_lower for v in ["manage jenkins", "groovy script", "x-jenkins", "_class\":\"hudson", "_class\":\"jenkins"]):
+                return None
+
+    # 4. WordPress CVE on non-WordPress site (e.g. X/Twitter, React/Next.js)
+    if "wp-" in tid.lower() or "wordpress" in tid.lower():
+        host_str = str(data.get("host", "")).lower()
+        if "x.com" in host_str or "twitter.com" in host_str:
+            return None
+        if not any(wp in res_lower for wp in ["wp-content", "wp-includes", "wordpress", "wp-json"]):
+            return None
+
+    # 5. CyberPanel CVE on non-CyberPanel site
+    if "cve-2024-51567" in tid.lower() or "cyberpanel" in tid.lower():
+        if not any(cp in res_lower for cp in ["cyberpanel", "databases/upgrademysqlstatus"]):
+            return None
+
     clean_res = res[:2000] if len(res) > 2000 else res
     
     return {
@@ -252,10 +289,10 @@ def validate_findings():
                 sev = d.get("info", {}).get("severity", "info").lower()
                 
                 if sev in ["medium", "high", "critical"] and not any(t in tid for t in trash):
-                    if tid not in grouped_findings: 
-                        grouped_findings[tid] = []
                     ctx = get_verification_context(d)
                     if ctx:
+                        if tid not in grouped_findings: 
+                            grouped_findings[tid] = []
                         grouped_findings[tid].append(ctx)
             except Exception as e:
                 continue

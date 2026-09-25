@@ -16,6 +16,16 @@ http:
           - 200
       - type: word
         words:
-          - "Jenkins"
-          - "Script Console"
+          - "Script Console [Jenkins]"
+          - "Groovy script and execute it"
+          - '"_class":"hudson.model.Hudson"'
+          - '"_class":"jenkins.model.Jenkins"'
         condition: or
+      # ANTI-SPA TRAP: Cegah Next.js, Arena, dan halaman event matching
+      - type: word
+        words:
+          - "_next/static"
+          - "Jenkins Arena"
+          - "Next.js"
+        condition: or
+        negative: true

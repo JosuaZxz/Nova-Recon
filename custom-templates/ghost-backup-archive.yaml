@@ -23,6 +23,15 @@ http:
           - "application/x-tar"
           - "application/gzip"
         condition: or
+      # ANTI-ZERO BYTE TRAP: Cegah response 0-byte dari Nginx/OpenResty
+      - type: word
+        part: header
+        words:
+          - "Content-Length: 0"
+        negative: true
+      - type: dsl
+        dsl:
+          - "len(body) > 200"
       # ANTI-TEXT TRAP: Mencegah WAF Akamai/Cloudflare membalas 200 OK dengan teks biasa
       - type: word
         words:
