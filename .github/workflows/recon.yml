@@ -1,4 +1,5 @@
 name: Automation Recon (24/7)
+# Engine Version: 2026.10.04 - Precision Shield & Groq AI Triage Active
 
 on:
   schedule:
