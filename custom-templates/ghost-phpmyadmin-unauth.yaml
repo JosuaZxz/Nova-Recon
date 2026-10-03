@@ -17,6 +17,19 @@ http:
           - 200
       - type: word
         words:
-          - "pma_password"
+          - "server_databases.php"
+          - "pma_navigation_tree_content"
+          - "Structure"
+          - "Databases"
+          - "SQL query:"
+        condition: or
+      # ANTI-LOGIN TRAP: Jika masih muncul form login pma_username/pma_password, berarti BELUM tembus!
+      - type: word
+        words:
           - "pma_username"
-        condition: and
+          - "pma_password"
+          - "input_username"
+          - "input_password"
+        condition: or
+        negative: true
+

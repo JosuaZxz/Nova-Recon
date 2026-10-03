@@ -71,29 +71,117 @@ def get_verification_context(data):
     
     req = data.get("request", "")
     res = data.get("response", "")
-    tid = data.get("template-id", "Unknown")
-    
-    # --- [ THE ANNIHILATION FILTER (ZERO TOLERANCE) ] ---
-    # Only filter out HTTP error codes if there are no extracted results from nuclei
+    tid = str(data.get("template-id", "Unknown")).strip()
+    t_name = str(info.get("name", tid)).strip()
+    t_tags = info.get("tags", [])
+    if isinstance(t_tags, list):
+        tags_str = " ".join([str(t).lower() for t in t_tags])
+    else:
+        tags_str = str(t_tags).lower()
+
+    host_str = str(data.get("host", "")).lower()
+    matched_url = str(data.get("matched-at", data.get("host", ""))).lower()
+    res_lower = res.lower() if res else ""
+    tid_lower = tid.lower()
+    name_lower = t_name.lower()
+
+    # --- [ SHIELD 1: THE ANNIHILATION FILTER (ZERO TOLERANCE) ] ---
+    # 1. Filter out pure HTTP error codes if no actual verified secret was extracted
     if not extracted and res:
-        status_match = re.search(r'^HTTP/[\d.]+\s+(400|401|403|404|405|406|429|502|503)', res)
+        status_match = re.search(r'^HTTP/[\d.]+\s+(400|401|403|404|405|406|410|429|500|502|503|504)', res.strip())
         if status_match:
             return None 
-            
-        if re.search(r'^HTTP/[\d.]+\s+(301|302|307|308)', res):
-            if re.search(r'Location:.*(/login|/signin|/auth|/sso|oauth|redirect_uri|wp-login)', res, re.IGNORECASE):
-                return None 
-                
-    # Noise keywords filter (WAF & common generic error pages)
+
+    # 2. Redirect-to-Login Killer (Next.js & general auth redirects)
+    # If the response redirected to /login, /signin, etc., it is NOT a bypass!
+    if res:
+        has_redirect_header = bool(re.search(r'^(HTTP/[\d.]+\s+(301|302|303|307|308))', res.strip()))
+        if has_redirect_header or "x-nextjs-redirect" in res_lower:
+            # Check Location header, X-Nextjs-Redirect header, or refresh redirect
+            if re.search(r'(location|x-nextjs-redirect):\s*https?://[^\r\n]*(/login|/signin|/auth|/sso|oauth|redirect_uri|wp-login|accounts\.google)', res_lower):
+                return None
+            if re.search(r'(location|x-nextjs-redirect):\s*(/login|/signin|/auth|/sso|oauth|wp-login)', res_lower):
+                return None
+
+    # 3. Known Public / Out of Scope Telemetry Filters
+    # Azure Application Insights Instrumentation Key is public telemetry write-only token
+    if "azure-instrumentation-key" in tid_lower or "application-insights" in tid_lower:
+        return None
+
+    # Google API Browser Key / Client ID in client-side JS (Firebase/Maps public client keys)
+    if tid_lower in ["google-api-key", "google-client-id", "credentials-disclosure"]:
+        if not extracted:
+            return None
+        # Okta widget and webpack chunks are client JS code, not server credential leaks
+        if any(w in matched_url for w in ["okta-sign-in", "chunk-", "output.", "main.", "analytics.js", "pa-js"]):
+            return None
+
+    # 4. Next.js Version Match Noise Killer
+    # CVE-2025-29927-HEADLESS passively flags "Vulnerable Next.js => 13.x" in public HTML
+    if "cve-2025-29927" in tid_lower:
+        if "headless" in tid_lower or not req:
+            # Merely detecting Next.js version banner without an exploited route is Informative
+            return None
+        # If the non-headless CVE redirected to login, it is a false positive
+        if "x-nextjs-redirect" in res_lower or "307 temporary redirect" in res_lower:
+            return None
+
+    # 5. WordPress / WooCommerce / CMS Cross-Platform False Positive Killer
+    is_wp_cve = any(x in tid_lower or x in name_lower or x in tags_str for x in ["wp-", "wordpress", "woocommerce", "learnpress", "epsilon", "cve-2020-36708", "cve-2024-8522", "cve-2026-49777"])
+    if is_wp_cve:
+        # Twitter, X, Crypto.com, Venmo, PayPal, Stripchat do not run WordPress WooCommerce/Epsilon
+        if any(d in host_str or d in matched_url for d in ["x.com", "twitter.com", "crypto.com", "venmo.com", "paypal.com", "stripchat.com", "airbnb.com"]):
+            return None
+        # Genuine WordPress endpoints ALWAYS have wp-content, wp-includes, or wp-json in response
+        if not any(wp in res_lower for wp in ["wp-content", "wp-includes", "wordpress", "wp-json"]):
+            return None
+
+    # 6. NVIDIA Triton Inference Server Cross-Matching Killer
+    is_triton_cve = "triton" in tid_lower or "triton" in name_lower or "cve-2026-24207" in tid_lower
+    if is_triton_cve:
+        # Stripchat model directory is for adult performers, not NVIDIA AI servers!
+        if any(d in host_str or d in matched_url for d in ["stripchat.com", "x.com", "airbnb.com"]):
+            return None
+        if not any(tr in res_lower for tr in ["triton", "inference:server", "tritonserver", "kserve"]):
+            return None
+
+    # 7. CyberPanel CVE on non-CyberPanel sites
+    if "cve-2024-51567" in tid_lower or "cyberpanel" in tid_lower or "cyberpanel" in name_lower:
+        if not any(cp in res_lower for cp in ["cyberpanel", "databases/upgrademysqlstatus"]):
+            return None
+
+    # 8. phpMyAdmin Unauthenticated Access Verifier
+    if "phpmyadmin" in tid_lower and "unauth" in tid_lower:
+        # If the response contains login form inputs, it is NOT unauthenticated access!
+        if any(p in res_lower for p in ["pma_password", "pma_username", "input_username", "input_password"]):
+            return None
+        if not any(db in res_lower for db in ["server_databases.php", "pma_navigation_tree_content", "sql query:", "database:"]):
+            return None
+
+    # 9. GraphQL Introspection Schema Noise Filter
+    if "graphql" in tid_lower and "introspection" in tid_lower:
+        # Filter disabled introspection or shopify storefronts
+        if any(d in res_lower for d in ["has been disabled", "is not allowed", "introspection is disabled", "introspectionquery is disabled"]):
+            return None
+        if any(s in res_lower for s in ["powered-by: shopify", "shopify-complexity-score", "storefront/query"]):
+            return None
+        if '"__schema"' not in res_lower and '\"__schema\"' not in res_lower:
+            return None
+        # Introspection alone without extracted tokens/PII is Low/Info (Recon Data)
+        if not extracted and not secret_regex.search(res):
+            info["severity"] = "low"
+
+
+    # 10. Noise keywords filter (WAF, Captcha, generic maintenance pages)
     noise_keywords = [
         "phs.getpostman.com", "schema.getpostman.com", "swagger-ui",
-        "api-docs", "\"state\":\"SUCCESS\"", "salesforce.com/aura",
+        "api-docs", "\"state\":\"success\"", "salesforce.com/aura",
         "the nlb has been offline", 
         "request was blocked by our security service", 
         "attention required! | cloudflare",
+        "cf-mitigated",
         "pardon our interruption"
     ]
-    res_lower = res.lower() if res else ""
     
     secret_regex = re.compile(r'('
         r'AKIA[0-9A-Z]{16}|'
@@ -108,53 +196,12 @@ def get_verification_context(data):
     if any(noise in res_lower for noise in noise_keywords):
         if not secret_regex.search(res) and not extracted:
             return None 
-            
-    if "token" in tid.lower() or "key" in tid.lower() or "credential" in tid.lower():
-        if not extracted and not secret_regex.search(res) and not re.search(r'("email"\s*:\s*"[^"]+@[^"]+\.[^"]+")', res_lower):
-            return None 
-
-    # --- [ PRECISION SANITY FILTERS (ANTI-FALSE-POSITIVE SHIELD) ] ---
-    # 1. Empty body / 0-byte backup or dump check
-    if any(k in tid.lower() for k in ["backup", "archive", "dump", "heapdump", "zip", "tar"]):
-        if "content-length: 0" in res_lower:
-            return None
-        body_split = res.split("\r\n\r\n", 1) if "\r\n\r\n" in res else res.split("\n\n", 1)
-        if len(body_split) > 1 and len(body_split[1].strip()) < 50:
-            return None
-
-    # 2. GraphQL Introspection disabled error / Shopify public storefront
-    if "graphql" in tid.lower():
-        if any(d in res_lower for d in ["has been disabled", "is not allowed", "introspection is disabled", "introspectionquery is disabled"]):
-            return None
-        if any(s in res_lower for s in ["powered-by: shopify", "shopify-complexity-score", "storefront/query"]):
-            return None
-        if '"__schema"' not in res_lower and '\"__schema\"' not in res_lower:
-            return None
-
-    # 3. Jenkins Script Console false positive (e.g. Jenkins Arena, Next.js sites)
-    if "jenkins" in tid.lower():
-        if any(ign in res_lower for ign in ["jenkins arena", "next.js", "_next/static", "cloudfront"]):
-            if not any(v in res_lower for v in ["manage jenkins", "groovy script", "x-jenkins", "_class\":\"hudson", "_class\":\"jenkins"]):
-                return None
-
-    # 4. WordPress CVE on non-WordPress site (e.g. X/Twitter, React/Next.js)
-    if "wp-" in tid.lower() or "wordpress" in tid.lower():
-        host_str = str(data.get("host", "")).lower()
-        if "x.com" in host_str or "twitter.com" in host_str:
-            return None
-        if not any(wp in res_lower for wp in ["wp-content", "wp-includes", "wordpress", "wp-json"]):
-            return None
-
-    # 5. CyberPanel CVE on non-CyberPanel site
-    if "cve-2024-51567" in tid.lower() or "cyberpanel" in tid.lower():
-        if not any(cp in res_lower for cp in ["cyberpanel", "databases/upgrademysqlstatus"]):
-            return None
 
     clean_res = res[:2000] if len(res) > 2000 else res
     
     return {
         "template_id": tid,
-        "template_name": info.get("name", "Unknown Bug Type"),
+        "template_name": t_name,
         "matcher_logic": matcher,
         "extracted_data": extracted,
         "severity": info.get("severity", "unknown"),
@@ -205,14 +252,16 @@ def create_h1_draft(title, description, impact, severity, url):
         res = requests.post("https://api.hackerone.com/v1/hackers/report_intents", auth=auth, headers={"Accept": "application/json"}, json=payload, timeout=30)
         if res.status_code == 201:
             return res.json()['data']['id']
+        else:
+            print(f"[-] HackerOne draft creation status {res.status_code}: {res.text[:150]}")
     except Exception as e:
         print(f"[-] HackerOne draft creation error: {e}")
     return "MANUAL_SUBMIT_REQUIRED"
 
-def generate_fallback_report(tid, findings, runner_ip):
+def build_verified_report(ai_verdict, tid, findings, runner_ip):
     f0 = findings[0]
-    title = f"{f0.get('template_name', tid)} Vulnerability"
-    sev = f0.get('severity', 'Medium').capitalize()
+    title = ai_verdict.get("title", f"{f0.get('template_name', tid)} in {PROGRAM_NAME}")
+    sev = ai_verdict.get("severity", f0.get("severity", "Medium")).capitalize()
     urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
     primary_url = f0['matched_url']
     req_ev = f0.get('request_evidence', 'No request data captured.')
@@ -220,7 +269,14 @@ def generate_fallback_report(tid, findings, runner_ip):
     extracted = f0.get('extracted_data', [])
     extracted_md = f"\n- **Extracted Secrets/Tokens:** `{json.dumps(extracted)}`" if extracted else ""
     
-    report = f"""# {title} in {PROGRAM_NAME}
+    summary = ai_verdict.get("summary", f"Nuclei detection engine triggered a verified finding for template `{tid}`.")
+    technical_explanation = ai_verdict.get("technical_explanation", f"Endpoint matched verified signature for `{tid}`.")
+    attack_vector = ai_verdict.get("attack_vector", f"Direct HTTP request to exposed asset `{primary_url}` using signature `{tid}`.")
+    technical_impact = ai_verdict.get("technical_impact", "Potential unauthorized access or information disclosure.")
+    business_impact = ai_verdict.get("business_impact", "Risk to organization sensitive infrastructure and assets.")
+    remediation = ai_verdict.get("remediation", "Restrict public network access to endpoint, enforce strict authentication, and apply security updates.")
+
+    report = f"""# {title}
 
 ## 📊 Vulnerability Details
 - **Severity:** {sev}
@@ -234,14 +290,15 @@ def generate_fallback_report(tid, findings, runner_ip):
 - **Instructions:** Test the URL above to verify the exposed sensitive pattern or vulnerability.
 
 ## 📝 Executive Summary
-Nuclei detection engine triggered a {sev}-severity security finding on target `{PROGRAM_NAME}` for template `{tid}`.
+{summary}
 
 ## 🔍 Technical Analysis
-The endpoint responded matching the signature for `{f0.get('template_name', tid)}`. Matcher logic: `{f0.get('matcher_logic', 'Rule matched')}`.
+{technical_explanation}
 
 ## 🚀 Steps To Reproduce (PoC)
 1. **Target:** `{primary_url}`
-2. **Payload / Signature:** `{tid}`
+2. **Attack Vector:** {attack_vector}
+3. **Payload / Signature:** `{tid}`
 
 ## 🛡️ Proof of Concept (Evidence)
 ```http
@@ -252,11 +309,11 @@ The endpoint responded matching the signature for `{f0.get('template_name', tid)
 ```
 
 ## ⚠️ Impact Analysis
-- **Technical Impact:** Potential unauthorized data exposure, misconfiguration, or remote command execution.
-- **Business Impact:** High security risk to sensitive organization assets and infrastructure.
+- **Technical Impact:** {technical_impact}
+- **Business Impact:** {business_impact}
 
 ## ✅ Remediation
-Review server configuration, restrict public endpoint access, rotate exposed secrets if any, and apply security patches.
+{remediation}
 """
     return {"title": title, "severity": sev, "full_markdown": report}
 
@@ -294,54 +351,14 @@ def validate_findings():
                         if tid not in grouped_findings: 
                             grouped_findings[tid] = []
                         grouped_findings[tid].append(ctx)
-            except Exception as e:
+            except Exception:
                 continue
 
-    print(f"[*] Processed {total_lines} findings lines. Valid grouped templates: {len(grouped_findings)}")
+    print(f"[*] Processed {total_lines} findings lines. Valid candidate templates after Shield Filter: {len(grouped_findings)}")
 
     if not grouped_findings: 
-        print("[-] No actionable Medium/High/Critical findings after noise filter.")
+        print("[-] Zero actionable findings after strict noise & false-positive filters.")
         return
-
-    luxury_template = """
-.# {title} in {program}
-
-.## 📊 Vulnerability Details
-- **Severity:** {severity}
-- **Affected Assets:** 
-{urls_list}
-- **Scanner IP:** {ip}
-
-.## 🔗 Quick Verification Link
-- **Primary Test URL:** {verify_url}
-- **Instructions:** Open the link above to inspect the finding.
-
-.## 📝 Executive Summary
-{summary}
-
-.## 🔍 Technical Analysis
-{technical_explanation}
-
-.## 🚀 Steps To Reproduce (PoC)
-1. **Target List:** {urls_list}
-2. **Attack Vector:** {attack_vector}
-3. **Payload used:** `{payload}`
-
-.## 🛡️ Proof of Concept (Evidence)
-.```http
-{request_evidence}
-.```
-.```http
-{response_evidence}
-.```
-
-.## ⚠️ Impact Analysis
-- **Technical Impact:** {technical_impact}
-- **Business Impact:** {business_impact}
-
-.## ✅ Remediation
-{remediation}
-"""
 
     for tid, findings in grouped_findings.items():
         if not findings: 
@@ -354,95 +371,118 @@ def validate_findings():
             print(f"[-] Skip (Already Processed): {tid} ({primary_url})")
             continue 
 
-        urls_list = "\n".join([f"- `{f['matched_url']}`" for f in findings])
-        req_ev = findings[0].get('request_evidence', 'No request data captured.')
-        res_ev = findings[0].get('response_evidence', 'No response data captured.')
-        
-        rep = None
-        
-        # If Groq AI is available, use it for deep triage
+        # --- [ SHIELD 2: SURGICAL AI TRIAGE VIA GROQ ] ---
+        ai_verdict = None
         if AI_KEY:
-            prompt = f"""Role: Senior Security Auditor.
+            prompt = f"""You are a cynical, expert Bug Bounty Triage Specialist on HackerOne.
+Your job is to REJECT false positives with ZERO MERCY.
+
+Candidate Target:
 Program: {PROGRAM_NAME}
-Vulnerability Type: {tid}
-Context Data: {json.dumps(findings[:3])}
+Template ID: {tid}
+Context: {json.dumps(findings[:2])}
 
-TASK: Write a SURGICAL, HONEST, and PROFESSIONAL Bug Report.
+REJECT AS FALSE POSITIVE (is_valid: false):
+1. Single Page Application (SPA / React / Next.js) route returning 200 OK for non-existent PHP/WordPress paths (e.g. /wp-admin on twitter.com).
+2. Word collisions (e.g. webcam "models" on stripchat triggering NVIDIA AI Triton CVE; crypto price ticker triggering WooCommerce CVE).
+3. Authorization bypass tests that actually redirected to a /login page (status 301/302/307).
+4. Telemetry / analytics keys (Azure App Insights, Google Maps/Analytics).
+5. Passive version banners without proof of exploitation.
+6. Login forms claiming to be "unauthenticated access".
+7. Cloudflare / WAF / generic 200 OK landing pages.
 
-CRITICAL LOGIC & TECHNICAL RULES:
-1. NO HALLUCINATION: DO NOT invent CVE IDs. Use only provided data.
-2. PUBLIC URL SKEPTICISM: If the URL contains '/article/', '/blog/', '/help/', or '/announcements/' and only shows public content without sensitive data, return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
-3. BOILERPLATE TRAP: If the response body only shows generic landing page HTML/CSS without actual leaked sensitive data, credentials, internal debug info, or command execution output, return ONLY JSON: {{"title": "FALSE_POSITIVE"}}.
-4. CONFIRM EVIDENCE: Check if the finding has real evidence (e.g. database credentials, cloud metadata, API tokens, actuator env dumps, or known CVE trigger).
-5. MANDATORY PLACEHOLDERS: You MUST include these exact strings LITERALLY: '{{ip}}', '{{verify_url}}', '{{urls_list}}', '{{program}}', '{{severity}}', '{{payload}}', '{{request_evidence}}', and '{{response_evidence}}'.
-6. DESCRIPTIONS: Provide professional content for '{{title}}', '{{summary}}', '{{technical_explanation}}', '{{attack_vector}}', '{{technical_impact}}', '{{business_impact}}', and '{{remediation}}'.
-
-IF THE FINDING IS A FALSE POSITIVE:
-Return EXACTLY: {{"title": "FALSE_POSITIVE"}}
-
-IF THE FINDING IS VALID:
-Return ONLY the JSON format below:
-{{"title": "Valid Vulnerability Title", "severity": "critical/high/medium", "full_markdown": "{luxury_template}"}}
+Return ONLY a valid, compact JSON object matching this schema EXACTLY:
+{{
+  "is_valid": true,
+  "confidence": 95,
+  "reason": "1-sentence reason",
+  "title": "Clear vulnerability title",
+  "severity": "critical",
+  "summary": "1-2 sentence executive summary",
+  "technical_explanation": "Technical details",
+  "attack_vector": "Attack vector used",
+  "technical_impact": "Impact on systems/data",
+  "business_impact": "Impact on business",
+  "remediation": "Concrete fix instructions"
+}}
+If false positive, set "is_valid": false and provide "reason" and "confidence".
 """
             try:
                 url = "https://api.groq.com/openai/v1/chat/completions"
-                headers = {"Authorization": f"Bearer {AI_KEY}"}
+                headers = {
+                    "Authorization": f"Bearer {AI_KEY}",
+                    "Content-Type": "application/json"
+                }
                 payload = {
                     "model": "llama-3.3-70b-versatile",
                     "messages": [{"role": "user", "content": prompt}],
-                    "temperature": 0.1
+                    "temperature": 0.0,
+                    "response_format": {"type": "json_object"}
                 }
                 
-                print(f"[*] AI Analyzing Group: {tid}...")
-                res = requests.post(url, headers=headers, json=payload, timeout=60)
+                print(f"[*] AI Analyzing Candidate: {tid} on {primary_url}...")
+                res = requests.post(url, headers=headers, json=payload, timeout=45)
                 if res.status_code == 200:
-                    ai_data = res.json()['choices'][0]['message']['content'].strip()
-                    match = re.search(r'\{.*\}', ai_data, re.DOTALL)
-                    if match:
-                        raw_json = match.group(0)
-                        cleaned_json = raw_json.replace('\\', '\\\\').replace('\\\\"', '\\"')
-                        try:
-                            rep = json.loads(cleaned_json, strict=False)
-                        except Exception:
-                            rep = json.loads(raw_json, strict=False)
+                    ai_raw = res.json()['choices'][0]['message']['content'].strip()
+                    try:
+                        ai_verdict = json.loads(ai_raw)
+                    except Exception:
+                        match = re.search(r'\{[\s\S]*\}', ai_raw)
+                        if match:
+                            ai_verdict = json.loads(match.group(0))
                 else:
-                    print(f"[!] Groq API returned status {res.status_code}: {res.text[:200]}")
+                    print(f"[!] Groq API status {res.status_code}: {res.text[:200]}")
             except Exception as e:
-                print(f"[!] AI Triage Exception for {tid}: {e}")
+                print(f"[!] Groq API Exception for {tid}: {e}")
 
-        # If AI was not used, failed, or timed out, generate resilient fallback report
-        if not rep or not isinstance(rep, dict):
-            print(f"[+] Generating heuristic fallback report for: {tid}")
-            rep = generate_fallback_report(tid, findings, runner_ip)
-
-        if rep.get("title") == "FALSE_POSITIVE":
-            print(f"[-] Dropping False Positive: {tid}")
+        # Strict Validation Gate:
+        # If AI explicitly judged it as False Positive:
+        if ai_verdict and isinstance(ai_verdict, dict):
+            if not ai_verdict.get("is_valid", False) or ai_verdict.get("confidence", 0) < 80:
+                print(f"[-] AI Dropped False Positive ({ai_verdict.get('confidence')}%, {ai_verdict.get('reason')}): {tid}")
+                mark_seen(url_hash)
+                continue
+        elif AI_KEY:
+            # If AI key was provided but the call failed or timed out, DO NOT generate a blind fallback!
+            # It is safer to skip than to submit false positives to HackerOne and ruin Signal score.
+            print(f"[!] Warning: AI Triage failed or returned empty. Skipping candidate {tid} to prevent false-positive spam.")
             continue
+        else:
+            # If no AI key configured at all, require strict extracted proof to proceed
+            if not findings[0].get('extracted_data'):
+                print(f"[-] No AI Key configured and no extracted secret proof for {tid}. Skipping.")
+                continue
+            ai_verdict = {
+                "title": f"{findings[0].get('template_name', tid)} in {PROGRAM_NAME}",
+                "severity": findings[0].get("severity", "Medium"),
+                "is_valid": True,
+                "confidence": 85
+            }
 
-        clean_md_raw = rep.get('full_markdown', '')
-        clean_md_raw = clean_md_raw.replace(".#", "#").replace(".##", "##").replace(".###", "###").replace(".```", "```")
-        
-        final_clean_report = clean_md_raw.replace("{ip}", runner_ip) \
-                                         .replace("{urls_list}", urls_list) \
-                                         .replace("{program}", PROGRAM_NAME) \
-                                         .replace("{verify_url}", primary_url) \
-                                         .replace("{severity}", rep.get('severity', 'Medium')) \
-                                         .replace("{request_evidence}", req_ev) \
-                                         .replace("{response_evidence}", res_ev) \
-                                         .replace("{payload}", tid)
+        print(f"[+] VERIFIED VULNERABILITY CONFIRMED: {tid} ({ai_verdict.get('title')})")
+        report_data = build_verified_report(ai_verdict, tid, findings, runner_ip)
 
-        final_d_id = create_h1_draft(rep['title'], final_clean_report, "Automated vulnerability detection.", rep.get('severity', 'medium'), primary_url)
+        # Only create HackerOne draft for verified high-confidence findings
+        final_d_id = "MANUAL_SUBMIT_REQUIRED"
+        if ai_verdict.get("is_valid") and ai_verdict.get("confidence", 0) >= 85:
+            final_d_id = create_h1_draft(
+                report_data['title'],
+                report_data['full_markdown'],
+                report_data.get('summary', 'Verified vulnerability detection.'),
+                report_data.get('severity', 'medium'),
+                primary_url
+            )
 
-        sev_folder = "high" if any(x in str(rep.get('severity', '')).upper() for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
+        sev_folder = "high" if any(x in str(report_data.get('severity', '')).upper() for x in ["CRIT", "HIGH", "P1", "P2"]) else "low"
         os.makedirs(f"data/{PROGRAM_NAME}/alerts/{sev_folder}", exist_ok=True)
         report_path = f"data/{PROGRAM_NAME}/alerts/{sev_folder}/{tid}.md"
     
         with open(report_path, 'w', encoding='utf-8') as f_report:
             f_report.write(f"🆔 **Draft ID:** `{final_d_id}`\n\n")
-            f_report.write(final_clean_report)
+            f_report.write(report_data['full_markdown'])
 
         mark_seen(url_hash)
-        print(f"[+] Alert Successfully Saved: {report_path}")
+        print(f"[+] Verified Alert Successfully Saved: {report_path}")
 
 if __name__ == "__main__":
     validate_findings()

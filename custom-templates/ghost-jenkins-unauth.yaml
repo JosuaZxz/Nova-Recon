@@ -8,7 +8,6 @@ http:
   - method: GET
     path:
       - "{{BaseURL}}/script"
-      - "{{BaseURL}}/api/json"
     matchers-condition: and
     matchers:
       - type: status
@@ -18,9 +17,9 @@ http:
         words:
           - "Script Console [Jenkins]"
           - "Groovy script and execute it"
-          - '"_class":"hudson.model.Hudson"'
-          - '"_class":"jenkins.model.Jenkins"'
+          - "println"
         condition: or
+
       # ANTI-SPA TRAP: Cegah Next.js, Arena, dan halaman event matching
       - type: word
         words:

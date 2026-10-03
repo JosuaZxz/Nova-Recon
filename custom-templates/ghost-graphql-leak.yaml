@@ -3,9 +3,10 @@ id: ghost-graphql-introspection
 info:
   name: GraphQL Introspection Query Enabled
   author: Sniper-Predator
-  severity: high
-  description: Mengunduh skema database rahasia dari endpoint GraphQL.
-  tags: graphql,api,exposure,custom
+  severity: low
+  description: Mengunduh skema GraphQL dari endpoint publik (Informational / Recon data).
+  tags: graphql,api,exposure,custom,info
+
 
 http:
   - method: POST
