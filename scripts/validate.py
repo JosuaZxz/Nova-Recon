@@ -57,6 +57,17 @@ except ImportError:
 
     requests = SimpleRequests()
 
+# Global compiled secret regex for token checks
+SECRET_REGEX = re.compile(r'('
+    r'AKIA[0-9A-Z]{16}|'
+    r'ghp_[a-zA-Z0-9]{36}|'
+    r'AIza[0-9A-Za-z-_]{35}|'
+    r'[rs]k_live_[a-zA-Z0-9]{24}|'
+    r'xox[baprs]-[0-9]{12}-[0-9]{12}|'
+    r'sq0csp-[0-9A-Za-z\-_]{43}|'
+    r'BEGIN (RSA|OPENSSH) PRIVATE KEY'
+r')')
+
 # --- [ CONFIGURATION ] ---
 AI_KEY = os.environ.get("GROQ_API_KEY")
 H1_USER = os.environ.get("H1_USERNAME")
@@ -87,7 +98,8 @@ def get_verification_context(data):
 
     # --- [ SHIELD 1: THE ANNIHILATION FILTER (ZERO TOLERANCE) ] ---
     # 1. Filter out pure HTTP error codes if no actual verified secret was extracted
-    if not extracted and res:
+    # Note: Subdomain takeovers natively return HTTP 404 with error body (GitHub Pages, AWS S3), so exempt takeover
+    if not extracted and res and "takeover" not in tid_lower:
         status_match = re.search(r'^HTTP/[\d.]+\s+(400|401|403|404|405|406|410|429|500|502|503|504)', res.strip())
         if status_match:
             return None 
@@ -168,7 +180,7 @@ def get_verification_context(data):
         if '"__schema"' not in res_lower and '\"__schema\"' not in res_lower:
             return None
         # Introspection alone without extracted tokens/PII is Low/Info (Recon Data)
-        if not extracted and not secret_regex.search(res):
+        if not extracted and not SECRET_REGEX.search(res):
             info["severity"] = "low"
 
     # 10. CORS Misconfiguration Verifier
@@ -200,19 +212,9 @@ def get_verification_context(data):
         "cf-mitigated",
         "pardon our interruption"
     ]
-    
-    secret_regex = re.compile(r'('
-        r'AKIA[0-9A-Z]{16}|'
-        r'ghp_[a-zA-Z0-9]{36}|'
-        r'AIza[0-9A-Za-z-_]{35}|'
-        r'[rs]k_live_[a-zA-Z0-9]{24}|'
-        r'xox[baprs]-[0-9]{12}-[0-9]{12}|'
-        r'sq0csp-[0-9A-Za-z\-_]{43}|'
-        r'BEGIN (RSA|OPENSSH) PRIVATE KEY'
-    r')')
 
     if any(noise in res_lower for noise in noise_keywords):
-        if not secret_regex.search(res) and not extracted:
+        if not SECRET_REGEX.search(res) and not extracted:
             return None 
 
     clean_res = res[:2000] if len(res) > 2000 else res
