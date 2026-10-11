@@ -1,0 +1,58 @@
+id: ghost-subdomain-takeover
+
+info:
+  name: High-Impact Subdomain Takeover Detection
+  author: sniper-predator
+  severity: high
+  tags: takeover,dns,cloud,critical,custom
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+    matchers-condition: or
+    matchers:
+      # AWS S3 Bucket Takeover
+      - type: word
+        words:
+          - "The specified bucket does not exist"
+          - "NoSuchBucket"
+        condition: or
+
+      # GitHub Pages Takeover
+      - type: word
+        words:
+          - "There isn't a GitHub Pages site here"
+          - "For root URLs (like http://example.com/) you must provide an index.html file"
+        condition: or
+
+      # Heroku Takeover
+      - type: word
+        words:
+          - "No such app"
+          - "herokucdn.com/error-pages/no-such-app.html"
+        condition: or
+
+      # Azure Web App Takeover
+      - type: word
+        words:
+          - "404 Web Site not found"
+          - "Microsoft Azure App Service - Error 404"
+        condition: or
+
+      # Zendesk Takeover
+      - type: word
+        words:
+          - "Help Center Closed"
+          - "this help center no longer exists"
+        condition: or
+
+      # Fastly / Cargo / Readme.io Takeover
+      - type: word
+        words:
+          - "Fastly error: unknown domain"
+          - "Project doesnt exist... yet!"
+          - "Subdomain is not claimed"
+        condition: or

@@ -171,9 +171,27 @@ def get_verification_context(data):
         if not extracted and not secret_regex.search(res):
             info["severity"] = "low"
 
+    # 10. CORS Misconfiguration Verifier
+    if "cors" in tid_lower:
+        if not ("access-control-allow-origin: https://evil-attacker.com" in res_lower and "access-control-allow-credentials: true" in res_lower):
+            return None
+        # Discard if response is empty or standard error
+        if len(res.strip()) < 50 or "404 not found" in res_lower:
+            return None
 
-    # 10. Noise keywords filter (WAF, Captcha, generic maintenance pages)
+    # 11. Subdomain Takeover Verifier
+    if "takeover" in tid_lower:
+        takeover_patterns = [
+            "the specified bucket does not exist", "nosuchbucket",
+            "there isn't a github pages site here", "no such app",
+            "herokucdn.com", "404 web site not found", "help center closed"
+        ]
+        if not any(tp in res_lower for tp in takeover_patterns):
+            return None
+
+    # 12. Noise keywords filter (WAF, Captcha, generic maintenance pages)
     noise_keywords = [
+
         "phs.getpostman.com", "schema.getpostman.com", "swagger-ui",
         "api-docs", "\"state\":\"success\"", "salesforce.com/aura",
         "the nlb has been offline", 

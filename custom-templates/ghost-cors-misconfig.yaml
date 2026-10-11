@@ -1,0 +1,38 @@
+id: ghost-cors-misconfig
+
+info:
+  name: Critical Arbitrary CORS Origin Reflection with Credentials
+  author: sniper-predator
+  severity: high
+  tags: cors,misconfig,auth,leak,custom
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+      - "{{BaseURL}}/api"
+      - "{{BaseURL}}/user"
+      - "{{BaseURL}}/api/v1/user"
+    headers:
+      Origin: "https://evil-attacker.com"
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: header
+        words:
+          - "Access-Control-Allow-Origin: https://evil-attacker.com"
+          - "Access-Control-Allow-Credentials: true"
+        condition: and
+
+      # Prevent static wildcards
+      - type: word
+        part: header
+        words:
+          - "Access-Control-Allow-Origin: *"
+        negative: true
