@@ -526,17 +526,22 @@ SECRET_PATTERNS = [
     ("Mailgun key", re.compile(r"key-[a-f0-9]{32}")),
 ]
 
-TAKEOVER_SUFFIXES = (
-    # NOTE: ELB/NLB (*.elb.*.amazonaws.com) TIDAK bisa di-takeover -> tidak dimasukkan.
-    "s3.amazonaws.com", "s3-website", "s3-accelerate", "execute-api",
-    "elasticbeanstalk.com",
-    "azurewebsites.net", "cloudapp.azure.com", "azureedge.net", "blob.core.windows.net",
-    "cloudfront.net", "herokuapp.com", "herokussl.com", "github.io", "gitlab.io",
-    "bitbucket.io", "netlify.app", "vercel.app", "pages.dev", "workers.dev",
-    "surge.sh", "firebaseapp.com", "web.app", "myshopify.com",
-    "readthedocs.io", "tumblr.com", "zendesk.com", "helpjuice.com",
-    "helpscout.net", "readme.io", "canny.io", "teamwork.com", "pantheon.io",
+# Kelas yang MASIH bisa diklaim tanpa kontrol DNS (per can-i-take-over-xyz, cek manual per kasus)
+HIGH_CLAIMABLE_SUFFIXES = (
+    "s3.amazonaws.com", "s3-website", "s3-accelerate",
+    "azurewebsites.net", "cloudapp.azure.com", "blob.core.windows.net",
+    "herokuapp.com", "herokussl.com", "github.io", "gitlab.io", "bitbucket.io",
+    "netlify.app", "vercel.app", "pages.dev", "surge.sh",
+    "firebaseapp.com", "web.app", "readthedocs.io", "tumblr.com",
+    "zendesk.com", "helpjuice.com", "helpscout.net", "readme.io",
+    "canny.io", "teamwork.com", "pantheon.io",
 )
+# Kelas CDN/API yang menggantung TAPI tidak bisa diklaim (wajib ACM/ownership verification sejak 2021+)
+DANGLING_ONLY_SUFFIXES = (
+    "cloudfront.net", "execute-api", "azureedge.net",
+    "elasticbeanstalk.com", "myshopify.com", "workers.dev", "elb.",
+)
+TAKEOVER_SUFFIXES = HIGH_CLAIMABLE_SUFFIXES + DANGLING_ONLY_SUFFIXES
 
 TAKEOVER_BODY_SIGS = [
     ("NoSuchBucket", "high", "S3 bucket hilang"),
@@ -548,22 +553,32 @@ TAKEOVER_BODY_SIGS = [
 ]
 
 def check_takeover(host, roots):
-    """CNAME dangling ke layanan claimable. Return finding dict atau None."""
+    """CNAME dangling. Klaimable -> high; kelas CDN (dangling-only) -> info jujur."""
     if not in_scope(host, roots):
         return None
     cname, host_nx = resolve_cname(host)
     if not cname:
         # host sendiri NXDOMAIN tanpa CNAME -> cuma catat kalau ada petunjuk
         return None
-    if not any(cname.endswith(sfx) or sfx in cname for sfx in TAKEOVER_SUFFIXES):
+    claimable = any(cname.endswith(sfx) or sfx in cname for sfx in HIGH_CLAIMABLE_SUFFIXES)
+    dangling = any(cname.endswith(sfx) or sfx in cname for sfx in DANGLING_ONLY_SUFFIXES)
+    if not (claimable or dangling):
         return None
     target_ips = resolve_a(cname)
     if not target_ips:
+        if claimable:
+            return {
+                "type": "takeover", "url": f"https://{host}", "host": host,
+                "severity_hint": "high", "confidence": "strong",
+                "evidence": f"CNAME -> {cname} (tanpa A record). Layanan claimable, subdomain menggantung.",
+                "next": "Klaim di provider layanan tsb untuk buktikan kontrol, lalu report. Verifikasi manual wajib.",
+            }
         return {
-            "type": "takeover", "url": f"https://{host}", "host": host,
-            "severity_hint": "high", "confidence": "strong",
-            "evidence": f"CNAME -> {cname} (NXDOMAIN). Layanan claimable, subdomain menggantung.",
-            "next": "Daftar/klaim di provider layanan tsb, lalu buktikan kontrol. Verifikasi manual wajib.",
+            "type": "dangling-cname", "url": f"https://{host}", "host": host,
+            "severity_hint": "info", "confidence": "confirmed-dangling",
+            "evidence": f"CNAME -> {cname} (tanpa A record). Kelas CDN/API-gateway: TIDAK bisa diklaim "
+                        "tanpa kontrol DNS (AWS mewajibkan ACM cert utk alias sejak 2021).",
+            "next": "Umumnya hanya layak informative/hygiene. Jangan buang waktu klaim; laporkan hanya jika program menerima hygiene report.",
         }
     # target resolve: cek body signature 404 khas
     r, _ = http_get(f"https://{host}/")
@@ -571,11 +586,13 @@ def check_takeover(host, roots):
         body = getattr(r, "_nova_body", b"")[:4000].decode("utf-8", "ignore")
         for sig, sev, desc in TAKEOVER_BODY_SIGS:
             if sig.lower() in body.lower():
+                sev = sev if claimable else "info"
                 return {
-                    "type": "takeover", "url": f"https://{host}", "host": host,
+                    "type": "takeover" if claimable else "dangling-cname",
+                    "url": f"https://{host}", "host": host,
                     "severity_hint": sev, "confidence": "medium",
                     "evidence": f"CNAME -> {cname}; body 404: '{sig}'",
-                    "next": "Klaim di provider, verifikasi manual wajib.",
+                    "next": "Klaim di provider bila claimable; verifikasi manual wajib.",
                 }
     return None
 
@@ -766,7 +783,7 @@ def collect_findings(date=None):
             out.append(json.loads(f.read_text(encoding="utf-8")))
         except Exception:
             continue
-    sev_rank = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+    sev_rank = {"critical": 0, "high": 1, "medium": 2, "low": 3, "info": 4}
     out.sort(key=lambda x: sev_rank.get(x.get("severity_hint", "low"), 9))
     return out
 
