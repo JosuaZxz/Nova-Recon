@@ -1,0 +1,12 @@
+# hasil runtime lokal
+data/
+findings/
+__pycache__/
+*.pyc
+
+# arsip yang diunduh (jangan pernah commit)
+*.zip
+
+# sistem
+.DS_Store
+Thumbs.db

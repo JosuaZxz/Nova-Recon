@@ -1,0 +1,131 @@
+name: NOVA v2 - First-Strike Asset Monitor
+
+# Deteksi aset BARU (CT logs + passive sources), probe hanya yang baru,
+# verifikasi otomatis (exposure/takeover/cors/graphql/js-secret), briefing Telegram.
+# Memory aset disimpan di folder state/ dan di-commit tiap run.
+
+on:
+  schedule:
+    - cron: '15 * * * *' # tiap jam menit 15
+  workflow_dispatch:
+    inputs:
+      programs:
+        description: "Program terpisah koma (kosong = rotasi otomatis)"
+        required: false
+        default: ""
+      rotate_count:
+        description: "Jumlah program per run saat rotasi otomatis"
+        required: false
+        default: "8"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nova
+  cancel-in-progress: false
+
+jobs:
+  nova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      NOVA_MAX_CONC: "20"
+      NOVA_REQ_DELAY: "0.08"
+      NOVA_MAX_NEW_PROBE: "250"
+      NOVA_MAX_JS: "120"
+      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+      TELEGRAM_GENERAL_ID: ${{ secrets.TELEGRAM_GENERAL_ID }}
+      TELEGRAM_DATA_ID: ${{ secrets.TELEGRAM_DATA_ID }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        run: |
+          python3 -V
+          python3 -m pip install --quiet --disable-pip-version-check requests
+
+      - name: Install subfinder (binary release, fallback go)
+        timeout-minutes: 10
+        run: |
+          TAG=$(curl -sf "https://api.github.com/repos/projectdiscovery/subfinder/releases/latest" \
+            | python3 -c "import json,sys; print(json.load(sys.stdin)['tag_name'].lstrip('v'))") || TAG=""
+          if [ -n "$TAG" ]; then
+            curl -sfL -o /tmp/sf.zip \
+              "https://github.com/projectdiscovery/subfinder/releases/download/v${TAG}/subfinder_${TAG}_linux_amd64.zip" \
+              && unzip -oq /tmp/sf.zip -d /tmp/sf \
+              && sudo install /tmp/sf/subfinder /usr/local/bin/subfinder || true
+          fi
+          if ! command -v subfinder >/dev/null 2>&1; then
+            echo "[fallback] compile via go..."
+            sudo apt-get update -qq && sudo apt-get install -y -qq golang
+            GOBIN=/usr/local/bin go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest \
+              || echo "[!] subfinder gagal dipasang - NOVA lanjut dengan sumber pasif python"
+          fi
+          subfinder -version || true
+
+      - name: Pilih program (rotasi otomatis / manual)
+        id: pick
+        run: |
+          ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | sort)
+          N=$(echo "$ALL" | wc -l)
+          K="${{ github.event.inputs.rotate_count || '8' }}"
+          K=$(( K + 0 )); [ "$K" -lt 1 ] && K=8
+          if [ -n "${{ github.event.inputs.programs }}" ]; then
+            PROGS="${{ github.event.inputs.programs }}"
+          else
+            OFFSET=$(( ${{ github.run_number }} * K % N ))
+            PROGS=""
+            for i in $(seq 0 $((K-1))); do
+              IDX=$(( (OFFSET + i) % N + 1 ))
+              PROGS="$PROGS,$(sed -n "${IDX}p" <<< "$ALL")"
+            done
+            PROGS="${PROGS#,}"
+          fi
+          echo "programs=$PROGS" >> "$GITHUB_OUTPUT"
+          {
+            echo "### NOVA run #${{ github.run_number }}"
+            echo "- Program terdaftar: $N"
+            echo "- Diproses run ini: \`$PROGS\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: NOVA - monitor/probe/verify per program
+        run: |
+          IFS=',' read -ra PROGS <<< "${{ steps.pick.outputs.programs }}"
+          for P in "${PROGS[@]}"; do
+            P=$(echo "$P" | xargs)
+            [ -z "$P" ] && continue
+            [ -f "targets/$P.txt" ] || { echo "[skip] targets/$P.txt tidak ada"; continue; }
+            echo "=============== NOVA: $P ==============="
+            mkdir -p "data/$P"
+            timeout 6m subfinder -dL "targets/$P.txt" -all -silent -o "data/$P/subfinder.txt" 2>/dev/null || true
+            python3 scripts/nova.py monitor --program "$P" --merge-file "data/$P/subfinder.txt"
+            python3 scripts/nova.py probe --program "$P"
+            python3 scripts/nova.py verify --program "$P"
+            rm -rf "data/$P"
+          done
+
+      - name: Briefing + Telegram (hanya jika ada lead)
+        if: always()
+        run: python3 scripts/nova.py brief --send-telegram
+
+      - name: Commit memory aset (state/)
+        if: always()
+        run: |
+          git config --local user.email "bot@nova-recon"
+          git config --local user.name "Nova-Bot"
+          mkdir -p state
+          git add state/
+          git commit -m "nova: update asset memory [skip ci]" || echo "No changes"
+          for i in 1 2 3 4 5; do
+            git pull origin main --rebase || (git rebase --abort || true)
+            if git push origin main; then
+              echo "Memory tersinkron."
+              break
+            fi
+            echo "Tabrakan push, coba lagi ($i)..."
+            sleep 10
+          done
