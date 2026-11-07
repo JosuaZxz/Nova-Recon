@@ -758,9 +758,12 @@ def cmd_verify(args):
     day_dir.mkdir(parents=True, exist_ok=True)
     for f in findings:
         h = sha(f["type"] + "|" + f["url"])
-        if h in index:
+        if getattr(args, "rebuild", False):
+            pass  # mode rebuild: regenerasi JSON detail (utk verifikasi manual), tanpa duplikasi index
+        elif h in index:
             continue
-        append_finding_index(program, h)
+        else:
+            append_finding_index(program, h)
         f["program"] = program
         f["first_seen"] = now_utc()
         fhash = h
@@ -971,6 +974,8 @@ def main():
     s.add_argument("--program", required=True)
     s.add_argument("--probe-file", default=None)
     s.add_argument("--new-file", default=None)
+    s.add_argument("--rebuild", action="store_true",
+                   help="regenerasi JSON detail temuan (abaikan dedupe index) - utk verifikasi manual")
     s.set_defaults(func=cmd_verify)
 
     s = sub.add_parser("brief", help="briefing harian + telegram")
