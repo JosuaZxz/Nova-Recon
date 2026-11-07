@@ -519,7 +519,7 @@ SECRET_PATTERNS = [
     ("AWS Access Key", re.compile(r"AKIA[0-9A-Z]{16}")),
     ("GitHub token", re.compile(r"gh[pousr]_[A-Za-z0-9]{30,50}|github_pat_[A-Za-z0-9_]{20,}")),
     ("Stripe live key", re.compile(r"[sr]k_live_[A-Za-z0-9]{20,}")),
-    ("Google API key", re.compile(r"AIza[0-9A-Za-z_\-]{35}")),
+    ("Google API key", re.compile(r"AIza[0-9A-Za-z_\-]{35}")),  # note: browser key sering by-design, cek restriction
     ("Slack token", re.compile(r"xox[baprs]-[A-Za-z0-9\-]{10,}")),
     ("Private key block", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")),
     ("Twilio key", re.compile(r"SK[a-f0-9]{32}")),
@@ -620,6 +620,9 @@ def check_graphql(base_url):
     return None
 
 def check_exposures(base_url, catchall):
+    # Host SPA catch-all membalas 200+index.html utk SEMUA path -> sumber FP massal.
+    if catchall:
+        return []
     findings = []
     for path, verdict in EXPOSURE_CHECKS:
         url = base_url.rstrip("/") + path
@@ -630,7 +633,8 @@ def check_exposures(base_url, catchall):
             continue
         body = getattr(r, "_nova_body", b"")[:60_000].decode("utf-8", "ignore")
         ct = r.headers.get("Content-Type", "")
-        if ct.startswith("text/html") and path not in ("/.env",):
+        # TANPA pengecualian: respons HTML tidak pernah dianggap file config
+        if ct.startswith("text/html") or body.lstrip()[:1] == "<":
             continue
         ok, evidence = verdict(body, r.headers)
         if ok:
