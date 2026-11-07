@@ -767,7 +767,8 @@ def cmd_verify(args):
         with open(day_dir / f"{f['type']}-{fhash}.json", "w", encoding="utf-8") as fh:
             json.dump(f, fh, ensure_ascii=False, indent=2)
         saved += 1
-        print(f"  [LEAD] [{f['severity_hint']}] {f['type']}: {f['url']}  -> {f['evidence'][:80]}")
+        # PRIVASI: log Actions itu PUBLIC (repo public). Jangan pernah cetak URL/evidence.
+        print(f"  [LEAD] {fhash} {f['type']} [{f['severity_hint']}] (detail via Telegram)")
 
     print(f"[=] {program}: {len(findings)} kandidat, {saved} BARU disimpan di {day_dir}")
 
@@ -841,8 +842,8 @@ def cmd_brief(args):
     FINDINGS_DIR.mkdir(exist_ok=True)
     out = FINDINGS_DIR / f"BRIEFING-{day}.md"
     out.write_text(text, encoding="utf-8")
-    print(f"[+] Briefing: {out}")
-    print(text)
+    # PRIVASI: jangan cetak isi briefing ke stdout (log Actions = public).
+    print(f"[+] Briefing: {out.name} | leads: {len(findings)} | detail: Telegram + file lokal")
     if args.send_telegram and (findings or args.force):
         tg_send_text(text)
     # zip findings -> Telegram data channel (seperti kebiasaan lama, tapi kini berisi LEADS)
