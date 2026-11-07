@@ -16,7 +16,7 @@ on:
       rotate_count:
         description: "Jumlah program per run saat rotasi otomatis"
         required: false
-        default: "8"
+        default: "6"
 
 permissions:
   contents: write
@@ -28,12 +28,14 @@ concurrency:
 jobs:
   nova:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 55
     env:
       NOVA_MAX_CONC: "20"
       NOVA_REQ_DELAY: "0.08"
       NOVA_MAX_NEW_PROBE: "250"
       NOVA_MAX_JS: "120"
+      NOVA_MONITOR_BUDGET: "240"
+      NOVA_TAKEOVER_CAP: "2000"
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
       TELEGRAM_GENERAL_ID: ${{ secrets.TELEGRAM_GENERAL_ID }}
       TELEGRAM_DATA_ID: ${{ secrets.TELEGRAM_DATA_ID }}
@@ -72,7 +74,7 @@ jobs:
         run: |
           ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | sort)
           N=$(echo "$ALL" | wc -l)
-          K="${{ github.event.inputs.rotate_count || '8' }}"
+          K="${{ github.event.inputs.rotate_count || '6' }}"
           K=$(( K + 0 )); [ "$K" -lt 1 ] && K=8
           if [ -n "${{ github.event.inputs.programs }}" ]; then
             PROGS="${{ github.event.inputs.programs }}"

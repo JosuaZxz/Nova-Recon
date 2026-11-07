@@ -208,6 +208,24 @@ def http_get(url, allow_redirects=False, extra_headers=None, max_bytes=400_000, 
 
 # ------------------------------------------------------------------- DNS
 
+DOH_URL = "https://1.1.1.1/dns-query"
+
+def dns_lookup(host: str):
+    """(cnames, ips) via Cloudflare DoH - cepat & paralel-aman. Fallback nslookup/socket."""
+    try:
+        r = requests.get(DOH_URL, params={"name": host, "type": "A"},
+                         headers={"accept": "application/dns-json"}, timeout=8)
+        ans = r.json().get("Answer") or []
+        cns = [a["data"].rstrip(".").lower() for a in ans if a.get("type") == 5]
+        ips = [a["data"] for a in ans if a.get("type") == 1]
+        return cns, ips
+    except Exception:
+        pass
+    # fallback lama
+    cname, _ = resolve_cname(host)
+    ips = resolve_a(host)
+    return ([cname] if cname else []), ips
+
 def resolve_a(host: str):
     try:
         infos = socket.getaddrinfo(host, None, socket.AF_INET)
@@ -337,20 +355,37 @@ def cmd_monitor(args):
     known = load_state(program)
     discovered = set()
 
-    print(f"[*] {program}: passive discovery untuk {len(roots)} root domain...")
+    # PARALEL: tiap kombinasi (root x source) jalan serentak, dengan budget waktu.
+    # Program berat (banyak root, CT log raksasa) dipotong budget-nya; sisanya
+    # otomatis kejaring run berikutnya (state belum terisi -> masih dianggap BARU).
+    BUDGET = int(os.environ.get("NOVA_MONITOR_BUDGET", "240"))
+    start = time.monotonic()
+    tasks = [(root, src) for root in roots for src in PASSIVE_SOURCES]
+    holders = []
+    skipped = 0
+    print(f"[*] {program}: passive discovery {len(roots)} root x {len(PASSIVE_SOURCES)} sumber (paralel, budget {BUDGET}s)...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
+        futs = {}
+        for root, src in tasks:
+            if time.monotonic() - start > BUDGET:
+                skipped = len(tasks) - len(futs)
+                break
+            holder = set()
+            holders.append((root, src.__name__, holder))
+            futs[ex.submit(src, root, holder)] = None
+        for fut in concurrent.futures.as_completed(futs):
+            fut.result()
+    if skipped:
+        print(f"    [!] budget habis: {skipped} kombinasi root-sumber dilewati (dikejar di run berikutnya)")
+    per_root = {}
+    for root, srcname, holder in holders:
+        good = {n for n in holder if in_scope(n, roots)}
+        discovered |= good
+        per_root[root] = per_root.get(root, 0) + len(good)
+    src_ok = sum(1 for _, s, h in holders if h)
     for root in roots:
-        found = set()
-        ok_sources = 0
-        for src in PASSIVE_SOURCES:
-            try:
-                if src(root, found):
-                    ok_sources += 1
-            except Exception as e:  # noqa: BLE001
-                print(f"    [!] source error {src.__name__}: {e}")
-        print(f"    {root}: {len(found)} nama dari {ok_sources}/3 sumber")
-        for name in found:
-            if in_scope(name, roots):
-                discovered.add(name)
+        if root in per_root:
+            print(f"    {root}: {per_root[root]} nama (kumulatif, sumber ok: {src_ok}/{len(tasks)})")
 
     # merge hasil subfinder eksternal (jika workflow memberikan)
     if args.merge_file and Path(args.merge_file).exists():
@@ -553,18 +588,18 @@ TAKEOVER_BODY_SIGS = [
 ]
 
 def check_takeover(host, roots):
-    """CNAME dangling. Klaimable -> high; kelas CDN (dangling-only) -> info jujur."""
+    """CNAME dangling (1 query DoH). Klaimable -> high; kelas CDN (dangling-only) -> info jujur."""
     if not in_scope(host, roots):
         return None
-    cname, host_nx = resolve_cname(host)
-    if not cname:
-        # host sendiri NXDOMAIN tanpa CNAME -> cuma catat kalau ada petunjuk
+    cns, ips_of_host = dns_lookup(host)
+    if not cns:
         return None
+    cname = cns[-1]
     claimable = any(cname.endswith(sfx) or sfx in cname for sfx in HIGH_CLAIMABLE_SUFFIXES)
     dangling = any(cname.endswith(sfx) or sfx in cname for sfx in DANGLING_ONLY_SUFFIXES)
     if not (claimable or dangling):
         return None
-    target_ips = resolve_a(cname)
+    _, target_ips = dns_lookup(cname)
     if not target_ips:
         if claimable:
             return {
@@ -742,15 +777,24 @@ def cmd_verify(args):
         if scripts:
             findings.extend(check_js_secrets(scripts, roots))
 
-    # 2) takeover: cek SEMUA host baru (termasuk yang DNS-nya mati)
+    # 2) takeover: cek host baru (DoH cepat, prioritas host menarik, ada cap waktu-aman)
     new_hosts = []
     if new_file.exists():
         new_hosts = [l.strip() for l in new_file.read_text(encoding="utf-8", errors="ignore").splitlines() if l.strip()]
-    print(f"[*] {program}: takeover check pada {len(new_hosts)} host baru...")
-    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as ex:
-        for f in ex.map(lambda h: check_takeover(h, roots), new_hosts):
+    cap = int(os.environ.get("NOVA_TAKEOVER_CAP", "2000"))
+    sweep = prioritize_hosts(new_hosts)[:cap] if new_hosts else []
+    print(f"[*] {program}: takeover check pada {len(sweep)} host baru" +
+          (f" (dibatasi dari {len(new_hosts)})" if len(new_hosts) > cap else "") + "...")
+    with concurrent.futures.ThreadPoolExecutor(max_workers=24) as ex:
+        for f in ex.map(lambda h: check_takeover(h, roots), sweep):
             if f:
                 findings.append(f)
+
+    # pembatas banjir: dangling-cname (info) maks 25 per program per run, sisanya agregat
+    dang = [f for f in findings if f["type"] == "dangling-cname"]
+    if len(dang) > 25:
+        findings = [f for f in findings if f["type"] != "dangling-cname"] + dang[:25]
+        print(f"    (dangling-cname dipotong {len(dang)} -> 25; sisanya hygiene noise)")
 
     # dedupe vs index (url+type) & simpan
     saved = 0
