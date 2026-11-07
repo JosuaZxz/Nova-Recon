@@ -478,10 +478,10 @@ def cmd_probe(args):
 
 EXPOSURE_CHECKS = [
     # (path, verdict_fn) - verdict_fn(body, headers) -> (bool, evidence_str)
-    ("/.env", lambda b, h: (_env_secret(b), None)),
-    ("/.env.local", lambda b, h: (_env_secret(b), None)),
-    ("/.env.production", lambda b, h: (_env_secret(b), None)),
-    ("/.env.backup", lambda b, h: (_env_secret(b), None)),
+    ("/.env", lambda b, h: _env_secret(b)),
+    ("/.env.local", lambda b, h: _env_secret(b)),
+    ("/.env.production", lambda b, h: _env_secret(b)),
+    ("/.env.backup", lambda b, h: _env_secret(b)),
     ("/.git/config", lambda b, h: ("[core]" in b or '[remote "origin"]' in b, "git config present")),
     ("/.git/HEAD", lambda b, h: (b.strip().startswith("ref: refs/"), "git HEAD: " + b.strip()[:40])),
     ("/actuator/env", lambda b, h: ("propertySources" in b, "Spring actuator env JSON")),
@@ -527,7 +527,9 @@ SECRET_PATTERNS = [
 ]
 
 TAKEOVER_SUFFIXES = (
-    "s3.amazonaws.com", "s3-website", "s3-accelerate", "amazonaws.com",
+    # NOTE: ELB/NLB (*.elb.*.amazonaws.com) TIDAK bisa di-takeover -> tidak dimasukkan.
+    "s3.amazonaws.com", "s3-website", "s3-accelerate", "execute-api",
+    "elasticbeanstalk.com",
     "azurewebsites.net", "cloudapp.azure.com", "azureedge.net", "blob.core.windows.net",
     "cloudfront.net", "herokuapp.com", "herokussl.com", "github.io", "gitlab.io",
     "bitbucket.io", "netlify.app", "vercel.app", "pages.dev", "workers.dev",
@@ -793,17 +795,21 @@ def tg_send_text(text):
     if not (TG_TOKEN and TG_GENERAL):
         print("[!] Telegram belum diset (TELEGRAM_TOKEN / TELEGRAM_GENERAL_ID). Briefing hanya file.")
         return False
+    ok = True
     for i in range(0, len(text), 3800):
         try:
-            requests.post(
+            r = requests.post(
                 f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
                 json={"chat_id": TG_GENERAL, "text": text[i:i + 3800]},
                 timeout=20,
             )
+            if r.status_code != 200:
+                print(f"[!] Telegram sendMessage HTTP {r.status_code}: {r.text[:120]}")
+                ok = False
         except Exception as e:  # noqa: BLE001
             print(f"[!] Telegram gagal: {e}")
-            return False
-    return True
+            ok = False
+    return ok
 
 def cmd_brief(args):
     findings = collect_findings(args.date)
