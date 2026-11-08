@@ -556,7 +556,8 @@ SECRET_PATTERNS = [
     ("Stripe live key", re.compile(r"[sr]k_live_[A-Za-z0-9]{20,}")),
     ("Google API key", re.compile(r"AIza[0-9A-Za-z_\-]{35}")),  # note: browser key sering by-design, cek restriction
     ("Slack token", re.compile(r"xox[baprs]-[A-Za-z0-9\-]{10,}")),
-    ("Private key block", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")),
+    ("Private key block", re.compile(
+        r"-----BEGIN (?:RSA |EC |OPENSSH |PGP )?PRIVATE KEY-----[A-Za-z0-9+/=\r\n]{200,}-----END [A-Z ]*?PRIVATE KEY-----")),
     ("Twilio key", re.compile(r"SK[a-f0-9]{32}")),
     ("Mailgun key", re.compile(r"key-[a-f0-9]{32}")),
 ]
@@ -599,6 +600,17 @@ def check_takeover(host, roots):
     dangling = any(cname.endswith(sfx) or sfx in cname for sfx in DANGLING_ONLY_SUFFIXES)
     if not (claimable or dangling):
         return None
+    # CNAME ke APEX zona (bukan hostname app) = record rusak, BUKAN takeover claimable
+    SERVICE_APEXES = ("azurewebsites.net", "cloudapp.azure.com", "herokuapp.com", "github.io",
+                      "gitlab.io", "netlify.app", "vercel.app", "pages.dev", "workers.dev",
+                      "web.app", "firebaseapp.com", "surge.sh", "readthedocs.io")
+    if cname in SERVICE_APEXES:
+        return {
+            "type": "dangling-cname", "url": f"https://{host}", "host": host,
+            "severity_hint": "info", "confidence": "confirmed-dangling",
+            "evidence": f"CNAME -> {cname} (APEX zona, bukan hostname app). Record rusak/misconfigured, tidak ada app yang bisa diklaim.",
+            "next": "Hygiene report saja (jika program menerima); bukan takeover.",
+        }
     _, target_ips = dns_lookup(cname)
     if not target_ips:
         if claimable:
