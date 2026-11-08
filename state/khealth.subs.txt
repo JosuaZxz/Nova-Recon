@@ -47,6 +47,7 @@ abmail.m.khealth.com
 abmail.mail.khealth.com
 abmail.news.khealth.com
 abmail7.m.khealth.com
+acc.khealth.com
 access.khealth.io
 accounts.dev.khealth.com
 accounts.khealth.com
@@ -106,6 +107,8 @@ are.api.therapy.khealth.com
 arg.clinical-quality-kmd.khealth.com
 argocd-maccabi.khealth.io
 ark.content-files.therapy.khealth.com
+aro.care-plan-service.khealth.com
+aru.clinical-search-service.khealth.com
 aru.hasura.khealth.com
 ask.khealth.com
 assessment.khealth.com
@@ -203,6 +206,7 @@ cf2.khealth.io
 chat.khealth.com
 chimera.khealth.com
 clinic.k-test.mayo.khealth.com
+clinic.khealth.com
 clinic.mayo.khealth.com
 clinical-automation-portal.khealth.com
 clinical-quality-kmd.khealth.com
@@ -242,6 +246,7 @@ cs.api-akeyless.khealth.com
 cs.api.dev.therapy.khealth.com
 cs.khealth.com
 cs.khealth.io
+cs3.hasura.khealth.com
 cs5.eligibility.khealth.com
 cs7.files.therapy.khealth.com
 csq.google-maps-proxy.khealth.com
@@ -254,6 +259,7 @@ de5.conf-akeyless.khealth.com
 de9.clinical-quality-kmd.khealth.com
 deg.api-akeyless.khealth.com
 demo-filesm.therapy.khealth.com
+demo-mobile-versions.prod.therapy.khealth.com
 demo.khealth.com
 demo.khealth.io
 demo.mission.therapy.khealth.com
@@ -334,6 +340,7 @@ enu.clinical-search-service.khealth.com
 enu.hasura.khealth.com
 es5.api-akeyless.khealth.com
 es9.admin.stage.therapy.khealth.com
+esk.api.dev.therapy.khealth.com
 event-enrichment.khealth.com
 event-enrichmenti.khealth.com
 events.khealth.io
@@ -372,6 +379,7 @@ frm.api.therapy.khealth.com
 frm.files.therapy.khealth.com
 fro.content-files.therapy.khealth.com
 frq.google-maps-proxy.khealth.com
+frs.clinical-quality-kmd.khealth.com
 fru.clinical-search-service.khealth.com
 fru.hasura.khealth.com
 ftl.khealth.com
@@ -478,6 +486,7 @@ kissme-peds5.khealth.io
 kissme.khealth.io
 kmapi.khealth.io
 kmapi3.khealth.io
+kmed-next.khealth.com
 kmr-viewer.khealth.com
 kmr-viewerw.khealth.com
 knowall.khealth.com
@@ -738,6 +747,7 @@ www.my.khealth.com
 www.newleaf-integrator.pharmacy.khealth.com
 www.pages.khealth.com
 www.payme-service.k-production.khealth.com
+www.payme-service.khealth.com
 www.payme-webhook-service.khealth.com
 www.payment.khealth.com
 www.payments.khealth.com
@@ -766,3 +776,4 @@ x4tovuymvehsdkzl8jgkxpmjhpcwfqbydsi5fqew.khealth.io
 xxxx.dev.therapy.khealth.com
 xxxxa.dev.therapy.khealth.com
 yyyy.dev.therapy.khealth.com
+yyyy3.dev.therapy.khealth.com
