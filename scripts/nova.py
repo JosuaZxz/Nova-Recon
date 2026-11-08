@@ -69,6 +69,14 @@ UA = os.environ.get(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
 )
+# Header tambahan per-program (mis. kepatuhan Intigriti Adobe):
+#   NOVA_EXTRA_HEADERS='{"X-Intigriti-Username":"handlekamu"}'
+try:
+    EXTRA_HEADERS = json.loads(os.environ.get("NOVA_EXTRA_HEADERS", "{}"))
+    if not isinstance(EXTRA_HEADERS, dict):
+        EXTRA_HEADERS = {}
+except Exception:
+    EXTRA_HEADERS = {}
 
 MAX_CONC = int(os.environ.get("NOVA_MAX_CONC", "12"))
 REQ_DELAY = float(os.environ.get("NOVA_REQ_DELAY", "0.12"))
@@ -182,6 +190,8 @@ def http_get(url, allow_redirects=False, extra_headers=None, max_bytes=400_000, 
     LIMITER.acquire(host)
     try:
         headers = {"User-Agent": UA, "Accept": "*/*"}
+        if EXTRA_HEADERS:
+            headers.update(EXTRA_HEADERS)
         if extra_headers:
             headers.update(extra_headers)
         r = requests.request(

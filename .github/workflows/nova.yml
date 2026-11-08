@@ -36,6 +36,9 @@ jobs:
       NOVA_MAX_JS: "120"
       NOVA_MONITOR_BUDGET: "240"
       NOVA_TAKEOVER_CAP: "2000"
+      # Kepatuhan Intigriti (program Adobe): max 20 req/s + header identitas.
+      # Set secret INTIGRITI_USERNAME di repo, lalu aktifkan baris di bawah:
+      # NOVA_EXTRA_HEADERS: '{"X-Intigriti-Username":"${{ secrets.INTIGRITI_USERNAME }}"}'
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
       TELEGRAM_GENERAL_ID: ${{ secrets.TELEGRAM_GENERAL_ID }}
       TELEGRAM_DATA_ID: ${{ secrets.TELEGRAM_DATA_ID }}
