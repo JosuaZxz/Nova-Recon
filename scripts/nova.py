@@ -531,7 +531,8 @@ EXPOSURE_CHECKS = [
     ("/.git/HEAD", lambda b, h: (b.strip().startswith("ref: refs/"), "git HEAD: " + b.strip()[:40])),
     ("/actuator/env", lambda b, h: ("propertySources" in b, "Spring actuator env JSON")),
     ("/actuator/heapdump", lambda b, h: (
-        h.get("Content-Type", "").startswith("application/octet-stream"),
+        h.get("Content-Type", "").startswith("application/octet-stream")
+        and int(h.get("Content-Length") or 0) > 500_000,
         "heapdump binary served")),
     ("/debug/vars", lambda b, h: ("memstats" in b.lower() or "cmdline" in b.lower(), "Go expvar exposed")),
 ]
