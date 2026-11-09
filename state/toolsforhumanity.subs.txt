@@ -7,6 +7,7 @@
 118.worldcoin.org
 118u.consumer.worldcoin.org
 122.worldcoin.dev
+1a.eu-central-1.stage.mpc.worldcoin.org
 1o.eu-central-1.mpc.worldcoin.org
 2.consumer.worldcoin.org
 2.eu-central-1.stage.mpc.worldcoin.org
@@ -165,6 +166,7 @@ apii.worldcoin-distributors.com
 apik.legacy-developer.worldcoin.org
 apik.staging.operator.worldcoin.org
 apik.staging.partner.worldcoin.org
+apiq.consumer.worldcoin.org
 apis.developer.worldcoin.org
 apis.staging.consumer.developer.worldcoin.org
 apiu.ai-stage.worldcoin.org
@@ -353,6 +355,7 @@ cn.cdn.operator.worldcoin.org
 cn.consumer.worldcoin.org
 cn.toolsforhumanity.com
 cn9.cdn.consumer.worldcoin.org
+cne.cdn.operator.worldcoin.org
 co.toolsforhumanity.com
 co.worldcoin.dev
 co3.worldcoin.org
@@ -445,6 +448,7 @@ dataa.worldcoin.org
 databasei.operator.worldcoin.org
 databasek.consumer.worldcoin.org
 datac.orb.worldcoin.org
+dataq.fraud.ml.worldcoin.org
 datau.stage.orb.worldcoin.org
 db.consumer.worldcoin.org
 de-de.worldcoin.org
@@ -510,6 +514,7 @@ dhcpe.worldcoin.org
 dhcpw.consumer.worldcoin.org
 dhige.dm.worldcoin.dev
 di-migration-stage.worldcoin.dev
+dial.worldcoin.org
 diale.worldcoin.org
 dialw.consumer.worldcoin.org
 discord-api.studios.toolsforhumanity.com
@@ -543,6 +548,7 @@ dsl.worldcoin-distributors.com
 dsl.worldcoin.dev
 dsl.worldcoin.org
 dsl7.worldcoin-distributors.com
+dslk.consumer.worldcoin.org
 dyn3.operator.worldcoin.org
 dyni.consumer.worldcoin.org
 dzmitryzubakin.dev.orbapp.worldcoin.org
@@ -560,6 +566,7 @@ embedding-verifier-dev.worldcoin.dev
 embedding-verifier-stage.worldcoin.dev
 emea.toolsforhumanity.com
 emeag.consumer.worldcoin.org
+en.worldcoin.org
 enterprise.toolsforhumanity.com
 eo.operator.worldcoin.org
 es-es.worldcoin.org
@@ -631,6 +638,7 @@ fls.worldcoin.dev
 fls.worldcoin.org
 fna.worldcoin-distributors.com
 fna.worldcoin.dev
+fna.worldcoin.org
 fnac.worldcoin-distributors.com
 forum.app-backend.toolsforhumanity.com
 fr-fr.worldcoin.org
@@ -682,10 +690,12 @@ hasura-pipeline.developer.worldcoin.org
 hasura-pipeline.orekav.staging-developer.worldcoin.org
 hasura-pipeline.staging-developer.worldcoin.org
 hasura-pipelinea.orekav.staging-developer.worldcoin.org
+hasura-pipelinee.staging-developer.worldcoin.org
 hasura.dev2.worldcoin.org
 hasura.developer.worldcoin.org
 hasura.staging-developer.worldcoin.org
 hasuram.developer.worldcoin.org
+hasuray.staging-developer.worldcoin.org
 hello.toolsforhumanity.com
 helloc.toolsforhumanity.com
 hi-in.worldcoin.org
@@ -781,6 +791,7 @@ k12.worldcoin.dev
 kaorjfmr9n2tpupg1hzv50l8zoitafvisbegcmqn.worldcoin.dev
 kiosk.studios.toolsforhumanity.com
 ko-kr.worldcoin.org
+ko-krs.worldcoin.org
 kr.consumer.worldcoin.org
 kr.toolsforhumanity.com
 kunden.worldcoin.dev
@@ -793,6 +804,7 @@ legacy-developero.worldcoin.org
 legacy.developer.worldcoin.org
 legacyg.developer.worldcoin.org
 lens.worldcoin.org
+lensg.worldcoin.org
 lib.toolsforhumanity.com
 lib.worldcoin.dev
 library.worldcoin.dev
@@ -831,6 +843,7 @@ management.analysis.ml.worldcoin.org
 management.orb.worldcoin.org
 management.stage.orb.worldcoin.org
 managemento.stage.orb.worldcoin.org
+managements.orb.worldcoin.org
 marble.app-backend.toolsforhumanity.com
 marble.app-backend.worldcoin.dev
 marketing.toolsforhumanity.com
@@ -947,6 +960,7 @@ orbs.worldcoin.org
 orbsc.worldcoin.org
 orbsi.worldcoin.dev
 orekav.staging-developer.worldcoin.org
+org.cdn.operator.worldcoin.org
 orgai.worldcoin.org
 orgorg.worldcoin.dev
 ota-dmitry.api.worldcoin-distributors.com
@@ -1019,6 +1033,7 @@ productione.api.staging.consumer.worldcoin.org
 productioni.hubble.worldcoin-distributors.com
 productionu.posthog.api.staging.consumer.worldcoin.org
 pt-br.worldcoin.org
+pt-brq.worldcoin.org
 pt-pt.worldcoin.org
 pt-ptq.worldcoin.org
 pub-sh-runners.worldcoin.dev
@@ -1027,6 +1042,7 @@ pulse-admin.toolsforhumanity.com
 pulse-admin.worldcoin.dev
 qr-current.api.consumer.worldcoin.org
 qr-current.api.staging.consumer.worldcoin.org
+qr-currents.api.staging.consumer.worldcoin.org
 qr-legacy.api.consumer.worldcoin.org
 qr-legacy.api.staging.consumer.worldcoin.org
 qr-legacym.api.consumer.worldcoin.org
@@ -1145,6 +1161,7 @@ stage.smpcv2.worldcoin.dev
 stage.trading.toolsforhumanity.com
 stage.trading.worldcoin.org
 stage.worldcoin.dev
+stage9.trading.worldcoin.org
 stagec.analytics.worldcoin.dev
 stagec.metrics.worldcoin.org
 stagee.trading.toolsforhumanity.com
@@ -1188,6 +1205,7 @@ stagingq.airdrops.api.worldcoin-distributors.com
 stagingq.assets.api.staging.consumer.worldcoin.org
 stagingq.orbapp.worldcoin.org
 stagings.tokens.api.staging.consumer.worldcoin.org
+stagingu.api.staging.consumer.worldcoin.org
 stagingy.risk.worldcoin.org
 state.worldcoin.dev
 static.app-backend.sandbox.toolsforhumanity.com
@@ -1256,6 +1274,7 @@ testproductiontesto.api.worldcoin-distributors.com
 tfe-dev.worldcoin.dev
 tfe.worldcoin.dev
 th-th.worldcoin.org
+th-the.worldcoin.org
 thecoinexchange.worldcoin.org
 thecoinexchangek.worldcoin.org
 thecoinxchange.worldcoin.org
@@ -1285,6 +1304,7 @@ traefik.stage-iot.worldcoin.dev
 traefikm.stage-iot.worldcoin.dev
 transition-qr.api.consumer.worldcoin.org
 transition-qr.api.staging.consumer.worldcoin.org
+transition-qrc.api.staging.consumer.worldcoin.org
 transition-tokens.api.staging.consumer.worldcoin.org
 transition-tokens.consumer.worldcoin.org
 transition-tokenso.api.staging.consumer.worldcoin.org
@@ -1376,6 +1396,7 @@ www.actions.studios.toolsforhumanity.com
 www.admin.stage.trading.toolsforhumanity.com
 www.admin.trading.toolsforhumanity.com
 www.af-south-1.orb.worldcoin.dev
+www.ai.worldcoin.org
 www.airdrops-web-view.worldcoin-distributors.com
 www.analysis.ml.worldcoin.org
 www.analytics.id.worldcoin.org
@@ -1386,6 +1407,7 @@ www.ap.id-infra.worldcoin.dev
 www.api.consumer.worldcoin.org
 www.api.operator.worldcoin.org
 www.api.stage.trading.toolsforhumanity.com
+www.api.staging.consumer.worldcoin.org
 www.api.trading.toolsforhumanity.com
 www.api.worldcoin-distributors.com
 www.app-backend-test.worldcoin.dev
@@ -1437,6 +1459,7 @@ www.eu-central-1.stage.orb.worldcoin.org
 www.eu-south-1.orb.worldcoin.dev
 www.eu-west-1.stage.orb.worldcoin.dev
 www.eu.id-infra.worldcoin.dev
+www.example.id.worldcoin.org
 www.ff-current.api.staging.consumer.worldcoin.org
 www.ff-current.consumer.worldcoin.org
 www.ff-legacy.api.staging.consumer.worldcoin.org
@@ -1505,6 +1528,7 @@ www.pii-deletion.api.staging.consumer.worldcoin.org
 www.pii.api.staging.consumer.worldcoin.org
 www.pii.consumer.worldcoin.org
 www.poap.worldcoin.org
+www.posthog.api.staging.consumer.worldcoin.org
 www.prod.worldcoin.dev
 www.production.airdrops-web-view.worldcoin-distributors.com
 www.production.api.consumer.worldcoin.org
@@ -1517,6 +1541,7 @@ www.qr-legacy.api.consumer.worldcoin.org
 www.qr-legacy.api.staging.consumer.worldcoin.org
 www.qr.api.consumer.worldcoin.org
 www.qr.api.staging.consumer.worldcoin.org
+www.raave.worldcoin.org
 www.radio.studios.toolsforhumanity.com
 www.ramps.worldcoin.org
 www.relayer.crypto.worldcoin.dev
