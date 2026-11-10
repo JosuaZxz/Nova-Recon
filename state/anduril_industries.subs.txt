@@ -134,9 +134,11 @@ access-metricsg.vulture.andurildev.com
 access-metricsi.dive-dev.andurildev.com
 access-metricsi.menace.anduril.com
 access-metricsm.gov.ast-internal.anduril.dev
+access-metricsq.skycole.anduril.com
 access-metricss.ais-usaf.anduril.com
 access-metricss.picton.anduril.com
 access-metricsu.lonestar.anduril.com
+access-metricsu.overmatch.anduril.com
 access-metricsu.usmc.anduril.com
 access-metricsw.sat.anduril.com
 access-metricsw.usaf.anduril.com
@@ -370,6 +372,7 @@ anduril.allvoices-dev.eng.anduril.dev
 anduril.au
 anduril.com
 anduril.com.au
+anduril.dev
 andurildev.au
 andurildev.com
 anduroid-staging.andurildev.com
@@ -506,6 +509,7 @@ armada.anduril.com
 armory-aus-cluster.andurildev.au
 armory-aus-clusterk.andurildev.au
 armory-cluster.andurildev.com
+armory-prod.anduril.dev
 armory-staging.andurildev.com
 armory-stagingi.andurildev.com
 armory.anduril.com
@@ -693,6 +697,7 @@ bifrost-dev.andurildev.com
 bifrost-dev.eng.anduril.dev
 bifrost.andurildev.com
 bifrost.sandbox.anduril.au
+bifrost.sandbox.anduril.com.au
 big-ol-test.non-prod.eng.anduril.dev
 billing.non-prod.eng.anduril.dev
 bingo-qa.eng.anduril.dev
@@ -818,6 +823,7 @@ c2-test.andurildev.com
 c2-testv.andurildev.com
 c2.andurildev.com
 c2.dev.anduril.com
+c2a.dev.anduril.com
 c2n-integrationtest-lattice.andurildev.com
 c3p-dev-1.andurildev.com
 c3p-dev-1t.andurildev.com
@@ -1485,6 +1491,7 @@ ekanban-app.stage.eng.anduril.dev
 ekanban-forge.non-prod.eng.anduril.dev
 ekanban-forge.qa.eng.anduril.dev
 ekanban-forge.stage.eng.anduril.dev
+ekvcrugt72b31qsqsn80n2rb8b4nlasb.anduril.com
 elder-brain-github.non-prod.eng.anduril.dev
 elder-brain.non-prod.eng.anduril.dev
 elm.voyager-engineering.anduril.dev
@@ -1559,6 +1566,7 @@ est-milestone-tracker.non-prod.eng.anduril.dev
 eu.prod.teleport.anduril.dev
 eud.akm.anduril.com
 eud.akm.sauron.anduril.com
+eudo.akm.anduril.com
 eudops-dev.akm.anduril.com
 eudops-devo.akm.anduril.com
 eudops-prod.akm.anduril.com
@@ -1735,6 +1743,7 @@ fms-ops-kuwait.non-prod.eng.anduril.dev
 fms.tc.eng.anduril.au
 foo.non-prod.eng.anduril.dev
 foobar.anduril.dev
+forecast-staging.andurildev.com
 foresight-beta.non-prod.eng.anduril.dev
 forge-c2.andurildev.com
 forge-ci.sandbox.anduril.au
@@ -1838,6 +1847,7 @@ gcs-ad-0.silex.andurildev.com
 gd4a.anduril.com
 gds.anduril.com
 gear.anduril.com
+gear3.anduril.com
 gearm.anduril.com
 gemini.anduril.com
 geminimmz.anduril.com
@@ -2535,6 +2545,7 @@ longbow-high-ra2-trinode.andurildev.com
 longbow-test.andurildev.com
 longbow.anduril.com
 longbow.anduril.dev
+longbowi.anduril.com
 loomwright.non-prod.eng.anduril.dev
 louie-bot.non-prod.eng.anduril.dev
 lrpm-dev.anduril.com
@@ -4007,6 +4018,7 @@ tdm-dev.tdm.anduril.com
 tdm.anduril.com
 tdo-moretest.itools-dev.anduril.dev
 tdo-test-api-ext-api-integration.itools-dev.anduril.dev
+tdo-test.itools-qa.anduril.dev
 tdo-test2.itools.anduril.dev
 te-heatmap.anduril.dev
 te-sitrep.eng.anduril.dev
@@ -4022,6 +4034,7 @@ teamcenter-writeback-server.non-prod.eng.anduril.dev
 teamcity.anduril.dev
 teams.andurildev.com
 techsec-sow-generator.non-prod.eng.anduril.dev
+teleport-bot.security.anduril.dev
 teleport-dev-ext.security.anduril.dev
 teleport-dev.anduril.dev
 teleport-dev.security.anduril.dev
@@ -4074,6 +4087,7 @@ test-cci-auto.anduril.dev
 test-cci.anduril.dev
 test-cluster-1.anduril-resiliency-ext.andurildev.com
 test-cluster-2.anduril-resiliency-ext.andurildev.com
+test-confluence.it.anduril.dev
 test-env-peer.jos.gcp.andurildev.com
 test-env.jos.gcp.andurildev.com
 test-jira.anduril.dev
@@ -4526,6 +4540,7 @@ www.bcache.anduril.dev
 www.blog.anduril.com
 www.bsa-dev.andurildev.com
 www.bsa-test.andurildev.com
+www.c2-18abc.anduril.com
 www.c2-4-dev.andurildev.com
 www.c2-4-dev.dev.anduril.com
 www.c2-bridge.andurildev.com
@@ -4550,6 +4565,7 @@ www.cci3.anduril.dev
 www.census-bolt-dev.anduril.dev
 www.ceres.dive-xl.andurildev.au
 www.chart-gen.anduril.dev
+www.cms1-conductor01.network.anduril.com
 www.codecov2.anduril.dev
 www.coder.coder-dev-aws.eng.anduril.dev
 www.coder.coder-prod-aws.eng.anduril.dev
@@ -4656,6 +4672,7 @@ www.longbow-cdstest-topsecret.anduril.com
 www.longbow-cdstest-unclass.anduril.com
 www.longbow-cdstest2-secret.anduril.com
 www.longbow-cdstest2-unclass.anduril.com
+www.longbow-high-ra-eks.anduril.com
 www.longbow.anduril.com
 www.ma-demo.andurildev.com
 www.ma-prod.andurildev.com
@@ -4678,6 +4695,7 @@ www.mlops.andurildev.com
 www.monitor.anduril.com
 www.monitor.whatfix.anduril.dev
 www.msi-carbon.andurildev.com
+www.n0.ldm.anduril.com
 www.n6.ldm.anduril.com
 www.native.andurildev.com
 www.nazgul.anduril.com
@@ -4709,6 +4727,7 @@ www.piv.jaf.anduril.com
 www.piv.lonestar.anduril.com
 www.piv.manufacturing-qa.anduril.com
 www.piv.omega-red-demo.anduril.com
+www.piv.palm.anduril.com
 www.piv.proving-ground.anduril.com
 www.piv.sat.anduril.com
 www.piv.usaf.anduril.com
@@ -4764,6 +4783,7 @@ www.sitl.anduril.dev
 www.sitl.andurildev.au
 www.slackbot.anduril.dev
 www.soabtis-2.anduril.com
+www.socom.anduril.com
 www.space-sim.andurildev.com
 www.sphf.anduril.dev
 www.sso.teleport.anduril.dev
