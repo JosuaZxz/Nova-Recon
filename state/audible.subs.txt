@@ -1,3 +1,4 @@
+0000e.prod.audible.com
 00i.prod.audible.com
 01e985c37-frontier.audible.com
 01e985c37-frontiere.audible.com
@@ -14,9 +15,12 @@
 11y.by.examples.prod.audible.com
 12f2b0729-frontier.audible.co.uk
 130m.prod.audible.com
+133m.prod.audible.com
 136m.prod.audible.com
 139m.prod.audible.com
+1453.prod.audible.com
 147.prod.audible.com
+1487.prod.audible.com
 1513.prod.audible.com
 1543.prod.audible.com
 1573.prod.audible.com
@@ -26,6 +30,8 @@
 166m.prod.audible.com
 172.prod.audible.com
 1793917c2-frontier.audible.de
+179c.prod.audible.com
+17g.18.prod.audible.com
 18.prod.audible.com
 1887.prod.audible.com
 18f782b76-frontier.audible.com.au
@@ -43,6 +49,7 @@
 26e971f9b-frontier.audible.co.uk
 28ebafe22-frontier.audible.it
 2d.prod.audible.com
+2ds.graphics.prod.audible.com
 33d227550-frontier.audible.co.uk
 353c47c06-frontier.audible.com
 361c988a3-frontier.audible.fr
@@ -52,18 +59,21 @@
 3a.prod.audible.com
 3d.model.prod.audible.com
 3dreconstructiong.list.prod.audible.com
+441c9a47b-frontier.audible.com
 47.prod.audible.com
 48c15884a-frontier.audible.co.uk
 4a7c32707-frontier.audible.fr
 4b835caac-frontier.audible.de
 4b835caac-frontiero.audible.de
 4c7fae028-frontier.audible.com
+5.api.boilerplate.prod.audible.com
 5.components.app.prod.audible.com
 508c1a525-frontier.audible.co.uk
 508c1a525-frontierb.audible.co.uk
 5216f5ec9-frontier.audible.com.br
 570271909-frontier.audible.com.au
 5eaa38a2d-frontier.audible.com
+5eaa38a2d-frontiero.audible.com
 5eaa38a2d-frovpn.audible.com
 5eca97346-frontier.audible.com
 6.hbase.labs.prod.audible.com
@@ -72,6 +82,7 @@
 627.prod.audible.com
 62efe322e-frontier.audible.co.jp
 64592892b-frontier.audible.fr
+6e984dc45-frontier.audible.com
 6u.hbase.labs.prod.audible.com
 77d0e2de0-frontier.audible.co.jp
 791be3b49-frontier.audible.com
@@ -101,6 +112,7 @@
 97c1c2a43-frontier.audible.com
 9ab020403-frontier.audible.co.jp
 9cd7a40ca-frontier.audible.co.jp
+9e5feb17e-frontier.audible.com
 a042b505b-frontier.audible.de
 a387.prod.audible.com
 a6ccb9f96-frontier.audible.com.br
@@ -129,6 +141,7 @@ ace9.audible.com.br
 acea.audible.com.au
 aceprod.audible.com.br
 aceprodo.audible.com.br
+actioncode.audible.com
 actioncodec.robinwilliams.audible.com
 actioncodee.audible.com
 acts1-beta.audible.com
@@ -156,6 +169,7 @@ adminlte.prod.audible.com
 admino.spa.prod.audible.com
 admino.vue.prod.audible.com
 adminu.prod.audible.com
+adminy.template.prod.audible.com
 admission.webhook.prod.audible.com
 ads.0ced0c2ef-frontier.audible.com.au
 ads.5216f5ec9-frontier.audible.com.br
@@ -203,7 +217,9 @@ androidc.boilerplate.prod.audible.com
 androidc.git.version.prod.audible.com
 androidg.developers.zh.prod.audible.com
 androidu.java.prod.audible.com
+androidy.client.prod.audible.com
 andu.managing.prod.audible.com
+andu.solidity.prod.audible.com
 angular.prod.audible.com
 angular.snippets.prod.audible.com
 angular2.prod.audible.com
@@ -214,6 +230,7 @@ ansible.chatops.prod.audible.com
 ansible.lamp.prod.audible.com
 ansible.prod.audible.com
 ansiblepushw.prod.audible.com
+ansibleu.lamp.prod.audible.com
 antonio.prod.audible.com
 aots.webpack.prod.audible.com
 api-preprod.audible.ca
@@ -244,6 +261,7 @@ api.audible.it
 api.boilerplate.prod.audible.com
 api.collab.audible.com
 api.prod.audible.com
+api.project.seed.prod.audible.com
 apic.response.format.prod.audible.com
 apid.audible.es
 apim.audible.com.au
@@ -251,12 +269,17 @@ apimgmt.audible.com
 apio.cache.prod.audible.com
 apis.angular.prod.audible.com
 apis.archive.prod.audible.com
+apiu.debugger.prod.audible.com
+apiw.extension.prod.audible.com
 app.85cf8037a-frontier.audible.com
 app.audible.com.br
 app.audible.de
+app.prod.audible.com
+application.python.prod.audible.com
 applicationq.prod.audible.com
 appo.intro.prod.audible.com
 appsa.prod.audible.com
+appsyncu.events.starter.react.prod.audible.com
 appu.example.prod.audible.com
 apx-security-au.audible.com.au
 apx-security-br.audible.com.br
@@ -291,6 +314,7 @@ aragorn.prod.audible.com
 architecture.boilerplate.prod.audible.com
 architecture.components.boilerplate.prod.audible.com
 architecturesk.prod.audible.com
+architecturey.components.kotlin.prod.audible.com
 architecturey.prod.audible.com
 archives.all.prod.audible.com
 artg.prod.audible.com
@@ -332,6 +356,7 @@ arya-pacman-sandbox-fe-2.audible.com.au
 arya-pacman-sandbox-na-1.audible.ca
 arya-pacman-sandbox-na-1.audible.com
 arya-pacman-sandbox-na-1.audible.com.br
+arya-pacman-sandbox-na-19.audible.com
 arya-pacman-sandbox-na-2.audible.com
 arya-pacman-sandbox-na-2c.audible.com
 arya-pacman.audible.ca
@@ -401,6 +426,7 @@ audiblesamples7.audible.com
 audibleu.robinwilliams.audible.com
 audies.audible.com
 audiesg.audible.com
+audit3.prod.audible.com
 auth.app.example.prod.audible.com
 auth.prod.audible.com
 authc.prod.audible.com
@@ -421,6 +447,7 @@ autodiscover.eaba044fc-frontier.audible.co.uk
 autogit.prod.audible.com
 automation.prod.audible.com
 automationc.prod.audible.com
+autosuggests.prod.audible.com
 av.audible.com
 awesome-jquerym.prod.audible.com
 aws.0ced0c2ef-frontier.audible.com.au
@@ -481,29 +508,36 @@ beta.audible.fr
 beta.mosaic.audible.co.uk
 beta.mosaic.audible.com
 betac.audible.co.uk
+betac.audible.com
 betag.aud-av-wowza.audible.com
 bf.audible.com
 bindk.prod.audible.com
 bird.prod.audible.com
 birdm.prod.audible.com
 bla.prod.audible.com
+blade-a00o.prod.audible.com
 blade-a01k.prod.audible.com
 blade-b00i.prod.audible.com
+blade-c00g.prod.audible.com
+blade-c01k.prod.audible.com
 blob.core.audible.com
 blockchainc.ethereum.prod.audible.com
 blockchaino.prod.audible.com
 blocks.prod.audible.com
 blockstack.org.prod.audible.com
 blog.api.audible.ca
+blog.audible.com
 blog.audible.it
 blog.cds.audible.com
 bloga.prod.audible.com
 blogs.audible.com
 bodgea.prod.audible.com
 boilerplate.jwt.prod.audible.com
+boilerplateg.prod.audible.com
 book.prod.audible.com
 books9.prod.audible.com
 bookss.zh.cn.prod.audible.com
+bootg.api.project.seed.prod.audible.com
 bootstrap.slider.prod.audible.com
 bootstrap.table.prod.audible.com
 bootstrapc.navwalker.prod.audible.com
@@ -527,13 +561,17 @@ buildu.plugin.prod.audible.com
 bulkmail.audible.com
 bulkmailc.audible.com
 bundle.prod.audible.com
+buso.radio.prod.audible.com
 bvmail.prod.audible.com
 by.meltdown.prod.audible.com
+bys.examples.prod.audible.com
 c.audible.com
 c34727580-frontier.audible.ca
 c81518200-frontier.audible.it
 cache.prod.audible.com
 cachem.prod.audible.com
+caches.redux.prod.audible.com
+cacheu.hermes.prod.audible.com
 calendar.audible.com
 calendar.for.mac.prod.audible.com
 call7.prod.audible.com
@@ -564,6 +602,7 @@ cdl.prod.audible.com
 cdl2e.prod.audible.com
 cdl9.prod.robinwilliams.audible.com
 cdla.prod.audible.com
+cdlm.robinwilliams.audible.com
 cdltest-lb.pub.prd.sec.audible.com
 cdn.0ced0c2ef-frontier.audible.com.au
 cdn.4b835caac-frontier.audible.de
@@ -589,11 +628,13 @@ cds3.audible.com.br
 ce.prod.audible.com
 celerys.beat.prod.audible.com
 cellu.android.prod.audible.com
+centos7e.ansible.lamp.prod.audible.com
 certsg.prod.audible.com
 cf-signer-beta.audible.com
 cf-signer-beta7.audible.com
 cf0c53e37-frontier.audible.it
 cftp.audible.com
+chakracoreq.prod.audible.com
 challenge.backend.prod.audible.com
 changelogo.prod.audible.com
 chaosu.monkey.prod.audible.com
@@ -615,6 +656,7 @@ checkout-preprod.audible.de
 checkout-preprodi.audible.de
 checkout-sandbox-fe-1-preprod.audible.co.jp
 chimek.prod.audible.com
+chip8y.emulator.prod.audible.com
 ci.0ced0c2ef-frontier.audible.com.au
 ci.api.audible.com.au
 ci.api.audible.de
@@ -640,6 +682,7 @@ cloudwatch.dashboards.prod.audible.com
 cloudwatchg.dashboards.prod.audible.com
 cloudwatchq.prod.audible.com
 cluster.prod.audible.com
+cmc.audible.com
 cmcg.robinwilliams.audible.com
 cn.prod.audible.com
 cname.audible.com
@@ -685,10 +728,13 @@ components.boilerplate.prod.audible.com
 components.kotlin.prod.audible.com
 componentsk.prod.audible.com
 componentsy.app.prod.audible.com
+componentsy.ios.prod.audible.com
 compose.prod.audible.com
 compositejourney.prod.audible.com
 computing.prod.audible.com
+comunidady.prod.audible.com
 conferencese.database.prod.audible.com
+configuratork.prod.audible.com
 connect-beta.audible.com
 connect.audible.com
 connecte.audible.com
@@ -700,6 +746,8 @@ converter.prod.audible.com
 convertoro.prod.audible.com
 core-fwsm-1-outiside.pub.prd.sec.audible.com
 core-fwsm-1-outisidea.pub.prd.sec.audible.com
+core-fwsm-2-outisidei.pub.prd.sec.audible.com
+core.audible.com
 core.prod.audible.com
 coreg.audible.com
 coreu.prod.audible.com
@@ -714,6 +762,7 @@ crudo.rest.prod.audible.com
 crudsy.adminlte.prod.audible.com
 css.prod.audible.com
 csss.prod.audible.com
+curlq.class.prod.audible.com
 curriculuma.prod.audible.com
 d0463dd19-frontier.audible.co.jp
 d118a21ed-frontier.audible.in
@@ -727,9 +776,12 @@ d8eb1c2b3-frontier.audible.com.br
 dailyi.prod.audible.com
 dapp.prod.audible.com
 dappi.prod.audible.com
+dark9.prod.audible.com
 dash.prod.audible.com
+dashboard.prod.audible.com
 dashboards.prod.audible.com
 dashboardsm.prod.audible.com
+dashing.prod.audible.com
 dashr.prod.audible.com
 data.0ced0c2ef-frontier.audible.com.au
 data.api.audible.co.uk
@@ -740,6 +792,7 @@ datai.graphql.prod.audible.com
 datasheeti.prod.audible.com
 datastructureso.algorithms.prod.audible.com
 datatablec.prod.audible.com
+datepickere.prod.audible.com
 datetimepickery.prod.audible.com
 db.0ced0c2ef-frontier.audible.com.au
 db.5eaa38a2d-frontier.audible.com
@@ -747,9 +800,12 @@ db.api.audible.ca
 db.audible.co.uk
 db.d5eae82bd-frontier.audible.ca
 db.eaba044fc-frontier.audible.co.uk
+dc.prod.audible.com
 dda32e582-frontier.audible.co.uk
+ddag.prod.audible.com
 dea29bd4d-frontier.audible.fr
 debugy.database.prod.audible.com
+decentralized.application.python.prod.audible.com
 dee9d5558-frontier.audible.de
 deep.learning.machine.learning.tutorials.prod.audible.com
 deepc.learning.music.prod.audible.com
@@ -768,6 +824,7 @@ deprecationc.tracker.prod.audible.com
 depths.limit.prod.audible.com
 design.audible.com
 designs.audible.com
+designu.icons.prod.audible.com
 desktop.prod.audible.com
 detector.prod.audible.com
 dev.0ced0c2ef-frontier.audible.com.au
@@ -778,6 +835,7 @@ dev.audible.it
 dev.originals.audible.de
 develg.prod.audible.com
 developer.audible.com
+developer7.audible.com
 developers.prod.audible.com
 developers.zh.prod.audible.com
 developersw.zh.prod.audible.com
@@ -785,6 +843,7 @@ development.prod.audible.com
 developments.prod.audible.com
 device.detector.prod.audible.com
 devicelab.audible.com
+devices.prod.audible.com
 devo-blog.audible.it
 devo-blog3.audible.it
 devo.listeningwall.audible.com
@@ -819,6 +878,7 @@ donations.prod.audible.com
 doomi.prod.audible.com
 dotnet.prod.audible.com
 dotnets.core.prod.audible.com
+dots.prod.audible.com
 download.audible.co.uk
 download.audible.com
 download.audible.de
@@ -832,8 +892,11 @@ dribbbleu.app.prod.audible.com
 dsonkes.audible.com.br
 dsonkesc.audible.com.br
 dsonkesk.audible.com.br
+dtape.prod.audible.com
 dynamic.inventory.prod.audible.com
+dynamic.scraper.prod.audible.com
 dynamicc.preferences.prod.audible.com
+dynamodbu.api.prod.audible.com
 e040c2b45-frontier.audible.it
 e4dedeea3-frontier.audible.com
 e501c602a-frontier.audible.in
@@ -847,6 +910,7 @@ edge.0ced0c2ef-frontier.audible.com.au
 edge.219871463-frontier.audible.de
 edge.85cf8037a-frontier.audible.com
 edison-opf-test.audible.com
+edison-opf-testi.audible.com
 edison.audible.co.uk
 edison.audible.com
 edison.audible.com.au
@@ -854,6 +918,7 @@ edison.audible.de
 edition.prod.audible.com
 education.audible.com
 education5.robinwilliams.audible.com
+educationg.audible.com
 elasticsearch.prod.audible.com
 electron.prod.audible.com
 ellen.audible.com
@@ -873,6 +938,7 @@ engineeringk.prod.audible.com
 enterprise-gen.audible.com
 enterprise.audible.com
 env7.prod.audible.com
+environmenti.prod.audible.com
 erictreacyy.github.io.prod.audible.com
 erla.prod.audible.com
 erm.audible.com
@@ -886,8 +952,10 @@ eventse.starter.react.prod.audible.com
 ewr3-lnl-cmr1.hq.audible.com
 ewr3-lnl-cmr2i.hq.audible.com
 ewr3-lnl-cmr3.audible.com
+ewr3-lnl-cmr3i.hq.audible.com
 ewr3-lnl-cmr4.audible.com
 ewr3-lnl-cmr4.hq.audible.com
+ewr3-lnl-cmr6i.hq.audible.com
 ewr3-lnl-cmr7.hq.audible.com
 ewr3-lnl-isc1.audible.com
 ex5.prod.audible.com
@@ -912,6 +980,7 @@ exporter-lb.prod.audible.com
 express.prod.audible.com
 expressg.mongoose.demo.prod.audible.com
 extc.prod.audible.com
+extension.prod.audible.com
 extensionc.installer.prod.audible.com
 extensionsu.prod.audible.com
 extensionu.prod.audible.com
@@ -971,6 +1040,7 @@ files.api.audible.co.uk
 files.api.audible.com.br
 files.audible.com
 files.audible.de
+filesc.prod.audible.com
 fileu.manager.prod.audible.com
 filteringo.prod.audible.com
 finances.create.audible.com
@@ -981,6 +1051,7 @@ fisherman.osx.prod.audible.com
 fishermanw.osx.prod.audible.com
 flappys.bird.prod.audible.com
 fls.audible.com
+fluxq.rails.prod.audible.com
 fogbugz.prod.audible.com
 fonts.prod.audible.com
 for.mac.prod.audible.com
@@ -992,6 +1063,7 @@ foro.android.developers.zh.prod.audible.com
 forq.iphone.prod.audible.com
 forq.recommendation.systems.prod.audible.com
 fors.android.prod.audible.com
+fors.hackers.prod.audible.com
 forum.audible.fr
 forum.help.audible.com
 foruma.prod.audible.com
@@ -1001,6 +1073,7 @@ framee.prod.audible.com
 frameless.window.prod.audible.com
 frameworkc.prod.audible.com
 frameworke.comparison.prod.audible.com
+framey.template.prod.audible.com
 frees.angular.admin.template.prod.audible.com
 freshk.prod.audible.com
 friends.prod.audible.com
@@ -1022,6 +1095,7 @@ ftp2.audible.de
 ftpp.audible.co.uk
 fulfillment.audible.com
 fullstack.graphql.prod.audible.com
+fullstacks.prod.audible.com
 fullstacky.book.prod.audible.com
 functionsg.prod.audible.com
 fungusu.demos.prod.audible.com
@@ -1029,6 +1103,7 @@ g85.prod.audible.com
 galacticao.prod.audible.com
 galeray.cluster.prod.audible.com
 gameartprinciples.prod.audible.com
+gamedevy.series.prod.audible.com
 gamesc.prod.audible.com
 gamesu.studio.prod.audible.com
 gameu.prod.audible.com
@@ -1060,6 +1135,7 @@ generator.prod.audible.com
 generatorsk.prod.audible.com
 geojson.prod.audible.com
 getk.prod.audible.com
+gifu.drawable.prod.audible.com
 gist-hqi.audible.com
 git-as-svne.prod.audible.com
 git.5eaa38a2d-frontier.audible.com
@@ -1068,6 +1144,7 @@ git.api.audible.com.au
 git.audible.com.au
 git.cds.audible.com
 git.version.prod.audible.com
+git7.prod.audible.com
 gitgutterc.prod.audible.com
 github-alpha.audible.com
 github-beta.audible.com
@@ -1078,6 +1155,8 @@ github-test-actions.audible.com
 github-test.audible.com
 github.audible.com
 github.io.prod.audible.com
+github.prod.audible.com
+githubc.io.prod.audible.com
 gitlab.audible.co.jp
 gitlab.audible.com.br
 gitlab.cds.audible.com
@@ -1091,7 +1170,9 @@ globalizeo.prod.audible.com
 globalpat.audible.com
 globalpat9.audible.com
 glolpat.audible.com
+glolpat5.audible.com
 glusterfsc.prod.audible.com
+gly.prod.audible.com
 gnomey.terminal.prod.audible.com
 go.api.audible.co.uk
 go.api.audible.com.br
@@ -1107,6 +1188,7 @@ gov.audible.com
 gpx.audible.com
 gradle-beta.audible.com
 gradle-staging.audible.com
+gradle-stagingq.audible.com
 gradle.audible.com
 grafana.508c1a525-frontier.audible.co.uk
 grafana.5eaa38a2d-frontier.audible.com
@@ -1124,6 +1206,7 @@ gtk.prod.audible.com
 gtkq.themes.prod.audible.com
 guacamolec.prod.audible.com
 guard7.prod.audible.com
+gui.prod.audible.com
 guide.prod.audible.com
 guidei.prod.audible.com
 guidelinesq.prod.audible.com
@@ -1132,11 +1215,15 @@ gw.audible.com
 gw4g.prod.audible.com
 gw7c.prod.audible.com
 gyp7.prod.audible.com
+hackathon-starters.prod.audible.com
 hackers.prod.audible.com
 hadoop2e.6.hbase.labs.prod.audible.com
 handbook.prod.audible.com
+handling.prod.audible.com
 hardeningo.prod.audible.com
 harrypotterlive.audible.com
+hbase.labs.prod.audible.com
+hbaseq.labs.prod.audible.com
 healthcareu.prod.audible.com
 help-suno.audible.in
 help-sunoa.audible.in
@@ -1159,6 +1246,7 @@ highcastle.inside.audible.com
 hilfe.audible.de
 hilfer.audible.de
 hku.prod.audible.com
+hmrc.prod.audible.com
 hno.prod.audible.com
 home.0ced0c2ef-frontier.audible.com.au
 home.api.audible.co.uk
@@ -1189,11 +1277,13 @@ img.audible.de
 img.audible.fr
 img.d5eae82bd-frontier.audible.ca
 impactcalendar.audible.com
+impactcalendar5.audible.com
 in.js.prod.audible.com
 indigo.audible.com
 infos.audible.fr
 infos5.audible.fr
 inside.audible.com
+inside9.audible.com
 int.0ced0c2ef-frontier.audible.com.au
 int.api.audible.in
 int.cf0c53e37-frontier.audible.it
@@ -1204,6 +1294,7 @@ internal.api.audible.it
 internal.d691b48ed-frontier.audible.com.au
 intro.prod.audible.com
 inventory.prod.audible.com
+io.prod.audible.com
 ios.audible.com
 ios.prod.audible.com
 java.prod.audible.com
@@ -1237,12 +1328,15 @@ jira-staging-api-prod.audible.com
 jira-staging-api.audible.com
 jira-staging.audible.com
 jira.audible.com
+js.audible.com
 js.prod.audible.com
 juniper.devices.prod.audible.com
+jwt.prod.audible.com
 k8s.0ced0c2ef-frontier.audible.com.au
 k8s.audible.co.jp
 k8s.d691b48ed-frontier.audible.com.au
 kids.audible.com
+kotlin.prod.audible.com
 kubernetes.0ced0c2ef-frontier.audible.com.au
 kubernetes.api.audible.co.uk
 kubernetes.api.audible.in
@@ -1279,6 +1373,7 @@ live.audible.co.jp
 live.audible.com.au
 live.cds.audible.com
 loader.prod.audible.com
+localwww.audible.com
 login.219871463-frontier.audible.de
 login.api.audible.com
 login.d5eae82bd-frontier.audible.ca
@@ -1303,6 +1398,7 @@ mailbox.audible.com
 mailbox.hq.audible.com
 mailbox5.hq.audible.com
 manager.prod.audible.com
+managing.prod.audible.com
 map.prod.audible.com
 maven-alpha.audible.com
 maven-beta.audible.com
@@ -1317,6 +1413,7 @@ meeting1.audible.com
 meeting1c.audible.com
 meeting2-beta.audible.com
 meeting2.audible.com
+meeting25.audible.com
 meeting3.audible.com
 meeting3c.audible.com
 meltdown.prod.audible.com
@@ -1483,10 +1580,15 @@ p.audible.com
 papers.prod.audible.com
 parking.audible.com
 parking1.audible.com
+picker.prod.audible.com
+pjax.prod.audible.com
 pl.prod.audible.com
 platform.prod.audible.com
 playback-insights.audible.com
 playback-insightsu.audible.com
+playbook.prod.audible.com
+plugin.prod.audible.com
+pobox.audible.com
 pobox2.audible.com
 pop.8d709cec3-frontier.audible.ca
 pop.audible.com
@@ -1544,6 +1646,7 @@ public.audible.ca
 public.d5eae82bd-frontier.audible.ca
 pwa-gamma.audible.com
 python.prod.audible.com
+query.prod.audible.com
 quotes.audible.com
 quotesc.audible.com
 qushkaja-preprod.audible.com
@@ -1579,10 +1682,12 @@ remote.api.audible.de
 remote.api.audible.it
 remote.audible.com.br
 reqchange.audible.com
+reqchangei.audible.com
 resource.prod.audible.com
 response.format.prod.audible.com
 rest.prod.audible.com
 rest.tcc.prod.audible.com
+retrofit.prod.audible.com
 rewrite-external-beta.audible.com
 rewrite-external.audible.com
 rewrite-internal-beta.audible.com
@@ -1612,6 +1717,7 @@ samples.audible.fr
 samples3.audible.de
 samples5.audible.fr
 samples9.audible.co.uk
+samplesu.audible.com
 sandbox-mcp.audible.com
 sandisk.audible.com
 sansa.audible.ca
@@ -1700,6 +1806,7 @@ static.help.audible.com
 stats.0ced0c2ef-frontier.audible.com.au
 stats.audible.es
 stats.audible.in
+statsd.prod.audible.com
 status.api.audible.com.br
 stcds.audible.com
 stn.audible.com
@@ -1711,16 +1818,19 @@ store.0ced0c2ef-frontier.audible.com.au
 store.5216f5ec9-frontier.audible.com.br
 store.audible.com.br
 stories.audible.com
+storieso.audible.com
 stream.219871463-frontier.audible.de
 stream.api.audible.com.br
 stream.api.audible.in
 stream.audible.com.au
+streamlit-alpha-robinwilliams.audible.com
 streamlit-alpha.audible.com
 streamlit-alphae.audible.com
 streamlit-beta.audible.com
 streamlit-beta5.audible.com
 streamlock-beta.audible.com
 streamlock-betau.audible.com
+sub.domain.vtc.audible.com
 support.0ced0c2ef-frontier.audible.com.au
 sync.prod.audible.com
 syncdelivery.audible.ca
@@ -1741,6 +1851,7 @@ tableau-gamma.audible.com
 tableau-manager.audible.com
 tableau-managerg.audible.com
 tableau.audible.com
+tableauk.audible.com
 tax.audible.co.jp
 tax.audible.co.uk
 tax.audible.com
@@ -1970,6 +2081,7 @@ wiki.api.audible.in
 wiki.audible.com
 wikie.audible.com
 with.juniper.devices.prod.audible.com
+wizard.prod.audible.com
 wmp.audible.co.uk
 wmp.audible.com
 wmp.audible.de
@@ -1978,6 +2090,7 @@ wordcast.audible.com
 workflow.tts.audible.com
 wowza-stream-tls.audible.com
 wrapper.prod.audible.com
+ws-sandbox.audible.com
 ws.audible.co.uk
 ws.audible.com
 ws.audible.de
@@ -2004,6 +2117,8 @@ www.ace.audible.es
 www.ace.audible.fr
 www.ace.audible.in
 www.ace.audible.it
+www.acts1-beta.audible.com
+www.acts1.audible.com
 www.acts2-beta.audible.com
 www.acx-horizonte.audible.com
 www.acx.audible.com
@@ -2092,9 +2207,11 @@ www.audibleallofus.audible.com
 www.audiblesamples.audible.com
 www.ayuda.audible.es
 www.beta-download.audible.co.uk
+www.beta-download.audible.com
 www.beta-download.audible.de
 www.beta-download.audible.fr
 www.beta-wmp.audible.co.uk
+www.beta-wmp.audible.com
 www.beta-wmp.audible.de
 www.beta-wmp.audible.fr
 www.beta.audible.co.uk
@@ -2121,6 +2238,7 @@ www.cds.audible.it
 www.checkout-preprod.audible.de
 www.checkout-sandbox-fe-1-preprod.audible.co.jp
 www.coffee.audible.com
+www.connect-beta.audible.com
 www.connect.audible.com
 www.dea29bd4d-frontier.audible.fr
 www.design.audible.com
@@ -2175,6 +2293,8 @@ www.ios.audible.com
 www.jenkins-beta.audible.com
 www.jenkins.audible.com
 www.jira-git-admin.audible.com
+www.jira-staging.audible.com
+www.jira.audible.com
 www.learn.audible.com
 www.lic.audible.com
 www.listeningwall.audible.com
@@ -2237,6 +2357,7 @@ www.prometheus.audible.com
 www.r.audible.ca
 www.r.audible.co.jp
 www.r.audible.co.uk
+www.r.audible.com
 www.r.audible.com.au
 www.r.audible.com.br
 www.r.audible.de
@@ -2260,6 +2381,7 @@ www.sansa.audible.fr
 www.sansa.audible.in
 www.sansa.audible.it
 www.sonarqube-gamma.audible.com
+www.sonarqube.audible.com
 www.sonos-devo.audible.com
 www.sonos-na.audible.com
 www.sonos.audible.ca
@@ -2366,6 +2488,7 @@ www.u003ewww.audible.fr
 www.universal.audible.in
 www.wiki-beta.audible.com
 www.wiki-staging.audible.com
+www.wiki.audible.com
 www.wmp.audible.co.uk
 www.wmp.audible.de
 www.wmp.audible.fr
@@ -2378,3 +2501,4 @@ wwwg.audible.es
 wwwo.audible.com.br
 x.audible.com
 zh.cn.prod.audible.com
+zh.prod.audible.com

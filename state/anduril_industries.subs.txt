@@ -404,7 +404,9 @@ anton.non-prod.eng.anduril.dev
 anvil.anduril.dev
 aol.anduril.com
 aonia.non-prod.eng.anduril.dev
+aos-design-library.non-prod.eng.anduril.dev
 apaflowtool.foundations-dev.anduril.dev
+aperture.non-prod.eng.anduril.dev
 api-qa.itools.anduril.dev
 api.agd-data-analytics.gov.anduril.dev
 api.ahp.security.anduril.dev
@@ -736,6 +738,7 @@ bl1.plm.anduril.dev
 bl1g.tc.anduril.dev
 bl2.plm.anduril.dev
 bl2g.tc.anduril.dev
+bladerunner-node-registry.eng.anduril.dev
 bladerunner-node-registry.non-prod.eng.anduril.dev
 blast-10.non-prod.eng.anduril.dev
 blast-radius.non-prod.eng.anduril.dev
@@ -1538,6 +1541,7 @@ eclipse-ops.anduril.com
 eclipse.andurildev.com
 eco-dev-2.andurildev.com
 eco-dev.andurildev.com
+ect-lab-metrics.non-prod.eng.anduril.dev
 edge.anduril.dev
 edge23.andurildev.com
 editor.contenta.andurildev.au
@@ -1628,6 +1632,9 @@ ess-dev.andurildev.com
 ess-devc.andurildev.com
 est-milestone-tracker.eng.anduril.dev
 est-milestone-tracker.non-prod.eng.anduril.dev
+etc-lab-metrics.non-prod.eng.anduril.dev
+etc-parts-bin.non-prod.eng.anduril.dev
+etc-parts-bin.qa.eng.anduril.dev
 eu.prod.teleport.anduril.dev
 eud.akm.anduril.com
 eud.akm.sauron.anduril.com
@@ -2957,6 +2964,7 @@ monet-dev.redbud.anduril.dev
 monet.redbud.anduril.dev
 moneypenny.non-prod.eng.anduril.dev
 monitor.anduril.com
+monitor.anduril.dev
 monitor.andurildev.au
 monitor.dev.whatfix.anduril.dev
 monitor.whatfix.anduril.dev
@@ -4394,6 +4402,7 @@ us-gov-west-1b.ghe-test.anduril.dev
 usaf-lattice-ssh-bastion.andurildev.com
 usaf-lattice-ssh-cluster.andurildev.com
 usaf.anduril.com
+usaf.anduril.dev
 usafe.anduril.com
 usarmy.anduril.com
 uscg-sdk-dev.anduril.com
@@ -4520,6 +4529,7 @@ vwg.primary.asv.maritime.anduril.com
 vwg.riptide.andurildev.com
 vwg.sandbox.andurildev.au
 w01.anduril.dev
+walnut.anduril.com
 wandb.anduril.dev
 wandb.gov.mlops-test.anduril.dev
 wandb.gov.united.anduril.dev

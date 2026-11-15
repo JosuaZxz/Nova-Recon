@@ -41,6 +41,7 @@
 1pport.magento.com
 1pport.web82.us-west-1.tst.sparta.ceng.magento.com
 2-1-10-sphfxda-nupbhrzaxqi2k.us.magento.com
+2-1-10-sphfxda-nupbhrzaxqi2kg.us.magento.com
 2.magento.com
 2008.max.adobe.com
 2009.max.adobe.com
@@ -1385,6 +1386,7 @@ afterwork-philadelphia.magento.com
 afterwork-seattle.magento.com
 afterwork-sf.magento.com
 afterwork.magento.com
+afterworkpport.web72.us-east-1.prd.sparta.ceng.magento.com
 aftindia2020.adobe.com
 afwebcdn.fonts.adobe.com
 ag-dev.corp.adobe.com
@@ -1618,6 +1620,7 @@ aladdin.corp.adobe.com
 aladdinshrinecenter.na1.documents.adobe.com
 alamocfug.groups.adobe.com
 alaskacc.na2.documents.adobe.com
+albecca-stg.magento.com
 albecca.magento.com
 albedo-dev.corp.adobe.com
 albedo.corp.adobe.com
@@ -1924,6 +1927,7 @@ annotate-staging.fonts.adobe.com
 annotate-stagings.fonts.adobe.com
 annotate.fonts.adobe.com
 annotations.pnw.appsvc.an.adobe.com
+annualcompreview.magento.com
 anokaequine.na4.documents.adobe.com
 anonymous.adobe.com
 anotherone.cm-verify.adobe.com
@@ -2002,6 +2006,7 @@ apac1-region.brand-portal.adobe.com
 apacevents.adobe.com
 apacexp.adobe.com
 apache.magento.com
+apam.magento.com
 apc-stage.adobe.com
 apc-stage.corp.adobe.com
 apc.adobe.com
@@ -2028,6 +2033,7 @@ api-health-check-new.corp.magento.com
 api-health-check-newg.corp.magento.com
 api-health-check.corp.magento.com
 api-health-check.magento.com
+api-health-checke.corp.magento.com
 api-internal-au-dev.schedule.adobe.com
 api-internal-ca-dev.schedule.adobe.com
 api-or2.dev.short-url.postoffice.adobe.com
@@ -2057,6 +2063,7 @@ api-stgm.magento.com
 api-ui.eda-dev-int.corp.adobe.com
 api-ui.eda-prd-int.corp.adobe.com
 api-ui.eda-stg-int.corp.adobe.com
+api-usw2.magento.com
 api-usw2.mcom.magento.com
 api-usw2a.magento.com
 api-v1.eda-dev-int.corp.adobe.com
@@ -2334,6 +2341,7 @@ apps-cf.3di.corp.adobe.com
 apps-sj.3di.corp.adobe.com
 apps-sj.ci.corp.adobe.com
 apps.enterprise.adobe.com
+apps.magento.com
 apps.vocai.corp.adobe.com
 appsacnner2-sign-prd.corp.adobe.com
 appscan-sign-prd.corp.adobe.com
@@ -2756,6 +2764,7 @@ asus-stg.magento.com
 asus-stg.mcom.magento.com
 asus-stga.magento.com
 asus.magento.com
+asusc.mcom.magento.com
 asusdev-stge.mcom.magento.com
 asusdevo.magento.com
 asustek-stg.magento.com
@@ -2945,6 +2954,8 @@ auth-api-stg1.services.adobe.com
 auth-api.services.adobe.com
 auth-be-stg.magento.com
 auth-be-stgk.bcn.magento.com
+auth-be.magento.com
+auth-bea.magento.com
 auth-ci-statics.dev.services.adobe.com
 auth-ck.bcn.magento.com
 auth-dev.bcn.magento.com
@@ -2995,6 +3006,7 @@ auth-stg1-va6-internal.services.adobe.com
 auth-stg1-va6.services.adobe.com
 auth-stg1.services.adobe.com
 auth-stg1u.services.adobe.com
+auth-stgs.magento.com
 auth-ti.services.adobe.com
 auth-us-stg.magento.com
 auth-us-stgi.bcn.magento.com
@@ -3023,6 +3035,7 @@ auth.s9rvice7.adobe.com
 auth.s9rvice9.adobe.com
 auth.services.adobe.com
 authenticate-corp.adobe.com
+authenticate.magento.com
 author-asfyhg.corp.adobe.com
 author-bicrm.corp.adobe.com
 author-con-c.gtp.adobe.com
@@ -3244,6 +3257,7 @@ aws-api.stage.cloud-automation.corp.adobe.com
 aws-chef.corp.adobe.com
 aws-claimv1-pr.wip4.adobe.com
 aws-claimv1.wip4.adobe.com
+aws-us-stg-rabbity.magento.com
 aws.adedownload.adobe.com
 aws.adobe.com
 aws.aldisued-mkt-prod8-lb.campaign.adobe.com
@@ -3417,6 +3431,7 @@ backend.cmservice.corp.adobe.com
 backend.magento.com
 backend.opensource.engcom.magento.com
 backend.staging.opensource.engcom.magento.com
+backendg.staging.opensource.engcom.magento.com
 backoffice.stock.adobe.com
 backoffice.stock.stage.adobe.com
 backoffices.stock.adobe.com
@@ -3646,6 +3661,7 @@ batbastionk.magento.com
 batbastiono.bcn.magento.com
 batchfixer.corp.adobe.com
 batescollege.na2.documents.adobe.com
+bathap-adm-auth-stg.magento.com
 bathap-adm-auth-stg3.bcn.magento.com
 bathap-adm-packages.magento.com
 bathap-adm-packagesu.bcn.magento.com
@@ -3826,6 +3842,7 @@ bigip-sjc0-3.adobe.com
 bigip-sjc0-4.adobe.com
 bigip-sjc0-a.adobe.com
 bigip-sjc0-b.adobe.com
+billing.magento.com
 billing.prd.adobe.com
 billinga.magento.com
 binaryscan-stage.corp.adobe.com
@@ -4045,6 +4062,7 @@ bomb-api-stg.magento.com
 bomb-api-stgg.bcn.magento.com
 bomb-dev.magento.com
 bomb-devg.magento.com
+bomb-stg.magento.com
 bomb-stg.mcom.magento.com
 bomb-stgg.magento.com
 bomb7.mcom.magento.com
@@ -4256,6 +4274,7 @@ business-ai-stage.corp.adobe.com
 business-ai.corp.adobe.com
 business-graybox.adobe.com
 business.adobe.com
+business.magento.com
 business.stage.adobe.com
 business.stage2.adobe.com
 businessai.corp.adobe.com
@@ -4549,6 +4568,7 @@ cannes-creator-beach-remix.activations.adobe.com
 cannes-creator-beach.activations.adobe.com
 cannes2026-worksonality.activations.adobe.com
 canneslions.adobe.com
+canon-stg.magento.com
 canon-stg9.magento.com
 canon.magento.com
 canon.mcom.magento.com
@@ -5340,6 +5360,7 @@ cem.solutions.adobe.com
 cemail.newyorklife-aarp.com.cname.campaign.adobe.com
 cemexpo.adobe.com
 ceng.magento.com
+cengi.magento.com
 cent-dev.corp.adobe.com
 cent.corp.adobe.com
 centennialparkdisposal.na4.documents.adobe.com
@@ -5364,9 +5385,11 @@ centralmd.groups.adobe.com
 centralofm-stg9.magento.com
 centralofm-stgk.mcom.magento.com
 centralofm.magento.com
+centralofmu.magento.com
 centralplanning.na1.documents.adobe.com
 centraluso.cloudapp.acrobat.adobe.com
 centurymech.na4.documents.adobe.com
+ceops.corp.magento.com
 ceoservices.na1.documents.adobe.com
 ceowatermandate.na4.documents.adobe.com
 ceprod1-lb.campaign.adobe.com
@@ -5430,6 +5453,7 @@ cgen-local.adobe.com
 cgen-stage.adobe.com
 cgen.adobe.com
 cgeu-stgi.magento.com
+cgeu7.mcom.magento.com
 cgi-sjc0.adobe.com
 cgi-vip-10.adobe.com
 cgi.adobe.com
@@ -5957,6 +5981,7 @@ cloudoptimization-stg.corp.adobe.com
 cloudoptimization.corp.adobe.com
 cloudproxy-dev.adobe.com
 cloudproxy.corp.adobe.com
+clouds.sparta.corp.magento.com
 cloudspend-v3.sites.corp.adobe.com
 cloudspend.sites.corp.adobe.com
 cloudtesting.corp.adobe.com
@@ -6760,6 +6785,7 @@ cpomsftp04k.magento.com
 cpomshap-adm-busc.bcn.magento.com
 cpomshap-adm-busw.magento.com
 cpomshap-be-auth.magento.com
+cpomshap-be-autho.bcn.magento.com
 cpomshap-be-authw.magento.com
 cpomshap-be-bus.magento.com
 cpomshap-be-buso.bcn.magento.com
@@ -6769,6 +6795,7 @@ cpomshap-be-renos.bcn.magento.com
 cpomshap-be-renow.magento.com
 cpomshap.magento.com
 cpomshap01.magento.com
+cpomshap01k.bcn.magento.com
 cpomshap01k.magento.com
 cpomshap02.bcn.magento.com
 cpomshapi.magento.com
@@ -7795,6 +7822,7 @@ dcorp205.magento.com
 dcorp206.bcn.magento.com
 dcorp206g.magento.com
 dcorp207g.magento.com
+dcorp208.bcn.magento.com
 dcorp208g.magento.com
 dcorpwin01k.magento.com
 dcorpwin01m.bcn.magento.com
@@ -7994,6 +8022,8 @@ demo06.magento.com
 demo06y.bcn.magento.com
 demo07.bcn.magento.com
 demo07.magento.com
+demo075.magento.com
+demo08.magento.com
 demo08u.bcn.magento.com
 demo19.demoamericas275.adobe.com
 demo2.adobe.com
@@ -8012,6 +8042,7 @@ democat.corp.adobe.com
 demog.bcn.magento.com
 demomaster.magento.com
 demomastera.bcn.magento.com
+demomasterk.magento.com
 demomasteru.web81.us-west-2.stg.sparta.ceng.magento.com
 demomon.magento.com
 demomong.magento.com
@@ -8062,6 +8093,7 @@ dev-innovate-ai-hub.corp.adobe.com
 dev-jenkins.corp.magento.com
 dev-jenkins7.corp.magento.com
 dev-ldap-admin.corp.magento.com
+dev-ldap-admina.corp.magento.com
 dev-ldap.corp.magento.com
 dev-lp-subdomain.carnival-uk-dev.test.ajo.adobe.com
 dev-maturity.corp.adobe.com
@@ -8269,6 +8301,7 @@ devdp-vault.corp.magento.com
 devdp-vault.magento.com
 devdp.magento.com
 devdw.magento.com
+devdwy.bcn.magento.com
 deveaepe.corp.adobe.com
 developer-api.magento.com
 developer-dev.adobe.com
@@ -8305,6 +8338,7 @@ devices.corp.adobe.com
 devint.corp.adobe.com
 devk.acrobat.adobe.com
 devmc2-rabbitmq-dev1.corp.magento.com
+devmc2-rabbitmq-dev1y.corp.magento.com
 devnet.host.adobe.com
 devoncfug.groups.adobe.com
 devops-oobe-admin-console.corp.adobe.com
@@ -8344,6 +8378,7 @@ dfwadodc02.adobenet.global.adobe.com
 dfwaug.groups.adobe.com
 dfwcfug.groups.adobe.com
 dgitlab01.magento.com
+dgitlab02.magento.com
 dgp-coverity.corp.adobe.com
 dh0r24auhvff5ucwcdqelhkxld.adobe.com
 dhagrawa-wx-2.corp.adobe.com
@@ -8572,6 +8607,7 @@ docker.git.corp.adobe.com
 docker.github-stage.corp.adobe.com
 docker.magento.com
 docker.marketing.adobe.com
+dockera.magento.com
 dockerbuilder.bcn.magento.com
 dockerbuilder.magento.com
 dockermaster01.magento.com
@@ -8809,6 +8845,7 @@ drapmw02.bcn.magento.com
 drapmw02.magento.com
 drapmw02g.magento.com
 drapmw03.bcn.magento.com
+drapmw03.magento.com
 drapmw03g.magento.com
 drapmw04.bcn.magento.com
 drapmw04.magento.com
@@ -8836,6 +8873,7 @@ dremio-stage-azure.corp.adobe.com
 drenoweb.magento.com
 drenowebg.magento.com
 dreport01.magento.com
+dreport02i.magento.com
 drewphillips.host.adobe.com
 driverslegaldefense.na4.documents.adobe.com
 drmadmin-stage.corp.adobe.com
@@ -9213,6 +9251,7 @@ ecomm-na-da1.stage.adobe.com
 ecomm-na.stage.adobe.com
 ecommercedev-cassandra.adobe.com
 ecommerceexperience.magento.com
+ecommerceexperiencee.magento.com
 ecommerceprod-cassandra.adobe.com
 ecommercestage-cassandra.adobe.com
 ecommsonar.corp.adobe.com
@@ -9810,6 +9849,7 @@ en.captivateprime.adobe.com
 en.documents.adobe.com
 en.experiencecloud.adobe.com
 en.marketing.adobe.com
+en.mcom.magento.com
 en9.acrobat.adobe.com
 enablement.adobe.com
 encoderfunceu.adobe.com
@@ -9825,6 +9865,7 @@ engagement.adobe.com
 engagement.corp.adobe.com
 engagementlens.corp.adobe.com
 engcom.corp.magento.com
+engcom.dev.apibnirbt.demo.bcn.magento.com
 engcom.dev.magento.com
 engcom.magento.com
 engcoms.dev.magento.com
@@ -10732,6 +10773,7 @@ foobar-api-devs.magento.com
 foobar-api-devw.bcn.magento.com
 foobar-api-stg.magento.com
 foobar-api-stgk.bcn.magento.com
+foobar-api-stgs.magento.com
 foobar-dev.magento.com
 foobar-deve.bcn.magento.com
 foobar-devk.magento.com
@@ -12111,6 +12153,7 @@ help.glaas-stage.corp.adobe.com
 help.glaas.corp.adobe.com
 help.idbutler.adobe.com
 help.learningmanagerfr.adobe.com
+help.magento.com
 help.marketing.adobe.com
 help.stage.adobe.com
 help.wip4.adobe.com
@@ -12560,6 +12603,7 @@ hywsus.corp.adobe.com
 hz.adobe.com
 hzimporthtml.corp.adobe.com
 i-17282-2-2-4.engcom.dev.magento.com
+i-17282-2-2-4c.engcom.dev.magento.com
 i.ssfcu.org.cname.campaign.adobe.com
 i15n.adobe.com
 i15n.primetime.adobe.com
@@ -12903,6 +12947,7 @@ ims-csc-flex.identity.adobe.com
 ims-csc.identity.adobe.com
 ims-lb.identity-stage.adobe.com
 ims-lb.identity.adobe.com
+ims-na1.adobelogin.com
 ims-ra-stage.services.adobe.com
 ims-ra.services.adobe.com
 ims-sms-moxy.services.adobe.com
@@ -13194,6 +13239,7 @@ internal-api.int.ceng.magento.com
 internal-api.magento.com
 internal-api.prd.ceng.magento.com
 internal-api.stg.ceng.magento.com
+internal-apie.int.ceng.magento.com
 internal-apie.prd.ceng.magento.com
 internal-dev1.apps.enterprise.adobe.com
 internal-dev2.apps.enterprise.adobe.com
@@ -13506,6 +13552,7 @@ jenkins-master.bsl.eur.adobe.com
 jenkins-oak.bsl.eur.adobe.com
 jenkins-or1.k8s-prd.corp.adobe.com
 jenkins-qarepo.corp.magento.com
+jenkins-qarepoc.corp.magento.com
 jenkins-qe.bsl.eur.adobe.com
 jenkins-screens.bsl.eur.adobe.com
 jenkins-sprouts.bsl.eur.adobe.com
@@ -14165,6 +14212,7 @@ lctcso-test.corp.adobe.com
 lctcso.corp.adobe.com
 lcts.adobe.com
 lctserver.corp.adobe.com
+ldap.magento.com
 ldapsmanager.corp.adobe.com
 lds-church.marketing.adobe.com
 ldsci.corp.adobe.com
@@ -14696,6 +14744,7 @@ loyalty.kaufland.cz.cname.campaign.adobe.com
 loyalty.kaufland.hr.cname.campaign.adobe.com
 loyalty.kaufland.md.cname.campaign.adobe.com
 loyalty.kaufland.ro.cname.campaign.adobe.com
+loyalty.magento.com
 loyaltygateway.com.cname.campaign.adobe.com
 lp-dev.pal-dev.test.ajo.adobe.com
 lp.b2bmail.adobe.com
@@ -14793,6 +14842,7 @@ luma-api-dev.magento.com
 luma-api-prd.magento.com
 luma-api-qa.magento.com
 luma-api-stg.magento.com
+luma-api.magento.com
 luma-aws-dev.magento.com
 luma-be-dev.magento.com
 luma-be-stg.magento.com
@@ -15257,6 +15307,7 @@ magento.com
 magento.devdev.magento.com
 magento.magento.com
 magento.putana77.bizbiz.putana77.magento.com
+magento.wordpress.westwoodcc.onlineonline.westwoodcc.wordpress.magento.com
 magentousupport.magento.com
 mages2.adobe.com
 magicaldomain.cm-verify.adobe.com
@@ -15922,6 +15973,7 @@ mgmt.auth.adobe.com
 mgo1.tc.magento.com
 mgo10.tc.magento.com
 mgo10u.tc.magento.com
+mgo1c.tc.magento.com
 mgo2.tc.magento.com
 mgo3.tc.magento.com
 mgo4.tc.magento.com
@@ -17635,6 +17687,7 @@ omsdocs.magento.com
 omsdocsq.magento.com
 omseuora-qa.magento.com
 omseuora-stg.magento.com
+omseuora-stg2.magento.com
 omseuora.magento.com
 omseuoracentralgroup-stg.magento.com
 omseuoracentralgroup.magento.com
@@ -17642,12 +17695,14 @@ omseuorarural-stg.magento.com
 omseuorarural.magento.com
 omseuweb-api.magento.com
 omseuweb-qa.magento.com
+omseuweb-stg.magento.com
 omseuweb.magento.com
 omsusora.magento.com
 omsusorarural.magento.com
 omsusoratest.magento.com
 omsusw2ora.magento.com
 omsusw2web.magento.com
+omsusweb.magento.com
 onair-revid.corp.adobe.com
 onair.adobe.com
 onb.payments.magento.com
@@ -17703,6 +17758,7 @@ oobeportal.corp.adobe.com
 oobesaas.adobe.com
 oogway.corp.adobe.com
 ool.engcom.magento.com
+oola.engcom.magento.com
 opal.corp.adobe.com
 opaug.groups.adobe.com
 openbank-mkt-prod1-cus.campaign.adobe.com
@@ -20331,11 +20387,13 @@ pachuco.adobe.com
 pacific.adobe.com
 packages.adobe.com
 packages.magento.com
+packages9.magento.com
 packaging.served.net.s2stagehance.com
 pact.corp.adobe.com
 pactforfamilies.na4.documents.adobe.com
 padma.plaas.cloudops.adobe.com
 padvdocuments.na1.documents.adobe.com
+page.magento.com
 pagebuilder.magento.com
 pagemakersupport.adobe.com
 pagerbeauty.cloudops.adobe.com
@@ -20969,6 +21027,7 @@ portfolio.ccpsx.com
 portfolio.corp.adobe.com
 porting.engcom.dev.magento.com
 portingo.engcom.dev.magento.com
+portland.magento.com
 portlandstate.na2.documents.adobe.com
 positiva.na1.documents.adobe.com
 post.adobe.com
@@ -21765,6 +21824,7 @@ quick-actions-prenv.projectx.corp.adobe.com
 quick-actions-stage.prenv.projectx.corp.adobe.com
 quick-actions.express.adobe.com
 quicken-api.ecg.magento.com
+quicken-apii.ecg.magento.com
 quickencard.com.cname.campaign.adobe.com
 quotemehappy.com.cname.campaign.adobe.com
 qw.corp.adobe.com
@@ -28540,6 +28600,7 @@ sandbox.adobe.com
 sandbox.aem.corp.magento.com
 sandbox.api.magento.com
 sandbox.auth-light.identity.adobe.com
+sandbox.bcn.magento.com
 sandbox.campaign.adobe.com
 sandbox.ceops.corp.magento.com
 sandbox.commerce.adobe.com
@@ -28905,6 +28966,7 @@ sb08.workfront.adobe.com
 sb09.workfront.adobe.com
 sb10.workfront.adobe.com
 sb46lt45b1207lh93p71tq6ypvxk2az.signal-ops.cloud-automation.corp.adobe.com
+sbcnweb01.magento.com
 sbdolphins2026.na3.documents.adobe.com
 sbexceptions.corp.adobe.com
 sbi16proxy.bcn.magento.com
@@ -30658,6 +30720,7 @@ sko-apam.magento.com
 sko-apamu.magento.com
 sko-emea.magento.com
 sko-na.magento.com
+sko-naa.magento.com
 sko.adobe.com
 sko23.adobe.com
 skpfederation.na3.documents.adobe.com
@@ -30962,6 +31025,7 @@ sops.corp.adobe.com
 sopsdev.corp.adobe.com
 sopsstg.corp.adobe.com
 sopteamix.corp.adobe.com
+sorygn1.magento.com
 sorygn2.magento.com
 sorygn3.magento.com
 sorygnweb01.magento.com
@@ -31681,6 +31745,7 @@ stg.api.showroom.corp.adobe.com
 stg.api.shworoom.corp.adobe.com
 stg.ceng.magento.com
 stg.dxenablementhub.adobe.com
+stg.magento.com
 stg.mc-mds.corp.adobe.com
 stg.primetime.adobe.com
 stg.projectneo.adobe.com
@@ -31692,6 +31757,7 @@ stg.showroom.corp.adobe.com
 stg.sparta.ceng.magento.com
 stg.supportinsights.adobe.com
 stg.swat.ceng.magento.com
+stg.swat.magento.com
 stg.workfront.adobe.com
 stg2.magento.com
 stg3.magento.com
@@ -32052,6 +32118,7 @@ supporte.web71.us-west-1.tst.sparta.ceng.magento.com
 supporte.web82.us-west-2.prd.sparta.ceng.magento.com
 supported.corp.adobe.com
 supportflow.adobe.com
+supportg.web72.eu-west-1.prd.sparta.ceng.magento.com
 supporti.web72.us-west-2.stg.sparta.ceng.magento.com
 supporti.web83.us-west-2.prd.sparta.ceng.magento.com
 supportinsights.adobe.com
@@ -32062,6 +32129,7 @@ supportm.web81.eu-west-1.prd.sparta.ceng.magento.com
 supportm.web81.us-west-1.tst.sparta.ceng.magento.com
 supportm.web83.eu-west-1.prd.sparta.ceng.magento.com
 supporto.web72.us-west-2.prd.sparta.ceng.magento.com
+supportq.web74.us-west-2.stg.sparta.ceng.magento.com
 supports.web72.us-west-1.tst.sparta.ceng.magento.com
 supports.web73.us-west-2.prd.sparta.ceng.magento.com
 supports.web83.us-east-1.prd.sparta.ceng.magento.com
@@ -32102,6 +32170,7 @@ svn-source.3di.corp.adobe.com
 svn.3di.corp.adobe.com
 svn.magento.com
 svn18.rd.campaign.adobe.com
+svnit.magento.com
 svnops.magento.com
 svzm-berlin.eu1.documents.adobe.com
 sw-cruises.algolia.com.cname.cjm.adobe.com
@@ -32542,6 +32611,7 @@ tableausj-stg.corp.adobe.com
 tableausj.corp.adobe.com
 tabo-dev.corp.adobe.com
 tabo.dev.adobe.com
+tabtest05.magento.com
 tac.magento.com
 tachyon.corp.adobe.com
 tachyonbuild.corp.adobe.com
@@ -33308,6 +33378,8 @@ topaz.adobe.com
 topazerp.adobe.com
 topekacameraclub.groups.adobe.com
 topoffice-mkt-prod1-t.campaign.adobe.com
+tops-api-stg.magento.com
+tops-stg.magento.com
 tops.magento.com
 torontoflex.groups.adobe.com
 tortell-a.corp.adobe.com
@@ -33565,6 +33637,7 @@ tsr2.corp.adobe.com
 tss-np.corp.adobe.com
 tss.corp.adobe.com
 tst-hen.cm-verify.adobe.com
+tst.magento.com
 tst.sparta.ceng.magento.com
 tstcmr.cm-verify.adobe.com
 tsto.sparta.ceng.magento.com
@@ -33660,6 +33733,7 @@ uat.m1ce.vantiv.ecg.magento.com
 uat.m1ee.vantiv.ecg.magento.com
 uat.m2ce.vantiv.ecg.magento.com
 uat.m2ee.vantiv.ecg.magento.com
+uat.magento.com
 uato.m2ee.vantiv.ecg.magento.com
 ubc1-vip46.adobe.com
 ubikare.eu1.documents.adobe.com
@@ -33772,6 +33846,7 @@ unavailable-sj1.adobe.com
 unavailable.adobe.com
 unavailable.wip4.adobe.com
 uncsign.na1.documents.adobe.com
+unfi-stg.magento.com
 unfi.magento.com
 unfsu1.eu1.documents.adobe.com
 unicainsurance.com.cname.campaign.adobe.com
@@ -34173,6 +34248,7 @@ vcmanapi-stg.corp.adobe.com
 vcmanapi.corp.adobe.com
 vcpeit.na2.documents.adobe.com
 vcpu-data-api-dev.magento.com
+vcpu-data-api-devg.magento.com
 vcpu-data-api-prod.magento.com
 vcpu-data-api-stage.magento.com
 vcpu-data-api-stageq.magento.com
@@ -34634,6 +34710,8 @@ web3.adobe.com
 web71.us-west-1.tst.sparta.ceng.magento.com
 web72.eu-central-1.drp.sparta.ceng.magento.com
 web72.eu-west-1.prd.sparta.ceng.magento.com
+web72.magento.com
+web72.us-east-1.prd.sparta.ceng.magento.com
 web72.us-west-1.tst.sparta.ceng.magento.com
 web72.us-west-2.prd.sparta.ceng.magento.com
 web72.us-west-2.stg.sparta.ceng.magento.com
@@ -34658,6 +34736,7 @@ web82.us-east-1.prd.sparta.ceng.magento.com
 web82.us-west-2.prd.sparta.ceng.magento.com
 web82.us-west-2.stg.sparta.ceng.magento.com
 web83.eu-central-1.drp.sparta.ceng.magento.com
+web83.eu-west-1.prd.sparta.ceng.magento.com
 web83.us-west-1.tst.sparta.ceng.magento.com
 web83.us-west-2.prd.sparta.ceng.magento.com
 web83.us-west-2.stg.sparta.ceng.magento.com
@@ -35443,6 +35522,7 @@ www.airdownload2.adobe.com
 www.americaservices.magento.com
 www.annotations.pnw.appsvc.an.adobe.com
 www.api.auth.adobe.com
+www.api.magento.com
 www.api.na1.documents.adobe.com
 www.api.na2.documents.adobe.com
 www.api.net.s2stagehance.com
@@ -35477,6 +35557,7 @@ www.cloudapp.blog.blog.magento.com
 www.cmo.adobe.com
 www.color.adobe.com
 www.commerceandcarryout.magento.com
+www.community.magento.com
 www.conf.magento.com
 www.console.primetime.adobe.com
 www.corp.adobe.com
@@ -35516,6 +35597,7 @@ www.echosign.adobe.com
 www.ecommerceexperience.magento.com
 www.eeeula.magento.com
 www.elasticbeanstalk.blog.blog.magento.com
+www.email2.magento.com
 www.enterprise.magento.com
 www.etcd-server-ssl.marketing.adobe.com
 www.eu1.p1.documentspreview.adobe.com
@@ -35579,6 +35661,7 @@ www.learningmanagereu.adobe.com
 www.legacy.blog.blog.magento.com
 www.licensing.adobe.com
 www.linguahub.corp.adobe.com
+www.live-au.magento.com
 www.live-eu.magento.com
 www.live.adobe.com
 www.lm.licenses.adobe.com
@@ -35591,6 +35674,7 @@ www.marketplace-m2.magento.com
 www.marketplace-stg2.magento.com
 www.marketplace-stg3.magento.com
 www.marketplace.magento.com
+www.marketplacesupport.magento.com
 www.max-emea.adobe.com
 www.max-europe.adobe.com
 www.max.adobe.com
@@ -35769,6 +35853,7 @@ www5.partnermarketing.magento.com
 www5.yyyyyyyyywww.azure.magento.com
 www5.yyyyyyyyywww.ids.magento.com
 www7.adobe.com
+www7.yyyyyyyyymerchant.blog.blog.magento.com
 www9.go.magento.com
 wwwa.ids.magento.com
 wwwa.pass.blog.blog.magento.com
@@ -35801,9 +35886,11 @@ wwwk.legacy.blog.blog.magento.com
 wwwm.standard-ssl3.magento.com
 wwwm.yyyyyyyyyoid.magento.com
 wwwmacr-sjc0.adobe.com
+wwwo.cloud.blog.blog.magento.com
 wwwo.random.magento.com
 wwwo.uction.magento.com
 wwwo.yyyyyyyyygateway.blog.blog.magento.com
+wwwo.yyyyyyyyywww.cloud.blog.blog.magento.com
 wwwo.yyyyyyyyywww.machine.magento.com
 wwworigin-da1.adobe.com
 wwworigin-da1.stage.adobe.com
@@ -35811,6 +35898,7 @@ wwworigin-da1.stage2.adobe.com
 wwworigin2-da1.adobe.com
 wwworigin2-da1.stage.adobe.com
 wwworigin2-du1.adobe.com
+wwwq.blog.magento.com
 wwwq.static.magento.com
 wwwq.yyyyyyyyyjenkins.blog.blog.magento.com
 wwwq.yyyyyyyyysvc.magento.com
@@ -35942,6 +36030,7 @@ ywcaworks.na2.documents.adobe.com
 yyyyyyyyyadmin.blog.blog.magento.com
 yyyyyyyyyadmina.blog.blog.magento.com
 yyyyyyyyyblog.blog.magento.com
+yyyyyyyyyblog5.blog.magento.com
 yyyyyyyyycloud.blog.blog.magento.com
 yyyyyyyyycloudapp.blog.blog.magento.com
 yyyyyyyyydocsapi.blog.blog.magento.com
