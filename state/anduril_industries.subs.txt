@@ -406,6 +406,7 @@ aol.anduril.com
 aonia.non-prod.eng.anduril.dev
 aos-design-library.non-prod.eng.anduril.dev
 apaflowtool.foundations-dev.anduril.dev
+aperture-api.non-prod.eng.anduril.dev
 aperture.non-prod.eng.anduril.dev
 api-qa.itools.anduril.dev
 api.agd-data-analytics.gov.anduril.dev
@@ -490,6 +491,7 @@ app.wickr.network.anduril.dev
 appe.cci3.anduril.dev
 appq.cci.anduril.dev
 approval-hub.non-prod.eng.anduril.dev
+apps-dev.andurildev.au
 apps.anduril.com
 apps.eng.anduril.au
 appsc.anduril.com
@@ -1630,11 +1632,15 @@ erp.tc.eng.anduril.dev
 ersa.andurildev.com
 ess-dev.andurildev.com
 ess-devc.andurildev.com
+est-dashboard.non-prod.eng.anduril.dev
 est-milestone-tracker.eng.anduril.dev
 est-milestone-tracker.non-prod.eng.anduril.dev
+etc-lab-metrics.eng.anduril.dev
 etc-lab-metrics.non-prod.eng.anduril.dev
+etc-parts-bin.eng.anduril.dev
 etc-parts-bin.non-prod.eng.anduril.dev
 etc-parts-bin.qa.eng.anduril.dev
+etc-parts-bin.stage.eng.anduril.dev
 eu.prod.teleport.anduril.dev
 eud.akm.anduril.com
 eud.akm.sauron.anduril.com
@@ -2251,6 +2257,7 @@ imaging-glance.non-prod.eng.anduril.dev
 imaging-glance.qa.eng.anduril.dev
 imaging-jenkins-test.it.anduril.dev
 imaging-jenkins.it.anduril.dev
+imaging-jenkins5.it.anduril.dev
 imaging.anduril.dev
 imaging.andurildev.com
 imaging.non-prod.eng.anduril.dev
@@ -2905,6 +2912,7 @@ meverett2-wrench-wms-toolkit.workspace.non-prod.eng.anduril.dev
 mfe-partybuss.non-prod.eng.anduril.dev
 mfe-staffing-model.non-prod.eng.anduril.dev
 mfepracticepartybus.non-prod.eng.anduril.dev
+mfg-1401-dashboard.non-prod.eng.anduril.dev
 mfg-api.akm.anduril.com
 mfg-ghost.anduril.com
 mfg.akm.anduril.com
@@ -3122,6 +3130,7 @@ observatory.non-prod.eng.anduril.dev
 observatory.qa.eng.anduril.dev
 observatory.stage.eng.anduril.dev
 oc-55-receiving-log.non-prod.eng.anduril.dev
+oc55-abc-lookup.non-prod.eng.anduril.dev
 oc55-batching-qatool.non-prod.eng.anduril.dev
 oc55-batching-tool.non-prod.eng.anduril.dev
 occupio.mdp-sandbox.eng.anduril.dev
@@ -3241,6 +3250,7 @@ partybus-api.non-prod.eng.anduril.dev
 partybus-api.stage.eng.anduril.dev
 partybus-stg.eng.anduril.dev
 partybus-test-demo.non-prod.eng.anduril.dev
+partybus.andurildev.au
 partybus.eng.anduril.dev
 partybus.non-prod.eng.anduril.dev
 partybus.stage.eng.anduril.dev
@@ -3367,6 +3377,7 @@ porygon-z.non-prod.eng.anduril.dev
 pp-feature-tracker.non-prod.eng.anduril.dev
 ppi-dashboard.non-prod.eng.anduril.dev
 pqc-dev.andurildev.com
+pr-report.bazel.anduril.dev
 praetorian-bandon.andurildev.com
 praetorian-cypress.andurildev.com
 praetorian-merion.andurildev.com
@@ -3512,6 +3523,7 @@ rancher.id2e-dev.andurildev.com
 rancher.image-builder.andurildev.com
 rancher.observability-edge.andurildev.com
 rancher.rke2-sandbox.andurildev.com
+rapstone.andurildev.com
 rchat.anduril.dev
 rcv-external.andurildev.com
 rcv-internal-pages.anduril.dev
@@ -4073,6 +4085,7 @@ supplier-chargebacks.non-prod.eng.anduril.dev
 supplier-portal.anduril.com
 supplier-profiles-qa.eng.anduril.dev
 supplier-terms.anduril.com
+supplier-training.non-prod.eng.anduril.dev
 supply-chain-ai-workshop.non-prod.eng.anduril.dev
 supply-chain-analytics-arsenal-qa.eng.anduril.dev
 supply-chain-analytics-arsenal.non-prod.eng.anduril.dev
@@ -4287,6 +4300,7 @@ this-is-hot.qa.eng.anduril.dev
 thrasher-9000.non-prod.eng.anduril.dev
 threat-response.security.anduril.dev
 thuja.anduril.com
+thunder-engineering.non-prod.eng.anduril.dev
 thunder-launch-qa.eng.anduril.dev
 thunder-launch.non-prod.eng.anduril.dev
 thunderforge.anduril.com
@@ -4335,6 +4349,7 @@ travel-form-editor.non-prod.eng.anduril.dev
 travel.anduril.com
 trident-spectre.andurildev.com
 trino-ad.rdf-dev.gov.anduril.dev
+trino-ad.rdf-prod.gov.anduril.dev
 trino-authorized.rdf-dev.gov.anduril.dev
 trino.rdf-dev.gov.anduril.dev
 trino.rdf-prod.gov.anduril.dev
@@ -4514,6 +4529,7 @@ voyagerconfigurator.anduril.dev
 vpn.anduril.com
 vtdocs.corp.anduril.dev
 vulkan-rms.non-prod.eng.anduril.dev
+vuln-mgmt-prod.anduril.dev
 vuln-mgmt-staging.andurildev.com
 vulture-bastion.andurildev.com
 vulture-sitl-cluster.sitlm.anduril.dev
@@ -4703,6 +4719,7 @@ www.areai-sft.it.anduril.dev
 www.areai.anduril.com
 www.argus-dev.andurildev.com
 www.armada.anduril.com
+www.artifactory.anduril.dev
 www.asim.andurildev.com
 www.asset-calibration.andurildev.com
 www.asset.anduril-gvsc-sdk.andurildev.com
@@ -5074,6 +5091,7 @@ xl-plexus.stage.eng.anduril.dev
 xpressentry.anduril.dev
 xwiki.anduril.dev
 yellowjacket-launcher-build-tracker.non-prod.eng.anduril.dev
+yellowjacket-launcher-build-tracker.qa.eng.anduril.dev
 yellowstone-performers-tmp.andurildev.com
 yellowstone-performers.andurildev.com
 yellowstone.anduril.dev
