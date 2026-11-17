@@ -39,6 +39,7 @@
 227.varonis.io
 227.varonis.net
 228.varonis.io
+229.varonis.com
 229.varonis.io
 229.varonis.net
 231.varonis.io
@@ -294,6 +295,7 @@ auth-us-dc06.api.varonis.io
 auth-us-dc08.api.varonis.io
 auth.api.varonis.io
 auth.ca.app.varonis.io
+auth.preprod.app.varonis.io
 autha.eu.app.varonis.io
 authaueo.api.varonis.io
 authc.app.varonis.io
@@ -322,6 +324,7 @@ autodiscover.access.varonis.com
 autodiscover.varonis.com
 autodiscover.varonis.io
 autodiscovero.access.varonis.com
+autonation.varonis.io
 autonationm.varonis.io
 av-external-de.varonis.com
 av-external-dee.varonis.com
@@ -448,6 +451,7 @@ bancobmgc.varonis.io
 bancoyamaha.varonis.io
 bancroft.varonis.io
 bancroftg.varonis.io
+bangor.varonis.io
 bankofafrica.varonis.io
 bankofireland.varonis.io
 banner.varonis.io
@@ -524,6 +528,7 @@ bluewolf.varonis.io
 bluewolfi.varonis.io
 bmo.com.access.varonis.com
 bmoc.com.access.varonis.com
+bnymellon.varonis.io
 bnymellone.varonis.io
 board.varonis.io
 board3.varonis.io
@@ -572,6 +577,7 @@ c.varonis.io
 c2.access.varonis.com
 c23.access.varonis.com
 ca.app.varonis.io
+ca.varonis.io
 cac.deployment.api.varonis.io
 cac.messaging.api.varonis.io
 cac.varonis.io
@@ -812,6 +818,7 @@ contenty.cn.access.varonis.com
 contigo.varonis.io
 contigo9.varonis.io
 controller.varonis.io
+controllerq.varonis.io
 controlp.varonis.io
 controlpanel.varonis.io
 controlpm.varonis.io
@@ -1215,6 +1222,7 @@ fr.varonis.io
 franklincovey.varonis.io
 frc-dc02.deployment.api.varonis.io
 frc-dc02q.deployment.api.varonis.io
+fred.varonis.io
 frederickcountymd.varonis.io
 frederickcountymds.varonis.io
 frederickhealth-org.varonis.io
@@ -1251,6 +1259,7 @@ gam.varonis.io
 gamaaviation.varonis.io
 gamaaviationbap.varonis.io
 game.varonis.io
+garance.varonis.io
 garanceo.varonis.io
 gasalla.dev.access.varonis.com
 gassouth.varonis.io
@@ -1264,6 +1273,7 @@ gcinc5.varonis.io
 geha.varonis.io
 generali.varonis.io
 generalio.varonis.io
+genlife.varonis.io
 genlifek.varonis.io
 genmills.varonis.io
 genmillsa.varonis.io
@@ -1293,10 +1303,12 @@ gim.confluence.access.varonis.com
 gimw.0008.access.varonis.com
 girls-und-panzer.at.access.varonis.com
 gis.varonis.io
+git.varonis.io
 github.varonis.io
 github7.www.chrome.access.varonis.com
 gjsixgatkwu.1.access.varonis.com
 glb.varonis.com
+gleaner.varonis.io
 gleanerg.varonis.io
 glife.varonis.io
 glifeo.varonis.io
@@ -1364,6 +1376,7 @@ hamamatsue.varonis.io
 hanes.varonis.io
 hannover.varonis.io
 hannover9.varonis.io
+harrods.varonis.io
 harrodsk.varonis.io
 has.varonis.io
 hawks.varonis.io
@@ -1407,6 +1420,7 @@ hibbettsports.varonis.io
 highmarkhealth.varonis.io
 hjp.varonis.io
 hk7.authenticate.access.varonis.com
+hkg.varonis.io
 hme.varonis.io
 hntb.varonis.io
 ho-chunk.varonis.io
@@ -1833,6 +1847,7 @@ stage.varonis.io
 staging.app.varonis.io
 staging.varonis.com
 stanwell.varonis.io
+staterbros.varonis.io
 static.varonis.com
 stats.content.varonis.io
 stats.liveupdate.varonis.com
@@ -1841,6 +1856,7 @@ status.content.varonis.io
 stcharleshealthcare.varonis.io
 stg-labs.varonis.com
 stg-labso.varonis.com
+stg-v2.varonis.io
 stg-v3.varonis.io
 stg.varonis.io
 stone.varonis.io
@@ -1891,6 +1907,7 @@ tfs.varonis.com
 tfscloud-test.varonis.com
 tgh.varonis.io
 theharriscenter-org.varonis.io
+tidelandshealth.varonis.io
 tjse.varonis.io
 tmhna.varonis.io
 tornos.varonis.io
@@ -2058,6 +2075,7 @@ www.av-external-il.varonis.com
 www.av-external-us.varonis.com
 www.azaue-prd-apps-aks01.varonis.io
 www.azcac-prd-apps-aks01.varonis.io
+www.azcu-prd03-apps-aks01.varonis.io
 www.azcu-prd06-apps-aks01.varonis.io
 www.azcu-prd08-apps-aks01.varonis.io
 www.azcu-prd09-apps-aks01.varonis.io
@@ -2086,6 +2104,7 @@ www.box-uploader-prod.varonis.com
 www.brand.varonis.com
 www.brandportal.varonis.com
 www.ca.app.varonis.io
+www.cac.deployment.api.varonis.io
 www.cac.messaging.api.varonis.io
 www.captiveportal-login.varonis.com
 www.careers.varonis.com
@@ -2120,6 +2139,7 @@ www.eduadmin.varonis.com
 www.enrichment.varonis.com
 www.eu-dc02.deployment.api.varonis.io
 www.eu-dc02.messaging.api.varonis.io
+www.eu-dc03.deployment.api.varonis.io
 www.eu-dc03.messaging.api.varonis.io
 www.eu-dc04.deployment.api.varonis.io
 www.eu-dc04.messaging.api.varonis.io
@@ -2241,6 +2261,7 @@ www.uat-help.varonis.com
 www.uks.deployment.api.varonis.io
 www.uks.messaging.api.varonis.io
 www.university.varonis.com
+www.us-dc03.deployment.api.varonis.io
 www.us-dc03.messaging.api.varonis.io
 www.us-dc04.deployment.api.varonis.io
 www.us-dc04.messaging.api.varonis.io
