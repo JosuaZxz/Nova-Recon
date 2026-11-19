@@ -9,6 +9,7 @@ admin.uat.unico.app
 admin.unico.app
 adminm.people.unico.app
 api.backtest.dev.unico.app
+api.backtest.uat.unico.app
 api.backtest.unico.app
 api.cadastro.dev.unico.app
 api.cadastro.test.unico.app
@@ -139,6 +140,9 @@ id.unico.app
 idcash.uat.unico.app
 idcash.unico.app
 idcloud.uat.unico.app
+identity.dev.unico.app
+identity.uat.unico.app
+identity.unico.app
 imap.cadastro.unico.app
 internal.unico.app
 jenkins.cadastro.unico.app
