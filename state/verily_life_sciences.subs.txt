@@ -87,6 +87,7 @@ analytics-prod-dynamo5.api.verily.com
 analytics-staging-dynamo-https.api.verily.com
 analytics-staging-dynamo-httpsq.api.verily.com
 analytics-staging-dynamo.api.verily.com
+analytics-staging-dynamo.verily.com
 analytics-staging-dynamoe.verily.com
 analytics-staging-dynamoq.api.demo.verily.com
 analytics-staging.verily.com
@@ -127,6 +128,7 @@ api-routec.verily.com
 api-rpc.verily.com
 api-sensorsuite.verily.com
 api-suite.verily.com
+api-suitek.verily.com
 api-terra-devel-ui-terra.verily.com
 api-tomcat.verily.com
 api-traffic.verily.com
@@ -345,6 +347,7 @@ bpls2u.dev.verily.com
 br.api.verily.com
 br.verily.com
 buatmaskerwajah.verily.com
+buatmaskerwajahc.verily.com
 bucket-browser-dev.api.verily.com
 bucket-browser-devk.api.verily.com
 bucket-browser.api.verily.com
@@ -415,6 +418,7 @@ corpu.api.verily.com
 corputh.hecorplthy-dev.verily.com
 cos.kr.api.verily.com
 cos.uk.api.verily.com
+covid-19-api-cloud.verily.com
 covid-19-api.verily.com
 covid-19-apiaccount.verily.com
 covid-19-apiaccounte.verily.com
@@ -635,6 +639,7 @@ dmi-console-test2c.api.sql.verily.com
 dmzm.api.verily.com
 document.verily.com
 documente.verily.com
+dolbey.verily.com
 donvirus.verily.com
 donvirus9.verily.com
 dorakon.verily.com
@@ -810,6 +815,7 @@ freeboxmanusk.verily.com
 freefollowers.verily.com
 freeipi204g.64.29.verily.com
 fresho.verily.com
+freshweb-sermons.verily.com
 freshweb-sermons9.verily.com
 friary.verily.com
 frmusings.verily.com
@@ -936,6 +942,7 @@ go.dev.verily.com
 go.verily.com
 goayo.verily.com
 godricshollow-com1.tx.verily.com
+gogiant.verily.com
 gogiant1.verily.com
 golang-webapplication.verily.com
 goldenpizzaw.verily.com
@@ -1078,6 +1085,7 @@ haoboyule.verily.com
 haoboyulea.verily.com
 hapi-0.verily.com
 happystylelife-com.verily.com
+happystylelife-com9.verily.com
 harddoga.verily.com
 harddogaq.verily.com
 harpenden.verily.com
@@ -1195,6 +1203,7 @@ honeypie.verily.com
 honeypiec.verily.com
 hongdrives.verily.com
 honig.verily.com
+honiga.verily.com
 host-059-241.verily.com
 host-107-087.verily.com
 host-107-180e.pool.verily.com
@@ -1373,6 +1382,7 @@ maskingbodysuitsy.verily.com
 maskingcentral.verily.com
 maskman626.verily.com
 maskman626i.verily.com
+maskofgoblin.verily.com
 maskomuter.verily.com
 maskomutere.verily.com
 maskrtnici.verily.com
@@ -1436,6 +1446,7 @@ new-svc-dev-jt-post-v2m.api.verily.com
 nfe.verily.com
 ng-helm-manifest-democluster.api.verily.com
 ng-helm-manifest-democlustera.api.verily.com
+nginxhelix-pilot.verily.com
 nginxhelix-pilotu.verily.com
 nicovideo.verily.com
 nicovideom.verily.com
@@ -1507,6 +1518,7 @@ osa-analytics-dev-dynamo-staging.verily.com
 osa-analytics-dev-dynamo-stagingi.verily.com
 osa-app-fusion.verily.com
 osa-app-preprod.verily.com
+osa-app-preprodi.verily.com
 osa-app-profiles.verily.com
 osa-app-staging-infra.verily.com
 osa-app-staging-infram.verily.com
@@ -1573,6 +1585,7 @@ policy-bot-dev3q.api.verily.com
 policy-bot-staging.api.verily.com
 pool.verily.com
 portal-autopush-sensorsuite.api.verily.com
+portal-autopush-sensorsuitek.beagleapi.verily.com
 portal-autopush-sensorsuites.promoapi.verily.com
 portal-autopush-sensorsuitew.passapi.verily.com
 portal-autopush-sensorsuitey.api.verily.com
@@ -1976,6 +1989,7 @@ svc-b-dev-jt-200529-a-https.api.verily.com
 svc-d-dev-jt-200529-a-https.api.verily.com
 svc-d-dev-jt-200529-a-httpsk.api.verily.com
 svc-d-dev-release-0723-rc0-https.api.verily.com
+svc-d-dev-release-0723-rc0-httpsk.api.verily.com
 svc-d-prod-release-0723-rc0-https.api.verily.com
 svc-d-prod-release-0723-rc0-httpsu.api.verily.com
 svc-dev-jt-20200716-a-https.api.verily.com
@@ -2118,6 +2132,7 @@ terra-flagsmithg.api.verily.com
 terra-mc-aou-axon.api.verily.com
 terra-mc-aou-axonw.api.verily.com
 terra-mc-aou-sam.api.verily.com
+terra-mc-aou-samg.api.verily.com
 terra-mc-aou-user.api.verily.com
 terra-mc-aou-userw.api.verily.com
 terra-mc-aou-wsm.api.verily.com
@@ -2167,6 +2182,7 @@ terra-sam.api.verily.com
 terra-samg.apipatch-dev.verily.com
 terra-samy.train.verily.com
 terra-staging-app.api.verily.com
+terra-staging-appw.api.verily.com
 terra-staging-axon.api.verily.com
 terra-staging-axonk.api.verily.com
 terra-staging-bpm.api.verily.com
@@ -2200,6 +2216,7 @@ terra-user.api.verily.com
 terra-workflow.api.verily.com
 terra-wsm.api.verily.com
 terra-wsmc.ciapi.verily.com
+terra-wsmg.apiadministrators.verily.com
 terra.verily.com
 terrak.verily.com
 terrakube-api.dev-unstable.api.verily.com
