@@ -1,12 +1,18 @@
-name: NOVA v2 - First-Strike Asset Monitor
+name: NOVA v2.1 - Continuous Asset & JS Change Monitor
 
-# Deteksi aset BARU (CT logs + passive sources), probe hanya yang baru,
-# verifikasi otomatis (exposure/takeover/cors/graphql/js-secret), briefing Telegram.
+# Deteksi aset BARU (CT logs + passive sources) tanpa kehilangan antrean,
+# pantau perubahan host & JS bundle diffing (endpoint/GraphQL baru),
+# verifikasi aman (exposure/takeover/cors/graphql/js-secret), briefing AI + Telegram.
 # Memory aset disimpan di folder state/ dan di-commit tiap run.
 
 on:
   schedule:
     - cron: '15 * * * *' # tiap jam menit 15
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/nova.yml'
   workflow_dispatch:
     inputs:
       programs:
@@ -34,11 +40,13 @@ jobs:
       NOVA_REQ_DELAY: "0.08"
       NOVA_MAX_NEW_PROBE: "250"
       NOVA_MAX_JS: "120"
+      NOVA_DIFF_BUDGET: "60"
       NOVA_MONITOR_BUDGET: "240"
       NOVA_TAKEOVER_CAP: "2000"
       # Kepatuhan Intigriti (program Adobe): max 20 req/s + header identitas.
       # Set secret INTIGRITI_USERNAME di repo, lalu aktifkan baris di bawah:
       # NOVA_EXTRA_HEADERS: '{"X-Intigriti-Username":"${{ secrets.INTIGRITI_USERNAME }}"}'
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
       TELEGRAM_GENERAL_ID: ${{ secrets.TELEGRAM_GENERAL_ID }}
       TELEGRAM_DATA_ID: ${{ secrets.TELEGRAM_DATA_ID }}
@@ -52,6 +60,9 @@ jobs:
         run: |
           python3 -V
           python3 -m pip install --quiet --disable-pip-version-check requests
+
+      - name: Run unit tests
+        run: python3 -m unittest discover -s tests -v
 
       - name: Install subfinder (binary release, fallback go)
         timeout-minutes: 10
@@ -72,15 +83,26 @@ jobs:
           fi
           subfinder -version || true
 
-      - name: Pilih program (rotasi otomatis / manual)
+      - name: Pilih program (rotasi otomatis / _focus.txt / manual)
         id: pick
         run: |
-          ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | sort)
+          if [ -f targets/_focus.txt ]; then
+            FOCUS=$(tr -d '\r' < targets/_focus.txt | grep -v '^[[:space:]]*#' | sed 's/[[:space:]]//g' | grep -v '^$' || true)
+          else
+            FOCUS=""
+          fi
+          if [ -n "$FOCUS" ]; then
+            ALL="$FOCUS"
+          else
+            ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | grep -v '^_' | sort)
+          fi
           N=$(echo "$ALL" | wc -l)
           K="${{ github.event.inputs.rotate_count || '6' }}"
           K=$(( K + 0 )); [ "$K" -lt 1 ] && K=8
           if [ -n "${{ github.event.inputs.programs }}" ]; then
             PROGS="${{ github.event.inputs.programs }}"
+          elif [ "$N" -le "$K" ]; then
+            PROGS=$(echo "$ALL" | paste -sd, -)
           else
             OFFSET=$(( ${{ github.run_number }} * K % N ))
             PROGS=""
@@ -92,12 +114,12 @@ jobs:
           fi
           echo "programs=$PROGS" >> "$GITHUB_OUTPUT"
           {
-            echo "### NOVA run #${{ github.run_number }}"
-            echo "- Program terdaftar: $N"
+            echo "### NOVA v2.1 run #${{ github.run_number }}"
+            echo "- Program aktif: $N"
             echo "- Diproses run ini: \`$PROGS\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: NOVA - monitor/probe/verify per program
+      - name: NOVA - monitor/probe/verify/diff per program
         run: |
           IFS=',' read -ra PROGS <<< "${{ steps.pick.outputs.programs }}"
           for P in "${PROGS[@]}"; do
@@ -106,10 +128,15 @@ jobs:
             [ -f "targets/$P.txt" ] || { echo "[skip] targets/$P.txt tidak ada"; continue; }
             echo "=============== NOVA: $P ==============="
             mkdir -p "data/$P"
-            timeout 6m subfinder -dL "targets/$P.txt" -all -silent -o "data/$P/subfinder.txt" 2>/dev/null || true
+            # Ekstrak hanya include rules (abaikan # dan !) untuk subfinder
+            tr -d '\r' < "targets/$P.txt" | grep -v '^[[:space:]]*[#!]' | sed 's/^\*\.//' | sed '/^[[:space:]]*$/d' > "data/$P/subfinder_roots.txt" || true
+            if [ -s "data/$P/subfinder_roots.txt" ]; then
+              timeout 6m subfinder -dL "data/$P/subfinder_roots.txt" -all -silent -o "data/$P/subfinder.txt" 2>/dev/null || true
+            fi
             python3 scripts/nova.py monitor --program "$P" --merge-file "data/$P/subfinder.txt"
             python3 scripts/nova.py probe --program "$P"
             python3 scripts/nova.py verify --program "$P"
+            python3 scripts/nova.py diff --program "$P"
             rm -rf "data/$P"
           done
 
