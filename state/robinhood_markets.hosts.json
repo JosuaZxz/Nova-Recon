@@ -1,0 +1,692 @@
+{
+ "pims-admin.robinhood.com": {
+  "url": "https://pims-admin.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "captive-portalc.crypto.robinhood.com": {
+  "url": "http://captive-portalc.crypto.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "www.admin.robinhood.com": {
+  "url": "http://www.admin.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "www.awsdashboard.api.robinhood.com": {
+  "url": "http://www.awsdashboard.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "kafka.robinhood.com": {
+  "url": "http://kafka.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "2i.api.robinhood.com": {
+  "url": "http://2i.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "staguploadnga.robinhood.com": {
+  "url": "http://staguploadnga.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "web-stagiakamai-testg.robinhood.com": {
+  "url": "http://web-stagiakamai-testg.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "edge-api-lb.robinhood.com": {
+  "url": "http://edge-api-lb.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "b2clogin.robinhood.com": {
+  "url": "http://b2clogin.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "sokoban-preview.robinhood.com": {
+  "url": "http://sokoban-preview.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "frichtere.web-staging.robinhood.com": {
+  "url": "http://frichtere.web-staging.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "device29h31489-acfe211f-local.robinhood.com": {
+  "url": "http://device29h31489-acfe211f-local.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "cms1.robinhood.com": {
+  "url": "http://cms1.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "apix.robinhood.com": {
+  "url": "http://apix.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "datadocumentationy.robinhood.com": {
+  "url": "http://datadocumentationy.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "collab-edge.tls.api.robinhood.com": {
+  "url": "http://collab-edge.tls.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "zehhdc.web-staging.robinhood.com": {
+  "url": "http://zehhdc.web-staging.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "wereport.robinhood.com": {
+  "url": "http://wereport.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "davidetsandrapiu.robinhood.com": {
+  "url": "http://davidetsandrapiu.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "apig.blog.robinhood.com": {
+  "url": "http://apig.blog.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "www.collab-edge.api.robinhood.com": {
+  "url": "http://www.collab-edge.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "nginx-newestc.api.robinhood.com": {
+  "url": "http://nginx-newestc.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "cdq-apii.nummus.robinhood.com": {
+  "url": "http://cdq-apii.nummus.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "bbermandev.robinhood.com": {
+  "url": "http://bbermandev.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "portalg.nummus.robinhood.com": {
+  "url": "http://portalg.nummus.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "domaincontrolpanel.robinhood.com": {
+  "url": "http://domaincontrolpanel.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "stagingw.nummus.robinhood.com": {
+  "url": "http://stagingw.nummus.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "device1374274-008fe10f-lominerva-stagingl.robinhood.com": {
+  "url": "http://device1374274-008fe10f-lominerva-stagingl.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "dev.learn.robinhood.com": {
+  "url": "http://dev.learn.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "cuplogin.robinhood.com": {
+  "url": "http://cuplogin.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "logs-beta.robinhood.com": {
+  "url": "http://logs-beta.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "devflightservice.robinhood.com": {
+  "url": "http://devflightservice.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "postgresql.robinhood.com": {
+  "url": "http://postgresql.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "a25252fshareflow110-data.robinhood.com": {
+  "url": "http://a25252fshareflow110-data.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "device946727-garageq.robinhood.com": {
+  "url": "http://device946727-garageq.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "eforassociates.robinhood.com": {
+  "url": "http://eforassociates.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "apiphoenix.robinhood.com": {
+  "url": "http://apiphoenix.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "www.dmarc.api.robinhood.com": {
+  "url": "http://www.dmarc.api.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "coronaa.robinhood.com": {
+  "url": "http://coronaa.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "bn55s.o6.email.robinhood.com": {
+  "url": "http://bn55s.o6.email.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "o6.robinhood.com": {
+  "url": "http://o6.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "33s.robinhood.com": {
+  "url": "http://33s.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "external3.robinhood.com": {
+  "url": "http://external3.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "euq.robinhood.com": {
+  "url": "http://euq.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "cydor.robinhood.com": {
+  "url": "http://cydor.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "s.robinhood.com": {
+  "url": "http://s.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "sfvoxq.artifactory.robinhood.com": {
+  "url": "http://sfvoxq.artifactory.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "webservices.robinhood.com": {
+  "url": "http://webservices.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "brokeback-eu-1-airflow2.robinhood.com": {
+  "url": "https://brokeback-eu-1-airflow2.robinhood.com/",
+  "http_status": 403,
+  "title": "Access denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "rtpuint-wwwtjpmts.robinhood.com": {
+  "url": "http://rtpuint-wwwtjpmts.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "profile.robinhood.com": {
+  "url": "http://profile.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "arboubbafactory.robinhood.com": {
+  "url": "http://arboubbafactory.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "wwwo.stanhope.robinhood.com": {
+  "url": "http://wwwo.stanhope.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "wwws.ums.wwwcrypto.robinhood.com": {
+  "url": "http://wwws.ums.wwwcrypto.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "countmatches.robinhood.com": {
+  "url": "http://countmatches.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "heraclesk.robinhood.com": {
+  "url": "http://heraclesk.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "down.robinhood.com": {
+  "url": "http://down.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "f.robinhood.com": {
+  "url": "http://f.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "jp.robinhood.com": {
+  "url": "http://jp.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:22:07 UTC"
+ },
+ "east5.robinhood.com": {
+  "url": "http://east5.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "j2.robinhood.com": {
+  "url": "http://j2.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "galeria.robinhood.com": {
+  "url": "http://galeria.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "blemoncloud.robinhood.com": {
+  "url": "http://blemoncloud.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "mongodbo.robinhood.com": {
+  "url": "http://mongodbo.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "voyager.robinhood.com": {
+  "url": "http://voyager.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "us-easti.nummus.robinhood.com": {
+  "url": "http://us-easti.nummus.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "e-csinfo9.games.robinhood.com": {
+  "url": "http://e-csinfo9.games.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ },
+ "top100.robinhood.com": {
+  "url": "http://top100.robinhood.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:21:04 UTC"
+ }
+}

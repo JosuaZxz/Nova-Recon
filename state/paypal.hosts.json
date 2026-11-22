@@ -1,0 +1,1432 @@
+{
+ "beta-atmosprivate.venmo.com": {
+  "url": "https://beta-atmosprivate.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "loadtest-edge.venmo.com": {
+  "url": "https://loadtest-edge.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "containerloadtest.venmo.com": {
+  "url": "https://containerloadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "awsbeta.venmo.com": {
+  "url": "https://awsbeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "gate-apim.venmo.com": {
+  "url": "https://gate-apim.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "loadtestwest2.venmo.com": {
+  "url": "https://loadtestwest2.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "chd-origin-posprivatevpn-apim.blog.venmo.com": {
+  "url": "http://chd-origin-posprivatevpn-apim.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "testina.blog.venmo.com": {
+  "url": "http://testina.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "discover-dev-apiu.loadtest.venmo.com": {
+  "url": "http://discover-dev-apiu.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "dev-us-easter-staffe.beta.venmo.com": {
+  "url": "http://dev-us-easter-staffe.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "pilot-paymentegraphiterchantin-wwwy.blog.venmo.com": {
+  "url": "http://pilot-paymentegraphiterchantin-wwwy.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "slc-c-origin-ap-soutbount-door-elbs.beta.venmo.com": {
+  "url": "http://slc-c-origin-ap-soutbount-door-elbs.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "monitoreloper-dev-us-east-1c.beta.venmo.com": {
+  "url": "http://monitoreloper-dev-us-east-1c.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "outboundingk.loadtest.venmo.com": {
+  "url": "http://outboundingk.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "origin-prod-us-east-2i.beta.venmo.com": {
+  "url": "http://origin-prod-us-east-2i.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "atmosprivatebeta.venmo.com": {
+  "url": "https://atmosprivatebeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "portalbeta.venmo.com": {
+  "url": "https://portalbeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "cent-beta.venmo.com": {
+  "url": "https://cent-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "pilot-couponsul-prodq.beta.venmo.com": {
+  "url": "http://pilot-couponsul-prodq.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "loadtestad.venmo.com": {
+  "url": "https://loadtestad.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "histruste.loadtest.venmo.com": {
+  "url": "http://histruste.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "loadtest-customer.venmo.com": {
+  "url": "https://loadtest-customer.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "trip.uat.hyperwallet.com": {
+  "url": "https://trip.uat.hyperwallet.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "dbox-silot-raz01-origin-www-1o.loadtest.venmo.com": {
+  "url": "http://dbox-silot-raz01-origin-www-1o.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "slc-b-origings.beta.venmo.com": {
+  "url": "http://slc-b-origings.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "slc-b-origin-posphere-prod-eu-centive-cg.beta.venmo.com": {
+  "url": "http://slc-b-origin-posphere-prod-eu-centive-cg.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "blog-k8s-dev.venmo.com": {
+  "url": "https://blog-k8s-dev.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "applybeta.venmo.com": {
+  "url": "https://applybeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "atlvpni.venmo.com": {
+  "url": "https://atlvpni.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "blog-authentication.venmo.com": {
+  "url": "https://blog-authentication.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "gatevpnc.beta.venmo.com": {
+  "url": "http://gatevpnc.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "kubecons-qa-us-westc.venmo.com": {
+  "url": "https://kubecons-qa-us-westc.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "221loadtestg.venmo.com": {
+  "url": "https://221loadtestg.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "blogk.cosmosprivatevpn.venmo.com": {
+  "url": "http://blogk.cosmosprivatevpn.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "buyerauto6i.loadtest.venmo.com": {
+  "url": "http://buyerauto6i.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "dcg12-origin-cdng.beta.venmo.com": {
+  "url": "http://dcg12-origin-cdng.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "documentsloadtest.venmo.com": {
+  "url": "https://documentsloadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "swificatici.loadtest.venmo.com": {
+  "url": "http://swificatici.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "loadtestaws.venmo.com": {
+  "url": "https://loadtestaws.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "blue-front-panels-sftpi.venmo.com": {
+  "url": "https://blue-front-panels-sftpi.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "disputingg.loadtest.venmo.com": {
+  "url": "http://disputingg.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "payflowlinka.beta.venmo.com": {
+  "url": "http://payflowlinka.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "signups7.beta.venmo.com": {
+  "url": "http://signups7.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "configurator.miapi.paydiant.com": {
+  "url": "http://configurator.miapi.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "betachefg.venmo.com": {
+  "url": "https://betachefg.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "aspack.tts.api.paydiant.com": {
+  "url": "http://aspack.tts.api.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "dataskworkerhubs.loadtest.venmo.com": {
+  "url": "http://dataskworkerhubs.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "testcorpc.paydiant.com": {
+  "url": "http://testcorpc.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "macys7.qa.paydiant.com": {
+  "url": "http://macys7.qa.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "frontpageloadtests.venmo.com": {
+  "url": "https://frontpageloadtests.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "paysystemsa.test.paydiant.com": {
+  "url": "http://paysystemsa.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "beta-dhcp7.venmo.com": {
+  "url": "https://beta-dhcp7.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "sentinel-developew.blog.venmo.com": {
+  "url": "http://sentinel-developew.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "uat-worldventures.paylution.com": {
+  "url": "https://uat-worldventures.paylution.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "scopopulator-qa-us-westc.beta.venmo.com": {
+  "url": "http://scopopulator-qa-us-westc.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "betamanageq.venmo.com": {
+  "url": "https://betamanageq.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "origin-prod-us-westu.beta.venmo.com": {
+  "url": "http://origin-prod-us-westu.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "dc6sslvpng.paydiant.com": {
+  "url": "http://dc6sslvpng.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "stage2mobile-10au.loadtest.venmo.com": {
+  "url": "http://stage2mobile-10au.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "blog9.aktest.venmo.com": {
+  "url": "http://blog9.aktest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:31 UTC"
+ },
+ "creativaillu.test.paydiant.com": {
+  "url": "http://creativaillu.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "www.auto9.qa.paydiant.com": {
+  "url": "http://www.auto9.qa.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "betak.portal.venmo.com": {
+  "url": "http://betak.portal.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "234-beta.venmo.com": {
+  "url": "https://234-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "fundinancopea.beta.venmo.com": {
+  "url": "http://fundinancopea.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "paydiant.com11.bucket.livecast-student-systemops-okta.test.paydiant.com": {
+  "url": "http://paydiant.com11.bucket.livecast-student-systemops-okta.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "resetbeta.venmo.com": {
+  "url": "https://resetbeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "rabbiter-panelq.blog.venmo.com": {
+  "url": "http://rabbiter-panelq.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "disputinels-ap-soutboundingk.loadtest.venmo.com": {
+  "url": "http://disputinels-ap-soutboundingk.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "account-betak.venmo.com": {
+  "url": "https://account-betak.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "cdn-dev-us-westq.beta.venmo.com": {
+  "url": "http://cdn-dev-us-westq.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "mobilepaypalmabancoper-ap-southeast-1m.beta.venmo.com": {
+  "url": "http://mobilepaypalmabancoper-ap-southeast-1m.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "certificationsul-prod-us-east-ipnpb-1s.beta.venmo.com": {
+  "url": "http://certificationsul-prod-us-east-ipnpb-1s.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "notionsc.loadtest.venmo.com": {
+  "url": "http://notionsc.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "betaswification.venmo.com": {
+  "url": "https://betaswification.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "moneyadmini.loadtest.venmo.com": {
+  "url": "http://moneyadmini.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "databeta5.venmo.com": {
+  "url": "https://databeta5.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "betahostq.venmo.com": {
+  "url": "https://betahostq.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "omnipaymentw.beta.venmo.com": {
+  "url": "http://omnipaymentw.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "dzp9c.test.paydiant.com": {
+  "url": "http://dzp9c.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "jenkinsq.us-east-1.mgmt.central.paydiant.com": {
+  "url": "http://jenkinsq.us-east-1.mgmt.central.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "aktest-beta.venmo.com": {
+  "url": "https://aktest-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "edg-stgg.paydiant.com": {
+  "url": "http://edg-stgg.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "mnbncovpn-appy.blog.venmo.com": {
+  "url": "http://mnbncovpn-appy.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "231-beta.venmo.com": {
+  "url": "https://231-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "historybeta.venmo.com": {
+  "url": "https://historybeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "wells-sessor-prod-us-east-2k.loadtest.venmo.com": {
+  "url": "http://wells-sessor-prod-us-east-2k.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "shoppersapp-gateway-qa.paydiant.com": {
+  "url": "http://shoppersapp-gateway-qa.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "blog-stg.venmo.com": {
+  "url": "https://blog-stg.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "autodiscoperityreportificationss.loadtest.venmo.com": {
+  "url": "http://autodiscoperityreportificationss.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "atmosphere-qa-us-westy.beta.venmo.com": {
+  "url": "http://atmosphere-qa-us-westy.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "trial-loadtest.venmo.com": {
+  "url": "https://trial-loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "lobby.test.paydiant.com": {
+  "url": "http://lobby.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "webcons-proxyo.loadtest.venmo.com": {
+  "url": "http://webcons-proxyo.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "slc-a-origin-blue-front-payments-west-2e.beta.venmo.com": {
+  "url": "http://slc-a-origin-blue-front-payments-west-2e.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "csgq.loadtest.venmo.com": {
+  "url": "http://csgq.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "dev-us-eastero.loadtest.venmo.com": {
+  "url": "http://dev-us-eastero.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "pass-api-v2.paydiant.com": {
+  "url": "http://pass-api-v2.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "betaswag.venmo.com": {
+  "url": "https://betaswag.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "eservicesi.test.paydiant.com": {
+  "url": "http://eservicesi.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "edgeloadtests.venmo.com": {
+  "url": "https://edgeloadtests.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "vps-prod-eu-centc.beta.venmo.com": {
+  "url": "http://vps-prod-eu-centc.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "cristi-raraitus.beta.paydiant.com": {
+  "url": "http://cristi-raraitus.beta.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "pamhook-qa-eu-centiverm.beta.venmo.com": {
+  "url": "http://pamhook-qa-eu-centiverm.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "cdn-developei.beta.venmo.com": {
+  "url": "http://cdn-developei.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "4t5g97lksohpcgm4.test.paydiant.com": {
+  "url": "http://4t5g97lksohpcgm4.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "origin-rectory-1u.loadtest.venmo.com": {
+  "url": "http://origin-rectory-1u.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "www.dc6.sslvpn.paydiant.com": {
+  "url": "http://www.dc6.sslvpn.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "dvbraintreeo.production.paydiant.com.paydiant.com": {
+  "url": "http://dvbraintreeo.production.paydiant.com.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "loadtestcloudapp.venmo.com": {
+  "url": "https://loadtestcloudapp.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "anjees.softwareportables.ftp.paydiant.com": {
+  "url": "http://anjees.softwareportables.ftp.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "cdn-developem.loadtest.venmo.com": {
+  "url": "http://cdn-developem.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "swag-beta.venmo.com": {
+  "url": "https://swag-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "origin-atl-wests.loadtest.venmo.com": {
+  "url": "http://origin-atl-wests.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "slc-b-origin-prod-ap-soutbound1k.beta.venmo.com": {
+  "url": "http://slc-b-origin-prod-ap-soutbound1k.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "private-beta.venmo.com": {
+  "url": "https://private-beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "uploads.test.paydiant.com": {
+  "url": "http://uploads.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "cakepopfusions.coastal-style.portal.paydiant.com": {
+  "url": "http://cakepopfusions.coastal-style.portal.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "emsadmine.loadtest.venmo.com": {
+  "url": "http://emsadmine.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "dcg01-origin-svcsw.loadtest.venmo.com": {
+  "url": "http://dcg01-origin-svcsw.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "gateo.test.paydiant.com": {
+  "url": "http://gateo.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "ebsbeta.venmo.com": {
+  "url": "https://ebsbeta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "slc-a-origin-briskqa-us-east-2q.blog.venmo.com": {
+  "url": "http://slc-a-origin-briskqa-us-east-2q.blog.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "origin-ap-soutboundeckk.beta.venmo.com": {
+  "url": "http://origin-ap-soutboundeckk.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "pps3.beta.venmo.com": {
+  "url": "http://pps3.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "qa9-ops-proxyo.loadtest.venmo.com": {
+  "url": "http://qa9-ops-proxyo.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "aprenderumacoisanovapordiak.blogsfreeofvirus.venmo.com": {
+  "url": "http://aprenderumacoisanovapordiak.blogsfreeofvirus.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "espirale.portal.paydiant.com": {
+  "url": "http://espirale.portal.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "ywtoacvi8su7ighri.test.paydiant.com": {
+  "url": "http://ywtoacvi8su7ighri.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "trations-qa-us-westc.venmo.com": {
+  "url": "https://trations-qa-us-westc.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "omnipaymentsa.beta.venmo.com": {
+  "url": "http://omnipaymentsa.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "beta-dataskworker.venmo.com": {
+  "url": "https://beta-dataskworker.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "secureportq.venmo.com": {
+  "url": "https://secureportq.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "slc-b-auditi.beta.venmo.com": {
+  "url": "http://slc-b-auditi.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "adnormsc.loadtest.venmo.com": {
+  "url": "http://adnormsc.loadtest.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "mcpq.beta.venmo.com": {
+  "url": "http://mcpq.beta.venmo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://venmo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "admin.paydiant.com": {
+  "url": "http://admin.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "chw8o37ekz0awtqsc.test.paydiant.com": {
+  "url": "http://chw8o37ekz0awtqsc.test.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "aerialc.maps.api.paydiant.com": {
+  "url": "http://aerialc.maps.api.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "payments-preprod.paydiant.com": {
+  "url": "http://payments-preprod.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "jm-client-vpnk.us-east-1.nonprod.hub.paydiant.com": {
+  "url": "http://jm-client-vpnk.us-east-1.nonprod.hub.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "payat-drw.paydiant.com": {
+  "url": "http://payat-drw.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ },
+ "auto2c.qa.paydiant.com": {
+  "url": "http://auto2c.qa.paydiant.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.paypal.com/us/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:03:00 UTC"
+ }
+}

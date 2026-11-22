@@ -1,0 +1,52 @@
+{
+ "cc-logs.playtika.com": {
+  "url": "https://cc-logs.playtika.com/",
+  "http_status": 502,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:14:42 UTC"
+ },
+ "vegas-ca1-zuul.playtika.com": {
+  "url": "https://vegas-ca1-zuul.playtika.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:14:42 UTC"
+ },
+ "one-zuul.bingoblitz.com": {
+  "url": "https://one-zuul.bingoblitz.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 22:14:42 UTC"
+ },
+ "cc-stages-infok.cloud.playtika.com": {
+  "url": "https://cc-stages-infok.cloud.playtika.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:14:42 UTC"
+ },
+ "machine-stage68-appv-029.cloud.playtika.com": {
+  "url": "http://machine-stage68-appv-029.cloud.playtika.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-22 22:14:42 UTC"
+ }
+}

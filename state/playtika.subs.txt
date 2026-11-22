@@ -140,6 +140,7 @@
 1081.0-0dda11capiistrator.dashboard.cloud.seriously.com
 109i.196.250.63.aprez.ostk.prod.bf1.caesarsgames.com
 10odissey.caesarsgames.com
+10oktascimserver.facebook-proxy-stage11.com.skyline.portal.staging.cloud.playtika.com
 10pgrm.caesarsgames.com
 11.slotomania.com
 110-11.caesarsgames.com
@@ -1207,6 +1208,7 @@ bingo-preprod-sfs-03i.playtika.com
 bingo-preprod-sfs-04.playtika.com
 bingo-preprod-sfs-05.playtika.com
 bingo-preprod-sfs-06.playtika.com
+bingo-preprod-sfs-067.playtika.com
 bingo-preprod-sfs-06y.sm-stages-cdn.cloud.playtika.com
 bingo-preprod-static.playtika.com
 bingo-preprod-static.sm-stages-cdn.cloud.playtika.com
@@ -1264,6 +1266,7 @@ bingobleu.news02.bingoblitz.com
 bingoblitz-cdn-qa.playtika.com
 bingoblitz-cdn-qaw.playtika.com
 bingoblitz-cdn.playtika.com
+bingoblitz-cdns.playtika.com
 bingoblitz-support.playtika.com
 bingoblitz-supportw.playtika.com
 bingoblitz.com
@@ -1361,6 +1364,7 @@ bk-stage23-clientlogsc.psf.playtika.com
 bk-stage24c.psf.playtika.com
 bk-stage25m.psf.playtika.com
 bk-stage28-clientlogsm.psf.playtika.com
+bk-stage29-backofficec.psf.playtika.com
 bk-stage29c.psf.playtika.com
 bk-stage3-clientlogsm.psf.playtika.com
 bk-stage30-clientlogsa.psf.playtika.com
@@ -1621,6 +1625,7 @@ cc-fb-preprod-php.playtika.com
 cc-fb-preprod-phpu.playtika.com
 cc-fb-prod-auto-collect.playtika.com
 cc-fb-stage15-1.cloud.playtika.com
+cc-fb-stage15.cloud.playtika.com
 cc-fb-stage152017w.cloud.playtika.com
 cc-fb-stage21laxw.cloud.playtika.com
 cc-fb-stage21smtp.cloud.playtika.com
@@ -1684,6 +1689,7 @@ cc-liberty-service-ca1a.playtika.com
 cc-liberty-service.playtika.com
 cc-login-service.playtika.com
 cc-login-servicem.playtika.com
+cc-logs.playtika.com
 cc-logsm.playtika.com
 cc-messaging-fallback-ca1.playtika.com
 cc-messaging-fallback-ca1q.playtika.com
@@ -1771,10 +1777,12 @@ cc-stage39-appv-01-dev1i.cloud.playtika.com
 cc-stage39-appv-01k.cloud.playtika.com
 cc-stage39-appv-testinge.cloud.playtika.com
 cc-stage43-appv-01-api-docsk.cloud.playtika.com
+cc-stage43-appv-01-northamericai.cloud.playtika.com
 cc-stage43-appv-01-s.cloud.playtika.com
 cc-stage43-appv-01e.cloud.playtika.com
 cc-stage43-appv-13a.cloud.playtika.com
 cc-stages-cdn.playtika.com
+cc-stages-infok.cloud.playtika.com
 cc-stages-static-ca1.playtika.com
 cc-stages-static-ca1y.playtika.com
 cc-star-converter-ca1.playtika.com
@@ -1809,6 +1817,7 @@ cci.caesarsgames.com
 cci5.bingoblitz.com
 ccim.caesarsgames.com
 ccsupport.playtika.com
+ccsupportk.playtika.com
 cdf.seriously.com
 cdn-2nd.wooga.com
 cdn-7.news02.bingoblitz.com
@@ -2141,6 +2150,7 @@ collections-ui-asset-generator-production.ai.wooga.com
 collections-ui-asset-generator.ai.wooga.com
 colorful-hr.playticorp.com
 colorful-hr9.playticorp.com
+colorland-statics.psf.playtika.com
 colorlands.psf.playtika.com
 com.0-104-dsl.cn.serious.li
 com.000000.cn.serious.li
@@ -2339,6 +2349,7 @@ crm-stage11s.wsopdev.playtika.com
 crm-stage15.wsopdev.playtika.com
 crm-stage19w.wsopdev.playtika.com
 crm-stage27u.wsopdev.playtika.com
+crm-stage29w.wsopdev.playtika.com
 crm-stage2w.wsopdev.playtika.com
 crm-stage33w.wsopdev.playtika.com
 crm-stage34w.wsopdev.playtika.com
@@ -2428,6 +2439,7 @@ dashboard.cloud.seriously.com
 dashboard.internal.kube.bit.wooga.com
 dashboard.k8sdemo.wsopdev.playtika.com
 dashboard.monopoly-poker.com
+dashboard.playtika.com
 dashboard.prod.kube.bit.wooga.com
 dashboard.sbs.wooga.com
 dashboarda.playtika.com
@@ -2991,6 +3003,7 @@ europeg.news02.bingoblitz.com
 europesigneds.news02.bingoblitz.com
 europew.internal.news02.bingoblitz.com
 europewest-fb-stage18.cloud.playtika.com
+euw-smbuildsg.cloud.playtika.com
 euwe-cc-fb-stage2u.cloud.playtika.com
 euwe-smbuilds.cloud.playtika.com
 euwe-stage1w.cloud.playtika.com
@@ -3084,6 +3097,7 @@ fb-og-v2-stage40a.wsopdev.playtika.com
 fb-og-v2-stage55a.wsopdev.playtika.com
 fb-og-v2-stage56a.wsopdev.playtika.com
 fb-og-v2-stage59a.wsopdev.playtika.com
+fb-og-v2-stage6a.wsopdev.playtika.com
 fb-og-v2-stage7.wsopdev.playtika.com
 fbfp.mops.wooga.com
 fbiolo.caesarsgames.com
@@ -3513,6 +3527,7 @@ hof-preprod.psf.playtika.com
 hof-qa157-backofficeo.psf.playtika.com
 hof-qa157-statica.psf.playtika.com
 hof-qa158-backofficey.psf.playtika.com
+hof-qa158y.psf.playtika.com
 hof-qa159-statick.psf.playtika.com
 hof-qa2-backofficey.psf.playtika.com
 hof-qa3.psf.playtika.com
@@ -3549,6 +3564,7 @@ hq.bingoblitz.com
 hq.boardkingsgame.com
 hq.caesarsgames.com
 html5layoutw.caesarsgames.com
+htwww.bingoblitz.com
 htwwwi.bingoblitz.com
 huangguanyulechengzuidicunkuano.caesarsgames.com
 hub.bingo-app-dsa.playtika.com
@@ -4109,6 +4125,7 @@ m206.playtika.com
 m207.playtika.com
 m209.playtika.com
 ma.wooga.com
+machine-stage68-appv-029.cloud.playtika.com
 machine-track.caesarsgames.com
 machine-trackg.caesarsgames.com
 mail-2k.news02.bingoblitz.com
@@ -4248,6 +4265,7 @@ monitoring-es.cloud.seriously.com
 monitoring-es.playtika.com
 monitoring-esa.cloud.seriously.com
 monopoly-poker.com
+monsters.playtika.com
 monsters.wooga.com
 monsterse.wooga.com
 mopetq.bit.wooga.com
@@ -4263,6 +4281,7 @@ mp162519ios7.144.cdn.redecor.com
 mpedev.caesarsgames.com
 mpsrv9.caesarsgames.com
 mraid.mops.wooga.com
+mraid.playtika.com
 mraid5.mops.wooga.com
 mrs.caesarsgames.com
 mrsq.caesarsgames.com
@@ -4506,6 +4525,7 @@ one-stages-servicesm.playtika.com
 one-static-preprod.playtika.com
 one-wsopstages.playtika.com
 one-wsopstagesi.playtika.com
+one-zuul.bingoblitz.com
 one-zuul.playtika.com
 one-zuule.playtika.com
 oneauth-cc-prod.playtika.com
@@ -4590,6 +4610,7 @@ pangoinputo.caesarsgames.com
 pantheon-bingo-dev1-app-01.cloud.playtika.com
 pantheon.caesarsgames.com
 partners.playtika.com
+partnersu.playtika.com
 pass-pantheon.caesarsgames.com
 pass-stage1q.cloud.playtika.com
 pat.bingoblitz.com
@@ -4697,6 +4718,7 @@ pk-cdn.playtika.com
 pk-cdnu.playtika.com
 pk-grafana.playtika.com
 pk-messaging-dsa.playtika.com
+pk-messaging-dsa9.playtika.com
 pk-pfs-cdn.playtika.com
 pk-preprod-messaging-dsae.playtika.com
 pkii.navyfamily.caesarsgames.com
@@ -4712,6 +4734,7 @@ platforms-cdns.playtika.com
 platforms-ec-sslk.playtika.com
 platforms-ec.playtika.com
 platforms-preprod2-api.playtika.com
+platforms-preprod2-cdnq.playtika.com
 platforms-preprod2-messaging.playtika.com
 platforms-preprod2-php-dub.playtika.com
 platforms-preprod2-redirector.playtika.com
@@ -4748,6 +4771,7 @@ pli.t.wooga.com
 plsbeta.caesarsgames.com
 plt8mrdkjcvrffzxpbi3wun1iasmkjx5vehug2oy.caesarsgames.com
 pltf-cdn.playtika.com
+pltf-cdnc.playtika.com
 pltf-static.playtika.com
 pn-a1.caesarsgames.com
 pn-a1u.caesarsgames.com
@@ -4775,6 +4799,7 @@ pop.houseoffun.com
 pop.playtika.com
 pop.slotomania.com
 popg.playtika.com
+popup7.playtika.com
 portal-external-b.psf.playtika.com
 portal-preprod-pras.playticorp.com
 portal.bf-prod-cdn.playtika.com
@@ -4811,6 +4836,7 @@ pras-ci.jj.wooga.com
 pras-grafanap.caesarsgames.com
 pras-grafanapk.caesarsgames.com
 pras-preprod-static.playtika.com
+pras-preprod-zuul.playtika.com
 pras-preprod.playtika.com
 pras-preprod2.playtika.com
 pras-preprod2m.playtika.com
@@ -4902,6 +4928,7 @@ prometheus.bingo-app-dsa.playtika.com
 prometheus.cdn-shop.playtika.com
 prometheus.gnocchi-cdn-nc.playtika.com
 promo-fb-stage18a.cloud.playtika.com
+promo.bingoblitz.com
 promo.playtika.com
 promoelasticm.news02.bingoblitz.com
 promotion-ec.playtika.com
@@ -5021,6 +5048,7 @@ regionaldebate.caesarsgames.com
 regionaldebates.caesarsgames.com
 regionm.lab.news02.bingoblitz.com
 regulator-01service.cloud.playtika.com
+regulator-local.playtika.com
 regulator-localc.playtika.com
 regulator-preprod-bingo.playticorp.com
 remote.boardkingsgame.com
@@ -5239,6 +5267,7 @@ sgh-api-dsa.playtika.com
 sgh-api.playtika.com
 sgh-backoffice-preprod.playticorp.com
 sgh-cdn.playtika.com
+sgh-cdne.playtika.com
 sgh-dev-php.playticorp.com
 sgh-messaging-va2.playtika.com
 sgh-messaging.playtika.com
@@ -5254,6 +5283,7 @@ sgh-preprod-statics.playtika.com
 sgh-preprod2-api.playtika.com
 sgh-prod-cdn-ec.playtika.com
 sgh-prod-cdn.playtika.com
+sgh-static-ca1.playtika.com
 sgh-static-ca1k.playtika.com
 sgh-static-s3.playtika.com
 sgh-zuul-migration-ca1.playtika.com
@@ -5471,6 +5501,7 @@ sm-stage68-appv-02koreai.cloud.playtika.com
 sm-stages-cdn-ec.cloud.playtika.com
 sm-stages-cdn-eci.cloud.playtika.com
 sm-stages-cdn.cloud.playtika.com
+sm-stamp-card-service.playtika.com
 sm-stamp-card-va2.playtika.com
 sm-statics.playtika.com
 sm-sunrise-cdn-ecc.cloud.playtika.com
@@ -5665,6 +5696,7 @@ standalone-proxy-stage41autodiscover.caesarsgames.com
 standalone-proxy-stage41autodiscovers.caesarsgames.com
 standalone-proxy-stage4s.news02.bingoblitz.com
 standalone-proxy-stage57q.news02.bingoblitz.com
+standalone-proxy-stage5o.wsopdev.playtika.com
 stars-dev.dashboard.cloud.seriously.com
 stars-nta.dashboard.cloud.seriously.com
 stars-qa.dashboard.cloud.seriously.com
@@ -5972,6 +6004,7 @@ trialcontrolw.confluence.news02.bingoblitz.com
 trialm.private.news02.bingoblitz.com
 trialv3q.news02.bingoblitz.com
 trialvs-fb-mf-stage2.cloud.playtika.com
+trkpnt.playtika.com
 trkpnte.playtika.com
 trs-cdn-akm.playtika.com
 trs-cdn.bingoblitz.com
@@ -6092,6 +6125,7 @@ vault-secrets-creator.prod-pokerheat.playticorp.com
 vds-app.playtika.com
 vds-capi.playtika.com
 vds-cdn.playtika.com
+vds-cdna.playtika.com
 vds-cdnbounce.caesarsgames.com
 vds-cdnbouncec.caesarsgames.com
 vds-couponfe.playtika.com
@@ -6117,6 +6151,7 @@ vegas-ca1-php.playtika.com
 vegas-ca1-phpk.playtika.com
 vegas-ca1-redirector.playtika.com
 vegas-ca1-redirectork.playtika.com
+vegas-ca1-zuul.playtika.com
 vegas-capi.playtika.com
 vegas-cdn.playtika.com
 vegas-cdne.playtika.com
@@ -6176,6 +6211,7 @@ vs-fb-android.playtika.com
 vs-fb-app-dub.playtika.com
 vs-fb-app-p1.playtika.com
 vs-fb-app-va2.playtika.com
+vs-fb-app-va2i.playtika.com
 vs-fb-assets-collectibles-ec.playtika.com
 vs-fb-cdn.playtika.com
 vs-fb-cdnc.playtika.com
@@ -6189,6 +6225,7 @@ vs-fb-coupon-ici.app.caesarsgames.com
 vs-fb-coupon-p1.playtika.com
 vs-fb-coupon-p1m.playtika.com
 vs-fb-coupon-va2.playtika.com
+vs-fb-ec-ssl.playtika.com
 vs-fb-ec.playtika.com
 vs-fb-ecm.playtika.com
 vs-fb-en.playtika.com
@@ -6251,6 +6288,7 @@ vs-fb-stage-wp1privo.cloud.playtika.com
 vs-fb-stage-wp2c.cloud.playtika.com
 vs-fb-stage-wp9-analytics.cloud.playtika.com
 vs-fb-stage-wp9-engineeringo.cloud.playtika.com
+vs-fb-stage-wp9.cloud.playtika.com
 vs-fb-stage13-swagger.cloud.playtika.com
 vs-fb-stage13g.cloud.playtika.com
 vs-fb-stage18.playtika.com
@@ -6266,6 +6304,7 @@ vs-fb-stage9-newc.cloud.playtika.com
 vs-fb-stage9-priv.cloud.playtika.com
 vs-fb-stage9.cloud.playtika.com
 vs-fb-sunrise02.playtika.com
+vs-fb-sunrise02u.playtika.com
 vs-fb-vds10by-3o.cloud.playtika.com
 vs-fb-vds10by-feb.cloud.playtika.com
 vs-fb-vds10by-support.cloud.playtika.com
@@ -6305,6 +6344,7 @@ vs-vk.playtika.com
 vs-vko.playtika.com
 vs-ya.playtika.com
 vs-yh-bosupport.playtika.com
+vs-yj.playtika.com
 vs-yjo.playtika.com
 vs.caesarsgames.com
 vsc.caesarsgames.com
@@ -6542,6 +6582,7 @@ www.bingo-ce-app.playtika.com
 www.bingo-ce-mgp.playtika.com
 www.bingo-ce-services.playtika.com
 www.bingo-ce-static.playtika.com
+www.bingo-preprod-api.playtika.com
 www.bingo-preprod-app.playtika.com
 www.bingo-preprod-cdn-quic.playtika.com
 www.bingo-preprod-mgp.playtika.com
@@ -6967,6 +7008,7 @@ zk-ak.playtika.com
 zk-akw.playtika.com
 zk-fb-app.playtika.com
 zk-mm-app.playtika.com
+zk-mm-appg.playtika.com
 zk-mm.playtika.com
 zk-mmc.playtika.com
 zk-netherlands.cloud.playtika.com
