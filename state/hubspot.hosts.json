@@ -1,0 +1,62 @@
+{
+ "24924820t.cs.eu1.hubspotemail.net": {
+  "url": "http://24924820t.cs.eu1.hubspotemail.net/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ },
+ "bf00.s.hubspotemail.net": {
+  "url": "https://bf00.s.hubspotemail.net/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ },
+ "h9q.t.hubspotemail.net": {
+  "url": "https://h9q.t.hubspotemail.net/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ },
+ "hs-21662002.f.hubspotemail.net": {
+  "url": "https://hs-21662002.f.hubspotemail.net/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ },
+ "20553255m.cs.hubspotemail.net": {
+  "url": "http://20553255m.cs.hubspotemail.net/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ },
+ "bid46bz.cs.hubspotemail.net": {
+  "url": "http://bid46bz.cs.hubspotemail.net/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://policy.hubspot.com/abuse-complaints",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:29:26 UTC"
+ }
+}

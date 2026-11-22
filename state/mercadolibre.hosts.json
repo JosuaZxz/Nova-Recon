@@ -1,0 +1,12 @@
+{
+ "myapps.mercadolivre.com.br": {
+  "url": "https://myapps.mercadolivre.com.br/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.mercadolivre.com.br/gz/account-verification?go=https%3A%2F%2Fmyapps.mercadolivre.com.br%2F&tid=7918ee7e-b6a0-41cb-828e-fbe0ca69b6f8",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-22 15:44:19 UTC"
+ }
+}
