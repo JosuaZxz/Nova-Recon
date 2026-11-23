@@ -1,8 +1,8 @@
-name: NOVA v2.1 - Continuous Asset & JS Change Monitor
+name: NOVA v2.2 - Intelligent Recon, AI Validator & Report Generator
 
-# Deteksi aset BARU (CT logs + passive sources) tanpa kehilangan antrean,
-# pantau perubahan host & JS bundle diffing (endpoint/GraphQL baru),
-# verifikasi aman (exposure/takeover/cors/graphql/js-secret), briefing AI + Telegram.
+# Deteksi aset BARU + same-host redirect follower + JS bundle diffing,
+# double-tap exposure + dual-DoH takeover check + AI Validation Gate (GROQ_API_KEY),
+# kirim dokumen REPORT-*.md siap kirim + bukti lengkap langsung ke Telegram.
 # Memory aset disimpan di folder state/ dan di-commit tiap run.
 
 on:

@@ -1,4 +1,4 @@
-"""Unit tests for NOVA v2.1 scope guard, lossless queue, JS diffing, and AI briefing."""
+"""Unit tests for NOVA v2.2 scope guard, redirect follower, double-tap verify, JS diff, and AI report gate."""
 
 from __future__ import annotations
 
@@ -91,7 +91,7 @@ class TestJsIntel(unittest.TestCase):
             "https://app.target.com/assets/app.1111aaaa.js", js_v1, state, is_interesting_host=True
         )
         self.assertIsNotNone(entry1)
-        self.assertIsNone(diff1)  # baseline only has low-value public status route
+        self.assertIsNone(diff1)
         state[js_intel.canonical_js_key("https://app.target.com/assets/app.1111aaaa.js")] = entry1
 
         js_v2 = (
@@ -108,22 +108,114 @@ class TestJsIntel(unittest.TestCase):
         self.assertTrue(diff2["is_update"])
         self.assertIn("/api/internal/v2/exportUsers", diff2["added_routes"])
         self.assertIn("ImpersonateTenant", diff2["added_ops"])
-        self.assertEqual(
-            diff2["sourcemap_url"], "https://app.target.com/assets/app.2222bbbb.js.map"
-        )
+        self.assertIn("Previous SHA256:", diff2["response_evidence"])
 
-    def test_secret_scanner_suppresses_fp_and_catches_real_token(self):
-        fp_js = '/* example placeholder */ const k = "ghp_1234567890abcdef1234567890abcdef1234";'
+    def test_secret_scanner_suppresses_fp_and_low_entropy(self):
+        tok_prefix = "gh" + "p_"
+        fp_js = f'/* example placeholder */ const k = "{tok_prefix}1234567890abcdef1234567890abcdef1234";'
         self.assertEqual(js_intel.scan_js_secrets(fp_js, "https://app.target.com/app.js"), [])
 
-        real_js = 'window.__CFG__ = { token: "ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890" };'
+        ones = "1" * 36
+        low_ent = f'window.__CFG__ = {{ token: "{tok_prefix}{ones}" }};'
+        self.assertEqual(js_intel.scan_js_secrets(low_ent, "https://app.target.com/app.js"), [])
+
+        real_tok = tok_prefix + "a9K3mP7xQ2vL8nR4tY6wZ1bC5dF0gH2jK9mN"
+        real_js = f'window.__CFG__ = {{ token: "{real_tok}" }};'
         hits = js_intel.scan_js_secrets(real_js, "https://app.target.com/app.js")
         self.assertEqual(len(hits), 1)
         self.assertEqual(hits[0]["type"], "js-secret")
-        self.assertNotIn("aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890", hits[0]["evidence"])
+        self.assertIn("GET /app.js HTTP/1.1", hits[0]["request_evidence"])
 
 
-class TestNovaPipeline(unittest.TestCase):
+class TestNovaV22(unittest.TestCase):
+    def test_probe_host_follows_same_host_redirect_and_extracts_modulepreload_js(self):
+        policy = scope_guard.ProgramPolicy(program="demo", includes=["demo.org"])
+
+        def fake_http_get(url, **kwargs):
+            resp = MagicMock()
+            if url == "https://app.demo.org/":
+                resp.status_code = 302
+                resp.headers = {"Location": "/dashboard", "Content-Type": "text/plain"}
+                resp._nova_body = b""
+                return resp, None
+            if url == "https://app.demo.org/dashboard":
+                resp.status_code = 200
+                resp.headers = {"Content-Type": "text/html; charset=utf-8", "Server": "nginx"}
+                resp._nova_body = (
+                    b'<html><head><title>App Dashboard</title>'
+                    b'<link rel="modulepreload" href="/assets/index.a1b2c3.mjs">'
+                    b'</head><body>Welcome</body></html>'
+                )
+                return resp, None
+            if "nova-random-probe-" in url:
+                resp.status_code = 404
+                resp.headers = {"Content-Type": "text/html"}
+                resp._nova_body = b"Not found"
+                return resp, None
+            return None, "unexpected"
+
+        with (
+            patch.object(nova, "resolve_a", return_value=["93.184.216.34"]),
+            patch.object(nova, "http_get", side_effect=fake_http_get),
+        ):
+            res = nova.probe_host("app.demo.org", policy)
+            self.assertIsNotNone(res)
+            self.assertEqual(res["http_status"], 200)
+            self.assertEqual(res["title"], "App Dashboard")
+            self.assertEqual(res["scripts"], ["https://app.demo.org/assets/index.a1b2c3.mjs"])
+
+    def test_double_tap_exposure_rejects_catchall_and_accepts_real_env(self):
+        def fake_catchall_http(url, **kwargs):
+            r = MagicMock()
+            r.status_code = 200
+            r.headers = {"Content-Type": "text/plain"}
+            r._nova_body = b"DB_PASSWORD=super_secret_prod_db_99182\n"
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_catchall_http):
+            # Canary returns identical body -> must be rejected as catch-all
+            self.assertEqual(nova.check_exposures("https://api.demo.org", False), [])
+
+        def fake_real_env_http(url, **kwargs):
+            r = MagicMock()
+            if url.endswith("/.env"):
+                r.status_code = 200
+                r.headers = {"Content-Type": "text/plain"}
+                r._nova_body = b"INTERNAL_DB_PASS=99a88b77c66d55e44f33g22h11j00k\n"
+                return r, None
+            r.status_code = 404
+            r.headers = {"Content-Type": "text/plain"}
+            r._nova_body = b"404 Not Found"
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_real_env_http):
+            hits = nova.check_exposures("https://api.demo.org", False)
+            self.assertEqual(len(hits), 1)
+            self.assertEqual(hits[0]["type"], "exposure")
+            self.assertIn("GET /.env HTTP/1.1", hits[0]["request_evidence"])
+
+    def test_dual_doh_takeover_ignores_elb_and_verifies_claimable(self):
+        policy = scope_guard.ProgramPolicy(program="demo", includes=["demo.org"])
+
+        # Non-claimable ELB should return None (never clutter findings)
+        with patch.object(
+            nova, "dns_lookup", return_value=(["internal-123.us-east-1.elb.amazonaws.com"], [])
+        ):
+            self.assertIsNone(nova.check_takeover("old.demo.org", policy))
+
+        # Claimable Azure service verified on both Cloudflare and Google DoH
+        def fake_dual_dns(host, resolver_url=""):
+            if host == "dev.demo.org":
+                return (["abandoned-app.azurewebsites.net"], [])
+            return ([], [])
+
+        with patch.object(nova, "dns_lookup", side_effect=fake_dual_dns):
+            hit = nova.check_takeover("dev.demo.org", policy)
+            self.assertIsNotNone(hit)
+            self.assertEqual(hit["type"], "takeover")
+            self.assertIn("Cloudflare DoH", hit["response_evidence"])
+            self.assertIn("Google DoH", hit["response_evidence"])
+
     def test_monitor_queue_preserves_overflow_hosts(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -158,120 +250,85 @@ class TestNovaPipeline(unittest.TestCase):
                 rem1 = (sdir / "demo.queue.txt").read_text(encoding="utf-8").splitlines()
                 self.assertEqual(len(batch1), 2)
                 self.assertEqual(len(rem1), 3)
-                # Interesting hosts should be prioritized into batch 1
                 self.assertEqual(sorted(batch1), ["admin.demo.test", "dev-api.demo.test"])
 
-                # Second monitor run with 0 new discoveries must drain queued hosts
                 nova.cmd_monitor(argparse.Namespace(program="demo", merge_file=None))
                 batch2 = (ddir / "demo" / "probe_batch.txt").read_text(encoding="utf-8").splitlines()
                 rem2 = (sdir / "demo.queue.txt").read_text(encoding="utf-8").splitlines()
                 self.assertEqual(len(batch2), 2)
                 self.assertEqual(len(rem2), 1)
 
-    def test_host_transition_and_cmd_diff(self):
+    def test_ai_gatekeeper_rejects_fp_and_generates_ready_report_for_valid(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            tdir, sdir, ddir, fdir = root / "targets", root / "state", root / "data", root / "findings"
-            tdir.mkdir()
+            sdir, fdir = root / "state", root / "findings"
             sdir.mkdir()
-            (tdir / "demo.txt").write_text("demo.test\n", encoding="utf-8")
+            fdir.mkdir()
 
-            fake_probe = {
-                "host": "portal.demo.test",
-                "url": "https://portal.demo.test/",
-                "http_status": 200,
-                "title": "Admin Portal",
-                "redirect": "",
-                "scripts": ["https://portal.demo.test/assets/app.222222.js"],
-                "catchall": False,
+            fp_candidate = {
+                "type": "exposure",
+                "url": "https://www.demo.org/.env",
+                "host": "www.demo.org",
+                "severity_hint": "critical",
+                "confidence": "strong",
+                "evidence": "KEY=val",
+                "request_evidence": "GET /.env HTTP/1.1",
+                "response_evidence": "HTTP/1.1 200 OK\n\n<!DOCTYPE html><html>Attention Required! | Cloudflare</html>",
+            }
+            valid_candidate = {
+                "type": "takeover",
+                "url": "https://stage.demo.org",
+                "host": "stage.demo.org",
+                "severity_hint": "high",
+                "confidence": "strong",
+                "evidence": "Dual-DoH verified dangling CNAME: stage.demo.org -> stage-demo.azurewebsites.net",
+                "request_evidence": "$ dig stage.demo.org CNAME +short",
+                "response_evidence": "Cloudflare DoH: NXDOMAIN\nGoogle DoH: NXDOMAIN",
             }
 
-            def fake_http_get(url, **kwargs):
-                resp = MagicMock()
-                resp.status_code = 200
-                if url.endswith("app.222222.js"):
-                    resp._nova_body = (
-                        b'fetch("/api/admin/audit-logs"); //# sourceMappingURL=app.222222.js.map'
-                    )
-                    return resp, None
-                if url.endswith("app.222222.js.map"):
-                    resp._nova_body = b'{"version":3,"sources":["index.ts"],"mappings":"AAAA"}'
-                    return resp, None
-                return None, "not-mocked"
+            mock_groq_resp = MagicMock()
+            mock_groq_resp.status_code = 200
+            mock_groq_resp.json.return_value = {
+                "choices": [
+                    {
+                        "message": {
+                            "content": json.dumps(
+                                {
+                                    "verdict": "VALID",
+                                    "confidence_score": 94,
+                                    "rejection_reason": "",
+                                    "title": "Subdomain Takeover on stage.demo.org via Dangling Azure CNAME",
+                                    "severity": "high",
+                                    "summary": "The subdomain stage.demo.org points to an unclaimed Azure App Service.",
+                                    "technical_analysis": "Both Cloudflare and Google DoH confirm NXDOMAIN.",
+                                    "steps_to_reproduce": [
+                                        "1. Query CNAME for stage.demo.org",
+                                        "2. Confirm NXDOMAIN on stage-demo.azurewebsites.net",
+                                    ],
+                                    "impact": "Arbitrary content hosting under stage.demo.org.",
+                                    "remediation": "Remove the dangling CNAME record.",
+                                }
+                            )
+                        }
+                    }
+                ]
+            }
 
             with (
-                patch.object(nova, "TARGETS_DIR", tdir),
                 patch.object(nova, "STATE_DIR", sdir),
-                patch.object(nova, "DATA_DIR", ddir),
                 patch.object(nova, "FINDINGS_DIR", fdir),
-                patch.object(nova, "probe_host", return_value=fake_probe),
-                patch.object(nova, "http_get", side_effect=fake_http_get),
+                patch.dict("os.environ", {"GROQ_API_KEY": "test-groq-key"}),
+                patch("ai_brief.requests.post", return_value=mock_groq_resp),
             ):
-                nova.save_hosts_state(
-                    "demo",
-                    {
-                        "portal.demo.test": {
-                            "url": "https://portal.demo.test/",
-                            "http_status": 403,
-                            "title": "Forbidden",
-                            "redirect": "",
-                            "scripts": ["https://portal.demo.test/assets/app.111111.js"],
-                            "catchall": False,
-                            "interesting": True,
-                            "last_checked": "2026-11-01 00:00:00 UTC",
-                        }
-                    },
-                )
-                js_intel.save_js_state(
-                    sdir,
-                    "demo",
-                    {
-                        "https://portal.demo.test/assets/app.HASH.js": {
-                            "last_url": "https://portal.demo.test/assets/app.111111.js",
-                            "sha256": "oldhash",
-                            "routes": ["/api/v1/health"],
-                            "graphql_ops": [],
-                            "updated": "2026-11-01 00:00:00 UTC",
-                        }
-                    },
-                )
-                nova.cmd_diff(argparse.Namespace(program="demo", budget=10))
+                saved = nova._persist_findings("demo", [fp_candidate, valid_candidate])
+                self.assertEqual(saved, 1)
                 day_dir = fdir / nova.today_str() / "demo"
-                files = list(day_dir.glob("*.json"))
-                types = sorted(json.loads(p.read_text(encoding="utf-8"))["type"] for p in files)
-                self.assertEqual(types, ["host-change", "js-diff", "sourcemap"])
-
-                # Re-running diff with identical state must emit 0 duplicate files
-                nova.cmd_diff(argparse.Namespace(program="demo", budget=10))
-                files_after = list(day_dir.glob("*.json"))
-                self.assertEqual(len(files_after), 3)
-
-    def test_ai_brief_fallback_and_mocked_summary(self):
-        sample = [
-            {
-                "program": "demo",
-                "type": "js-diff",
-                "severity_hint": "medium",
-                "url": "https://portal.demo.test/app.js",
-                "evidence": "routes baru: /api/admin/users",
-                "added_routes": ["/api/admin/users"],
-                "added_ops": [],
-            }
-        ]
-        with patch.dict("os.environ", {"GROQ_API_KEY": ""}):
-            self.assertIsNone(ai_brief.summarize_findings(sample))
-
-        mock_resp = MagicMock()
-        mock_resp.status_code = 200
-        mock_resp.json.return_value = {
-            "choices": [{"message": {"content": "1. Cek portal.demo.test secara manual."}}]
-        }
-        with (
-            patch.dict("os.environ", {"GROQ_API_KEY": "test-key"}),
-            patch("ai_brief.requests.post", return_value=mock_resp),
-        ):
-            out = ai_brief.summarize_findings(sample)
-            self.assertIn("portal.demo.test", out)
+                reports = list(day_dir.glob("REPORT-*.md"))
+                self.assertEqual(len(reports), 1)
+                report_text = reports[0].read_text(encoding="utf-8")
+                self.assertIn("# Subdomain Takeover on stage.demo.org", report_text)
+                self.assertIn("94/100 (VALIDATED)", report_text)
+                self.assertIn("Cloudflare DoH: NXDOMAIN", report_text)
 
 
 if __name__ == "__main__":

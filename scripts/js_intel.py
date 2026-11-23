@@ -166,11 +166,22 @@ def extract_js_intel(js_text: str, js_url: str) -> dict:
     }
 
 
+def _has_real_entropy(token: str) -> bool:
+    """Reject low-entropy / repeated dummy strings (e.g. AAAA..., 123456...)."""
+    core = re.sub(r"^(AKIA|gh[pousr]_|github_pat_|[sr]k_live_|xox[baprs]-|SG\.|key-)", "", token)
+    if len(set(core)) < 7:
+        return False
+    if any(seq in core.lower() for seq in ("12345678", "abcdefgh", "00000000", "xxxxxxxx")):
+        return False
+    return True
+
+
 def scan_js_secrets(js_text: str, js_url: str) -> list[dict]:
     """Scan JS text for high-confidence leaked secrets while suppressing known FPs."""
     if is_vendor_js(js_url, js_text):
         return []
 
+    parsed = urlparse(js_url)
     findings = []
     for name, rx in SECRET_PATTERNS:
         m = rx.search(js_text)
@@ -178,17 +189,28 @@ def scan_js_secrets(js_text: str, js_url: str) -> list[dict]:
             continue
         start = max(0, m.start() - 120)
         end = min(len(js_text), m.end() + 120)
-        ctx = js_text[start:end].lower()
+        raw_ctx = js_text[start:end]
+        ctx = raw_ctx.lower()
         if any(hint in ctx for hint in FP_CONTEXT_HINTS):
             continue
         token = m.group(1) if m.groups() else m.group(0)
+        if name != "Google Service Account" and not _has_real_entropy(token):
+            continue
+        redacted_token = redact(token, 5)
+        safe_snippet = raw_ctx.replace(token, redacted_token).replace("\n", " ").strip()[:300]
         findings.append(
             {
                 "type": "js-secret",
                 "url": js_url,
+                "host": parsed.netloc.lower(),
                 "severity_hint": "critical",
-                "confidence": "medium",
-                "evidence": f"{name}: {redact(token)}",
+                "confidence": "strong",
+                "evidence": f"{name}: {redacted_token}",
+                "request_evidence": f"GET {parsed.path or '/'} HTTP/1.1\nHost: {parsed.netloc}",
+                "response_evidence": (
+                    f"HTTP/1.1 200 OK\nContent-Type: application/javascript\n\n"
+                    f"... {safe_snippet} ..."
+                ),
                 "next": "Verifikasi validitas token secara pasif (jangan eksekusi write/destruct), cek scope program sebelum report.",
             }
         )
@@ -296,19 +318,28 @@ def diff_js_bundle(
     if intel["keywords"]:
         parts.append("flags: " + ", ".join(intel["keywords"][:6]))
 
+    parsed = urlparse(js_url)
+    prev_sha = prev.get("sha256", "none") if prev else "none"
     finding = {
         "type": "js-diff",
         "url": js_url,
+        "host": parsed.netloc.lower(),
         "canonical_key": key,
         "is_update": is_update,
         "severity_hint": "medium" if is_update else "low",
-        "confidence": "high" if is_update else "medium",
+        "confidence": "strong" if is_update else "medium",
         "added_routes": added_routes[:30],
         "added_ops": added_ops[:20],
         "sourcemap_url": intel["sourcemap_url"],
         "evidence": (
             ("Deploy JS berubah -> " if is_update else "JS host prioritas -> ")
             + " | ".join(parts)
+        ),
+        "request_evidence": f"GET {parsed.path or '/'} HTTP/1.1\nHost: {parsed.netloc}",
+        "response_evidence": (
+            f"Bundle Key: {key}\nPrevious SHA256: {prev_sha}\nNew SHA256: {intel['sha256']}\n"
+            f"Added Routes ({len(added_routes)}): {', '.join(routes_preview)}\n"
+            f"Added GraphQL Ops ({len(added_ops)}): {', '.join(ops_preview)}"
         ),
         "next": "Review manual di browser/proxy: uji kontrol akses (IDOR/authz) pada endpoint atau operasi baru sesuai scope.",
     }

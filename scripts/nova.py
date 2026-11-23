@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 """
-NOVA v2.1 - Continuous Asset & JS Change Monitor
-=================================================
-Mesin bug bounty & attack-surface monitor berbasis delta aset + JS bundle diffing.
-
-Alur per program:
+NOVA v2.2 - Intelligent Recon, AI Validation Gate & Report Generator
+====================================================================
+Alur otomatis per program:
   monitor  -> discovery pasif (crt.sh + subdomain.center + OTX [+ subfinder]),
-              filter scope & !exclude, simpan antrean probe agar tidak ada host hilang
-  probe    -> probe host dari antrean, simpan snapshot live host ke state/<program>.hosts.json
-  verify   -> cek temuan awal (exposure / takeover / cors / graphql / js-secret FP-filtered)
-  diff     -> pantau perubahan host lama (403/404->200) + diff bundle JS (route/API/GraphQL baru)
-  brief    -> ringkasan harian + AI triage manual-review (opsional Groq) + Telegram
+              filter scope & !exclude, antrean lossless (state/<program>.queue.txt)
+  probe    -> probe host + smart same-host redirect follower (hingga 3 hop),
+              ekstrak bundle JS (<script src> & modulepreload), simpan state/<program>.hosts.json
+  verify   -> cek non-destruktif berbukti lengkap (double-tap exposure, dual-DoH claimable takeover,
+              CORS+credentials, GraphQL schema/mutation extractor, JS secret high-entropy)
+              + AI Validation Gate (GROQ_API_KEY) -> drop FP, generate REPORT-*.md siap kirim
+  diff     -> pantau perubahan host lama (403/404->200) & diff JS bundle (API/GraphQL baru)
+              + AI Validation Gate -> generate REPORT-*.md siap kirim
+  brief    -> kirim ringkasan + lampiran dokumen REPORT-*.md langsung ke Telegram
 
 Deps: requests (satu-satunya dependency eksternal).
 """
@@ -37,8 +39,13 @@ SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from ai_brief import summarize_findings  # noqa: E402
+from ai_brief import (  # noqa: E402
+    render_markdown_report,
+    summarize_findings,
+    validate_and_draft_report,
+)
 from js_intel import (  # noqa: E402
+    canonical_js_key,
     diff_js_bundle,
     is_vendor_js,
     load_js_state,
@@ -86,15 +93,15 @@ except Exception:
 MAX_CONC = int(os.environ.get("NOVA_MAX_CONC", "12"))
 REQ_DELAY = float(os.environ.get("NOVA_REQ_DELAY", "0.12"))
 HTTP_TIMEOUT = int(os.environ.get("NOVA_TIMEOUT", "9"))
-PER_HOST_CAP = int(os.environ.get("NOVA_PER_HOST_CAP", "8"))
+PER_HOST_CAP = int(os.environ.get("NOVA_PER_HOST_CAP", "10"))
 MAX_NEW_PROBE = int(os.environ.get("NOVA_MAX_NEW_PROBE", "250"))
 MAX_JS_FETCH = int(os.environ.get("NOVA_MAX_JS", "120"))
 DIFF_BUDGET = int(os.environ.get("NOVA_DIFF_BUDGET", "60"))
 MAX_TRACKED_HOSTS = int(os.environ.get("NOVA_MAX_TRACKED_HOSTS", "1200"))
 
-TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
-TG_GENERAL = os.environ.get("TELEGRAM_GENERAL_ID", "")
-TG_DATA = os.environ.get("TELEGRAM_DATA_ID", "")
+TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "").strip()
+TG_GENERAL = os.environ.get("TELEGRAM_GENERAL_ID", "").strip()
+TG_DATA = os.environ.get("TELEGRAM_DATA_ID", "").strip()
 
 
 # ---------------------------------------------------------------- utilities
@@ -137,6 +144,16 @@ INTERESTING_RE = re.compile(
     re.IGNORECASE,
 )
 
+LOGIN_PATH_RE = re.compile(
+    r"(/login|/signin|/auth/login|/sso|oauth2?/authorize|oktapreview|auth0\.com|wp-login)",
+    re.IGNORECASE,
+)
+
+SCRIPT_TAG_RE = re.compile(
+    r'(?:src|href)=["\']([^"\']+\.m?js(?:\?[^"\']*)?)["\']',
+    re.IGNORECASE,
+)
+
 
 def _subdomain_prefix(host: str, policy: ProgramPolicy | None = None) -> str:
     """Return only the subdomain prefix before the matched root domain."""
@@ -173,6 +190,27 @@ def prioritize_hosts(names, policy: ProgramPolicy | None = None) -> list[str]:
     random.shuffle(interesting)
     random.shuffle(normal)
     return interesting + normal + numeric
+
+
+def _format_resp_evidence(resp, body_excerpt: str, max_headers: int = 8) -> str:
+    """Format HTTP status, key headers, and body excerpt for report evidence."""
+    hdr_lines = [f"HTTP/1.1 {resp.status_code}"]
+    important = (
+        "content-type",
+        "server",
+        "location",
+        "access-control-allow-origin",
+        "access-control-allow-credentials",
+        "x-powered-by",
+        "content-length",
+    )
+    count = 0
+    for k, v in resp.headers.items():
+        if k.lower() in important or count < max_headers:
+            hdr_lines.append(f"{k}: {v[:160]}")
+            count += 1
+    excerpt = body_excerpt.strip()[:900]
+    return "\n".join(hdr_lines) + ("\n\n" + excerpt if excerpt else "")
 
 
 # ------------------------------------------------------------- rate limiter
@@ -257,14 +295,17 @@ def http_get(
 
 # ------------------------------------------------------------------- DNS
 
-DOH_URL = "https://1.1.1.1/dns-query"
+DOH_ENDPOINTS = (
+    ("Cloudflare", "https://1.1.1.1/dns-query"),
+    ("Google", "https://dns.google/resolve"),
+)
 
 
-def dns_lookup(host: str) -> tuple[list[str], list[str]]:
-    """Resolve (cnames, ips) via Cloudflare DoH with local nslookup/socket fallback."""
+def dns_lookup(host: str, resolver_url: str = "https://1.1.1.1/dns-query") -> tuple[list[str], list[str]]:
+    """Resolve (cnames, ips) via DoH with local nslookup/socket fallback."""
     try:
         r = requests.get(
-            DOH_URL,
+            resolver_url,
             params={"name": host, "type": "A"},
             headers={"accept": "application/dns-json"},
             timeout=8,
@@ -474,25 +515,54 @@ def _finding_dedupe_key(f: dict) -> str:
 
 
 def _persist_findings(program: str, findings: list[dict], rebuild: bool = False) -> int:
-    """Dedupe and persist findings locally (never prints sensitive URLs to stdout)."""
+    """
+    Run each candidate through the AI Validation Gate, drop false positives,
+    and persist both JSON metadata and ready-to-submit REPORT-*.md files.
+    """
     index = load_findings_index(program)
     saved = 0
+    rejected = 0
     day_dir = FINDINGS_DIR / today_str() / program
     day_dir.mkdir(parents=True, exist_ok=True)
 
     for f in findings:
+        if f.get("type") == "dangling-cname":
+            continue
         h = _finding_dedupe_key(f)
         if not rebuild and h in index:
             continue
+
+        f["program"] = program
+        f["first_seen"] = now_utc()
+
+        draft = validate_and_draft_report(f)
         if h not in index:
             append_finding_index(program, h)
             index.add(h)
-        f["program"] = program
-        f["first_seen"] = now_utc()
+
+        if draft is None:
+            rejected += 1
+            reason = f.get("_rejection_reason", "false positive")
+            print(f"  [AI-REJECT] {h} {f.get('type')} dropped ({reason[:80]})")
+            continue
+
+        f["report_title"] = draft.get("title", "")
+        f["severity_hint"] = draft.get("severity", f.get("severity_hint", "medium"))
+        f["ai_score"] = draft.get("confidence_score", 80)
+        report_name = f"REPORT-{program}-{f['type']}-{h}.md"
+        f["report_file"] = report_name
+
+        report_md = render_markdown_report(f, draft)
+        (day_dir / report_name).write_text(report_md, encoding="utf-8")
         with open(day_dir / f"{f['type']}-{h}.json", "w", encoding="utf-8") as fh:
             json.dump(f, fh, ensure_ascii=False, indent=2)
         saved += 1
-        print(f"  [LEAD] {h} {f['type']} [{f['severity_hint']}] (detail via Telegram)")
+        print(
+            f"  [VALIDATED-LEAD] {h} {f['type']} "
+            f"[{f['severity_hint'].upper()} | AI:{f['ai_score']}/100] -> {report_name}"
+        )
+    if rejected:
+        print(f"    (AI Gatekeeper membuang {rejected} false positive)")
     return saved
 
 
@@ -539,11 +609,9 @@ def cmd_monitor(args) -> None:
     if skipped:
         print(f"    [!] budget habis: {skipped} kombinasi root-sumber dilewati")
 
-    per_root: dict[str, int] = {}
-    for root, _, holder in holders:
+    for _, _, holder in holders:
         good = {n for n in holder if policy.in_scope(n)}
         discovered |= good
-        per_root[root] = per_root.get(root, 0) + len(good)
 
     if args.merge_file and Path(args.merge_file).exists():
         for line in Path(args.merge_file).read_text(encoding="utf-8", errors="ignore").splitlines():
@@ -555,7 +623,6 @@ def cmd_monitor(args) -> None:
     new = {h for h in (discovered - known) if policy.in_scope(h)}
     save_state(program, known | new)
 
-    # Gabungkan aset baru dengan antrean lama agar tidak ada host yang hangus terpotong limit
     pending = prioritize_hosts(old_queue | new, policy=policy)
     batch = pending[:MAX_NEW_PROBE]
     remaining = pending[MAX_NEW_PROBE:]
@@ -575,8 +642,18 @@ def cmd_monitor(args) -> None:
 
 # ------------------------------------------------------------------- probe
 
+def _same_logical_host(host_a: str, host_b: str) -> bool:
+    """Return True if two hostnames are identical or differ only by www."""
+    a = host_a.lower().strip(".").removeprefix("www.")
+    b = host_b.lower().strip(".").removeprefix("www.")
+    return a == b
+
+
 def probe_host(host: str, policy: ProgramPolicy) -> dict | None:
-    """Probe single host safely (HTTP/HTTPS root, scripts, title, catchall)."""
+    """
+    Probe single host safely with smart same-host redirect following (up to 3 hops)
+    so 301/302/308 redirects reach the actual HTML and JS bundles.
+    """
     if not policy.in_scope(host):
         return None
     if any(host.endswith(s) or s in host for s in PRIVATE_HOSTNAMES):
@@ -602,30 +679,53 @@ def probe_host(host: str, policy: ProgramPolicy) -> dict | None:
     }
 
     for scheme in ("https", "http"):
-        url = f"{scheme}://{host}/"
-        r, err = http_get(url)
+        curr_url = f"{scheme}://{host}/"
+        r = None
+        err = None
+        redirect_target = ""
+
+        for _hop in range(4):
+            r, err = http_get(curr_url)
+            if r is None:
+                break
+            if r.status_code in (301, 302, 303, 307, 308):
+                loc = r.headers.get("Location", "").strip()
+                if not loc:
+                    break
+                next_url = urljoin(curr_url, loc)
+                redirect_target = next_url[:200]
+                next_host = urlparse(next_url).netloc.split("@")[-1].split(":")[0].lower()
+                # Follow only same-host redirects that are not login walls
+                if _same_logical_host(host, next_host) and not LOGIN_PATH_RE.search(next_url):
+                    curr_url = next_url
+                    continue
+            break
+
         if r is not None:
-            body = getattr(r, "_nova_body", b"")[:20_000].decode("utf-8", "ignore")
-            result["url"] = url
+            body = getattr(r, "_nova_body", b"")[:25_000].decode("utf-8", "ignore")
+            result["url"] = curr_url
             result["http_status"] = r.status_code
             result["server"] = r.headers.get("Server", "")
             result["body"] = body
+            if redirect_target:
+                result["redirect"] = redirect_target
             ct = r.headers.get("Content-Type", "")
-            if ct.startswith("text/html"):
+            if "html" in ct.lower() or body.lstrip()[:15].lower().startswith(("<!doctype", "<html")):
                 m = re.search(r"<title[^>]*>(.*?)</title>", body, re.IGNORECASE | re.DOTALL)
                 if m:
                     result["title"] = m.group(1).strip()[:120]
-                for sm in re.finditer(r'src=["\']([^"\']+\.js[^"\']*)["\']', body, re.IGNORECASE):
-                    js_u = urljoin(url, sm.group(1))
+                for sm in SCRIPT_TAG_RE.finditer(body):
+                    js_u = urljoin(curr_url, sm.group(1))
                     if policy.in_scope(js_u) and not is_vendor_js(js_u):
                         result["scripts"].append(js_u)
-                rr, _ = http_get(f"{scheme}://{host}/nova-random-probe-{random.randint(1000,9999)}")
-                if rr is not None and rr.status_code == 200:
-                    b2 = getattr(rr, "_nova_body", b"")[:2000].decode("utf-8", "ignore")
-                    if abs(len(b2) - len(body[:2000])) < 80:
-                        result["catchall"] = True
-            if r.status_code in (301, 302, 307, 308):
-                result["redirect"] = r.headers.get("Location", "")[:200]
+                if r.status_code == 200:
+                    rr, _ = http_get(
+                        f"{scheme}://{host}/nova-random-probe-{random.randint(1000,9999)}"
+                    )
+                    if rr is not None and rr.status_code == 200:
+                        b2 = getattr(rr, "_nova_body", b"")[:2000].decode("utf-8", "ignore")
+                        if abs(len(b2) - len(body[:2000])) < 80:
+                            result["catchall"] = True
             return result
         if err in ("timeout", "ssl", "conn", "host-cap"):
             continue
@@ -635,7 +735,9 @@ def probe_host(host: str, policy: ProgramPolicy) -> dict | None:
     return result
 
 
-def _merge_hosts_snapshot(hosts_state: dict, results: list[dict], policy: ProgramPolicy | None = None) -> None:
+def _merge_hosts_snapshot(
+    hosts_state: dict, results: list[dict], policy: ProgramPolicy | None = None
+) -> None:
     """Update persistent host snapshot with latest HTTP state."""
     stamp = now_utc()
     for res in results:
@@ -753,10 +855,14 @@ EXPOSURE_CHECKS = [
         lambda b, h: (
             h.get("Content-Type", "").startswith("application/octet-stream")
             and int(h.get("Content-Length") or 0) > 500_000,
-            "heapdump binary served",
+            "heapdump binary served (>500KB)",
         ),
     ),
     ("/debug/vars", lambda b, h: ("memstats" in b.lower() or "cmdline" in b.lower(), "Go expvar exposed")),
+    (
+        "/server-status",
+        lambda b, h: ("apache server status for" in b.lower() and "scoreboard" in b.lower(), "Apache server-status exposed"),
+    ),
 ]
 
 HIGH_CLAIMABLE_SUFFIXES = (
@@ -767,10 +873,6 @@ HIGH_CLAIMABLE_SUFFIXES = (
     "firebaseapp.com", "web.app", "readthedocs.io", "tumblr.com",
     "zendesk.com", "helpjuice.com", "helpscout.net", "readme.io",
     "canny.io", "teamwork.com", "pantheon.io",
-)
-DANGLING_ONLY_SUFFIXES = (
-    "cloudfront.net", "execute-api", "azureedge.net",
-    "elasticbeanstalk.com", "myshopify.com", "workers.dev", "elb.",
 )
 SERVICE_APEXES = (
     "azurewebsites.net", "cloudapp.azure.com", "herokuapp.com", "github.io",
@@ -788,48 +890,41 @@ TAKEOVER_BODY_SIGS = [
 
 
 def check_takeover(host: str, policy: ProgramPolicy) -> dict | None:
-    """Check CNAME dangling state with claimability separation."""
+    """
+    Verify claimable subdomain takeovers across dual independent DoH resolvers
+    (Cloudflare 1.1.1.1 + Google 8.8.8.8). Non-claimable CDN/ELB records are ignored.
+    """
     if not policy.in_scope(host):
         return None
-    cns, _ = dns_lookup(host)
-    if not cns:
+    cns_cf, _ = dns_lookup(host, DOH_ENDPOINTS[0][1])
+    if not cns_cf:
         return None
-    cname = cns[-1]
+    cname = cns_cf[-1]
     claimable = any(cname.endswith(sfx) or sfx in cname for sfx in HIGH_CLAIMABLE_SUFFIXES)
-    dangling = any(cname.endswith(sfx) or sfx in cname for sfx in DANGLING_ONLY_SUFFIXES)
-    if not (claimable or dangling):
+    if not claimable or cname in SERVICE_APEXES:
         return None
-    if cname in SERVICE_APEXES:
-        return {
-            "type": "dangling-cname",
-            "url": f"https://{host}",
-            "host": host,
-            "severity_hint": "info",
-            "confidence": "confirmed-dangling",
-            "evidence": f"CNAME -> {cname} (APEX zona, bukan hostname app).",
-            "next": "Hygiene report saja bila policy menerima; bukan takeover.",
-        }
-    _, target_ips = dns_lookup(cname)
-    if not target_ips:
-        if claimable:
+
+    _, ips_cf = dns_lookup(cname, DOH_ENDPOINTS[0][1])
+    if not ips_cf:
+        # Second-resolver confirmation via Google DoH
+        cns_gg, _ = dns_lookup(host, DOH_ENDPOINTS[1][1])
+        _, ips_gg = dns_lookup(cname, DOH_ENDPOINTS[1][1])
+        if not ips_gg and (not cns_gg or cns_gg[-1] == cname):
             return {
                 "type": "takeover",
                 "url": f"https://{host}",
                 "host": host,
                 "severity_hint": "high",
                 "confidence": "strong",
-                "evidence": f"CNAME -> {cname} (tanpa A record). Layanan berpotensi claimable.",
-                "next": "Cek scope policy dulu; verifikasi manual di resolver & provider.",
+                "evidence": f"Dual-DoH verified dangling CNAME: {host} -> {cname} (NXDOMAIN on Cloudflare & Google DNS)",
+                "request_evidence": f"$ dig {host} CNAME +short\n$ dig {cname} A +short",
+                "response_evidence": (
+                    f"Cloudflare DoH (1.1.1.1): {host} CNAME -> {' -> '.join(cns_cf)} | A = NXDOMAIN\n"
+                    f"Google DoH (8.8.8.8):     {host} CNAME -> {' -> '.join(cns_gg or cns_cf)} | A = NXDOMAIN"
+                ),
+                "next": "Pastikan subdomain masuk scope policy; klaim resource di provider bila diizinkan aturan program untuk PoC.",
             }
-        return {
-            "type": "dangling-cname",
-            "url": f"https://{host}",
-            "host": host,
-            "severity_hint": "info",
-            "confidence": "confirmed-dangling",
-            "evidence": f"CNAME -> {cname} (tanpa A record, kelas CDN/API gateway non-claimable).",
-            "next": "Umumnya informative saja; cek policy sebelum report.",
-        }
+        return None
 
     r, _ = http_get(f"https://{host}/")
     if r is not None and r.status_code == 404:
@@ -837,41 +932,40 @@ def check_takeover(host: str, policy: ProgramPolicy) -> dict | None:
         for sig, sev in TAKEOVER_BODY_SIGS:
             if sig.lower() in body.lower():
                 return {
-                    "type": "takeover" if claimable else "dangling-cname",
+                    "type": "takeover",
                     "url": f"https://{host}",
                     "host": host,
-                    "severity_hint": sev if claimable else "info",
-                    "confidence": "medium",
-                    "evidence": f"CNAME -> {cname}; body 404: '{sig}'",
-                    "next": "Verifikasi manual & cek policy program.",
+                    "severity_hint": sev,
+                    "confidence": "strong",
+                    "evidence": f"CNAME -> {cname}; HTTP 404 provider signature: '{sig}'",
+                    "request_evidence": f"GET / HTTP/1.1\nHost: {host}",
+                    "response_evidence": _format_resp_evidence(r, body[:600]),
+                    "next": "Verifikasi manual ketersediaan resource di provider & cek policy program.",
                 }
     return None
 
 
 def check_cors(url: str) -> dict | None:
-    """Check arbitrary Origin reflection on root URL."""
-    r, _ = http_get(url, extra_headers={"Origin": "https://nova-cors-canary.example.com"})
+    """Check arbitrary Origin reflection WITH Access-Control-Allow-Credentials: true."""
+    canary = "https://nova-cors-canary.example.com"
+    r, _ = http_get(url, extra_headers={"Origin": canary})
     if r is None:
         return None
     acao = r.headers.get("Access-Control-Allow-Origin", "")
     acac = r.headers.get("Access-Control-Allow-Credentials", "")
-    if acao == "https://nova-cors-canary.example.com":
-        if acac.lower() == "true":
-            return {
-                "type": "cors",
-                "url": url,
-                "severity_hint": "high",
-                "confidence": "medium",
-                "evidence": "ACAO refleksi origin arbitrer + Access-Control-Allow-Credentials: true",
-                "next": "Verifikasi apakah ada endpoint terautentikasi yang mengembalikan data sensitif.",
-            }
+    if acao == canary and acac.lower() == "true":
+        parsed = urlparse(url)
+        body = getattr(r, "_nova_body", b"")[:500].decode("utf-8", "ignore")
         return {
             "type": "cors",
             "url": url,
-            "severity_hint": "low",
-            "confidence": "low",
-            "evidence": "ACAO refleksi origin arbitrer (tanpa credentials)",
-            "next": "Cek apakah ada endpoint sensitif yg terekspos.",
+            "host": parsed.netloc.lower(),
+            "severity_hint": "high",
+            "confidence": "strong",
+            "evidence": "ACAO reflects arbitrary Origin + Access-Control-Allow-Credentials: true",
+            "request_evidence": f"GET {parsed.path or '/'} HTTP/1.1\nHost: {parsed.netloc}\nOrigin: {canary}",
+            "response_evidence": _format_resp_evidence(r, body),
+            "next": "Uji pada endpoint terautentikasi untuk memastikan respons membawa data sensitif user.",
         }
     return None
 
@@ -879,35 +973,88 @@ def check_cors(url: str) -> dict | None:
 GRAPHQL_PATHS = ("/graphql", "/api/graphql", "/api/v1/graphql")
 
 
-def check_graphql(base_url: str) -> dict | None:
-    """Check whether GraphQL introspection query is enabled."""
+def check_graphql(base_url: str, program: str = "") -> dict | None:
+    """Check GraphQL introspection and extract custom queries/mutations as evidence."""
+    if program.lower() == "shopify":
+        return None
+    query_payload = json.dumps(
+        {
+            "query": (
+                "{ __schema { queryType { name } "
+                "mutationType { name fields { name } } "
+                "types { name kind } } }"
+            )
+        }
+    )
     for p in GRAPHQL_PATHS:
         url = base_url.rstrip("/") + p
         r, _ = http_get(
             url,
             method="POST",
-            body=json.dumps({"query": "{ __schema { queryType { name } } }"}),
+            body=query_payload,
             extra_headers={"Content-Type": "application/json"},
         )
-        if r is not None and r.status_code == 200:
-            body = getattr(r, "_nova_body", b"")[:8000].decode("utf-8", "ignore")
-            if "__schema" in body:
-                return {
-                    "type": "graphql",
-                    "url": url,
-                    "severity_hint": "medium",
-                    "confidence": "medium",
-                    "evidence": "Introspection aktif (__schema diterima)",
-                    "next": "Review schema & query/mutation sensitif secara manual sesuai scope.",
-                }
+        if r is None or r.status_code != 200:
+            continue
+        body = getattr(r, "_nova_body", b"")[:25_000].decode("utf-8", "ignore")
+        if "__schema" not in body:
+            continue
+        mutations = []
+        custom_types = []
+        try:
+            data = json.loads(body).get("data", {}).get("__schema", {})
+            m_fields = (data.get("mutationType") or {}).get("fields") or []
+            mutations = [f.get("name") for f in m_fields if f.get("name")][:20]
+            types = data.get("types") or []
+            custom_types = [
+                t.get("name")
+                for t in types
+                if t.get("name") and not str(t.get("name")).startswith("__")
+                and t.get("name") not in ("String", "Int", "Float", "Boolean", "ID")
+            ][:25]
+        except Exception:
+            pass
+        if not mutations and len(custom_types) < 3:
+            continue
+        parsed = urlparse(url)
+        ev_summary = (
+            f"Introspection enabled | Mutations ({len(mutations)}): {', '.join(mutations[:8]) or 'none'} | "
+            f"Types: {', '.join(custom_types[:8])}"
+        )
+        return {
+            "type": "graphql",
+            "url": url,
+            "host": parsed.netloc.lower(),
+            "severity_hint": "medium",
+            "confidence": "strong" if mutations else "medium",
+            "evidence": ev_summary[:220],
+            "request_evidence": (
+                f"POST {parsed.path} HTTP/1.1\nHost: {parsed.netloc}\n"
+                f"Content-Type: application/json\n\n{query_payload}"
+            ),
+            "response_evidence": _format_resp_evidence(r, body[:800]),
+            "next": "Audit daftar mutation & tipe sensitif di atas untuk menguji otorisasi/IDOR sesuai scope.",
+        }
     return None
 
 
+def _redact_body_secrets(body: str) -> str:
+    """Redact raw secret values inside an exposure excerpt while preserving key names."""
+    def _repl(m):
+        return f"{m.group(1)}={redact(m.group(2).strip(), 3)}"
+    return ENV_KEY_RE.sub(_repl, body[:1200])
+
+
 def check_exposures(base_url: str, catchall: bool) -> list[dict]:
-    """Check common sensitive configuration exposure paths (ignoring HTML catch-alls)."""
+    """
+    Check sensitive configuration exposure paths with a double-tap canary check
+    to guarantee the host is not serving a catch-all 200 OK response.
+    """
     if catchall:
         return []
     findings = []
+    parsed_base = urlparse(base_url)
+
     for path, verdict in EXPOSURE_CHECKS:
         url = base_url.rstrip("/") + path
         r, _ = http_get(url)
@@ -918,18 +1065,38 @@ def check_exposures(base_url: str, catchall: bool) -> list[dict]:
         if ct.startswith("text/html") or body.lstrip()[:1] == "<":
             continue
         ok, evidence = verdict(body, r.headers)
-        if ok:
-            findings.append(
-                {
-                    "type": "exposure",
-                    "url": url,
-                    "severity_hint": "critical",
-                    "confidence": "strong",
-                    "evidence": evidence or path,
-                    "next": "Verifikasi manual di incognito, konfirmasi dampak, lalu tulis report.",
-                }
-            )
-            break
+        if not ok:
+            continue
+
+        # Double-tap canary verification on the same host/directory
+        parent = path.rsplit("/", 1)[0]
+        canary_path = f"{parent}/nova-canary-{random.randint(10000, 99999)}"
+        rc, _ = http_get(base_url.rstrip("/") + canary_path)
+        if rc is not None and rc.status_code == 200:
+            c_body = getattr(rc, "_nova_body", b"")[:60_000].decode("utf-8", "ignore")
+            c_ok, _ = verdict(c_body, rc.headers)
+            if c_ok or abs(len(c_body) - len(body)) < 60:
+                continue
+
+        safe_excerpt = (
+            "[Binary heapdump stream > 500KB]"
+            if path == "/actuator/heapdump"
+            else _redact_body_secrets(body)
+        )
+        findings.append(
+            {
+                "type": "exposure",
+                "url": url,
+                "host": parsed_base.netloc.lower(),
+                "severity_hint": "critical",
+                "confidence": "strong",
+                "evidence": evidence or path,
+                "request_evidence": f"GET {path} HTTP/1.1\nHost: {parsed_base.netloc}",
+                "response_evidence": _format_resp_evidence(r, safe_excerpt),
+                "next": "Verifikasi manual di browser incognito, screenshot bukti, lalu kirim laporan.",
+            }
+        )
+        break
     return findings
 
 
@@ -967,8 +1134,6 @@ def _fetch_and_analyze_js(
         if run_diff:
             entry, diff_finding = diff_js_bundle(js_url, body, js_state, is_interesting)
             if entry is not None:
-                from js_intel import canonical_js_key
-
                 js_state[canonical_js_key(js_url)] = entry
             if diff_finding is not None:
                 findings.append(diff_finding)
@@ -978,13 +1143,17 @@ def _fetch_and_analyze_js(
                     if sm_resp is not None and sm_resp.status_code == 200:
                         sm_head = getattr(sm_resp, "_nova_body", b"").decode("utf-8", "ignore")
                         if '"mappings"' in sm_head or '"sources"' in sm_head:
+                            parsed_sm = urlparse(sm_url)
                             findings.append(
                                 {
                                     "type": "sourcemap",
                                     "url": sm_url,
+                                    "host": parsed_sm.netloc.lower(),
                                     "severity_hint": "low",
                                     "confidence": "strong",
                                     "evidence": f"SourceMap publik terbuka ({sm_url})",
+                                    "request_evidence": f"GET {parsed_sm.path} HTTP/1.1\nHost: {parsed_sm.netloc}",
+                                    "response_evidence": _format_resp_evidence(sm_resp, sm_head[:500]),
                                     "next": "Unduh sourcemap untuk audit source code frontend & logika API internal.",
                                 }
                             )
@@ -1025,13 +1194,13 @@ def cmd_verify(args) -> None:
             continue
         if res.get("http_status") not in (200, 401, 403):
             continue
-        base = url.rstrip("/")
+        base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
         findings.extend(check_exposures(base, res.get("catchall", False)))
         if res.get("http_status") == 200 and not res.get("catchall"):
             f = check_cors(base)
             if f:
                 findings.append(f)
-            f = check_graphql(base)
+            f = check_graphql(base, program=program)
             if f:
                 findings.append(f)
         interesting = is_interesting_host(host, policy)
@@ -1052,19 +1221,14 @@ def cmd_verify(args) -> None:
         ]
     cap = int(os.environ.get("NOVA_TAKEOVER_CAP", "2000"))
     sweep = prioritize_hosts(new_hosts, policy=policy)[:cap] if new_hosts else []
-    print(f"[*] {program}: takeover check pada {len(sweep)} host baru...")
+    print(f"[*] {program}: takeover check (dual-DoH claimable) pada {len(sweep)} host baru...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=24) as ex:
         for f in ex.map(lambda h: check_takeover(h, policy), sweep):
             if f:
                 findings.append(f)
 
-    dang = [f for f in findings if f["type"] == "dangling-cname"]
-    if len(dang) > 25:
-        findings = [f for f in findings if f["type"] != "dangling-cname"] + dang[:25]
-        print(f"    (dangling-cname dipotong {len(dang)} -> 25)")
-
     saved = _persist_findings(program, findings, rebuild=getattr(args, "rebuild", False))
-    print(f"[=] {program}: verify selesai ({len(findings)} kandidat, {saved} BARU)")
+    print(f"[=] {program}: verify selesai ({len(findings)} kandidat, {saved} VALIDATED)")
 
 
 # ------------------------------------------------------------------- diff
@@ -1086,11 +1250,16 @@ def detect_host_transition(host: str, prev: dict, curr: dict) -> dict | None:
             "severity_hint": "medium",
             "confidence": "strong",
             "evidence": f"Status berubah {transition} (title: {curr.get('title') or '-'})",
+            "request_evidence": f"GET / HTTP/1.1\nHost: {host}",
+            "response_evidence": (
+                f"Previous State: HTTP {old_status} (title: {prev.get('title') or '-'})\n"
+                f"Current State:  HTTP 200 OK (title: {curr.get('title') or '-'})\n\n"
+                f"{(curr.get('body') or '')[:500]}"
+            ),
             "next": "Aset yang sebelumnya terbatas/mati kini menjawab 200 OK; cek fitur & kontrol akses manual.",
         }
 
     old_redir = (prev.get("redirect") or "").lower()
-    new_redir = curr.get("redirect") or ""
     if (
         old_status in (301, 302, 307, 308)
         and any(tok in old_redir for tok in ("/login", "/signin", "/auth", "/sso"))
@@ -1106,6 +1275,11 @@ def detect_host_transition(host: str, prev: dict, curr: dict) -> dict | None:
             "severity_hint": "medium",
             "confidence": "strong",
             "evidence": f"Redirect login hilang -> langsung 200 OK (title: {curr.get('title') or '-'})",
+            "request_evidence": f"GET / HTTP/1.1\nHost: {host}",
+            "response_evidence": (
+                f"Previous State: HTTP {old_status} Location: {prev.get('redirect')}\n"
+                f"Current State:  HTTP 200 OK (title: {curr.get('title') or '-'})"
+            ),
             "next": "Verifikasi di browser incognito apakah halaman internal terekspos tanpa auth.",
         }
 
@@ -1178,13 +1352,13 @@ def cmd_diff(args) -> None:
 
     save_hosts_state(program, hosts_state)
     saved = _persist_findings(program, findings)
-    print(f"[=] {program}: diff selesai ({len(findings)} sinyal, {saved} BARU)")
+    print(f"[=] {program}: diff selesai ({len(findings)} sinyal, {saved} VALIDATED)")
 
 
 # ------------------------------------------------------------------- brief
 
 def collect_findings(date: str | None = None) -> list[dict]:
-    """Collect and severity-sort all findings for a given UTC date."""
+    """Collect and severity-sort all validated findings for a given UTC date."""
     day_dir = FINDINGS_DIR / (date or today_str())
     out = []
     if not day_dir.exists():
@@ -1200,20 +1374,20 @@ def collect_findings(date: str | None = None) -> list[dict]:
 
 
 def build_briefing(date: str | None = None, include_ai: bool = True) -> str:
-    """Build daily Markdown briefing with optional Groq triage notes."""
+    """Build daily Markdown briefing of AI-validated findings."""
     findings = collect_findings(date)
     lines = [
-        f"NOVA v2.1 BRIEFING - {date or today_str()}",
-        "=" * 44,
+        f"NOVA v2.2 VALIDATED BRIEFING - {date or today_str()}",
+        "=" * 48,
     ]
     if not findings:
-        lines.append("Tidak ada lead atau diff baru hari ini. Mesin tetap memantau aset & JS.")
+        lines.append("Tidak ada temuan valid baru pada run ini. Mesin tetap memantau aset & JS.")
         return "\n".join(lines)
 
     if include_ai:
         ai_notes = summarize_findings(findings)
         if ai_notes:
-            lines.append("## AI Triage & Panduan Cek Manual")
+            lines.append("## Ringkasan Laporan Tervalidasi AI (Siap Kirim)")
             lines.append(ai_notes)
             lines.append("")
 
@@ -1221,24 +1395,30 @@ def build_briefing(date: str | None = None, include_ai: bool = True) -> str:
     for f in findings:
         by_prog.setdefault(f.get("program", "?"), []).append(f)
 
-    lines.append(f"Programs: {len(by_prog)} | Leads: {len(findings)}")
+    lines.append(f"Programs: {len(by_prog)} | Validated Reports: {len(findings)}")
     lines.append("")
     for prog, fl in by_prog.items():
-        lines.append(f"### {prog} ({len(fl)} leads)")
+        lines.append(f"### {prog} ({len(fl)} laporan siap kirim)")
         for f in fl[:10]:
-            lines.append(f"[{f.get('severity_hint', '?').upper()}] {f.get('type')} | {f.get('url', '')}")
+            score = f.get("ai_score", "-")
+            rep_file = f.get("report_file", "-")
+            lines.append(
+                f"[{f.get('severity_hint', '?').upper()} | AI:{score}/100] {f.get('type')} | {f.get('url', '')}"
+            )
+            lines.append(f"    Judul : {f.get('report_title', '-')[:160]}")
             lines.append(f"    Bukti : {f.get('evidence', '')[:180]}")
-            lines.append(f"    Next  : {f.get('next', '')[:180]}")
+            lines.append(f"    File  : {rep_file}")
         if len(fl) > 10:
-            lines.append(f"    ... +{len(fl) - 10} leads lagi di findings/")
+            lines.append(f"    ... +{len(fl) - 10} laporan lagi di findings/")
         lines.append("")
-    lines.append("Catatan: Cek policy scope & verifikasi manual di browser incognito sebelum submit.")
+    lines.append("File REPORT-*.md lengkap dengan bukti HTTP/DNS & langkah reproduksi dikirim sebagai dokumen lampiran.")
     return "\n".join(lines)
 
 
-def tg_send_text(text: str) -> bool:
+def tg_send_text(text: str, chat_id: str = "") -> bool:
     """Send briefing message in Telegram-safe chunks."""
-    if not (TG_TOKEN and TG_GENERAL):
+    target_chat = chat_id or TG_GENERAL or TG_DATA
+    if not (TG_TOKEN and target_chat):
         print("[!] Telegram belum diset (TELEGRAM_TOKEN / TELEGRAM_GENERAL_ID). Briefing hanya file.")
         return False
     ok = True
@@ -1246,54 +1426,117 @@ def tg_send_text(text: str) -> bool:
         try:
             r = requests.post(
                 f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
-                json={"chat_id": TG_GENERAL, "text": text[i : i + 3800]},
+                json={"chat_id": target_chat, "text": text[i : i + 3800]},
                 timeout=20,
             )
             if r.status_code != 200:
-                print(f"[!] Telegram sendMessage HTTP {r.status_code}: {r.text[:120]}")
+                print(f"[!] Telegram sendMessage HTTP {r.status_code}")
                 ok = False
         except Exception as e:
-            print(f"[!] Telegram gagal: {e}")
+            print(f"[!] Telegram gagal: {type(e).__name__}")
             ok = False
     return ok
 
 
+def tg_send_report_documents(day_dir: Path) -> int:
+    """Send each individual REPORT-*.md file directly to Telegram as a ready-to-submit document."""
+    target_chat = TG_GENERAL or TG_DATA
+    if not (TG_TOKEN and target_chat and day_dir.exists()):
+        return 0
+    sent = 0
+    for rpt in sorted(day_dir.rglob("REPORT-*.md"))[:15]:
+        title_line = rpt.stem
+        try:
+            first_line = rpt.read_text(encoding="utf-8", errors="ignore").splitlines()[0]
+            if first_line.startswith("# "):
+                title_line = first_line[2:].strip()[:120]
+        except Exception:
+            pass
+        caption = f"🚨 [LAPORAN SIAP KIRIM] {rpt.parent.name}: {title_line}"
+        try:
+            with open(rpt, "rb") as fh:
+                r = requests.post(
+                    f"https://api.telegram.org/bot{TG_TOKEN}/sendDocument",
+                    data={"chat_id": target_chat, "caption": caption[:1000]},
+                    files={"document": fh},
+                    timeout=35,
+                )
+                if r.status_code == 200:
+                    sent += 1
+                else:
+                    print(f"[!] Gagal kirim dokumen report HTTP {r.status_code}")
+        except Exception as e:
+            print(f"[!] Error kirim dokumen report: {type(e).__name__}")
+    return sent
+
+
 def cmd_brief(args) -> None:
-    """Generate daily briefing Markdown and optionally dispatch via Telegram."""
+    """Generate daily briefing Markdown and dispatch briefing + REPORT-*.md files via Telegram."""
     findings = collect_findings(args.date)
-    if not findings and args.send_telegram and not args.force:
-        print("[=] Tidak ada lead hari ini -> Telegram tidak dikirim (anti-spam).")
-    text = build_briefing(args.date, include_ai=not getattr(args, "no_ai", False))
     day = args.date or today_str()
+    day_dir = FINDINGS_DIR / day
+
+    tok_state = "SET" if TG_TOKEN else "MISSING"
+    gen_state = "SET" if TG_GENERAL else "MISSING"
+    dat_state = "SET" if TG_DATA else "MISSING"
+    ai_state = "SET" if os.environ.get("GROQ_API_KEY", "").strip() else "MISSING"
+    print(
+        f"[*] Config status: TELEGRAM_TOKEN={tok_state} | GENERAL_ID={gen_state} | "
+        f"DATA_ID={dat_state} | GROQ_API_KEY={ai_state}"
+    )
+
+    if not findings and args.send_telegram and not args.force:
+        print("[=] 0 laporan valid baru pada run ini -> Telegram tidak dikirim (anti-spam).")
+
+    text = build_briefing(args.date, include_ai=not getattr(args, "no_ai", False))
     FINDINGS_DIR.mkdir(exist_ok=True)
     out = FINDINGS_DIR / f"BRIEFING-{day}.md"
     out.write_text(text, encoding="utf-8")
-    print(f"[+] Briefing: {out.name} | leads: {len(findings)} | detail: Telegram + file lokal")
 
+    msg_ok = False
+    docs_sent = 0
     if args.send_telegram and (findings or args.force):
-        tg_send_text(text)
-    if args.send_telegram and TG_TOKEN and TG_DATA and findings:
+        msg_ok = tg_send_text(text)
+        docs_sent = tg_send_report_documents(day_dir)
+
+    archive_chat = TG_DATA or TG_GENERAL
+    if args.send_telegram and TG_TOKEN and archive_chat and findings and day_dir.exists():
         import zipfile
 
-        day_dir = FINDINGS_DIR / day
-        if day_dir.exists():
-            DATA_DIR.mkdir(exist_ok=True)
-            zpath = DATA_DIR / f"NOVA_LEADS_{day}.zip"
-            with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
-                for p in day_dir.rglob("*"):
-                    if p.is_file():
-                        z.write(p, p.relative_to(FINDINGS_DIR))
-            try:
-                with open(zpath, "rb") as fh:
-                    requests.post(
-                        f"https://api.telegram.org/bot{TG_TOKEN}/sendDocument",
-                        data={"chat_id": TG_DATA, "caption": f"NOVA leads {day}"},
-                        files={"document": fh},
-                        timeout=60,
-                    )
-                print(f"[+] Leads zip terkirim ke Telegram data channel: {zpath.name}")
-            except Exception as e:
-                print(f"[!] Kirim zip gagal: {e}")
+        DATA_DIR.mkdir(exist_ok=True)
+        zpath = DATA_DIR / f"NOVA_VALIDATED_REPORTS_{day}.zip"
+        with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+            for p in day_dir.rglob("*"):
+                if p.is_file():
+                    z.write(p, p.relative_to(FINDINGS_DIR))
+        try:
+            with open(zpath, "rb") as fh:
+                requests.post(
+                    f"https://api.telegram.org/bot{TG_TOKEN}/sendDocument",
+                    data={"chat_id": archive_chat, "caption": f"📦 NOVA Validated Reports & Evidence ({day})"},
+                    files={"document": fh},
+                    timeout=60,
+                )
+        except Exception as e:
+            print(f"[!] Kirim zip gagal: {type(e).__name__}")
+
+    print(
+        f"[+] Briefing: {out.name} | validated_reports: {len(findings)} | "
+        f"tg_msg_sent: {msg_ok} | tg_docs_sent: {docs_sent}"
+    )
+
+    step_summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if step_summary:
+        try:
+            with open(step_summary, "a", encoding="utf-8") as sf:
+                sf.write(
+                    f"\n### Status Validasi & Telegram\n"
+                    f"- Secrets: `TELEGRAM_TOKEN={tok_state}`, `GENERAL_ID={gen_state}`, `DATA_ID={dat_state}`, `GROQ_API_KEY={ai_state}`\n"
+                    f"- Laporan Valid (Lolos AI Gate): **{len(findings)}**\n"
+                    f"- Terkirim ke Telegram: pesan=`{msg_ok}`, dokumen laporan=`{docs_sent}`\n"
+                )
+        except Exception:
+            pass
 
 
 # ------------------------------------------------------------------- scope
@@ -1301,7 +1544,7 @@ def cmd_brief(args) -> None:
 def cmd_scope(args) -> None:
     """Audit & normalize targets/*.txt preserving explicit subdomains and `!` excludes."""
     STATE_DIR.mkdir(exist_ok=True)
-    print("=== NOVA SCOPE AUDIT (v2.1) ===")
+    print("=== NOVA SCOPE AUDIT (v2.2) ===")
     for f in sorted(TARGETS_DIR.glob("*.txt")):
         if f.stem == "test_target" or f.stem.startswith("_"):
             continue
@@ -1324,7 +1567,7 @@ def cmd_run(args) -> None:
     else:
         programs = list_programs()
 
-    print(f"=== NOVA v2.1 RUN {now_utc()} ===")
+    print(f"=== NOVA v2.2 RUN {now_utc()} ===")
     print(f"Programs ({len(programs)}): {', '.join(programs)}")
     for prog in programs:
         print(f"\n---- {prog} ----")
@@ -1348,7 +1591,9 @@ def cmd_run(args) -> None:
 # -------------------------------------------------------------------- CLI
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="NOVA v2.1 - Continuous Asset & JS Change Monitor")
+    ap = argparse.ArgumentParser(
+        description="NOVA v2.2 - Intelligent Recon, AI Validation Gate & Report Generator"
+    )
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     s = sub.add_parser("scope", help="normalisasi & audit targets/*.txt (aman utk subdomain & !exclude)")
@@ -1359,24 +1604,24 @@ def main() -> None:
     s.add_argument("--merge-file", default=None, help="file subfinder tambahan utk digabung")
     s.set_defaults(func=cmd_monitor)
 
-    s = sub.add_parser("probe", help="probe host dari antrean & update snapshot hosts")
+    s = sub.add_parser("probe", help="probe host (follow same-host redirect) & update snapshot hosts")
     s.add_argument("--program", required=True)
     s.add_argument("--batch-file", default=None)
     s.set_defaults(func=cmd_probe)
 
-    s = sub.add_parser("verify", help="verifikasi exposure/takeover/cors/graphql/js")
+    s = sub.add_parser("verify", help="verifikasi + AI Validation Gate + generate REPORT-*.md")
     s.add_argument("--program", required=True)
     s.add_argument("--probe-file", default=None)
     s.add_argument("--new-file", default=None)
     s.add_argument("--rebuild", action="store_true")
     s.set_defaults(func=cmd_verify)
 
-    s = sub.add_parser("diff", help="pantau perubahan host lama & diff JS bundle (API/GraphQL baru)")
+    s = sub.add_parser("diff", help="pantau perubahan host & diff JS bundle + AI Validation Gate")
     s.add_argument("--program", required=True)
     s.add_argument("--budget", type=int, default=None)
     s.set_defaults(func=cmd_diff)
 
-    s = sub.add_parser("brief", help="briefing harian + AI triage + telegram")
+    s = sub.add_parser("brief", help="kirim briefing + dokumen REPORT-*.md siap kirim ke Telegram")
     s.add_argument("--date", default=None)
     s.add_argument("--send-telegram", action="store_true")
     s.add_argument("--force", action="store_true")

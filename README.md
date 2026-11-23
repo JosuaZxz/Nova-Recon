@@ -1,23 +1,18 @@
-# NOVA v2.1 - Continuous Asset & JS Change Monitor
+# NOVA v2.2 - Intelligent Recon, AI Validation Gate & Report Generator
 
-Mesin recon & pemantau perubahan aset untuk bug bounty berbasis **delta subdomain + JS bundle diffing + scope guard**.
+Mesin recon & pemantau perubahan aset untuk bug bounty berbasis **delta subdomain + smart redirect follower + JS bundle diffing + AI Validation Gate**.
 
-## Apa yang Diperbaiki & Di-upgrade di v2.1
-1. **Lossless Probe Queue (`state/<program>.queue.txt`):** Subdomain baru di atas batas `NOVA_MAX_NEW_PROBE` (default 250) tidak lagi hilang dianggap "sudah known", melainkan tetap mengantre untuk run berikutnya.
-2. **Scope & Exclusion Guard (`scripts/scope_guard.py`):** Mendukung wildcard dan aturan pengecualian (`!host.example.com`, `!*.dev.example.com`, `!regex:...`) di `targets/<program>.txt`. Perintah `nova.py scope` tidak lagi memaksa subdomain menjadi apex root domain.
-3. **Host & JS Bundle Change Diffing (`scripts/js_intel.py` + `nova.py diff`):**
-   - Memantau perubahan status HTTP host lama (mis. `403/404 -> 200` atau redirect login hilang).
-   - Menormalisasi nama bundle JS ber-hash (`main.a1b2c3.js` -> `main.HASH.js`) sehingga saat developer rilis update, mesin mendeteksi **hanya route API / operasi GraphQL baru** yang ditambahkan dan mengecek `.js.map` yang terbuka.
-   - Menyaring false positive library JS pihak ketiga (`jquery`, `jsrsasign`, `validator.min`, placeholder/test key).
-4. **AI Triage & Panduan Cek Manual (`scripts/ai_brief.py`):** Jika `GROQ_API_KEY` diset, merangkum lead dan diff teratas ke briefing harian Telegram untuk mempercepat audit manual (tanpa auto-exploit).
-5. **Mode Fokus (`targets/_focus.txt`):** Hapus tanda `#` pada nama program pilihanmu di `targets/_focus.txt` agar run tiap jam fokus pada target yang benar-benar kamu ikuti.
-
-## Cara Pakai Lokal
-```bash
-pip install requests
-python scripts/nova.py scope
-python scripts/nova.py run --programs boozt,bykea --no-ai
-```
+## Alur Otomatis NOVA v2.2
+1. **Monitor & Lossless Queue (`state/<program>.queue.txt`):** Mencari subdomain baru dari CT logs (`crt.sh`, `subdomain.center`, `otx`, `subfinder`), menyaring dengan `scope_guard.py` (termasuk aturan `!exclude`), dan menyimpan antrean probe agar tidak ada subdomain yang terlewat batas 250 per run.
+2. **Smart Same-Host Redirect Follower (`probe_host`):** Mengikuti redirect `301/302/303/307/308` pada host yang sama hingga 3 hop (selama bukan halaman login) supaya halaman HTML utama serta bundle `<script src>` dan `<link rel="modulepreload" href="...js">` tetap tertangkap.
+3. **Double-Tap & Dual-DoH Verification (`verify` & `diff`):**
+   - **Double-Tap Canary Check:** Memastikan temuan `/.env`, `/.git`, `/actuator`, `/debug/vars`, `/server-status` bukan halaman catch-all dengan menguji path canary acak di direktori yang sama.
+   - **Dual-Resolver DoH Takeover Check:** Memverifikasi CNAME *claimable* di dua resolver independen (Cloudflare `1.1.1.1` & Google `8.8.8.8`) dan otomatis membuang `dangling-cname` level `info` (CloudFront/ELB non-claimable).
+   - **High-Entropy JS Secret & JS Route Diffing:** Menyaring token ber-entropi rendah/dummy serta library vendor, dan mendeteksi penambahan route API / operasi GraphQL baru saat bundle JS berubah.
+4. **AI Validation Gate & Laporan Siap Kirim (`ai_brief.py`):**
+   - Setiap kandidat divalidasi berdasarkan bukti HTTP Request/Response atau rantai DNS menggunakan `GROQ_API_KEY` (`validate_and_draft_report`).
+   - Kandidat **False Positive** langsung dibuang dan tidak dikirim ke Telegram.
+   - Kandidat **VALID** langsung dibuatkan dokumen laporan lengkap `REPORT-<program>-<type>-<hash>.md` (Title, Severity, Summary, Technical Analysis, Steps to Reproduce, Proof of Concept / Evidence, Impact, Remediation) dan dikirim sebagai lampiran dokumen ke Telegram.
 
 ## Menjalankan Unit Tests
 ```bash
