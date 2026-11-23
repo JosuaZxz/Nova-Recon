@@ -1123,13 +1123,109 @@ def check_exposures(base_url: str, catchall: bool) -> list[dict]:
     return findings
 
 
+API_ERROR_MARKERS = (
+    '"error":',
+    '"errors":',
+    "unauthorized",
+    "missing session",
+    "forbidden",
+    "not logged in",
+    "login required",
+    "invalid token",
+    "access denied",
+    "path not found",
+    '"success":false',
+    '"success": false',
+)
+
+API_SENSITIVE_MARKERS = (
+    '"email":',
+    '"users":',
+    '"token":',
+    '"access_token":',
+    '"secret":',
+    '"password":',
+    '"apikey":',
+    '"api_key":',
+    '"private_key":',
+    '"phone":',
+    '"balance":',
+    '"credentials":',
+)
+
+
+def verify_extracted_routes(
+    js_url: str, routes: list[str], policy: ProgramPolicy
+) -> list[dict]:
+    """
+    Politely test extracted JS API routes (GET + Accept: application/json) and
+    only report endpoints that return 200 OK JSON with sensitive data + pass canary check.
+    """
+    parsed_js = urlparse(js_url)
+    base_origin = f"{parsed_js.scheme}://{parsed_js.netloc}"
+    if not policy.in_scope(base_origin):
+        return []
+
+    concrete = [
+        r
+        for r in routes
+        if r.startswith("/")
+        and ":" not in r
+        and "{" not in r
+        and not any(pub in r.lower() for pub in ("/public/", "/country-list", "/config/web", "/login", "/signin"))
+    ]
+    findings = []
+    for route in concrete[:6]:
+        target_url = base_origin + route
+        r, _ = http_get(target_url, extra_headers={"Accept": "application/json"}, max_bytes=30_000)
+        if r is None or r.status_code != 200:
+            continue
+        ct = r.headers.get("Content-Type", "").lower()
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore").strip()
+        if len(body) < 40 or "html" in ct or body[:1] not in ("{", "["):
+            continue
+        body_l = body.lower()
+        if any(err in body_l for err in API_ERROR_MARKERS):
+            continue
+        if not any(sens in body_l for sens in API_SENSITIVE_MARKERS):
+            continue
+
+        # Double-tap canary on the same API prefix
+        parent = route.rsplit("/", 1)[0] or "/api"
+        rc, _ = http_get(
+            f"{base_origin}{parent}/nova-canary-{random.randint(10000, 99999)}",
+            extra_headers={"Accept": "application/json"},
+            max_bytes=8000,
+        )
+        if rc is not None and rc.status_code == 200:
+            c_body = getattr(rc, "_nova_body", b"").decode("utf-8", "ignore").strip()
+            if c_body[:1] in ("{", "[") and abs(len(c_body) - len(body)) < 80:
+                continue
+
+        findings.append(
+            {
+                "type": "unauth-api",
+                "url": target_url,
+                "host": parsed_js.netloc.lower(),
+                "severity_hint": "high",
+                "confidence": "strong",
+                "evidence": f"Unauthenticated 200 OK JSON on JS route {route} (from {parsed_js.path})",
+                "request_evidence": f"GET {route} HTTP/1.1\nHost: {parsed_js.netloc}\nAccept: application/json",
+                "response_evidence": _format_resp_evidence(r, _redact_body_secrets(body[:800])),
+                "next": "Verifikasi di browser incognito bahwa data JSON yang dikembalikan adalah data sensitif/internal tanpa login.",
+            }
+        )
+        break
+    return findings
+
+
 def _fetch_and_analyze_js(
     js_targets: list[tuple[str, bool]],
     policy: ProgramPolicy,
     js_state: dict,
     run_diff: bool = True,
 ) -> list[dict]:
-    """Fetch unique in-scope non-vendor JS bundles and run secret + diff analysis."""
+    """Fetch unique in-scope non-vendor JS bundles and run secret + live route verification."""
     findings = []
     seen_urls: set[str] = set()
     fetched = 0
@@ -1159,7 +1255,10 @@ def _fetch_and_analyze_js(
             if entry is not None:
                 js_state[canonical_js_key(js_url)] = entry
             if diff_finding is not None:
-                findings.append(diff_finding)
+                # Instead of reporting raw route strings, verify if any extracted route leaks 200 OK JSON
+                candidate_routes = diff_finding.get("added_routes") or []
+                if candidate_routes:
+                    findings.extend(verify_extracted_routes(js_url, candidate_routes, policy))
                 sm_url = diff_finding.get("sourcemap_url")
                 if sm_url and policy.in_scope(sm_url):
                     sm_resp, _ = http_get(sm_url, max_bytes=4096)

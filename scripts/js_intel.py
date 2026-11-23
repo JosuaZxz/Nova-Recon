@@ -259,6 +259,25 @@ def diff_js_bundle(
     prev = js_state.get(key)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
+    # Skip duplicate bundles with identical sha256 already analyzed on sibling subdomains
+    seen_hashes = {
+        v.get("sha256")
+        for v in js_state.values()
+        if isinstance(v, dict) and v.get("sha256")
+    }
+    if intel["sha256"] in seen_hashes:
+        if prev:
+            prev["last_url"] = js_url
+            prev["updated"] = now
+            return prev, None
+        return {
+            "last_url": js_url,
+            "sha256": intel["sha256"],
+            "routes": intel["routes"][:MAX_ROUTES_PER_BUNDLE],
+            "graphql_ops": intel["graphql_ops"][:MAX_OPS_PER_BUNDLE],
+            "updated": now,
+        }, None
+
     if prev and prev.get("sha256") == intel["sha256"]:
         prev["last_url"] = js_url
         prev["updated"] = now

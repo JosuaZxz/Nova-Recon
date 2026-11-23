@@ -27,6 +27,10 @@ def deterministic_fp_check(finding: dict) -> tuple[bool, str]:
     if ftype == "dangling-cname":
         return True, "Non-claimable CDN/ELB dangling CNAME (informative only)"
 
+    # Bare js-diff (route strings in JS without proven unauthenticated 200 OK leak) is recon intel, NOT a reportable bug
+    if ftype == "js-diff":
+        return True, "JS route list alone is recon intel, not a reportable vulnerability without proven unauth data leak"
+
     if ftype == "cors" and finding.get("severity_hint") != "high":
         return True, "CORS reflection without Access-Control-Allow-Credentials: true"
 
@@ -58,7 +62,7 @@ def _fallback_draft(finding: dict) -> dict:
         "graphql": f"Exposed GraphQL Introspection and Schema Operations on {url}",
         "sourcemap": f"Exposed Production JavaScript SourceMap on {url}",
         "host-change": f"Previously Restricted Endpoint Transitioned to Public 200 OK on {url}",
-        "js-diff": f"Newly Deployed High-Sensitivity API Routes Detected in {url}",
+        "unauth-api": f"Unauthenticated Sensitive API Data Exposure on {url}",
     }
     impacts = {
         "exposure": (
@@ -89,9 +93,9 @@ def _fallback_draft(finding: dict) -> dict:
             "An endpoint that previously enforced access restrictions (401/403/404 or auth redirect) "
             "now responds with 200 OK and should be verified for broken access control."
         ),
-        "js-diff": (
-            "Newly deployed API routes or GraphQL mutations often lack complete authorization checks "
-            "immediately after release."
+        "unauth-api": (
+            "An internal or private API route discovered via JavaScript bundle analysis responds with "
+            "200 OK and returns sensitive JSON data without requiring authentication."
         ),
     }
     remediations = {
@@ -102,7 +106,7 @@ def _fallback_draft(finding: dict) -> dict:
         "graphql": "Disable GraphQL introspection in production environments unless explicitly required for public APIs, and enforce field-level authorization.",
         "sourcemap": "Disable `.js.map` generation or restrict access to source map files in production deployments.",
         "host-change": "Verify that authentication and role-based access controls are properly enforced on the newly accessible host.",
-        "js-diff": "Audit the newly introduced API endpoints and GraphQL operations for proper authentication and object-level authorization (IDOR).",
+        "unauth-api": "Enforce authentication and role-based authorization checks on the exposed API endpoint before returning any internal or user data.",
     }
 
     return {
@@ -141,15 +145,15 @@ def validate_and_draft_report(finding: dict) -> dict | None:
 
     api_key = os.environ.get("GROQ_API_KEY", "").strip()
     if not api_key:
-        # When no AI key is available, only pass through strong/high-signal findings
-        if finding.get("confidence") == "strong" or finding.get("type") in (
+        if finding.get("confidence") == "strong" and finding.get("type") in (
             "exposure",
             "takeover",
             "js-secret",
-            "host-change",
-            "js-diff",
+            "cors",
+            "unauth-api",
         ):
             return _fallback_draft(finding)
+        finding["_rejection_reason"] = "No GROQ_API_KEY and finding is not strong-confidence direct proof"
         return None
 
     model = os.environ.get("NOVA_AI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL

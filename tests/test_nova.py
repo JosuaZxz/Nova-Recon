@@ -295,6 +295,44 @@ class TestNovaV22(unittest.TestCase):
                 batch3 = (ddir / "legacy" / "probe_batch.txt").read_text(encoding="utf-8").splitlines()
                 self.assertEqual(batch3, [])
 
+    def test_verify_extracted_routes_drops_403_and_reports_unauth_200_json(self):
+        policy = scope_guard.ProgramPolicy(program="demo", includes=["demo.org"])
+
+        def fake_http(url, **kwargs):
+            r = MagicMock()
+            if url == "https://portal.demo.org/api/internal/users":
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = (
+                    b'{"users":[{"id":1,"email":"admin@demo.org","role":"superadmin"}]}'
+                )
+                return r, None
+            if url == "https://portal.demo.org/api/internal/locked":
+                r.status_code = 403
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"error":{"message":"missing session cookie"}}'
+                return r, None
+            r.status_code = 404
+            r.headers = {"Content-Type": "application/json"}
+            r._nova_body = b'{"error":"not found"}'
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_http):
+            # 403 route must return 0 findings
+            self.assertEqual(
+                nova.verify_extracted_routes(
+                    "https://portal.demo.org/app.js", ["/api/internal/locked"], policy
+                ),
+                [],
+            )
+            # 200 OK JSON with sensitive fields + 404 canary must emit unauth-api
+            hits = nova.verify_extracted_routes(
+                "https://portal.demo.org/app.js", ["/api/internal/users"], policy
+            )
+            self.assertEqual(len(hits), 1)
+            self.assertEqual(hits[0]["type"], "unauth-api")
+            self.assertIn("admin@demo.org", hits[0]["response_evidence"])
+
     def test_ai_gatekeeper_rejects_fp_and_generates_ready_report_for_valid(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
