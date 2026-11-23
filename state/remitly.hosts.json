@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "api.business.remitly.com": {
   "url": "https://api.business.remitly.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "ablink.accounts.remitly.com": {
   "url": "https://ablink.accounts.remitly.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "alertmanager-corp.int.remitly.com": {
   "url": "https://alertmanager-corp.int.remitly.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "vpn-pa.int.remitly.com": {
   "url": "https://vpn-pa.int.remitly.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "alertmanager-eks-prod-ca.int.remitly.com": {
   "url": "https://alertmanager-eks-prod-ca.int.remitly.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "jira.remitly.com": {
   "url": "https://jira.remitly.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "crm-preprod.dev.remitly.com": {
   "url": "https://crm-preprod.dev.remitly.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "test-cdn.infra.int.remitly.com": {
   "url": "https://test-cdn.infra.int.remitly.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "vpn-bk.int.remitly.com": {
   "url": "https://vpn-bk.int.remitly.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "data.remitly.com": {
   "url": "https://data.remitly.com/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "confluence.remitly.com": {
   "url": "https://confluence.remitly.com/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "mtls-test.infra.int.remitly.com": {
   "url": "http://mtls-test.infra.int.remitly.com/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "echo-cloudfront.dev.remitly.com": {
   "url": "https://echo-cloudfront.dev.remitly.com/",
@@ -138,7 +138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "console.remitly.com": {
   "url": "https://console.remitly.com/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "fastlane.dev.remitly.com": {
   "url": "https://fastlane.dev.remitly.com/",
@@ -158,17 +158,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "guidebook.dev.remitly.com": {
   "url": "https://guidebook.dev.remitly.com/",
   "http_status": 302,
   "title": "302 Found",
-  "redirect": "https://github.com/pages/auth?nonce=863d8661-8f0a-472b-bf46-3d58a879128b&page_id=51378880&path=Lw",
+  "redirect": "https://github.com/pages/auth?nonce=8a85ab66-48ba-4cb9-9ab0-e34046a2d366&page_id=51378880&path=Lw",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "receive-login.remitly.com": {
   "url": "https://receive-login.remitly.com/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "login.remitly.com": {
   "url": "https://login.remitly.com/",
@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "vpn.int.remitly.com": {
   "url": "https://vpn.int.remitly.com/",
@@ -198,7 +198,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "login.dev.remitly.com": {
   "url": "https://login.dev.remitly.com/",
@@ -208,7 +208,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "api.remitly.com": {
   "url": "https://api.remitly.com/",
@@ -218,7 +218,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "news.remitly.com": {
   "url": "https://news.remitly.com/",
@@ -228,7 +228,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
  },
  "auth.remitly.com": {
   "url": "https://auth.remitly.com/",
@@ -238,6 +238,415 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-23 11:47:30 UTC"
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "fastlane.int.remitly.com": {
+  "url": "https://fastlane.int.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Ffastlane.int.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=ope",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "ir.remitly.com": {
+  "url": "https://ir.remitly.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "investorday2025.remitly.com": {
+  "url": "https://investorday2025.remitly.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "email.comms.remitly.com": {
+  "url": "https://email.comms.remitly.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "locationvalidation.remitly.com": {
+  "url": "https://locationvalidation.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Flocationvalidation.remitly.com%2Foauth2%2Fidpresponse&response_type=code&sco",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "echo-cloudfront.int.remitly.com": {
+  "url": "https://echo-cloudfront.int.remitly.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "wiki.remitly.com": {
+  "url": "https://wiki.remitly.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://remitly.atlassian.net:443/wiki/search?text=",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "receive.remitly.com": {
+  "url": "https://receive.remitly.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "riz6telt.remitly.com": {
+  "url": "https://riz6telt.remitly.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.rockerbox.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "forms.remitly.com": {
+  "url": "https://forms.remitly.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "community.remitly.com": {
+  "url": "https://community.remitly.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://communities.remitly.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "www.remitly.com": {
+  "url": "https://www.remitly.com/",
+  "http_status": 200,
+  "title": "Send or Transfer Money Online with Remitly",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "email.recruiting.remitly.com": {
+  "url": "https://email.recruiting.remitly.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "caribou.int.remitly.com": {
+  "url": "https://caribou.int.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fcaribou.int.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=open",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "supportq.remitly.com": {
+  "url": "http://supportq.remitly.com/",
+  "http_status": 409,
+  "title": "DNS resolution error | supportq.remitly.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "ablink.promotion.remitly.com": {
+  "url": "https://ablink.promotion.remitly.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "blog.remitly.com": {
+  "url": "https://blog.remitly.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.remitly.com/blog/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "cdn.remitly.com": {
+  "url": "https://cdn.remitly.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "remitly.com": {
+  "url": "https://www.remitly.com/",
+  "http_status": 200,
+  "title": "Send or Transfer Money Online with Remitly",
+  "redirect": "https://www.remitly.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "u.remitly.com": {
+  "url": "https://u.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fu.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=openid%20offli",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "ablink.info.remitly.com": {
+  "url": "https://ablink.info.remitly.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "link.remitly.com": {
+  "url": "https://link.remitly.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.remitly.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "careers.remitly.com": {
+  "url": "https://careers.remitly.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "thecommons.remitly.com": {
+  "url": "https://thecommons.remitly.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://remitly-intranet--simpplr.vf.force.com/apex/simpplr__app?u",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "fp.fp.remitly.com": {
+  "url": "https://fp.fp.remitly.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "crm.remitly.com": {
+  "url": "https://crm.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fcrm.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=openid%20off",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "renderer.int.remitly.com": {
+  "url": "https://renderer.int.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Frenderer.int.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=ope",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "help.remitly.com": {
+  "url": "https://help.remitly.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.remitly.com/help",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "experiments.remitly.com": {
+  "url": "https://experiments.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fexperiments.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=open",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "circle.remitly.com": {
+  "url": "https://circle.remitly.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.remitly.com/us/en/help/article/remitly-circle-closure",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "prices.remitly.com": {
+  "url": "https://prices.remitly.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "communities.remitly.com": {
+  "url": "https://communities.remitly.com/",
+  "http_status": 200,
+  "title": "Communities by Remitly",
+  "redirect": "",
+  "scripts": [
+   "https://communities.remitly.com/assets/js/browser-detect-47cf9e6d.js",
+   "https://communities.remitly.com/assets/js/browser-update-91688f13.js",
+   "https://communities.remitly.com/assets/js/chunk-bnocbb0r.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-cp88amps.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-d3lgm4m7.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-dqwgstp5.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-e766kyeu.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-fk95q04y.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-imbltlrc.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-jlyqi51q.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-jw2h66o5.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-k685960q.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-k9edkju2.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-lnco6fu6.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-ow1tmal8.digested.js",
+   "https://communities.remitly.com/assets/js/chunk-paun8y58.digested.js",
+   "https://communities.remitly.com/assets/js/discourse-fnozcs3d.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/automation_main.CV03uz-bs1ahped.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/checklist_main.DkrFWa-7n46kmud.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-ai_chunk.B-KgEm-nuz6du4p.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-ai_main.DvpbXZ-nuz6du4p.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-data-explorer_chunk.BC-YlP-rmx6l2w5.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-data-explorer_main.gGglmv-rmx6l2w5.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-details_main.J8PEHv-kpouuvol.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-lazy-videos_main.Cb5qOh-13yo27kf.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-local-dates_main.Cp2O9s-pqa5y5u9.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-narrative-bot_main.fbt6c0-34gbi7td.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-oauth2-basic_main.BPldbA-j25ljs95.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-openid-connect_main.CS7u7X-oue4g54d.digested.js",
+   "https://communities.remitly.com/assets/js/plugins/discourse-presence_main.SkAhfg-2rzrzebw.digested.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "pulse.remitly.com": {
+  "url": "https://pulse.remitly.com/",
+  "http_status": 200,
+  "title": "Remitly Global Pulse",
+  "redirect": "",
+  "scripts": [
+   "https://pulse.remitly.com/_next/static/chunks/0cz1d0mv5g_q7.js",
+   "https://pulse.remitly.com/_next/static/chunks/0kqziy-7_gy73.js",
+   "https://pulse.remitly.com/_next/static/chunks/2aczmt27cjxp1.js",
+   "https://pulse.remitly.com/_next/static/chunks/2ic-n6tfs7p-6.js",
+   "https://pulse.remitly.com/_next/static/chunks/395glp5--7qza.js",
+   "https://pulse.remitly.com/_next/static/chunks/3qfy96eoyh-ek.js",
+   "https://pulse.remitly.com/_next/static/chunks/turbopack-2u1d16houkiyo.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "metrics.int.remitly.com": {
+  "url": "https://metrics.int.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fmetrics.int.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=open",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "forum.remitly.com": {
+  "url": "https://forum.remitly.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://communities.remitly.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
+ },
+ "crm.int.remitly.com": {
+  "url": "https://crm.int.remitly.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://remitly.okta.com/oauth2/ausao0cjz0xRhVf0K357/v1/authorize?client_id=0oaao0ewz2evuqfMM357&redirect_uri=https%3A%2F%2Fcrm.int.remitly.com%2Foauth2%2Fidpresponse&response_type=code&scope=openid%2",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:28:45 UTC"
+ },
+ "brand.remitly.com": {
+  "url": "https://brand.remitly.com/auth/?referer=%2F",
+  "http_status": 200,
+  "title": "Remitly--Inc",
+  "redirect": "https://brand.remitly.com/auth/?referer=%2F",
+  "scripts": [],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-23 15:29:05 UTC"
  }
 }

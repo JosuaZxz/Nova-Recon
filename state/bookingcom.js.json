@@ -1,0 +1,18 @@
+{
+ "https://supplier-portal.rentalcars.com/vendor.HASH.js": {
+  "last_url": "https://supplier-portal.rentalcars.com/vendor.c3772efb4a3d65f0b363.js",
+  "sha256": "cbbb04d13eed19f870f8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:06:35 UTC"
+ },
+ "https://supplier-portal.rentalcars.com/app.HASH.js": {
+  "last_url": "https://supplier-portal.rentalcars.com/app.947f1885f4c95d46aebf.js",
+  "sha256": "befc304cd5a1fa235ca7",
+  "routes": [
+   "/api/supplier-link"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:06:35 UTC"
+ }
+}

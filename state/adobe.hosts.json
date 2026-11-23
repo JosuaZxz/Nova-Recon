@@ -1,0 +1,173 @@
+{
+ "_seeded": true,
+ "account.magento.com": {
+  "url": "https://account.magento.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://account.magento.com/customer/account/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "developer-stg.magento.com": {
+  "url": "https://developer-stg.magento.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://commercedeveloper-sandbox.adobe.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "mcus-staging.ecg.magento.com": {
+  "url": "https://mcus-staging.ecg.magento.com/",
+  "http_status": 401,
+  "title": "401 Authorization Required",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "dev.wopi.acrobat.adobe.com": {
+  "url": "https://dev.wopi.acrobat.adobe.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "mcc.stg.swat.magento.com": {
+  "url": "http://mcc.stg.swat.magento.com/",
+  "http_status": 500,
+  "title": "Fastly error: unknown domain mcc.stg.swat.magento.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "domain1.staging.cloud.sparta.magento.com": {
+  "url": "https://domain1.staging.cloud.sparta.magento.com/",
+  "http_status": 405,
+  "title": "405 Not allowed",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "grafana.prc.ceng.magento.com": {
+  "url": "https://grafana.prc.ceng.magento.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "domain2.staging.cloud.sparta.magento.com": {
+  "url": "https://domain2.staging.cloud.sparta.magento.com/",
+  "http_status": 405,
+  "title": "405 Not allowed",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "dev.photoshop.adobe.com": {
+  "url": "https://dev.photoshop.adobe.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "wildcard.annotate-staging.fonts.adobe.com": {
+  "url": "https://wildcard.annotate-staging.fonts.adobe.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "marketplace-stg2.magento.com": {
+  "url": "https://marketplace-stg2.magento.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "annotate-staging.fonts.adobe.com": {
+  "url": "https://annotate-staging.fonts.adobe.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "marketplace-stg.magento.com": {
+  "url": "http://marketplace-stg.magento.com/",
+  "http_status": 500,
+  "title": "Fastly error: unknown domain marketplace-stg.magento.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "test2-kadr73gkw2majovnekk4u6.acc.magento.com": {
+  "url": "http://test2-kadr73gkw2majovnekk4u6.acc.magento.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "marketplace-stg3.magento.com": {
+  "url": "https://marketplace-stg3.magento.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "stage.acrobat.adobe.com": {
+  "url": "https://stage.acrobat.adobe.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ },
+ "prestage.account.adobe.com": {
+  "url": "https://prestage.account.adobe.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:17:27 UTC"
+ }
+}

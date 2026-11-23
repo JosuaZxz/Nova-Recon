@@ -1,0 +1,286 @@
+{
+ "_seeded": true,
+ "partner-mcp.fareharbor.com": {
+  "url": "https://partner-mcp.fareharbor.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "api.area51.fareharbor.com": {
+  "url": "https://api.area51.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "accounts-portal.booking.com": {
+  "url": "http://accounts-portal.booking.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "mcp.staging.desk.fareharbor.com": {
+  "url": "https://mcp.staging.desk.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "metasearch-connect-api.booking.com": {
+  "url": "https://metasearch-connect-api.booking.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "test.us.partnerships.booking.com": {
+  "url": "https://test.us.partnerships.booking.com/",
+  "http_status": 401,
+  "title": "401 Authorization Required",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "on1z7fcejwmjqbhytk6bhu4xc8pvgw2laxemdrv5.fareharbor.com": {
+  "url": "https://on1z7fcejwmjqbhytk6bhu4xc8pvgw2laxemdrv5.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "partner.booking.com": {
+  "url": "https://partner.booking.com/",
+  "http_status": 202,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "pegauat.carrentalscs.booking.com": {
+  "url": "http://pegauat.carrentalscs.booking.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "authentication-dqs.portal.airline.booking.com": {
+  "url": "https://authentication-dqs.portal.airline.booking.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://portal.airline.booking.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "api.bonete.fareharbor.com": {
+  "url": "https://api.bonete.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "oktapreview.booking.com": {
+  "url": "https://oktapreview.booking.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://oktapreview.booking.com/app/UserHome?iss=https%3A%2F%2Foktapreview.booking.com&session_hint=AUTHENTICATED",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "portal.dev.trips.booking.com": {
+  "url": "https://portal.dev.trips.booking.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "relay.account.booking.com": {
+  "url": "https://relay.account.booking.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://account.booking.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "api.alexandria.fareharbor.com": {
+  "url": "https://api.alexandria.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "api.demo.fareharbor.com": {
+  "url": "https://api.demo.fareharbor.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "demand.developers.booking.com": {
+  "url": "https://demand.developers.booking.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://developers.booking.com/demand/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "staging-readg.fareharbor.com": {
+  "url": "https://staging-readg.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "partner-stagingc.fareharbor.com": {
+  "url": "https://partner-stagingc.fareharbor.com/",
+  "http_status": 403,
+  "title": "FareHarbor",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "admin-lhr4.booking.com": {
+  "url": "https://admin-lhr4.booking.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "cars-test.booking.com": {
+  "url": "https://cars-test.booking.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "admin-l.booking.com": {
+  "url": "https://admin-l.booking.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "supplier-portal.rentalcars.com": {
+  "url": "https://supplier-portal.rentalcars.com/",
+  "http_status": 200,
+  "title": "Supplier Portal",
+  "redirect": "",
+  "scripts": [
+   "https://supplier-portal.rentalcars.com/app.947f1885f4c95d46aebf.js",
+   "https://supplier-portal.rentalcars.com/vendor.c3772efb4a3d65f0b363.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "click.emailsolutions.partnerships.booking.com": {
+  "url": "https://click.emailsolutions.partnerships.booking.com/",
+  "http_status": 403,
+  "title": "403 - Forbidden: Access is denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "grafana-staging.booking.com": {
+  "url": "https://grafana-staging.booking.com/",
+  "http_status": 200,
+  "title": "Grafana",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "pegaqa.cs-help.booking.com": {
+  "url": "https://pegaqa.cs-help.booking.com/prweb/app/km-central/IPx1mLCbiSWGIEtGwwlB2Zl-NOTpHvpZ*/!STANDARD?pzuiactionrrr=CXtpbn0xbjI0TGZ4Zm5aR1VEOTE1OEsxOXpsbU1oZkxxd0J2ZHBaWGtuaXB0YTVDZ3Jad3JTQWFNRm9XcEg2aWpqaWV1RGVRcnluTE40T2lwblZ4ZlBZVDhCZEVCTnFBeXpxbDBIdDROVHNtcFBnMEIxb056a0dSY3F4MDBSdFZ2a0dUTQ%3D%3D*",
+  "http_status": 303,
+  "title": "",
+  "redirect": "https://pegaqa.cs-help.booking.com/prweb/app/km-central/IPx1mLCbiSWGIEtGwwlB2Zl-NOTpHvpZ*/!STANDARD?pzuiactionrrr=CXtpbn0xbjI0TGZ4Zm5aR1VEOTE1OEsxOXpsbU1oZkxxd0J2ZHBaWGtuaXB0YTVDZ3Jad3JTQWFNRm9XcEg2aW",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "pegaqa.kmhub.booking.com": {
+  "url": "https://pegaqa.kmhub.booking.com/prweb/PRAuth/app/KnowHub/S59qVFKihAAVHtzrgqNq15APU2MVmKbt*/!STANDARD?pzuiactionrrr=CXtpbn0ybFpleXlPUm4zL29Ma0pzWlhVTGhaVVdBc2R6NSsvb1B6Mmw1WFhVdkQzZ1JFQ21GRFQrbHoyTFc0ZGhNSzhRNmZjTXY0ZWFOeHBKbnFTNGlFZEZTWlJWRUc4RkFXcUtISEpaNjFTdWtRdWdnTy9sMDVjcHJBeFN4L0Q0akVPeg%3D%3D*",
+  "http_status": 303,
+  "title": "",
+  "redirect": "https://pegaqa.kmhub.booking.com/prweb/PRAuth/app/KnowHub/S59qVFKihAAVHtzrgqNq15APU2MVmKbt*/!STANDARD?pzuiactionrrr=CXtpbn0ybFpleXlPUm4zL29Ma0pzWlhVTGhaVVdBc2R6NSsvb1B6Mmw1WFhVdkQzZ1JFQ21GRFQrbHoyTFc0",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ },
+ "pegadev.uad.booking.com": {
+  "url": "https://pegadev.uad.booking.com/prweb/PRAuth/app/uad/S59qVFKihAAVHtzrgqNq15APU2MVmKbt*/!STANDARD?pzuiactionrrr=CXtpbn1EUFVOeGk1YmRlZFBDY0JsS1VQTlAwbnNkZE5OaWY3WG94amR3MlNkaGU5VHRiWEcxS3JjWXJTQm5kVFY5VTBSZVdDN3NMM0wvUStQb3ZCSnpTZzJUMkg4eklTbWlqRytXeSszN0NJek1NZXN5WVhVS0doQ25xUWVEeWxURFczVg%3D%3D*",
+  "http_status": 200,
+  "title": "Login Page",
+  "redirect": "https://pegadev.uad.booking.com/prweb/PRAuth/app/uad/S59qVFKihAAVHtzrgqNq15APU2MVmKbt*/!STANDARD?pzuiactionrrr=CXtpbn1EUFVOeGk1YmRlZFBDY0JsS1VQTlAwbnNkZE5OaWY3WG94amR3MlNkaGU5VHRiWEcxS3JjWXJTQm5kVFY5V",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 15:06:34 UTC"
+ }
+}

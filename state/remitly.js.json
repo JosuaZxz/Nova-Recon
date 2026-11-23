@@ -1,0 +1,123 @@
+{
+ "https://communities.remitly.com/assets/js/plugins/automation_main.CV03uz-bs1ahped.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/automation_main.CV03uz-bs1ahped.digested.js",
+  "sha256": "0d2be097848b0d57687b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:05 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/checklist_main.DkrFWa-7n46kmud.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/checklist_main.DkrFWa-7n46kmud.digested.js",
+  "sha256": "05cbab48b4cf65c5867c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-ai_main.DvpbXZ-nuz6du4p.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-ai_main.DvpbXZ-nuz6du4p.digested.js",
+  "sha256": "5af1157130e483aac3a5",
+  "routes": [
+   "/admin/plugins/discourse-ai/",
+   "/admin/plugins/discourse-ai/admin-dashboard-highlights.json",
+   "/admin/plugins/discourse-ai/ai-embeddings/test.json",
+   "/admin/plugins/discourse-ai/ai-llms/test.json",
+   "/admin/plugins/discourse-ai/ai-mcp-servers/test.json",
+   "/admin/plugins/discourse-ai/ai-theme-translations"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-data-explorer_main.gGglmv-rmx6l2w5.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-data-explorer_main.gGglmv-rmx6l2w5.digested.js",
+  "sha256": "fb0ee38728fc25bb1ec2",
+  "routes": [
+   "/admin/plugins/discourse-data-explorer/groups.json",
+   "/admin/plugins/discourse-data-explorer/queries.json",
+   "/admin/plugins/discourse-data-explorer/queries/",
+   "/admin/plugins/discourse-data-explorer/queries/generate.json",
+   "/admin/plugins/discourse-data-explorer/queries/preview.json",
+   "/admin/plugins/discourse-data-explorer/schema.json"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-details_main.J8PEHv-kpouuvol.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-details_main.J8PEHv-kpouuvol.digested.js",
+  "sha256": "ce7f6494cd5fe63316d3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-lazy-videos_main.Cb5qOh-13yo27kf.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-lazy-videos_main.Cb5qOh-13yo27kf.digested.js",
+  "sha256": "ce0d9d52665554329a66",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-local-dates_main.Cp2O9s-pqa5y5u9.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-local-dates_main.Cp2O9s-pqa5y5u9.digested.js",
+  "sha256": "33a53200fc3d0f5a4569",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://communities.remitly.com/assets/js/plugins/discourse-narrative-bot_main.fbt6c0-34gbi7td.digested.js": {
+  "last_url": "https://communities.remitly.com/assets/js/plugins/discourse-narrative-bot_main.fbt6c0-34gbi7td.digested.js",
+  "sha256": "9fc245a8735cb294add7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/0kqziy-7_gy73.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/0kqziy-7_gy73.js",
+  "sha256": "f5d8c9a70d70e2c60d6d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/395glp5--7qza.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/395glp5--7qza.js",
+  "sha256": "0050f0322b85d01a7201",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/2ic-n6tfs7p-6.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/2ic-n6tfs7p-6.js",
+  "sha256": "935c4175dd98991b6f50",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/turbopack-2u1d16houkiyo.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+  "sha256": "439be7f075d69bbf510c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:06 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/3qfy96eoyh-ek.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/3qfy96eoyh-ek.js",
+  "sha256": "0f13eecc75702fa059f0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:07 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/2aczmt27cjxp1.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/2aczmt27cjxp1.js",
+  "sha256": "bb4adf04c1ba9597c530",
+  "routes": [
+   "/api/pulse"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:07 UTC"
+ },
+ "https://pulse.remitly.com/_next/static/chunks/0cz1d0mv5g_q7.js": {
+  "last_url": "https://pulse.remitly.com/_next/static/chunks/0cz1d0mv5g_q7.js",
+  "sha256": "0973c1d64c88adc8e3c9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 15:29:07 UTC"
+ }
+}
