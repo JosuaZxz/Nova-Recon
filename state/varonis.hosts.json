@@ -1,1 +1,461 @@
-{}
+{
+ "_seeded": true,
+ "us-dc08.deployment.api.varonis.io": {
+  "url": "https://us-dc08.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "us-dc06.deployment.api.varonis.io": {
+  "url": "https://us-dc06.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "dev.varonis.com": {
+  "url": "https://dev.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.cloud.redocly.com/oidc/oauth2/auth?client_id=cd6c8c6f-2945-430f-a93a-5d3c219ac38e&scope=openid+offline+email&response_type=code&redirect_uri=https%3A%2F%2Fdev.varonis.com%2F_auth%2Foidc&s",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "vpn2.varonis.com": {
+  "url": "https://vpn2.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://vpn2.varonis.com/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "us-dc04.deployment.api.varonis.io": {
+  "url": "https://us-dc04.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth.ca.app.varonis.io": {
+  "url": "https://auth.ca.app.varonis.io/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth-fdr01.api.varonis.io": {
+  "url": "https://auth-fdr01.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "eu-dc02.deployment.api.varonis.io": {
+  "url": "https://eu-dc02.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "dedicated-bnp-dc01.deployment.api.varonis.io": {
+  "url": "https://dedicated-bnp-dc01.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "authupload.varonis.com": {
+  "url": "https://authupload.varonis.com/",
+  "http_status": 502,
+  "title": "502 Bad Gateway",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "vdivpn.varonis.com": {
+  "url": "https://vdivpn.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://vdivpn.varonis.com/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "registry.api.varonis.io": {
+  "url": "https://registry.api.varonis.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth-us-dc06.api.varonis.io": {
+  "url": "https://auth-us-dc06.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "loginxcorp-preview.varonis.com": {
+  "url": "https://loginxcorp-preview.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://loginxcorp-preview.varonis.com/app/UserHome?iss=https%3A%2F%2Floginxcorp-preview.varonis.com&session_hint=AUTHENTICATED",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth-us-dc03.api.varonis.io": {
+  "url": "https://auth-us-dc03.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "partnercommunity.varonis.com": {
+  "url": "https://partnercommunity.varonis.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://help.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "itia-stg.varonis.com": {
+  "url": "https://itia-stg.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login.microsoftonline.com/080f3eaf-1e2e-4baf-8c3b-e36006ff4ee8/oauth2/authorize?response_type=code&client_id=cbd1c35d-c1ff-4f00-a471-e1b9343f1653&scope=openid&nonce=960922f3-2aa5-4eba-bd0d-d16",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "loginx-preview.varonis.com": {
+  "url": "https://loginx-preview.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://loginx-preview.varonis.com/app/UserHome?iss=https%3A%2F%2Floginx-preview.varonis.com&session_hint=AUTHENTICATED",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "licensemgmt-stg-rd-salesforce.varonis.com": {
+  "url": "https://licensemgmt-stg-rd-salesforce.varonis.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "api.app.varonis.io": {
+  "url": "https://api.app.varonis.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "us-dc10.deployment.api.varonis.io": {
+  "url": "https://us-dc10.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "arccorp.varonis.io": {
+  "url": "https://arccorp.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "payoneer.varonis.io": {
+  "url": "https://payoneer.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "testcert.varonis.io": {
+  "url": "https://testcert.varonis.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "authpsg.api.varonis.io": {
+  "url": "https://authpsg.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "eu-dc03.deployment.api.varonis.io": {
+  "url": "https://eu-dc03.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "newera.varonis.io": {
+  "url": "https://newera.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "psg.deployment.api.varonis.io": {
+  "url": "https://psg.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "uks.deployment.api.varonis.io": {
+  "url": "https://uks.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "us-dc11.deployment.api.varonis.io": {
+  "url": "https://us-dc11.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "login-preview.varonis.com": {
+  "url": "https://login-preview.varonis.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login-preview.varonis.com/app/UserHome?iss=https%3A%2F%2Flogin-preview.varonis.com&session_hint=AUTHENTICATED",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "associatedbank.varonis.io": {
+  "url": "https://associatedbank.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "authuks.api.varonis.io": {
+  "url": "https://authuks.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth-us-dc04.api.varonis.io": {
+  "url": "https://auth-us-dc04.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "prereqtesteutenant.varonis.io": {
+  "url": "https://prereqtesteutenant.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/28.0.357/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "auth-us-dc05.api.varonis.io": {
+  "url": "https://auth-us-dc05.api.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "liveupdatemanager.varonis.com": {
+  "url": "https://liveupdatemanager.varonis.com/",
+  "http_status": 403,
+  "title": "Web App - Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "uae-dc01.deployment.api.varonis.io": {
+  "url": "https://uae-dc01.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "loginx.varonis.com": {
+  "url": "https://loginx.varonis.com/",
+  "http_status": 200,
+  "title": "Varonis Systems (External) - Sign In",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "bistatedev-org.varonis.io": {
+  "url": "https://bistatedev-org.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "uat-help.varonis.com": {
+  "url": "https://uat-help.varonis.com/s/",
+  "http_status": 200,
+  "title": "Varonis Help Center",
+  "redirect": "https://uat-help.varonis.com/s/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "authupload.varonis.net": {
+  "url": "https://authupload.varonis.net/",
+  "http_status": 200,
+  "title": "Varonis Systems Logs Endpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ },
+ "cbrecorp.varonis.io": {
+  "url": "https://cbrecorp.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 13:02:36 UTC"
+ }
+}

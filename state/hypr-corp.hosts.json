@@ -1,1 +1,22 @@
-{}
+{
+ "wishfarms.hypr.com": {
+  "url": "https://wishfarms.hypr.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://wishfarms.hypr.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:51:25 UTC"
+ },
+ "alight.hypr.com": {
+  "url": "https://alight.hypr.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://alight.hypr.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:51:25 UTC"
+ }
+}

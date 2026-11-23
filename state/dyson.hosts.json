@@ -1,13 +1,16 @@
 {
  "vpn-be.dyson.com": {
-  "url": "https://vpn-be.dyson.com/",
-  "http_status": 302,
-  "title": "",
-  "redirect": "/my.policy",
-  "scripts": [],
+  "url": "https://vpn-be.dyson.com/my.logout.php3?errorcode=19",
+  "http_status": 200,
+  "title": "BIG-IP logout page",
+  "redirect": "https://vpn-be.dyson.com/my.logout.php3?errorcode=19",
+  "scripts": [
+   "https://vpn-be.dyson.com/public/include/js/common.js",
+   "https://vpn-be.dyson.com/public/include/js/u_plugin.js"
+  ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "uncover.motor-test.dyson.com": {
   "url": "http://uncover.motor-test.dyson.com/",
@@ -17,7 +20,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c1.kafka.ap-northeast-1.dyson.com": {
   "url": "http://c1.kafka.ap-northeast-1.dyson.com/",
@@ -27,7 +30,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "vaccinetemperature.agappapi.cppe.dyson.com": {
   "url": "http://vaccinetemperature.agappapi.cppe.dyson.com/",
@@ -37,7 +40,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c7y.kafka.eu-central-1.dyson.com": {
   "url": "http://c7y.kafka.eu-central-1.dyson.com/",
@@ -47,7 +50,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "ae2q.preprod.dyson.com": {
   "url": "http://ae2q.preprod.dyson.com/",
@@ -57,7 +60,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "2fcmswikiy.dyson.com": {
   "url": "http://2fcmswikiy.dyson.com/",
@@ -67,7 +70,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "cpaqdev.dyson.com": {
   "url": "http://cpaqdev.dyson.com/",
@@ -77,7 +80,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "in3.preprod.dyson.com": {
   "url": "http://in3.preprod.dyson.com/",
@@ -87,7 +90,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "cmsadmin7.dyson.com": {
   "url": "http://cmsadmin7.dyson.com/",
@@ -97,7 +100,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "dev1broker6a.cptrials.dyson.com": {
   "url": "http://dev1broker6a.cptrials.dyson.com/",
@@ -107,7 +110,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "vaccinetracker9.qa00.sql0.dyson.com": {
   "url": "http://vaccinetracker9.qa00.sql0.dyson.com/",
@@ -117,7 +120,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "static-dot-virustotalcloudu.agcfappapi.cpuat.dyson.com": {
   "url": "http://static-dot-virustotalcloudu.agcfappapi.cpuat.dyson.com/",
@@ -127,7 +130,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c4s.kafka.us-east-1.dyson.com": {
   "url": "http://c4s.kafka.us-east-1.dyson.com/",
@@ -137,7 +140,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c4s.kafka.sa-east-1.dyson.com": {
   "url": "http://c4s.kafka.sa-east-1.dyson.com/",
@@ -147,7 +150,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "bofk.pay.p.dyson.com": {
   "url": "http://bofk.pay.p.dyson.com/",
@@ -157,7 +160,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "demotest.dyson.com": {
   "url": "http://demotest.dyson.com/",
@@ -167,7 +170,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c4g.kafka.ap-northeast-3.dyson.com": {
   "url": "http://c4g.kafka.ap-northeast-3.dyson.com/",
@@ -177,7 +180,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "consoles.cpimgclass-dev.dyson.com": {
   "url": "http://consoles.cpimgclass-dev.dyson.com/",
@@ -187,7 +190,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "voroncovkaa.tableaudev.dyson.com": {
   "url": "http://voroncovkaa.tableaudev.dyson.com/",
@@ -197,7 +200,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "access-uk-mdmdeve.dyson.com": {
   "url": "http://access-uk-mdmdeve.dyson.com/",
@@ -207,7 +210,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "malashencovaq.test.dyson.com": {
   "url": "http://malashencovaq.test.dyson.com/",
@@ -217,7 +220,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "consolew.cpimgclass-prd.dyson.com": {
   "url": "http://consolew.cpimgclass-prd.dyson.com/",
@@ -227,7 +230,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "auths.kubeflow.cpeqdev.dyson.com": {
   "url": "http://auths.kubeflow.cpeqdev.dyson.com/",
@@ -237,7 +240,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "lightonlinewww.dyson.com": {
   "url": "http://lightonlinewww.dyson.com/",
@@ -247,7 +250,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "wwwq.verwijdertvirusspyware.admin.cpuat.dyson.com": {
   "url": "http://wwwq.verwijdertvirusspyware.admin.cpuat.dyson.com/",
@@ -257,7 +260,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "twidp-test.dyson.com": {
   "url": "http://twidp-test.dyson.com/",
@@ -267,7 +270,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "nortonantivirus5.test.dyson.com": {
   "url": "http://nortonantivirus5.test.dyson.com/",
@@ -277,7 +280,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "limpiadordevirusq.1ci1.dyson.com": {
   "url": "http://limpiadordevirusq.1ci1.dyson.com/",
@@ -287,7 +290,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "c1s.kafka.us-west-2.dyson.com": {
   "url": "http://c1s.kafka.us-west-2.dyson.com/",
@@ -297,7 +300,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "appapi.admcpmirror001.dyson.com": {
   "url": "http://appapi.admcpmirror001.dyson.com/",
@@ -307,7 +310,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "le-test.dyson.com": {
   "url": "http://le-test.dyson.com/",
@@ -317,7 +320,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "koncove-prevody-hydromotory.www.d.d.dyson.com": {
   "url": "http://koncove-prevody-hydromotory.www.d.d.dyson.com/",
@@ -327,7 +330,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "wwwa.pandemic.project-test.dyson.com": {
   "url": "http://wwwa.pandemic.project-test.dyson.com/",
@@ -337,7 +340,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "apim.cpperf.dyson.com": {
   "url": "http://apim.cpperf.dyson.com/",
@@ -347,7 +350,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "engagepocimportapie.dyson.com": {
   "url": "http://engagepocimportapie.dyson.com/",
@@ -357,7 +360,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "loncov4q.db1.dyson.com": {
   "url": "http://loncov4q.db1.dyson.com/",
@@ -367,7 +370,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "panelota-00-65viatordandomainsma984281office-prdstatuspage.dyson.com": {
   "url": "http://panelota-00-65viatordandomainsma984281office-prdstatuspage.dyson.com/",
@@ -377,7 +380,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "dev1broker6.dyson.com": {
   "url": "http://dev1broker6.dyson.com/",
@@ -387,7 +390,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "extendm.dyson.com": {
   "url": "http://extendm.dyson.com/",
@@ -427,7 +430,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "broker194s.dyson.com": {
   "url": "http://broker194s.dyson.com/",
@@ -457,7 +460,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "wwwq.kefalos-uncovered.sipus.dyson.com": {
   "url": "http://wwwq.kefalos-uncovered.sipus.dyson.com/",
@@ -487,7 +490,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "apii.cpeqdev.dyson.com": {
   "url": "http://apii.cpeqdev.dyson.com/",
@@ -497,7 +500,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "atat.dyson.com": {
   "url": "http://atat.dyson.com/",
@@ -527,7 +530,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-22 13:25:51 UTC"
+  "last_checked": "2026-11-23 12:56:32 UTC"
  },
  "snowgateway.dyson.com": {
   "url": "http://snowgateway.dyson.com/",
@@ -858,5 +861,1005 @@
   "catchall": false,
   "interesting": false,
   "last_checked": "2026-11-22 13:24:44 UTC"
+ },
+ "v1c.virus-total.i0.dyson.com": {
+  "url": "http://v1c.virus-total.i0.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "milm.project-test.dyson.com": {
+  "url": "http://milm.project-test.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "c4s.kafka.ap-south-1.dyson.com": {
+  "url": "http://c4s.kafka.ap-south-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "ha3virusw.gwr.cpuat.dyson.com": {
+  "url": "http://ha3virusw.gwr.cpuat.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "cpcommon-dev9.dyson.com": {
+  "url": "http://cpcommon-dev9.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "consoleq.cpdev003.dyson.com": {
+  "url": "http://consoleq.cpdev003.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "c3.kafka.ap-southeast-1.dyson.com": {
+  "url": "http://c3.kafka.ap-southeast-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "limpiadordevirusm.k1.dyson.com": {
+  "url": "http://limpiadordevirusm.k1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "c2u.kafka.af-south-1.dyson.com": {
+  "url": "http://c2u.kafka.af-south-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "apiq.cpdev003.dyson.com": {
+  "url": "http://apiq.cpdev003.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "testing5cpqa.dyson.com": {
+  "url": "http://testing5cpqa.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "kafka.us-east-2.dyson.com": {
+  "url": "http://kafka.us-east-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "c2s.kafka.us-east-2.dyson.com": {
+  "url": "http://c2s.kafka.us-east-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "80aacfjpcw3bav4a9jub.dyson.com": {
+  "url": "http://80aacfjpcw3bav4a9jub.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "avvelinternationala.zendevus2.dyson.com": {
+  "url": "http://avvelinternationala.zendevus2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "corpe.awseg-au.ftp1.dyson.com": {
+  "url": "http://corpe.awseg-au.ftp1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:56:32 UTC"
+ },
+ "pl2c.preprod.dyson.com": {
+  "url": "http://pl2c.preprod.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "thekafkapandemico.w0.dyson.com": {
+  "url": "http://thekafkapandemico.w0.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "dorijancovran5.agappapi.cpuat.dyson.com": {
+  "url": "http://dorijancovran5.agappapi.cpuat.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "cms.dyson.com": {
+  "url": "http://cms.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "pandemic2u.api.cptest.dyson.com": {
+  "url": "http://pandemic2u.api.cptest.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "qrc.cprbtcosimdev.dyson.com": {
+  "url": "http://qrc.cprbtcosimdev.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "c4.kafka.us-west-1.dyson.com": {
+  "url": "http://c4.kafka.us-west-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "mail5.odincovo.partnerapi.cpsileap.dyson.com": {
+  "url": "http://mail5.odincovo.partnerapi.cpsileap.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "qrk.cpdev001.dyson.com": {
+  "url": "http://qrk.cpdev001.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "broker1-perftest.dyson.com": {
+  "url": "http://broker1-perftest.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "fvm8g1e.c4.kafka.ap-south-1.dyson.com": {
+  "url": "http://fvm8g1e.c4.kafka.ap-south-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "chargetype1.dyson.com": {
+  "url": "http://chargetype1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "statuspageo.cpimgclass-dev.dyson.com": {
+  "url": "http://statuspageo.cpimgclass-dev.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "migration.dyson.com": {
+  "url": "http://migration.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "tr2u.preprod.dyson.com": {
+  "url": "http://tr2u.preprod.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "c1.kafka.us-west-2.dyson.com": {
+  "url": "http://c1.kafka.us-west-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "engine.dyson.com": {
+  "url": "http://engine.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "uat-vaccinesq.web4720.dyson.com": {
+  "url": "http://uat-vaccinesq.web4720.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "cpnst-devk.dyson.com": {
+  "url": "http://cpnst-devk.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "execute-api.eu-central-1.dyson.com": {
+  "url": "http://execute-api.eu-central-1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "execute-api.dyson.com": {
+  "url": "http://execute-api.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "c4s.kafka.us-east-2.dyson.com": {
+  "url": "http://c4s.kafka.us-east-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "fluvaccinesq.commvault-test.dyson.com": {
+  "url": "http://fluvaccinesq.commvault-test.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "virusflags.broker4-perftest.devices.dyson.com": {
+  "url": "http://virusflags.broker4-perftest.devices.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "ae.dyson.com": {
+  "url": "http://ae.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "morecyclonese.dyson.com": {
+  "url": "http://morecyclonese.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "b.dyson.com": {
+  "url": "http://b.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "aquazone.dyson.com": {
+  "url": "http://aquazone.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "cpaqci.dyson.com": {
+  "url": "http://cpaqci.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "3com.dyson.sese.dyson.com": {
+  "url": "http://3com.dyson.sese.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "kafka.ap-northeast-2.dyson.com": {
+  "url": "http://kafka.ap-northeast-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "dynamic.dyson.com": {
+  "url": "http://dynamic.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "assetsq.dyson.com": {
+  "url": "http://assetsq.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "www4b.dyson.com": {
+  "url": "http://www4b.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "doctorbit.dyson.com": {
+  "url": "http://doctorbit.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "activatelecturer.dyson.com": {
+  "url": "http://activatelecturer.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "n.dyson.com": {
+  "url": "http://n.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "my-nft.dyson.com": {
+  "url": "http://my-nft.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "xb.dyson.com": {
+  "url": "http://xb.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "37lbmam43x9b6dgea.cptrials.dyson.com": {
+  "url": "http://37lbmam43x9b6dgea.cptrials.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "c11.kafka.us-west-2.dyson.com": {
+  "url": "http://c11.kafka.us-west-2.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "diwww.dyson.com": {
+  "url": "http://diwww.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "cicada.dyson.com": {
+  "url": "http://cicada.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "www5.dorijancovran.w0.dyson.com": {
+  "url": "http://www5.dorijancovran.w0.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "antivirus2c.teamdyson.dyson.com": {
+  "url": "http://antivirus2c.teamdyson.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "mailgenerator.dyson.com": {
+  "url": "http://mailgenerator.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "smadavantivirus9.dc1.dyson.com": {
+  "url": "http://smadavantivirus9.dc1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "mycars.dyson.com": {
+  "url": "http://mycars.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "12media.dyson.com": {
+  "url": "http://12media.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "fetynotice5.dyson.com": {
+  "url": "http://fetynotice5.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "odincovo.broker6.cptrials.dyson.com": {
+  "url": "http://odincovo.broker6.cptrials.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "avvelinternational.dyson.com": {
+  "url": "http://avvelinternational.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "www3.dorijancovran.s0.dyson.com": {
+  "url": "http://www3.dorijancovran.s0.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "kolomutikwikpexreginoxaquazone.dyson.com": {
+  "url": "http://kolomutikwikpexreginoxaquazone.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "3com.dyson.lulu.dyson.com": {
+  "url": "http://3com.dyson.lulu.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "virus7.web.dyson.com": {
+  "url": "http://virus7.web.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "onev.dyson.com": {
+  "url": "http://onev.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "www3.dyson.com": {
+  "url": "http://www3.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "disabled.dyson.com": {
+  "url": "http://disabled.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "eu-central-1w.compute.dyson.com": {
+  "url": "http://eu-central-1w.compute.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "c3.dyson.com": {
+  "url": "http://c3.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "eu-central-1.eks.dyson.com": {
+  "url": "http://eu-central-1.eks.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "bridge.dyson.com": {
+  "url": "http://bridge.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "nteamcenter.dyson.com": {
+  "url": "http://nteamcenter.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "ap-northeast-3.dyson.com": {
+  "url": "http://ap-northeast-3.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "anti-virus7.broker1.ppe.connected.dyson.com": {
+  "url": "http://anti-virus7.broker1.ppe.connected.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "scme.pandemic-legacy.p.broker3.cptrials.dyson.com": {
+  "url": "http://scme.pandemic-legacy.p.broker3.cptrials.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "virusirtog.dyson.com": {
+  "url": "http://virusirtog.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "findzero9.dyson.com": {
+  "url": "http://findzero9.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "19www.dyson.com": {
+  "url": "http://19www.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "1c1covid19g.dyson.com": {
+  "url": "http://1c1covid19g.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "mayafashioncoverq.dc1.dyson.com": {
+  "url": "http://mayafashioncoverq.dc1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "3g.dyson.com": {
+  "url": "http://3g.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "prd.connected.dyson.com": {
+  "url": "http://prd.connected.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "3comms.dyson.lulu.dyson.com": {
+  "url": "http://3comms.dyson.lulu.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "virusesa.f81.dyson.com": {
+  "url": "http://virusesa.f81.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "notantivirus-ru5.db1.dyson.com": {
+  "url": "http://notantivirus-ru5.db1.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "exhybrid1u.dyson.com": {
+  "url": "http://exhybrid1u.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "antivirusupportm.nsipus.dyson.com": {
+  "url": "http://antivirusupportm.nsipus.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "ad.dyson.com": {
+  "url": "http://ad.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "3com.dyson.ltlt.dyson.com": {
+  "url": "http://3com.dyson.ltlt.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "si.connected.dyson.com": {
+  "url": "http://si.connected.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "covideo6w.dyson.com": {
+  "url": "http://covideo6w.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
+ },
+ "virusremoval3.sipus.dyson.com": {
+  "url": "http://virusremoval3.sipus.dyson.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 12:55:50 UTC"
  }
 }
