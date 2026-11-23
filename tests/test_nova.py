@@ -258,6 +258,43 @@ class TestNovaV22(unittest.TestCase):
                 self.assertEqual(len(batch2), 2)
                 self.assertEqual(len(rem2), 1)
 
+    def test_backlog_seeder_wakes_legacy_subs_once(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            tdir, sdir, ddir, fdir = root / "targets", root / "state", root / "data", root / "findings"
+            tdir.mkdir()
+            sdir.mkdir()
+            (tdir / "legacy.txt").write_text("legacy.org\n", encoding="utf-8")
+            # Simulate legacy v2.0 state: subs.txt populated, but hosts.json and queue.txt empty
+            (sdir / "legacy.subs.txt").write_text(
+                "dev-api.legacy.org\nadmin.legacy.org\nstatic.legacy.org\n",
+                encoding="utf-8",
+            )
+
+            with (
+                patch.object(nova, "TARGETS_DIR", tdir),
+                patch.object(nova, "STATE_DIR", sdir),
+                patch.object(nova, "DATA_DIR", ddir),
+                patch.object(nova, "FINDINGS_DIR", fdir),
+                patch.object(nova, "PASSIVE_SOURCES", []),
+                patch.object(nova, "MAX_NEW_PROBE", 2),
+            ):
+                nova.cmd_monitor(argparse.Namespace(program="legacy", merge_file=None))
+                batch1 = (ddir / "legacy" / "probe_batch.txt").read_text(encoding="utf-8").splitlines()
+                rem1 = (sdir / "legacy.queue.txt").read_text(encoding="utf-8").splitlines()
+                self.assertEqual(sorted(batch1), ["admin.legacy.org", "dev-api.legacy.org"])
+                self.assertEqual(rem1, ["static.legacy.org"])
+
+                # Drain remaining 1 queued host
+                nova.cmd_monitor(argparse.Namespace(program="legacy", merge_file=None))
+                batch2 = (ddir / "legacy" / "probe_batch.txt").read_text(encoding="utf-8").splitlines()
+                self.assertEqual(batch2, ["static.legacy.org"])
+
+                # Third run: queue is now empty and _seeded=True, so it must NOT re-seed dead hosts
+                nova.cmd_monitor(argparse.Namespace(program="legacy", merge_file=None))
+                batch3 = (ddir / "legacy" / "probe_batch.txt").read_text(encoding="utf-8").splitlines()
+                self.assertEqual(batch3, [])
+
     def test_ai_gatekeeper_rejects_fp_and_generates_ready_report_for_valid(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

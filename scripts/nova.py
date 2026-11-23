@@ -98,6 +98,7 @@ MAX_NEW_PROBE = int(os.environ.get("NOVA_MAX_NEW_PROBE", "250"))
 MAX_JS_FETCH = int(os.environ.get("NOVA_MAX_JS", "120"))
 DIFF_BUDGET = int(os.environ.get("NOVA_DIFF_BUDGET", "60"))
 MAX_TRACKED_HOSTS = int(os.environ.get("NOVA_MAX_TRACKED_HOSTS", "1200"))
+SEED_CAP = int(os.environ.get("NOVA_SEED_CAP", "1000"))
 
 TG_TOKEN = os.environ.get("TELEGRAM_TOKEN", "").strip()
 TG_GENERAL = os.environ.get("TELEGRAM_GENERAL_ID", "").strip()
@@ -470,20 +471,26 @@ def load_hosts_state(program: str) -> dict:
 
 
 def save_hosts_state(program: str, hosts: dict) -> None:
-    """Persist bounded tracked host snapshots."""
+    """Persist bounded tracked host snapshots while preserving meta keys."""
     STATE_DIR.mkdir(exist_ok=True)
-    if len(hosts) > MAX_TRACKED_HOSTS:
-        ordered = sorted(
-            hosts.items(),
+    meta = {k: v for k, v in hosts.items() if k.startswith("_")}
+    host_items = [
+        (k, v)
+        for k, v in hosts.items()
+        if not k.startswith("_") and isinstance(v, dict)
+    ]
+    if len(host_items) > MAX_TRACKED_HOSTS:
+        host_items = sorted(
+            host_items,
             key=lambda kv: (
                 0 if kv[1].get("interesting") else 1,
                 0 if kv[1].get("http_status") == 200 else 1,
                 kv[1].get("last_checked", ""),
             ),
         )[:MAX_TRACKED_HOSTS]
-        hosts = dict(ordered)
+    merged = {**meta, **dict(host_items)}
     path = STATE_DIR / f"{program}.hosts.json"
-    path.write_text(json.dumps(hosts, ensure_ascii=False, indent=1), encoding="utf-8")
+    path.write_text(json.dumps(merged, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def load_findings_index(program: str) -> set[str]:
@@ -621,7 +628,23 @@ def cmd_monitor(args) -> None:
         print(f"    + digabung dari {args.merge_file}")
 
     new = {h for h in (discovered - known) if policy.in_scope(h)}
-    save_state(program, known | new)
+    all_known = known | new
+    save_state(program, all_known)
+
+    # Backlog Seeder: bangunkan subdomain lama di subs.txt yang belum pernah diprobe v2.2
+    hosts_state = load_hosts_state(program)
+    if not old_queue and not hosts_state.get("_seeded") and all_known:
+        probed_hosts = {k for k in hosts_state if not k.startswith("_")}
+        unprobed = {h for h in all_known if policy.in_scope(h) and h not in probed_hosts}
+        hosts_state["_seeded"] = True
+        save_hosts_state(program, hosts_state)
+        if unprobed:
+            seeded = set(prioritize_hosts(unprobed, policy=policy)[:SEED_CAP])
+            old_queue |= seeded
+            print(
+                f"    [+] Backlog seeder: membangunkan {len(seeded)}/{len(unprobed)} "
+                f"subdomain prioritas dari state lama"
+            )
 
     pending = prioritize_hosts(old_queue | new, policy=policy)
     batch = pending[:MAX_NEW_PROBE]
@@ -1212,16 +1235,23 @@ def cmd_verify(args) -> None:
         findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True))
         save_js_state(STATE_DIR, program, js_state)
 
-    new_hosts = []
+    takeover_pool: set[str] = set()
     if new_file.exists():
-        new_hosts = [
+        takeover_pool |= {
             line.strip()
             for line in new_file.read_text(encoding="utf-8", errors="ignore").splitlines()
             if line.strip() and policy.in_scope(line.strip())
-        ]
+        }
+    batch_file = out_dir / "probe_batch.txt"
+    if batch_file.exists():
+        takeover_pool |= {
+            line.strip()
+            for line in batch_file.read_text(encoding="utf-8", errors="ignore").splitlines()
+            if line.strip() and policy.in_scope(line.strip())
+        }
     cap = int(os.environ.get("NOVA_TAKEOVER_CAP", "2000"))
-    sweep = prioritize_hosts(new_hosts, policy=policy)[:cap] if new_hosts else []
-    print(f"[*] {program}: takeover check (dual-DoH claimable) pada {len(sweep)} host baru...")
+    sweep = prioritize_hosts(takeover_pool, policy=policy)[:cap] if takeover_pool else []
+    print(f"[*] {program}: takeover check (dual-DoH claimable) pada {len(sweep)} host...")
     with concurrent.futures.ThreadPoolExecutor(max_workers=24) as ex:
         for f in ex.map(lambda h: check_takeover(h, policy), sweep):
             if f:
@@ -1299,7 +1329,7 @@ def cmd_diff(args) -> None:
     candidates = [
         (host, info)
         for host, info in hosts_state.items()
-        if policy.in_scope(host)
+        if not host.startswith("_") and isinstance(info, dict) and policy.in_scope(host)
     ]
     candidates.sort(
         key=lambda item: (

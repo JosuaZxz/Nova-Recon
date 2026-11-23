@@ -1,10 +1,24 @@
-# Daftar program fokus (opsional).
-# Hapus tanda # pada program yang benar-benar kamu ikuti supaya NOVA v2.1
-# memfokuskan putaran tiap jam ke program pilihanmu (bukan membuang budget di 40 raksasa).
-# Jika semua baris dikomentari, NOVA akan merotasi semua targets/*.txt seperti biasa.
-#
-# Contoh:
-# boozt
-# bykea
-# bybit_fintech
-# adobe
+# Daftar 20 Program Fokus Prioritas Tinggi (NOVA v2.2)
+# Dipilih dari target menengah, fintech, dan SaaS yang memiliki banyak permukaan dev/uat/staging
+# dan tidak full memblokir IP GitHub Actions dengan WAF 403 (mengeluarkan robinhood, playstation, epicgames, netflix, dll).
+
+banco_plata
+bybit_fintech
+unico_idtech
+remitly
+khealth
+boozt
+hypr-corp
+dynatrace
+dyson
+toolsforhumanity
+varonis
+verily_life_sciences
+bykea
+superhuman
+anduril_industries
+audible
+crypto
+stripchat
+bookingcom
+adobe
