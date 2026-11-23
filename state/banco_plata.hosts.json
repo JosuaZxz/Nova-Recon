@@ -1,0 +1,473 @@
+{
+ "_seeded": true,
+ "www-beta.platacard.mx": {
+  "url": "https://www-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "mock-beta.platacard.mx": {
+  "url": "https://mock-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "empresa.platacard.mx": {
+  "url": "https://empresa.platacard.mx/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://empresa.bancoplata.mx/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "sandbox.platacard.mx": {
+  "url": "https://sandbox.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-auth-beta.platacard.mx": {
+  "url": "https://www-auth-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "difiere-sandbox.platacard.mx": {
+  "url": "https://difiere-sandbox.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-sandbox.platacard.mx": {
+  "url": "https://www-sandbox.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "bosso.platacard.mx": {
+  "url": "https://bosso.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "auth-prime.platacard.mx": {
+  "url": "https://auth-prime.platacard.mx/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "beta.platacard.mx": {
+  "url": "https://beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "difiere-beta.platacard.mx": {
+  "url": "https://difiere-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "jira.platacard.mx": {
+  "url": "https://jira.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-empresa-beta.platacard.mx": {
+  "url": "https://www-empresa-beta.platacard.mx/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www-empresa-beta.bancoplata.mx/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "pay.platacard.mx": {
+  "url": "https://pay.platacard.mx/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "certs-beta.platacard.mx": {
+  "url": "https://certs-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "sso.platacard.mx": {
+  "url": "https://sso.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "auth.platacard.mx": {
+  "url": "https://auth.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "auth-prime-cf.platacard.mx": {
+  "url": "https://auth-prime-cf.platacard.mx/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "auth-beta.platacard.mx": {
+  "url": "https://auth-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-pyme-beta.platacard.mx": {
+  "url": "https://www-pyme-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "pay-beta.platacard.mx": {
+  "url": "https://pay-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "beta-3ds.platacard.mx": {
+  "url": "https://beta-3ds.platacard.mx/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "cdnmobile-beta.platacard.mx": {
+  "url": "https://cdnmobile-beta.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "tracking.notify-dev.platacard.mx": {
+  "url": "https://tracking.notify-dev.platacard.mx/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "auth-beta-cf.platacard.mx": {
+  "url": "https://auth-beta-cf.platacard.mx/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "banco.platacard.mx": {
+  "url": "https://banco.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "difiere.platacard.mx": {
+  "url": "https://difiere.platacard.mx/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "prime.platacard.mx": {
+  "url": "https://prime.platacard.mx/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "difiere-banco.platacard.mx": {
+  "url": "https://difiere-banco.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "qa-interview.platacard.mx": {
+  "url": "https://qa-interview.platacard.mx/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "plataforma.platacard.mx": {
+  "url": "https://plataforma.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "3ds.platacard.mx": {
+  "url": "https://3ds.platacard.mx/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "difiere-bancong.platacard.mx": {
+  "url": "https://difiere-bancong.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "tracking.platacard.mx": {
+  "url": "https://tracking.platacard.mx/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-banco.platacard.mx": {
+  "url": "https://www-banco.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "tracking.ib77680.banco.platacard.mx": {
+  "url": "https://tracking.ib77680.banco.platacard.mx/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "bancong.platacard.mx": {
+  "url": "https://bancong.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "career.platacard.mx": {
+  "url": "https://career.platacard.mx/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://careers.bancoplata.mx/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "design.platacard.mx": {
+  "url": "https://design.platacard.mx/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://design.bancoplata.mx/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "tracking.notify-stable.platacard.mx": {
+  "url": "https://tracking.notify-stable.platacard.mx/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www-bancong.platacard.mx": {
+  "url": "https://www-bancong.platacard.mx/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "certs.platacard.mx": {
+  "url": "https://certs.platacard.mx/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "platacard.mx": {
+  "url": "https://platacard.mx/es",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://bancoplata.mx/es",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "whiteboard.platacard.mx": {
+  "url": "https://whiteboard.platacard.mx/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://keycloak.diftech.org/realms/diftech/protocol/openid-connect/auth?approval_prompt=force&client_id=cloud-oauth2-proxy-dev&redirect_uri=https%3A%2F%2Fwhiteboard.platacard.mx%2Foauth2%2Fcallback&r",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "www.platacard.mx": {
+  "url": "https://platacard.mx/es",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://bancoplata.mx/es",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "tracking.ib26502.bancong.platacard.mx": {
+  "url": "https://tracking.ib26502.bancong.platacard.mx/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ },
+ "acquisition.platacard.mx": {
+  "url": "https://acquisition.platacard.mx/",
+  "http_status": 200,
+  "title": "Acquisition",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:36:43 UTC"
+ }
+}

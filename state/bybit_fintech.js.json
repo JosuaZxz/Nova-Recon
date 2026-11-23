@@ -1,0 +1,226 @@
+{
+ "https://testnet.bybit.com/common-static/cht-static/user-svc/js/by_appsflyer_HASH.js": {
+  "last_url": "https://testnet.bybit.com/common-static/cht-static/user-svc/js/by_appsflyer_c67e7b7d.js",
+  "sha256": "69bb414c2c38a0d7189c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:03 UTC"
+ },
+ "https://testnet.bybit.com/gt.js": {
+  "last_url": "https://testnet.bybit.com/gt.js",
+  "sha256": "5aabfb14e99bed5fe0b0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:03 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/d61357f940dbdecd8a94.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/d61357f940dbdecd8a94.js",
+  "sha256": "eaf356a656fd7f3f75c2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:03 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/5ae4d065158b247d5e50.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/5ae4d065158b247d5e50.js",
+  "sha256": "2d1293c6d93202cb18d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:04 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/074c82faf945e5dba308.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/074c82faf945e5dba308.js",
+  "sha256": "642b3edd624b0ffdc840",
+  "routes": [
+   "/v2/private/user/profile",
+   "/v2/public/country-list",
+   "/v3/config/web",
+   "/v3/private/misc/cabital/post-register",
+   "/v3/private/user/member/add-trusted-device",
+   "/v3/public/qrcode/generate",
+   "/v3/public/qrcode/status",
+   "/v3/public/unbind-google-2fa/audit-status",
+   "/v3/public/unbind-google-2fa/commit",
+   "/v3/public/unbind-google-2fa/safety-items",
+   "/v3/public/unbind-google-2fa/send-code-to-email",
+   "/v3/public/unbind-google-2fa/send-code-to-mobile",
+   "/v3/public/unbind-google-2fa/send-email-to-salesforce"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:05 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/107f5670518c940c764d.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/107f5670518c940c764d.js",
+  "sha256": "bd645bb91bd6dba74866",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:06 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/aedb2d9bcdf69c4c3d40.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/aedb2d9bcdf69c4c3d40.js",
+  "sha256": "3c84bd6e9edaf776ccc5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:06 UTC"
+ },
+ "https://testnet.bybit.com/_nuxt/d6ad64ade1f8c20304dd.js": {
+  "last_url": "https://testnet.bybit.com/_nuxt/d6ad64ade1f8c20304dd.js",
+  "sha256": "7b53975752298dbb396f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:07 UTC"
+ },
+ "https://institution-testnet.bybit.com/common-static/cht-static/user-svc/js/by_appsflyer_HASH.js": {
+  "last_url": "https://institution-testnet.bybit.com/common-static/cht-static/user-svc/js/by_appsflyer_c67e7b7d.js",
+  "sha256": "69bb414c2c38a0d7189c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:08 UTC"
+ },
+ "https://institution-testnet.bybit.com/gt.js": {
+  "last_url": "https://institution-testnet.bybit.com/gt.js",
+  "sha256": "5aabfb14e99bed5fe0b0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:09 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/d61357f940dbdecd8a94.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/d61357f940dbdecd8a94.js",
+  "sha256": "eaf356a656fd7f3f75c2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:09 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/5ae4d065158b247d5e50.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/5ae4d065158b247d5e50.js",
+  "sha256": "2d1293c6d93202cb18d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:10 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/074c82faf945e5dba308.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/074c82faf945e5dba308.js",
+  "sha256": "642b3edd624b0ffdc840",
+  "routes": [
+   "/v2/private/user/profile",
+   "/v2/public/country-list",
+   "/v3/config/web",
+   "/v3/private/misc/cabital/post-register",
+   "/v3/private/user/member/add-trusted-device",
+   "/v3/public/qrcode/generate",
+   "/v3/public/qrcode/status",
+   "/v3/public/unbind-google-2fa/audit-status",
+   "/v3/public/unbind-google-2fa/commit",
+   "/v3/public/unbind-google-2fa/safety-items",
+   "/v3/public/unbind-google-2fa/send-code-to-email",
+   "/v3/public/unbind-google-2fa/send-code-to-mobile",
+   "/v3/public/unbind-google-2fa/send-email-to-salesforce"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:11 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/107f5670518c940c764d.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/107f5670518c940c764d.js",
+  "sha256": "bd645bb91bd6dba74866",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:12 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/aedb2d9bcdf69c4c3d40.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/aedb2d9bcdf69c4c3d40.js",
+  "sha256": "3c84bd6e9edaf776ccc5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:12 UTC"
+ },
+ "https://institution-testnet.bybit.com/_nuxt/d6ad64ade1f8c20304dd.js": {
+  "last_url": "https://institution-testnet.bybit.com/_nuxt/d6ad64ade1f8c20304dd.js",
+  "sha256": "7b53975752298dbb396f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:13 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/common-static/infra-static/hecate/hecate.min.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/common-static/infra-static/hecate/hecate.min.js",
+  "sha256": "35cf3fe3ccdd708c59c7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:14 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/webpack-5d390847af9d938f.js",
+  "sha256": "643170139640c3001663",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:15 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/framework-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/framework-9a235b342101c1ca.js",
+  "sha256": "b6e4829f3b8d50b26a9c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:15 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/main-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/main-f719e3a5a1a61c4d.js",
+  "sha256": "61dd078f69d4c6b66bbd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:17 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/pages/_app-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/pages/_app-391d0de0c09f7181.js",
+  "sha256": "c0eeb5e41d43aedd4e1f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:19 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/antd-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/antd-82f70819f9893653.js",
+  "sha256": "64005b366a51690fd8c3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:21 UTC"
+ },
+ "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/commons-HASH.js": {
+  "last_url": "https://testnet-announcements.bybit.eu/static/announcements/_next/static/chunks/commons-baddc96b462deaf8.js",
+  "sha256": "ee41e9d1405c12db64a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:21 UTC"
+ },
+ "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/webpack-846ddfd6c24b07e2.js",
+  "sha256": "c8de77de6d8f483a772f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:22 UTC"
+ },
+ "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/nextjs-HASH.js": {
+  "last_url": "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/nextjs-2c659e83a743116e.js",
+  "sha256": "8d5724617f21772e0ac5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:24 UTC"
+ },
+ "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/vendor-HASH.js": {
+  "last_url": "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/vendor-39fc972fc903b64d.js",
+  "sha256": "dc9f8533209841cdddf3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:24 UTC"
+ },
+ "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/main-app-e7002db40abb2e33.js",
+  "sha256": "78c25c1db6dbf2f03a26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:25 UTC"
+ },
+ "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/libs-HASH.js": {
+  "last_url": "https://affiliates-testnet.bybit.eu/static/affiliate-portal-home/_next/static/chunks/libs-5531ae1245db4526.js",
+  "sha256": "3bd3739a2abb8da91a6b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:42:26 UTC"
+ }
+}

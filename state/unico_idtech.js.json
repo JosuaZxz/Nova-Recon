@@ -1,0 +1,529 @@
+{
+ "https://sign.hr.test.unico.app/static/js/main.HASH.js": {
+  "last_url": "https://sign.hr.test.unico.app/static/js/main.c3e49e06.js",
+  "sha256": "a9195bb2a0988ed5153a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:25 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/index-0gY_D6k9.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/index-0gY_D6k9.js",
+  "sha256": "b59597d5c06e55cddff7",
+  "routes": [
+   "/auth/dui-handler",
+   "/auth/human-token",
+   "/auth/human-token/try-again",
+   "/auth/instrucoes-para-biometria",
+   "/auth/tentar-nova-biometria"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:25 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-react-CxmyFFvy.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-react-CxmyFFvy.js",
+  "sha256": "1ae98590ef54c6e08a0a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:25 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js",
+  "sha256": "9e7f6fb6bcb5bc526124",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:25 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/buildApp-CXsxGk6X.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/buildApp-CXsxGk6X.js",
+  "sha256": "4454fcf0cac271e45d4a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js",
+  "sha256": "6dede89bb33dcd27cc7d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-genoma-Y142wixk.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-genoma-Y142wixk.js",
+  "sha256": "4883cc4f63f0dcf60147",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-ui-_qpRCPeM.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-ui-_qpRCPeM.js",
+  "sha256": "cde24b1ff4407ab188a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://cadastro.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js": {
+  "last_url": "https://cadastro.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js",
+  "sha256": "481ff0c9d74dbca6f8da",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://admin.people.uat.unico.app/assets/js/userguiding.js": {
+  "last_url": "https://admin.people.uat.unico.app/assets/js/userguiding.js",
+  "sha256": "ae6e82520fa9e7e740fc",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://admin.people.uat.unico.app/assets/js/env5.HASH.js": {
+  "last_url": "https://admin.people.uat.unico.app/assets/js/env5.d0e4f7cb4be0c24c2ce1.js",
+  "sha256": "747b1e761f2e795b0d55",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://admin.people.uat.unico.app/runtime.HASH.js": {
+  "last_url": "https://admin.people.uat.unico.app/runtime.b0d47c34f242b491.js",
+  "sha256": "f0f1ecde4422354c9c43",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:26 UTC"
+ },
+ "https://admin.people.uat.unico.app/main.HASH.js": {
+  "last_url": "https://admin.people.uat.unico.app/main.55f780b0aabb7a8e.js",
+  "sha256": "e35a3494bf0513e1bf0f",
+  "routes": [
+   "/api/v1"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:27 UTC"
+ },
+ "https://retry.uat.unico.app/assets/index-0gY_D6k9.js": {
+  "last_url": "https://retry.uat.unico.app/assets/index-0gY_D6k9.js",
+  "sha256": "b59597d5c06e55cddff7",
+  "routes": [
+   "/auth/dui-handler",
+   "/auth/human-token",
+   "/auth/human-token/try-again",
+   "/auth/instrucoes-para-biometria",
+   "/auth/tentar-nova-biometria"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-react-CxmyFFvy.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-react-CxmyFFvy.js",
+  "sha256": "1ae98590ef54c6e08a0a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js",
+  "sha256": "9e7f6fb6bcb5bc526124",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/buildApp-CXsxGk6X.js": {
+  "last_url": "https://retry.uat.unico.app/assets/buildApp-CXsxGk6X.js",
+  "sha256": "4454fcf0cac271e45d4a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js",
+  "sha256": "6dede89bb33dcd27cc7d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-genoma-Y142wixk.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-genoma-Y142wixk.js",
+  "sha256": "4883cc4f63f0dcf60147",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-ui-_qpRCPeM.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-ui-_qpRCPeM.js",
+  "sha256": "cde24b1ff4407ab188a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://retry.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js": {
+  "last_url": "https://retry.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js",
+  "sha256": "481ff0c9d74dbca6f8da",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://form.people.uat.unico.app/assets/js/userguiding.js": {
+  "last_url": "https://form.people.uat.unico.app/assets/js/userguiding.js",
+  "sha256": "31882d0b15437f1bc894",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:29 UTC"
+ },
+ "https://form.people.uat.unico.app/assets/js/load-image.all.min.js": {
+  "last_url": "https://form.people.uat.unico.app/assets/js/load-image.all.min.js",
+  "sha256": "89be5ecd6322e4cb63f0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:29 UTC"
+ },
+ "https://form.people.uat.unico.app/assets/js/env5.HASH.js": {
+  "last_url": "https://form.people.uat.unico.app/assets/js/env5.ef5f9c52b00e3f87c959.js",
+  "sha256": "6e2693d4b7028446e1a2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:29 UTC"
+ },
+ "https://form.people.uat.unico.app/runtime-es2015.HASH.js": {
+  "last_url": "https://form.people.uat.unico.app/runtime-es2015.e134fef99d08b1021aa2.js",
+  "sha256": "9309a0d305305e971f33",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:29 UTC"
+ },
+ "https://form.people.uat.unico.app/runtime-es5.HASH.js": {
+  "last_url": "https://form.people.uat.unico.app/runtime-es5.e134fef99d08b1021aa2.js",
+  "sha256": "e2e22cf542e66bbe90b9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:29 UTC"
+ },
+ "https://form.people.uat.unico.app/main-es2015.HASH.js": {
+  "last_url": "https://form.people.uat.unico.app/main-es2015.b65e6bcaa3546f682db6.js",
+  "sha256": "c6aca8540c59bc488af5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:30 UTC"
+ },
+ "https://form.people.uat.unico.app/main-es5.HASH.js": {
+  "last_url": "https://form.people.uat.unico.app/main-es5.b65e6bcaa3546f682db6.js",
+  "sha256": "b5e2b00e52ea7a1fee84",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:30 UTC"
+ },
+ "https://admin.people.unico.app/assets/js/userguiding.js": {
+  "last_url": "https://admin.people.unico.app/assets/js/userguiding.js",
+  "sha256": "ae6e82520fa9e7e740fc",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://admin.people.unico.app/assets/js/env5.HASH.js": {
+  "last_url": "https://admin.people.unico.app/assets/js/env5.d0e4f7cb4be0c24c2ce1.js",
+  "sha256": "2cab805df2bffedd12d2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://admin.people.unico.app/runtime.HASH.js": {
+  "last_url": "https://admin.people.unico.app/runtime.970b4533284ec9e1.js",
+  "sha256": "b15ef76142a3c598608e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://admin.people.unico.app/main.HASH.js": {
+  "last_url": "https://admin.people.unico.app/main.55f780b0aabb7a8e.js",
+  "sha256": "e35a3494bf0513e1bf0f",
+  "routes": [
+   "/api/v1"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://id.uat.unico.app/assets/index-0gY_D6k9.js": {
+  "last_url": "https://id.uat.unico.app/assets/index-0gY_D6k9.js",
+  "sha256": "b59597d5c06e55cddff7",
+  "routes": [
+   "/auth/dui-handler",
+   "/auth/human-token",
+   "/auth/human-token/try-again",
+   "/auth/instrucoes-para-biometria",
+   "/auth/tentar-nova-biometria"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-react-CxmyFFvy.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-react-CxmyFFvy.js",
+  "sha256": "1ae98590ef54c6e08a0a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:31 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js",
+  "sha256": "9e7f6fb6bcb5bc526124",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://id.uat.unico.app/assets/buildApp-CXsxGk6X.js": {
+  "last_url": "https://id.uat.unico.app/assets/buildApp-CXsxGk6X.js",
+  "sha256": "4454fcf0cac271e45d4a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js",
+  "sha256": "6dede89bb33dcd27cc7d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-genoma-Y142wixk.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-genoma-Y142wixk.js",
+  "sha256": "4883cc4f63f0dcf60147",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-ui-_qpRCPeM.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-ui-_qpRCPeM.js",
+  "sha256": "cde24b1ff4407ab188a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://id.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js": {
+  "last_url": "https://id.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js",
+  "sha256": "481ff0c9d74dbca6f8da",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://sign.hr.uat.unico.app/static/js/main.HASH.js": {
+  "last_url": "https://sign.hr.uat.unico.app/static/js/main.49ae45eb.js",
+  "sha256": "d72391ceee46896593a8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:34 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/index-0gY_D6k9.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/index-0gY_D6k9.js",
+  "sha256": "b59597d5c06e55cddff7",
+  "routes": [
+   "/auth/dui-handler",
+   "/auth/human-token",
+   "/auth/human-token/try-again",
+   "/auth/instrucoes-para-biometria",
+   "/auth/tentar-nova-biometria"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:34 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-react-CxmyFFvy.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-react-CxmyFFvy.js",
+  "sha256": "1ae98590ef54c6e08a0a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-monitoring-6TXQy-5h.js",
+  "sha256": "9e7f6fb6bcb5bc526124",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/buildApp-CXsxGk6X.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/buildApp-CXsxGk6X.js",
+  "sha256": "4454fcf0cac271e45d4a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-i18n-CaoDoQdO.js",
+  "sha256": "6dede89bb33dcd27cc7d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-genoma-Y142wixk.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-genoma-Y142wixk.js",
+  "sha256": "4883cc4f63f0dcf60147",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-ui-_qpRCPeM.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-ui-_qpRCPeM.js",
+  "sha256": "cde24b1ff4407ab188a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://ultimatum.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js": {
+  "last_url": "https://ultimatum.uat.unico.app/assets/vendor-launchdarkly-CL7tU_Pk.js",
+  "sha256": "481ff0c9d74dbca6f8da",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://portal.safeapp.unico.app/runtime.HASH.js": {
+  "last_url": "https://portal.safeapp.unico.app/runtime.0a244e7f4a978dfa.js",
+  "sha256": "4a06731d1420a0cc5070",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:24 UTC"
+ },
+ "https://portal.safeapp.unico.app/main.HASH.js": {
+  "last_url": "https://portal.safeapp.unico.app/main.1266f9db36b2a791.js",
+  "sha256": "435e74f8859af672523e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:25 UTC"
+ },
+ "https://portal.id.uat.unico.app/runtime.js": {
+  "last_url": "https://portal.id.uat.unico.app/runtime.js",
+  "sha256": "86a9ca636e5f358084d2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:27 UTC"
+ },
+ "https://portal.id.uat.unico.app/vendor.js": {
+  "last_url": "https://portal.id.uat.unico.app/vendor.js",
+  "sha256": "359dd6d94c26ac42f551",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:27 UTC"
+ },
+ "https://portal.id.uat.unico.app/main.js": {
+  "last_url": "https://portal.id.uat.unico.app/main.js",
+  "sha256": "abed30590a4ec9847648",
+  "routes": [
+   "/users/:id/details",
+   "/users/add",
+   "/users/list"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:28 UTC"
+ },
+ "https://portal.safeapp.uat.unico.app/runtime.js": {
+  "last_url": "https://portal.safeapp.uat.unico.app/runtime.js",
+  "sha256": "acbc983c5e792a463023",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:32 UTC"
+ },
+ "https://portal.safeapp.uat.unico.app/vendor.js": {
+  "last_url": "https://portal.safeapp.uat.unico.app/vendor.js",
+  "sha256": "5b180ddccd12ad40878f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:33 UTC"
+ },
+ "https://portal.safeapp.uat.unico.app/main.js": {
+  "last_url": "https://portal.safeapp.uat.unico.app/main.js",
+  "sha256": "b77748a86ceec2038152",
+  "routes": [
+   "/v1/files",
+   "/v1/releases",
+   "/v1/users/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:33 UTC"
+ },
+ "https://portal.idcloud.uat.unico.app/runtime.js": {
+  "last_url": "https://portal.idcloud.uat.unico.app/runtime.js",
+  "sha256": "86a9ca636e5f358084d2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:34 UTC"
+ },
+ "https://portal.idcloud.uat.unico.app/vendor.js": {
+  "last_url": "https://portal.idcloud.uat.unico.app/vendor.js",
+  "sha256": "359dd6d94c26ac42f551",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:34 UTC"
+ },
+ "https://portal.idcloud.uat.unico.app/main.js": {
+  "last_url": "https://portal.idcloud.uat.unico.app/main.js",
+  "sha256": "abed30590a4ec9847648",
+  "routes": [
+   "/users/:id/details",
+   "/users/add",
+   "/users/list"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:34 UTC"
+ },
+ "https://portal.id.unico.app/runtime.HASH.js": {
+  "last_url": "https://portal.id.unico.app/runtime.a36c758695afe3a0.js",
+  "sha256": "e5cb42f38984260ffea1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:35 UTC"
+ },
+ "https://portal.id.unico.app/main.HASH.js": {
+  "last_url": "https://portal.id.unico.app/main.bff89dc537245a26.js",
+  "sha256": "c0a077163f508a734b99",
+  "routes": [
+   "/users/:id/details",
+   "/users/add",
+   "/users/list"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/rolldown-runtime-CM0fLUkZ.js": {
+  "last_url": "https://skill-partner.unico.app/assets/rolldown-runtime-CM0fLUkZ.js",
+  "sha256": "9588804781275edb6ae9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/http-BT_OvXjU.js": {
+  "last_url": "https://skill-partner.unico.app/assets/http-BT_OvXjU.js",
+  "sha256": "9f101fe3c8fa83846fce",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/Box-t_50wP3T.js": {
+  "last_url": "https://skill-partner.unico.app/assets/Box-t_50wP3T.js",
+  "sha256": "dc7eba69ec467acc5109",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/generic-error-BB_xap3A.js": {
+  "last_url": "https://skill-partner.unico.app/assets/generic-error-BB_xap3A.js",
+  "sha256": "8ed2c35ba16b06db1e26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/QueryClientProvider-CpcA3bt-.js": {
+  "last_url": "https://skill-partner.unico.app/assets/QueryClientProvider-CpcA3bt-.js",
+  "sha256": "2016df3c3f901b78cc85",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://skill-partner.unico.app/assets/components-BY_VgSen.js": {
+  "last_url": "https://skill-partner.unico.app/assets/components-BY_VgSen.js",
+  "sha256": "2e66db79d1e6dc044e97",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ },
+ "https://cadastro.test.unico.app/assets/index-CgxrruQ5.js": {
+  "last_url": "https://cadastro.test.unico.app/assets/index-CgxrruQ5.js",
+  "sha256": "e4bad7dc0bd713bdb8df",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-23 11:45:36 UTC"
+ }
+}

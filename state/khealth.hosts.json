@@ -1,0 +1,199 @@
+{
+ "_seeded": true,
+ "app.mayo.khealth.com": {
+  "url": "https://app.mayo.khealth.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://app.mayo.khealth.com/signin?return-url=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "registry.gitlab.khealth.com": {
+  "url": "https://registry.gitlab.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "app.k-test.mayo.khealth.com": {
+  "url": "https://app.k-test.mayo.khealth.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://app.k-test.mayo.khealth.com/signin?return-url=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "api.khealth.com": {
+  "url": "https://api.khealth.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "payme-webhook-service.khealth.com": {
+  "url": "https://payme-webhook-service.khealth.com/",
+  "http_status": 525,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "clinical-automation-portal.khealth.com": {
+  "url": "https://clinical-automation-portal.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "ablink.news.khealth.com": {
+  "url": "https://ablink.news.khealth.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "datalake-service.khealth.com": {
+  "url": "https://datalake-service.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "newleaf.khealth.com": {
+  "url": "https://newleaf.khealth.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "auth.khealth.com": {
+  "url": "https://auth.khealth.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://khealth.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "api-akeyless.infra.khealth.com": {
+  "url": "https://api-akeyless.infra.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "questionnaires-portal.khealth.com": {
+  "url": "https://questionnaires-portal.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "accounts.khealth.com": {
+  "url": "https://accounts.khealth.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "data-build-tool.khealth.com": {
+  "url": "https://data-build-tool.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "salesforce-portal.khealth.com": {
+  "url": "https://salesforce-portal.khealth.com/",
+  "http_status": 525,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "internal-tv-dashboards.khealth.com": {
+  "url": "https://internal-tv-dashboards.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "app.k-test.khealth.com": {
+  "url": "https://app.k-test.khealth.com/",
+  "http_status": 200,
+  "title": "K Health",
+  "redirect": "",
+  "scripts": [
+   "https://app.k-test.khealth.com/_next/static/chunks/07evlg01i364h.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/0cz1d0mv5g_q7.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/0o3f8u3al1zmy.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/0p2d3aq158_xb.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/0q952i4rruy37.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/19asn8ss2k-j-.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/1kexj4s7oxhs2.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/1y-donrrtlltn.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/25pdlb9_3gb-8.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/285izlmb1vghe.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/2gjaf_pybs_85.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/2rzy9k2o0-oje.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/37zkbrcz-_v42.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/3grpc2kpoqvft.js",
+   "https://app.k-test.khealth.com/_next/static/chunks/turbopack-3-ry682tkyiqk.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ },
+ "gitlab.khealth.com": {
+  "url": "https://gitlab.khealth.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:49:16 UTC"
+ }
+}
