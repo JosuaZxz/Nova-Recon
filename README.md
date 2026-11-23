@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:091110,50:15332e,100:1c5349&height=200&section=header&text=Nova-Recon&fontSize=58&fontColor=f4faf8&animation=fadeIn&fontAlignY=38&desc=Stateful%20CT%20Delta%20Recon%20%C2%B7%20JS%20%26%20Cloud%20Verification%20%C2%B7%20Bug%20Bounty%20Pipeline&descSize=16&descAlignY=60&descColor=7be0c8" width="100%" alt="Nova-Recon Header" />
+<img src="./docs/showcase.png" alt="Nova-Recon Pipeline Showcase" width="100%" />
+
+# Nova-Recon
 
 **Stateful Bug Bounty Reconnaissance, Non-Destructive Exposure Verification, JS Bundle Diffing, and Report Drafting Engine for GitHub Actions**
 
@@ -183,6 +185,8 @@ Nova-Recon/
 ├── .github/
 │   └── workflows/
 │       └── nova.yml                 # Hourly GitHub Actions pipeline (unittest -> recon -> brief -> state sync)
+├── docs/
+│   └── showcase.png                 # 1600x860 4-stage pipeline architecture showcase banner
 ├── scripts/
 │   ├── nova.py                      # Main CLI driver (scope, monitor, probe, verify, diff, brief, run)
 │   ├── scope_guard.py               # Scope policy parser, wildcard/regex exclusion filter, and focus loader
