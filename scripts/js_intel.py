@@ -63,6 +63,17 @@ SENSITIVE_KEY_RE = re.compile(
 
 SOURCEMAP_RE = re.compile(r"//[#@]\s*sourceMappingURL=([^\s'\"<>]+)")
 
+S3_URL_RE = re.compile(
+    r"https?://(?:([a-z0-9][a-z0-9.\-_]{2,61})\.s3(?:[.\-][a-z0-9\-]+)?\.amazonaws\.com|"
+    r"s3(?:[.\-][a-z0-9\-]+)?\.amazonaws\.com/([a-z0-9][a-z0-9.\-_]{2,61}))",
+    re.IGNORECASE,
+)
+
+FIREBASE_URL_RE = re.compile(
+    r"https://([a-z0-9][a-z0-9\-]{2,60}(?:\.[a-z0-9\-]+)?\.firebaseio\.com)",
+    re.IGNORECASE,
+)
+
 SECRET_PATTERNS = (
     ("AWS Access Key", re.compile(r"\b(AKIA[0-9A-Z]{16})\b")),
     (
@@ -135,6 +146,28 @@ def is_vendor_js(js_url: str, body_head: str = "") -> bool:
         marker in head
         for marker in ("jquery foundation", "jsrsasign", "/*! bootstrap", "react-dom")
     )
+
+
+def extract_cloud_urls(js_text: str) -> dict[str, list[str]]:
+    """Extract unique AWS S3 buckets and Firebase Realtime DB URLs referenced in JS."""
+    s3_buckets = set()
+    for m in S3_URL_RE.finditer(js_text):
+        bucket = (m.group(1) or m.group(2) or "").lower().strip(".")
+        if bucket and not any(ig in bucket for ig in ("example", "test-bucket", "your-bucket", "amazonaws")):
+            s3_buckets.add(f"https://{bucket}.s3.amazonaws.com")
+
+    firebase_dbs = set()
+    for m in FIREBASE_URL_RE.finditer(js_text):
+        host = m.group(1).lower()
+        if not any(ig in host for ig in ("example", "demo", "your-project", "firebaseio.com")):
+            pass
+        if not any(ig in host for ig in ("example", "your-project", "dummy")):
+            firebase_dbs.add(f"https://{host}")
+
+    return {
+        "s3_urls": sorted(s3_buckets)[:25],
+        "firebase_urls": sorted(firebase_dbs)[:15],
+    }
 
 
 def extract_js_intel(js_text: str, js_url: str) -> dict:

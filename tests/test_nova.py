@@ -333,6 +333,40 @@ class TestNovaV22(unittest.TestCase):
             self.assertEqual(hits[0]["type"], "unauth-api")
             self.assertIn("admin@demo.org", hits[0]["response_evidence"])
 
+    def test_verify_cloud_assets_detects_unclaimed_s3_and_open_firebase(self):
+        js_code = (
+            'const assets = "https://legacy-assets-prod-99.s3.amazonaws.com/logo.png"; '
+            'const fbOpen = "https://corp-staging-rtdb.firebaseio.com"; '
+            'const fbLocked = "https://corp-locked-rtdb.firebaseio.com";'
+        )
+        extracted = js_intel.extract_cloud_urls(js_code)
+        self.assertEqual(extracted["s3_urls"], ["https://legacy-assets-prod-99.s3.amazonaws.com"])
+        self.assertEqual(len(extracted["firebase_urls"]), 2)
+
+        def fake_cloud_http(url, **kwargs):
+            r = MagicMock()
+            if "legacy-assets-prod-99.s3.amazonaws.com" in url:
+                r.status_code = 404
+                r.headers = {"Content-Type": "application/xml"}
+                r._nova_body = b"<Error><Code>NoSuchBucket</Code></Error>"
+                return r, None
+            if "corp-staging-rtdb.firebaseio.com" in url:
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"users":true,"admin_config":true}'
+                return r, None
+            if "corp-locked-rtdb.firebaseio.com" in url:
+                r.status_code = 401
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"error":"Permission denied"}'
+                return r, None
+            return None, "unexpected"
+
+        with patch.object(nova, "http_get", side_effect=fake_cloud_http):
+            hits = nova.verify_cloud_assets("https://app.demo.org/main.js", js_code)
+            types = [h["type"] for h in hits]
+            self.assertEqual(types, ["cloud-takeover", "cloud-exposure"])
+
     def test_ai_gatekeeper_rejects_fp_and_generates_ready_report_for_valid(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

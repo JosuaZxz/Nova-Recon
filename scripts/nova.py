@@ -47,6 +47,7 @@ from ai_brief import (  # noqa: E402
 from js_intel import (  # noqa: E402
     canonical_js_key,
     diff_js_bundle,
+    extract_cloud_urls,
     is_vendor_js,
     load_js_state,
     redact,
@@ -1219,13 +1220,86 @@ def verify_extracted_routes(
     return findings
 
 
+def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
+    """
+    Verify AWS S3 buckets and Firebase Realtime DBs referenced inside a JS bundle
+    for unclaimed NoSuchBucket takeover or unauthenticated public data listing.
+    """
+    cloud = extract_cloud_urls(js_text)
+    findings: list[dict] = []
+    parsed_js = urlparse(js_url)
+
+    for s3_url in cloud.get("s3_urls", [])[:5]:
+        r, _ = http_get(s3_url, max_bytes=16_000)
+        if r is None:
+            continue
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
+        s3_host = urlparse(s3_url).netloc
+        if "<Code>NoSuchBucket</Code>" in body:
+            findings.append(
+                {
+                    "type": "cloud-takeover",
+                    "url": s3_url,
+                    "host": parsed_js.netloc.lower(),
+                    "severity_hint": "high",
+                    "confidence": "strong",
+                    "evidence": f"Unclaimed S3 bucket ({s3_host} -> NoSuchBucket) referenced in {js_url}",
+                    "request_evidence": f"GET / HTTP/1.1\nHost: {s3_host}\nReferer: {js_url}",
+                    "response_evidence": _format_resp_evidence(r, body[:600]),
+                    "next": "Verifikasi ketersediaan nama bucket S3 di AWS; referensi aktif di JS memungkinkan takeover aset.",
+                }
+            )
+        elif r.status_code == 200 and "<ListBucketResult" in body and "<Contents>" in body:
+            findings.append(
+                {
+                    "type": "cloud-exposure",
+                    "url": s3_url,
+                    "host": parsed_js.netloc.lower(),
+                    "severity_hint": "high",
+                    "confidence": "strong",
+                    "evidence": f"Publicly listable S3 bucket ({s3_host}) referenced in {js_url}",
+                    "request_evidence": f"GET / HTTP/1.1\nHost: {s3_host}\nReferer: {js_url}",
+                    "response_evidence": _format_resp_evidence(r, body[:700]),
+                    "next": "Periksa apakah file di dalam bucket berisi data internal/sensitif perusahaan.",
+                }
+            )
+
+    for fb_url in cloud.get("firebase_urls", [])[:4]:
+        probe_u = f"{fb_url.rstrip('/')}/.json?shallow=true"
+        r, _ = http_get(probe_u, extra_headers={"Accept": "application/json"}, max_bytes=16_000)
+        if r is None or r.status_code != 200:
+            continue
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore").strip()
+        if (
+            body.startswith("{")
+            and len(body) > 10
+            and "permission denied" not in body.lower()
+            and '"error"' not in body.lower()
+        ):
+            fb_host = urlparse(fb_url).netloc
+            findings.append(
+                {
+                    "type": "cloud-exposure",
+                    "url": probe_u,
+                    "host": parsed_js.netloc.lower(),
+                    "severity_hint": "high",
+                    "confidence": "strong",
+                    "evidence": f"Open Firebase Realtime DB ({fb_host}/.json) referenced in {js_url}",
+                    "request_evidence": f"GET /.json?shallow=true HTTP/1.1\nHost: {fb_host}",
+                    "response_evidence": _format_resp_evidence(r, body[:700]),
+                    "next": "Database Firebase mengizinkan pembacaan JSON tanpa autentikasi; konfirmasi sensitivitas datanya.",
+                }
+            )
+    return findings
+
+
 def _fetch_and_analyze_js(
     js_targets: list[tuple[str, bool]],
     policy: ProgramPolicy,
     js_state: dict,
     run_diff: bool = True,
 ) -> list[dict]:
-    """Fetch unique in-scope non-vendor JS bundles and run secret + live route verification."""
+    """Fetch unique in-scope non-vendor JS bundles and run secret, cloud, sourcemap & route verification."""
     findings = []
     seen_urls: set[str] = set()
     fetched = 0
@@ -1249,23 +1323,25 @@ def _fetch_and_analyze_js(
             continue
 
         findings.extend(scan_js_secrets(body, js_url))
+        findings.extend(verify_cloud_assets(js_url, body))
 
         if run_diff:
             entry, diff_finding = diff_js_bundle(js_url, body, js_state, is_interesting)
             if entry is not None:
                 js_state[canonical_js_key(js_url)] = entry
             if diff_finding is not None:
-                # Instead of reporting raw route strings, verify if any extracted route leaks 200 OK JSON
                 candidate_routes = diff_finding.get("added_routes") or []
                 if candidate_routes:
                     findings.extend(verify_extracted_routes(js_url, candidate_routes, policy))
                 sm_url = diff_finding.get("sourcemap_url")
                 if sm_url and policy.in_scope(sm_url):
-                    sm_resp, _ = http_get(sm_url, max_bytes=4096)
+                    sm_resp, _ = http_get(sm_url, max_bytes=350_000)
                     if sm_resp is not None and sm_resp.status_code == 200:
-                        sm_head = getattr(sm_resp, "_nova_body", b"").decode("utf-8", "ignore")
-                        if '"mappings"' in sm_head or '"sources"' in sm_head:
+                        sm_body = getattr(sm_resp, "_nova_body", b"").decode("utf-8", "ignore")
+                        if '"mappings"' in sm_body or '"sources"' in sm_body:
                             parsed_sm = urlparse(sm_url)
+                            findings.extend(scan_js_secrets(sm_body, sm_url))
+                            findings.extend(verify_cloud_assets(sm_url, sm_body))
                             findings.append(
                                 {
                                     "type": "sourcemap",
@@ -1275,7 +1351,7 @@ def _fetch_and_analyze_js(
                                     "confidence": "strong",
                                     "evidence": f"SourceMap publik terbuka ({sm_url})",
                                     "request_evidence": f"GET {parsed_sm.path} HTTP/1.1\nHost: {parsed_sm.netloc}",
-                                    "response_evidence": _format_resp_evidence(sm_resp, sm_head[:500]),
+                                    "response_evidence": _format_resp_evidence(sm_resp, sm_body[:500]),
                                     "next": "Unduh sourcemap untuk audit source code frontend & logika API internal.",
                                 }
                             )

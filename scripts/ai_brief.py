@@ -63,6 +63,8 @@ def _fallback_draft(finding: dict) -> dict:
         "sourcemap": f"Exposed Production JavaScript SourceMap on {url}",
         "host-change": f"Previously Restricted Endpoint Transitioned to Public 200 OK on {url}",
         "unauth-api": f"Unauthenticated Sensitive API Data Exposure on {url}",
+        "cloud-takeover": f"Unclaimed S3 Cloud Bucket Referenced in Active JavaScript Bundle ({url})",
+        "cloud-exposure": f"Publicly Accessible Cloud Storage / Firebase Database Referenced in JS ({url})",
     }
     impacts = {
         "exposure": (
@@ -97,6 +99,14 @@ def _fallback_draft(finding: dict) -> dict:
             "An internal or private API route discovered via JavaScript bundle analysis responds with "
             "200 OK and returns sensitive JSON data without requiring authentication."
         ),
+        "cloud-takeover": (
+            "An active JavaScript bundle loads or references an AWS S3 bucket that returns NoSuchBucket. "
+            "An external actor can claim the bucket name in AWS and serve attacker-controlled assets or scripts to application users."
+        ),
+        "cloud-exposure": (
+            "A cloud storage bucket or Firebase Realtime Database referenced by the frontend bundle allows "
+            "unauthenticated directory listing or JSON data read access."
+        ),
     }
     remediations = {
         "exposure": "Block public access to dotfiles, `.git`, `/actuator`, and debug endpoints at the reverse proxy / web server layer and rotate any exposed credentials.",
@@ -107,6 +117,8 @@ def _fallback_draft(finding: dict) -> dict:
         "sourcemap": "Disable `.js.map` generation or restrict access to source map files in production deployments.",
         "host-change": "Verify that authentication and role-based access controls are properly enforced on the newly accessible host.",
         "unauth-api": "Enforce authentication and role-based authorization checks on the exposed API endpoint before returning any internal or user data.",
+        "cloud-takeover": "Remove references to the decommissioned S3 bucket from the frontend bundle or re-create and lock down the bucket in AWS.",
+        "cloud-exposure": "Restrict S3 bucket ACLs / bucket policies to disable public ListBucket access, or configure Firebase Security Rules to require authentication.",
     }
 
     return {
@@ -151,6 +163,8 @@ def validate_and_draft_report(finding: dict) -> dict | None:
             "js-secret",
             "cors",
             "unauth-api",
+            "cloud-takeover",
+            "cloud-exposure",
         ):
             return _fallback_draft(finding)
         finding["_rejection_reason"] = "No GROQ_API_KEY and finding is not strong-confidence direct proof"
