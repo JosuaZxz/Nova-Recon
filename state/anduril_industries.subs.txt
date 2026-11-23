@@ -236,6 +236,8 @@ agent-platform.anduril.dev
 agent-sandbox-dev.andurildev.com
 agent-vault-api.dev.forge-mgmt.anduril.dev
 agent-vault-api.forge-mgmt.anduril.dev
+agent-vault-mtls-api.dev.forge-mgmt.anduril.dev
+agent-vault-mtls.dev.forge-mgmt.anduril.dev
 agents-on-servers-dev.andurildev.com
 agentsim.docs.anduril.dev
 agni-test.network.anduril.dev
@@ -3326,6 +3328,7 @@ pdp-dashboard-qa.eng.anduril.dev
 pdp-dashboard-stg.eng.anduril.dev
 pdp-dashboard.eng.anduril.dev
 pdp-dashboard.non-prod.eng.anduril.dev
+pdp-sandbox.non-prod.eng.anduril.dev
 pdp-schedule-tracker.non-prod.eng.anduril.dev
 pdp-tracker.non-prod.eng.anduril.dev
 pdp-training.non-prod.eng.anduril.dev
@@ -4476,6 +4479,7 @@ uns-api.mdp-sandbox.eng.anduril.dev
 uns-bot.mdp-sandbox.eng.anduril.dev
 uns.mdp-dev.eng.anduril.dev
 uns.mdp-sandbox.eng.anduril.dev
+updog.non-prod.eng.anduril.dev
 upload.actuator.anduril.dev
 urs-dev.andurildev.com
 urs-mfg-test-analyzer.non-prod.eng.anduril.dev

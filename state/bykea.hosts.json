@@ -1,0 +1,239 @@
+{
+ "_seeded": true,
+ "betadispatch-backend.bykea.net": {
+  "url": "https://betadispatch-backend.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "api-loadboard.bykea.net": {
+  "url": "https://api-loadboard.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "betadispatch.bykea.net": {
+  "url": "https://betadispatch.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "api-talos.bykea.net": {
+  "url": "https://api-talos.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "geocode-beta.bykea.net": {
+  "url": "https://geocode-beta.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "api.bykea.net": {
+  "url": "https://api.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "googleplaces.bykea.net": {
+  "url": "https://googleplaces.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "bss2.bykea.net": {
+  "url": "https://bss2.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "track.bykea.net": {
+  "url": "https://track.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "boleelagao.bykea.net": {
+  "url": "https://boleelagao.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "video.bykea.net": {
+  "url": "https://video.bykea.net/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "nominatim.bykea.net": {
+  "url": "https://nominatim.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "bss2-be.bykea.net": {
+  "url": "https://bss2-be.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "track-backend.bykea.net": {
+  "url": "https://track-backend.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "kronos-kn.bykea.net": {
+  "url": "https://kronos-kn.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "dispatch.bykea.net": {
+  "url": "https://dispatch.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "leaflet-map.bykea.net": {
+  "url": "https://leaflet-map.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "googleplace.bykea.net": {
+  "url": "https://googleplace.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "tomoe.bykea.net": {
+  "url": "https://tomoe.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "mis-be-pk.bykea.net": {
+  "url": "https://mis-be-pk.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "maps.bykea.net": {
+  "url": "https://maps.bykea.net/",
+  "http_status": 403,
+  "title": "Blocked - Bykea Technologies",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "dispatchers.bykea.net": {
+  "url": "https://dispatchers.bykea.net/",
+  "http_status": 200,
+  "title": "Dispatch",
+  "redirect": "",
+  "scripts": [
+   "https://dispatchers.bykea.net/static/js/2.447177f7.chunk.js",
+   "https://dispatchers.bykea.net/static/js/main.efc42e1b.chunk.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ },
+ "mis-pk.bykea.net": {
+  "url": "https://mis-pk.bykea.net/",
+  "http_status": 200,
+  "title": "Bykea MIS",
+  "redirect": "",
+  "scripts": [
+   "https://mis-pk.bykea.net/static/js/2.26b5da4e.chunk.js",
+   "https://mis-pk.bykea.net/static/js/main.7dfa96ab.chunk.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-23 14:37:34 UTC"
+ }
+}

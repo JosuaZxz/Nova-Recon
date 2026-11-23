@@ -1,0 +1,373 @@
+{
+ "_seeded": true,
+ "origin-preview-mcp.audible.com": {
+  "url": "https://origin-preview-mcp.audible.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "ramp-api-gamma.creator.audible.com": {
+  "url": "https://ramp-api-gamma.creator.audible.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?response_type=id_token&redirect_uri=https%3A%2F%2Framp-api-gamma.creator.audible.com%3A443%2F&nonce=54224f4ac4f0d30a9202af009c1fd372158fbbfbdfc5cb7dd0383da9",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "origin-api.audible.de": {
+  "url": "https://origin-api.audible.de/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "account.creator.audible.com": {
+  "url": "https://account.creator.audible.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.amazon.com/ap/signin?clientContext=135-5033889-4668064&openid.pape.preferred_auth_policies=Singlefactor&openid.pape.max_auth_age=900&openid.return_to=https%3A%2F%2Faccount.creator.audible.",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "orion-fe-devo.audible.com": {
+  "url": "https://orion-fe-devo.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Forion-fe-devo.audible.com%2F&client_id=https%3A%2F%2Forion-fe-devo.audible.com%3A443&scope=openid&sentry_handler_version=midwayga",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "origin-api.audible.it": {
+  "url": "https://origin-api.audible.it/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "ramp-api.integ.creator.audible.com": {
+  "url": "https://ramp-api.integ.creator.audible.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?response_type=id_token&redirect_uri=https%3A%2F%2Framp-api.integ.creator.audible.com%3A443%2F&nonce=c1e953af4cc5f4ccd1de6da13ccba349c9edc59eca8da60858822a1f",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "rampapi.audible.com": {
+  "url": "https://rampapi.audible.com/",
+  "http_status": 500,
+  "title": "We're sorry!",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "beta.mosaic.audible.com": {
+  "url": "https://beta.mosaic.audible.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-eu-1.audible.es": {
+  "url": "https://arya-pacman-sandbox-eu-1.audible.es/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "github.audible.com": {
+  "url": "https://github.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fgithub.audible.com%2F&client_id=https%3A%2F%2Fgithub.audible.com%3A443&scope=openid&sentry_handler_version=midwaygateway&response",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "rewrite-internal.audible.com": {
+  "url": "https://rewrite-internal.audible.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Frewrite-internal.audible.com&client_id=https%3A%2F%2Frewrite-internal.audible.com%3A443&scope=openid&response_type=id_token&nonce",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "origin-api.audible.com.br": {
+  "url": "https://origin-api.audible.com.br/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "jira-staging.audible.com": {
+  "url": "https://jira-staging.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fjira-staging.audible.com%2F&client_id=https%3A%2F%2Fjira-staging.audible.com%3A443&scope=openid&sentry_handler_version=midwaygate",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "devicelab.audible.com": {
+  "url": "https://devicelab.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fdevicelab.audible.com%2F&client_id=https%3A%2F%2Fdevicelab.audible.com%3A443&scope=openid&sentry_handler_version=midwaygateway&re",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "checkout-sandbox-fe-1-preprod.audible.co.jp": {
+  "url": "https://checkout-sandbox-fe-1-preprod.audible.co.jp/",
+  "http_status": 502,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "origin-sandbox-mcp.audible.com": {
+  "url": "https://origin-sandbox-mcp.audible.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "beta-wmp.audible.com": {
+  "url": "https://beta-wmp.audible.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "origin-api.audible.com": {
+  "url": "https://origin-api.audible.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-fe-1.audible.com.au": {
+  "url": "https://arya-pacman-sandbox-fe-1.audible.com.au/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "jira-beta.audible.com": {
+  "url": "https://jira-beta.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fjira-beta.audible.com%2F&client_id=https%3A%2F%2Fjira-beta.audible.com%3A443&scope=openid&sentry_handler_version=midwaygateway&re",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "wiki-staging.audible.com": {
+  "url": "https://wiki-staging.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fwiki-staging.audible.com%2F&client_id=https%3A%2F%2Fwiki-staging.audible.com%3A443&scope=openid&sentry_handler_version=midwaygate",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "beta-wmp.audible.de": {
+  "url": "https://beta-wmp.audible.de/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "aquatic.audible.co.uk": {
+  "url": "https://aquatic.audible.co.uk/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "aquatic.audible.co.jp": {
+  "url": "https://aquatic.audible.co.jp/",
+  "http_status": 503,
+  "title": "Website Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-eu-2.audible.it": {
+  "url": "https://arya-pacman-sandbox-eu-2.audible.it/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "qushkaja-preprod.audible.com": {
+  "url": "https://qushkaja-preprod.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fqushkaja-preprod.audible.com%2F&client_id=https%3A%2F%2Fqushkaja-preprod.audible.com%3A443&scope=openid&sentry_handler_version=mi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "github-test.audible.com": {
+  "url": "https://github-test.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Fgithub-test.audible.com%2F&client_id=https%3A%2F%2Fgithub-test.audible.com%3A443&scope=openid&sentry_handler_version=midwaygatewa",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "sandbox-mcp.audible.com": {
+  "url": "https://sandbox-mcp.audible.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-na-1.audible.com.br": {
+  "url": "https://arya-pacman-sandbox-na-1.audible.com.br/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "api.audible.com": {
+  "url": "https://api.audible.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "orion-na-preprod.audible.com": {
+  "url": "https://orion-na-preprod.audible.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://midway-auth.amazon.com/SSO/redirect?redirect_uri=https%3A%2F%2Forion-na-preprod.audible.com%2F&client_id=https%3A%2F%2Forion-na-preprod.audible.com%3A443&scope=openid&sentry_handler_version=mi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "api.audible.ca": {
+  "url": "https://api.audible.ca/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "newsletters.audible.com": {
+  "url": "https://newsletters.audible.com/",
+  "http_status": 200,
+  "title": "Movable Ink Domain",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "newpay.audible.de": {
+  "url": "https://newpay.audible.de/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-eu-2.audible.co.uk": {
+  "url": "https://arya-pacman-sandbox-eu-2.audible.co.uk/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ },
+ "arya-pacman-sandbox-fe-2.audible.co.jp": {
+  "url": "https://arya-pacman-sandbox-fe-2.audible.co.jp/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:55:32 UTC"
+ }
+}

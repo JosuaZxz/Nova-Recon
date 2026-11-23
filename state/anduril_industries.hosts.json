@@ -1,0 +1,163 @@
+{
+ "_seeded": true,
+ "jira-stage.anduril.dev": {
+  "url": "https://jira-stage.anduril.dev/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "scim.authorization-staging.andurildev.com": {
+  "url": "https://scim.authorization-staging.andurildev.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "workspaces-saml-dev.anduril.com": {
+  "url": "https://workspaces-saml-dev.anduril.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://anduril.okta.com:443/app/anduril_awsworkspacessaml_1/exk70mskj01H9HEFh4h7/sso/saml",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "idp.dev.dt.security.anduril.dev": {
+  "url": "https://idp.dev.dt.security.anduril.dev/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "anduril-mfx-dev.andurildev.com": {
+  "url": "https://anduril-mfx-dev.andurildev.com/unsupported-browser.html",
+  "http_status": 200,
+  "title": "Lattice | Unsupported Browser",
+  "redirect": "https://anduril-mfx-dev.andurildev.com/unsupported-browser.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "provision-metrics-mtls-cert.observability-dev.andurildev.com": {
+  "url": "https://provision-metrics-mtls-cert.observability-dev.andurildev.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "boomerang-vpn.andurildev.com": {
+  "url": "https://boomerang-vpn.andurildev.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "access-metrics.dive-dev.andurildev.com": {
+  "url": "https://access-metrics.dive-dev.andurildev.com/",
+  "http_status": 401,
+  "title": "401 Authorization Required",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "anduril-cloudos-dev.andurildev.com": {
+  "url": "https://anduril-cloudos-dev.andurildev.com/unsupported-browser.html",
+  "http_status": 200,
+  "title": "Lattice | Unsupported Browser",
+  "redirect": "https://anduril-cloudos-dev.andurildev.com/unsupported-browser.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "agdsre-sandbox.anduril.com": {
+  "url": "https://agdsre-sandbox.anduril.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://agdsre-sandbox.anduril.com/login?ref=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "maritime-dev.andurildev.com": {
+  "url": "https://maritime-dev.andurildev.com/unsupported-browser.html",
+  "http_status": 200,
+  "title": "Lattice | Unsupported Browser",
+  "redirect": "https://maritime-dev.andurildev.com/unsupported-browser.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "ast-internal.anduril.com": {
+  "url": "https://ast-internal.anduril.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://ast-internal.anduril.com/login?ref=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "squada-dev.andurildev.com": {
+  "url": "https://squada-dev.andurildev.com/unsupported-browser.html",
+  "http_status": 200,
+  "title": "Lattice | Unsupported Browser",
+  "redirect": "https://squada-dev.andurildev.com/unsupported-browser.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "ma-dev.andurildev.com": {
+  "url": "https://ma-dev.andurildev.com/unsupported-browser.html",
+  "http_status": 200,
+  "title": "Lattice | Unsupported Browser",
+  "redirect": "https://ma-dev.andurildev.com/unsupported-browser.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "dev-okta.developer.anduril.com": {
+  "url": "https://dev-okta.developer.anduril.com/home/andurilint_andurilsdkteamstack_1/0oakn119uvwNP9qxS4h7/alnkn157xe5xIoc9t4h7",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://dev-okta.developer.anduril.com/app/andurilint_andurilsdkteamstack_1/exkkn119uu80X7TDS4h7/sso/saml",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ },
+ "jira-stage-infosec.anduril.dev": {
+  "url": "https://jira-stage-infosec.anduril.dev/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 14:48:25 UTC"
+ }
+}
