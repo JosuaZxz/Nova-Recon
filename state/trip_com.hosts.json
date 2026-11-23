@@ -1,0 +1,22 @@
+{
+ "src-api-sin.trip.com": {
+  "url": "https://src-api-sin.trip.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-23 11:22:42 UTC"
+ },
+ "appeal-rest.trip.com": {
+  "url": "https://appeal-rest.trip.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-23 11:22:42 UTC"
+ }
+}
