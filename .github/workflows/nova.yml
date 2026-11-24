@@ -1,13 +1,9 @@
-name: NOVA v2.2 - Intelligent Recon, AI Validator & Report Generator
-
-# Deteksi aset BARU + same-host redirect follower + JS bundle diffing,
-# double-tap exposure + dual-DoH takeover check + AI Validation Gate (GROQ_API_KEY),
-# kirim dokumen REPORT-*.md siap kirim + bukti lengkap langsung ke Telegram.
-# Memory aset disimpan di folder state/ dan di-commit tiap run.
+name: NOVA v2.4 - High-Yield Recon, Multi-Layer Verification & Report Pipeline
 
 on:
   schedule:
-    - cron: '15 * * * *' # tiap jam menit 15
+    - cron: '11 */2 * * *'
+    - cron: '41 1,5,9,13,17,21 * * *'
   push:
     branches: [main]
     paths:
@@ -23,7 +19,7 @@ on:
       rotate_count:
         description: "Jumlah program per run saat rotasi otomatis"
         required: false
-        default: "6"
+        default: "16"
 
 permissions:
   contents: write
@@ -37,15 +33,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     env:
-      NOVA_MAX_CONC: "20"
-      NOVA_REQ_DELAY: "0.08"
+      NOVA_MAX_CONC: "24"
+      NOVA_REQ_DELAY: "0.06"
+      NOVA_PER_HOST_CAP: "45"
       NOVA_MAX_NEW_PROBE: "250"
-      NOVA_MAX_JS: "120"
+      NOVA_MAX_JS: "150"
       NOVA_DIFF_BUDGET: "60"
-      NOVA_MONITOR_BUDGET: "240"
+      NOVA_MONITOR_BUDGET: "90"
       NOVA_TAKEOVER_CAP: "2000"
-      # Kepatuhan Intigriti (program Adobe): max 20 req/s + header identitas.
-      # Set secret INTIGRITI_USERNAME di repo, lalu aktifkan baris di bawah:
+      # Aktifkan bila menguji program Intigriti yang mewajibkan header peneliti:
       # NOVA_EXTRA_HEADERS: '{"X-Intigriti-Username":"${{ secrets.INTIGRITI_USERNAME }}"}'
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
@@ -98,8 +94,8 @@ jobs:
             ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | grep -v '^_' | sort)
           fi
           N=$(echo "$ALL" | wc -l)
-          K="${{ github.event.inputs.rotate_count || '6' }}"
-          K=$(( K + 0 )); [ "$K" -lt 1 ] && K=8
+          K="${{ github.event.inputs.rotate_count || '16' }}"
+          K=$(( K + 0 )); [ "$K" -lt 1 ] && K=16
           if [ -n "${{ github.event.inputs.programs }}" ]; then
             PROGS="${{ github.event.inputs.programs }}"
           elif [ "$N" -le "$K" ]; then
@@ -115,33 +111,41 @@ jobs:
           fi
           echo "programs=$PROGS" >> "$GITHUB_OUTPUT"
           {
-            echo "### NOVA v2.1 run #${{ github.run_number }}"
-            echo "- Program aktif: $N"
-            echo "- Diproses run ini: \`$PROGS\`"
+            echo "### NOVA v2.4 run #${{ github.run_number }}"
+            echo "- Program aktif di _focus.txt: **$N**"
+            echo "- Diproses pada batch ini (target $K): \`$PROGS\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: NOVA - monitor/probe/verify/diff per program
+      - name: NOVA - monitor/probe/verify/diff per program (43m soft deadline)
         run: |
+          START_TS=$(date +%s)
           IFS=',' read -ra PROGS <<< "${{ steps.pick.outputs.programs }}"
+          DONE_CNT=0
           for P in "${PROGS[@]}"; do
+            ELAPSED=$(( $(date +%s) - START_TS ))
+            if [ "$ELAPSED" -gt 2580 ]; then
+              echo "[time-guard] Sudah berjalan ${ELAPSED}s (>43m). Hentikan loop dengan aman agar brief & commit state selalu tuntas."
+              break
+            fi
             P=$(echo "$P" | xargs)
             [ -z "$P" ] && continue
             [ -f "targets/$P.txt" ] || { echo "[skip] targets/$P.txt tidak ada"; continue; }
             echo "=============== NOVA: $P ==============="
             mkdir -p "data/$P"
-            # Ekstrak hanya include rules (abaikan # dan !) untuk subfinder
             tr -d '\r' < "targets/$P.txt" | grep -v '^[[:space:]]*[#!]' | sed 's/^\*\.//' | sed '/^[[:space:]]*$/d' > "data/$P/subfinder_roots.txt" || true
             if [ -s "data/$P/subfinder_roots.txt" ]; then
-              timeout 6m subfinder -dL "data/$P/subfinder_roots.txt" -all -silent -o "data/$P/subfinder.txt" 2>/dev/null || true
+              timeout 90s subfinder -dL "data/$P/subfinder_roots.txt" -all -silent -max-time 1 -o "data/$P/subfinder.txt" 2>/dev/null || true
             fi
             python3 scripts/nova.py monitor --program "$P" --merge-file "data/$P/subfinder.txt"
             python3 scripts/nova.py probe --program "$P"
             python3 scripts/nova.py verify --program "$P"
             python3 scripts/nova.py diff --program "$P"
             rm -rf "data/$P"
+            DONE_CNT=$(( DONE_CNT + 1 ))
           done
+          echo "- Selesai diproses penuh: **$DONE_CNT** program" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Briefing + Telegram (hanya jika ada lead)
+      - name: Briefing + Telegram (hanya jika ada lead valid)
         if: always()
         run: python3 scripts/nova.py brief --send-telegram
 
@@ -152,7 +156,7 @@ jobs:
           git config --local user.name "Nova-Bot"
           mkdir -p state
           git add state/
-          git commit -m "nova: update asset memory [skip ci]" || echo "No changes"
+          git commit -m "nova: sync asset state" || echo "No changes"
           for i in 1 2 3 4 5; do
             git pull origin main --rebase || (git rebase --abort || true)
             if git push origin main; then

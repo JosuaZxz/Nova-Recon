@@ -1,4 +1,4 @@
-"""JavaScript bundle change diffing, route extraction, and secret FP filtering."""
+"""JavaScript bundle change diffing, route extraction, cloud asset discovery, and secret filtering."""
 
 from __future__ import annotations
 
@@ -19,14 +19,14 @@ VENDOR_JS_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Normalize content-hashed filenames: main.a1b2c3d4.js or app-1234abcd.js
+# Normalize content-hashed filenames such as main.a1b2c3d4.js or app-1234abcd.js.
 HASH_CHUNK_RE = re.compile(
     r"([.\-_])[a-f0-9]{6,32}(?=(?:\.min)?\.m?js$)",
     re.IGNORECASE,
 )
 
 ENDPOINT_RE = re.compile(
-    r"""['"`]((?:/api/|/v[1-9][0-9]?/|/graphql(?:/[a-z0-9_\-]+)?|/internal/|/admin/|/management/|/private/|/auth/|/oauth2?/|/webhook[s]?/|/billing/|/export|/users/)[a-zA-Z0-9_\-./:{}]{1,90})['"`]"""
+    r"""['"`]((?:/api/|/v[1-9][0-9]?/|/graphql(?:/[a-z0-9_\-]+)?|/internal/|/admin/|/management/|/private/|/auth/|/oauth2?/|/webhook[s]?/|/billing/|/export|/users/|/debug/|/actuator/)[a-zA-Z0-9_\-./:{}]{1,90})['"`]"""
 )
 
 IGNORE_ROUTE_PARTS = (
@@ -51,6 +51,25 @@ IGNORE_ROUTE_PARTS = (
     ".ico",
 )
 
+HIGH_SIGNAL_ROUTE_KW = (
+    "/admin",
+    "/internal",
+    "/private",
+    "/graphql",
+    "/auth",
+    "/oauth",
+    "/billing",
+    "/export",
+    "/webhook",
+    "/users",
+    "/management",
+    "/debug",
+    "/actuator",
+    "/secret",
+    "/token",
+    "/tenant",
+)
+
 GRAPHQL_OP_RE = re.compile(
     r"\b(?:query|mutation|subscription)\s+([A-Z][A-Za-z0-9_]{2,50})\b"
 )
@@ -70,7 +89,18 @@ S3_URL_RE = re.compile(
 )
 
 FIREBASE_URL_RE = re.compile(
-    r"https://([a-z0-9][a-z0-9\-]{2,60}(?:\.[a-z0-9\-]+)?\.firebaseio\.com)",
+    r"https://([a-z0-9][a-z0-9\-]{2,60}(?:\.[a-z0-9\-]+)?\.(?:firebaseio\.com|firebasedatabase\.app))",
+    re.IGNORECASE,
+)
+
+GCS_URL_RE = re.compile(
+    r"https?://(?:storage\.googleapis\.com/([a-z0-9][a-z0-9.\-_]{2,61})(?=[/?'\"\s])|"
+    r"([a-z0-9][a-z0-9.\-_]{2,61})\.storage\.googleapis\.com)",
+    re.IGNORECASE,
+)
+
+AZURE_BLOB_RE = re.compile(
+    r"https://([a-z0-9]{3,24}\.blob\.core\.windows\.net/[a-z0-9][a-z0-9\-]{2,62})",
     re.IGNORECASE,
 )
 
@@ -80,6 +110,7 @@ SECRET_PATTERNS = (
         "GitHub token",
         re.compile(r"\b(gh[pousr]_[A-Za-z0-9]{30,60}|github_pat_[A-Za-z0-9_]{20,})\b"),
     ),
+    ("GitLab token", re.compile(r"\b(glpat-[A-Za-z0-9\-_]{20,50})\b")),
     ("Stripe live key", re.compile(r"\b([sr]k_live_[A-Za-z0-9]{20,})\b")),
     ("Slack token", re.compile(r"\b(xox[baprs]-[0-9]{10,13}-[A-Za-z0-9\-]{10,})\b")),
     (
@@ -89,6 +120,26 @@ SECRET_PATTERNS = (
         ),
     ),
     ("SendGrid key", re.compile(r"\b(SG\.[A-Za-z0-9_\-]{20,}\.[A-Za-z0-9_\-]{20,})\b")),
+    ("Resend API key", re.compile(r"\b(re_[A-Za-z0-9_]{28,50})\b")),
+    ("Brevo API key", re.compile(r"\b(xkeysib-[a-f0-9]{64}-[A-Za-z0-9]{16})\b")),
+    ("Mailgun key", re.compile(r"\b(key-[a-f0-9]{32})\b")),
+    ("OpenAI project key", re.compile(r"\b(sk-proj-[A-Za-z0-9_\-]{40,180})\b")),
+    ("Anthropic API key", re.compile(r"\b(sk-ant-api03-[A-Za-z0-9_\-]{50,140})\b")),
+    ("Groq API key", re.compile(r"\b(gsk_[A-Za-z0-9]{40,80})\b")),
+    ("HuggingFace token", re.compile(r"\b(hf_[A-Za-z0-9]{34,60})\b")),
+    ("Shopify private token", re.compile(r"\b(shp(?:at|ca|ss|pa)_[a-fA-F0-9]{32})\b")),
+    ("Telegram Bot token", re.compile(r"\b([0-9]{8,10}:AA[A-Za-z0-9_\-]{33})\b")),
+    ("NPM access token", re.compile(r"\b(npm_[A-Za-z0-9]{36})\b")),
+    ("Doppler service token", re.compile(r"\b(dp\.(?:pt|st|ct)\.[A-Za-z0-9_]{36,60})\b")),
+    ("Linear API key", re.compile(r"\b(lin_api_[A-Za-z0-9]{40})\b")),
+    ("Mapbox secret token", re.compile(r"\b(sk\.eyJ[A-Za-z0-9_\-]{20,}\.[A-Za-z0-9_\-]{10,})\b")),
+    (
+        "Database credentials URI",
+        re.compile(
+            r"((?:mongodb(?:\+srv)?|postgres(?:ql)?|mysql|rediss?|amqp)://"
+            r"[^/\s'\":<>]{2,64}:[^@\s'\"<>]{8,128}@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,24})"
+        ),
+    ),
     (
         "Google Service Account",
         re.compile(r'"type"\s*:\s*"service_account"[\s\S]{1,250}?"private_key"\s*:'),
@@ -99,7 +150,6 @@ SECRET_PATTERNS = (
             r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----[A-Za-z0-9+/=\r\n\\n]{220,}-----END [A-Z ]*?PRIVATE KEY-----"
         ),
     ),
-    ("Mailgun key", re.compile(r"\b(key-[a-f0-9]{32})\b")),
 )
 
 FP_CONTEXT_HINTS = (
@@ -115,11 +165,15 @@ FP_CONTEXT_HINTS = (
     "pkcs8",
     "mock",
     "redact",
+    "localhost",
+    "127.0.0.1",
+    "user:pass",
+    "username:password",
 )
 
 MAX_ROUTES_PER_BUNDLE = 250
 MAX_OPS_PER_BUNDLE = 100
-MAX_BUNDLES_PER_PROGRAM = 250
+MAX_BUNDLES_PER_PROGRAM = 300
 
 
 def redact(value: str, keep: int = 4) -> str:
@@ -149,7 +203,7 @@ def is_vendor_js(js_url: str, body_head: str = "") -> bool:
 
 
 def extract_cloud_urls(js_text: str) -> dict[str, list[str]]:
-    """Extract unique AWS S3 buckets and Firebase Realtime DB URLs referenced in JS."""
+    """Extract unique AWS S3, Firebase Realtime DB, GCS, and Azure Blob URLs referenced in JS."""
     s3_buckets = set()
     for m in S3_URL_RE.finditer(js_text):
         bucket = (m.group(1) or m.group(2) or "").lower().strip(".")
@@ -159,14 +213,26 @@ def extract_cloud_urls(js_text: str) -> dict[str, list[str]]:
     firebase_dbs = set()
     for m in FIREBASE_URL_RE.finditer(js_text):
         host = m.group(1).lower()
-        if not any(ig in host for ig in ("example", "demo", "your-project", "firebaseio.com")):
-            pass
         if not any(ig in host for ig in ("example", "your-project", "dummy")):
             firebase_dbs.add(f"https://{host}")
+
+    gcs_buckets = set()
+    for m in GCS_URL_RE.finditer(js_text):
+        bucket = (m.group(1) or m.group(2) or "").lower().strip(".")
+        if bucket and not any(ig in bucket for ig in ("example", "your-bucket", "googleapis", "gstatic")):
+            gcs_buckets.add(f"https://storage.googleapis.com/{bucket}")
+
+    azure_blobs = set()
+    for m in AZURE_BLOB_RE.finditer(js_text):
+        blob_path = m.group(1).lower().strip("/")
+        if blob_path and not any(ig in blob_path for ig in ("example", "contoso", "youraccount")):
+            azure_blobs.add(f"https://{blob_path}?restype=container&comp=list")
 
     return {
         "s3_urls": sorted(s3_buckets)[:25],
         "firebase_urls": sorted(firebase_dbs)[:15],
+        "gcs_urls": sorted(gcs_buckets)[:15],
+        "azure_urls": sorted(azure_blobs)[:15],
     }
 
 
@@ -184,7 +250,7 @@ def extract_js_intel(js_text: str, js_url: str) -> dict:
     keywords = {m.lower() for m in SENSITIVE_KEY_RE.findall(js_text)}
 
     sourcemap_url = None
-    sm = SOURCEMAP_RE.search(js_text[-2000:] if len(js_text) > 2000 else js_text)
+    sm = SOURCEMAP_RE.search(js_text[-2500:] if len(js_text) > 2500 else js_text)
     if sm:
         raw_map = sm.group(1).strip()
         if raw_map and not raw_map.startswith("data:"):
@@ -200,17 +266,22 @@ def extract_js_intel(js_text: str, js_url: str) -> dict:
 
 
 def _has_real_entropy(token: str) -> bool:
-    """Reject low-entropy / repeated dummy strings (e.g. AAAA..., 123456...)."""
-    core = re.sub(r"^(AKIA|gh[pousr]_|github_pat_|[sr]k_live_|xox[baprs]-|SG\.|key-)", "", token)
+    """Reject low-entropy or repeated dummy strings."""
+    core = re.sub(
+        r"^(AKIA|gh[pousr]_|github_pat_|glpat-|[sr]k_live_|xox[baprs]-|SG\.|re_|xkeysib-|"
+        r"key-|sk-proj-|sk-ant-api03-|gsk_|hf_|shp(?:at|ca|ss|pa)_|npm_|dp\.[a-z]{2}\.|lin_api_|sk\.)",
+        "",
+        token,
+    )
     if len(set(core)) < 7:
         return False
-    if any(seq in core.lower() for seq in ("12345678", "abcdefgh", "00000000", "xxxxxxxx")):
+    if any(seq in core.lower() for seq in ("12345678", "abcdefgh", "00000000", "xxxxxxxx", "${")):
         return False
     return True
 
 
 def scan_js_secrets(js_text: str, js_url: str) -> list[dict]:
-    """Scan JS text for high-confidence leaked secrets while suppressing known FPs."""
+    """Scan JS or HTML text for high-confidence leaked secrets while suppressing known FPs."""
     if is_vendor_js(js_url, js_text):
         return []
 
@@ -264,17 +335,22 @@ def load_js_state(state_dir: Path, program: str) -> dict:
 
 
 def save_js_state(state_dir: Path, program: str, state: dict) -> None:
-    """Persist bounded JS bundle snapshots to keep git state lightweight."""
+    """Persist bounded JS bundle snapshots without transient underscore fields."""
     state_dir.mkdir(exist_ok=True)
-    if len(state) > MAX_BUNDLES_PER_PROGRAM:
+    cleaned = {
+        k: {ek: ev for ek, ev in v.items() if not ek.startswith("_")}
+        for k, v in state.items()
+        if isinstance(v, dict)
+    }
+    if len(cleaned) > MAX_BUNDLES_PER_PROGRAM:
         ordered = sorted(
-            state.items(),
+            cleaned.items(),
             key=lambda kv: kv[1].get("updated", ""),
             reverse=True,
         )[:MAX_BUNDLES_PER_PROGRAM]
-        state = dict(ordered)
+        cleaned = dict(ordered)
     path = state_dir / f"{program}.js.json"
-    path.write_text(json.dumps(state, ensure_ascii=False, indent=1), encoding="utf-8")
+    path.write_text(json.dumps(cleaned, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def diff_js_bundle(
@@ -283,7 +359,7 @@ def diff_js_bundle(
     js_state: dict,
     is_interesting_host: bool = False,
 ) -> tuple[dict | None, dict | None]:
-    """Compare a JS bundle against its previous snapshot and emit a diff finding if warranted."""
+    """Compare a JS bundle against its previous snapshot and attach newly seen routes/maps."""
     if is_vendor_js(js_url, js_text):
         return None, None
 
@@ -292,7 +368,7 @@ def diff_js_bundle(
     prev = js_state.get(key)
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-    # Skip duplicate bundles with identical sha256 already analyzed on sibling subdomains
+    # Skip duplicate bundles whose sha256 was already analyzed on a sibling subdomain.
     seen_hashes = {
         v.get("sha256")
         for v in js_state.values()
@@ -323,34 +399,21 @@ def diff_js_bundle(
     added_ops = sorted(set(intel["graphql_ops"]) - prev_ops)
     is_update = prev is not None
 
+    high_signal_routes = [
+        r for r in added_routes if any(kw in r.lower() for kw in HIGH_SIGNAL_ROUTE_KW)
+    ]
+
+    # Attach transient fields so nova.py always tests new routes and sourcemaps even on non-keyword hosts.
     entry = {
         "last_url": js_url,
         "sha256": intel["sha256"],
         "routes": sorted(prev_routes | set(intel["routes"]))[:MAX_ROUTES_PER_BUNDLE],
         "graphql_ops": sorted(prev_ops | set(intel["graphql_ops"]))[:MAX_OPS_PER_BUNDLE],
         "updated": now,
+        "_unseen_hash": True,
+        "_added_routes": (added_routes if is_update else (high_signal_routes or added_routes[:10])),
+        "_sourcemap_url": intel["sourcemap_url"],
     }
-
-    # Alert on real deploy diffs (routes/ops added) or high-signal new interesting hosts
-    high_signal_routes = [
-        r
-        for r in added_routes
-        if any(
-            kw in r.lower()
-            for kw in (
-                "/admin",
-                "/internal",
-                "/private",
-                "/graphql",
-                "/auth",
-                "/oauth",
-                "/billing",
-                "/export",
-                "/webhook",
-                "/users",
-            )
-        )
-    ]
 
     should_report = (
         (is_update and (len(added_routes) > 0 or len(added_ops) > 0))

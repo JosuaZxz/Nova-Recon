@@ -1,1 +1,4 @@
-remitly.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/remitly
+*.dev.remitly.com
+*.int.remitly.com
+!www.remitly.com

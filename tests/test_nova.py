@@ -439,6 +439,202 @@ class TestNovaV22(unittest.TestCase):
                 self.assertIn("94/100 (VALIDATED)", report_text)
                 self.assertIn("Cloudflare DoH: NXDOMAIN", report_text)
 
+    def test_per_host_cap_allows_full_verify_and_same_host_js(self):
+        self.assertGreaterEqual(nova.PER_HOST_CAP, 40)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            tdir, sdir, ddir, fdir = root / "targets", root / "state", root / "data", root / "findings"
+            tdir.mkdir()
+            sdir.mkdir()
+            (ddir / "demo").mkdir(parents=True)
+            fdir.mkdir()
+            (tdir / "demo.txt").write_text("demo.org\n", encoding="utf-8")
+            probe_rec = {
+                "host": "app.demo.org",
+                "url": "https://app.demo.org/",
+                "http_status": 200,
+                "catchall": False,
+                "scripts": ["https://app.demo.org/assets/main.js"],
+                "body": "<html></html>",
+            }
+            (ddir / "demo" / "probe.jsonl").write_text(json.dumps(probe_rec) + "\n", encoding="utf-8")
+            (ddir / "demo" / "new.txt").write_text("", encoding="utf-8")
+
+            gl_prefix = "gl" + "pat-"
+            tok = gl_prefix + "a9K3mP7xQ2vL8nR4tY6wZ1bC"
+            seen_urls = []
+
+            def fake_requests_req(method, url, **kwargs):
+                seen_urls.append(url)
+                resp = MagicMock()
+                resp.headers = {"Content-Type": "text/plain"}
+                if url == "https://app.demo.org/assets/main.js":
+                    resp.status_code = 200
+                    resp.headers = {"Content-Type": "application/javascript"}
+                    resp.iter_content.return_value = [f'const cfg = "{tok}";'.encode("utf-8")]
+                    return resp
+                resp.status_code = 404
+                resp.iter_content.return_value = [b"404"]
+                return resp
+
+            with (
+                patch.object(nova, "TARGETS_DIR", tdir),
+                patch.object(nova, "STATE_DIR", sdir),
+                patch.object(nova, "DATA_DIR", ddir),
+                patch.object(nova, "FINDINGS_DIR", fdir),
+                patch.object(nova, "REQ_DELAY", 0.0),
+                patch("nova.requests.request", side_effect=fake_requests_req),
+                patch.dict("os.environ", {"GROQ_API_KEY": ""}),
+            ):
+                nova.cmd_verify(
+                    argparse.Namespace(program="demo", probe_file=None, new_file=None, rebuild=False)
+                )
+                self.assertIn("https://app.demo.org/assets/main.js", seen_urls)
+                js_saved = json.loads((sdir / "demo.js.json").read_text(encoding="utf-8"))
+                self.assertEqual(len(js_saved), 1)
+                reports = list((fdir / nova.today_str() / "demo").glob("REPORT-demo-js-secret-*.md"))
+                self.assertEqual(len(reports), 1)
+
+    def test_verify_scans_404_api_hosts_and_openapi_routes(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            tdir, sdir, ddir, fdir = root / "targets", root / "state", root / "data", root / "findings"
+            tdir.mkdir()
+            sdir.mkdir()
+            (ddir / "demo").mkdir(parents=True)
+            fdir.mkdir()
+            (tdir / "demo.txt").write_text("demo.org\n", encoding="utf-8")
+            probe_rec = {
+                "host": "api-stg.demo.org",
+                "url": "https://api-stg.demo.org/",
+                "http_status": 404,
+                "catchall": False,
+                "scripts": [],
+                "body": '{"status":404,"error":"Not Found"}',
+            }
+            (ddir / "demo" / "probe.jsonl").write_text(json.dumps(probe_rec) + "\n", encoding="utf-8")
+            (ddir / "demo" / "new.txt").write_text("", encoding="utf-8")
+
+            def fake_http(url, **kwargs):
+                r = MagicMock()
+                if url == "https://api-stg.demo.org/openapi.json":
+                    r.status_code = 200
+                    r.headers = {"Content-Type": "application/json"}
+                    r._nova_body = json.dumps(
+                        {"openapi": "3.0.1", "paths": {"/api/v1/users/export": {"get": {}}}}
+                    ).encode("utf-8")
+                    return r, None
+                if url == "https://api-stg.demo.org/api/v1/users/export":
+                    r.status_code = 200
+                    r.headers = {"Content-Type": "application/json"}
+                    r._nova_body = b'{"users":[{"email":"ops@demo.org","phone":"+15550199"}]}'
+                    return r, None
+                r.status_code = 404
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"error":"not found"}'
+                return r, None
+
+            with (
+                patch.object(nova, "TARGETS_DIR", tdir),
+                patch.object(nova, "STATE_DIR", sdir),
+                patch.object(nova, "DATA_DIR", ddir),
+                patch.object(nova, "FINDINGS_DIR", fdir),
+                patch.object(nova, "http_get", side_effect=fake_http),
+                patch.dict("os.environ", {"GROQ_API_KEY": ""}),
+            ):
+                nova.cmd_verify(
+                    argparse.Namespace(program="demo", probe_file=None, new_file=None, rebuild=False)
+                )
+                reports = list((fdir / nova.today_str() / "demo").glob("REPORT-demo-unauth-api-*.md"))
+                self.assertEqual(len(reports), 1)
+
+    def test_hidden_sourcemap_and_non_keyword_host_routes_are_verified(self):
+        policy = scope_guard.ProgramPolicy(program="demo", includes=["demo.org"])
+        js_state: dict = {}
+        shp_prefix = "shp" + "at_"
+        secret_tok = shp_prefix + "a1b2c3d4e5f60718293a4b5c6d7e8f90"
+
+        def fake_http(url, **kwargs):
+            r = MagicMock()
+            if url == "https://merchant.demo.org/static/main.js":
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/javascript"}
+                r._nova_body = b'const api = "/api/v1/public/ping"; console.log(api);'
+                return r, None
+            if url == "https://merchant.demo.org/static/main.js.map":
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = (
+                    f'{{"version":3,"sources":["env.ts"],"sourcesContent":["const k = \\"{secret_tok}\\";"]}}'
+                ).encode("utf-8")
+                return r, None
+            r.status_code = 404
+            r.headers = {"Content-Type": "text/plain"}
+            r._nova_body = b"404"
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_http):
+            hits = nova._fetch_and_analyze_js(
+                [("https://merchant.demo.org/static/main.js", False)],
+                policy,
+                js_state,
+                run_diff=True,
+            )
+            self.assertEqual(len(hits), 1)
+            self.assertEqual(hits[0]["type"], "js-secret")
+            self.assertEqual(hits[0]["url"], "https://merchant.demo.org/static/main.js.map")
+
+    def test_ai_gate_blocks_bare_sourcemap_and_mutationless_graphql(self):
+        is_fp_sm, _ = ai_brief.deterministic_fp_check({"type": "sourcemap", "url": "https://a.com/a.js.map"})
+        self.assertTrue(is_fp_sm)
+        is_fp_gql, _ = ai_brief.deterministic_fp_check(
+            {"type": "graphql", "confidence": "medium", "url": "https://a.com/graphql"}
+        )
+        self.assertTrue(is_fp_gql)
+        is_fp_gql_strong, _ = ai_brief.deterministic_fp_check(
+            {"type": "graphql", "confidence": "strong", "url": "https://a.com/graphql"}
+        )
+        self.assertFalse(is_fp_gql_strong)
+
+    def test_scope_sync_filters_paid_wildcards_and_shared_hosting(self):
+        import scope_sync
+
+        self.assertIsNone(scope_sync._extract_clean_host("*.myshopify.com"))
+        self.assertIsNone(scope_sync._extract_clean_host("*.s3.amazonaws.com"))
+        self.assertEqual(scope_sync._extract_clean_host("*.acorns.com"), "*.acorns.com")
+
+        h1_sample = [
+            {
+                "handle": "midtier_saas",
+                "submission_state": "open",
+                "offers_bounties": True,
+                "url": "https://hackerone.com/midtier_saas",
+                "targets": {
+                    "in_scope": [
+                        {
+                            "asset_identifier": "*.midtiersaas.io",
+                            "asset_type": "WILDCARD",
+                            "eligible_for_bounty": True,
+                            "eligible_for_submission": True,
+                            "max_severity": "critical",
+                        },
+                        {
+                            "asset_identifier": "*.vdp-only.io",
+                            "asset_type": "WILDCARD",
+                            "eligible_for_bounty": False,
+                            "eligible_for_submission": True,
+                            "max_severity": "high",
+                        },
+                    ],
+                    "out_of_scope": [{"asset_identifier": "status.midtiersaas.io"}],
+                },
+            }
+        ]
+        parsed = scope_sync._parse_hackerone(h1_sample)
+        self.assertEqual(len(parsed), 1)
+        self.assertEqual(parsed[0]["wildcards"], ["*.midtiersaas.io"])
+        self.assertEqual(parsed[0]["excludes"], ["status.midtiersaas.io"])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,20 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/wise
+*.transferwise.com
+*.wise-sandbox.com
+*.wise.com
+!*.transferwise.tech
+!*.tw.com
+!*.tw.ee
+!bootstrap.transferwise.com
+!brand.transferwise.com
+!brand.wise.com
+!docs.wise.com
+!github.com
+!links.transferwise.com
+!links.wise.com
+!status.transferwise.com
+!status.wise.com
+!tech.transferwise.com
+!transferwise.com
+!widgets.transferwise.com
+!wise.com

@@ -1,1 +1,5 @@
-platacard.mx
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/banco_plata
+*.bancoplata.mx
+*.platacard.mx
+!bancoplata.mx
+!platacard.mx

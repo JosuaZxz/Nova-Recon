@@ -1,0 +1,5 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/pixiv
+*.fanbox.cc
+!*.pixiv.co.jp
+!ads.pixiv.net
+!factory.pixiv.net

@@ -1,0 +1,23 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/nord-security-mbb
+*.nordaccount.com
+*.nordcheckout.com
+*.nordlocker.com
+*.nordpass.com
+*.nordvpn.com
+!595468.nordvpn.com
+!affiliates.nordvpn.com
+!bounces.nordvpn.com
+!c.nordvpn.com
+!content.nordvpn.com
+!go.nordvpn.com
+!meshnet.nordvpn.com
+!mltrack.nordvpn.com
+!mltracksgrd.nordvpn.com
+!prevention.nordvpn.com
+!status.nordvpn.com
+!support.nordaccount.com
+!support.nordlocker.com
+!support.nordpass.com
+!support.nordvpn.com
+!trust.nordpass.com
+!zendesk.nordvpn.com

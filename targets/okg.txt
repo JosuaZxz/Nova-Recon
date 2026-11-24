@@ -1,0 +1,7 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/okg
+*.oklink.com
+*.okx.com
+!*.okg.com
+!github.com
+!okx.ai
+!web3.okx.com

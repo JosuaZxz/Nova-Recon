@@ -1,0 +1,8 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/tinder
+*.gotinder.com
+*.tinder.com
+*.tinderops.net
+!console.gotinder.com
+!go.tinder.com
+!gotinder.imgix.net
+!www.help.tinder.com

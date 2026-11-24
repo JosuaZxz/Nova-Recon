@@ -1,0 +1,8 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/scopely
+*.scopely.com
+*.scopely.io
+*.withbuddies.com
+!bamboo.scopely.io
+!confluence.scopely.io
+!jira.scopely.io
+!scopely.okta.com

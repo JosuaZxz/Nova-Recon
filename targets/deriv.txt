@@ -1,0 +1,9 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/deriv
+*.deriv.cloud
+*.deriv.com
+*.derivws.com
+!community.deriv.com
+!deriv.ae
+!deriv.slack.com
+!trade.mql5.com
+!tradingview.deriv.com

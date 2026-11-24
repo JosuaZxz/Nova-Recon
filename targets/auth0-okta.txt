@@ -1,0 +1,11 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/auth0-okta
+*.cic-bug-bounty.auth0app.com
+!accounts.auth0.com
+!auth0.auth0.com
+!community.auth0.com
+!github.com
+!goextend.io
+!manage.auth0.com
+!phenix.rocks
+!sharelock.io
+!support.auth0.com

@@ -1,0 +1,14 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/octopus-og
+*.octopus.com
+!*.octopus.app
+!artifactorysample.octopus.com
+!bamboosample.octopus.com
+!i.octopus.com
+!ir.octopus.com
+!jenkinssample.octopus.com
+!myget.octopus.com
+!nexussample.octopus.com
+!partners.octopus.com
+!shop.octopus.com
+!teamcitysample.octopus.com
+!trust.octopus.com

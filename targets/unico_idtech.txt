@@ -1,1 +1,4 @@
-unico.app
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/unico_idtech
+*.uat.unico.app
+!*.cadastro.uat.unico.app
+!uconf.uat.unico.app

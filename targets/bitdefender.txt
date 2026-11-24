@@ -1,0 +1,27 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/bitdefender
+*.bitdefender.com
+*.bitdefender.net
+!brand.bitdefender.com
+!businessemail.bitdefender.com
+!businessinsights.bitdefender.com
+!businessresources.bitdefender.com
+!community.bitdefender.com
+!crp.bitdefender.com
+!demo.bitdefender.com
+!explore-lb.bitdefender.com
+!explore.bitdefender.com
+!lsems.gravityzone.bitdefender.com
+!oemhub.bitdefender.com
+!oemresources.bitdefender.com
+!partner-marketing.bitdefender.com
+!resellerportal.bitdefender.com
+!seems.gravityzone.bitdefender.com
+!ssems.gravityzone.bitdefender.com
+!sstats.bitdefender.com
+!stats.bitdefender.com
+!telcosuccess.bitdefender.com
+!translate.bitdefender.com
+!trust.bitdefender.com
+!workflow-dev.bitdefender.com
+!workflow-test.bitdefender.com
+!workflow.bitdefender.com

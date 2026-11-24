@@ -31,6 +31,12 @@ def deterministic_fp_check(finding: dict) -> tuple[bool, str]:
     if ftype == "js-diff":
         return True, "JS route list alone is recon intel, not a reportable vulnerability without proven unauth data leak"
 
+    if ftype == "sourcemap":
+        return True, "Bare sourcemap without proven secret or unauthenticated API leak is Informative"
+
+    if ftype == "graphql" and finding.get("confidence") != "strong":
+        return True, "GraphQL introspection without exposed state-changing mutations is low-signal"
+
     if ftype == "cors" and finding.get("severity_hint") != "high":
         return True, "CORS reflection without Access-Control-Allow-Credentials: true"
 
@@ -195,8 +201,9 @@ def validate_and_draft_report(finding: dict) -> dict | None:
         "   - A subdomain takeover points to a non-claimable CDN/ELB or apex domain without a claimable resource name.\n"
         "   - The finding has no plausible security impact or verifiable evidence.\n"
         "2. MARK AS VALID if the evidence shows genuine leaked secrets/configs, a multi-resolver claimable dangling CNAME, "
-        "CORS reflection with credentials=true, GraphQL introspection exposing sensitive mutations/types, an exposed production sourcemap, "
-        "a 403/404->200 host transition, or newly deployed sensitive internal/admin/auth/billing API routes.\n"
+        "unclaimed S3 bucket (NoSuchBucket) or open cloud storage/Firebase DB referenced in JS, unauthenticated 200 OK JSON leaking sensitive user/internal fields, "
+        "CORS reflection with credentials=true, GraphQL introspection exposing state-changing mutations, "
+        "or a 403/404->200 host transition exposing an internal interface.\n"
         "3. Never invent CVEs or fabricate evidence not present in the input.\n"
         "4. If VALID, write a clear, professional, ready-to-submit Bug Bounty Report (in English for platform submission, with concise Indonesian notes in steps if helpful).\n\n"
         "Return ONLY valid JSON matching this schema:\n"

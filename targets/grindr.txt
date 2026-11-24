@@ -1,0 +1,18 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/grindr
+*.grindr.com
+*.grindr.io
+*.grindr.mobi
+!*.grindrads.com
+!*.intomore.com
+!blog.grindr.com
+!github.com
+!go.grindr.com
+!grindrbloop.com
+!grindrtogo.grindr.com
+!help.grindr.com
+!investors.grindr.com
+!kindr.grindr.com
+!selfservice.grindr.com
+!shop.grindr.com
+!shop.grindrbloop.com
+!status.grindr.com

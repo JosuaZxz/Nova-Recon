@@ -7,9 +7,9 @@
 **Stateful Bug Bounty Reconnaissance, Non-Destructive Exposure Verification, JS Bundle Diffing, and Report Drafting Engine for GitHub Actions**
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-1c5349?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Hourly_Cron-15332e?style=flat-square&logo=githubactions&logoColor=white)](./.github/workflows/nova.yml)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Multi_Slot_Cron-15332e?style=flat-square&logo=githubactions&logoColor=white)](./.github/workflows/nova.yml)
 [![Groq Llama 3.3 70B](https://img.shields.io/badge/Triage_Gate-Llama_3.3_70B-0d1117?style=flat-square)](./scripts/ai_brief.py)
-[![Unit Tests](https://img.shields.io/badge/Tests-14_Passing-2ea44f?style=flat-square)](./tests/test_nova.py)
+[![Unit Tests](https://img.shields.io/badge/Tests-19_Passing-2ea44f?style=flat-square)](./tests/test_nova.py)
 [![License: MIT](https://img.shields.io/badge/License-MIT-7be0c8?style=flat-square)](./LICENSE)
 
 </div>
@@ -22,11 +22,11 @@
 
 ### Core Modules & Verification Gates
 
-1. [`scripts/scope_guard.py`](./scripts/scope_guard.py) parses `targets/<program>.txt` into a `ProgramPolicy` supporting root domains, explicit single-host targets, wildcard includes (`*.example.com`), exact or wildcard exclusions (`!sso.example.com`, `!*.internal.example.com`), and regex exclusions (`!regex:^dev-sandbox-\d+\.`). Every discovered hostname, redirect destination, and extracted JavaScript endpoint is checked against this policy before any network request leaves the runner.
+1. [`scripts/scope_guard.py`](./scripts/scope_guard.py) & [`scripts/scope_sync.py`](./scripts/scope_sync.py) parse `targets/<program>.txt` into a `ProgramPolicy` supporting root domains, explicit single-host targets, wildcard includes (`*.example.com`), exact or wildcard exclusions (`!sso.example.com`, `!*.internal.example.com`), and regex exclusions (`!regex:^dev-sandbox-\d+\.`). `scope_sync.py` automatically pulls paid wildcard bounty programs (`offers_bounties=true`) and their official out-of-scope rules from HackerOne, Bugcrowd, and YesWeHack feeds while rejecting shared hosting suffixes.
 2. [`scripts/nova.py`](./scripts/nova.py) (`monitor`) queries Certificate Transparency and passive DNS sources (`crt.sh`, `subdomain.center`, `AlienVault OTX`) and merges optional `subfinder` output. It compares results against `state/<program>.subs.txt`, seeds legacy unprobed inventories (`NOVA_SEED_CAP=1000`), and persists overflow hosts in `state/<program>.queue.txt` so rate-capped runs (`NOVA_MAX_NEW_PROBE=250`) never drop discovered subdomains.
 3. [`scripts/nova.py`](./scripts/nova.py) (`probe`) prioritizes subdomains whose prefix matches development, staging, API, admin, or internal naming patterns (`_subdomain_prefix`). It follows up to 3 same-host HTTP redirects (`301`, `302`, `303`, `307`, `308`) while stopping at authentication walls (`/login`, `/signin`, `/sso`, `/oauth`), then extracts `<script src>` and `<link rel="modulepreload" href="...js">` asset URLs.
-4. [`scripts/nova.py`](./scripts/nova.py) (`verify` & `diff`) and [`scripts/js_intel.py`](./scripts/js_intel.py) verify sensitive file exposures, claimable subdomain takeovers via dual DNS-over-HTTPS resolvers, credentialed CORS reflections, GraphQL introspection schemas, high-entropy secrets in JS bundles and `.js.map` sourcemaps, unauthenticated JSON API routes, and unclaimed or publicly listable AWS S3 and Firebase Realtime Database assets. JavaScript bundle hashes (`sha256`) are deduplicated across subdomains so shared CDN assets are analyzed once per program.
-5. [`scripts/ai_brief.py`](./scripts/ai_brief.py) filters out common false positives (informational `dangling-cname` records, uncredentialed wildcard CORS, HTML/WAF catch-all pages, and unverified JS route lists) in `deterministic_fp_check()`, validates raw HTTP or DNS evidence through Groq (`llama-3.3-70b-versatile` in JSON mode), and renders verified findings into standalone Markdown attachments (`REPORT-<program>-<type>-<hash>.md`).
+4. [`scripts/nova.py`](./scripts/nova.py) (`verify` & `diff`) and [`scripts/js_intel.py`](./scripts/js_intel.py) verify sensitive file exposures, claimable subdomain takeovers via dual DNS-over-HTTPS resolvers (with `SERVFAIL` guards), credentialed CORS reflections, GraphQL mutations, 23 credential formats across inline HTML, JS bundles, and `.js.map` sourcemaps (up to `2 MB`, including hidden sourcemaps), OpenAPI/Swagger (`openapi.json`, `/v3/api-docs`) and JS API routes returning unauthenticated sensitive JSON, and unclaimed or publicly listable AWS S3, Firebase Realtime DB, GCS, and Azure Blob assets.
+5. [`scripts/ai_brief.py`](./scripts/ai_brief.py) filters out common false positives (informational `dangling-cname` records, bare sourcemaps, mutation-less GraphQL schemas, uncredentialed wildcard CORS, HTML/WAF catch-all pages, and unverified JS route lists) in `deterministic_fp_check()`, validates raw HTTP or DNS evidence through Groq (`llama-3.3-70b-versatile` in JSON mode), and renders verified findings into standalone Markdown attachments (`REPORT-<program>-<type>-<hash>.md`).
 6. [`scripts/browser_harvest.py`](./scripts/browser_harvest.py) drives `playwright-cli` in headless Chromium during local workflows to capture dynamically loaded webpack/Vite JS chunks and sourcemap URLs from client-rendered applications.
 
 ---
@@ -47,12 +47,12 @@ flowchart LR
 | Check Type | Verification Mechanism | False-Positive Guard | Default Severity |
 | :--- | :--- | :--- | :--- |
 | `exposure` | Probes `/.env*`, `/.git/config`, `/.git/HEAD`, `/actuator/env`, `/actuator/heapdump`, `/debug/vars`, `/server-status` | Requires real secret/header signatures + requests a random sibling canary URL to reject catch-all `200 OK` routers | `high` / `critical` |
-| `takeover` | Matches CNAME targets against 14 claimable cloud provider fingerprints | Confirms dead DNS status or provider unclaimed body banner across both Cloudflare (`1.1.1.1`) and Google (`8.8.8.8`) DoH | `high` |
-| `cloud-takeover` / `cloud-exposure` | Extracts AWS S3 and Firebase URLs from JS bundles and tests bucket root or `/.json?shallow=true` | Requires `<Code>NoSuchBucket</Code>`, `<ListBucketResult>` with `<Contents>`, or non-error JSON payload | `high` |
-| `unauth-api` | Politely requests concrete API routes extracted from JS diffs with `Accept: application/json` | Drops `401/403/404`, HTML responses, and error payloads; requires sensitive JSON keys + sibling canary check | `high` |
-| `js-secret` | Scans first-party JS bundles and `.js.map` (`sourcesContent`) for 16 credential formats | Enforces Shannon entropy thresholds (`_has_real_entropy`), skips vendor libraries, and rejects placeholder strings | `high` |
+| `takeover` | Matches CNAME targets against 28 claimable cloud provider suffixes | Confirms `NXDOMAIN` (ignoring `SERVFAIL`) or 15 provider unclaimed 404 banners across Cloudflare (`1.1.1.1`) and Google (`8.8.8.8`) DoH | `high` |
+| `cloud-takeover` / `cloud-exposure` | Extracts AWS S3, Firebase Realtime DB, GCS, and Azure Blob URLs from HTML/JS/sourcemaps | Requires `<Code>NoSuchBucket</Code>`, `<ListBucketResult>` with `<Contents>`, `<EnumerationResults>`, or non-error JSON | `high` |
+| `unauth-api` | Politely requests concrete `GET` routes extracted from JS bundles, sourcemaps, and `/openapi.json` / `/v3/api-docs` | Drops `401/403/404`, HTML responses, and error payloads; requires sensitive JSON keys + sibling canary check | `high` |
+| `js-secret` | Scans inline HTML, first-party JS bundles, and `2 MB` `.js.map` sourcemaps for 23 credential formats | Enforces Shannon entropy thresholds (`_has_real_entropy`), skips vendor libraries, and rejects placeholder strings | `critical` |
 | `cors` | Sends an external `Origin` header to live hosts | Requires exact origin reflection paired with `Access-Control-Allow-Credentials: true` | `high` |
-| `graphql` | Sends a minimal `__schema` query to `/graphql` and `/api/graphql` | Requires valid JSON schema output and extracts sensitive query/mutation names | `medium` |
+| `graphql` | Sends a minimal `__schema` query to `/graphql` and `/api/graphql` (including `404/405` API roots) | Requires valid JSON schema exposing at least one state-changing `mutation` | `medium` |
 
 ---
 
@@ -71,13 +71,17 @@ git clone https://github.com/JosuaZxz/Nova-Recon.git
 cd Nova-Recon
 pip install requests
 
-# Run the 14 unit tests covering scope_guard, js_intel, ai_brief, and nova pipeline gates
+# Run the 19 unit tests covering scope_guard, scope_sync, js_intel, ai_brief, and nova pipeline gates
 python -m unittest discover -s tests -v
 ```
 
-### 2. Audit Target Scope Files
+### 2. Sync Paid Wildcard Scopes & Audit Target Files
 
 ```bash
+# Optional: Pull 90 paid mid-tier wildcard scopes + official !exclude rules from public bounty feeds
+python scripts/nova.py sync-scopes --limit 90
+
+# Normalize and audit all targets/*.txt files
 python scripts/nova.py scope
 ```
 
@@ -87,7 +91,7 @@ python scripts/nova.py scope
 # Run monitor -> probe -> verify -> diff -> brief on specific programs
 python scripts/nova.py run --programs boozt,bykea
 
-# Run across the 20 curated programs in targets/_focus.txt and send validated reports to Telegram
+# Run across the 90 curated paid wildcard programs in targets/_focus.txt and send validated reports to Telegram
 export GROQ_API_KEY="your_groq_api_key"
 export TELEGRAM_TOKEN="your_telegram_bot_token"
 export TELEGRAM_GENERAL_ID="your_telegram_chat_id"
@@ -123,7 +127,7 @@ python scripts/browser_harvest.py --url https://app.example.com --out data/spa_j
 
 ## GitHub Actions Automation Setup
 
-The workflow in [`.github/workflows/nova.yml`](./.github/workflows/nova.yml) executes automatically every hour at minute 15 (`15 * * * *`), on pushes to `scripts/**` or `targets/_focus.txt`, or manually via `workflow_dispatch`. Each run executes the unit test suite first, processes a rotating batch of `6` programs from `targets/_focus.txt`, sends verified `REPORT-*.md` files to Telegram, and commits updated asset state back to `state/` with `[skip ci]`.
+The workflow in [`.github/workflows/nova.yml`](./.github/workflows/nova.yml) executes on staggered multi-slot cron schedules, on pushes to `scripts/**` or `targets/_focus.txt`, or manually via `workflow_dispatch`. Each run executes the 19-test suite first, processes a rotating batch of `16` programs from `targets/_focus.txt` (protected by a 43-minute soft deadline so reporting and state sync never time out), sends verified `REPORT-*.md` files to Telegram, and commits updated asset state back to `state/`.
 
 ### 1. Configure Repository Secrets
 
@@ -143,14 +147,14 @@ You can customize rate limits and batch budgets in [`.github/workflows/nova.yml`
 
 | Variable | Default (CLI / CI) | Purpose |
 | :--- | :--- | :--- |
-| `NOVA_MAX_CONC` | `12` / `20` | Maximum concurrent HTTP worker threads |
-| `NOVA_REQ_DELAY` | `0.12` / `0.08` | Minimum delay in seconds between requests |
-| `NOVA_PER_HOST_CAP` | `10` | Maximum requests allowed against a single hostname per stage |
+| `NOVA_MAX_CONC` | `12` / `24` | Maximum concurrent HTTP worker threads |
+| `NOVA_REQ_DELAY` | `0.12` / `0.06` | Minimum delay in seconds between requests |
+| `NOVA_PER_HOST_CAP` | `45` | Maximum requests allowed against a single hostname per stage (reset between probe, verify, and diff) |
 | `NOVA_MAX_NEW_PROBE` | `250` | Maximum new or queued subdomains probed per program per run |
 | `NOVA_SEED_CAP` | `1000` | Maximum unprobed legacy subdomains seeded into `state/<program>.queue.txt` on initial migration |
-| `NOVA_MAX_JS` | `120` | Maximum first-party JavaScript bundles fetched per program per run |
+| `NOVA_MAX_JS` | `150` | Maximum first-party JavaScript bundles fetched per program per run |
 | `NOVA_DIFF_BUDGET` | `60` | Number of previously tracked hosts re-checked during the `diff` stage |
-| `NOVA_MONITOR_BUDGET` | `240` | Time budget in seconds for passive CT discovery per program |
+| `NOVA_MONITOR_BUDGET` | `240` / `90` | Time budget in seconds for passive CT discovery per program |
 | `NOVA_EXTRA_HEADERS` | `{}` | JSON object of custom HTTP headers appended to every outbound request (for example `{"X-Bug-Bounty":"hunter"}`) |
 
 ---
@@ -188,13 +192,14 @@ Nova-Recon/
 ├── docs/
 │   └── showcase.png                 # 1600x860 4-stage pipeline architecture showcase banner
 ├── scripts/
-│   ├── nova.py                      # Main CLI driver (scope, monitor, probe, verify, diff, brief, run)
+│   ├── nova.py                      # Main CLI driver (scope, sync-scopes, monitor, probe, verify, diff, brief, run)
 │   ├── scope_guard.py               # Scope policy parser, wildcard/regex exclusion filter, and focus loader
-│   ├── js_intel.py                  # JS secret scanner, entropy filter, cloud URL extractor, and bundle differ
+│   ├── scope_sync.py                # Automated paid wildcard scope & official !exclude syncer (H1/BC/YWH)
+│   ├── js_intel.py                  # 23-pattern secret scanner, cloud URL extractor, and JS/sourcemap differ
 │   ├── ai_brief.py                  # Deterministic false-positive filter, Groq LLM validator, and REPORT-*.md generator
 │   └── browser_harvest.py           # Optional local playwright-cli headless SPA script and sourcemap harvester
 ├── targets/
-│   ├── _focus.txt                   # Curated list of 20 priority programs for scheduled rotation
+│   ├── _focus.txt                   # Curated list of 90 paid mid-tier wildcard programs for scheduled rotation
 │   └── *.txt                        # Per-program in-scope domains and !exclude rules
 ├── state/
 │   ├── <program>.subs.txt           # Persistent discovered subdomain inventory
@@ -202,7 +207,7 @@ Nova-Recon/
 │   ├── <program>.hosts.json         # Live host status, title, redirect chain, and JS URL snapshot
 │   └── <program>.js.json            # Canonical JS bundle sha256 hashes, extracted API routes, and GraphQL ops
 ├── tests/
-│   └── test_nova.py                 # 14 unit tests verifying scope rules, JS diffing, canary gates, and queues
+│   └── test_nova.py                 # 19 unit tests verifying scope rules, OpenAPI/JS/map gates, and queues
 ├── HANDBOOK.md                      # Operational notes (Indonesian)
 ├── SCOPE_TODO.md                    # Manual scope verification checklist
 └── LICENSE                          # MIT License (JosuaZxz)

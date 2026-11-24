@@ -1,0 +1,9 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/bolt-og
+*.bolt.eu
+*.boltable.eu
+*.taxify.eu
+!*.test.bolt.eu
+!*.test.taxify.eu
+!apps.apple.com
+!business-old.bolt.eu
+!play.google.com

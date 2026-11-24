@@ -1,0 +1,12 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/fivetran-mbb-og
+*.dbt.com
+*.dbtlabs.com
+*.fivetran.com
+*.getdbt.com
+!*.db.fivetran.com
+!community-stage.fivetran.com
+!shop.fivetran.com
+!status.fivetran.com
+!support.fivetran.com
+!testing-datalake.fivetran.com
+!trust.fivetran.com

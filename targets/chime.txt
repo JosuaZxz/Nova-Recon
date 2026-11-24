@@ -1,0 +1,10 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/chime
+*.1debit.com
+*.chime.com
+*.chimebank.com
+*.chimecard.com
+*.chimepayments.com
+*.chmfin.com
+*.saltlabs.com
+!chime.financial
+!chimescholars.org

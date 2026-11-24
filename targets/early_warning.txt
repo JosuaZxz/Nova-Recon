@@ -1,3 +1,18 @@
-earlywarning.com
-zelle.com
-zellepay.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/early_warning
+*.earlywarning.com
+*.zelle.com
+*.zellepay.com
+!*.clearxchange.com
+!*.earlywarning.io
+!api.zellepay.com
+!api.zmsp
+!api.zmsp.earlywarning.com
+!bc.earlywarning.com
+!ccpa.zellepay.com
+!demo.earlywarning.com
+!docs.earlywarning.com
+!flip0717.earlywarning.com
+!platform.cat.earlywarning.io
+!platformtest.cat.earlywarning.io
+!toolkit.zellepay.com
+!zellepay.earlywarning.com

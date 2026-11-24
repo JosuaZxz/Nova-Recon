@@ -1,0 +1,9 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/kucoin
+*.kucoin.com
+!cert.kucoin.com
+!docs.kucoin.com
+!intro.kucoin.com
+!passport.kucoin.com
+!sandbox.kucoin.com
+!store.kucoin.com
+!support.kucoin.plus

@@ -1,0 +1,20 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/originenergy-og1
+*.api.originenergy.com.au
+*.download.originenergy.com.au
+*.odcdn.com.au
+*.origindigital-pac.com.au
+*.support.originenergy.com.au
+!agent.compareandconnect.com.au
+!api.rx.originenergy.com.au
+!auth.api.originenergy.com.au
+!fastconnect.co.nz
+!manufacturers.solarquotes.com.au
+!origin-energy.formstack.com
+!raywhitehomenow.com
+!reneweclipse.originenergy.com.au
+!solarquotes.com.au
+!ssu.myconnect.com.au
+!www.compareandconnect.com.au
+!www.originenergy.com.au
+!www.solarquotes.com.au
+!yourporter.com.au

@@ -1,0 +1,24 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/moonpay
+*.dflow.net
+*.hypermint.com
+*.iron.xyz
+*.moonpay.com
+*.moonpaycloud.com
+*.swaps.xyz
+!*.hel.io
+!*.plexlabs.io
+!clicks.moonpay.com
+!dev.moonpay.com
+!docs.hypermint.com
+!docs.moonpay.com
+!ethpass.xyz
+!github.com
+!help.moonpay.com
+!page.moonpay.com
+!payload-marketing.moonpay.com
+!plexlabs.io
+!qr.moonpay.com
+!request-headers-no-proxy.moonpay.com
+!request-headers.moonpay.com
+!storefront.hypermint.com
+!support.moonpay.com

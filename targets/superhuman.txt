@@ -1,5 +1,7 @@
-coda.io
-grammarly.com
-grammarly.io
-grammarlyaws.com
-superhuman.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/superhuman
+*.coda.io
+*.grammarly.com
+*.grammarly.io
+*.grammarlyaws.com
+*.superhuman.com
+!status.coda.io

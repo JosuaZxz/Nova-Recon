@@ -1,0 +1,9 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/semrush
+*.myinsights.io
+*.scatec.io
+*.semrush.com
+*.semrush.net
+*.seoab.io
+*.seoquake.com
+!advocates.semrush.com
+!email.semrush.com

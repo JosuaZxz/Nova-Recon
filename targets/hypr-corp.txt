@@ -1,2 +1,7 @@
-gethypr.com
-hypr.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/hypr-corp
+*.gethypr.com
+*.hypr.com
+!demo.hypr.com
+!help.hypr.com
+!partners.hypr.com
+!support.hypr.com

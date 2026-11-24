@@ -1,0 +1,12 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/airtable
+*.staging-airtableblocks.com
+*.staging.airtable.com
+!airtable.com
+!blog.airtable.com
+!com.formagrid.airtable
+!com.formagrid.hyperbase
+!community.airtable.com
+!dl.airtable.com
+!dl.getforma.com
+!guide.airtable.com
+!support.airtable.com

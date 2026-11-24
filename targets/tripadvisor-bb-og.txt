@@ -1,0 +1,24 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/tripadvisor-bb-og
+*.bokundemo.com
+*.bokuntest.com
+*.flipkey.com
+*.holidaylettings.com
+*.housetrip.com
+*.niumba.com
+*.vacationhomerentals.com
+!*.bokun.app
+!*.bokun.com
+!*.bokun.eu
+!*.bokun.io
+!*.bokun.is
+!*.bokun.team
+!*.bokun.tools
+!*.bokun.website
+!*.bokunmobile.website
+!*.experiences.zone
+!*.tripadviser.at
+!*.tripadvisor.cn
+!careers.tripadvisor.com
+!ir.tripadvisor.com
+!spotlight-dev.tripadvisor.com
+!travelermail.com

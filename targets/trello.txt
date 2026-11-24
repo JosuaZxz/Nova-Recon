@@ -1,0 +1,5 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/trello
+*.trello.services
+!bugcrowd.com
+!e.trello.com
+!help.trello.com

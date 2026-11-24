@@ -48,6 +48,7 @@ from js_intel import (  # noqa: E402
     canonical_js_key,
     diff_js_bundle,
     extract_cloud_urls,
+    extract_js_intel,
     is_vendor_js,
     load_js_state,
     redact,
@@ -94,9 +95,9 @@ except Exception:
 MAX_CONC = int(os.environ.get("NOVA_MAX_CONC", "12"))
 REQ_DELAY = float(os.environ.get("NOVA_REQ_DELAY", "0.12"))
 HTTP_TIMEOUT = int(os.environ.get("NOVA_TIMEOUT", "9"))
-PER_HOST_CAP = int(os.environ.get("NOVA_PER_HOST_CAP", "10"))
+PER_HOST_CAP = int(os.environ.get("NOVA_PER_HOST_CAP", "45"))
 MAX_NEW_PROBE = int(os.environ.get("NOVA_MAX_NEW_PROBE", "250"))
-MAX_JS_FETCH = int(os.environ.get("NOVA_MAX_JS", "120"))
+MAX_JS_FETCH = int(os.environ.get("NOVA_MAX_JS", "150"))
 DIFF_BUDGET = int(os.environ.get("NOVA_DIFF_BUDGET", "60"))
 MAX_TRACKED_HOSTS = int(os.environ.get("NOVA_MAX_TRACKED_HOSTS", "1200"))
 SEED_CAP = int(os.environ.get("NOVA_SEED_CAP", "1000"))
@@ -244,6 +245,10 @@ class RateLimiter:
         with self.hits_lock:
             return self.host_hits.get(host, 0) >= PER_HOST_CAP
 
+    def reset_hosts(self) -> None:
+        with self.hits_lock:
+            self.host_hits.clear()
+
 
 LIMITER = RateLimiter()
 
@@ -304,7 +309,7 @@ DOH_ENDPOINTS = (
 
 
 def dns_lookup(host: str, resolver_url: str = "https://1.1.1.1/dns-query") -> tuple[list[str], list[str]]:
-    """Resolve (cnames, ips) via DoH with local nslookup/socket fallback."""
+    """Resolve (cnames, ips) via DoH while ignoring transient SERVFAIL responses."""
     try:
         r = requests.get(
             resolver_url,
@@ -312,7 +317,12 @@ def dns_lookup(host: str, resolver_url: str = "https://1.1.1.1/dns-query") -> tu
             headers={"accept": "application/dns-json"},
             timeout=8,
         )
-        ans = r.json().get("Answer") or []
+        payload = r.json()
+        status = payload.get("Status", 0)
+        # Status 2 (SERVFAIL) or 5 (REFUSED) indicates a transient DNS error, not NXDOMAIN.
+        if status in (2, 5):
+            return [], ["servfail-guard"]
+        ans = payload.get("Answer") or []
         cns = [a["data"].rstrip(".").lower() for a in ans if a.get("type") == 5]
         ips = [a["data"] for a in ans if a.get("type") == 1]
         return cns, ips
@@ -806,6 +816,7 @@ def cmd_probe(args) -> None:
         return
 
     print(f"[*] {program}: probing {len(hosts)} host (max {MAX_CONC} thread)...")
+    LIMITER.reset_hosts()
     results = []
     live = 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_CONC) as ex:
@@ -891,23 +902,33 @@ EXPOSURE_CHECKS = [
 
 HIGH_CLAIMABLE_SUFFIXES = (
     "s3.amazonaws.com", "s3-website", "s3-accelerate",
-    "azurewebsites.net", "cloudapp.azure.com", "blob.core.windows.net",
+    "azurewebsites.net", "cloudapp.azure.com", "blob.core.windows.net", "trafficmanager.net",
     "herokuapp.com", "herokussl.com", "github.io", "gitlab.io", "bitbucket.io",
-    "netlify.app", "vercel.app", "pages.dev", "surge.sh",
+    "netlify.app", "vercel.app", "pages.dev", "surge.sh", "fly.dev",
     "firebaseapp.com", "web.app", "readthedocs.io", "tumblr.com",
     "zendesk.com", "helpjuice.com", "helpscout.net", "readme.io",
-    "canny.io", "teamwork.com", "pantheon.io",
+    "canny.io", "teamwork.com", "pantheon.io", "myshopify.com",
+    "ghost.io", "webflow.io", "wordpress.com",
 )
 SERVICE_APEXES = (
     "azurewebsites.net", "cloudapp.azure.com", "herokuapp.com", "github.io",
     "gitlab.io", "netlify.app", "vercel.app", "pages.dev", "workers.dev",
-    "web.app", "firebaseapp.com", "surge.sh", "readthedocs.io",
+    "web.app", "firebaseapp.com", "surge.sh", "readthedocs.io", "myshopify.com",
 )
 TAKEOVER_BODY_SIGS = [
     ("NoSuchBucket", "high"),
     ("There isn't a GitHub Pages site here", "high"),
     ("fastly error: unknown domain", "high"),
     ("The specified bucket does not exist", "high"),
+    ("No such app", "high"),
+    ("DEPLOYMENT_NOT_FOUND", "high"),
+    ("Not Found - Request ID:", "high"),
+    ("Sorry, this shop is currently unavailable", "high"),
+    ("project not found", "high"),
+    ("The thing you were looking for is no longer here", "high"),
+    ("Project doesnt exist... yet!", "high"),
+    ("404 error unknown site!", "high"),
+    ("Do you want to register", "medium"),
     ("Repository not found", "medium"),
     ("no longer available", "medium"),
 ]
@@ -1290,7 +1311,81 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
                     "next": "Database Firebase mengizinkan pembacaan JSON tanpa autentikasi; konfirmasi sensitivitas datanya.",
                 }
             )
+
+    for gcs_url in cloud.get("gcs_urls", [])[:4]:
+        r, _ = http_get(gcs_url, max_bytes=16_000)
+        if r is None or r.status_code != 200:
+            continue
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
+        if "<ListBucketResult" in body and "<Contents>" in body:
+            findings.append(
+                {
+                    "type": "cloud-exposure",
+                    "url": gcs_url,
+                    "host": parsed_js.netloc.lower(),
+                    "severity_hint": "high",
+                    "confidence": "strong",
+                    "evidence": f"Publicly listable GCS bucket ({gcs_url}) referenced in {js_url}",
+                    "request_evidence": f"GET {urlparse(gcs_url).path or '/'} HTTP/1.1\nHost: storage.googleapis.com",
+                    "response_evidence": _format_resp_evidence(r, body[:700]),
+                    "next": "Periksa sensitivitas objek di dalam bucket Google Cloud Storage.",
+                }
+            )
+
+    for az_url in cloud.get("azure_urls", [])[:4]:
+        r, _ = http_get(az_url, max_bytes=16_000)
+        if r is None or r.status_code != 200:
+            continue
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
+        if "<EnumerationResults" in body and "<Blob>" in body:
+            az_parsed = urlparse(az_url)
+            findings.append(
+                {
+                    "type": "cloud-exposure",
+                    "url": az_url,
+                    "host": parsed_js.netloc.lower(),
+                    "severity_hint": "high",
+                    "confidence": "strong",
+                    "evidence": f"Publicly listable Azure Blob container ({az_parsed.netloc}{az_parsed.path}) in {js_url}",
+                    "request_evidence": f"GET {az_parsed.path}?{az_parsed.query} HTTP/1.1\nHost: {az_parsed.netloc}",
+                    "response_evidence": _format_resp_evidence(r, body[:700]),
+                    "next": "Periksa sensitivitas blob publik pada container Azure Storage.",
+                }
+            )
     return findings
+
+
+OPENAPI_SPEC_PATHS = ("/v3/api-docs", "/swagger.json", "/openapi.json")
+
+
+def check_openapi_routes(base_url: str, policy: ProgramPolicy) -> list[dict]:
+    """Read exposed OpenAPI JSON specs and verify unauthenticated GET routes for data leaks."""
+    for spec_path in OPENAPI_SPEC_PATHS:
+        spec_url = base_url.rstrip("/") + spec_path
+        r, _ = http_get(spec_url, extra_headers={"Accept": "application/json"}, max_bytes=250_000)
+        if r is None or r.status_code != 200:
+            continue
+        body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore").strip()
+        if not body.startswith("{") or ('"paths"' not in body and '"swagger"' not in body and '"openapi"' not in body):
+            continue
+        try:
+            spec = json.loads(body)
+            paths_obj = spec.get("paths") or {}
+            if not isinstance(paths_obj, dict) or not paths_obj:
+                continue
+            get_routes = [
+                p
+                for p, methods in paths_obj.items()
+                if isinstance(p, str)
+                and p.startswith("/")
+                and isinstance(methods, dict)
+                and "get" in {k.lower() for k in methods}
+            ]
+            if get_routes:
+                return verify_extracted_routes(spec_url, get_routes[:20], policy)
+        except Exception:
+            continue
+    return []
 
 
 def _fetch_and_analyze_js(
@@ -1299,10 +1394,11 @@ def _fetch_and_analyze_js(
     js_state: dict,
     run_diff: bool = True,
 ) -> list[dict]:
-    """Fetch unique in-scope non-vendor JS bundles and run secret, cloud, sourcemap & route verification."""
+    """Fetch unique in-scope non-vendor JS bundles and verify secrets, cloud assets, sourcemaps, and routes."""
     findings = []
     seen_urls: set[str] = set()
     fetched = 0
+    hidden_maps_checked = 0
 
     for js_url, is_interesting in js_targets:
         if fetched >= MAX_JS_FETCH:
@@ -1327,34 +1423,39 @@ def _fetch_and_analyze_js(
 
         if run_diff:
             entry, diff_finding = diff_js_bundle(js_url, body, js_state, is_interesting)
+            is_unseen = bool(entry and entry.get("_unseen_hash"))
+            candidate_routes = (
+                (diff_finding.get("added_routes") if diff_finding else None)
+                or (entry.get("_added_routes") if entry else None)
+                or []
+            )
+            sm_url = (
+                (diff_finding.get("sourcemap_url") if diff_finding else None)
+                or (entry.get("_sourcemap_url") if entry else None)
+            )
             if entry is not None:
                 js_state[canonical_js_key(js_url)] = entry
-            if diff_finding is not None:
-                candidate_routes = diff_finding.get("added_routes") or []
+
+            if is_unseen or diff_finding is not None:
                 if candidate_routes:
                     findings.extend(verify_extracted_routes(js_url, candidate_routes, policy))
-                sm_url = diff_finding.get("sourcemap_url")
+
+                if not sm_url and hidden_maps_checked < 12:
+                    lower_js = js_url.lower()
+                    if any(k in lower_js for k in ("main", "app", "index", "bundle", "client")):
+                        sm_url = js_url.split("?", 1)[0] + ".map"
+                        hidden_maps_checked += 1
+
                 if sm_url and policy.in_scope(sm_url):
-                    sm_resp, _ = http_get(sm_url, max_bytes=350_000)
+                    sm_resp, _ = http_get(sm_url, max_bytes=2_000_000)
                     if sm_resp is not None and sm_resp.status_code == 200:
                         sm_body = getattr(sm_resp, "_nova_body", b"").decode("utf-8", "ignore")
-                        if '"mappings"' in sm_body or '"sources"' in sm_body:
-                            parsed_sm = urlparse(sm_url)
+                        if ('"mappings"' in sm_body or '"sources"' in sm_body) and not sm_body.lstrip().startswith("<"):
                             findings.extend(scan_js_secrets(sm_body, sm_url))
                             findings.extend(verify_cloud_assets(sm_url, sm_body))
-                            findings.append(
-                                {
-                                    "type": "sourcemap",
-                                    "url": sm_url,
-                                    "host": parsed_sm.netloc.lower(),
-                                    "severity_hint": "low",
-                                    "confidence": "strong",
-                                    "evidence": f"SourceMap publik terbuka ({sm_url})",
-                                    "request_evidence": f"GET {parsed_sm.path} HTTP/1.1\nHost: {parsed_sm.netloc}",
-                                    "response_evidence": _format_resp_evidence(sm_resp, sm_body[:500]),
-                                    "next": "Unduh sourcemap untuk audit source code frontend & logika API internal.",
-                                }
-                            )
+                            sm_intel = extract_js_intel(sm_body, sm_url)
+                            if sm_intel["routes"]:
+                                findings.extend(verify_extracted_routes(js_url, sm_intel["routes"][:12], policy))
     return findings
 
 
@@ -1382,6 +1483,7 @@ def cmd_verify(args) -> None:
             except json.JSONDecodeError:
                 continue
 
+    LIMITER.reset_hosts()
     findings: list[dict] = []
     js_targets: list[tuple[str, bool]] = []
 
@@ -1390,23 +1492,47 @@ def cmd_verify(args) -> None:
         url = res.get("url")
         if not url or not policy.in_scope(host):
             continue
-        if res.get("http_status") not in (200, 401, 403):
+        status = res.get("http_status")
+        interesting = is_interesting_host(host, policy)
+        is_catchall = bool(res.get("catchall", False))
+        # Allow 404/405 on interesting subdomains because REST/GraphQL API servers rarely map GET /.
+        if status not in (200, 401, 403) and not (interesting and status in (404, 405)):
             continue
         base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
-        findings.extend(check_exposures(base, res.get("catchall", False)))
-        if res.get("http_status") == 200 and not res.get("catchall"):
+        findings.extend(check_exposures(base, is_catchall))
+        if status == 200 and not is_catchall:
+            html_body = res.get("body") or ""
+            if html_body:
+                findings.extend(scan_js_secrets(html_body, url))
+                findings.extend(verify_cloud_assets(url, html_body))
             f = check_cors(base)
             if f:
                 findings.append(f)
             f = check_graphql(base, program=program)
             if f:
                 findings.append(f)
-        interesting = is_interesting_host(host, policy)
+            if interesting:
+                findings.extend(check_openapi_routes(base, policy))
+        elif interesting and status in (401, 403, 404, 405) and not is_catchall:
+            f = check_graphql(base, program=program)
+            if f:
+                findings.append(f)
+            findings.extend(check_openapi_routes(base, policy))
         for js_url in res.get("scripts", []):
             js_targets.append((js_url, interesting))
 
+    # Recover any scripts recorded in hosts.json that were skipped by earlier per-host caps.
+    js_state = load_js_state(STATE_DIR, program)
+    hosts_snapshot = load_hosts_state(program)
+    for h_name, h_info in hosts_snapshot.items():
+        if h_name.startswith("_") or not isinstance(h_info, dict):
+            continue
+        h_interesting = bool(h_info.get("interesting"))
+        for s_url in h_info.get("scripts", []):
+            if canonical_js_key(s_url) not in js_state:
+                js_targets.append((s_url, h_interesting))
+
     if js_targets:
-        js_state = load_js_state(STATE_DIR, program)
         findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True))
         save_js_state(STATE_DIR, program, js_state)
 
@@ -1518,6 +1644,7 @@ def cmd_diff(args) -> None:
         return
 
     print(f"[*] {program}: diff monitor pada {len(selected)}/{len(hosts_state)} tracked host...")
+    LIMITER.reset_hosts()
     refreshed: list[dict] = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_CONC) as ex:
         for res in ex.map(lambda h: probe_host(h, policy), selected):
@@ -1803,6 +1930,17 @@ def main() -> None:
 
     s = sub.add_parser("scope", help="normalisasi & audit targets/*.txt (aman utk subdomain & !exclude)")
     s.set_defaults(func=cmd_scope)
+
+    def _cmd_sync(a) -> None:
+        from scope_sync import sync_paid_scopes
+        focus_now = load_focus_programs(TARGETS_DIR)[:14]
+        synced = sync_paid_scopes(TARGETS_DIR, limit=a.limit, include_intigriti=a.include_intigriti, preserve_focus=focus_now)
+        print(f"[=] Synced {len(synced)} paid wildcard scopes.")
+
+    s = sub.add_parser("sync-scopes", help="tarik otomatis scope wildcard berbayar resmi ke targets/")
+    s.add_argument("--limit", type=int, default=90)
+    s.add_argument("--include-intigriti", action="store_true")
+    s.set_defaults(func=_cmd_sync)
 
     s = sub.add_parser("monitor", help="discovery pasif + diff state + antrean probe")
     s.add_argument("--program", required=True)

@@ -1,0 +1,6 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/floqast
+*.eu.floqast.app
+*.floqast.app
+*.floqast.engineering
+!*.floqast.com
+!*.floqast.studio

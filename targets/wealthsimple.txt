@@ -1,0 +1,16 @@
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/wealthsimple
+*.simpletax.ca
+*.wealthsimple.com
+!app.wealthsimple.com
+!gifts.wealthsimple.com
+!groove.wealthsimple.com
+!help.wealthsimple.com
+!newsroom.wealthsimple.com
+!schedule.wealthsimple.com
+!shop.wealthsimple.com
+!start.wealthsimple.com
+!status.wealthsimple.com
+!support.wealthsimple.com
+!tldr-archive.wealthsimple.com
+!trust.wealthsimple.com
+!work.wealthsimple.com

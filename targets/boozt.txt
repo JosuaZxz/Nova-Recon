@@ -1,2 +1,6 @@
-boozt.com
-booztlet.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/boozt
+*.boozt.com
+*.booztlet.com
+!analytics.boozt.com
+!bmp.boozt.com
+!www.kronor.io

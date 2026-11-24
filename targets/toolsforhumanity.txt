@@ -1,4 +1,9 @@
-toolsforhumanity.com
-worldcoin-distributors.com
-worldcoin.dev
-worldcoin.org
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/toolsforhumanity
+*.consumer.worldcoin.org
+*.toolsforhumanity.com
+*.worldcoin-distributors.com
+*.worldcoin.dev
+*.worldcoin.org
+!github.com
+!support.world.org
+!support.worldcoin.com

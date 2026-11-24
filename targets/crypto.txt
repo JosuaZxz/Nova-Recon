@@ -1,2 +1,6 @@
-crypto.com
-mona.co
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/crypto
+*.crypto.com
+*.mona.co
+!com.defi.wallet
+!crypto.com
+!github.com

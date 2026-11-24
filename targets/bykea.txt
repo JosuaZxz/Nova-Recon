@@ -1,1 +1,4 @@
-bykea.net
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/bykea
+*.bykea.net
+!*.tellocast.com
+!www.tilismtechservices.com

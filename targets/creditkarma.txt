@@ -1,3 +1,13 @@
-creditkarma.ca
-creditkarma.co.uk
-creditkarma.com
+# Auto-synced paid bounty scope (hackerone): https://hackerone.com/creditkarma
+*.creditkarma.ca
+*.creditkarma.co.uk
+*.creditkarma.com
+!appsflyer.com
+!crashlytics.com
+!help.creditkarma.com
+!socialverification.creditkarma.com
+!socialverification.stage.creditkarma.com
+!taplytics.com
+!tax.creditkarma.com
+!taxsupport.creditkarma.com
+!www.creditkarma.com

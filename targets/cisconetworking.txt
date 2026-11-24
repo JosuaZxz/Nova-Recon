@@ -1,0 +1,13 @@
+# Auto-synced paid bounty scope (bugcrowd): https://bugcrowd.com/engagements/cisconetworking
+*.ikarem.io
+*.meraki.com
+*.network-auth.com
+!*.cisco.com
+!*.workflows.meraki.com
+!community-staging.meraki.com
+!community.meraki.com
+!developers.meraki.com
+!documentation.meraki.com
+!meraki.cisco.com
+!merakipartners.com
+!smhelp.meraki.com
