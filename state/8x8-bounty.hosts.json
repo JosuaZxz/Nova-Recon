@@ -1,0 +1,133 @@
+{
+ "_seeded": true,
+ "api.us-east.chalet.8x8.com": {
+  "url": "https://api.us-east.chalet.8x8.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "client-beta.global.chalet.8x8.com": {
+  "url": "https://client-beta.global.chalet.8x8.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "v8.us3.pvp.packet8.net": {
+  "url": "https://v8.us3.pvp.packet8.net/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "files.test.chalet.8x8.com": {
+  "url": "https://files.test.chalet.8x8.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "api.global.chalet.8x8.com": {
+  "url": "https://api.global.chalet.8x8.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "v8-debu.us3.staging.pvp.packet8.net": {
+  "url": "https://v8-debu.us3.staging.pvp.packet8.net/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "api.uk.chalet.8x8.com": {
+  "url": "https://api.uk.chalet.8x8.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "v8.sg2.pvp.packet8.net": {
+  "url": "https://v8.sg2.pvp.packet8.net/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "v8.us4.pvp.packet8.net": {
+  "url": "https://v8.us4.pvp.packet8.net/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "wavefront-prometheus-ec2-dev.platformdevops.8x8cloud.net": {
+  "url": "https://wavefront-prometheus-ec2-dev.platformdevops.8x8cloud.net/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "wiki.platformdevops.8x8cloud.net": {
+  "url": "https://wiki.platformdevops.8x8cloud.net/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://github.com/pages/auth?nonce=a80fde77-80b3-483a-adf7-55b84045cfd8&page_id=36936485&path=Lw",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "gate-beta-acc-services-env-a-accbeta1iad-us-ashburn-1.analytics-staging.oci.infra8.8x8cloud.net": {
+  "url": "https://gate-beta-acc-services-env-a-accbeta1iad-us-ashburn-1.analytics-staging.oci.infra8.8x8cloud.net/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ },
+ "v8.uk4.pvp.packet8.net": {
+  "url": "https://v8.uk4.pvp.packet8.net/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:18:29 UTC"
+ }
+}

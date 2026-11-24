@@ -1,0 +1,820 @@
+{
+ "_seeded": true,
+ "buy-sandbox.moonpay.com": {
+  "url": "https://buy-sandbox.moonpay.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://buy.moonpay.com/v2/buy?apiKey=pk_test_123",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "api.swaps.xyz": {
+  "url": "https://api.swaps.xyz/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "dev-dproxy-sync-server.dflow.net": {
+  "url": "https://dev-dproxy-sync-server.dflow.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "secure-sandbox.moonpay.com": {
+  "url": "https://secure-sandbox.moonpay.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "auth.dflow.net": {
+  "url": "https://auth.dflow.net/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://dflow.net/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "quote-api.dflow.net": {
+  "url": "https://quote-api.dflow.net/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "portfolio-api.dflow.net": {
+  "url": "https://portfolio-api.dflow.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "quote.equities-api.dflow.net": {
+  "url": "https://quote.equities-api.dflow.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "dashboard.moonpaycloud.com": {
+  "url": "https://dashboard.moonpaycloud.com/",
+  "http_status": 200,
+  "title": "MoonPay Dashboard",
+  "redirect": "",
+  "scripts": [
+   "https://dashboard.moonpaycloud.com/cc.js",
+   "https://dashboard.moonpaycloud.com/gtm.js",
+   "https://dashboard.moonpaycloud.com/static/js/main.e4021915.js?dpl=dpl_Gx265QrM4yKPC9T8TJgLtErJERDL"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "a.prediction-markets-api.dflow.net": {
+  "url": "https://a.prediction-markets-api.dflow.net/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "chavinc.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://chavinc.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "decal.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://decal.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "login.ru.media.blog.0.yellow-fellow.moonpay.com": {
+  "url": "http://login.ru.media.blog.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "2-assets-cmsi.yellow-fellow.moonpay.com": {
+  "url": "http://2-assets-cmsi.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "0-panel33bi.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://0-panel33bi.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "preboarding-experience.moonpaycloud.com": {
+  "url": "https://preboarding-experience.moonpaycloud.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "as29q.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://as29q.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account-sandbox.moonpay.com": {
+  "url": "https://account-sandbox.moonpay.com/",
+  "http_status": 200,
+  "title": "MoonPay Account",
+  "redirect": "",
+  "scripts": [
+   "https://account-sandbox.moonpay.com/_next/static/chunks/36-8be9b6f892239da3.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/539-887e46fc6980303a.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/584-9c82b31bf4fe22b9.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/677-5ce6d263a2a7b582.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/749-0126766a383f3dd5.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/85-dc591f3a82980e29.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/867-17cd6f7699abd22d.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/952-a9871dc18592c0ca.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/974-413d39a7a610216a.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/af2e7d59-9b0f3a76bc402033.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/framework-e78c27cc8de8e076.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/main-5811aa68aa9f50eb.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/pages/_app-740e5e7028fe774c.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/pages/index-bfb21ec3a214d9bc.js",
+   "https://account-sandbox.moonpay.com/_next/static/chunks/webpack-d556d6ef3c4f34f3.js",
+   "https://account-sandbox.moonpay.com/_next/static/gHfBf11K2vjp4UsSzsPmV/_buildManifest.js",
+   "https://account-sandbox.moonpay.com/_next/static/gHfBf11K2vjp4UsSzsPmV/_ssgManifest.js",
+   "https://static.moonpay.com/web-sdk/v1/moonpay-web-sdk.min.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "apiswebadmin1.yellow-fellow.moonpay.com": {
+  "url": "http://apiswebadmin1.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "admin-betaa.0.yellow-fellow.moonpay.com": {
+  "url": "http://admin-betaa.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "atlasdevelopment.yellow-fellow.moonpay.com": {
+  "url": "http://atlasdevelopment.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "corabogdani.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://corabogdani.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account-betagatewayk.0.yellow-fellow.moonpay.com": {
+  "url": "http://account-betagatewayk.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "app.dev.iron.xyz": {
+  "url": "https://app.dev.iron.xyz/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://app.dev.iron.xyz/signin",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "businessexample-web2-authk.yellow-fellow.moonpay.com": {
+  "url": "http://businessexample-web2-authk.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "dashboard-testaccount-betao.0.yellow-fellow.moonpay.com": {
+  "url": "http://dashboard-testaccount-betao.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "biz2one.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://biz2one.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "ns1.amupdate-mainnetko-social-data-infra-insportserverfr.0-nginx-prfsv.yellow-fellow.moonpay.com": {
+  "url": "http://ns1.amupdate-mainnetko-social-data-infra-insportserverfr.0-nginx-prfsv.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "dev.enterprise.moonpay.com": {
+  "url": "https://dev.enterprise.moonpay.com/overview",
+  "http_status": 200,
+  "title": "Introduction - MoonPay Enterprise",
+  "redirect": "https://dev.enterprise.moonpay.com/overview",
+  "scripts": [
+   "https://dev.enterprise.moonpay.com/_mintlify/assets/index-5-ol5s84.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://dev.enterprise.moonpay.com/_mintlify/assets/initial-vendor-bB2ixmSw.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://dev.enterprise.moonpay.com/_mintlify/assets/rolldown-runtime-Bjp52BOI.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://dev.enterprise.moonpay.com/_mintlify/custom/moonpayiron/b9bec26014a9f895/iron-embeds.js",
+   "https://dev.enterprise.moonpay.com/_mintlify/custom/moonpayiron/edec15a9b6cf92a1/month-nav.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "dev-quote-api.dflow.net": {
+  "url": "https://dev-quote-api.dflow.net/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "crypto-api-hyperparshop.0.yellow-fellow.moonpay.com": {
+  "url": "http://crypto-api-hyperparshop.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "console.swaps.xyz": {
+  "url": "https://console.swaps.xyz/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://console.swaps.xyz/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "blocks-apple-preview.moonpaycloud.com": {
+  "url": "https://blocks-apple-preview.moonpaycloud.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://moonpay.cloudflareaccess.com/cdn-cgi/access/login/blocks-apple-preview.moonpaycloud.com?kid=75280abf3e7382549d26f01eab783724cc82c2a0e81b73d2a49ec9427290e8a6&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUz",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "test.0-assets-cloudapp.yellow-fellow.moonpay.com": {
+  "url": "http://test.0-assets-cloudapp.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "catrin-mayamade.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://catrin-mayamade.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "c.prediction-markets-api.dflow.net": {
+  "url": "https://c.prediction-markets-api.dflow.net/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "www.test.app.dflow.net": {
+  "url": "http://www.test.app.dflow.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "blocka-139c.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://blocka-139c.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account-beta-0-assets.0.yellow-fellow.moonpay.com": {
+  "url": "http://account-beta-0-assets.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "dev-portal-api.dflow.net": {
+  "url": "https://dev-portal-api.dflow.net/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "0-assetsdevops.yellow-fellow.moonpay.com": {
+  "url": "http://0-assetsdevops.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "web3auth.dflow.net": {
+  "url": "https://web3auth.dflow.net/",
+  "http_status": 404,
+  "title": "404: This page could not be found",
+  "redirect": "",
+  "scripts": [
+   "https://web3auth.dflow.net/_next/static/83MaRVTaJVpN4JIwpulHb/_buildManifest.js",
+   "https://web3auth.dflow.net/_next/static/83MaRVTaJVpN4JIwpulHb/_ssgManifest.js",
+   "https://web3auth.dflow.net/_next/static/chunks/framework-0020e6b27933feb8.js",
+   "https://web3auth.dflow.net/_next/static/chunks/main-4230739d1a2c8b8a.js",
+   "https://web3auth.dflow.net/_next/static/chunks/pages/_app-7d307437aca18ad4.js",
+   "https://web3auth.dflow.net/_next/static/chunks/pages/_error-cb2a52f75f2162e2.js",
+   "https://web3auth.dflow.net/_next/static/chunks/webpack-23055d52f9c766c3.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "0-assets-0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://0-assets-0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "buckyintraa.yellow-fellow.moonpay.com": {
+  "url": "http://buckyintraa.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "careersdewalletdmarc.account-beta.0-account-beta.yellow-fellow.moonpay.com": {
+  "url": "http://careersdewalletdmarc.account-beta.0-account-beta.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "app.sandbox.iron.xyz": {
+  "url": "https://app.sandbox.iron.xyz/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://app.sandbox.iron.xyz/signin",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "auth-owa7.yellow-fellow.moonpay.com": {
+  "url": "http://auth-owa7.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "admin.0.yellow-fellow.moonpay.com": {
+  "url": "http://admin.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account-betaidsk.0.yellow-fellow.moonpay.com": {
+  "url": "http://account-betaidsk.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "ai-dashboard.moonpaycloud.com": {
+  "url": "https://ai-dashboard.moonpaycloud.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://moonpay.cloudflareaccess.com/cdn-cgi/access/login/ai-dashboard.moonpaycloud.com?kid=970dcecb740a8c04dd8e4b62b20ce481f2aa11d27603539e3869511102d4f8d5&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIm",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "catarina.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://catarina.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "sell-sandbox.moonpay.com": {
+  "url": "https://sell-sandbox.moonpay.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://buy.moonpay.com/v2/sell?apiKey=pk_test_123",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "apis-20161.yellow-fellow.moonpay.com": {
+  "url": "http://apis-20161.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account-php.0.yellow-fellow.moonpay.com": {
+  "url": "http://account-php.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "cko-webhook-data-infra.moonpay.com": {
+  "url": "https://cko-webhook-data-infra.moonpay.com/",
+  "http_status": 404,
+  "title": "404",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "chef.account-beta.0.yellow-fellow.moonpay.com": {
+  "url": "http://chef.account-beta.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "satellite-preview.moonpaycloud.com": {
+  "url": "https://satellite-preview.moonpaycloud.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://moonpay.cloudflareaccess.com/cdn-cgi/access/login/satellite-preview.moonpaycloud.com?kid=9885a67143962db3361d424e9b4b4c674ee8ea980b6a991d43b3dcaeacde1c88&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "app.enterprise.moonpay.com": {
+  "url": "https://app.enterprise.moonpay.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://app.enterprise.moonpay.com/signin",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "0-assets-cloudapp.yellow-fellow.moonpay.com": {
+  "url": "http://0-assets-cloudapp.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "orion-sandbox.moonpaycloud.com": {
+  "url": "https://orion-sandbox.moonpaycloud.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://moonpay.cloudflareaccess.com/cdn-cgi/access/login/orion-sandbox.moonpaycloud.com?kid=3feb28abe8b87b08758353a59824436d8e53c26fb5ff41a1905f7cec1d59faa7&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "clearpools-api.dflow.net": {
+  "url": "https://clearpools-api.dflow.net/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "phantom.quote-api.dflow.net": {
+  "url": "https://phantom.quote-api.dflow.net/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "historys.account-beta.0.yellow-fellow.moonpay.com": {
+  "url": "http://historys.account-beta.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "consumer-api.moonpay.com": {
+  "url": "https://consumer-api.moonpay.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:12:56 UTC"
+ },
+ "init.login.ru.media.blog.0.yellow-fellow.moonpay.com": {
+  "url": "http://init.login.ru.media.blog.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "ccgatek.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://ccgatek.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "account.moonpay.com": {
+  "url": "https://account.moonpay.com/",
+  "http_status": 200,
+  "title": "MoonPay Account",
+  "redirect": "",
+  "scripts": [
+   "https://account.moonpay.com/_next/static/AycIJx0EBlTIqXjUPijCw/_buildManifest.js",
+   "https://account.moonpay.com/_next/static/AycIJx0EBlTIqXjUPijCw/_ssgManifest.js",
+   "https://account.moonpay.com/_next/static/chunks/36-44087b21f098af94.js",
+   "https://account.moonpay.com/_next/static/chunks/539-887e46fc6980303a.js",
+   "https://account.moonpay.com/_next/static/chunks/584-fda230d4a85ac349.js",
+   "https://account.moonpay.com/_next/static/chunks/677-5ce6d263a2a7b582.js",
+   "https://account.moonpay.com/_next/static/chunks/749-0126766a383f3dd5.js",
+   "https://account.moonpay.com/_next/static/chunks/85-dc591f3a82980e29.js",
+   "https://account.moonpay.com/_next/static/chunks/867-17cd6f7699abd22d.js",
+   "https://account.moonpay.com/_next/static/chunks/952-a9871dc18592c0ca.js",
+   "https://account.moonpay.com/_next/static/chunks/974-413d39a7a610216a.js",
+   "https://account.moonpay.com/_next/static/chunks/af2e7d59-9b0f3a76bc402033.js",
+   "https://account.moonpay.com/_next/static/chunks/framework-e78c27cc8de8e076.js",
+   "https://account.moonpay.com/_next/static/chunks/main-5811aa68aa9f50eb.js",
+   "https://account.moonpay.com/_next/static/chunks/pages/_app-3d80570c99265708.js",
+   "https://account.moonpay.com/_next/static/chunks/pages/index-bfb21ec3a214d9bc.js",
+   "https://account.moonpay.com/_next/static/chunks/webpack-d556d6ef3c4f34f3.js",
+   "https://account.moonpay.com/analytics.min.js",
+   "https://static.moonpay.com/web-sdk/v1/moonpay-web-sdk.min.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "aws-dbadmin9.yellow-fellow.moonpay.com": {
+  "url": "http://aws-dbadmin9.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "cobb9.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://cobb9.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "crypto-buy-stagings.0.yellow-fellow.moonpay.com": {
+  "url": "http://crypto-buy-stagings.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "fernando.hscs.achp.0-assets-cms.yellow-fellow.moonpay.com": {
+  "url": "http://fernando.hscs.achp.0-assets-cms.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "1-health-amupdate-mainnetko-webhook-data-infra-in-qa-services.0.yellow-fellow.moonpay.com": {
+  "url": "http://1-health-amupdate-mainnetko-webhook-data-infra-in-qa-services.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "blogsupport-stagingw.0.yellow-fellow.moonpay.com": {
+  "url": "http://blogsupport-stagingw.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "csgo.sub.api.sas.d.cdn.0.yellow-fellow.moonpay.com": {
+  "url": "http://csgo.sub.api.sas.d.cdn.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "buy-devsupport-stagingpay-maintenance-page.0.yellow-fellow.moonpay.com": {
+  "url": "http://buy-devsupport-stagingpay-maintenance-page.0.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ },
+ "b0bgitlabo.yellow-fellow.moonpay.com": {
+  "url": "http://b0bgitlabo.yellow-fellow.moonpay.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:15:12 UTC"
+ }
+}

@@ -1,0 +1,173 @@
+{
+ "_seeded": true,
+ "devbooking.mgm.mo": {
+  "url": "https://devbooking.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "almangooneapi.mgm.mo": {
+  "url": "https://almangooneapi.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "preview-fanzone.mgm.mo": {
+  "url": "https://preview-fanzone.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "carparkapi.mgm.mo": {
+  "url": "https://carparkapi.mgm.mo/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://carparkapi.mgm.mo/Ui/Login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "scapi.tickets.mgm.mo": {
+  "url": "https://scapi.tickets.mgm.mo/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "acapi.tickets.mgm.mo": {
+  "url": "https://acapi.tickets.mgm.mo/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "taapi.tickets.mgm.mo": {
+  "url": "https://taapi.tickets.mgm.mo/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "almangoonecms.mgm.mo": {
+  "url": "https://almangoonecms.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "box.tickets.mgm.mo": {
+  "url": "https://box.tickets.mgm.mo/",
+  "http_status": 247,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://box.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "mgmmacau.com": {
+  "url": "https://mgmmacau.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.mgm.mo",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "support.mgm.mo": {
+  "url": "https://support.mgm.mo/",
+  "http_status": 200,
+  "title": "Remote Support Portal",
+  "redirect": "",
+  "scripts": [
+   "https://support.mgm.mo/content/language_selection.js",
+   "https://support.mgm.mo/content/portal.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "adfs.mgm.mo": {
+  "url": "https://adfs.mgm.mo/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "mgmwebcdn.mgm.mo": {
+  "url": "https://mgmwebcdn.mgm.mo/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "ra.mgm.mo": {
+  "url": "https://ra.mgm.mo/",
+  "http_status": 303,
+  "title": "",
+  "redirect": "https://p.zpa-auth.net:443/IevTunx4Bg/doauth?origurl=https%3A%2F%2Fra%2Emgm%2Emo%3A443%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "essprint.mgm.mo": {
+  "url": "https://essprint.mgm.mo/",
+  "http_status": 200,
+  "title": "Microsoft Teams Tab",
+  "redirect": "",
+  "scripts": [
+   "https://essprint.mgm.mo/static/js/main.6434eca4.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ },
+ "roster.mgm.mo": {
+  "url": "https://roster.mgm.mo/my.logout.php3?errorcode=19",
+  "http_status": 200,
+  "title": "BIG-IP logout page",
+  "redirect": "https://roster.mgm.mo/my.logout.php3?errorcode=19",
+  "scripts": [
+   "https://roster.mgm.mo/public/include/js/common.js",
+   "https://roster.mgm.mo/public/include/js/u_plugin.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 08:31:46 UTC"
+ }
+}

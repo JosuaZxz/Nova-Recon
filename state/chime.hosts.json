@@ -1,0 +1,333 @@
+{
+ "_seeded": true,
+ "www.agora-dev1.chime.com": {
+  "url": "https://www.agora-dev1.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "chat-dev4.chime.com": {
+  "url": "https://chat-dev4.chime.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://help.chime.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "links.account.chime.com": {
+  "url": "https://links.account.chime.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "tags-dev3.chime.com": {
+  "url": "https://tags-dev3.chime.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "agora-dev2.chime.com": {
+  "url": "https://agora-dev2.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "dds-dev3.chime.com": {
+  "url": "https://dds-dev3.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "infraservice-qa.chime.com": {
+  "url": "https://infraservice-qa.chime.com/",
+  "http_status": 499,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "admin-qa.1debit.com": {
+  "url": "https://admin-qa.1debit.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "survey-service-dev3.chime.com": {
+  "url": "https://survey-service-dev3.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "chm-merchants.qa-ext.chmfin.com": {
+  "url": "https://chm-merchants.qa-ext.chmfin.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "event-router-dev5.chime.com": {
+  "url": "https://event-router-dev5.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "datadog-forwarder-nonprod.chime.com": {
+  "url": "https://datadog-forwarder-nonprod.chime.com/api/v2/series",
+  "http_status": 403,
+  "title": "",
+  "redirect": "https://datadog-forwarder-nonprod.chime.com/api/v2/series",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "monocle-dev2.chime.com": {
+  "url": "https://monocle-dev2.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "member-dev4.chime.com": {
+  "url": "https://member-dev4.chime.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-dev4.chime.com?source=legacyweb",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "airflow-staging.chime.com": {
+  "url": "https://airflow-staging.chime.com/",
+  "http_status": 400,
+  "title": "400 Bad Request",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "client-qa.chimebank.com": {
+  "url": "https://client-qa.chimebank.com?source=legacyweb",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://client-qa.chimebank.com?source=legacyweb",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "wp-dev1.chime.com": {
+  "url": "https://wp-dev1.chime.com/",
+  "http_status": 403,
+  "title": "Chime",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "locations-dev1.chime.com": {
+  "url": "https://locations-dev1.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "docusign-dev2.chime.com": {
+  "url": "https://docusign-dev2.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "wp-dev5.chime.com": {
+  "url": "https://wp-dev5.chime.com/",
+  "http_status": 403,
+  "title": "Chime",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "www.agora-qa.chime.com": {
+  "url": "https://www.agora-qa.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "mail.agora-dev3.chime.com": {
+  "url": "https://mail.agora-dev3.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "api-dev1.chimebank.com": {
+  "url": "https://api-dev1.chimebank.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "inspector-dev5.chime.com": {
+  "url": "https://inspector-dev5.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "email.news.chime.com": {
+  "url": "https://email.news.chime.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "dds-qa.chime.com": {
+  "url": "https://dds-qa.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "agora-dev5.chime.com": {
+  "url": "https://agora-dev5.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "api-v2.chimebank.com": {
+  "url": "https://api-v2.chimebank.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "enrollment-web-app-assets.qa-ext.chmfin.com": {
+  "url": "https://enrollment-web-app-assets.qa-ext.chmfin.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "flashpaper-dev2.chime.com": {
+  "url": "https://flashpaper-dev2.chime.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "agora-qa.chime.com": {
+  "url": "https://agora-qa.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "survey-service-dev5.chime.com": {
+  "url": "https://survey-service-dev5.chime.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ },
+ "developer.chimebank.com": {
+  "url": "https://developer.chimebank.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://developer.chime.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:11:53 UTC"
+ }
+}

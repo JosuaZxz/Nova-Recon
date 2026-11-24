@@ -1,0 +1,203 @@
+{
+ "_seeded": true,
+ "svc-int-b-testingu.us.nordpass.com": {
+  "url": "https://svc-int-b-testingu.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "admin.nordlocker.com": {
+  "url": "https://admin.nordlocker.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "www.stag.us.nordpass.com": {
+  "url": "https://www.stag.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "api-v1.nordvpn.com": {
+  "url": "https://api-v1.nordvpn.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "www.configurations-testing.us.nordpass.com": {
+  "url": "http://www.configurations-testing.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "api.webviewer-license.us.nordlocker.com": {
+  "url": "https://api.webviewer-license.us.nordlocker.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "aptestrandomnlayer.stag.eu.nordpass.com": {
+  "url": "https://aptestrandomnlayer.stag.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "vaults-test.us.nordpass.com": {
+  "url": "https://vaults-test.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "auth.nordvpn.com": {
+  "url": "https://auth.nordvpn.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://auth.nordaccount.com/oauth2/auth",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "www.stag.eu.nordpass.com": {
+  "url": "https://www.stag.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "internal.eu.nordpass.com": {
+  "url": "https://internal.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "auth.nordpass.com": {
+  "url": "https://auth.nordpass.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://auth.nordaccount.com/oauth2/auth",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "auth.nordaccount.com": {
+  "url": "https://auth.nordaccount.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "api.eu.nordpass.com": {
+  "url": "https://api.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "external-a-test.us.nordpass.com": {
+  "url": "https://external-a-test.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "beta.api-toggle.us.nordpass.com": {
+  "url": "http://beta.api-toggle.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "msp-api.eu.nordpass.com": {
+  "url": "https://msp-api.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "www.configurations-test.us.nordpass.com": {
+  "url": "http://www.configurations-test.us.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "www.wildcard.staging.eu.nordpass.com": {
+  "url": "http://www.wildcard.staging.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ },
+ "msp-api.stag.eu.nordpass.com": {
+  "url": "https://msp-api.stag.eu.nordpass.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 08:21:26 UTC"
+ }
+}
