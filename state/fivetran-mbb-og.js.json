@@ -1,24 +1,24 @@
 {
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
-  "sha256": "3a940cbaa0cca0476388",
+  "sha256": "9a6dc4bec931cb28260f",
   "routes": [
    "/api/ai/private",
    "/api/ai/private/v1/agents/run"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:29:58 UTC"
+  "updated": "2026-11-24 12:38:50 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js",
-  "sha256": "c394125402c196be1287",
+  "sha256": "744f1b54ede91704fc9b",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:29:59 UTC"
+  "updated": "2026-11-24 12:38:51 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-BrIRgCfe.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-BrIRgCfe.js",
@@ -28,47 +28,47 @@
    "/api/v1/accounts"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:29:59 UTC"
+  "updated": "2026-11-24 12:38:52 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js",
-  "sha256": "d9d0f66543fb71ad36d8",
+  "sha256": "f4971a4c85e893a85590",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:00 UTC"
+  "updated": "2026-11-24 12:38:52 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
-  "sha256": "373afd1b2f72d02ed30a",
+  "sha256": "5356a4e7e7e7136cd22f",
   "routes": [
    "/api/ai/private"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:02 UTC"
+  "updated": "2026-11-24 12:38:53 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js",
-  "sha256": "29491050505152f34d25",
+  "sha256": "9a38bb18c41b37c31ca2",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:03 UTC"
+  "updated": "2026-11-24 12:38:54 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
-  "sha256": "6b4e22b0145924ae7ea2",
+  "sha256": "ded9f947e95d0528b9fa",
   "routes": [
    "/api/ai/private"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:04 UTC"
+  "updated": "2026-11-24 12:38:55 UTC"
  },
  "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js": {
   "last_url": "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js",
@@ -90,13 +90,308 @@
    "/auth/user"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:06 UTC"
+  "updated": "2026-11-24 12:38:57 UTC"
  },
  "https://usecase-catalog-test.qe.fivetran.com/config.js": {
   "last_url": "https://usecase-catalog-test.qe.fivetran.com/config.js",
   "sha256": "9e676761382a3ec03fa6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:30:06 UTC"
+  "updated": "2026-11-24 12:38:57 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-DUF1Kd-x.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-DUF1Kd-x.js",
+  "sha256": "ac2013aaa9237b0fa700",
+  "routes": [
+   "/api/ai/private",
+   "/api/ai/private/agent/playground",
+   "/api/ai/private/track-event",
+   "/api/ai/private/v1/agents/run"
+  ],
+  "graphql_ops": [
+   "CostInsights",
+   "CostInsightsByJob",
+   "ExposureTile"
+  ],
+  "updated": "2026-11-24 12:38:58 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-Eg9HVbKB.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-Eg9HVbKB.js",
+  "sha256": "2470e085d29de137ae19",
+  "routes": [
+   "/api/v2",
+   "/api/v2/",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:38:59 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/__vite-browser-external-D7Ct-6yo.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/__vite-browser-external-D7Ct-6yo.js",
+  "sha256": "18c7eb5102634686ac60",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:38:59 UTC"
+ },
+ "https://dev-sriramr.dev.dbt.com/assets/index-BzuCl6oM.js": {
+  "last_url": "https://dev-sriramr.dev.dbt.com/assets/index-BzuCl6oM.js",
+  "sha256": "e970616958756e3d38b7",
+  "routes": [
+   "/api/ai/private",
+   "/api/ai/private/v1/agents/run"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:00 UTC"
+ },
+ "https://dev-sriramr.dev.dbt.com/assets/index-C25SJuMa.js": {
+  "last_url": "https://dev-sriramr.dev.dbt.com/assets/index-C25SJuMa.js",
+  "sha256": "d4f3dcb2e3d9916c1d23",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:00 UTC"
+ },
+ "https://app.staging.state.dbt.com/assets/index-C9fmzJNx.js": {
+  "last_url": "https://app.staging.state.dbt.com/assets/index-C9fmzJNx.js",
+  "sha256": "a77b04222081379fd257",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:01 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/index-DJK42kTJ.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/index-DJK42kTJ.js",
+  "sha256": "e808bdfa3b8e5d4d0fb1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:01 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Button-DVfZSNIT.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Button-DVfZSNIT.js",
+  "sha256": "30a954c67b2bf40114f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:02 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/react-query.gen-BrMhwTiJ.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/react-query.gen-BrMhwTiJ.js",
+  "sha256": "dcbd4f01f393d5631f43",
+  "routes": [
+   "/api/access/levels",
+   "/api/access/platform/holders",
+   "/api/access/shares",
+   "/api/access/{target_type}/{target_id}",
+   "/api/access/{target_type}/{target_id}/holders/{subject_type}/{subject_id}",
+   "/api/agent-teams",
+   "/api/agent-teams/{name}",
+   "/api/agents",
+   "/api/agents/{agent_id}",
+   "/api/agents/{agent_id}/settings",
+   "/api/agents/{agent_id}/stats",
+   "/api/auth/logout",
+   "/api/directory/teams",
+   "/api/directory/users",
+   "/api/grants",
+   "/api/manual-triggers",
+   "/api/manual-triggers/{event_id}",
+   "/api/me",
+   "/api/registry/suggested_url",
+   "/api/runs",
+   "/api/runs/{run_id}",
+   "/api/secrets",
+   "/api/secrets/{name}",
+   "/api/secrets/{name}/value",
+   "/api/tokens",
+   "/api/tokens/{token_id}",
+   "/api/tokens/{token_id}/revoke",
+   "/api/tokens/{token_id}/rotate",
+   "/api/webhook-endpoints",
+   "/api/webhook-endpoints/{url_id}",
+   "/api/work-items",
+   "/api/work-items/{work_item_id}",
+   "/api/work-items/{work_item_id}/timeline"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:02 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/client-nJocHJiD.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/client-nJocHJiD.js",
+  "sha256": "c0ad343511ee03882f6e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:02 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/infiniteQueryBehavior-BhSRh8gJ.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/infiniteQueryBehavior-BhSRh8gJ.js",
+  "sha256": "c67ae4b0c6a899028090",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:02 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/mutation-DNwO0Yz4.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/mutation-DNwO0Yz4.js",
+  "sha256": "8f7858d15b2bd5824a08",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:03 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useQuery-C-nDkKbs.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useQuery-C-nDkKbs.js",
+  "sha256": "86bf249e5d1585d9a87d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:03 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useAgent-HOHAg0xj.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useAgent-HOHAg0xj.js",
+  "sha256": "5eb83ad709e1d027ddc4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:03 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useStore-C4B4BRsX.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useStore-C4B4BRsX.js",
+  "sha256": "4e93d7d6efe15214dec5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:03 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/ClientOnly-D8T6oDck.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/ClientOnly-D8T6oDck.js",
+  "sha256": "06fea2330d8102a06906",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:03 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Match-C5lUKocf.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Match-C5lUKocf.js",
+  "sha256": "4f035b0e3a7fad18911d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:04 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useSearch-DAoWvlen.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useSearch-DAoWvlen.js",
+  "sha256": "fbfa02570898073f5ead",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:04 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useNavigate-BFm0CStm.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useNavigate-BFm0CStm.js",
+  "sha256": "edb13ee135952187d8d1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:04 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/route-CI3ElExf.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/route-CI3ElExf.js",
+  "sha256": "73fe494d3b00800fdda7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:04 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/action-property-Bo2N0JvC.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/action-property-Bo2N0JvC.js",
+  "sha256": "9907acc617127d1ac160",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:05 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/useStableFn-C48Eax5c.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/useStableFn-C48Eax5c.js",
+  "sha256": "8a54d7c45df84728899b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:05 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/assert-BVQhmlCn.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/assert-BVQhmlCn.js",
+  "sha256": "dcf4912e40b8c8ac8a00",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:05 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Heading-Dzv86VCJ.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Heading-Dzv86VCJ.js",
+  "sha256": "763cc6b3df05281e5cc1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:05 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Paragraph-B2vbskb0.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Paragraph-B2vbskb0.js",
+  "sha256": "2cb982269f02d1a6097a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:05 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Loading-uCoV0fZm.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Loading-uCoV0fZm.js",
+  "sha256": "cee6007d33bedbce624b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:06 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/schemas-BczquNZc.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/schemas-BczquNZc.js",
+  "sha256": "973de281d719f3e33b47",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:06 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/browser-BxdSlPLb.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/browser-BxdSlPLb.js",
+  "sha256": "54f2f01190fcedb3553f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:06 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/formatRegistryName-DJbo6-Pd.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/formatRegistryName-DJbo6-Pd.js",
+  "sha256": "134706a227807917806d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:06 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/LinkButton-MQhju6qT.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/LinkButton-MQhju6qT.js",
+  "sha256": "37286123b3d04bc69f2f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:06 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/date-DwiUuI2X.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/date-DwiUuI2X.js",
+  "sha256": "9aabaeb89ef3c8716c7d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:07 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/DisplayTag-BBDuha_B.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/DisplayTag-BBDuha_B.js",
+  "sha256": "8c3a977eed29e6022627",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:07 UTC"
+ },
+ "https://staging.agent.fivetran.com/assets/Tag-BXCZj5ro.js": {
+  "last_url": "https://staging.agent.fivetran.com/assets/Tag-BXCZj5ro.js",
+  "sha256": "ae775323bf027d41b019",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:39:07 UTC"
+ },
+ "https://eng-planning-dev.fivetran.com/assets/index-D0Mz1kol.js": {
+  "last_url": "https://eng-planning-dev.fivetran.com/assets/index-D0Mz1kol.js",
+  "sha256": "187094d53e786bb5b352",
+  "routes": [
+   "/auth/login",
+   "/auth/logout"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:38:56 UTC"
  }
 }

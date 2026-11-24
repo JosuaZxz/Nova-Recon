@@ -1,0 +1,18 @@
+{
+ "https://www.hey.com/assets/js/script.js": {
+  "last_url": "https://www.hey.com/assets/js/script.js?v=1.1.13",
+  "sha256": "ddbcbbe83d96d41b1039",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:41:22 UTC"
+ },
+ "https://www.hey.com/js/script.outbound-links.js": {
+  "last_url": "https://www.hey.com/js/script.outbound-links.js",
+  "sha256": "372b68052c9d510d59ec",
+  "routes": [
+   "/api/event"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:41:22 UTC"
+ }
+}

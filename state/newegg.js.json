@@ -1,0 +1,40 @@
+{
+ "https://partner.newegg.com/resources/neplatform.js": {
+  "last_url": "https://partner.newegg.com/resources/neplatform.js?neweggStyle=true&noTheme=true",
+  "sha256": "24432fa756dc88ce18e3",
+  "routes": [
+   "/api/v1/account/token",
+   "/api/v1/activity"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:34:40 UTC"
+ },
+ "https://partner.newegg.com/resources/js/vue.js": {
+  "last_url": "https://partner.newegg.com/resources/js/vue.js",
+  "sha256": "256def8957028cf8cd94",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:34:40 UTC"
+ },
+ "https://partner.newegg.com/resources/js/common.js": {
+  "last_url": "https://partner.newegg.com/resources/js/common.js?t=0.9.93",
+  "sha256": "c45cb76ab1c8730f9c45",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:34:40 UTC"
+ },
+ "https://partner.newegg.com/resources/js/home-common.js": {
+  "last_url": "https://partner.newegg.com/resources/js/home-common.js?t=0.9.93",
+  "sha256": "9dfb2b105cc114d797bd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:34:40 UTC"
+ },
+ "https://partner.newegg.com/resources/js/home.js": {
+  "last_url": "https://partner.newegg.com/resources/js/home.js?t=0.9.93",
+  "sha256": "21a602cea1e2acebcf6f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 12:34:40 UTC"
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "_seeded": true,
+ "accounts.rl.bugcrowd.com": {
+  "url": "https://accounts.rl.bugcrowd.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "login.hackers.bugcrowd.com": {
+  "url": "https://login.hackers.bugcrowd.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://identity.bugcrowd.com/login/hacker",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "login.bugcrowd.com": {
+  "url": "https://login.bugcrowd.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://tracker.bugcrowd.com/user/sign_in",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "identity.bugcrowd.com": {
+  "url": "https://identity.bugcrowd.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "email.crowdcontrol.bugcrowd.com": {
+  "url": "https://email.crowdcontrol.bugcrowd.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "security-awareness.bugcrowd.com": {
+  "url": "https://security-awareness.bugcrowd.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://security-awareness.bugcrowd.com:443/Auth/Login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "login.gov.bugcrowd.net": {
+  "url": "https://login.gov.bugcrowd.net/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://tracker.gov.bugcrowd.net/user/sign_in",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "api.bugcrowd.com": {
+  "url": "https://api.bugcrowd.com/",
+  "http_status": 200,
+  "title": "Bugcrowd | Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "preview.rl.bugcrowd.com": {
+  "url": "https://preview.rl.bugcrowd.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "ets-api.gov.bugcrowd.net": {
+  "url": "https://ets-api.gov.bugcrowd.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "explore.bugcrowd.com": {
+  "url": "https://explore.bugcrowd.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://bugcrowd.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "assets.gov.bugcrowd.net": {
+  "url": "https://assets.gov.bugcrowd.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "api.gov.bugcrowd.net": {
+  "url": "https://api.gov.bugcrowd.net/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "collateral.bugcrowd.com": {
+  "url": "https://collateral.bugcrowd.com/",
+  "http_status": 204,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "gslink.bugcrowd.com": {
+  "url": "http://gslink.bugcrowd.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "login.hackers.gov.bugcrowd.net": {
+  "url": "https://login.hackers.gov.bugcrowd.net/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://gov.bugcrowd.net/user/sign_in",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "gov.bugcrowd.net": {
+  "url": "https://gov.bugcrowd.net/",
+  "http_status": 404,
+  "title": "Welcome to Crowdcontrol - Crowdcontrol",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "files.bugcrowd.com": {
+  "url": "https://files.bugcrowd.com/",
+  "http_status": 200,
+  "title": "Bugcrowd | Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "stream.gov.bugcrowd.net": {
+  "url": "https://stream.gov.bugcrowd.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "levelup.bugcrowd.com": {
+  "url": "https://levelup.bugcrowd.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ },
+ "itmoah.bugcrowd.com": {
+  "url": "https://itmoah.bugcrowd.com/",
+  "http_status": 200,
+  "title": "2020 Inside the Mind of a Hacker Report | Bugcrowd",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 12:43:17 UTC"
+ }
+}

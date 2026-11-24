@@ -1,0 +1,872 @@
+{
+ "_seeded": true,
+ "consumer-api.wolt.com": {
+  "url": "https://consumer-api.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "merchant-api.wolt.com": {
+  "url": "https://merchant-api.wolt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "courier-payment-service2.wolt.com": {
+  "url": "https://courier-payment-service2.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "inventory-management-service.wolt.com": {
+  "url": "https://inventory-management-service.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "api.wolt.com": {
+  "url": "http://api.wolt.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "authentication.wolt.com": {
+  "url": "https://authentication.wolt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "developer.wolt.com": {
+  "url": "https://developer.wolt.com/",
+  "http_status": 200,
+  "title": "Wolt for Developers",
+  "redirect": "",
+  "scripts": [
+   "https://developer.wolt.com/_next/static/chunks/1039-5bef35eeb4a982a9.js",
+   "https://developer.wolt.com/_next/static/chunks/1115-24e6ddab1d818999.js",
+   "https://developer.wolt.com/_next/static/chunks/189-899afbfd5d5366e7.js",
+   "https://developer.wolt.com/_next/static/chunks/2179-8e94e438dcb6bd69.js",
+   "https://developer.wolt.com/_next/static/chunks/2958-f53775a0487bc250.js",
+   "https://developer.wolt.com/_next/static/chunks/3632-2e837e7792f14040.js",
+   "https://developer.wolt.com/_next/static/chunks/4058-9bd22c1296b51667.js",
+   "https://developer.wolt.com/_next/static/chunks/4473-db9bbb65944d0edf.js",
+   "https://developer.wolt.com/_next/static/chunks/6399.e0658591434a2fba.js",
+   "https://developer.wolt.com/_next/static/chunks/744-9206506a053285a3.js",
+   "https://developer.wolt.com/_next/static/chunks/7617-8d2313e678526b2e.js",
+   "https://developer.wolt.com/_next/static/chunks/7623-83502c8a7c77788e.js",
+   "https://developer.wolt.com/_next/static/chunks/7903-751f75d571b6d176.js",
+   "https://developer.wolt.com/_next/static/chunks/833-f31f9b815f8f1327.js",
+   "https://developer.wolt.com/_next/static/chunks/851-35a897823e9a47c1.js",
+   "https://developer.wolt.com/_next/static/chunks/854-6647e36086f3e455.js",
+   "https://developer.wolt.com/_next/static/chunks/9599-9ebc9d96d50036f1.js",
+   "https://developer.wolt.com/_next/static/chunks/9b24aebd-8c7c9883e5552de1.js",
+   "https://developer.wolt.com/_next/static/chunks/app/error-27fc518d89b3e1cb.js",
+   "https://developer.wolt.com/_next/static/chunks/app/global-error-5d269fa63d6e66bf.js",
+   "https://developer.wolt.com/_next/static/chunks/app/layout-a04bf0346233d5d3.js",
+   "https://developer.wolt.com/_next/static/chunks/app/not-found-f66878ce081e614e.js",
+   "https://developer.wolt.com/_next/static/chunks/app/page-a338de968692bc8a.js",
+   "https://developer.wolt.com/_next/static/chunks/b8dcf4b9-1899f39d62a45a71.js",
+   "https://developer.wolt.com/_next/static/chunks/c94db42a-148c8a645982248a.js",
+   "https://developer.wolt.com/_next/static/chunks/cb46a35b-3036ebb2e7419298.js",
+   "https://developer.wolt.com/_next/static/chunks/main-app-ae93b8adb2e765f5.js",
+   "https://developer.wolt.com/_next/static/chunks/webpack-dd684f5d92f9a93a.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "dev2-nginx-ingress-internalcibhsq.util.wolt.com": {
+  "url": "http://dev2-nginx-ingress-internalcibhsq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "distribution-github-routemille.util.wolt.com": {
+  "url": "http://distribution-github-routemille.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "linksbilling-grafana.util.wolt.com": {
+  "url": "http://linksbilling-grafana.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "apachedevelop.util.wolt.com": {
+  "url": "http://apachedevelop.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "developpanel.util.wolt.com": {
+  "url": "http://developpanel.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "bucketa.2020auth-s3.util.wolt.com": {
+  "url": "http://bucketa.2020auth-s3.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "git-ci-trafficu.util.wolt.com": {
+  "url": "http://git-ci-trafficu.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "explore-betainvoicing-cmy.util.wolt.com": {
+  "url": "http://explore-betainvoicing-cmy.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "account-admindemo-system-jenkins.util.wolt.com": {
+  "url": "http://account-admindemo-system-jenkins.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "datamill-ci-email-medias.util.wolt.com": {
+  "url": "http://datamill-ci-email-medias.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "fintech-courier-devsdistribution.util.wolt.com": {
+  "url": "http://fintech-courier-devsdistribution.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "dev-nginx-ingress-internal-ws-merchant-onboarding-service-bhs.util.wolt.com": {
+  "url": "http://dev-nginx-ingress-internal-ws-merchant-onboarding-service-bhs.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "internal.util.wolt.com": {
+  "url": "http://internal.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "ckdatabase.util.wolt.com": {
+  "url": "http://ckdatabase.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "apiget.util.wolt.com": {
+  "url": "http://apiget.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "catalogfleetmillkibanaq.util.wolt.com": {
+  "url": "http://catalogfleetmillkibanaq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "authentication-internalliveops-eventsw.util.wolt.com": {
+  "url": "http://authentication-internalliveops-eventsw.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "customerci-paymentss.util.wolt.com": {
+  "url": "http://customerci-paymentss.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "grpckibana-gist.util.wolt.com": {
+  "url": "http://grpckibana-gist.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "email-payment-service.util.wolt.com": {
+  "url": "http://email-payment-service.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "bouncescm-stagecim.util.wolt.com": {
+  "url": "http://bouncescm-stagecim.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "beta2.wolt.com": {
+  "url": "https://beta2.wolt.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "beta2-wolt-com-static-assets.wolt.com": {
+  "url": "https://beta2-wolt-com-static-assets.wolt.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "grafana39.util.wolt.com": {
+  "url": "http://grafana39.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "payments-tips-service.wolt.com": {
+  "url": "https://payments-tips-service.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "developerlinksbillings.util.wolt.com": {
+  "url": "http://developerlinksbillings.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "internal-backupuserjenkins.util.wolt.com": {
+  "url": "http://internal-backupuserjenkins.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "fleetmillkibana.util.wolt.com": {
+  "url": "http://fleetmillkibana.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "ci-ecomdev2-nginx-ingress-public-nlbg.util.wolt.com": {
+  "url": "http://ci-ecomdev2-nginx-ingress-public-nlbg.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "converse-api-dd.wolt.com": {
+  "url": "https://converse-api-dd.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "cdnbhspredictioniok.util.wolt.com": {
+  "url": "http://cdnbhspredictioniok.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "dev2-nginx-ingress-public-nlbs.util.wolt.com": {
+  "url": "http://dev2-nginx-ingress-public-nlbs.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "billing-explore-grafanae.util.wolt.com": {
+  "url": "http://billing-explore-grafanae.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "ci-administrator-explorea.util.wolt.com": {
+  "url": "http://ci-administrator-explorea.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "cmpicker-api-merchant-resetclientk.util.wolt.com": {
+  "url": "http://cmpicker-api-merchant-resetclientk.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "distribution-githubcgiy.util.wolt.com": {
+  "url": "http://distribution-githubcgiy.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "cmpicker-api-merchant-mirrork.util.wolt.com": {
+  "url": "http://cmpicker-api-merchant-mirrork.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "ci-ecomintegrations-dev.util.wolt.com": {
+  "url": "http://ci-ecomintegrations-dev.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "devsdistribution.util.wolt.com": {
+  "url": "http://devsdistribution.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "devintq.util.wolt.com": {
+  "url": "http://devintq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "data-api-mastery.util.wolt.com": {
+  "url": "http://data-api-mastery.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "cibackupdata-api-master.util.wolt.com": {
+  "url": "http://cibackupdata-api-master.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "2019jenkins.util.wolt.com": {
+  "url": "http://2019jenkins.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "explore-beta.wolt.com": {
+  "url": "https://explore-beta.wolt.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "datamill-ciinvoicing-servicei.util.wolt.com": {
+  "url": "http://datamill-ciinvoicing-servicei.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "chefdatamillq.util.wolt.com": {
+  "url": "http://chefdatamillq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "devsinvoicing-cmc.util.wolt.com": {
+  "url": "http://devsinvoicing-cmc.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "datamill-ci-regionw.util.wolt.com": {
+  "url": "http://datamill-ci-regionw.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "authenticate.server.util.wolt.com": {
+  "url": "http://authenticate.server.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "datamill-ci-blog.util.wolt.com": {
+  "url": "http://datamill-ci-blog.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "dev-nginx-ingress-public.wolt.com": {
+  "url": "https://dev-nginx-ingress-public.wolt.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "fintech-courier-grafana2distributione.util.wolt.com": {
+  "url": "http://fintech-courier-grafana2distributione.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "corporate-service.util.wolt.com": {
+  "url": "http://corporate-service.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "integrations-authentication-service.wolt.com": {
+  "url": "https://integrations-authentication-service.wolt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "atlantis-test.prod.fg.wolt.com": {
+  "url": "https://atlantis-test.prod.fg.wolt.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "converse-telemetry-api.wolt.com": {
+  "url": "https://converse-telemetry-api.wolt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "adming.util.wolt.com": {
+  "url": "http://adming.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "githubhistory.util.wolt.com": {
+  "url": "http://githubhistory.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "cm-daas-self-service-apim.util.wolt.com": {
+  "url": "http://cm-daas-self-service-apim.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "authorizationq.util.wolt.com": {
+  "url": "http://authorizationq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "cibounces-logins.util.wolt.com": {
+  "url": "http://cibounces-logins.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "file-api-merchant-admina.util.wolt.com": {
+  "url": "http://file-api-merchant-admina.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "data-api-public-poss.util.wolt.com": {
+  "url": "http://data-api-public-poss.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 13:05:58 UTC"
+ },
+ "accessaccount-debug-s3w.util.wolt.com": {
+  "url": "http://accessaccount-debug-s3w.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "edge-apic.util.wolt.com": {
+  "url": "http://edge-apic.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "email-restaurant-backup-api.util.wolt.com": {
+  "url": "http://email-restaurant-backup-api.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "ecom-plugin-api-shpo.util.wolt.com": {
+  "url": "http://ecom-plugin-api-shpo.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "docsapidevelopc.util.wolt.com": {
+  "url": "http://docsapidevelopc.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "dev-nginx-ingress-internalsq.util.wolt.com": {
+  "url": "http://dev-nginx-ingress-internalsq.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "ckdevices.util.wolt.com": {
+  "url": "http://ckdevices.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "authentications.util.wolt.com": {
+  "url": "http://authentications.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "gateway-elastic.server.util.wolt.com": {
+  "url": "http://gateway-elastic.server.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "lensbillingmanage.util.wolt.com": {
+  "url": "http://lensbillingmanage.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "datalinksbillings.util.wolt.com": {
+  "url": "http://datalinksbillings.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "apiebsc.util.wolt.com": {
+  "url": "http://apiebsc.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "distribution-githubebs.util.wolt.com": {
+  "url": "http://distribution-githubebs.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ },
+ "customerci-payu.util.wolt.com": {
+  "url": "http://customerci-payu.util.wolt.com/",
+  "http_status": 200,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 12:57:24 UTC"
+ }
+}
