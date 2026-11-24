@@ -1,0 +1,155 @@
+{
+ "_seeded": true,
+ "sandbox-eu.bitdefender.net": {
+  "url": "https://sandbox-eu.bitdefender.net/",
+  "http_status": 403,
+  "title": "403",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "test.swimlane.bitdefender.com": {
+  "url": "https://test.swimlane.bitdefender.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://bitdefender.cloudflareaccess.com/cdn-cgi/access/login/test.swimlane.bitdefender.com?kid=97332b19ab69b344d6d1cddaf2aed5ef91e20c4ccc27c255e610284ea45fbd03&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "oem-central-stage.bitdefender.com": {
+  "url": "https://oem-central-stage.bitdefender.com/",
+  "http_status": 525,
+  "title": "bitdefender.com | 525: SSL handshake failed",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "sandbox-us.bitdefender.net": {
+  "url": "https://sandbox-us.bitdefender.net/",
+  "http_status": 403,
+  "title": "403",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "beta-central.bitdefender.com": {
+  "url": "https://beta-central.bitdefender.com/",
+  "http_status": 200,
+  "title": "Bitdefender Central",
+  "redirect": "",
+  "scripts": [
+   "https://beta-central.bitdefender.com/config.js",
+   "https://beta-central.bitdefender.com/main.c05a5a4c3ef66352.js",
+   "https://beta-central.bitdefender.com/runtime.026657c576257b21.js",
+   "https://beta-central.bitdefender.com/scripts.95b8805e8fd17ec2.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "gz2-console.ms.gravityzone.bitdefender.com": {
+  "url": "https://gz2-console.ms.gravityzone.bitdefender.com/",
+  "http_status": 200,
+  "title": "Bitdefender GravityZone",
+  "redirect": "",
+  "scripts": [
+   "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.bower.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz2-console.ms.gravityzone.bitdefender.com/zconfig.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "news.bitdefender.com": {
+  "url": "https://news.bitdefender.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.bitdefender.com/news/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "securepass-api.bitdefender.com": {
+  "url": "https://securepass-api.bitdefender.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "sandbox-portal-us-gcp.gravityzone.bitdefender.com": {
+  "url": "https://sandbox-portal-us-gcp.gravityzone.bitdefender.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "stratus-staging.ovh.gravityzone.bitdefender.com": {
+  "url": "http://www.stratus-staging.ovh.gravityzone.bitdefender.com",
+  "http_status": 200,
+  "title": "Site en construction",
+  "redirect": "http://www.stratus-staging.ovh.gravityzone.bitdefender.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "app-stage.mdr.bitdefender.com": {
+  "url": "https://app-stage.mdr.bitdefender.com:/en",
+  "http_status": 200,
+  "title": "MDR",
+  "redirect": "https://app-stage.mdr.bitdefender.com:/en",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "csrtools-api.bitdefender.com": {
+  "url": "https://csrtools-api.bitdefender.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "beta.bitdefender.com": {
+  "url": "https://beta.bitdefender.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.bitdefender.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ },
+ "oemportal.bitdefender.com": {
+  "url": "https://oemportal.bitdefender.com/sign-in",
+  "http_status": 200,
+  "title": "OEM Portal by Bitdefender:\n        Users",
+  "redirect": "https://oemportal.bitdefender.com/sign-in",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:46:14 UTC"
+ }
+}

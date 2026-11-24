@@ -42,6 +42,7 @@ adm.krisp.ai
 admin.krisp.ai
 ads.krisp.ai
 agent.krisp.ai
+alpha.krisp.ai
 am.krisp.ai
 ame.krisp.ai
 amer.krisp.ai
@@ -151,7 +152,9 @@ demog.select.krisp.ai
 demotest.krisp.ai
 desktop.krisp.ai
 desktopw.krisp.ai
+dev-euc1.streaming.krisp.ai
 dev-test.krisp.ai
+dev-usw1.streaming.krisp.ai
 dev.account.krisp.ai
 dev.agent.krisp.ai
 dev.amplitude.krisp.ai
@@ -245,6 +248,7 @@ ext.krisp.ai
 external.desktop.krisp.ai
 external.krisp.ai
 extranet.krisp.ai
+ezproxyo.lib.krisp.ai
 feature-test.env.krisp.ai
 feature-vitals.krisp.ai
 files.feature-test.env.krisp.ai
@@ -294,6 +298,7 @@ flss.krisp.ai
 flsservice.krisp.ai
 flsu.dev.r.krisp.ai
 fna.krisp.ai
+fnae.service.krisp.ai
 foxtrot.krisp.ai
 foxtrotc.krisp.ai
 fr.krisp.ai
@@ -318,6 +323,7 @@ intern.krisp.ai
 internal.api.krisp.ai
 intra.krisp.ai
 jenkins.analytics.krisp.ai
+jmasterg.ci.krisp.ai
 jobs.krisp.ai
 jpmchase-uat.krisp.ai
 jpmchase-uat7.krisp.ai
@@ -470,6 +476,7 @@ preprod.sdkapi.krisp.ai
 private.krisp.ai
 prod.es.krisp.ai
 prod.krisp.ai
+ptr1215.krisp.ai
 ptr12157.krisp.ai
 ptr2.krisp.ai
 ptr4412.mail.krisp.ai
@@ -615,6 +622,7 @@ url51453.krisp.ai
 us1.krisp.ai
 us2.krisp.ai
 us4.krisp.ai
+ute.krisp.ai
 vci.krisp.ai
 vh85.krisp.ai
 vh86.krisp.ai
@@ -637,6 +645,7 @@ wpengine.krisp.ai
 wr-store.krisp.ai
 wr.krisp.ai
 www.4042051m.krisp.ai
+www.account.krisp.ai
 www.account.prelive.krisp.ai
 www.agent.krisp.ai
 www.analytics.krisp.ai
@@ -645,6 +654,7 @@ www.api.new.krisp.ai
 www.api.prelive.krisp.ai
 www.api.wr.krisp.ai
 www.apidocs.krisp.ai
+www.app.krisp.ai
 www.azstage.krisp.ai
 www.bid47kc.4042051m.krisp.ai
 www.blog.krisp.ai
@@ -660,6 +670,8 @@ www.dev.krisp.ai
 www.dev.r.krisp.ai
 www.dev.sdk.krisp.ai
 www.dev.upld.krisp.ai
+www.docs.krisp.ai
+www.download.krisp.ai
 www.download.new.krisp.ai
 www.es.krisp.ai
 www.files.krisp.ai
@@ -690,6 +702,7 @@ www.o2.ptr1215.krisp.ai
 www.o3.ptr4616.krisp.ai
 www.old.account.krisp.ai
 www.plive.account.krisp.ai
+www.plive.analytics.krisp.ai
 www.plive.api.krisp.ai
 www.plive.app.krisp.ai
 www.plive.download.krisp.ai

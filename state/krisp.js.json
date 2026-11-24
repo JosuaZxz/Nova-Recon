@@ -1,13 +1,13 @@
 {
  "https://account.krisp.ai/assets/index-C3yawLCq.js": {
   "last_url": "https://account.krisp.ai/assets/index-C3yawLCq.js",
-  "sha256": "b84b4b09e3e91ef53c67",
+  "sha256": "99e9c415f1d87b55d945",
   "routes": [
    "/users/list",
    "/users/list/invite"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:28 UTC"
+  "updated": "2026-11-24 11:57:39 UTC"
  },
  "https://stage.app.krisp.ai/assets/index-BNzxacLg.js": {
   "last_url": "https://stage.app.krisp.ai/assets/index-BNzxacLg.js",
@@ -18,7 +18,7 @@
  },
  "https://developers.krisp.ai/assets/index-Bu4ovnS-.js": {
   "last_url": "https://developers.krisp.ai/assets/index-Bu4ovnS-.js",
-  "sha256": "b396d5ca0dc63013894a",
+  "sha256": "fdec549d945011bce99f",
   "routes": [
    "/admin/builds",
    "/admin/configurations",
@@ -34,123 +34,123 @@
    "/billing/api"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:30 UTC"
+  "updated": "2026-11-24 11:57:40 UTC"
  },
  "https://developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js": {
   "last_url": "https://developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
   "sha256": "d0e9044430006c5bb48f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:30 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/host-BP02NRPy.js": {
   "last_url": "https://developers.krisp.ai/assets/host-BP02NRPy.js",
   "sha256": "31d90d1d4ee3cd497261",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:31 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/vendor-react-DU-teErA.js": {
   "last_url": "https://developers.krisp.ai/assets/vendor-react-DU-teErA.js",
   "sha256": "d6e029dd9595b3a105ea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:31 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/preload-helper-DxNCjybV.js": {
   "last_url": "https://developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
   "sha256": "4989021eec47c79523de",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:31 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js": {
   "last_url": "https://developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js",
   "sha256": "7a4a690b2569f259c0d8",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:31 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/vendor-framework-00wimfVw.js": {
   "last_url": "https://developers.krisp.ai/assets/vendor-framework-00wimfVw.js",
   "sha256": "dc5ebdb9f543b5cedd2e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:31 UTC"
+  "updated": "2026-11-24 11:57:41 UTC"
  },
  "https://developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js": {
   "last_url": "https://developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js",
-  "sha256": "e15b7ac424e48f641e5c",
+  "sha256": "7a0d367707b044f2bb70",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/connectors-B4kxPWsK.js": {
   "last_url": "https://developers.krisp.ai/assets/connectors-B4kxPWsK.js",
   "sha256": "52cba3bc62635e277040",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/interfaces-Bt7dNgwh.js": {
   "last_url": "https://developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
   "sha256": "6aaadbe54f4681564b0c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/casters-CGosN0UF.js": {
   "last_url": "https://developers.krisp.ai/assets/casters-CGosN0UF.js",
   "sha256": "69435674bceb2e2023ee",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/profileApi-BEGCh0lZ.js": {
   "last_url": "https://developers.krisp.ai/assets/profileApi-BEGCh0lZ.js",
   "sha256": "e86cafdda4dcc98e4c42",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/CustomToast-WE4vS7or.js": {
   "last_url": "https://developers.krisp.ai/assets/CustomToast-WE4vS7or.js",
   "sha256": "1b23ac63891a1b1838fe",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/interfaces-CopVV46c.js": {
   "last_url": "https://developers.krisp.ai/assets/interfaces-CopVV46c.js",
   "sha256": "b52917bd4dfea9c60add",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:32 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/useHasRole-aigO8pgZ.js": {
   "last_url": "https://developers.krisp.ai/assets/useHasRole-aigO8pgZ.js",
   "sha256": "f569ca5d1fe56a363eb5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:33 UTC"
+  "updated": "2026-11-24 11:57:42 UTC"
  },
  "https://developers.krisp.ai/assets/products-DL0r_qkH.js": {
   "last_url": "https://developers.krisp.ai/assets/products-DL0r_qkH.js",
   "sha256": "49165149319008890b00",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:33 UTC"
+  "updated": "2026-11-24 11:57:43 UTC"
  },
  "https://dev.app.krisp.ai/assets/index-u0d4PXtJ.js": {
   "last_url": "https://dev.app.krisp.ai/assets/index-u0d4PXtJ.js",
-  "sha256": "25380fa4e07d3628ad50",
+  "sha256": "6c92d8bb4ede8e4df34a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:33 UTC"
+  "updated": "2026-11-24 11:57:43 UTC"
  },
  "https://dev.developers.krisp.ai/assets/index-DEFYhP4b.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/index-DEFYhP4b.js",
-  "sha256": "bdaad5f6d5c54712db03",
+  "sha256": "ff944dac7dd29243c0ab",
   "routes": [
    "/admin/builds",
    "/admin/configurations",
@@ -166,98 +166,98 @@
    "/billing/api"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:34 UTC"
+  "updated": "2026-11-24 11:57:44 UTC"
  },
  "https://dev.developers.krisp.ai/assets/host-DkVr0dCI.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/host-DkVr0dCI.js",
   "sha256": "c11dd4884b43f9d20cbc",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:35 UTC"
+  "updated": "2026-11-24 11:57:44 UTC"
  },
  "https://dev.developers.krisp.ai/assets/vendor-react-T8Fusv47.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/vendor-react-T8Fusv47.js",
   "sha256": "79aa6932fae34508f8a7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:35 UTC"
+  "updated": "2026-11-24 11:57:44 UTC"
  },
  "https://dev.developers.krisp.ai/assets/lazyWithRetry-BgQ3RkzK.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/lazyWithRetry-BgQ3RkzK.js",
   "sha256": "f23dde012fb970040b74",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:35 UTC"
+  "updated": "2026-11-24 11:57:44 UTC"
  },
  "https://dev.developers.krisp.ai/assets/vendor-ui-DZHx2Kky.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/vendor-ui-DZHx2Kky.js",
   "sha256": "087444a794b09b02e4d0",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:35 UTC"
+  "updated": "2026-11-24 11:57:45 UTC"
  },
  "https://dev.developers.krisp.ai/assets/vendor-framework-CsMtPcG_.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/vendor-framework-CsMtPcG_.js",
   "sha256": "34bfbf09d28a6a5ff1d2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:35 UTC"
+  "updated": "2026-11-24 11:57:45 UTC"
  },
  "https://dev.developers.krisp.ai/assets/vendor-kr-ui-3fJ5kPid.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/vendor-kr-ui-3fJ5kPid.js",
-  "sha256": "f721ce062d6be43dfae6",
+  "sha256": "f5d1b3b068188445f04a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:36 UTC"
+  "updated": "2026-11-24 11:57:45 UTC"
  },
  "https://dev.developers.krisp.ai/assets/connectors-Fg8_-BnR.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/connectors-Fg8_-BnR.js",
   "sha256": "ff97a35f143b7a64bf83",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:36 UTC"
+  "updated": "2026-11-24 11:57:45 UTC"
  },
  "https://dev.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
   "sha256": "6aaadbe54f4681564b0c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:36 UTC"
+  "updated": "2026-11-24 11:57:45 UTC"
  },
  "https://dev.developers.krisp.ai/assets/casters-CGosN0UF.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/casters-CGosN0UF.js",
   "sha256": "69435674bceb2e2023ee",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:36 UTC"
+  "updated": "2026-11-24 11:57:46 UTC"
  },
  "https://dev.developers.krisp.ai/assets/profileApi-Be6pO7Uv.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/profileApi-Be6pO7Uv.js",
   "sha256": "6f6c06253d6e1bc87b5b",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:37 UTC"
+  "updated": "2026-11-24 11:57:46 UTC"
  },
  "https://dev.developers.krisp.ai/assets/CustomToast-CoTmKExl.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/CustomToast-CoTmKExl.js",
   "sha256": "8b5f80fd0019f5302f5a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:37 UTC"
+  "updated": "2026-11-24 11:57:46 UTC"
  },
  "https://dev.developers.krisp.ai/assets/interfaces-CopVV46c.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/interfaces-CopVV46c.js",
   "sha256": "b52917bd4dfea9c60add",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:37 UTC"
+  "updated": "2026-11-24 11:57:46 UTC"
  },
  "https://dev.developers.krisp.ai/assets/products-B98AuRTz.js": {
   "last_url": "https://dev.developers.krisp.ai/assets/products-B98AuRTz.js",
   "sha256": "1b439dc61e4b6bc4586f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:37 UTC"
+  "updated": "2026-11-24 11:57:46 UTC"
  },
  "https://stage.account.krisp.ai/assets/index-DP2RUUWU.js": {
   "last_url": "https://stage.account.krisp.ai/assets/index-DP2RUUWU.js",
@@ -281,7 +281,7 @@
  },
  "https://plive.developers.krisp.ai/assets/index-D9AYIAwd.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/index-D9AYIAwd.js",
-  "sha256": "85a44047686bd2f786e1",
+  "sha256": "f0b28585da2f90f09b4e",
   "routes": [
    "/admin/builds",
    "/admin/configurations",
@@ -297,116 +297,116 @@
    "/billing/api"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:39 UTC"
+  "updated": "2026-11-24 11:57:49 UTC"
  },
  "https://plive.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
   "sha256": "d0e9044430006c5bb48f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:39 UTC"
+  "updated": "2026-11-24 11:57:49 UTC"
  },
  "https://plive.developers.krisp.ai/assets/host-DOzkOgo2.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/host-DOzkOgo2.js",
   "sha256": "a8a0b224b3f8d8faeb60",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:39 UTC"
+  "updated": "2026-11-24 11:57:49 UTC"
  },
  "https://plive.developers.krisp.ai/assets/vendor-react-DU-teErA.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/vendor-react-DU-teErA.js",
   "sha256": "d6e029dd9595b3a105ea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:39 UTC"
+  "updated": "2026-11-24 11:57:49 UTC"
  },
  "https://plive.developers.krisp.ai/assets/preload-helper-DxNCjybV.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
   "sha256": "4989021eec47c79523de",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:39 UTC"
+  "updated": "2026-11-24 11:57:49 UTC"
  },
  "https://plive.developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js",
   "sha256": "7a4a690b2569f259c0d8",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:40 UTC"
+  "updated": "2026-11-24 11:57:50 UTC"
  },
  "https://plive.developers.krisp.ai/assets/vendor-framework-00wimfVw.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/vendor-framework-00wimfVw.js",
   "sha256": "dc5ebdb9f543b5cedd2e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:40 UTC"
+  "updated": "2026-11-24 11:57:50 UTC"
  },
  "https://plive.developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js",
-  "sha256": "3eaff74ffac1dabfc980",
+  "sha256": "6456ea3ff7c507678cfe",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:40 UTC"
+  "updated": "2026-11-24 11:57:50 UTC"
  },
  "https://plive.developers.krisp.ai/assets/connectors-wAYXw9Wa.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/connectors-wAYXw9Wa.js",
   "sha256": "585c39eab9510eeb8a92",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:40 UTC"
+  "updated": "2026-11-24 11:57:50 UTC"
  },
  "https://plive.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
   "sha256": "6aaadbe54f4681564b0c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:50 UTC"
  },
  "https://plive.developers.krisp.ai/assets/casters-CGosN0UF.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/casters-CGosN0UF.js",
   "sha256": "69435674bceb2e2023ee",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://plive.developers.krisp.ai/assets/profileApi-LVjHa4J0.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/profileApi-LVjHa4J0.js",
   "sha256": "c2e8d0fc60c275821a62",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://plive.developers.krisp.ai/assets/CustomToast-WE4vS7or.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/CustomToast-WE4vS7or.js",
   "sha256": "1b23ac63891a1b1838fe",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://plive.developers.krisp.ai/assets/interfaces-CopVV46c.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/interfaces-CopVV46c.js",
   "sha256": "b52917bd4dfea9c60add",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://plive.developers.krisp.ai/assets/useHasRole-jtAWfbf-.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/useHasRole-jtAWfbf-.js",
   "sha256": "706c1fddb5bd77cc5d4d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://plive.developers.krisp.ai/assets/products-DL0r_qkH.js": {
   "last_url": "https://plive.developers.krisp.ai/assets/products-DL0r_qkH.js",
   "sha256": "49165149319008890b00",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:41 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/index-C7RDhbm8.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/index-C7RDhbm8.js",
-  "sha256": "7fb30a9a08d17ee8c2b2",
+  "sha256": "a50dda8f0e908de9bf9c",
   "routes": [
    "/admin/builds",
    "/admin/configurations",
@@ -422,116 +422,116 @@
    "/billing/api"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:42 UTC"
+  "updated": "2026-11-24 11:57:51 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
   "sha256": "d0e9044430006c5bb48f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:42 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/host-xqD0PCz8.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/host-xqD0PCz8.js",
   "sha256": "44b9f85ef0f66cf5431d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:42 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/vendor-react-DU-teErA.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/vendor-react-DU-teErA.js",
   "sha256": "d6e029dd9595b3a105ea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:42 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/preload-helper-DxNCjybV.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/preload-helper-DxNCjybV.js",
   "sha256": "4989021eec47c79523de",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:42 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/vendor-ui-BKqLbr07.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/vendor-ui-BKqLbr07.js",
   "sha256": "d5f5ae4a1ce4fcd73aa9",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:43 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/vendor-framework-ie_ZrP8J.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/vendor-framework-ie_ZrP8J.js",
   "sha256": "bb5242355cc411982d02",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:43 UTC"
+  "updated": "2026-11-24 11:57:52 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js",
-  "sha256": "98c6b9fbc71f3e13a9ab",
+  "sha256": "249c72a3efa5521b098c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:43 UTC"
+  "updated": "2026-11-24 11:57:53 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/connectors-fVxQhVFN.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/connectors-fVxQhVFN.js",
   "sha256": "846147ea1e7d194023d6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:43 UTC"
+  "updated": "2026-11-24 11:57:53 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/interfaces-Bt7dNgwh.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/interfaces-Bt7dNgwh.js",
   "sha256": "6aaadbe54f4681564b0c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:43 UTC"
+  "updated": "2026-11-24 11:57:53 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/casters-CGosN0UF.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/casters-CGosN0UF.js",
   "sha256": "69435674bceb2e2023ee",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/profileApi-DogeSbPj.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/profileApi-DogeSbPj.js",
   "sha256": "737100b23f683d191c22",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/CustomToast-CZ2Cpzu6.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/CustomToast-CZ2Cpzu6.js",
   "sha256": "410099900f2c9b4e51b2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/interfaces-CopVV46c.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/interfaces-CopVV46c.js",
   "sha256": "b52917bd4dfea9c60add",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/useHasRole-cbCjmmdF.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/useHasRole-cbCjmmdF.js",
   "sha256": "d3469c1d2a690fdcf0a7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.sdk.krisp.ai/assets/products-UnYu9bi5.js": {
   "last_url": "https://stage.sdk.krisp.ai/assets/products-UnYu9bi5.js",
   "sha256": "93a512ebf13ae7a1f5d4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:44 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.developers.krisp.ai/assets/index-C7RDhbm8.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/index-C7RDhbm8.js",
-  "sha256": "39410c57fa0fe7931415",
+  "sha256": "87cef65f4fe1ca36f2be",
   "routes": [
    "/admin/builds",
    "/admin/configurations",
@@ -547,135 +547,192 @@
    "/billing/api"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:45 UTC"
+  "updated": "2026-11-24 11:57:54 UTC"
  },
  "https://stage.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
   "sha256": "d0e9044430006c5bb48f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/host-xqD0PCz8.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/host-xqD0PCz8.js",
   "sha256": "44b9f85ef0f66cf5431d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/vendor-react-DU-teErA.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/vendor-react-DU-teErA.js",
   "sha256": "d6e029dd9595b3a105ea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/preload-helper-DxNCjybV.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
   "sha256": "4989021eec47c79523de",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/vendor-ui-BKqLbr07.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/vendor-ui-BKqLbr07.js",
   "sha256": "d5f5ae4a1ce4fcd73aa9",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/vendor-framework-ie_ZrP8J.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/vendor-framework-ie_ZrP8J.js",
   "sha256": "bb5242355cc411982d02",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:46 UTC"
+  "updated": "2026-11-24 11:57:55 UTC"
  },
  "https://stage.developers.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js",
   "sha256": "1ab0062eec732b4cca0b",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/connectors-fVxQhVFN.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/connectors-fVxQhVFN.js",
   "sha256": "846147ea1e7d194023d6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
   "sha256": "6aaadbe54f4681564b0c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/casters-CGosN0UF.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/casters-CGosN0UF.js",
   "sha256": "69435674bceb2e2023ee",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/profileApi-DogeSbPj.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/profileApi-DogeSbPj.js",
   "sha256": "737100b23f683d191c22",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/CustomToast-CZ2Cpzu6.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/CustomToast-CZ2Cpzu6.js",
   "sha256": "410099900f2c9b4e51b2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:47 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/interfaces-CopVV46c.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/interfaces-CopVV46c.js",
   "sha256": "b52917bd4dfea9c60add",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:48 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/useHasRole-cbCjmmdF.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/useHasRole-cbCjmmdF.js",
   "sha256": "d3469c1d2a690fdcf0a7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:48 UTC"
+  "updated": "2026-11-24 11:57:56 UTC"
  },
  "https://stage.developers.krisp.ai/assets/products-UnYu9bi5.js": {
   "last_url": "https://stage.developers.krisp.ai/assets/products-UnYu9bi5.js",
   "sha256": "93a512ebf13ae7a1f5d4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:48 UTC"
+  "updated": "2026-11-24 11:57:57 UTC"
  },
  "https://stage.wr.krisp.ai/assets/index-DmsaAEPA.js": {
   "last_url": "https://stage.wr.krisp.ai/assets/index-DmsaAEPA.js",
-  "sha256": "0e5b15571d67f7163af3",
+  "sha256": "ca335ce840d07d1a405d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:48 UTC"
+  "updated": "2026-11-24 11:57:57 UTC"
  },
  "https://dev.wr.krisp.ai/assets/index-DatnJxze.js": {
   "last_url": "https://dev.wr.krisp.ai/assets/index-DatnJxze.js",
-  "sha256": "af3da22b76a95311c0db",
+  "sha256": "9d2c8095e78c7ef9322f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:49 UTC"
+  "updated": "2026-11-24 11:57:58 UTC"
  },
  "https://dev.account.krisp.ai/assets/index-ZQlO9Pay.js": {
   "last_url": "https://dev.account.krisp.ai/assets/index-ZQlO9Pay.js",
-  "sha256": "8d7af7b77630bd82f78e",
+  "sha256": "3b2bcc5a5c13c1acbe17",
   "routes": [
    "/users/list",
    "/users/list/invite"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 00:54:50 UTC"
+  "updated": "2026-11-24 11:57:58 UTC"
+ },
+ "https://cdn.krisp.ai/web-apps/onboarding-dev/static/js/main.HASH.js": {
+  "last_url": "https://cdn.krisp.ai/web-apps/onboarding-dev/static/js/main.6c6add1f.js",
+  "sha256": "71693a9745125f6edaac",
+  "routes": [
+   "/v2/resource"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:59 UTC"
+ },
+ "https://lab.krisp.ai/assets/index-BrZbrYgD.js": {
+  "last_url": "https://lab.krisp.ai/assets/index-BrZbrYgD.js",
+  "sha256": "31b144f02af5ed230b8b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:29 UTC"
+ },
+ "https://wr.krisp.ai/assets/index-B4UMUc-h.js": {
+  "last_url": "https://wr.krisp.ai/assets/index-B4UMUc-h.js",
+  "sha256": "c7d79ec755634640f760",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:30 UTC"
+ },
+ "https://status.krisp.ai/static/1/433be6ed9198f515d34ab033b43823a9e9324825/js/main.js": {
+  "last_url": "https://status.krisp.ai/static/1/433be6ed9198f515d34ab033b43823a9e9324825/js/main.js",
+  "sha256": "e606b2b24df96f36fb80",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:31 UTC"
+ },
+ "https://stage.app.krisp.ai/assets/index-DTvpw9SX.js": {
+  "last_url": "https://stage.app.krisp.ai/assets/index-DTvpw9SX.js",
+  "sha256": "391f885b535df7837b58",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:40 UTC"
+ },
+ "https://stage.account.krisp.ai/assets/index-CNiPftd4.js": {
+  "last_url": "https://stage.account.krisp.ai/assets/index-CNiPftd4.js",
+  "sha256": "4ceba718b464b5b29f53",
+  "routes": [
+   "/users/list",
+   "/users/list/invite"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:47 UTC"
+ },
+ "https://plive.account.krisp.ai/assets/index-CR6mOddb.js": {
+  "last_url": "https://plive.account.krisp.ai/assets/index-CR6mOddb.js",
+  "sha256": "09d00ad720da08f9dec2",
+  "routes": [
+   "/users/list",
+   "/users/list/invite"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:57:48 UTC"
  }
 }

@@ -1,0 +1,133 @@
+{
+ "_seeded": true,
+ "dev.loom.com": {
+  "url": "https://dev.loom.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "asaraf2-portal.public.atlastunnel.com": {
+  "url": "https://asaraf2-portal.public.atlastunnel.com/",
+  "http_status": 530,
+  "title": "Cloudflare Tunnel error | asaraf2-portal.public.atlastunnel.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "luna-stage.loom.com": {
+  "url": "https://luna-stage.loom.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "stage.loom.com": {
+  "url": "https://stage.loom.com/",
+  "http_status": 404,
+  "title": "Sorry, the page you're looking for cannot be found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "cdn-stage.loom.com": {
+  "url": "https://cdn-stage.loom.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "sona-confluence.public.atlastunnel.com": {
+  "url": "https://sona-confluence.public.atlastunnel.com/",
+  "http_status": 530,
+  "title": "Cloudflare Tunnel error | sona-confluence.public.atlastunnel.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "dsehgaljira.public.atlastunnel.com": {
+  "url": "https://dsehgaljira.public.atlastunnel.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://slack.com/marketplace/AC23SDS77-confluence-cloud",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "asaraf2-portal.private.atlastunnel.com": {
+  "url": "https://asaraf2-portal.private.atlastunnel.com/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "bad-builds-stage.loom.com": {
+  "url": "https://bad-builds-stage.loom.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "developers.loom.com": {
+  "url": "https://developers.loom.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "new.loom.com": {
+  "url": "http://new.loom.com/",
+  "http_status": 409,
+  "title": "DNS resolution error | new.loom.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "cdn-dev.loom.com": {
+  "url": "https://cdn-dev.loom.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ },
+ "api.sgmt.loom.com": {
+  "url": "https://api.sgmt.loom.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 11:50:23 UTC"
+ }
+}

@@ -1,0 +1,839 @@
+{
+ "https://staging-kyc.deriv.com/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/webpack-035f0ec01ac95cfe.js",
+  "sha256": "bb45d4386f665655906e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:21 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/1ee0abe3-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/1ee0abe3-4c45e22c2bffbb5e.js",
+  "sha256": "908dac585d58a394f5ce",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:21 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/7971-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/7971-0f8ab565a294a03b.js",
+  "sha256": "2c7e54e8c84f6a7d1498",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/main-app-da1ad5b8bb2f0ed6.js",
+  "sha256": "c004f691888645b402b8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/ac0bd126-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/ac0bd126-6f9c2b3fde7f226e.js",
+  "sha256": "dc20bd5fbf5e66c6abfe",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/1849-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/1849-9e090232ef4d9b4c.js",
+  "sha256": "c1bd41290b2d08887a18",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/2114-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/2114-1ba5316bc73d24c5.js",
+  "sha256": "8697b7b860a0f272e1e7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/4849-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/4849-77e2389db0869d81.js",
+  "sha256": "ca2ce0e20c4763d5e8a3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/7617-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/7617-76cddbb7c3019bda.js",
+  "sha256": "468545797adbe96744a7",
+  "routes": [
+   "/v1/bff/login",
+   "/v1/bff/signup",
+   "/v1/bff/verify-login",
+   "/v1/bff/verify-signup",
+   "/v1/logout",
+   "/v1/session",
+   "/v1/signup",
+   "/v1/verify"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/3433-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/3433-c8d46afd5c5157e0.js",
+  "sha256": "db04bba69d4b0701a162",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/app/layout-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/app/layout-edf1c432ee972f0e.js",
+  "sha256": "008ad122c918877183b3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://staging-kyc.deriv.com/_next/static/chunks/app/page-HASH.js": {
+  "last_url": "https://staging-kyc.deriv.com/_next/static/chunks/app/page-756f2df563fdfbaf.js",
+  "sha256": "c14e62c19196101b095f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/webpack-da2c3dfe78b772d6.js",
+  "sha256": "bd760500c9ff93324911",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:22 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4bd1b696-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4bd1b696-8cd12253b448cc13.js",
+  "sha256": "898c71c4da75489e3cf2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/3794-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/3794-b54de1f4f3dcb40b.js",
+  "sha256": "2cd9509ebdf7230a33a9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/main-app-96c9ae4a499ddd53.js",
+  "sha256": "2b4fb58b1039fe8e765d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/479a7878-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/479a7878-c7183752270b5b5e.js",
+  "sha256": "65a9d281e09f95a396d2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/7307-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/7307-126c5ecba4b95b1f.js",
+  "sha256": "0a8c79411d49c8cc1fa1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/8708-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/8708-311090aae92f68a1.js",
+  "sha256": "7d233cb982d2575893ef",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/3267-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/3267-ebcfb0b39e87327e.js",
+  "sha256": "8ddfbe9f1de1607b8ae0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/6609-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/6609-e02f0108796c4830.js",
+  "sha256": "88ededf0bed36f4ac696",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:23 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4109-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4109-1d01cb7c60308559.js",
+  "sha256": "5ec8033be92a07663aa1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/5772-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/5772-0b7d2ec86b2be088.js",
+  "sha256": "3d75c9a3478378dcb17d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4642-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4642-0a7f4da4470d116e.js",
+  "sha256": "9740a255cbf3c9bb4d61",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/1337-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/1337-749245680478c738.js",
+  "sha256": "a5f132895a8d68b0871a",
+  "routes": [
+   "/v1/derivatives",
+   "/v1/partners",
+   "/v1/service/token/helpcentre"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/9637-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/9637-e88257c9876c7459.js",
+  "sha256": "6cdc3d834f490126e50c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4683-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4683-69524aa604526ace.js",
+  "sha256": "6de289a25955920bccde",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/2834-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/2834-c5e5f76c09e15083.js",
+  "sha256": "3d760f33e74e76da54e0",
+  "routes": [
+   "/api/app-builder/oauth/disconnect",
+   "/api/auth/logout",
+   "/api/auth/logout/browser",
+   "/api/auth/whoami",
+   "/api/feature-flags"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/748-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/748-d5f4515b34cf4cf0.js",
+  "sha256": "6364e3b922e536daf849",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/5353-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/5353-e959d32a86e0db89.js",
+  "sha256": "e5044314e65edfde8020",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/6766-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/6766-546b07d3cb4d17fb.js",
+  "sha256": "97a8cb43b805ee52eb35",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://staging-charts.deriv.com/vendors.HASH.js": {
+  "last_url": "https://staging-charts.deriv.com/vendors.2112f15517e1ef3e6158.js",
+  "sha256": "2fc6a4e7998f2cf21e22",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:27 UTC"
+ },
+ "https://staging-charts.deriv.com/common.HASH.js": {
+  "last_url": "https://staging-charts.deriv.com/common.c104caf6b42fd47bc142.js",
+  "sha256": "9fdfa3004fc2fd875f4b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:27 UTC"
+ },
+ "https://staging-p2p.deriv.com/assets/index.a9s0JyOG.js": {
+  "last_url": "https://staging-p2p.deriv.com/assets/index.a9s0JyOG.js",
+  "sha256": "4dba0441f0d124c25f20",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:27 UTC"
+ },
+ "https://staging-p2p.deriv.com/assets/deriv-com.ZCGdRAP3.js": {
+  "last_url": "https://staging-p2p.deriv.com/assets/deriv-com.ZCGdRAP3.js",
+  "sha256": "9307fe4e5b01f1f25f8d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://staging-p2p.deriv.com/assets/react.BvukTCRb.js": {
+  "last_url": "https://staging-p2p.deriv.com/assets/react.BvukTCRb.js",
+  "sha256": "28b09c2f452638fd6d28",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/D4MAz10L.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/D4MAz10L.js",
+  "sha256": "4a414d1dce67c427fc55",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/zIoNMLaP.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/zIoNMLaP.js",
+  "sha256": "8ab6a88dd0667f10c05a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/QX_wt8sA.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/QX_wt8sA.js",
+  "sha256": "e9d59737b0b4e8b7f844",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/ChQLylCq.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/ChQLylCq.js",
+  "sha256": "9c5b29c0acda23f6407f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/DuTjUksr.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/DuTjUksr.js",
+  "sha256": "91d5e14737862d5bae59",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/B6tYenZ7.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/B6tYenZ7.js",
+  "sha256": "ac3efcd1c076346b797e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/DWoxubYH.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/DWoxubYH.js",
+  "sha256": "23a04328487e5ec89286",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/3QzwWs89.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/3QzwWs89.js",
+  "sha256": "b5bb5e85b06c3547b6eb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/TIqROK-e.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/TIqROK-e.js",
+  "sha256": "572251082075103e759e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:28 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/Dy0cJb3m.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/Dy0cJb3m.js",
+  "sha256": "49d549b8996d9f075136",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/L7tjPvKR.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/L7tjPvKR.js",
+  "sha256": "6e35afeb2d8d333008fa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/C0_dakDF.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/C0_dakDF.js",
+  "sha256": "7f1bf20535475a56d51f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/DdOBVyXY.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/DdOBVyXY.js",
+  "sha256": "dc45b3c6376b93d32a81",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CNmwrdw1.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CNmwrdw1.js",
+  "sha256": "6d1e52240369ba100f04",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CT3auSBQ.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CT3auSBQ.js",
+  "sha256": "9c980be34ca7f9ff7b13",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CaD1ohJj.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CaD1ohJj.js",
+  "sha256": "f8fc42318b6001a4a1c0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/Qp74HHg1.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/Qp74HHg1.js",
+  "sha256": "b5355980d62e781817c2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/VwUqSSbZ.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/VwUqSSbZ.js",
+  "sha256": "a46db7ae993f3ce5872d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/rD06-_RX.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/rD06-_RX.js",
+  "sha256": "5824fd9609846362cf73",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/HpS2HOqn.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/HpS2HOqn.js",
+  "sha256": "80da6328a7acd1de832d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/Cd5ZRnos.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/Cd5ZRnos.js",
+  "sha256": "7b9c78d4843837b77693",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:29 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/HxY-_tlB.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/HxY-_tlB.js",
+  "sha256": "d4b2de51b14cf284fdf1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BMfPps-y.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BMfPps-y.js",
+  "sha256": "70bab502cf78698dea2f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CN5XtTzX.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CN5XtTzX.js",
+  "sha256": "0b46d1add8b8fcbaa06a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BlMAC-td.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BlMAC-td.js",
+  "sha256": "a53a086129c3494451ad",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/ClvZ-pm6.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/ClvZ-pm6.js",
+  "sha256": "7e6fc388c835b5cdb113",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/D1UmJ1KR.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/D1UmJ1KR.js",
+  "sha256": "2448bf030379a8a2c7f6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/739b12ab13fbb0b3.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/739b12ab13fbb0b3.js",
+  "sha256": "f153caf106c6270f787f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/fc997fc73fff6414.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/fc997fc73fff6414.js",
+  "sha256": "493127fdf0a19fec4c2a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/c16efd9677d8c131.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/c16efd9677d8c131.js",
+  "sha256": "9c1a4f50800fa58ded9d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/bd0ea66bef8eb61e.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/bd0ea66bef8eb61e.js",
+  "sha256": "f9ab6f816462610afc14",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/turbopack-HASH.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/turbopack-98185b7c68f8d8c1.js",
+  "sha256": "c02f38ec82f9816e1966",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/d96012bcfc98706a.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/d96012bcfc98706a.js",
+  "sha256": "514e0e3c4b197331eff4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/e87e02814462557e.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/e87e02814462557e.js",
+  "sha256": "b30b971e66e92751bb8c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/b52fe762db5b8130.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/b52fe762db5b8130.js",
+  "sha256": "b20d4f6000927f777042",
+  "routes": [
+   "/oauth2/authorize"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/f0a99006841d8e36.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/f0a99006841d8e36.js",
+  "sha256": "02261013122a2c632006",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/4fbc90348fce15a5.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/4fbc90348fce15a5.js",
+  "sha256": "e56593944ceb6a3a4d2d",
+  "routes": [
+   "/oauth2/sessions/active"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/20b7f91c7d8e0c98.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/20b7f91c7d8e0c98.js",
+  "sha256": "4e2a5aabc481c61f4832",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/6f8fd864da3d6770.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/6f8fd864da3d6770.js",
+  "sha256": "2f87392298d43ecc848c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/437f595db11fcae0.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/437f595db11fcae0.js",
+  "sha256": "a8e4562b4e689f50eba5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/41d60c29ad75ac87.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/41d60c29ad75ac87.js",
+  "sha256": "4390423b6d31e591be17",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/7c7b03029129d003.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/7c7b03029129d003.js",
+  "sha256": "ba138f67e0fd01d26bde",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/1ededb357742fa90.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/1ededb357742fa90.js",
+  "sha256": "62d89851eec4219cdd5e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/85655b2359824ecb.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/85655b2359824ecb.js",
+  "sha256": "34a8bc8df29a5d94b7aa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:32 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/ebaadfe81f936d96.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/ebaadfe81f936d96.js",
+  "sha256": "8b0e6525cfa3a08fa932",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:33 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/46b77cf8ad0ec464.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/46b77cf8ad0ec464.js",
+  "sha256": "71d20164ba09beec06b9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:33 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/c2b4e1db4ca422b5.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/c2b4e1db4ca422b5.js",
+  "sha256": "7278526930786d98f2d6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:33 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/5e1f6f7d6ad08c71.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/5e1f6f7d6ad08c71.js",
+  "sha256": "71b6bcf5050c6acdf8e3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:34 UTC"
+ },
+ "https://staging.deriv.com/_next/static/chunks/a6dad97d9634a72d.js": {
+  "last_url": "https://staging.deriv.com/_next/static/chunks/a6dad97d9634a72d.js",
+  "sha256": "0973c1d64c88adc8e3c9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:34 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/2312-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/2312-a7f6fdb66aeb5d64.js",
+  "sha256": "b7652339eec9972e63db",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:24 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/9391-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/9391-e39bc645240f7b90.js",
+  "sha256": "ce034192c481e778dee8",
+  "routes": [],
+  "graphql_ops": [
+   "IDs"
+  ],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/app/layout-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/app/layout-c436bdc2d6236f1f.js",
+  "sha256": "b801fcaa40e88a53396e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/8670-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/8670-9744db8cdf2206e4.js",
+  "sha256": "bc4807918618341ffb16",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/2517-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/2517-b5cf956b844795e6.js",
+  "sha256": "16082aa4b2a2c4587e41",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4430-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4430-c1b11869460ef455.js",
+  "sha256": "1782e61678b4c6efbca8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/9262-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/9262-9bf7e7c1e3305161.js",
+  "sha256": "f468e65765aed2321b56",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/9366-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/9366-2371ed49d9993dcc.js",
+  "sha256": "7b463631f288ac4828d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/9503-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/9503-da188729143815f6.js",
+  "sha256": "e4aa6720a303e3345778",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/1796-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/1796-ab95ca73ce437aa2.js",
+  "sha256": "3292e744e01bb9511d8f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:25 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/6125-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/6125-b2b50cebc44795ea.js",
+  "sha256": "f8d650b5d59a0ec4ae55",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/4056-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/4056-7a225e81cc1acc78.js",
+  "sha256": "6e0982ac613ae959190e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/2960-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/2960-0e9010d23f6c9df0.js",
+  "sha256": "dd3117f14aea2173a40a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/app/not-found-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/app/not-found-8f3cbc96c47279b1.js",
+  "sha256": "45b788110bee002b34ec",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/2099-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/2099-3cce4a20573963ee.js",
+  "sha256": "024e71047f668549e051",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/3311-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/3311-f6c7e8c300447ff7.js",
+  "sha256": "71fd7186a44b5b03aaef",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://developers.deriv.com/_next/static/chunks/app/page-HASH.js": {
+  "last_url": "https://developers.deriv.com/_next/static/chunks/app/page-20971080306780e2.js",
+  "sha256": "dd41a1fbf74e3d0c8173",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:26 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/DpRryTr1.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/DpRryTr1.js",
+  "sha256": "de6b7e2ae94da808521c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BmZqAFBt.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BmZqAFBt.js",
+  "sha256": "7f387b474bc400d75eb8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/b6GlOVL-.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/b6GlOVL-.js",
+  "sha256": "b55d04637aeea2bbfbd4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CsQuBwSd.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CsQuBwSd.js",
+  "sha256": "d0c51a5bd2a73710f181",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CqXaXq-W.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CqXaXq-W.js",
+  "sha256": "3b912305b864aa6dfd40",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/DWS4-ZrR.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/DWS4-ZrR.js",
+  "sha256": "879ddc85d8f02aae564c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/D6Hs7F7s.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/D6Hs7F7s.js",
+  "sha256": "9acf2ea5c81d32be7c15",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/ELuCWVZp.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/ELuCWVZp.js",
+  "sha256": "12d32328d92cce7686a9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/D61dCPIj.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/D61dCPIj.js",
+  "sha256": "e0ecd5f1d943976597ec",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BQ2Kg134.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BQ2Kg134.js",
+  "sha256": "d7391528c7735f51f897",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:30 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/dGHLNryM.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/dGHLNryM.js",
+  "sha256": "7ab6169ea6cdfeed9515",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BfogEXXo.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BfogEXXo.js",
+  "sha256": "282bd722fd667a1ba1e9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/BEYdLK8w.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/BEYdLK8w.js",
+  "sha256": "889128029a2f828e8c03",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ },
+ "https://partners.deriv.com/_next/static/chunks/CHZsPH1Z.js": {
+  "last_url": "https://partners.deriv.com/_next/static/chunks/CHZsPH1Z.js",
+  "sha256": "655782c62beb0562b701",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:38:31 UTC"
+ }
+}

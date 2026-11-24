@@ -1,0 +1,87 @@
+{
+ "https://beta-central.bitdefender.com/config.js": {
+  "last_url": "https://beta-central.bitdefender.com/config.js",
+  "sha256": "3fa5507ed4cdaa11e65f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:14 UTC"
+ },
+ "https://beta-central.bitdefender.com/runtime.HASH.js": {
+  "last_url": "https://beta-central.bitdefender.com/runtime.026657c576257b21.js",
+  "sha256": "3acc729e52e0b7125c23",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:14 UTC"
+ },
+ "https://beta-central.bitdefender.com/scripts.HASH.js": {
+  "last_url": "https://beta-central.bitdefender.com/scripts.95b8805e8fd17ec2.js",
+  "sha256": "a8877392624a151e5e39",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:14 UTC"
+ },
+ "https://beta-central.bitdefender.com/main.HASH.js": {
+  "last_url": "https://beta-central.bitdefender.com/main.c05a5a4c3ef66352.js",
+  "sha256": "739689cba86a8c95076d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:14 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/zconfig.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/zconfig.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "f66ecd68dbaabf8c4e8e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:15 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.bower.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.bower.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "c0ae890135add439e81e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:16 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "83cedf804037a982e4ff",
+  "routes": [
+   "/auth/changepwd/",
+   "/auth/forgotpwd/",
+   "/auth/login/",
+   "/auth/logout/",
+   "/auth/permissions/",
+   "/auth/roles/",
+   "/auth/sendemail/",
+   "/users/me/",
+   "/users/reinvite/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:17 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.templates.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "f998b21efefb6c40b1ef",
+  "routes": [
+   "/auth/changepwd/",
+   "/auth/forgotpwd/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:17 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "332b2adbb95b0e4ac2d4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:18 UTC"
+ },
+ "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.templates.js": {
+  "last_url": "https://gz2-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+  "sha256": "d50f41d6ce4a0f3979cf",
+  "routes": [
+   "/auth/sendemail/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 11:46:19 UTC"
+ }
+}
