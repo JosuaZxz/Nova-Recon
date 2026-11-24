@@ -1,0 +1,1937 @@
+{
+ "_seeded": true,
+ "www-stg.etoro.com": {
+  "url": "https://www-stg.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "paymentshub-jpm.etoro.com": {
+  "url": "https://paymentshub-jpm.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "le-test.etoro.com": {
+  "url": "https://le-test.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mail.front.stg.etoro.com": {
+  "url": "https://mail.front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "60partnerss.etoro.com": {
+  "url": "https://60partnerss.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets-prod-002-stg-007i.etoro.com": {
+  "url": "https://assets-prod-002-stg-007i.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "advize-fr.stg.etoro.com": {
+  "url": "https://advize-fr.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "bo-api7.etoro.com": {
+  "url": "https://bo-api7.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-ccm.dev.etoro.com": {
+  "url": "https://int-ccm.dev.etoro.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://etcdadminuiint-globaltrad.msappproxy.net/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "oauth-front.wallet.etoro.com": {
+  "url": "https://oauth-front.wallet.etoro.com/",
+  "http_status": 502,
+  "title": "wallet.etoro.com | 502: Bad gateway",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.dev.etoro.com": {
+  "url": "https://www.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "testenv-5019-2.front.int.etoro.com": {
+  "url": "https://testenv-5019-2.front.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-open-bankingui.dev.etoro.com": {
+  "url": "https://stg-open-bankingui.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg.etoro.com": {
+  "url": "https://stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-prod-005.dev.etoro.com": {
+  "url": "https://assets-prod-005.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "blockpage.stg.etoro.com": {
+  "url": "https://blockpage.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "click.connect.dev.etoro.com": {
+  "url": "https://click.connect.dev.etoro.com/",
+  "http_status": 403,
+  "title": "403 - Forbidden: Access is denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-stg-007.etoro.com": {
+  "url": "https://assets-stg-007.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "testenv-pr-111.conftuitest.apps.int.etoro.com": {
+  "url": "http://testenv-pr-111.conftuitest.apps.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "arielpa.dev.etoro.com": {
+  "url": "https://arielpa.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "nft-img-proxy-staging.etoro.com": {
+  "url": "https://nft-img-proxy-staging.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-nft-api-controller.stg.etoro.com": {
+  "url": "https://int-nft-api-controller.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "partners-src.etoro.com": {
+  "url": "https://partners-src.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "accountstat.etoro.com": {
+  "url": "https://accountstat.etoro.com/",
+  "http_status": 530,
+  "title": "Origin DNS error | accountstat.etoro.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "cntestc.etoro.com": {
+  "url": "https://cntestc.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "glazer.stg.etoro.com": {
+  "url": "https://glazer.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "apigw.int.etoro.com": {
+  "url": "https://apigw.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "www.assets-prod-005.dev.etoro.com": {
+  "url": "http://www.assets-prod-005.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "www.paymentshub-jpm-callback.etoro.com": {
+  "url": "http://www.paymentshub-jpm-callback.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-selfservice-api.dev.etoro.com": {
+  "url": "https://int-selfservice-api.dev.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "paymentshub-jpm-callback.dev.etoro.com": {
+  "url": "https://paymentshub-jpm-callback.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stgaff-portal.dev.etoro.com": {
+  "url": "https://stgaff-portal.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "auth.stg.etoro.com": {
+  "url": "https://auth.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "wildcard.assets.preprod.etoro.com": {
+  "url": "https://wildcard.assets.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-front-ipi.etoro.com": {
+  "url": "https://stg-front-ipi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-logs.stg.etoro.com": {
+  "url": "https://stg-logs.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-prod-007.dev.etoro.com": {
+  "url": "https://assets-prod-007.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "vpn.etoro.com": {
+  "url": "https://vpn.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-fiatproviderwebhook7.dev.etoro.com": {
+  "url": "https://stg-fiatproviderwebhook7.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-money-front-public.stg.etoro.com": {
+  "url": "https://stg-money-front-public.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "api-portal.etoro.com": {
+  "url": "https://api-portal.etoro.com/",
+  "http_status": 200,
+  "title": "Introduction - etoro API Docs",
+  "redirect": "",
+  "scripts": [
+   "https://api-portal.etoro.com/_mintlify/assets/index-5-ol5s84.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://api-portal.etoro.com/_mintlify/assets/initial-vendor-bB2ixmSw.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://api-portal.etoro.com/_mintlify/assets/rolldown-runtime-Bjp52BOI.js?dpl=dpl_G6E2ur2Zjq51xGTVZPSFXsWoTxCu",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/07a9d44829efc6df/js/beta-tooltip.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/265471ec7516abfe/js/request-id.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/29aee0c87554e32b/js/placeholders.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/a63041172e718d03/js/websocket-url.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/a7cd0fbb6bb0e6e6/js/websocket-fields.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/b73b20726f405fff/js/preview-flag.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/b7b2ce3b4d7b5b66/js/oauth-scopes.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/c79b596fa5eb3800/js/beta-nav.js",
+   "https://api-portal.etoro.com/_mintlify/custom/etoro-6fc30280/d4932eb5fd7799f1/js/beta-messages.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-stg-006.dev.etoro.com": {
+  "url": "https://assets-stg-006.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "corp.etoro.com": {
+  "url": "https://corp.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.paymentshub-jpm-digital.dev.etoro.com": {
+  "url": "http://www.paymentshub-jpm-digital.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "tapi-realg.etoro.com": {
+  "url": "https://tapi-realg.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "tapi-real.etoro.com": {
+  "url": "https://tapi-real.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets-prod-002-stg-007.etoro.com": {
+  "url": "https://assets-prod-002-stg-007.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-logs5.stg.etoro.com": {
+  "url": "https://stg-logs5.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-stg-005.dev.etoro.com": {
+  "url": "https://assets-stg-005.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "wildcard.test.front.int.etoro.com": {
+  "url": "https://wildcard.test.front.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "vpn1.etoro.com": {
+  "url": "https://vpn1.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "landing-page.stg.etoro.com": {
+  "url": "https://landing-page.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stagistg-stocksg-003.etoro.com": {
+  "url": "https://stagistg-stocksg-003.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-bitgowebhook.dev.etoro.com": {
+  "url": "https://stg-bitgowebhook.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "assets-stg-007.dev.etoro.com": {
+  "url": "https://assets-stg-007.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "paymentshub-jpm-digital.etoro.com": {
+  "url": "https://paymentshub-jpm-digital.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "api-gw.etoro.com": {
+  "url": "https://api-gw.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "wallet-staging.stg.etoro.com": {
+  "url": "https://wallet-staging.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "mail.stg.etoro.com": {
+  "url": "https://mail.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "api.etoro.com": {
+  "url": "https://api.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-fiatproviderwebhook.dev.etoro.com": {
+  "url": "https://stg-fiatproviderwebhook.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "fapi-democ.etoro.com": {
+  "url": "https://fapi-democ.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "fidelityo.comwww.investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://fidelityo.comwww.investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "tapi.etoro.com": {
+  "url": "https://tapi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "torologsapi.etoro.com": {
+  "url": "https://torologsapi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-bitgowebhook.stg.etoro.com": {
+  "url": "https://int-bitgowebhook.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://investopedia.comwww.schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "ccmstg.etoro.com": {
+  "url": "https://ccmstg.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "front.stg.etoro.com": {
+  "url": "https://front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-etoro-front.stg.etoro.com": {
+  "url": "https://stg-etoro-front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "new-splunk.etoro.com": {
+  "url": "http://new-splunk.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "dataarchivea.etoro.com": {
+  "url": "https://dataarchivea.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mcp.public-api.stg.etoro.com": {
+  "url": "https://mcp.public-api.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "preprod.etoro.com": {
+  "url": "https://preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "www.front.preprod.etoro.com": {
+  "url": "https://www.front.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets-cdn-stg-006.dev.etoro.com": {
+  "url": "https://assets-cdn-stg-006.dev.etoro.com/",
+  "http_status": 502,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://boursorama.comiqoption.comwww.moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "affapic.etoro.com": {
+  "url": "https://affapic.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg2-go.etoro.com": {
+  "url": "https://stg2-go.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "folk.dev.gridhost.semed.etoro.com": {
+  "url": "http://folk.dev.gridhost.semed.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "associazionegranelloinsieme.orgmed.etoro.com": {
+  "url": "http://associazionegranelloinsieme.orgmed.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "connect-stg.etoro.com": {
+  "url": "https://connect-stg.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "uapi-front.etoro.com": {
+  "url": "https://uapi-front.etoro.com/",
+  "http_status": 530,
+  "title": "Origin DNS error | uapi-front.etoro.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "test.front.int.etoro.com": {
+  "url": "https://test.front.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-money-front-publicc.stg.etoro.com": {
+  "url": "https://stg-money-front-publicc.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "distancedev-math.etoro.com": {
+  "url": "https://distancedev-math.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "oauth-front.etoro.com": {
+  "url": "https://oauth-front.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "news.genapi.euetorologsapi.etoro.com": {
+  "url": "http://news.genapi.euetorologsapi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "elb-fra-amz.nimbus.bitdefender.netetorologsapi.etoro.com": {
+  "url": "http://elb-fra-amz.nimbus.bitdefender.netetorologsapi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "wildcard.assets.stg.etoro.com": {
+  "url": "https://wildcard.assets.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "watchlistapi.etoro.com": {
+  "url": "https://watchlistapi.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "agent.public-api.etoro.com": {
+  "url": "https://agent.public-api.etoro.com/",
+  "http_status": 200,
+  "title": "eToro MCP",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "api-staging.etoro.com": {
+  "url": "https://api-staging.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://moneycontrol.comwww.wwe.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "comwww9.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww9.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-walletoauth.dev.etoro.com": {
+  "url": "https://stg-walletoauth.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "ob-ls-devc.etoro.com": {
+  "url": "https://ob-ls-devc.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "oauth.wallet.etoro.com": {
+  "url": "https://oauth.wallet.etoro.com/",
+  "http_status": 200,
+  "title": "OpenBanking",
+  "redirect": "",
+  "scripts": [
+   "https://oauth.wallet.etoro.com/main.b0e8b9760f8d5ee7e4a3.js",
+   "https://oauth.wallet.etoro.com/runtime.7b63b9fd40098a2e8207.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "int-bitgowebhook.dev.etoro.com": {
+  "url": "https://int-bitgowebhook.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "mcp-readonly.public-api.stg.etoro.com": {
+  "url": "https://mcp-readonly.public-api.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "wildcard.dev.etoro.com": {
+  "url": "https://wildcard.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "image.connect.dev.etoro.com": {
+  "url": "https://image.connect.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "wildcard.front.stg.etoro.com": {
+  "url": "https://wildcard.front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "public-api.stg.etoro.com": {
+  "url": "https://public-api.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "stg-goa.etoro.com": {
+  "url": "https://stg-goa.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "intra.notaires.frcandle.etoro.com": {
+  "url": "http://intra.notaires.frcandle.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "netetorologsapi.etoro.com": {
+  "url": "https://netetorologsapi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "paymentshub-jpm-callback.etoro.com": {
+  "url": "https://paymentshub-jpm-callback.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "api-documentationo.etoro.com": {
+  "url": "https://api-documentationo.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "agent.public-api.stg.etoro.com": {
+  "url": "https://agent.public-api.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "callbacks-temp.genapicloud.compages.etoro.com": {
+  "url": "http://callbacks-temp.genapicloud.compages.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.stg.etoro.com": {
+  "url": "https://www.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "fapi-demo.etoro.com": {
+  "url": "https://fapi-demo.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-walletoauthe.dev.etoro.com": {
+  "url": "https://stg-walletoauthe.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "mail.test.front.stg.etoro.com": {
+  "url": "https://mail.test.front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "etorologsapie.etoro.com": {
+  "url": "https://etorologsapie.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "tapi-demo.etoro.com": {
+  "url": "https://tapi-demo.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stgaff-portal3.dev.etoro.com": {
+  "url": "https://stgaff-portal3.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "apiproxyq.etoro.com": {
+  "url": "https://apiproxyq.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.assets-prod-007.dev.etoro.com": {
+  "url": "http://www.assets-prod-007.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:23:05 UTC"
+ },
+ "admin.etoro.com": {
+  "url": "https://admin.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "news.etoro.com": {
+  "url": "https://news.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-nft-api-controllerg.stg.etoro.com": {
+  "url": "https://int-nft-api-controllerg.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "collab-9-intrain.eupacktory1.etoro.com": {
+  "url": "http://collab-9-intrain.eupacktory1.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "corona-po-accountstat.etoro.com": {
+  "url": "https://corona-po-accountstat.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "affapi.etoro.com": {
+  "url": "https://affapi.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://schwab.comwww.boursorama.comiqoption.comwww.moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mail.assets.preprod.etoro.com": {
+  "url": "https://mail.assets.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "testenv-5019-2.assets.int.etoro.com.dev.etoro.com": {
+  "url": "https://testenv-5019-2.assets.int.etoro.com.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "help.dev.etoro.com": {
+  "url": "https://help.dev.etoro.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://test.salesforce.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "manager.etoro.com": {
+  "url": "https://manager.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "dom-dataset.js.etoro.com": {
+  "url": "http://dom-dataset.js.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "data12.adlooxtracking.comcandle.etoro.com": {
+  "url": "http://data12.adlooxtracking.comcandle.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int-nft-api-controller.dev.etoro.com": {
+  "url": "https://int-nft-api-controller.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mail.test.front.preprod.etoro.com": {
+  "url": "https://mail.test.front.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "distancedev-mathi.etoro.com": {
+  "url": "https://distancedev-mathi.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "testenv-5019-2.front.int.dev.etoro.com": {
+  "url": "http://testenv-5019-2.front.int.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "api-gwk.etoro.com": {
+  "url": "https://api-gwk.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets.stg.etoro.com": {
+  "url": "https://assets.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets-cdn-int-003.dev.etoro.com": {
+  "url": "https://assets-cdn-int-003.dev.etoro.com/",
+  "http_status": 502,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "creditcardview.stg.etoro.com": {
+  "url": "https://creditcardview.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-fiatproviderwebhookm.stg.etoro.com": {
+  "url": "https://stg-fiatproviderwebhookm.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "customersupportapi.etoro.com": {
+  "url": "https://customersupportapi.etoro.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "userstatsapi.etoro.com": {
+  "url": "https://userstatsapi.etoro.com/",
+  "http_status": 200,
+  "title": "User Stats",
+  "redirect": "",
+  "scripts": [
+   "https://userstatsapi.etoro.com/Scripts/Main/Equity.js",
+   "https://userstatsapi.etoro.com/Scripts/Main/Misc.js",
+   "https://userstatsapi.etoro.com/Scripts/Main/Portfolio.js",
+   "https://userstatsapi.etoro.com/Scripts/Main/Risk.js",
+   "https://userstatsapi.etoro.com/Scripts/Main/Trading.js",
+   "https://userstatsapi.etoro.com/Scripts/Main/Utils.js",
+   "https://userstatsapi.etoro.com/Scripts/Word.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.assets.preprod.etoro.com": {
+  "url": "https://www.assets.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "comwww3.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://comwww3.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "walletm.dev.etoro.com": {
+  "url": "https://walletm.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "partners.etoro.com": {
+  "url": "https://partners.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://por.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.test.front.stg.etoro.com": {
+  "url": "https://www.test.front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "callbacks-tempe.genapicloud.compages.etoro.com": {
+  "url": "http://callbacks-tempe.genapicloud.compages.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "apptest.etoro.com": {
+  "url": "https://apptest.etoro.com/",
+  "http_status": 530,
+  "title": "Origin DNS error | apptest.etoro.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.front.stg.etoro.com": {
+  "url": "https://www.front.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mcp-readonly.public-api.etoro.com": {
+  "url": "https://mcp-readonly.public-api.etoro.com/",
+  "http_status": 200,
+  "title": "eToro Public API MCP (read-only)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "staging-005.etoro.com": {
+  "url": "https://staging-005.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "cms.etoro.com": {
+  "url": "https://cms.etoro.com/",
+  "http_status": 503,
+  "title": "Service Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "www.paymentshub-jpm.etoro.com": {
+  "url": "http://www.paymentshub-jpm.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stg-go.etoro.com": {
+  "url": "https://stg-go.etoro.com/",
+  "http_status": 200,
+  "title": "eToro",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "collab-9-intrain7.eupacktory1.etoro.com": {
+  "url": "http://collab-9-intrain7.eupacktory1.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "mail.front.preprod.etoro.com": {
+  "url": "https://mail.front.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "etorologsapi.etoro.com": {
+  "url": "https://etorologsapi.etoro.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "wildcard.stg.etoro.com": {
+  "url": "https://wildcard.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "apigw3.int.etoro.com": {
+  "url": "https://apigw3.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "wallet.stg.etoro.com": {
+  "url": "https://wallet.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "apigw-bff.int.etoro.com": {
+  "url": "https://apigw-bff.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "staging-004.etoro.com": {
+  "url": "https://staging-004.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "testenv-5019-2.assets.int.etoro.com": {
+  "url": "https://testenv-5019-2.assets.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "segmentation.ai.stg.etoro.com": {
+  "url": "https://segmentation.ai.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "beta.etoro.com": {
+  "url": "https://beta.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "public-api.int.etoro.com": {
+  "url": "https://public-api.int.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "stgaff-portalo.stg.etoro.com": {
+  "url": "https://stgaff-portalo.stg.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "dataarchive.etoro.com": {
+  "url": "http://dataarchive.etoro.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "partners-help.etoro.com": {
+  "url": "https://partners-help.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "zzzpartners.etoro.com": {
+  "url": "https://zzzpartners.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "api-documentation.etoro.com": {
+  "url": "https://api-documentation.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com": {
+  "url": "http://moneycontrol.comwww.alipay.cominvestingolymptrade.compit.blockchain.comwww.advfn.comwww.ig.comnew.nasdaq.cometherscan.iowww.rakuten-sec.co.jpjfinfo.comwww.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "int.etoro.com.dev.etoro.com": {
+  "url": "http://int.etoro.com.dev.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "assets.preprod.etoro.com": {
+  "url": "http://assets.preprod.etoro.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ },
+ "new.meri.edu.inmed.etoro.com": {
+  "url": "http://new.meri.edu.inmed.etoro.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.etoro.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:19:08 UTC"
+ }
+}

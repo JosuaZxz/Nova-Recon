@@ -1,0 +1,73 @@
+{
+ "_seeded": true,
+ "e11wwwtestp.newegg.com": {
+  "url": "https://e11wwwtestp.newegg.com/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "kbtest.newegg.com": {
+  "url": "https://kbtest.newegg.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "e11wwwtestp.newegg.ca": {
+  "url": "https://e11wwwtestp.newegg.ca/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "e11wwwtest.newegg.ca": {
+  "url": "https://e11wwwtest.newegg.ca/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "e11stgtest-secure.newegg.ca": {
+  "url": "https://e11stgtest-secure.newegg.ca/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "pmtcardstestp.newegg.com": {
+  "url": "https://pmtcardstestp.newegg.com/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ },
+ "e11sellerportaltest.newegg.com": {
+  "url": "https://e11sellerportaltest.newegg.com/",
+  "http_status": 200,
+  "title": "Computer Parts, PC Components, Laptop Computers, LED LCD TV, Digital Cameras and more - Newegg.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:24:14 UTC"
+ }
+}

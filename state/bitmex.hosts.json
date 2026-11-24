@@ -1,0 +1,103 @@
+{
+ "_seeded": true,
+ "testnet.bitmex.com": {
+  "url": "https://testnet.bitmex.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.bitmex.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "l.m.testnet.bitmex.com": {
+  "url": "http://l.m.testnet.bitmex.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "dev.bitmex.com": {
+  "url": "https://dev.bitmex.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "static.devhk.bitmex.com": {
+  "url": "https://static.devhk.bitmex.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "records.dev.bitmex.com": {
+  "url": "https://records.dev.bitmex.com/",
+  "http_status": 403,
+  "title": "This link no longer works",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "account-closure.dev.bitmex.com": {
+  "url": "https://account-closure.dev.bitmex.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "auth.dev.bitmex.com": {
+  "url": "https://auth.dev.bitmex.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "account-closure.testnet.bitmex.com": {
+  "url": "https://account-closure.testnet.bitmex.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://auth.testnet.bitmex.com/oauth2/authorize?client_id=1h0ldgqr65bc45rfll7tct084n&redirect_uri=https%3A%2F%2Faccount-closure.testnet.bitmex.com%2Foauth2%2Fidpresponse&response_type=code&scope=open",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "account-closure.bitmex.com": {
+  "url": "https://account-closure.bitmex.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://auth.bitmex.com/oauth2/authorize?client_id=7jhvvvhv9bkq73p754t1bhkkbd&redirect_uri=https%3A%2F%2Faccount-closure.bitmex.com%2Foauth2%2Fidpresponse&response_type=code&scope=openid&state=qm3O3xi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ },
+ "status-test.bitmex.com": {
+  "url": "https://status-test.bitmex.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:02:58 UTC"
+ }
+}

@@ -1,0 +1,943 @@
+{
+ "_seeded": true,
+ "www-assets-dev.grindr.com": {
+  "url": "https://www-assets-dev.grindr.com/",
+  "http_status": 403,
+  "title": "Redirecting to Grindr Web...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "web-static.dev2.grindr.io": {
+  "url": "https://web-static.dev2.grindr.io/",
+  "http_status": 403,
+  "title": "Redirecting to Grindr Web...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "store.staging.grindr.com": {
+  "url": "http://store.staging.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "v3.lite.grindr.com": {
+  "url": "http://v3.lite.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "core-datao.grindr.com": {
+  "url": "http://core-datao.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "authenticate.grindr.com": {
+  "url": "http://authenticate.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "docs.k8stest.grindr.com": {
+  "url": "http://docs.k8stest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "qax-cdns-cf.grindr.com": {
+  "url": "http://qax-cdns-cf.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "wordpress.preprod1.grindr.com": {
+  "url": "http://wordpress.preprod1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "git-imerge.grindr.com": {
+  "url": "http://git-imerge.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "speedtest-linux.grindr.com": {
+  "url": "http://speedtest-linux.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "test.cdns.grindr.com": {
+  "url": "http://test.cdns.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "contesta.grindr.com": {
+  "url": "http://contesta.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "cdns-preinto.grindr.com": {
+  "url": "http://cdns-preinto.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "news.grindr.com": {
+  "url": "http://news.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "www.kibanalogging.grindr.com": {
+  "url": "http://www.kibanalogging.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "k8stest.grindr.com": {
+  "url": "http://k8stest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "git.lite.grindr.com": {
+  "url": "http://git.lite.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "preprodcnametest.grindr.com": {
+  "url": "http://preprodcnametest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "codingmarks-api.grindr.com": {
+  "url": "http://codingmarks-api.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dev02.grindr.com": {
+  "url": "http://dev02.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "cdns-preprod.grindr.com": {
+  "url": "https://cdns-preprod.grindr.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "api-testc.grindr.com": {
+  "url": "http://api-testc.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dev1.preprod1.grindr.com": {
+  "url": "http://dev1.preprod1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "elasticsearch-analysis-ik.grindr.com": {
+  "url": "http://elasticsearch-analysis-ik.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "api.grindr.com": {
+  "url": "http://api.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "apis.dev2.grindr.io": {
+  "url": "https://apis.dev2.grindr.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "cmhqa1o.k8s.grindr.com": {
+  "url": "http://cmhqa1o.k8s.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dash.grindr.com": {
+  "url": "http://dash.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dotfiles-manager.grindr.com": {
+  "url": "http://dotfiles-manager.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "awesome-browser-extensions-for-github.grindr.com": {
+  "url": "http://awesome-browser-extensions-for-github.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "githunt-react.grindr.com": {
+  "url": "http://githunt-react.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "neo-qax-api.grindr.com": {
+  "url": "http://neo-qax-api.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "newspaper.grindr.com": {
+  "url": "http://newspaper.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "neo-account9.grindr.com": {
+  "url": "http://neo-account9.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "vpn.kindr1.grindr.com": {
+  "url": "http://vpn.kindr1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "datatablesq.grindr.com": {
+  "url": "http://datatablesq.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "djangocms.grindr.com": {
+  "url": "http://djangocms.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "devwowza.grindr.com": {
+  "url": "http://devwowza.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "neo-upload-v3.grindr.com": {
+  "url": "http://neo-upload-v3.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "news.lite.grindr.com": {
+  "url": "http://news.lite.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "preprod.grindr.com": {
+  "url": "http://preprod.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "githeat.grindr.com": {
+  "url": "http://githeat.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dashing.grindr.com": {
+  "url": "http://dashing.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "apiproxy-nrdp-s1a.grindr.com": {
+  "url": "http://apiproxy-nrdp-s1a.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "datatableg.grindr.com": {
+  "url": "http://datatableg.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "codeview.grindr.com": {
+  "url": "http://codeview.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "devtestk.grindr.com": {
+  "url": "http://devtestk.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "vpn.grindr.com": {
+  "url": "http://vpn.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "yass-test.grindr.com": {
+  "url": "http://yass-test.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "data-visualization.grindr.com": {
+  "url": "http://data-visualization.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "g3-beta.grindr.com": {
+  "url": "http://g3-beta.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "legal-agreements.dev2.grindr.io": {
+  "url": "https://legal-agreements.dev2.grindr.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "dev.web.grindr.com": {
+  "url": "http://dev.web.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "awesome-datasciencec.grindr.com": {
+  "url": "http://awesome-datasciencec.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "legal-agreements-dev.grindr.com": {
+  "url": "https://legal-agreements-dev.grindr.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "extra-test.grindr.com": {
+  "url": "http://extra-test.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "django-admin-bootstrapi.grindr.com": {
+  "url": "http://django-admin-bootstrapi.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "graf.grindr.com": {
+  "url": "http://graf.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "django-dashs.grindr.com": {
+  "url": "http://django-dashs.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:00:28 UTC"
+ },
+ "account.cdns.grindr.com": {
+  "url": "http://account.cdns.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "opadev.grindr.com": {
+  "url": "http://opadev.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "account.grindr.com": {
+  "url": "http://account.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "growth1s.preprod1.grindr.com": {
+  "url": "http://growth1s.preprod1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "pentest.grindr.com": {
+  "url": "http://pentest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "postgressql.grindr.com": {
+  "url": "http://postgressql.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "storefront-api-examples.grindr.com": {
+  "url": "http://storefront-api-examples.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "g3-beta-upload.grindr.com": {
+  "url": "http://g3-beta-upload.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "downloads-cf-beta.grindr.com": {
+  "url": "http://downloads-cf-beta.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "www.preprod1.grindr.com": {
+  "url": "http://www.preprod1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "geneweb.grindr.com": {
+  "url": "http://geneweb.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "data3.grindr.com": {
+  "url": "http://data3.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "devtoolc.grindr.com": {
+  "url": "http://devtoolc.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "www-stage.grindr.com": {
+  "url": "https://www-stage.grindr.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.grindr.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "dev.grindr.com": {
+  "url": "http://dev.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "genewebk.grindr.com": {
+  "url": "http://genewebk.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "gpic.staging.grindr.com": {
+  "url": "http://gpic.staging.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "preprod.team.grindr.com": {
+  "url": "http://preprod.team.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "home.k8stest.grindr.com": {
+  "url": "http://home.k8stest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "admin.grindr.com": {
+  "url": "http://admin.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "presence.grindr.com": {
+  "url": "http://presence.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "opendata.grindr.com": {
+  "url": "http://opendata.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "docker-openvpn.grindr.com": {
+  "url": "http://docker-openvpn.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "origin.k8stest.grindr.com": {
+  "url": "http://origin.k8stest.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "jenkinswebhook.preprod1.grindr.com": {
+  "url": "http://jenkinswebhook.preprod1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "www.lite-test.grindr.com": {
+  "url": "http://www.lite-test.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "dashingc.grindr.com": {
+  "url": "http://dashingc.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "www-staging.grindr.com": {
+  "url": "http://www-staging.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "jenkins.lite.grindr.com": {
+  "url": "http://jenkins.lite.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "oauth2-provider.grindr.com": {
+  "url": "http://oauth2-provider.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "devshopk.grindr.com": {
+  "url": "http://devshopk.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "gitbucketo.grindr.com": {
+  "url": "http://gitbucketo.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "web.kindr1.grindr.com": {
+  "url": "http://web.kindr1.grindr.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ },
+ "captcha-dev.grindr.com": {
+  "url": "https://captcha-dev.grindr.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:58:26 UTC"
+ }
+}

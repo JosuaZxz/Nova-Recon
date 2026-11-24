@@ -1,0 +1,273 @@
+{
+ "_seeded": true,
+ "gensu-trigger-build-push-kfp.dev.magwien.gv.at": {
+  "url": "https://gensu-trigger-build-push-kfp.dev.magwien.gv.at/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-abn-tekton-trigger.abn.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-abn-tekton-trigger.abn.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "partnerschaft.wien.at": {
+  "url": "https://partnerschaft.wien.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/verwaltung/personenwesen/ehe/index.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "wienkiauth.intern.wien.gv.at": {
+  "url": "https://wienkiauth.intern.wien.gv.at/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "brigittenau.wien.at": {
+  "url": "https://brigittenau.wien.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/brigittenau/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-prod-online-tekton-trigger.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-prod-online-tekton-trigger.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "patientenportal.akhwien.at": {
+  "url": "https://patientenportal.akhwien.at/",
+  "http_status": 200,
+  "title": "Befundauskunft",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "viktorchristgasse.schule.wien.at": {
+  "url": "https://viktorchristgasse.schule.wien.at/",
+  "http_status": 200,
+  "title": "Startseite - Mittelschule Viktor-Christ-Gasse - 905032",
+  "redirect": "",
+  "scripts": [
+   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441658392&/o/frontend-js-aui-web/aui/aui/aui.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex.js&/o/frontend-js-aui-web/aui/oop/oop.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/frontend-js-web/loader/config.js&/o/frontend-js-web/loader/loader.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js",
+   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441666982&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
+   "https://viktorchristgasse.schule.wien.at/o/frontend-js-svg4everybody-web/index.js",
+   "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.brigittenau.wien.gv.at": {
+  "url": "https://www.brigittenau.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/brigittenau/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "meet-t.uctest.wien.gv.at": {
+  "url": "https://meet-t.uctest.wien.gv.at/",
+  "http_status": 200,
+  "title": "Cisco Meeting Server web app",
+  "redirect": "",
+  "scripts": [
+   "https://meet-t.uctest.wien.gv.at/meeting.960eec3dbd8e2f2e2256.js",
+   "https://meet-t.uctest.wien.gv.at/modernizr.a70fe97948957561da24.js",
+   "https://meet-t.uctest.wien.gv.at/script/unsupp.js",
+   "https://meet-t.uctest.wien.gv.at/vendors~meeting.b90a2caac3ae57ff819d.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "vpn.wgm.wien.at": {
+  "url": "https://vpn.wgm.wien.at/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://vpn.wgm.wien.at/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "nachhaltigkeitspreis.wien.gv.at": {
+  "url": "https://nachhaltigkeitspreis.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/umweltschutz/oekobusiness/preis.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.krisenmanagement.wien.at": {
+  "url": "https://www.krisenmanagement.wien.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/menschen/sicherheit/krisenmanagement/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-dev14-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev14-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-prod2-tekton-trigger.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-prod2-tekton-trigger.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "partnerschaft.wien.gv.at": {
+  "url": "https://partnerschaft.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/verwaltung/personenwesen/ehe/index.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "meinchatgptdev.wien.gv.at": {
+  "url": "https://meinchatgptdev.wien.gv.at/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.krisenmanagement.wien.gv.at": {
+  "url": "https://www.krisenmanagement.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/menschen/sicherheit/krisenmanagement/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-dev1-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev1-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "digital.wien.at": {
+  "url": "https://digital.wien.at/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.geoportal.wien.at": {
+  "url": "https://www.geoportal.wien.at/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "crgbs3-dev-online-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev-online-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "krisenmanagement.wien.gv.at": {
+  "url": "https://krisenmanagement.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/menschen/sicherheit/krisenmanagement/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.partnerschaft.wien.at": {
+  "url": "https://www.partnerschaft.wien.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/verwaltung/personenwesen/ehe/index.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.digitales.wien.at": {
+  "url": "https://www.digitales.wien.at/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://digitales.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ },
+ "www.digitales.wien.gv.at": {
+  "url": "https://digitales.wien.gv.at/",
+  "http_status": 200,
+  "title": "Home - Digitales Wien",
+  "redirect": "https://digitales.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:17:15 UTC"
+ }
+}

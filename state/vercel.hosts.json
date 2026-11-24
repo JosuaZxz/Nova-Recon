@@ -1,0 +1,1338 @@
+{
+ "_seeded": true,
+ "mxrpaqa.vercel.com": {
+  "url": "https://mxrpaqa.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "cname-admin.vercel.com": {
+  "url": "https://cname-admin.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "test000002.vercel.com": {
+  "url": "https://test000002.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "nkpays.vercel.com": {
+  "url": "https://nkpays.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-pdx1.vercel.com": {
+  "url": "https://api-pdx1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging2.vercel.com": {
+  "url": "https://edge-config-staging2.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "testing.vercel.com": {
+  "url": "https://testing.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "create-react-app.examples.vercel.com": {
+  "url": "https://create-react-app.examples.vercel.com/",
+  "http_status": 429,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "saml-authentication3.vercel.com": {
+  "url": "https://saml-authentication3.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "learning-portal.vercel.com": {
+  "url": "https://learning-portal.vercel.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://learning-portal.vercel.systems/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "partners-classic.vercel.com": {
+  "url": "https://partners-classic.vercel.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://vercel.my.salesforce.com/0I4PZ0000000IeT",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "admin.vercel.com": {
+  "url": "https://admin.vercel.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://connect.vercel.com/oauth/authorize?state=a21ce3d903004feadee0d0853d7e17ab59c14af45561a056&code_challenge=5a97k3XVjYyHJCk97V-_XqlU7SlR8hDzB_IOY1OqsAI&scope=https%3A%2F%2Fpassport.vercel.com%20*",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-kix1.vercel.com": {
+  "url": "https://api-kix1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "test0000001.vercel.com": {
+  "url": "https://test0000001.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "staging-iad1.vercel.com": {
+  "url": "https://staging-iad1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "datarequest.vercel.com": {
+  "url": "https://datarequest.vercel.com/",
+  "http_status": 200,
+  "title": "Privacy Request Center | DataGrail",
+  "redirect": "",
+  "scripts": [
+   "https://datarequest.vercel.com/assets/PrivacyRequestCenterPack-603fc24258dadb888089eef2440a8210d891eb607c571ec2e36b74c3ad536d98.js",
+   "https://datarequest.vercel.com/assets/vendor-b1413f894743b6a6083e5e2580bca517ab0cb7f6b2e35ca833b9995b61bf2f06.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "dev.vercel.com": {
+  "url": "https://dev.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "testing01001.vercel.com": {
+  "url": "https://testing01001.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging.vercel.com": {
+  "url": "https://edge-config-staging.vercel.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://vercel.com/docs/edge-config",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "farm-staging.vercel.com": {
+  "url": "https://farm-staging.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "my-app-staging.vercel.com": {
+  "url": "https://my-app-staging.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-hnd1.vercel.com": {
+  "url": "https://api-hnd1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api.vercel.com": {
+  "url": "https://api.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-groove.vercel.com": {
+  "url": "https://api-groove.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "mail.auth.vercel.live": {
+  "url": "https://mail.auth.vercel.live/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "stage.vercel.com": {
+  "url": "https://stage.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "missao-secar-rapido.vercel.com": {
+  "url": "https://missao-secar-rapido.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "auth.vercel.com": {
+  "url": "https://auth.vercel.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-gru1.vercel.com": {
+  "url": "https://api-gru1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "next-api-decorators.vercel.com": {
+  "url": "https://next-api-decorators.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "data.vercel.com": {
+  "url": "https://data.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-sfo1.vercel.com": {
+  "url": "https://api-sfo1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "partners.vercel.com": {
+  "url": "https://partners.vercel.com/",
+  "http_status": 307,
+  "title": "Vercel Partner Portal",
+  "redirect": "https://partners.vercel.com/login",
+  "scripts": [
+   "https://partners.vercel.com/_next/static/chunks/14f6ca2a36b509ed.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/20d463a3c44b9014.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/588a3c8794459ff7.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/a6dad97d9634a72d.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/a94e6b12d1d998a3.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/aeb22d70d42d7a81.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/be404b4b9bcacb4d.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/d21f967478769105.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr",
+   "https://partners.vercel.com/_next/static/chunks/turbopack-023e08a7e3e9d01c.js?dpl=dpl_4TYSCL1JaxXbxS3GmviDgVTcHVBr"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-2.vercel.com": {
+  "url": "https://edge-config-staging-2.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "smartlabs-dashboard.vercel.com": {
+  "url": "https://smartlabs-dashboard.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-3w.vercel.com": {
+  "url": "https://edge-config-staging-3w.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "2fauth.vercel.com": {
+  "url": "https://2fauth.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-stagingw.vercel.com": {
+  "url": "https://edge-config-stagingw.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "wildcard.auth.vercel.live": {
+  "url": "https://wildcard.auth.vercel.live/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "staging-cle1.vercel.com": {
+  "url": "https://staging-cle1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "datarequestg.vercel.com": {
+  "url": "https://datarequestg.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "saml-authentication.vercel.com": {
+  "url": "https://saml-authentication.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "zamaqa.vercel.com": {
+  "url": "https://zamaqa.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-3.vercel.com": {
+  "url": "https://edge-config-staging-3.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "my-dailyreport.vercel.com": {
+  "url": "https://my-dailyreport.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "qat-wxnext.vercel.com": {
+  "url": "https://qat-wxnext.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "adminc.vercel.com": {
+  "url": "https://adminc.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-29.vercel.com": {
+  "url": "https://edge-config-staging-29.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "staging.vercel.com": {
+  "url": "https://staging.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "exprescom-web.vercel.com": {
+  "url": "https://exprescom-web.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "auth.vercel.live": {
+  "url": "https://auth.vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-22.vercel.com": {
+  "url": "https://edge-config-staging-22.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "edge-config-staging-32.vercel.com": {
+  "url": "https://edge-config-staging-32.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "test.vercel.com": {
+  "url": "https://test.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "charlses-auth.vercel.com": {
+  "url": "https://charlses-auth.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "rock-paper-scissors-ecru-theta.vercel.com": {
+  "url": "https://rock-paper-scissors-ecru-theta.vercel.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "www.auth.vercel.live": {
+  "url": "https://www.auth.vercel.live/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-sin1.vercel.com": {
+  "url": "https://api-sin1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "auth-c.vercel.live": {
+  "url": "https://auth-c.vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "mydaily-report.vercel.com": {
+  "url": "https://mydaily-report.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "api-hkg1.vercel.com": {
+  "url": "https://api-hkg1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "preact.examples.vercel.com": {
+  "url": "https://preact.examples.vercel.com/",
+  "http_status": 200,
+  "title": "my-project",
+  "redirect": "",
+  "scripts": [
+   "https://preact.examples.vercel.com/bundle.8eca2.js",
+   "https://preact.examples.vercel.com/bundle.9d1cc.esm.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:07:14 UTC"
+ },
+ "api-cle1.vercel.com": {
+  "url": "https://api-cle1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "staging-dub1.vercel.com": {
+  "url": "https://staging-dub1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "api-iad1.vercel.com": {
+  "url": "https://api-iad1.vercel.com/",
+  "http_status": 308,
+  "title": "308 Permanent Redirect",
+  "redirect": "https://vercel.com/docs/api",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "commerce-git-better-images-acme.vercel.live": {
+  "url": "https://commerce-git-better-images-acme.vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "developer.vercel.com": {
+  "url": "https://developer.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "pong-wars.vercel.com": {
+  "url": "https://pong-wars.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "china-cname.vercel.com": {
+  "url": "https://china-cname.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "crd.vercel.com": {
+  "url": "https://crd.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "indiehacker-chats.vercel.com": {
+  "url": "https://indiehacker-chats.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ten.vercel.com": {
+  "url": "https://ten.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "cnames.vercel.com": {
+  "url": "https://cnames.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "25f16719cf0424eb.vercel.com": {
+  "url": "https://25f16719cf0424eb.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "f1-website.vercel.com": {
+  "url": "https://f1-website.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "appapp.vercel.com": {
+  "url": "https://appapp.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "example-deployment.vercel.com": {
+  "url": "https://example-deployment.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "s3.vercel.com": {
+  "url": "https://s3.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "mindkey-release.vercel.com": {
+  "url": "https://mindkey-release.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "core.vercel.com": {
+  "url": "https://core.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "abhinav-raman.vercel.com": {
+  "url": "https://abhinav-raman.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "yamato.vercel.com": {
+  "url": "https://yamato.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "withcandor.vercel.com": {
+  "url": "https://withcandor.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "editor.vercel.com": {
+  "url": "https://editor.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "alimentos-bem.vercel.com": {
+  "url": "https://alimentos-bem.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "www.vercel.live": {
+  "url": "https://vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/live",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ember.examples.vercel.com": {
+  "url": "https://ember.examples.vercel.com/",
+  "http_status": 200,
+  "title": "EmberQuickstart",
+  "redirect": "",
+  "scripts": [
+   "https://ember.examples.vercel.com/assets/chunk.143.2ae7a3505b240c5ecddf.js",
+   "https://ember.examples.vercel.com/assets/ember-quickstart-a96504541488b832a65fca98f35dd1bf.js",
+   "https://ember.examples.vercel.com/assets/vendor-2e12520b7a71eead28708a24fafa7fbc.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ssp.vercel.com": {
+  "url": "https://ssp.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "global.vercel.com": {
+  "url": "https://global.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "cooing.vercel.com": {
+  "url": "https://cooing.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "checkout.vercel.com": {
+  "url": "https://checkout.vercel.com/",
+  "http_status": 204,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "mycars.vercel.com": {
+  "url": "https://mycars.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "cname-china.vercel.com": {
+  "url": "https://cname-china.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "senai.vercel.com": {
+  "url": "https://senai.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "abdurdebugs117.vercel.com": {
+  "url": "https://abdurdebugs117.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "paul-gemini.vercel.com": {
+  "url": "https://paul-gemini.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "dawapoint.vercel.com": {
+  "url": "https://dawapoint.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "wildcard.canary.vercel.live": {
+  "url": "https://wildcard.canary.vercel.live/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "blog.vercel.com": {
+  "url": "https://blog.vercel.com/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/blog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "avax-price.vercel.com": {
+  "url": "https://avax-price.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "bullh.vercel.com": {
+  "url": "https://bullh.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "eatzyz.vercel.com": {
+  "url": "https://eatzyz.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "milways.vercel.com": {
+  "url": "https://milways.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "sveltekit.examples.vercel.com": {
+  "url": "https://sveltekit.examples.vercel.com/",
+  "http_status": 429,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "anantakishore.vercel.com": {
+  "url": "https://anantakishore.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ticketia.vercel.com": {
+  "url": "https://ticketia.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "5b3681c2c1e4fc4d.vercel.com": {
+  "url": "https://5b3681c2c1e4fc4d.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "lavona.vercel.com": {
+  "url": "https://lavona.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "jungwoo0219.vercel.com": {
+  "url": "https://jungwoo0219.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "appapp.vercel.live": {
+  "url": "https://appapp.vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "gridsome.examples.vercel.com": {
+  "url": "https://gridsome.examples.vercel.com/",
+  "http_status": 200,
+  "title": "Hello, world! - Gridsome",
+  "redirect": "",
+  "scripts": [
+   "https://gridsome.examples.vercel.com/assets/js/app.240acf1a.js",
+   "https://gridsome.examples.vercel.com/assets/js/page--node-modules--gridsome--app--pages--404-vue.c743aff9.js",
+   "https://gridsome.examples.vercel.com/assets/js/page--src--pages--about-vue.a1182551.js",
+   "https://gridsome.examples.vercel.com/assets/js/page--src--pages--index-vue.bd9b908d.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ansarada.vercel.com": {
+  "url": "https://ansarada.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "andres.vercel.com": {
+  "url": "https://andres.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "cname3.vercel.com": {
+  "url": "https://cname3.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "txt.vercel.com": {
+  "url": "https://txt.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "safeframe.vercel.com": {
+  "url": "https://safeframe.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "aa.vercel.com": {
+  "url": "https://aa.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ww5.vercel.com": {
+  "url": "https://ww5.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "spotify-badge.vercel.com": {
+  "url": "https://spotify-badge.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "anabel-landing.vercel.com": {
+  "url": "https://anabel-landing.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "ludlow.vercel.com": {
+  "url": "https://ludlow.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "nidhikumari.vercel.com": {
+  "url": "https://nidhikumari.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "b469110b04d3ec61.vercel.com": {
+  "url": "https://b469110b04d3ec61.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "link.vercel.com": {
+  "url": "https://link.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "cname-dns.vercel.com": {
+  "url": "https://cname-dns.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "click.ship.vercel.com": {
+  "url": "http://click.ship.vercel.com/",
+  "http_status": 403,
+  "title": "403 - Forbidden: Access is denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "alias.vercel.com": {
+  "url": "https://alias.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "qiuyu.vercel.com": {
+  "url": "https://qiuyu.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "examples.vercel.live": {
+  "url": "https://examples.vercel.live/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://vercel.com/templates",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "stronk.vercel.com": {
+  "url": "https://stronk.vercel.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ },
+ "wildcard.vercel.live": {
+  "url": "https://wildcard.vercel.live/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://vercel.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 01:05:51 UTC"
+ }
+}

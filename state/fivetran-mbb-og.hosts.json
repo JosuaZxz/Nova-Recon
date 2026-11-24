@@ -1,0 +1,832 @@
+{
+ "_seeded": true,
+ "semantic-layer.staging-mt.dbt.com": {
+  "url": "https://semantic-layer.staging-mt.dbt.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "gcp.polaris.staging.fivetran.com": {
+  "url": "https://gcp.polaris.staging.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "api.qe.state.dbt.com": {
+  "url": "https://api.qe.state.dbt.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "semantic-layer.c1.us.staging.dbt.com": {
+  "url": "https://semantic-layer.c1.us.staging.dbt.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "downloads.cms.fivetran.com": {
+  "url": "https://downloads.cms.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "www.metadata.legalandgeneral.dbt.com": {
+  "url": "https://www.metadata.legalandgeneral.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "auth.us3.dbt.com": {
+  "url": "https://auth.us3.dbt.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://us3.dbt.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.c1.icare.dbt.com": {
+  "url": "https://metadata.c1.icare.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.metadata.salesforce.dbt.com": {
+  "url": "https://mail.metadata.salesforce.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-aburus2.dev.dbt.com": {
+  "url": "https://dev-aburus2.dev.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "www.semantic-layer.usaa-stage.dbt.com": {
+  "url": "https://www.semantic-layer.usaa-stage.dbt.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.stage.usaa.getdbt.com": {
+  "url": "https://metadata.stage.usaa.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.c2.us2.staging.dbt.com": {
+  "url": "https://metadata.c2.us2.staging.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "www.semantic-layer.usaa-dev.dbt.com": {
+  "url": "https://www.semantic-layer.usaa-dev.dbt.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.cloud.bhp.getdbt.com": {
+  "url": "https://metadata.cloud.bhp.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "videos.cms.fivetran.com": {
+  "url": "https://videos.cms.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.app-temp-2db4865-pr-us2-c1-11930.azure-dev.cloud.getdbt.com": {
+  "url": "http://metadata.app-temp-2db4865-pr-us2-c1-11930.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.salesforce.dbt.com": {
+  "url": "https://metadata.salesforce.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "int.us3.staging.dbt.com": {
+  "url": "https://int.us3.staging.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-BrIRgCfe.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "wildcard.semantic-layer.dev.dbt.com": {
+  "url": "https://wildcard.semantic-layer.dev.dbt.com/",
+  "http_status": 464,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "www.metadata.salesforce.dbt.com": {
+  "url": "https://www.metadata.salesforce.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-bmo.dev.dbt.com": {
+  "url": "https://dev-bmo.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "staging.webhooks.fivetran.com": {
+  "url": "https://staging.webhooks.fivetran.com/",
+  "http_status": 404,
+  "title": "Error 404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.cloud.roche.getdbt.com": {
+  "url": "https://metadata.cloud.roche.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.c1.us2.staging.dbt.com": {
+  "url": "https://mail.c1.us2.staging.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.app-pr-us2-c1-13753.azure-dev.cloud.getdbt.com": {
+  "url": "http://metadata.app-pr-us2-c1-13753.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "eom-admin.global.dbt.com": {
+  "url": "https://eom-admin.global.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "auth.qe.state.dbt.com": {
+  "url": "https://auth.qe.state.dbt.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.c1.ing.dbt.com": {
+  "url": "https://metadata.c1.ing.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.cloud.aztech.getdbt.com": {
+  "url": "https://metadata.cloud.aztech.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-toby.dev.dbt.com": {
+  "url": "https://dev-toby.dev.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "staging-ldp.orchestrator.fivetran.com": {
+  "url": "https://staging-ldp.orchestrator.fivetran.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "www.elections-data.dbt.com": {
+  "url": "https://www.elections-data.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev.usaa.getdbt.com": {
+  "url": "https://dev.usaa.getdbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.global.staging.dbt.com": {
+  "url": "https://mail.global.staging.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.cloud.sharp.getdbt.com": {
+  "url": "https://metadata.cloud.sharp.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "codex-api-gateway-dev-sigsci-val-azure.azure-dev.cloud.getdbt.com": {
+  "url": "http://codex-api-gateway-dev-sigsci-val-azure.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "eng-planning-dev.fivetran.com": {
+  "url": "https://eng-planning-dev.fivetran.com/",
+  "http_status": 200,
+  "title": "Engineering Planning",
+  "redirect": "",
+  "scripts": [
+   "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "entry.staging-demo.fivetran.com": {
+  "url": "https://entry.staging-demo.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev.dbt.com": {
+  "url": "https://dev.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.metadata.macquarie.dbt.com": {
+  "url": "https://mail.metadata.macquarie.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "zz-zerossl.dev.dbt.com": {
+  "url": "https://zz-zerossl.dev.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.metadata.wellstar.dbt.com": {
+  "url": "https://mail.metadata.wellstar.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.prod.usaa.getdbt.com": {
+  "url": "https://metadata.prod.usaa.getdbt.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "usecase-catalog-test.qe.fivetran.com": {
+  "url": "https://usecase-catalog-test.qe.fivetran.com/",
+  "http_status": 200,
+  "title": "Fivetran Use Case Catalog",
+  "redirect": "",
+  "scripts": [
+   "https://usecase-catalog-test.qe.fivetran.com/config.js",
+   "https://usecase-catalog-test.qe.fivetran.com/static/js/main.a0018107.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-barak.dev.dbt.com": {
+  "url": "https://dev-barak.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "telemetry.sandbox.cloud.getdbt.com": {
+  "url": "https://telemetry.sandbox.cloud.getdbt.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-aric.dev.dbt.com": {
+  "url": "https://dev-aric.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "auth.dev.cloud.getdbt.com": {
+  "url": "https://auth.dev.cloud.getdbt.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://dev.cloud.getdbt.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "int.c1.us3.staging.dbt.com": {
+  "url": "https://int.c1.us3.staging.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-junaid-security.dev.dbt.com": {
+  "url": "https://dev-junaid-security.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "int.c1.us2.staging.dbt.com": {
+  "url": "https://int.c1.us2.staging.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "auth.calpers.dbt.com": {
+  "url": "https://auth.calpers.dbt.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://calpers.dbt.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "metadata.integraconnect.dbt.com": {
+  "url": "https://metadata.integraconnect.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "app-temp-8aa50ec-pr-us2-c1-11888.azure-dev.cloud.getdbt.com": {
+  "url": "http://app-temp-8aa50ec-pr-us2-c1-11888.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "us-east4.gcp.polaris.staging.fivetran.com": {
+  "url": "https://us-east4.gcp.polaris.staging.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "wildcard.regional-service-dev-araff.dev.dbt.com": {
+  "url": "https://wildcard.regional-service-dev-araff.dev.dbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "api-staging.fivetran.com": {
+  "url": "https://api-staging.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "metadata.c1.str.staging.dbt.com": {
+  "url": "https://metadata.c1.str.staging.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "semantic-layer.dev-bmo.dev.dbt.com": {
+  "url": "https://semantic-layer.dev-bmo.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "beta-api.fivetran.com": {
+  "url": "https://beta-api.fivetran.com/",
+  "http_status": 308,
+  "title": "",
+  "redirect": "https://api.fivetran.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "pv014.us1.dbt.com": {
+  "url": "https://pv014.us1.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "istio.api.fivetran.com": {
+  "url": "https://istio.api.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "metadata.cloud.fil.getdbt.com": {
+  "url": "https://metadata.cloud.fil.getdbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "us-central1.gcp.polaris.staging.fivetran.com": {
+  "url": "https://us-central1.gcp.polaris.staging.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "reverse-words-temp-00f6c47-pr-us2-c1-111.azure-dev.cloud.getdbt.com": {
+  "url": "http://reverse-words-temp-00f6c47-pr-us2-c1-111.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "mail.us-east4.gcp.polaris.staging.fivetran.com": {
+  "url": "https://mail.us-east4.gcp.polaris.staging.fivetran.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "metadata.c1.au2.dbt.com": {
+  "url": "https://metadata.c1.au2.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "dev-devonfulcher.dev.dbt.com": {
+  "url": "https://dev-devonfulcher.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.c1.us2.dbt.com": {
+  "url": "https://metadata.c1.us2.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "staging.orchestrator.fivetran.com": {
+  "url": "https://staging.orchestrator.fivetran.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "codex-api-gateway-dev-timho.azure-dev.cloud.getdbt.com": {
+  "url": "http://codex-api-gateway-dev-timho.azure-dev.cloud.getdbt.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "www.northamerica-northeast1.gcp.proxy.staging.fivetran.com": {
+  "url": "https://www.northamerica-northeast1.gcp.proxy.staging.fivetran.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "metadata.c1.iqvia.dbt.com": {
+  "url": "https://metadata.c1.iqvia.dbt.com/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:26:34 UTC"
+ },
+ "dev-gui.dev.dbt.com": {
+  "url": "https://dev-gui.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "dev-adukuze.dev.dbt.com": {
+  "url": "https://dev-adukuze.dev.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+   "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ },
+ "mail.elections-data.dbt.com": {
+  "url": "https://mail.elections-data.dbt.com/",
+  "http_status": 200,
+  "title": "dbt",
+  "redirect": "",
+  "scripts": [
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+   "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 01:29:57 UTC"
+ }
+}

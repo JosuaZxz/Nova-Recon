@@ -1,0 +1,712 @@
+{
+ "_seeded": true,
+ "plive.tdata.krisp.ai": {
+  "url": "https://plive.tdata.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.meeting-api.krisp.ai": {
+  "url": "https://dev.meeting-api.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.api.wr.krisp.ai": {
+  "url": "https://dev.api.wr.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.sdk.krisp.ai": {
+  "url": "https://dev.sdk.krisp.ai/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://krispai.cloudflareaccess.com/cdn-cgi/access/login/dev.sdk.krisp.ai?kid=a8d03cfb208a4f739f91384367b2d29e8fe30ea8a20439488f764a3de7e849b4&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjA5MDZ",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "plive.meeting-api.krisp.ai": {
+  "url": "https://plive.meeting-api.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.api.krisp.ai": {
+  "url": "https://dev.api.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.upld.krisp.ai": {
+  "url": "https://stage.upld.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.knowledge.krisp.ai": {
+  "url": "https://stage.knowledge.krisp.ai/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "tdata.krisp.ai": {
+  "url": "https://tdata.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.streaming.krisp.ai": {
+  "url": "https://stage.streaming.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "meeting-api.krisp.ai": {
+  "url": "https://meeting-api.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.kond.krisp.ai": {
+  "url": "https://dev.kond.krisp.ai/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.download.krisp.ai": {
+  "url": "https://stage.download.krisp.ai/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://stage.api.krisp.ai/v2/download/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.files.krisp.ai": {
+  "url": "https://dev.files.krisp.ai/",
+  "http_status": 403,
+  "title": "404 - Page Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.teams.krisp.ai": {
+  "url": "https://dev.teams.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.media-gateway.krisp.ai": {
+  "url": "https://dev.media-gateway.krisp.ai/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "account.krisp.ai": {
+  "url": "https://account.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://account.krisp.ai/assets/index-C3yawLCq.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.desktop.krisp.ai": {
+  "url": "https://stage.desktop.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.app.krisp.ai": {
+  "url": "https://stage.app.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://stage.app.krisp.ai/assets/index-BNzxacLg.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "api.krisp.ai": {
+  "url": "https://api.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "developers.krisp.ai": {
+  "url": "https://developers.krisp.ai/",
+  "http_status": 200,
+  "title": "Developers",
+  "redirect": "",
+  "scripts": [
+   "https://developers.krisp.ai/assets/CustomToast-WE4vS7or.js",
+   "https://developers.krisp.ai/assets/casters-CGosN0UF.js",
+   "https://developers.krisp.ai/assets/connectors-B4kxPWsK.js",
+   "https://developers.krisp.ai/assets/host-BP02NRPy.js",
+   "https://developers.krisp.ai/assets/index-Bu4ovnS-.js",
+   "https://developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
+   "https://developers.krisp.ai/assets/interfaces-CopVV46c.js",
+   "https://developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
+   "https://developers.krisp.ai/assets/products-DL0r_qkH.js",
+   "https://developers.krisp.ai/assets/profileApi-BEGCh0lZ.js",
+   "https://developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
+   "https://developers.krisp.ai/assets/useHasRole-aigO8pgZ.js",
+   "https://developers.krisp.ai/assets/vendor-framework-00wimfVw.js",
+   "https://developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js",
+   "https://developers.krisp.ai/assets/vendor-react-DU-teErA.js",
+   "https://developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.websocket.krisp.ai": {
+  "url": "https://stage.websocket.krisp.ai/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.amplitude.krisp.ai": {
+  "url": "https://stage.amplitude.krisp.ai/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.store.wr.krisp.ai": {
+  "url": "https://dev.store.wr.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.kond.krisp.ai": {
+  "url": "https://stage.kond.krisp.ai/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "mcp.dev.krisp.ai": {
+  "url": "https://mcp.dev.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.api.wr.krisp.ai": {
+  "url": "https://stage.api.wr.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "krisp-blog-dev.krisp.ai": {
+  "url": "https://krisp-blog-dev.krisp.ai/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.app.krisp.ai": {
+  "url": "https://dev.app.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://dev.app.krisp.ai/assets/index-u0d4PXtJ.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.developers.krisp.ai": {
+  "url": "https://dev.developers.krisp.ai/",
+  "http_status": 200,
+  "title": "Developers",
+  "redirect": "",
+  "scripts": [
+   "https://dev.developers.krisp.ai/assets/CustomToast-CoTmKExl.js",
+   "https://dev.developers.krisp.ai/assets/casters-CGosN0UF.js",
+   "https://dev.developers.krisp.ai/assets/connectors-Fg8_-BnR.js",
+   "https://dev.developers.krisp.ai/assets/host-DkVr0dCI.js",
+   "https://dev.developers.krisp.ai/assets/index-DEFYhP4b.js",
+   "https://dev.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
+   "https://dev.developers.krisp.ai/assets/interfaces-CopVV46c.js",
+   "https://dev.developers.krisp.ai/assets/lazyWithRetry-BgQ3RkzK.js",
+   "https://dev.developers.krisp.ai/assets/products-B98AuRTz.js",
+   "https://dev.developers.krisp.ai/assets/profileApi-Be6pO7Uv.js",
+   "https://dev.developers.krisp.ai/assets/vendor-framework-CsMtPcG_.js",
+   "https://dev.developers.krisp.ai/assets/vendor-kr-ui-3fJ5kPid.js",
+   "https://dev.developers.krisp.ai/assets/vendor-react-T8Fusv47.js",
+   "https://dev.developers.krisp.ai/assets/vendor-ui-DZHx2Kky.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.account.krisp.ai": {
+  "url": "https://stage.account.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://stage.account.krisp.ai/assets/index-DP2RUUWU.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.tdata.krisp.ai": {
+  "url": "https://stage.tdata.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "plive.account.krisp.ai": {
+  "url": "https://plive.account.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://plive.account.krisp.ai/assets/index-BZASKAqF.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.media-gateway.krisp.ai": {
+  "url": "https://stage.media-gateway.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "plive.developers.krisp.ai": {
+  "url": "https://plive.developers.krisp.ai/",
+  "http_status": 200,
+  "title": "Developers",
+  "redirect": "",
+  "scripts": [
+   "https://plive.developers.krisp.ai/assets/CustomToast-WE4vS7or.js",
+   "https://plive.developers.krisp.ai/assets/casters-CGosN0UF.js",
+   "https://plive.developers.krisp.ai/assets/connectors-wAYXw9Wa.js",
+   "https://plive.developers.krisp.ai/assets/host-DOzkOgo2.js",
+   "https://plive.developers.krisp.ai/assets/index-D9AYIAwd.js",
+   "https://plive.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
+   "https://plive.developers.krisp.ai/assets/interfaces-CopVV46c.js",
+   "https://plive.developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
+   "https://plive.developers.krisp.ai/assets/products-DL0r_qkH.js",
+   "https://plive.developers.krisp.ai/assets/profileApi-LVjHa4J0.js",
+   "https://plive.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
+   "https://plive.developers.krisp.ai/assets/useHasRole-jtAWfbf-.js",
+   "https://plive.developers.krisp.ai/assets/vendor-framework-00wimfVw.js",
+   "https://plive.developers.krisp.ai/assets/vendor-kr-ui-BW-xgpRE.js",
+   "https://plive.developers.krisp.ai/assets/vendor-react-DU-teErA.js",
+   "https://plive.developers.krisp.ai/assets/vendor-ui-B4Z3tX3t.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "partner.krisp.ai": {
+  "url": "https://partner.krisp.ai/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://krisp.ai/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.tdata.krisp.ai": {
+  "url": "https://dev.tdata.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "syn-bt2ywgclz3.api.krisp.ai": {
+  "url": "https://syn-bt2ywgclz3.api.krisp.ai/",
+  "http_status": 530,
+  "title": "Origin DNS error | syn-bt2ywgclz3.api.krisp.ai | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.analytics.krisp.ai": {
+  "url": "https://stage.analytics.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.store.wr.krisp.ai": {
+  "url": "https://stage.store.wr.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "ma-agent.dev.krisp.ai": {
+  "url": "https://ma-agent.dev.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.teams.krisp.ai": {
+  "url": "https://stage.teams.krisp.ai/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.kaiac-ui.krisp.ai": {
+  "url": "https://dev.kaiac-ui.krisp.ai/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.meeting-api.krisp.ai": {
+  "url": "https://stage.meeting-api.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.streaming.krisp.ai": {
+  "url": "https://dev.streaming.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.kaiac-ui.krisp.ai": {
+  "url": "https://stage.kaiac-ui.krisp.ai/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.sdk.krisp.ai": {
+  "url": "https://stage.sdk.krisp.ai/",
+  "http_status": 200,
+  "title": "Developers",
+  "redirect": "",
+  "scripts": [
+   "https://stage.sdk.krisp.ai/assets/CustomToast-CZ2Cpzu6.js",
+   "https://stage.sdk.krisp.ai/assets/casters-CGosN0UF.js",
+   "https://stage.sdk.krisp.ai/assets/connectors-fVxQhVFN.js",
+   "https://stage.sdk.krisp.ai/assets/host-xqD0PCz8.js",
+   "https://stage.sdk.krisp.ai/assets/index-C7RDhbm8.js",
+   "https://stage.sdk.krisp.ai/assets/interfaces-Bt7dNgwh.js",
+   "https://stage.sdk.krisp.ai/assets/interfaces-CopVV46c.js",
+   "https://stage.sdk.krisp.ai/assets/preload-helper-DxNCjybV.js",
+   "https://stage.sdk.krisp.ai/assets/products-UnYu9bi5.js",
+   "https://stage.sdk.krisp.ai/assets/profileApi-DogeSbPj.js",
+   "https://stage.sdk.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
+   "https://stage.sdk.krisp.ai/assets/useHasRole-cbCjmmdF.js",
+   "https://stage.sdk.krisp.ai/assets/vendor-framework-ie_ZrP8J.js",
+   "https://stage.sdk.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js",
+   "https://stage.sdk.krisp.ai/assets/vendor-react-DU-teErA.js",
+   "https://stage.sdk.krisp.ai/assets/vendor-ui-BKqLbr07.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.lab.krisp.ai": {
+  "url": "https://stage.lab.krisp.ai/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.download.krisp.ai": {
+  "url": "https://dev.download.krisp.ai/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://dev.api.krisp.ai/v2/download/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "ma-agent.stage.krisp.ai": {
+  "url": "https://ma-agent.stage.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "lab.api.krisp.ai": {
+  "url": "https://lab.api.krisp.ai/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "jpmchase-uat.krisp.ai": {
+  "url": "https://jpmchase-uat.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.developers.krisp.ai": {
+  "url": "https://stage.developers.krisp.ai/",
+  "http_status": 200,
+  "title": "Developers",
+  "redirect": "",
+  "scripts": [
+   "https://stage.developers.krisp.ai/assets/CustomToast-CZ2Cpzu6.js",
+   "https://stage.developers.krisp.ai/assets/casters-CGosN0UF.js",
+   "https://stage.developers.krisp.ai/assets/connectors-fVxQhVFN.js",
+   "https://stage.developers.krisp.ai/assets/host-xqD0PCz8.js",
+   "https://stage.developers.krisp.ai/assets/index-C7RDhbm8.js",
+   "https://stage.developers.krisp.ai/assets/interfaces-Bt7dNgwh.js",
+   "https://stage.developers.krisp.ai/assets/interfaces-CopVV46c.js",
+   "https://stage.developers.krisp.ai/assets/preload-helper-DxNCjybV.js",
+   "https://stage.developers.krisp.ai/assets/products-UnYu9bi5.js",
+   "https://stage.developers.krisp.ai/assets/profileApi-DogeSbPj.js",
+   "https://stage.developers.krisp.ai/assets/rolldown-runtime-BWaJ3C7D.js",
+   "https://stage.developers.krisp.ai/assets/useHasRole-cbCjmmdF.js",
+   "https://stage.developers.krisp.ai/assets/vendor-framework-ie_ZrP8J.js",
+   "https://stage.developers.krisp.ai/assets/vendor-kr-ui-DviDOi-3.js",
+   "https://stage.developers.krisp.ai/assets/vendor-react-DU-teErA.js",
+   "https://stage.developers.krisp.ai/assets/vendor-ui-BKqLbr07.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "mcp.stage.krisp.ai": {
+  "url": "https://mcp.stage.krisp.ai/",
+  "http_status": 404,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "stage.wr.krisp.ai": {
+  "url": "https://stage.wr.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp Web Voice Recorder",
+  "redirect": "",
+  "scripts": [
+   "https://stage.wr.krisp.ai/assets/index-DmsaAEPA.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "api.wr.krisp.ai": {
+  "url": "https://api.wr.krisp.ai/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:52:06 UTC"
+ },
+ "dev.wr.krisp.ai": {
+  "url": "https://dev.wr.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp Web Voice Recorder",
+  "redirect": "",
+  "scripts": [
+   "https://dev.wr.krisp.ai/assets/index-DatnJxze.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.websocket.krisp.ai": {
+  "url": "https://dev.websocket.krisp.ai/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "meeting-api-docs.krisp.ai": {
+  "url": "https://meeting-api-docs.krisp.ai/docs/getting-started",
+  "http_status": 200,
+  "title": "Welcome to Krisp Meeting Assistant API",
+  "redirect": "https://meeting-api-docs.krisp.ai/docs/getting-started",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "dev.account.krisp.ai": {
+  "url": "https://dev.account.krisp.ai/",
+  "http_status": 200,
+  "title": "Krisp",
+  "redirect": "",
+  "scripts": [
+   "https://dev.account.krisp.ai/assets/index-ZQlO9Pay.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ },
+ "developers-docs.krisp.ai": {
+  "url": "https://developers-docs.krisp.ai/docs/getting-started",
+  "http_status": 200,
+  "title": "Krisp Developer Docs",
+  "redirect": "https://developers-docs.krisp.ai/docs/getting-started",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 00:54:28 UTC"
+ }
+}

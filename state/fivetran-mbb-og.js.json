@@ -1,0 +1,102 @@
+{
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-C11eb8He.js",
+  "sha256": "3a940cbaa0cca0476388",
+  "routes": [
+   "/api/ai/private",
+   "/api/ai/private/v1/agents/run"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:29:58 UTC"
+ },
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-COkdLo-l.js",
+  "sha256": "c394125402c196be1287",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:29:59 UTC"
+ },
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-BrIRgCfe.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-BrIRgCfe.js",
+  "sha256": "d3b8e15c5b0ca8e6abe4",
+  "routes": [
+   "/api/v1/account-migrations",
+   "/api/v1/accounts"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:29:59 UTC"
+ },
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js",
+  "sha256": "d9d0f66543fb71ad36d8",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:00 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
+  "sha256": "373afd1b2f72d02ed30a",
+  "routes": [
+   "/api/ai/private"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:02 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-D29JQsei.js",
+  "sha256": "29491050505152f34d25",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:03 UTC"
+ },
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
+  "sha256": "6b4e22b0145924ae7ea2",
+  "routes": [
+   "/api/ai/private"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:04 UTC"
+ },
+ "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js": {
+  "last_url": "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js",
+  "sha256": "b37b23256524337abd1b",
+  "routes": [
+   "/auth/login",
+   "/auth/logout"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:06 UTC"
+ },
+ "https://usecase-catalog-test.qe.fivetran.com/static/js/main.HASH.js": {
+  "last_url": "https://usecase-catalog-test.qe.fivetran.com/static/js/main.a0018107.js",
+  "sha256": "3353a05193233ccc177a",
+  "routes": [
+   "/auth/callback",
+   "/auth/logout",
+   "/auth/refresh",
+   "/auth/user"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:06 UTC"
+ },
+ "https://usecase-catalog-test.qe.fivetran.com/config.js": {
+  "last_url": "https://usecase-catalog-test.qe.fivetran.com/config.js",
+  "sha256": "9e676761382a3ec03fa6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:30:06 UTC"
+ }
+}

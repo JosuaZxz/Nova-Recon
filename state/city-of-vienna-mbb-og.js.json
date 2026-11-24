@@ -1,0 +1,56 @@
+{
+ "https://viktorchristgasse.schule.wien.at/o/frontend-js-svg4everybody-web/index.js": {
+  "last_url": "https://viktorchristgasse.schule.wien.at/o/frontend-js-svg4everybody-web/index.js",
+  "sha256": "32e1970356bfcfa99cc5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:16 UTC"
+ },
+ "https://viktorchristgasse.schule.wien.at/combo": {
+  "last_url": "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441666982&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
+  "sha256": "031003d37f28dae1a444",
+  "routes": [
+   "/api/jsonws/invoke"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:19 UTC"
+ },
+ "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js": {
+  "last_url": "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js",
+  "sha256": "c837347a297c1a35852a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:20 UTC"
+ },
+ "https://meet-t.uctest.wien.gv.at/modernizr.HASH.js": {
+  "last_url": "https://meet-t.uctest.wien.gv.at/modernizr.a70fe97948957561da24.js",
+  "sha256": "13a5f1d9381034ee87de",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:21 UTC"
+ },
+ "https://meet-t.uctest.wien.gv.at/vendors~meeting.HASH.js": {
+  "last_url": "https://meet-t.uctest.wien.gv.at/vendors~meeting.b90a2caac3ae57ff819d.js",
+  "sha256": "e29e3e5468c72c9bf81f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:22 UTC"
+ },
+ "https://meet-t.uctest.wien.gv.at/meeting.HASH.js": {
+  "last_url": "https://meet-t.uctest.wien.gv.at/meeting.960eec3dbd8e2f2e2256.js",
+  "sha256": "ad36f734df4024294205",
+  "routes": [
+   "/api/scheduler/",
+   "/auth/sso/tokenRequest"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:24 UTC"
+ },
+ "https://meet-t.uctest.wien.gv.at/script/unsupp.js": {
+  "last_url": "https://meet-t.uctest.wien.gv.at/script/unsupp.js",
+  "sha256": "03b9db09d8b736431cbc",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 01:17:24 UTC"
+ }
+}
