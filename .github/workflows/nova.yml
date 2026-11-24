@@ -19,7 +19,7 @@ on:
       rotate_count:
         description: "Jumlah program per run saat rotasi otomatis"
         required: false
-        default: "16"
+        default: "12"
 
 permissions:
   contents: write
@@ -94,8 +94,8 @@ jobs:
             ALL=$(ls targets/*.txt | sed 's|targets/||; s|\.txt$||' | grep -v '^test_target$' | grep -v '^_' | sort)
           fi
           N=$(echo "$ALL" | wc -l)
-          K="${{ github.event.inputs.rotate_count || '16' }}"
-          K=$(( K + 0 )); [ "$K" -lt 1 ] && K=16
+          K="${{ github.event.inputs.rotate_count || '12' }}"
+          K=$(( K + 0 )); [ "$K" -lt 1 ] && K=12
           if [ -n "${{ github.event.inputs.programs }}" ]; then
             PROGS="${{ github.event.inputs.programs }}"
           elif [ "$N" -le "$K" ]; then
@@ -116,15 +116,15 @@ jobs:
             echo "- Diproses pada batch ini (target $K): \`$PROGS\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: NOVA - monitor/probe/verify/diff per program (43m soft deadline)
+      - name: NOVA - monitor/probe/verify/diff per program (36m soft deadline)
         run: |
           START_TS=$(date +%s)
           IFS=',' read -ra PROGS <<< "${{ steps.pick.outputs.programs }}"
           DONE_CNT=0
           for P in "${PROGS[@]}"; do
             ELAPSED=$(( $(date +%s) - START_TS ))
-            if [ "$ELAPSED" -gt 2580 ]; then
-              echo "[time-guard] Sudah berjalan ${ELAPSED}s (>43m). Hentikan loop dengan aman agar brief & commit state selalu tuntas."
+            if [ "$ELAPSED" -gt 2160 ]; then
+              echo "[time-guard] Sudah berjalan ${ELAPSED}s (>36m). Hentikan loop dengan aman agar brief & commit state selalu tuntas."
               break
             fi
             P=$(echo "$P" | xargs)
