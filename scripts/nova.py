@@ -1272,6 +1272,10 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
             continue
         body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
         s3_host = urlparse(s3_url).netloc
+        bucket_name = s3_host.split(".s3")[0]
+        pos = js_text.lower().find(bucket_name.lower())
+        code_ctx = js_text[max(0, pos - 100) : pos + 160].replace("\n", " ").strip() if pos != -1 else ""
+        ctx_line = f"\n\nJS Reference Context: ...{code_ctx}..." if code_ctx else ""
         if "<Code>NoSuchBucket</Code>" in body:
             findings.append(
                 {
@@ -1282,8 +1286,8 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
                     "confidence": "strong",
                     "evidence": f"Unclaimed S3 bucket ({s3_host} -> NoSuchBucket) referenced in {js_url}",
                     "request_evidence": f"GET / HTTP/1.1\nHost: {s3_host}\nReferer: {js_url}",
-                    "response_evidence": _format_resp_evidence(r, body[:600]),
-                    "next": "Verifikasi ketersediaan nama bucket S3 di AWS; referensi aktif di JS memungkinkan takeover aset.",
+                    "response_evidence": _format_resp_evidence(r, body[:600]) + ctx_line,
+                    "next": "Verifikasi konteks referensi bucket S3 pada kode JS & cek policy program.",
                 }
             )
         elif r.status_code == 200 and "<ListBucketResult" in body and "<Contents>" in body:
@@ -1296,8 +1300,8 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
                     "confidence": "strong",
                     "evidence": f"Publicly listable S3 bucket ({s3_host}) referenced in {js_url}",
                     "request_evidence": f"GET / HTTP/1.1\nHost: {s3_host}\nReferer: {js_url}",
-                    "response_evidence": _format_resp_evidence(r, body[:700]),
-                    "next": "Periksa apakah file di dalam bucket berisi data internal/sensitif perusahaan.",
+                    "response_evidence": _format_resp_evidence(r, body[:700]) + ctx_line,
+                    "next": "Periksa apakah file di dalam bucket milik perusahaan & berisi data internal/sensitif.",
                 }
             )
 

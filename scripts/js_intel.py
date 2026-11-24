@@ -202,28 +202,35 @@ def is_vendor_js(js_url: str, body_head: str = "") -> bool:
     )
 
 
+JS_LINE_COMMENT_RE = re.compile(r"(?m)^\s*//.*$")
+JS_BLOCK_COMMENT_RE = re.compile(r"/\*[\s\S]{0,4000}?\*/")
+
+
 def extract_cloud_urls(js_text: str) -> dict[str, list[str]]:
-    """Extract unique AWS S3, Firebase Realtime DB, GCS, and Azure Blob URLs referenced in JS."""
+    """Extract unique AWS S3, Firebase Realtime DB, GCS, and Azure Blob URLs outside JS comments."""
+    active_code = JS_BLOCK_COMMENT_RE.sub(" ", JS_LINE_COMMENT_RE.sub(" ", js_text))
     s3_buckets = set()
-    for m in S3_URL_RE.finditer(js_text):
+    for m in S3_URL_RE.finditer(active_code):
         bucket = (m.group(1) or m.group(2) or "").lower().strip(".")
-        if bucket and not any(ig in bucket for ig in ("example", "test-bucket", "your-bucket", "amazonaws")):
+        if bucket and not any(
+            ig in bucket for ig in ("example", "test-bucket", "your-bucket", "amazonaws", "esp-link")
+        ):
             s3_buckets.add(f"https://{bucket}.s3.amazonaws.com")
 
     firebase_dbs = set()
-    for m in FIREBASE_URL_RE.finditer(js_text):
+    for m in FIREBASE_URL_RE.finditer(active_code):
         host = m.group(1).lower()
         if not any(ig in host for ig in ("example", "your-project", "dummy")):
             firebase_dbs.add(f"https://{host}")
 
     gcs_buckets = set()
-    for m in GCS_URL_RE.finditer(js_text):
+    for m in GCS_URL_RE.finditer(active_code):
         bucket = (m.group(1) or m.group(2) or "").lower().strip(".")
         if bucket and not any(ig in bucket for ig in ("example", "your-bucket", "googleapis", "gstatic")):
             gcs_buckets.add(f"https://storage.googleapis.com/{bucket}")
 
     azure_blobs = set()
-    for m in AZURE_BLOB_RE.finditer(js_text):
+    for m in AZURE_BLOB_RE.finditer(active_code):
         blob_path = m.group(1).lower().strip("/")
         if blob_path and not any(ig in blob_path for ig in ("example", "contoso", "youraccount")):
             azure_blobs.add(f"https://{blob_path}?restype=container&comp=list")
