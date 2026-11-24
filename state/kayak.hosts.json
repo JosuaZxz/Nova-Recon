@@ -1,0 +1,1763 @@
+{
+ "_seeded": true,
+ "p5console.kayak.com": {
+  "url": "https://p5console.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/p5console.kayak.com?kid=c9400ab156bca6c2d4f9c3c296befcf01e30bb94a7ddd01f77843532b18e40eb&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6I",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "ami.staging.kayak.com": {
+  "url": "https://ami.staging.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/ami.staging.kayak.com?kid=b530ced6ce5303b2370a4978d68532adfc8cac813909757f0656f7461e1a8ec2&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "newcoronanew.kayak.com": {
+  "url": "https://newcoronanew.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "distancelearnprea.kayak.com": {
+  "url": "https://distancelearnprea.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-wordpress-zrh.kayak.com": {
+  "url": "https://kibana-wordpress-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-wordpress-zrh.kayak.com?kid=5368ab0559b92ef0f4cc6c03d9b0ca6f6c30ff1d367a8ddfff22fcfa4fc0dcf1&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1Ni",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "cdnstage.kayak.com": {
+  "url": "https://cdnstage.kayak.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "data.kayak.com": {
+  "url": "https://data.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "partnerlogin.kayak.com": {
+  "url": "https://partnerlogin.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-destiny-zrhc.kayak.com": {
+  "url": "https://kibana-destiny-zrhc.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "development.kayak.com": {
+  "url": "https://development.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-cdn-som.kayak.com": {
+  "url": "https://kibana-cdn-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-cdn-som.kayak.com?kid=afa8cca263d651d774b0866a57f779dc6b56e2c655551d7547199263d1d41f63&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-tracegraph-som1.kayak.com": {
+  "url": "https://kibana-tracegraph-som1.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-review-zrh.kayak.com": {
+  "url": "https://kibana-review-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-review-zrh.kayak.com?kid=0ce38d1c9f8501c8df5d1e54d5bd3946afbdc38435df316cef9f594439e2a1cc&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-tracegraph-som.kayak.com": {
+  "url": "https://kibana-tracegraph-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-tracegraph-som.kayak.com?kid=8e0d7efda363622dd69b5108923c16e658446f86b675bc187b7422215dea3323&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "api.cruises.kayak.com": {
+  "url": "https://api.cruises.kayak.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-marvel-som.kayak.com": {
+  "url": "https://kibana-marvel-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-marvel-som.kayak.com?kid=e6dd112722ca3ff4128bca489a5fa0227287218a418d343f01faaf509e5eac26&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "inside-staging.kayak.com": {
+  "url": "https://inside-staging.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "elastic.kayak.com": {
+  "url": "https://elastic.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "ipv6.kayak.com": {
+  "url": "https://ipv6.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "qa.kayak.com": {
+  "url": "https://qa.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "p5sentry-api.kayak.com": {
+  "url": "https://p5sentry-api.kayak.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "developer.kayak.com": {
+  "url": "https://developer.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "api.kayak.com": {
+  "url": "https://api.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-r9logs-zrha.kayak.com": {
+  "url": "https://kibana-r9logs-zrha.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "manage9.kayak.com": {
+  "url": "https://manage9.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "sso.kayak.com": {
+  "url": "https://sso.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-docker-zrh.kayak.com": {
+  "url": "https://kibana-docker-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-docker-zrh.kayak.com?kid=b0658f3b66686a45d29d43475ca4239cb44e22e551f83459147d4b121b4aecc9&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-r9logs-zrh.kayak.com": {
+  "url": "https://kibana-r9logs-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-r9logs-zrh.kayak.com?kid=39b995b58b83e07119fbfc8b4ab4173370bac3dbf3c8abb8e1edb09725ebb9d8&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "distancelearnadminopentabley.kayak.com": {
+  "url": "https://distancelearnadminopentabley.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "elastic5.kayak.com": {
+  "url": "https://elastic5.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "api.cruises.ca.kayak.com": {
+  "url": "https://api.cruises.ca.kayak.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "us-b2b-ot.kayak.com": {
+  "url": "https://us-b2b-ot.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "uk-press-ot.kayak.com": {
+  "url": "https://uk-press-ot.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "distancelearnpre.kayak.com": {
+  "url": "https://distancelearnpre.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-geo-som.kayak.com": {
+  "url": "https://kibana-geo-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-geo-som.kayak.com?kid=e79f6d0007e59e33f8eef35c279e1a883c257b59c092ffe937704330b5312116&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "pre.kayak.com": {
+  "url": "https://pre.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "gitr.kayak.com": {
+  "url": "https://gitr.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "flogin.kayak.com": {
+  "url": "https://flogin.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "distancelearnadminm.kayak.com": {
+  "url": "https://distancelearnadminm.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "seodash.kayak.com": {
+  "url": "https://seodash.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "portali.kayak.com": {
+  "url": "https://portali.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "sslvpn.kayak.com": {
+  "url": "https://sslvpn.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "v1.kayak.com": {
+  "url": "https://v1.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-r9logs-som.kayak.com": {
+  "url": "https://kibana-r9logs-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-r9logs-som.kayak.com?kid=a13b55020c5383a9d896f027a30e0e65cff81451ca1f3600ef80682ae0291725&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "flogind.kayak.com": {
+  "url": "https://flogind.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "login-wp.kayak.com": {
+  "url": "https://login-wp.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "vaccinehub-dev.kayak.com": {
+  "url": "https://vaccinehub-dev.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "api.travel.kayak.com": {
+  "url": "http://api.travel.kayak.com/",
+  "http_status": 400,
+  "title": "Invalid URL",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "www.ipv6.kayak.com": {
+  "url": "http://www.ipv6.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "dev.kayak.com": {
+  "url": "https://dev.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-review-zrha.kayak.com": {
+  "url": "https://kibana-review-zrha.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "manager.kayak.com": {
+  "url": "https://manager.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "corporate.kayak.com": {
+  "url": "https://corporate.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "flogin9.kayak.com": {
+  "url": "https://flogin9.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-tracegraph-zrh.kayak.com": {
+  "url": "https://kibana-tracegraph-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-tracegraph-zrh.kayak.com?kid=81b465e7980d0f7818a791e9c54ae7f9f731666a2f1959f69cbcfbde9e9432a2&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-provider-zrh.kayak.com": {
+  "url": "https://kibana-provider-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-provider-zrh.kayak.com?kid=abe959e4d8acb02e957d4a8e76626d0cfe68f0f06845597137313c3689988d5f&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "cpanel.kayak.com": {
+  "url": "https://cpanel.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "kibana-marvel-zrh.kayak.com": {
+  "url": "https://kibana-marvel-zrh.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "manage.kayak.com": {
+  "url": "https://manage.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-docker-somu.kayak.com": {
+  "url": "https://kibana-docker-somu.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "cpanel3.kayak.com": {
+  "url": "https://cpanel3.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-zoom-som.kayak.com": {
+  "url": "https://kibana-zoom-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-zoom-som.kayak.com?kid=abd071cde58df27d71bf7d863198bb92d067ff37a75fecdb44868acf04d3cf50&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImt",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "hotelpreisvergleich-mchotel-de.affiliate.kayak.com": {
+  "url": "https://hotelpreisvergleich-mchotel-de.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "p4console.kayak.com": {
+  "url": "https://p4console.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/p4console.kayak.com?kid=f713fcccb73ea1b205b8a9d52641ef44ff93c418ec778b4d62be7fc0c1a5fa22&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6I",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "datamaskin.kayak.com": {
+  "url": "https://datamaskin.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "distancelearnprem.kayak.com": {
+  "url": "https://distancelearnprem.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "gitlab.kayak.com": {
+  "url": "https://gitlab.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "gitlabu.kayak.com": {
+  "url": "https://gitlabu.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "pay.kayak.com": {
+  "url": "https://pay.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "us-b2b-otm.kayak.com": {
+  "url": "https://us-b2b-otm.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "assocom-india.comwww.kayak.com": {
+  "url": "http://assocom-india.comwww.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "cms.kayak.com": {
+  "url": "https://cms.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-zoom-zrh.kayak.com": {
+  "url": "https://kibana-zoom-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-zoom-zrh.kayak.com?kid=8df2d0480affdddb816fecf4d5c0d8a78fe119799fcd704a371f68cbb3d13768&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImt",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "preisvergleich-billiger-hotel-de.affiliate.kayak.com": {
+  "url": "https://preisvergleich-billiger-hotel-de.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "distancelearnadmino.kayak.com": {
+  "url": "https://distancelearnadmino.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "portal.kayak.com": {
+  "url": "https://portal.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-geo-zrh.kayak.com": {
+  "url": "https://kibana-geo-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-geo-zrh.kayak.com?kid=2d41b2e0e3e964b8ea186118e0897f59ab6888c2c2e01a7554884be2baf5ab4a&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "v3.kayak.com": {
+  "url": "https://v3.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "hotelpreisvergleich-discounthotel-de.affiliate.kayak.com": {
+  "url": "https://hotelpreisvergleich-discounthotel-de.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www.qa.kayak.com": {
+  "url": "http://www.qa.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-review-som.kayak.com": {
+  "url": "https://kibana-review-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-review-som.kayak.com?kid=2ea4040ff704808a1d677150bd345ca082cba8d3589677223d2eec8fcc9cb7c9&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "new.kayak.com": {
+  "url": "https://new.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "testq.kayak.com": {
+  "url": "https://testq.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-destiny-som.kayak.com": {
+  "url": "https://kibana-destiny-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-destiny-som.kayak.com?kid=09269224a6521e481cf676742402242f18a5d3decb714f33c6b52d96d6bd3eed&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIs",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-provider-som.kayak.com": {
+  "url": "https://kibana-provider-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-provider-som.kayak.com?kid=5810149ef5a98f9777e2d087c73c6eb2eb6b8f4ef118d93c160b6cb2f666ad25&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "beta.kayak.com": {
+  "url": "https://beta.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "wordpress.kayak.com": {
+  "url": "https://wordpress.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "dev-virus0316.kayak.com": {
+  "url": "https://dev-virus0316.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "vpn.kayak.com": {
+  "url": "https://vpn.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "console.kayak.com": {
+  "url": "https://console.kayak.com/console",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/console.kayak.com?kid=0f07169313db99d7865318a9544c4d42ad985e21d69c536f19b0e20908411285&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjF",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "news.kayak.com": {
+  "url": "https://news.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www.pay-backil.kayak.com": {
+  "url": "http://www.pay-backil.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-destiny-zrh.kayak.com": {
+  "url": "https://kibana-destiny-zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-destiny-zrh.kayak.com?kid=761ca751297deb9d7babe46d091192aa7e887a576c1debc36b1b5025d13ec9a1&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIs",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "login.kayak.com": {
+  "url": "https://login.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-marvel-zrhc.kayak.com": {
+  "url": "https://kibana-marvel-zrhc.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "pay-backil.kayak.com": {
+  "url": "https://pay-backil.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "admin.kayak.com": {
+  "url": "https://admin.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "preview.kayak.com": {
+  "url": "https://preview.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-docker-som.kayak.com": {
+  "url": "https://kibana-docker-som.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana-docker-som.kayak.com?kid=54a2242caca9b371c3fd91b9996f5c016a6a2c02ffec9f2f80d1fb447d3ac2eb&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana.marvel.zrh.kayak.com": {
+  "url": "https://kibana.marvel.zrh.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/kibana.marvel.zrh.kayak.com?kid=ecade4adc4af7d346bc2d099dcd18c5d58ad8f698f4fdb1b2619c3becca855db&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "stage.kayak.com": {
+  "url": "https://stage.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "xtest.kayak.com": {
+  "url": "https://xtest.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "git.kayak.com": {
+  "url": "https://git.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "p5consoles.kayak.com": {
+  "url": "https://p5consoles.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kibana-r9logs-somc.kayak.com": {
+  "url": "https://kibana-r9logs-somc.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "bargaintravel4u.affiliate.kayak.com": {
+  "url": "https://bargaintravel4u.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "corp.kayak.com": {
+  "url": "https://corp.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "p4sentry-api.kayak.com": {
+  "url": "https://p4sentry-api.kayak.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "nl-rt-wp.kayak.com": {
+  "url": "https://nl-rt-wp.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "concierge.kayak.com": {
+  "url": "https://concierge.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "x1-zrh.kayak.com": {
+  "url": "https://x1-zrh.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "no.kayak.com": {
+  "url": "https://no.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "cashbackil.kayak.com": {
+  "url": "https://cashbackil.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "wildcard.wp.kayak.com": {
+  "url": "https://wildcard.wp.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/wildcard.wp.kayak.com?kid=1945169216a55eb9ff9ac00fbf31bb302419fc6d2156b51de0ccd6139c601fc9&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "br02.kayak.com": {
+  "url": "https://br02.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kan-166792-519210.affiliate.kayak.com": {
+  "url": "https://kan-166792-519210.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.hotelscombined.com?a_aid=166792&brandId=519210",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "xfinity.kayak.com": {
+  "url": "https://xfinity.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "travelpirates.kayak.com": {
+  "url": "https://travelpirates.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "ml.kayak.com": {
+  "url": "https://ml.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "backpackers9.kayak.com": {
+  "url": "https://backpackers9.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "hotell-businessclass-se.affiliate.kayak.com": {
+  "url": "https://hotell-businessclass-se.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "holidayguru-nl.affiliate.kayak.com": {
+  "url": "https://holidayguru-nl.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "business-booking.kayak.com": {
+  "url": "https://business-booking.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "search-cheapweeklyhotelsnearme.affiliate.kayak.com": {
+  "url": "https://search-cheapweeklyhotelsnearme.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "hotell-kelkoo-se.affiliate.kayak.com": {
+  "url": "https://hotell-kelkoo-se.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "partner.kayak.com": {
+  "url": "https://partner.kayak.com/pn/partners/home-landing",
+  "http_status": 200,
+  "title": "KAYAK Partner Platform",
+  "redirect": "https://partner.kayak.com/pn/partners/home-landing",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:49:07 UTC"
+ },
+ "www.ar.kayak.com": {
+  "url": "http://www.ar.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com.ar/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kan-8016-4440.affiliate.kayak.com": {
+  "url": "https://kan-8016-4440.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.hotelscombined.com?a_aid=8016&brandId=4440",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "people.kayak.com": {
+  "url": "https://people.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "mail.kayak.com": {
+  "url": "http://mail.kayak.com/",
+  "http_status": 301,
+  "title": "301 Moved",
+  "redirect": "https://mail.google.com/a/kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "mundi-wp.kayak.com": {
+  "url": "https://mundi-wp.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "c4.x1.kayak.com": {
+  "url": "https://c4.x1.kayak.com/",
+  "http_status": 403,
+  "title": "Unexpected Turbulence",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "a.kayak.com": {
+  "url": "https://a.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "en-us-rt-flexi.wp.kayak.com": {
+  "url": "https://en-us-rt-flexi.wp.kayak.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://kayak-ztna.cloudflareaccess.com/cdn-cgi/access/login/en-us-rt-flexi.wp.kayak.com?kid=1945169216a55eb9ff9ac00fbf31bb302419fc6d2156b51de0ccd6139c601fc9&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "flight.kayak.com": {
+  "url": "https://flight.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "global-rt-wps.kayak.com": {
+  "url": "https://global-rt-wps.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "zrh-mx08a.kayak.com": {
+  "url": "https://zrh-mx08a.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "uk-blog-ot.kayak.com": {
+  "url": "https://uk-blog-ot.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "uk-tech-ot.kayak.com": {
+  "url": "https://uk-tech-ot.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www.au-rt-wp.kayak.com": {
+  "url": "http://www.au-rt-wp.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "bill.kayak.com": {
+  "url": "https://bill.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "2fwww.kayak.com": {
+  "url": "https://2fwww.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "affiliate2w.kayak.com": {
+  "url": "https://affiliate2w.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "stats.kayak.com": {
+  "url": "https://stats.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "proxy.kayak.com": {
+  "url": "https://proxy.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "x4.kayak.com": {
+  "url": "https://x4.kayak.com/",
+  "http_status": 403,
+  "title": "Unexpected Turbulence",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "rejsespejder.affiliate.kayak.com": {
+  "url": "https://rejsespejder.affiliate.kayak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "orders.kayak.com": {
+  "url": "https://orders.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "dk.kayak.com": {
+  "url": "https://dk.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "webdiskr.kayak.com": {
+  "url": "https://webdiskr.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "search.kayak.com": {
+  "url": "https://search.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "holidaypiratesa.kayak.com": {
+  "url": "https://holidaypiratesa.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "quarantine-cloudstation-eu-central-1.kayak.com": {
+  "url": "https://quarantine-cloudstation-eu-central-1.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "hotel-businessclass-dk.affiliate.kayak.com": {
+  "url": "https://hotel-businessclass-dk.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www1.kayak.com": {
+  "url": "https://www1.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "homepage1bs.kayak.com": {
+  "url": "https://homepage1bs.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "bestill-hotellergardermoen-no.affiliate.kayak.com": {
+  "url": "https://bestill-hotellergardermoen-no.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "virus0316e.kayak.com": {
+  "url": "https://virus0316e.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "us.kayak.com": {
+  "url": "https://us.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "search-extendedstayhotelsnearme.affiliate.kayak.com": {
+  "url": "https://search-extendedstayhotelsnearme.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.kayak.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "infolab.kayak.com": {
+  "url": "https://infolab.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "rootsweb.kayak.com": {
+  "url": "https://rootsweb.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "de.kayak.com": {
+  "url": "https://de.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.de",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "mta04-57.mgs.kayak.com": {
+  "url": "http://mta04-57.mgs.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "dnm.kayak.com": {
+  "url": "https://dnm.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "blog.kayak.com": {
+  "url": "https://blog.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "mcafeeantiviruscustomersupportnumber.kayak.com": {
+  "url": "https://mcafeeantiviruscustomersupportnumber.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www.kayak.com": {
+  "url": "https://www.kayak.com/sitecaptcha.html?out=%2F",
+  "http_status": 200,
+  "title": "Please verify that you are a real user",
+  "redirect": "https://www.kayak.com/sitecaptcha.html?out=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "www.a.kayak.com": {
+  "url": "http://www.a.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "c4.kayak.com": {
+  "url": "https://c4.kayak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "primer.c4.kayak.com": {
+  "url": "http://primer.c4.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "primer.c5.kayak.com": {
+  "url": "http://primer.c5.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "kan-49051-183405.affiliate.kayak.com": {
+  "url": "https://kan-49051-183405.affiliate.kayak.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.hotelscombined.com?a_aid=49051&brandId=183405",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "46s.trk.mgs.kayak.com": {
+  "url": "http://46s.trk.mgs.kayak.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.kayak.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "be.kayak.com": {
+  "url": "https://www.be.kayak.com/sitecaptcha.html?out=%2F",
+  "http_status": 200,
+  "title": "Please verify that you are a real user",
+  "redirect": "https://www.be.kayak.com/sitecaptcha.html?out=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ },
+ "ro.kayak.com": {
+  "url": "https://www.ro.kayak.com/sitecaptcha.html?out=%2F",
+  "http_status": 200,
+  "title": "Please verify that you are a real user",
+  "redirect": "https://www.ro.kayak.com/sitecaptcha.html?out=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:48:35 UTC"
+ }
+}

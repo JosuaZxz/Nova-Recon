@@ -1,0 +1,32 @@
+{
+ "https://devportal.cb.dev/assets/browser-check.js": {
+  "last_url": "https://devportal.cb.dev/assets/browser-check.js",
+  "sha256": "33a564e8f3e10cc7681f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:37:37 UTC"
+ },
+ "https://devportal.cb.dev/assets/newrelic.js": {
+  "last_url": "https://devportal.cb.dev/assets/newrelic.js",
+  "sha256": "d7c8f96145c1066da579",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:37:37 UTC"
+ },
+ "https://devportal.cb.dev/7244.HASH.js": {
+  "last_url": "https://devportal.cb.dev/7244.92c5a6e7.js",
+  "sha256": "81be324e57832c8af161",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:37:38 UTC"
+ },
+ "https://devportal.cb.dev/bundle.HASH.js": {
+  "last_url": "https://devportal.cb.dev/bundle.bb8cf169.js",
+  "sha256": "36f40aba4670bc40adc1",
+  "routes": [
+   "/api/v1/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:37:38 UTC"
+ }
+}

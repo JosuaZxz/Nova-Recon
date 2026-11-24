@@ -1,0 +1,243 @@
+{
+ "_seeded": true,
+ "vault-internal.skypicker.com": {
+  "url": "https://vault-internal.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "hedgehog.php-sandbox.skypicker.com": {
+  "url": "https://hedgehog.php-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "www.lynx-api-vpc-sandbox.skypicker.com": {
+  "url": "https://www.lynx-api-vpc-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "mail.lynx-vpc-sandbox.skypicker.com": {
+  "url": "https://mail.lynx-vpc-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "jira.kiwi.com": {
+  "url": "https://jira.kiwi.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "mail.margin-state-api-sandbox.skypicker.com": {
+  "url": "https://mail.margin-state-api-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "mail.lynx-api-sandbox.skypicker.com": {
+  "url": "https://mail.lynx-api-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "horst-api.ancillaries-sandbox.skypicker.com": {
+  "url": "https://horst-api.ancillaries-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "staging-cs-ticketing.skypicker.com": {
+  "url": "https://staging-cs-ticketing.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "portalo-be-legacy-beta.reservations-prod.skypicker.com": {
+  "url": "https://portalo-be-legacy-beta.reservations-prod.skypicker.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "www.banana-api-review.r2-dataacq.skypicker.com": {
+  "url": "https://www.banana-api-review.r2-dataacq.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "sstr-api.data-lake-prod.skypicker.com": {
+  "url": "https://sstr-api.data-lake-prod.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "mail.swagger-mailing.review.php-sandbox.skypicker.com": {
+  "url": "https://mail.swagger-mailing.review.php-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "cs-api.skypicker.com": {
+  "url": "https://cs-api.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "pidgy.php-sandbox.skypicker.com": {
+  "url": "https://pidgy.php-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "hombre-docs.php-sandbox.skypicker.com": {
+  "url": "https://hombre-docs.php-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "portalo.automation.kiwi.com": {
+  "url": "https://portalo.automation.kiwi.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=1049020272423-valobv45hpbfcfgaam7adm3cmhbvlscr.apps.googleusercontent.com&redirect_uri=https://portalo.automation.kiwi.com/oau",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "bookie-frontend-review.balkan-sandbox.skypicker.com": {
+  "url": "https://bookie-frontend-review.balkan-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "tag-manager.kiwi.com": {
+  "url": "https://tag-manager.kiwi.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "hombre.php-sandbox.skypicker.com": {
+  "url": "https://hombre.php-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "mail.mailing.iap.review.php-sandbox.skypicker.com": {
+  "url": "https://mail.mailing.iap.review.php-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "bagbox.ancillaries-sandbox.skypicker.com": {
+  "url": "https://bagbox.ancillaries-sandbox.skypicker.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "bookie.iap.reservations-sandbox.skypicker.com": {
+  "url": "https://bookie.iap.reservations-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ },
+ "iap.balkan-sandbox.skypicker.com": {
+  "url": "https://iap.balkan-sandbox.skypicker.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?client_id=534924890233-83388go6u32ed60ec4lptubgq0a7gqn1.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.googleapi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:40:53 UTC"
+ }
+}

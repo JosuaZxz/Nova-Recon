@@ -1,0 +1,15 @@
+{
+ "https://assets-staging.wealthsimple.com/app-HASH.js": {
+  "last_url": "https://assets-staging.wealthsimple.com/app-e57cbf9c55b57969.js",
+  "sha256": "e2440f0b475f12e3db90",
+  "routes": [
+   "/api/v2/",
+   "/oauth/authorize",
+   "/oauth/v2/token",
+   "/oauth/v2/token/info",
+   "/v1/dpop/nonces"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:29:12 UTC"
+ }
+}

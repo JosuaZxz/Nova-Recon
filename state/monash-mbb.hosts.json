@@ -1,0 +1,133 @@
+{
+ "_seeded": true,
+ "prato-vpn.gp.monash.edu": {
+  "url": "https://prato-vpn.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://prato-vpn.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw-exgw-mern.gp.monash.edu": {
+  "url": "https://paw-exgw-mern.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw-exgw-mern.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "od-staff.gp.monash.edu": {
+  "url": "https://od-staff.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://od-staff.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "vpn.gp.monash.edu": {
+  "url": "https://vpn.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://vpn.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw-t1.gp.monash.edu": {
+  "url": "https://paw-t1.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw-t1.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "od-staff-soe.gp.monash.edu": {
+  "url": "https://od-staff-soe.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://od-staff-soe.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw-exgw-t0-fw1.gp.monash.edu": {
+  "url": "https://paw-exgw-t0-fw1.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw-exgw-t0-fw1.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "od-ext.gp.monash.edu": {
+  "url": "https://od-ext.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://od-ext.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw-exgw-t1-fw1.gp.monash.edu": {
+  "url": "https://paw-exgw-t1-fw1.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw-exgw-t1-fw1.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "od-student.gp.monash.edu": {
+  "url": "https://od-student.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://od-student.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "prato-ext-gw.gp.monash.edu": {
+  "url": "https://prato-ext-gw.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://prato-ext-gw.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw.gp.monash.edu": {
+  "url": "https://paw.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ },
+ "paw-t0.gp.monash.edu": {
+  "url": "https://paw-t0.gp.monash.edu/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://paw-t0.gp.monash.edu/global-protect/login.esp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 02:30:27 UTC"
+ }
+}

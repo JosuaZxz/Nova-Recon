@@ -1,0 +1,129 @@
+{
+ "_seeded": true,
+ "mta-sts.account.wise.com": {
+  "url": "https://mta-sts.account.wise.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "api.wise.com": {
+  "url": "https://api.wise.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://wise.com/platform",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "api.wise-sandbox.com": {
+  "url": "https://api.wise-sandbox.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://wise.com/platform",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "paypay.wise.com": {
+  "url": "https://paypay.wise.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "verification-of-payee.wise.com": {
+  "url": "https://verification-of-payee.wise.com/",
+  "http_status": 403,
+  "title": "Error ・ Cloudflare Access",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "api-paypay.wise.com": {
+  "url": "https://api-paypay.wise.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "cards-api.transferwise.com": {
+  "url": "https://cards-api.transferwise.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "preview-sst.wise.com": {
+  "url": "https://preview-sst.wise.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com": {
+  "url": "https://loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "api.transferwise.com": {
+  "url": "https://api.transferwise.com/",
+  "http_status": 307,
+  "title": "307 Temporary Redirect",
+  "redirect": "https://wise.com/platform",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "api.br-openfinance.wise.com": {
+  "url": "https://api.br-openfinance.wise.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://api.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js",
+   "https://api.br-openfinance.wise.com/assets/index-CVYmhyOZ.js",
+   "https://api.br-openfinance.wise.com/assets/jsx-runtime-DUAcabCT.js",
+   "https://api.br-openfinance.wise.com/assets/route-D9pXZdNP.js",
+   "https://api.br-openfinance.wise.com/assets/webView--6nT_lkv.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ },
+ "newsroom.wise.com": {
+  "url": "https://newsroom.wise.com/en-NAM/",
+  "http_status": 200,
+  "title": "Wise Newsroom",
+  "redirect": "https://newsroom.wise.com/en-NAM/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:47:22 UTC"
+ }
+}

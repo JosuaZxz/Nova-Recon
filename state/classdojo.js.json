@@ -1,0 +1,1233 @@
+{
+ "https://new-teach-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js": {
+  "last_url": "https://new-teach-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js",
+  "sha256": "113066c70f8abc25b262",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:20 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/index-B36XH_Gm.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/index-B36XH_Gm.js",
+  "sha256": "29e997838eaf909c6baf",
+  "routes": [
+   "/api/abuseFlag",
+   "/api/district/search",
+   "/api/district/search/{districtId}",
+   "/api/dojo-school/{schoolId}/teacher/{teacherId}/verify",
+   "/api/dojoSchool/{schoolId}/applyToBeMentor",
+   "/api/dojoSchool/{schoolId}/archive-classes",
+   "/api/dojoSchool/{schoolId}/bulk-add-coteacher-to-class",
+   "/api/dojoSchool/{schoolId}/bulk-remove-teachers",
+   "/api/dojoSchool/{schoolId}/nudgeMentorsAndSchoolAdmins",
+   "/api/dojoSchool/{schoolId}/schoolwideCenterTeacher",
+   "/api/dojoSchool/{schoolId}/student",
+   "/api/dojoSchool/{schoolId}/teacher",
+   "/api/dojoSchool/{schoolId}/teacher/{teacherId}",
+   "/api/dojoSchool/{schoolId}/teacher/{teacherId}/verify",
+   "/api/dojoSchool/{schoolId}/transferClass",
+   "/api/oidc/link",
+   "/api/oidc/profile",
+   "/api/parentConnectionRequest",
+   "/api/parentConnectionRequest/{id}",
+   "/api/parentConnectionRequest/{requestId}/accept",
+   "/api/removeReport",
+   "/api/school/parentConnectionRequest",
+   "/api/school/parentConnectionRequest/{requestId}",
+   "/api/school/parentConnectionRequest/{requestId}/accept",
+   "/api/school/{schoolId}/one-to-one/latest",
+   "/api/school/{schoolId}/suggestedTeacherInvites",
+   "/api/school/{schoolId}/suggestedTeacherInvites/{emailAddress}",
+   "/api/schoolLinkInvitation",
+   "/api/schoolLinkInvitation/{code}",
+   "/api/schoolTeacher/school/{schoolId}",
+   "/api/session",
+   "/api/student/{studentId}/addToClasses",
+   "/api/teacher/district-leader-verification-request",
+   "/api/teacher/onboarding/rostered-activation-eligibility/{schoolId}",
+   "/api/teacher/onboarding/school-context/{schoolId}",
+   "/api/teacher/onboarding/signup-entry",
+   "/api/teacher/{teacherId}/preapproval",
+   "/api/user/emailValidation/{email}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js",
+  "sha256": "09148c163031d56ae932",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/core-BlZG8hbQ.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/core-BlZG8hbQ.js",
+  "sha256": "3517ca21e6f29759e736",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/nessie-core-Dy5PjiPb.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/nessie-core-Dy5PjiPb.js",
+  "sha256": "51f6d5baf2f785fbeff7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/badge-states-Dkbzy_j2.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/badge-states-Dkbzy_j2.js",
+  "sha256": "d199823dbe25b0d9bf62",
+  "routes": [
+   "/api/attendance",
+   "/api/award",
+   "/api/comment",
+   "/api/comment/{id}",
+   "/api/commentBatch",
+   "/api/dojo-class/{classId}/archived-student",
+   "/api/dojoClass/{classId}/award/{awardId}/commentBatch",
+   "/api/dojoClass/{classId}/award/{awardId}/student/{studentId}",
+   "/api/dojoClass/{classId}/onboarding-checklist",
+   "/api/dojoClass/{classId}/sidekick-insights",
+   "/api/dojoClass/{classId}/sidekick-insights/{jobKey}",
+   "/api/dojoClass/{classId}/student",
+   "/api/dojoClass/{classId}/student-messaging-consent-recipient-status",
+   "/api/dojoClass/{classId}/student/{studentId}/pointRedemption/{redemptionId}",
+   "/api/dojoSchool/{schoolId}/award/{awardId}/student/{studentId}",
+   "/api/elevated-student-invitation",
+   "/api/elevated-student-invitation/bulk",
+   "/api/featureSwitch/v2",
+   "/api/marketplace/block/{personProfileId}",
+   "/api/marketplace/message-thread",
+   "/api/marketplace/message-thread/{messageThreadId}",
+   "/api/marketplace/message-thread/{messageThreadId}/archive",
+   "/api/marketplace/message-thread/{messageThreadId}/mark-unread",
+   "/api/marketplace/message-thread/{messageThreadId}/markReadOffset",
+   "/api/marketplace/message-thread/{messageThreadId}/message",
+   "/api/marketplace/message-thread/{messageThreadId}/message/{messageId}",
+   "/api/marketplace/message-thread/{messageThreadId}/message/{messageId}/reaction",
+   "/api/marketplace/message-thread/{messageThreadId}/settings",
+   "/api/marketplace/message-threads",
+   "/api/message-thread/{messageThreadId}",
+   "/api/message-thread/{messageThreadId}/message",
+   "/api/message-thread/{messageThreadId}/message/scheduled",
+   "/api/message-thread/{messageThreadId}/message/v2",
+   "/api/parent/{parentId}/message-thread/archived",
+   "/api/parent/{parentId}/message-thread/page",
+   "/api/reportsPDF",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread/archived",
+   "/api/student-messaging-connection-summary",
+   "/api/student-messaging-invitation",
+   "/api/student-messaging-invitation/all-classes",
+   "/api/student-messaging-invitation/bulk",
+   "/api/student-user/{pstudentId}/message-thread",
+   "/api/student-user/{pstudentId}/message-thread/archived",
+   "/api/teacher-student-messaging-attestation",
+   "/api/teacher-student-messaging-attestation/all-classes",
+   "/api/teacher-student-messaging-attestation/{classId}",
+   "/api/teacher/{teacherId}/class/{classId}/message-thread",
+   "/api/teacher/{teacherId}/class/{classId}/message-thread/archived",
+   "/api/teacherPointRedemptionReport"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/metrics-CzyH6JJs.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/metrics-CzyH6JJs.js",
+  "sha256": "f6e9cdd01ac766b4c315",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/onboardingMetrics-BD5gB_SI.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/onboardingMetrics-BD5gB_SI.js",
+  "sha256": "0724e80da1b2c206adb5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/fetchers-DH0BdUkB.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/fetchers-DH0BdUkB.js",
+  "sha256": "1d018db885fe1884fa2c",
+  "routes": [
+   "/api/dojoClass/{classId}/behavior",
+   "/api/dojoClass/{classId}/behavior/{id}",
+   "/api/dojoClass/{classId}/needs-work-behaviors",
+   "/api/dojoSchool/{schoolId}/award/{awardId}",
+   "/api/dojoSchool/{schoolId}/behaviors",
+   "/api/dojoSchool/{schoolId}/needs-work-behaviors",
+   "/api/dojoSchool/{schoolId}/point",
+   "/api/dojoSchool/{schoolId}/pointNotify",
+   "/api/dojoSchool/{schoolId}/pointsDashboard",
+   "/api/dojoSchool/{schoolId}/report/behavior",
+   "/api/dojoSchool/{schoolId}/report/class",
+   "/api/dojoSchool/{schoolId}/report/student",
+   "/api/importBehaviors",
+   "/api/school/{schoolId}/points/balances",
+   "/api/school/{schoolId}/redeemAward",
+   "/api/school/{schoolId}/school-house",
+   "/api/school/{schoolId}/school-house-assignment",
+   "/api/school/{schoolId}/school-house/unassigned-students",
+   "/api/school/{schoolId}/school-house/{schoolHouseId}",
+   "/api/school/{schoolId}/school-house/{schoolHouseId}/students",
+   "/api/school/{schoolId}/student-schoolwide-balance/reset"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/constants-BIqX12FA.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/constants-BIqX12FA.js",
+  "sha256": "7a4553d63578dd32b3a3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/parseISO-CG9KLRVa.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/parseISO-CG9KLRVa.js",
+  "sha256": "a95f9917043363664859",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/parse-egw7bYe9.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/parse-egw7bYe9.js",
+  "sha256": "0c5a34c86ded153063d4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:21 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/isIndex-Cq4PWQp4.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/isIndex-Cq4PWQp4.js",
+  "sha256": "d4b9fc2425f75109f253",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/iteratee-D5Gf4doc.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/iteratee-D5Gf4doc.js",
+  "sha256": "3cc922049b4893d0b60f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/flatten-DcxvLLKh.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/flatten-DcxvLLKh.js",
+  "sha256": "841cec03b37f04228356",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/sortBy-C-XV5M1W.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/sortBy-C-XV5M1W.js",
+  "sha256": "f1614a5afbd751b60afa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/quiet-hours-xUF5T2Jr.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/quiet-hours-xUF5T2Jr.js",
+  "sha256": "80b6067e922f687b79be",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/classroom-fetcher-Cws2ycHG.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/classroom-fetcher-Cws2ycHG.js",
+  "sha256": "0e3afb46d1c192974d56",
+  "routes": [
+   "/api/dojoClass/{id}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-student-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js": {
+  "last_url": "https://new-student-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js",
+  "sha256": "113066c70f8abc25b262",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:24 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
+  "sha256": "00108f85fb5772e32e60",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:24 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/core-D8IQ_0zZ.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/core-D8IQ_0zZ.js",
+  "sha256": "311635dd426e6dbebb20",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/env-sQQfxbQL.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/env-sQQfxbQL.js",
+  "sha256": "d18b44807582c765116a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/nessie-QvvabgGo.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/nessie-QvvabgGo.js",
+  "sha256": "ca874a43638012d35c75",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/QueryClientProvider-Dty0zMLe.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/QueryClientProvider-Dty0zMLe.js",
+  "sha256": "3d372683471d85bc0868",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/file-upload-BdwXQI8T.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/file-upload-BdwXQI8T.js",
+  "sha256": "93c35f406a64a536dd4d",
+  "routes": [
+   "/api/uploadFileURL/v2"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/src-LPiHWOmt.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/src-LPiHWOmt.js",
+  "sha256": "07d6d58b1566d40ec4d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/src-CwdI2WPM.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/src-CwdI2WPM.js",
+  "sha256": "f2ce15235e66c085ad5b",
+  "routes": [
+   "/api/featureSwitch/v2"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/session-language-store-D130i5vW.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/session-language-store-D130i5vW.js",
+  "sha256": "0294199478112d81a6e6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSButton-BbfNjXHs.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSButton-BbfNjXHs.js",
+  "sha256": "c2663383e019b346f42d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSHeadlineText-l37Zv0vg.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSHeadlineText-l37Zv0vg.js",
+  "sha256": "3d6559df2b00b44f5031",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSBodyText.module-oGAlvP6i.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSBodyText.module-oGAlvP6i.js",
+  "sha256": "fe1b5e2edec98787394b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:25 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSBodyText-CHZmLBGm.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSBodyText-CHZmLBGm.js",
+  "sha256": "48f90a299ee2436c1aca",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/ErrorPage-Hw-2nSYO.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/ErrorPage-Hw-2nSYO.js",
+  "sha256": "35c7b3b6382686152622",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSLabelText.module-ULxynBEf.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSLabelText.module-ULxynBEf.js",
+  "sha256": "ac5ef9e745e3136451f1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/pendingSurfaceUtils-DcJPTCTz.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/pendingSurfaceUtils-DcJPTCTz.js",
+  "sha256": "97a0dc80fefbbe359005",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/triggerBridge-DBcZviIn.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/triggerBridge-DBcZviIn.js",
+  "sha256": "51350d2fb419cfec06ab",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js",
+  "sha256": "acf8f1633b189923b23c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/DDSIconButton.module-C-PFBSLi.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/DDSIconButton.module-C-PFBSLi.js",
+  "sha256": "0089e07008eae87db53f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/toDate-BxdUDuWK.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/toDate-BxdUDuWK.js",
+  "sha256": "db1cb9f3383bf8c5970d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-teach.classdojo.com/browsersupportblocker.vZMk9XZP.min.js": {
+  "last_url": "https://new-teach.classdojo.com/browsersupportblocker.vZMk9XZP.min.js",
+  "sha256": "113066c70f8abc25b262",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:29 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/index-B36XH_Gm.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/index-B36XH_Gm.js",
+  "sha256": "29e997838eaf909c6baf",
+  "routes": [
+   "/api/abuseFlag",
+   "/api/district/search",
+   "/api/district/search/{districtId}",
+   "/api/dojo-school/{schoolId}/teacher/{teacherId}/verify",
+   "/api/dojoSchool/{schoolId}/applyToBeMentor",
+   "/api/dojoSchool/{schoolId}/archive-classes",
+   "/api/dojoSchool/{schoolId}/bulk-add-coteacher-to-class",
+   "/api/dojoSchool/{schoolId}/bulk-remove-teachers",
+   "/api/dojoSchool/{schoolId}/nudgeMentorsAndSchoolAdmins",
+   "/api/dojoSchool/{schoolId}/schoolwideCenterTeacher",
+   "/api/dojoSchool/{schoolId}/student",
+   "/api/dojoSchool/{schoolId}/teacher",
+   "/api/dojoSchool/{schoolId}/teacher/{teacherId}",
+   "/api/dojoSchool/{schoolId}/teacher/{teacherId}/verify",
+   "/api/dojoSchool/{schoolId}/transferClass",
+   "/api/oidc/link",
+   "/api/oidc/profile",
+   "/api/parentConnectionRequest",
+   "/api/parentConnectionRequest/{id}",
+   "/api/parentConnectionRequest/{requestId}/accept",
+   "/api/removeReport",
+   "/api/school/parentConnectionRequest",
+   "/api/school/parentConnectionRequest/{requestId}",
+   "/api/school/parentConnectionRequest/{requestId}/accept",
+   "/api/school/{schoolId}/one-to-one/latest",
+   "/api/school/{schoolId}/suggestedTeacherInvites",
+   "/api/school/{schoolId}/suggestedTeacherInvites/{emailAddress}",
+   "/api/schoolLinkInvitation",
+   "/api/schoolLinkInvitation/{code}",
+   "/api/schoolTeacher/school/{schoolId}",
+   "/api/session",
+   "/api/student/{studentId}/addToClasses",
+   "/api/teacher/district-leader-verification-request",
+   "/api/teacher/onboarding/rostered-activation-eligibility/{schoolId}",
+   "/api/teacher/onboarding/school-context/{schoolId}",
+   "/api/teacher/onboarding/signup-entry",
+   "/api/teacher/{teacherId}/preapproval",
+   "/api/user/emailValidation/{email}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:29 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js",
+  "sha256": "09148c163031d56ae932",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:29 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/core-BlZG8hbQ.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/core-BlZG8hbQ.js",
+  "sha256": "3517ca21e6f29759e736",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/nessie-core-Dy5PjiPb.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/nessie-core-Dy5PjiPb.js",
+  "sha256": "51f6d5baf2f785fbeff7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/badge-states-Dkbzy_j2.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/badge-states-Dkbzy_j2.js",
+  "sha256": "d199823dbe25b0d9bf62",
+  "routes": [
+   "/api/attendance",
+   "/api/award",
+   "/api/comment",
+   "/api/comment/{id}",
+   "/api/commentBatch",
+   "/api/dojo-class/{classId}/archived-student",
+   "/api/dojoClass/{classId}/award/{awardId}/commentBatch",
+   "/api/dojoClass/{classId}/award/{awardId}/student/{studentId}",
+   "/api/dojoClass/{classId}/onboarding-checklist",
+   "/api/dojoClass/{classId}/sidekick-insights",
+   "/api/dojoClass/{classId}/sidekick-insights/{jobKey}",
+   "/api/dojoClass/{classId}/student",
+   "/api/dojoClass/{classId}/student-messaging-consent-recipient-status",
+   "/api/dojoClass/{classId}/student/{studentId}/pointRedemption/{redemptionId}",
+   "/api/dojoSchool/{schoolId}/award/{awardId}/student/{studentId}",
+   "/api/elevated-student-invitation",
+   "/api/elevated-student-invitation/bulk",
+   "/api/featureSwitch/v2",
+   "/api/marketplace/block/{personProfileId}",
+   "/api/marketplace/message-thread",
+   "/api/marketplace/message-thread/{messageThreadId}",
+   "/api/marketplace/message-thread/{messageThreadId}/archive",
+   "/api/marketplace/message-thread/{messageThreadId}/mark-unread",
+   "/api/marketplace/message-thread/{messageThreadId}/markReadOffset",
+   "/api/marketplace/message-thread/{messageThreadId}/message",
+   "/api/marketplace/message-thread/{messageThreadId}/message/{messageId}",
+   "/api/marketplace/message-thread/{messageThreadId}/message/{messageId}/reaction",
+   "/api/marketplace/message-thread/{messageThreadId}/settings",
+   "/api/marketplace/message-threads",
+   "/api/message-thread/{messageThreadId}",
+   "/api/message-thread/{messageThreadId}/message",
+   "/api/message-thread/{messageThreadId}/message/scheduled",
+   "/api/message-thread/{messageThreadId}/message/v2",
+   "/api/parent/{parentId}/message-thread/archived",
+   "/api/parent/{parentId}/message-thread/page",
+   "/api/reportsPDF",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread/archived",
+   "/api/student-messaging-connection-summary",
+   "/api/student-messaging-invitation",
+   "/api/student-messaging-invitation/all-classes",
+   "/api/student-messaging-invitation/bulk",
+   "/api/student-user/{pstudentId}/message-thread",
+   "/api/student-user/{pstudentId}/message-thread/archived",
+   "/api/teacher-student-messaging-attestation",
+   "/api/teacher-student-messaging-attestation/all-classes",
+   "/api/teacher-student-messaging-attestation/{classId}",
+   "/api/teacher/{teacherId}/class/{classId}/message-thread",
+   "/api/teacher/{teacherId}/class/{classId}/message-thread/archived",
+   "/api/teacherPointRedemptionReport"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/metrics-CzyH6JJs.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/metrics-CzyH6JJs.js",
+  "sha256": "f6e9cdd01ac766b4c315",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/onboardingMetrics-BD5gB_SI.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/onboardingMetrics-BD5gB_SI.js",
+  "sha256": "0724e80da1b2c206adb5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/fetchers-DH0BdUkB.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/fetchers-DH0BdUkB.js",
+  "sha256": "1d018db885fe1884fa2c",
+  "routes": [
+   "/api/dojoClass/{classId}/behavior",
+   "/api/dojoClass/{classId}/behavior/{id}",
+   "/api/dojoClass/{classId}/needs-work-behaviors",
+   "/api/dojoSchool/{schoolId}/award/{awardId}",
+   "/api/dojoSchool/{schoolId}/behaviors",
+   "/api/dojoSchool/{schoolId}/needs-work-behaviors",
+   "/api/dojoSchool/{schoolId}/point",
+   "/api/dojoSchool/{schoolId}/pointNotify",
+   "/api/dojoSchool/{schoolId}/pointsDashboard",
+   "/api/dojoSchool/{schoolId}/report/behavior",
+   "/api/dojoSchool/{schoolId}/report/class",
+   "/api/dojoSchool/{schoolId}/report/student",
+   "/api/importBehaviors",
+   "/api/school/{schoolId}/points/balances",
+   "/api/school/{schoolId}/redeemAward",
+   "/api/school/{schoolId}/school-house",
+   "/api/school/{schoolId}/school-house-assignment",
+   "/api/school/{schoolId}/school-house/unassigned-students",
+   "/api/school/{schoolId}/school-house/{schoolHouseId}",
+   "/api/school/{schoolId}/school-house/{schoolHouseId}/students",
+   "/api/school/{schoolId}/student-schoolwide-balance/reset"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/constants-BIqX12FA.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/constants-BIqX12FA.js",
+  "sha256": "7a4553d63578dd32b3a3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/parseISO-CG9KLRVa.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/parseISO-CG9KLRVa.js",
+  "sha256": "a95f9917043363664859",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/parse-egw7bYe9.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/parse-egw7bYe9.js",
+  "sha256": "0c5a34c86ded153063d4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/isIndex-Cq4PWQp4.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/isIndex-Cq4PWQp4.js",
+  "sha256": "d4b9fc2425f75109f253",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/iteratee-D5Gf4doc.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/iteratee-D5Gf4doc.js",
+  "sha256": "3cc922049b4893d0b60f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/flatten-DcxvLLKh.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/flatten-DcxvLLKh.js",
+  "sha256": "841cec03b37f04228356",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/sortBy-C-XV5M1W.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/sortBy-C-XV5M1W.js",
+  "sha256": "f1614a5afbd751b60afa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/quiet-hours-xUF5T2Jr.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/quiet-hours-xUF5T2Jr.js",
+  "sha256": "80b6067e922f687b79be",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:30 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/classroom-fetcher-Cws2ycHG.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/classroom-fetcher-Cws2ycHG.js",
+  "sha256": "0e3afb46d1c192974d56",
+  "routes": [
+   "/api/dojoClass/{id}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/userConfig-NRgGPVVo.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/userConfig-NRgGPVVo.js",
+  "sha256": "3cd7689c8e2406e0c1a8",
+  "routes": [
+   "/api/entityConfigValueStore/notificationPreferences",
+   "/api/notificationSettings",
+   "/api/userConfig",
+   "/api/userConfig/metadata/{metaDataName}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/DDSButton-B7s5FKfq.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/DDSButton-B7s5FKfq.js",
+  "sha256": "a93b8039d681d845b33f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/DDSToast-xRQFG-7y.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/DDSToast-xRQFG-7y.js",
+  "sha256": "93e39f31c2936c523912",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/toastHelpers-BwodI49h.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/toastHelpers-BwodI49h.js",
+  "sha256": "0bd405f99a220335119f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/addMonths-DVJdwg4b.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/addMonths-DVJdwg4b.js",
+  "sha256": "e48e2980dbfe0deed4a0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/pendingSurfaceUtils-EzaeRAn-.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/pendingSurfaceUtils-EzaeRAn-.js",
+  "sha256": "036031215ba0799c03b6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/PendingSurface-DmLvCKb4.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/PendingSurface-DmLvCKb4.js",
+  "sha256": "b7032fc4508f991f5a68",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/triggerBridge-ufAMfvlF.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/triggerBridge-ufAMfvlF.js",
+  "sha256": "f11625d33527181c4c7f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js",
+  "sha256": "acf8f1633b189923b23c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/createOnDemandImport-CzXJuLre.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/createOnDemandImport-CzXJuLre.js",
+  "sha256": "389ae775aad334d2c5bd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/DDSIconButton-CrkHuSSJ.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/DDSIconButton-CrkHuSSJ.js",
+  "sha256": "2fa43a5c4f40b48e50a0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/overflowManager-CoidENSH.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/overflowManager-CoidENSH.js",
+  "sha256": "5c92e4abfcac60ffa861",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js",
+  "sha256": "113066c70f8abc25b262",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://plausible.classdojo.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js": {
+  "last_url": "https://plausible.classdojo.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js",
+  "sha256": "d2286efb6fd1cb9d3711",
+  "routes": [
+   "/api/event"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/index-BHOekfGm.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/index-BHOekfGm.js",
+  "sha256": "759a373150b6a7212cdb",
+  "routes": [
+   "/api/marketplace/decagon/widget-token",
+   "/api/marketplace/parent/redeem-referral",
+   "/api/marketplace/parent/referral-code",
+   "/api/marketplace/parent/session-discount",
+   "/api/session"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
+  "sha256": "00108f85fb5772e32e60",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/core-B9UdJSwf.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/core-B9UdJSwf.js",
+  "sha256": "4e2e27011dfdf9d37dec",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/env-CyvP9fXI.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/env-CyvP9fXI.js",
+  "sha256": "c1e8deb80ab6a86df34c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/QueryClientProvider-Dn-LRCXH.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/QueryClientProvider-Dn-LRCXH.js",
+  "sha256": "7480414ed0b459d4a2fe",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/nessie-CcFbcXLT.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/nessie-CcFbcXLT.js",
+  "sha256": "88de48c284055c4f28b8",
+  "routes": [
+   "/api/uploadFileURL/v2"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/shim-nPpOjN8t.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/shim-nPpOjN8t.js",
+  "sha256": "48bfde351b828e6c8f0e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/queryKey-CpHMU-OH.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/queryKey-CpHMU-OH.js",
+  "sha256": "f496dd20134dd0673c70",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/useInfiniteQuery-DcGP05Eu.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/useInfiniteQuery-DcGP05Eu.js",
+  "sha256": "c96f17be4822f21551e8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/useMutation-En57KbJm.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/useMutation-En57KbJm.js",
+  "sha256": "99d02796b88660a97d21",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:33 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/src-B5Qrb-_t.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/src-B5Qrb-_t.js",
+  "sha256": "819ea58324147db0a708",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/DDSButton-M3D1Yzhx.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/DDSButton-M3D1Yzhx.js",
+  "sha256": "9c426e54e732d990047f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/TranslationSafeText-CKemw_6o.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/TranslationSafeText-CKemw_6o.js",
+  "sha256": "befd50337c0e6efb7635",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/pendingSurfaceUtils-DTnvqatI.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/pendingSurfaceUtils-DTnvqatI.js",
+  "sha256": "641e784a43aea0f37030",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js",
+  "sha256": "acf8f1633b189923b23c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/createOnDemandImport-CvExtI9b.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/createOnDemandImport-CvExtI9b.js",
+  "sha256": "00e16918a196b6d9144b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/triggerBridge-CTPN333I.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/triggerBridge-CTPN333I.js",
+  "sha256": "caf226d2beeb3761ec37",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/parse-D4nclIE5.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/parse-D4nclIE5.js",
+  "sha256": "830997a4e9a7cdf1a859",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-tutor-static.classdojo.com/assets/src-Cddx1miL.js": {
+  "last_url": "https://new-tutor-static.classdojo.com/assets/src-Cddx1miL.js",
+  "sha256": "ff6390c6db8125f2e3aa",
+  "routes": [
+   "/api/featureSwitch/v2"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:34 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/userConfig-NRgGPVVo.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/userConfig-NRgGPVVo.js",
+  "sha256": "3cd7689c8e2406e0c1a8",
+  "routes": [
+   "/api/entityConfigValueStore/notificationPreferences",
+   "/api/notificationSettings",
+   "/api/userConfig",
+   "/api/userConfig/metadata/{metaDataName}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/DDSButton-B7s5FKfq.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/DDSButton-B7s5FKfq.js",
+  "sha256": "a93b8039d681d845b33f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/DDSToast-xRQFG-7y.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/DDSToast-xRQFG-7y.js",
+  "sha256": "93e39f31c2936c523912",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/toastHelpers-BwodI49h.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/toastHelpers-BwodI49h.js",
+  "sha256": "0bd405f99a220335119f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/addMonths-DVJdwg4b.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/addMonths-DVJdwg4b.js",
+  "sha256": "e48e2980dbfe0deed4a0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/pendingSurfaceUtils-EzaeRAn-.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/pendingSurfaceUtils-EzaeRAn-.js",
+  "sha256": "036031215ba0799c03b6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/PendingSurface-DmLvCKb4.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/PendingSurface-DmLvCKb4.js",
+  "sha256": "b7032fc4508f991f5a68",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/triggerBridge-ufAMfvlF.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/triggerBridge-ufAMfvlF.js",
+  "sha256": "f11625d33527181c4c7f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/lazyTestPreload-C8N9xOwb.js",
+  "sha256": "acf8f1633b189923b23c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/createOnDemandImport-CzXJuLre.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/createOnDemandImport-CzXJuLre.js",
+  "sha256": "389ae775aad334d2c5bd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:22 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/DDSIconButton-CrkHuSSJ.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/DDSIconButton-CrkHuSSJ.js",
+  "sha256": "2fa43a5c4f40b48e50a0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:23 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/overflowManager-CoidENSH.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/overflowManager-CoidENSH.js",
+  "sha256": "5c92e4abfcac60ffa861",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:23 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/DDSScrollLayout-BsThCUwi.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/DDSScrollLayout-BsThCUwi.js",
+  "sha256": "3f2eb1ce7989974f197d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:23 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/pendingPopupTrigger--O66-X0Z.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/pendingPopupTrigger--O66-X0Z.js",
+  "sha256": "160bfb7ca7c6a42f304b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:23 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/DDSDialog-Btd7yDU5.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/DDSDialog-Btd7yDU5.js",
+  "sha256": "543785586ec87263cd5d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:23 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/runtime-CRW36Qjy.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/runtime-CRW36Qjy.js",
+  "sha256": "4a3833c350c020f40d6e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:24 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/useSchoolMessageSettingsFetcher--pLLwzAC.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/useSchoolMessageSettingsFetcher--pLLwzAC.js",
+  "sha256": "8219715280c4fa9a4941",
+  "routes": [
+   "/api/dojoSchool/{schoolId}/message-settings"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:24 UTC"
+ },
+ "https://new-teach-static.classdojo.com/assets/_fetchers-D67Hb9OO.js": {
+  "last_url": "https://new-teach-static.classdojo.com/assets/_fetchers-D67Hb9OO.js",
+  "sha256": "4207e551fc9163ab1848",
+  "routes": [
+   "/api/district/{districtId}/teacher/{teacherId}/bulletin-message",
+   "/api/message-thread/{messageThreadId}",
+   "/api/message-thread/{messageThreadId}/archive",
+   "/api/message-thread/{messageThreadId}/participants/self",
+   "/api/school/{schoolId}/teacher/{teacherId}/audience",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread/archived"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:24 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/timezoneContext-DjQrRPYG.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/timezoneContext-DjQrRPYG.js",
+  "sha256": "d3438152a055bff79d0e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:26 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/toInteger-BXnW-KqC.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/toInteger-BXnW-KqC.js",
+  "sha256": "8d7e508ec6f5a54b315b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:27 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/subDays-BaIA-JPn.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/subDays-BaIA-JPn.js",
+  "sha256": "20c7ecce5dafa15077f4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:27 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/web-push-BmLDTb0z.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/web-push-BmLDTb0z.js",
+  "sha256": "4b29cb4214fdce0ccee8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:27 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
+  "sha256": "5d73396592c5c854c8f1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:27 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/dist-Bf9ZJjRo.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/dist-Bf9ZJjRo.js",
+  "sha256": "2a23b253defe56e35a43",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:28 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/dist-DG0ekw2l.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/dist-DG0ekw2l.js",
+  "sha256": "6a84f26d14d5242023e4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:28 UTC"
+ },
+ "https://new-student-static.classdojo.com/assets/root-s0xLWOS2.js": {
+  "last_url": "https://new-student-static.classdojo.com/assets/root-s0xLWOS2.js",
+  "sha256": "a0e9d7b496eee9e15d4d",
+  "routes": [
+   "/api/award",
+   "/api/class-entry-code/:code/redeem",
+   "/api/class-entry-code/{code}",
+   "/api/classStudentByToken",
+   "/api/dojoSchool/{id}",
+   "/api/elevated-student-invitation/check",
+   "/api/oidc/elevated-student",
+   "/api/oidc/elevated-student/elevate",
+   "/api/oidc/elevated-student/invitation-details",
+   "/api/oidc/mobile/{slug}/verification_url",
+   "/api/oidc/profile",
+   "/api/oidc/student-session",
+   "/api/push/{pushId}/ack",
+   "/api/pushRegistration",
+   "/api/session",
+   "/api/sessionEntityDelete",
+   "/api/sessionToken/current",
+   "/api/student-user/{pstudentId}/notification-settings",
+   "/api/student-user/{pstudentId}/notification-settings/{category}",
+   "/api/studentGoogleLoginUrl",
+   "/api/studentUser/{id}",
+   "/api/studentUser/{studentUserId}/school-point-balances",
+   "/api/studentUser/{studentUserId}/student"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:28 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/DDSScrollLayout-BsThCUwi.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/DDSScrollLayout-BsThCUwi.js",
+  "sha256": "3f2eb1ce7989974f197d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/pendingPopupTrigger--O66-X0Z.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/pendingPopupTrigger--O66-X0Z.js",
+  "sha256": "160bfb7ca7c6a42f304b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/DDSDialog-Btd7yDU5.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/DDSDialog-Btd7yDU5.js",
+  "sha256": "543785586ec87263cd5d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:31 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/runtime-CRW36Qjy.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/runtime-CRW36Qjy.js",
+  "sha256": "4a3833c350c020f40d6e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/useSchoolMessageSettingsFetcher--pLLwzAC.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/useSchoolMessageSettingsFetcher--pLLwzAC.js",
+  "sha256": "8219715280c4fa9a4941",
+  "routes": [
+   "/api/dojoSchool/{schoolId}/message-settings"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/_fetchers-D67Hb9OO.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/_fetchers-D67Hb9OO.js",
+  "sha256": "4207e551fc9163ab1848",
+  "routes": [
+   "/api/district/{districtId}/teacher/{teacherId}/bulletin-message",
+   "/api/message-thread/{messageThreadId}",
+   "/api/message-thread/{messageThreadId}/archive",
+   "/api/message-thread/{messageThreadId}/participants/self",
+   "/api/school/{schoolId}/teacher/{teacherId}/audience",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread",
+   "/api/school/{schoolId}/teacher/{teacherId}/message-thread/archived"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/location-DiicokLL.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/location-DiicokLL.js",
+  "sha256": "ed8bb756ad12b92ad2af",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ },
+ "https://new-teach.classdojo.com/assets/auth-1h57pGHI.js": {
+  "last_url": "https://new-teach.classdojo.com/assets/auth-1h57pGHI.js",
+  "sha256": "756b1f32db567fbeaa88",
+  "routes": [
+   "/api/archived-classes",
+   "/api/archived-classes/count",
+   "/api/classWhereNotVerifiedInSchool",
+   "/api/demo-classes",
+   "/api/dojo-school/{schoolId}/parent-count",
+   "/api/dojoClass",
+   "/api/dojoSchool",
+   "/api/dojoSchool/{id}",
+   "/api/dojoSchool/{schoolId}/all-classes",
+   "/api/dojoSchool/{schoolId}/archived-classes",
+   "/api/dojoSchool/{schoolId}/class-invites",
+   "/api/dojoSchool/{schoolId}/class/v2",
+   "/api/dojoSchool/{schoolId}/directory/student",
+   "/api/dojoSchool/{schoolId}/domain-usage",
+   "/api/dojoSchool/{schoolId}/highSchoolMode",
+   "/api/dojoSchool/{schoolId}/info",
+   "/api/dojoSchool/{schoolId}/link-student",
+   "/api/dojoSchool/{schoolId}/message-settings",
+   "/api/dojoSchool/{schoolId}/my-classes",
+   "/api/dojoSchool/{schoolId}/other-classes",
+   "/api/dojoSchool/{schoolId}/other-classes/count",
+   "/api/dojoSchool/{schoolId}/person",
+   "/api/dojoSchool/{schoolId}/phone-eligibility",
+   "/api/dojoSchool/{schoolId}/school-admin-explainer",
+   "/api/dojoSchool/{schoolId}/school-settings",
+   "/api/dojoSchool/{schoolId}/settings",
+   "/api/dojoSchool/{schoolId}/student",
+   "/api/dojoSchool/{schoolId}/student-matching-dismissal",
+   "/api/dojoSchool/{schoolId}/student/{studentId}",
+   "/api/dojoSchool/{schoolId}/student/{studentId}/hide",
+   "/api/dojoSchool/{schoolId}/studentBatch",
+   "/api/dojoSchool/{schoolId}/studentList",
+   "/api/dojoSchool/{schoolId}/unreadNotificationCounts",
+   "/api/needsDataTransferConsent",
+   "/api/oidc/link_login",
+   "/api/oidc/teacher",
+   "/api/oneTimeCode",
+   "/api/passwordReset",
+   "/api/personal-class-invites",
+   "/api/personal-classes",
+   "/api/school/{schoolId}/bulk-student-list",
+   "/api/school/{schoolId}/bulk-student-upload",
+   "/api/school/{schoolId}/student/{studentId}",
+   "/api/school/{schoolId}/teacher/{teacherId}/unreads",
+   "/api/schoolTeacher/schools",
+   "/api/sendEmailVerification",
+   "/api/sendEmailVerificationCode",
+   "/api/session",
+   "/api/studentsForTeacher",
+   "/api/teacher",
+   "/api/teacher/capabilities",
+   "/api/teacher/contact-info",
+   "/api/teacher/me",
+   "/api/teacher/sms-verification-confirm",
+   "/api/teacher/sms-verification-request",
+   "/api/teacher/unreads",
+   "/api/teacher/verification-info",
+   "/api/teacher/{id}",
+   "/api/teacher/{teacherId}/email-notification-settings",
+   "/api/teacher/{teacherId}/email-notification-settings/{category}",
+   "/api/teacher/{teacherId}/email-tracking",
+   "/api/teacher/{teacherId}/mailInteraction",
+   "/api/teacher/{teacherId}/messaging/email-notification-status",
+   "/api/teacher/{teacherId}/schoolVerificationRequest"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:43:32 UTC"
+ }
+}

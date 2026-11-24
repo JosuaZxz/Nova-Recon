@@ -1,0 +1,705 @@
+{
+ "_seeded": true,
+ "bu-cypressq.builds.wealthsimple.com": {
+  "url": "https://bu-cypressq.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "staging-gifts.wealthsimple.com": {
+  "url": "https://staging-gifts.wealthsimple.com/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "aide-staging.simpletax.ca": {
+  "url": "https://aide-staging.simpletax.ca/",
+  "http_status": 403,
+  "title": "SimpleTax / ImpotSimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "trade-service-staging.wealthsimple.com": {
+  "url": "https://trade-service-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "www-staging.wealthsimple.com": {
+  "url": "https://www-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "mail.previews.wealthsimple.com": {
+  "url": "https://mail.previews.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api1faqwwwg.builds.wealthsimple.com": {
+  "url": "https://api1faqwwwg.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "help-staging.simpletax.ca": {
+  "url": "https://help-staging.simpletax.ca/",
+  "http_status": 403,
+  "title": "SimpleTax / ImpotSimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "betafaqwww.builds.wealthsimple.com": {
+  "url": "https://betafaqwww.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "realtime-api.wealthsimple.com": {
+  "url": "https://realtime-api.wealthsimple.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "stagingwwww.builds.wealthsimple.com": {
+  "url": "https://stagingwwww.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "athletics-newsi.builds.wealthsimple.com": {
+  "url": "https://athletics-newsi.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "uatfaqwww.builds.wealthsimple.com": {
+  "url": "https://uatfaqwww.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "staging.wealthsimple.com": {
+  "url": "https://staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "tell-us-staging.wealthsimple.com": {
+  "url": "https://tell-us-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "www.previews.wealthsimple.com": {
+  "url": "https://www.previews.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "uke.adpartner.builds.wealthsimple.com": {
+  "url": "http://uke.adpartner.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "edk.ac.uk.apimagesasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://edk.ac.uk.apimagesasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "dev-bgla.aks.builds.wealthsimple.com": {
+  "url": "http://dev-bgla.aks.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "e-news.wealthsimple.com": {
+  "url": "http://e-news.wealthsimple.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "www2-staging.wealthsimple.com": {
+  "url": "https://www2-staging.wealthsimple.com/en-ca/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "https://www2-staging.wealthsimple.com/en-ca/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "apimagesasg-faq-wwws.builds.wealthsimple.com": {
+  "url": "https://apimagesasg-faq-wwws.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "previews.wealthsimple.com": {
+  "url": "https://previews.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "ed.ac.uk.athletics-news.builds.wealthsimple.com": {
+  "url": "http://ed.ac.uk.athletics-news.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "analytics-www-admin-2earchwwwwm.builds.wealthsimple.com": {
+  "url": "https://analytics-www-admin-2earchwwwwm.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "athletics-news.builds.wealthsimple.com": {
+  "url": "https://athletics-news.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "6625g.api-docs-faq-www.builds.wealthsimple.com": {
+  "url": "http://6625g.api-docs-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "edi.ac.uk.athletics-news.builds.wealthsimple.com": {
+  "url": "http://edi.ac.uk.athletics-news.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api-docs-faq-www-belvoir-sperry3.builds.wealthsimple.com": {
+  "url": "https://api-docs-faq-www-belvoir-sperry3.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "ac.uk.admpanelsasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://ac.uk.admpanelsasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "product-news.wealthsimple.com": {
+  "url": "https://product-news.wealthsimple.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wealthsimple.com/en-ca/learn/category/products",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "confluence-bwwi.dev.2416blank.builds.wealthsimple.com": {
+  "url": "http://confluence-bwwi.dev.2416blank.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "faq-confluence.builds.wealthsimple.com": {
+  "url": "https://faq-confluence.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "app-staging.simpletax.ca": {
+  "url": "https://app-staging.simpletax.ca/",
+  "http_status": 403,
+  "title": "SimpleTax / ImpotSimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "cs-tools-satori-staging.wealthsimple.com": {
+  "url": "https://cs-tools-satori-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api-docs-faq-www.builds.wealthsimple.com": {
+  "url": "https://api-docs-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "airflow-staging.wealthsimple.com": {
+  "url": "https://airflow-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "cs-tools-staging.wealthsimple.com": {
+  "url": "https://cs-tools-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "uky.apimagesasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://uky.apimagesasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "uk.apimagesasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://uk.apimagesasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "compliance-documents-staging.cdn.wealthsimple.com": {
+  "url": "https://compliance-documents-staging.cdn.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "ac.uk.apimagesasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://ac.uk.apimagesasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "ed.ac.uk.adpartner.builds.wealthsimple.com": {
+  "url": "http://ed.ac.uk.adpartner.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "autumn-advicstaginwww.builds.wealthsimple.com": {
+  "url": "https://autumn-advicstaginwww.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "smtp-faqa.www.builds.wealthsimple.com": {
+  "url": "http://smtp-faqa.www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "paymentcard.wealthsimple.com": {
+  "url": "https://paymentcard.wealthsimple.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://my.wealthsimple.com/app/login?af_force_deeplink=true&af_dp=wstrade%3A%2F%2F&c=WS Visa Infinite NFC&pid=WS Visa Infinite NFC&af_xp=custom&shortlink=paymentcard&source_caller=ui&onelink_id=74rd",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "bookingnewsasgchattingwwwwwws.builds.wealthsimple.com": {
+  "url": "https://bookingnewsasgchattingwwwwwws.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api-staging-legacy.wealthsimple.com": {
+  "url": "https://api-staging-legacy.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "qa-dashboard.wealthsimple.com": {
+  "url": "https://qa-dashboard.wealthsimple.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "www-staging.simpletax.ca": {
+  "url": "https://www-staging.simpletax.ca/",
+  "http_status": 403,
+  "title": "SimpleTax / ImpotSimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "bbywwwm.app.builds.wealthsimple.com": {
+  "url": "http://bbywwwm.app.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "work-staging.wealthsimple.com": {
+  "url": "https://work-staging.wealthsimple.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wealthsimple.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "assets-staging.wealthsimple.com": {
+  "url": "https://assets-staging.wealthsimple.com/",
+  "http_status": 200,
+  "title": "Wealthsimple | Smart investing",
+  "redirect": "",
+  "scripts": [
+   "https://assets-staging.wealthsimple.com/app-e57cbf9c55b57969.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api-legacy.wealthsimple.com": {
+  "url": "https://api-legacy.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "certfaqloginu.builds.wealthsimple.com": {
+  "url": "https://certfaqloginu.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "so-auth.wealthsimple.com": {
+  "url": "https://so-auth.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api.sandbox.wealthsimple.com": {
+  "url": "https://api.sandbox.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "acq.uk.admpanelsasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://acq.uk.admpanelsasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "ac.uk.adpartner.builds.wealthsimple.com": {
+  "url": "http://ac.uk.adpartner.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "atlas-staging.wealthsimple.com": {
+  "url": "https://atlas-staging.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "beta3armaniu.builds.wealthsimple.com": {
+  "url": "https://beta3armaniu.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "api.production.wealthsimple.com": {
+  "url": "https://api.production.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "admin-2earchwwww.builds.wealthsimple.com": {
+  "url": "https://admin-2earchwwww.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "edc.ac.uk.admpanelsasg-faq-www.builds.wealthsimple.com": {
+  "url": "http://edc.ac.uk.admpanelsasg-faq-www.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:29:12 UTC"
+ },
+ "78c-www-staging-aihsunq.builds.wealthsimple.com": {
+  "url": "https://78c-www-staging-aihsunq.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "admpanelsasg-faq-wwwu.builds.wealthsimple.com": {
+  "url": "https://admpanelsasg-faq-wwwu.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "apex-staging.wealthsimple.com": {
+  "url": "https://apex-staging.wealthsimple.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://staging.wealthsimple.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "biysk.dev.aks.builds.wealthsimple.com": {
+  "url": "http://biysk.dev.aks.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "isabbw.ed.ac.uk.athletics-news.builds.wealthsimple.com": {
+  "url": "http://isabbw.ed.ac.uk.athletics-news.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ },
+ "deva.aks.builds.wealthsimple.com": {
+  "url": "http://deva.aks.builds.wealthsimple.com/",
+  "http_status": 403,
+  "title": "Wealthsimple",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:27:42 UTC"
+ }
+}

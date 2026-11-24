@@ -1,0 +1,206 @@
+{
+ "_seeded": true,
+ "useast-openads-staging.gen.adsrvr.org": {
+  "url": "https://useast-openads-staging.gen.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "auth-intsb.thetradedesk.com": {
+  "url": "https://auth-intsb.thetradedesk.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "preview-desk.thetradedesk.com": {
+  "url": "https://preview-desk.thetradedesk.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.thetradedesk.com/connect/authorize?client_id=desk.refresh&redirect_uri=https%3A%2F%2Fpreview-desk.thetradedesk.com%2Fsignin-oidc&response_type=code&scope=openid%20profile%20ttdui_refresh%",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "data.adsrvr.org": {
+  "url": "https://data.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "apisb.thetradedesk.com": {
+  "url": "https://apisb.thetradedesk.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "test.cdn.thetradedesk.com": {
+  "url": "https://test.cdn.thetradedesk.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "author.thetradedesk.com": {
+  "url": "https://author.thetradedesk.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.thetradedesk.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "emea-data.adsrvr.org": {
+  "url": "https://emea-data.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "auth.gen.adsrvr.org": {
+  "url": "http://auth.gen.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "data-oracle.adsrvr.org": {
+  "url": "https://data-oracle.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "apac-data.adsrvr.org": {
+  "url": "https://apac-data.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "azauthsb.adsrvr.org": {
+  "url": "http://azauthsb.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "r-data.adsrvr.org": {
+  "url": "https://r-data.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "preview-desk-internal.thetradedesk.com": {
+  "url": "https://preview-desk-internal.thetradedesk.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "apisb1.thetradedesk.com": {
+  "url": "https://apisb1.thetradedesk.com/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "api.thetradedesk.com": {
+  "url": "https://api.thetradedesk.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "data-ingestion-staging.adsrvr.org": {
+  "url": "https://data-ingestion-staging.adsrvr.org/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "azauth.adsrvr.org": {
+  "url": "http://azauth.adsrvr.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "packages-qa.thetradedesk.com": {
+  "url": "https://packages-qa.thetradedesk.com/",
+  "http_status": 200,
+  "title": "The Trade Desk",
+  "redirect": "",
+  "scripts": [
+   "https://packages-qa.thetradedesk.com/static/js/2.9838d77b.chunk.js",
+   "https://packages-qa.thetradedesk.com/static/js/main.f81c63d3.chunk.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ },
+ "ops-sso.adsrvr.org": {
+  "url": "https://ops-sso.adsrvr.org/auth/admin/master/console/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://ops-sso.adsrvr.org/auth/admin/master/console/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:20:49 UTC"
+ }
+}

@@ -1,0 +1,483 @@
+{
+ "_seeded": true,
+ "codex-portals.gateway.unified-32.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-32.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-54.api.openai.com": {
+  "url": "https://mail.gateway.unified-54.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-136.api.openai.com": {
+  "url": "https://www.gateway.unified-136.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-188.api.openai.com": {
+  "url": "https://www.gateway.unified-188.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-72.api.openai.com": {
+  "url": "https://mail.gateway.unified-72.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "observability-webhook.api.openai.com": {
+  "url": "https://observability-webhook.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "api-cloudflare.openai.com": {
+  "url": "https://api-cloudflare.openai.com/",
+  "http_status": 530,
+  "title": "Origin DNS error | api-cloudflare.openai.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-71.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-71.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.edge.unified-188.api.openai.com": {
+  "url": "http://mail.edge.unified-188.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.edge.unified-192.api.openai.com": {
+  "url": "http://mail.edge.unified-192.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-131.api.openai.com": {
+  "url": "https://mail.gateway.unified-131.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "accounts.api.openai.com": {
+  "url": "https://accounts.api.openai.com/",
+  "http_status": 530,
+  "title": "Origin DNS error | accounts.api.openai.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "auth.enterpriseservices.openai.com": {
+  "url": "https://auth.enterpriseservices.openai.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "papaya.fde.openai.com": {
+  "url": "https://papaya.fde.openai.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.edge.unified-196.api.openai.com": {
+  "url": "http://www.edge.unified-196.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-83.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-83.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-152.api.openai.com": {
+  "url": "https://www.gateway.unified-152.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-194.api.openai.com": {
+  "url": "https://www.gateway.unified-194.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-201.api.openai.com": {
+  "url": "https://www.gateway.unified-201.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-129.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-129.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-40.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-40.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-193.api.openai.com": {
+  "url": "https://mail.gateway.unified-193.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-53.api.openai.com": {
+  "url": "https://www.gateway.unified-53.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.encl-10.api.openai.com": {
+  "url": "https://www.gateway.encl-10.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-76.api.openai.com": {
+  "url": "https://mail.gateway.unified-76.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "it-agent-ingress.api.openai.com": {
+  "url": "https://it-agent-ingress.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.edge.unified-149.api.openai.com": {
+  "url": "http://mail.edge.unified-149.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-177.api.openai.com": {
+  "url": "https://www.gateway.unified-177.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-162.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-162.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.uchat-1.api.openai.com": {
+  "url": "https://www.gateway.uchat-1.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-200.api.openai.com": {
+  "url": "https://mail.gateway.unified-200.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-97.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-97.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "auth0.openai.com": {
+  "url": "https://auth0.openai.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://chatgpt.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.edge.unified-164.api.openai.com": {
+  "url": "http://www.edge.unified-164.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "account.supply.openai.com": {
+  "url": "https://account.supply.openai.com/",
+  "http_status": 406,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-174.api.openai.com": {
+  "url": "https://www.gateway.unified-174.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.edge.unified-178.api.openai.com": {
+  "url": "http://mail.edge.unified-178.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "devday.openai.com": {
+  "url": "https://devday.openai.com/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://openai.com/devday/2026/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.edge.unified-167.api.openai.com": {
+  "url": "http://www.edge.unified-167.api.openai.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-202.api.openai.com": {
+  "url": "https://mail.gateway.unified-202.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-123.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-123.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "www.gateway.unified-45.api.openai.com": {
+  "url": "https://www.gateway.unified-45.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.uapi-0.api.openai.com": {
+  "url": "https://mail.gateway.uapi-0.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-163.api.openai.com": {
+  "url": "https://mail.gateway.unified-163.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-79.api.openai.com": {
+  "url": "https://mail.gateway.unified-79.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-107.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-107.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "mail.gateway.unified-152.api.openai.com": {
+  "url": "https://mail.gateway.unified-152.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ },
+ "codex-portals.gateway.unified-88.api.openai.com": {
+  "url": "https://codex-portals.gateway.unified-88.api.openai.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:35:44 UTC"
+ }
+}

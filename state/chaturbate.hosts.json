@@ -1,0 +1,138 @@
+{
+ "_seeded": true,
+ "articles.web-testbed.cb.dev": {
+  "url": "https://articles.web-testbed.cb.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "m.testbed.cb.dev": {
+  "url": "https://m.testbed.cb.dev/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://testbed.cb.dev/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "admin.live.mmwebc.dev": {
+  "url": "https://admin.live.mmwebc.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "wildcard.web-testbed.cb.dev": {
+  "url": "https://wildcard.web-testbed.cb.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "mail.web-testbed.cb.dev": {
+  "url": "https://mail.web-testbed.cb.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "pt.testbed.cb.dev": {
+  "url": "https://pt.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "de.testbed.cb.dev": {
+  "url": "https://de.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "www.testbed.cb.dev": {
+  "url": "https://www.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "es.testbed.cb.dev": {
+  "url": "https://es.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "devportal.cb.dev": {
+  "url": "https://devportal.cb.dev/",
+  "http_status": 200,
+  "title": "Dev Portal",
+  "redirect": "",
+  "scripts": [
+   "https://devportal.cb.dev/7244.92c5a6e7.js",
+   "https://devportal.cb.dev/assets/browser-check.js",
+   "https://devportal.cb.dev/assets/newrelic.js",
+   "https://devportal.cb.dev/bundle.bb8cf169.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "testbed.cb.dev": {
+  "url": "https://www.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://www.testbed.cb.dev/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "ru.testbed.cb.dev": {
+  "url": "https://ru.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ },
+ "beta.securegatewayaccess.com": {
+  "url": "https://beta.securegatewayaccess.com/customer_support/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://beta.securegatewayaccess.com/customer_support/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 02:37:37 UTC"
+ }
+}

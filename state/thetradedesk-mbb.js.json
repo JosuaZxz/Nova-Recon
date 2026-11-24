@@ -1,0 +1,18 @@
+{
+ "https://packages-qa.thetradedesk.com/static/js/2.9838d77b.chunk.js": {
+  "last_url": "https://packages-qa.thetradedesk.com/static/js/2.9838d77b.chunk.js",
+  "sha256": "4dd77525422a6d8361f4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:20:49 UTC"
+ },
+ "https://packages-qa.thetradedesk.com/static/js/main.f81c63d3.chunk.js": {
+  "last_url": "https://packages-qa.thetradedesk.com/static/js/main.f81c63d3.chunk.js",
+  "sha256": "f8c1a0f121f6c47b16ea",
+  "routes": [],
+  "graphql_ops": [
+   "CampaignAndFlights"
+  ],
+  "updated": "2026-11-24 02:20:49 UTC"
+ }
+}

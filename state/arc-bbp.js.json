@@ -1,0 +1,752 @@
+{
+ "https://studio.arc.io/assets/entry.client-_cOe4xnp.js": {
+  "last_url": "https://studio.arc.io/assets/entry.client-_cOe4xnp.js",
+  "sha256": "a1398a20f894f2e14f5a",
+  "routes": [
+   "/api/analytics"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/chunk-62JRHF6Z-B9gUAm2a.js": {
+  "last_url": "https://studio.arc.io/assets/chunk-62JRHF6Z-B9gUAm2a.js",
+  "sha256": "310e7b6e082d9de3fcce",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/index-DC6-xXhv.js": {
+  "last_url": "https://studio.arc.io/assets/index-DC6-xXhv.js",
+  "sha256": "173ce26c44959c752019",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/edge-response-BzPp1yJt.js": {
+  "last_url": "https://studio.arc.io/assets/edge-response-BzPp1yJt.js",
+  "sha256": "2b62a860e316b8af5d29",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/root-B7s_l7U8.js": {
+  "last_url": "https://studio.arc.io/assets/root-B7s_l7U8.js",
+  "sha256": "0bfa0fcba7414d21a320",
+  "routes": [
+   "/api/feature-flags",
+   "/api/plan-status"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/index-O3vQlJ32.js": {
+  "last_url": "https://studio.arc.io/assets/index-O3vQlJ32.js",
+  "sha256": "67c407d150ee380f3521",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/TermsMenu-D-QY0nCB.js": {
+  "last_url": "https://studio.arc.io/assets/TermsMenu-D-QY0nCB.js",
+  "sha256": "3cc4e5b4443cd2bf076c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/theme-TiDoiWCz.js": {
+  "last_url": "https://studio.arc.io/assets/theme-TiDoiWCz.js",
+  "sha256": "cb3dad8ab0f172436f0f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/en_US-Y4ZOVFV4-gyQPD-yh.js": {
+  "last_url": "https://studio.arc.io/assets/en_US-Y4ZOVFV4-gyQPD-yh.js",
+  "sha256": "d01a573dbd52157469bd",
+  "routes": [
+   "/api/WagmiProvider",
+   "/v1/resolve-ens"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/client-only-DcKFNTKv.js": {
+  "last_url": "https://studio.arc.io/assets/client-only-DcKFNTKv.js",
+  "sha256": "7b012d2b9c1aab0eb2dd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/IconButton-B05Ij1ZM.js": {
+  "last_url": "https://studio.arc.io/assets/IconButton-B05Ij1ZM.js",
+  "sha256": "55dbc59854206b765ac7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/useBreakpoints-CHbGUY8N.js": {
+  "last_url": "https://studio.arc.io/assets/useBreakpoints-CHbGUY8N.js",
+  "sha256": "919b043e0a6eecfc036c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/Spinner-R6Vgfd7E.js": {
+  "last_url": "https://studio.arc.io/assets/Spinner-R6Vgfd7E.js",
+  "sha256": "9dc032dbd8ec9e67d1df",
+  "routes": [
+   "/api/analytics"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/Popover-DWNhz90o.js": {
+  "last_url": "https://studio.arc.io/assets/Popover-DWNhz90o.js",
+  "sha256": "1c81e6fd48b95aeb5c30",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/ErrorPage-pTeTgh5-.js": {
+  "last_url": "https://studio.arc.io/assets/ErrorPage-pTeTgh5-.js",
+  "sha256": "7eea137763c16c30bdbb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/ScrollArea-XdUjt7gT.js": {
+  "last_url": "https://studio.arc.io/assets/ScrollArea-XdUjt7gT.js",
+  "sha256": "14caeff32b06da530433",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/generateAuthUrl-DTSjCL4z.js": {
+  "last_url": "https://studio.arc.io/assets/generateAuthUrl-DTSjCL4z.js",
+  "sha256": "b5ceefbb02b7b5f99495",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/ArcLogo-YHGUBfuh.js": {
+  "last_url": "https://studio.arc.io/assets/ArcLogo-YHGUBfuh.js",
+  "sha256": "a0ca89fb0aa98db235e6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/Button-DJe90A4-.js": {
+  "last_url": "https://studio.arc.io/assets/Button-DJe90A4-.js",
+  "sha256": "72d8d6ff673ba019a4fb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/Text-C5nc-BmT.js": {
+  "last_url": "https://studio.arc.io/assets/Text-C5nc-BmT.js",
+  "sha256": "5b3ba1c5fee2827768d9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://studio.arc.io/assets/app-BwSM7gsV.js": {
+  "last_url": "https://studio.arc.io/assets/app-BwSM7gsV.js",
+  "sha256": "910faa4c6634b2ac609f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:11 UTC"
+ },
+ "https://explorer.testnet.arc.io/assets/envs.js": {
+  "last_url": "https://explorer.testnet.arc.io/assets/envs.js",
+  "sha256": "41e1893ee35ec8f5df0e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3l3bh8t1ar0a3.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3l3bh8t1ar0a3.js",
+  "sha256": "06b6418b2e800759e4ab",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0f-jdtp9h2w45.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0f-jdtp9h2w45.js",
+  "sha256": "afb334a0504cb6cfc105",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3vpfl1ffrm1dy.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3vpfl1ffrm1dy.js",
+  "sha256": "26092210e50348c78bbb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3ejqjg4cxel9w.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3ejqjg4cxel9w.js",
+  "sha256": "ffb7f40ef9de6425cd1b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/01_0as0ht9l_u.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/01_0as0ht9l_u.js",
+  "sha256": "8740e491510572aa5714",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0_0_jq38_hnpb.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0_0_jq38_hnpb.js",
+  "sha256": "85d513343eec6ec5f920",
+  "routes": [
+   "/api/account/auth/logout",
+   "/api/account/v2/address/link",
+   "/api/account/v2/authenticate_via_dynamic",
+   "/api/account/v2/authenticate_via_wallet",
+   "/api/account/v2/confirm_otp",
+   "/api/account/v2/email/link",
+   "/api/account/v2/get_csrf",
+   "/api/account/v2/send_otp",
+   "/api/account/v2/siwe_message",
+   "/api/account/v2/user/api_keys{/:id}",
+   "/api/account/v2/user/custom_abis{/:id}",
+   "/api/account/v2/user/info",
+   "/api/account/v2/user/tags/address{/:id}",
+   "/api/account/v2/user/tags/transaction{/:id}",
+   "/api/account/v2/user/watchlist{/:id}",
+   "/api/v1/activity/check-pass",
+   "/api/v1/activity/track/contract/confirm",
+   "/api/v1/activity/track/transaction/confirm",
+   "/api/v1/addresses/:address",
+   "/api/v1/auth/code/:code",
+   "/api/v1/auth/login",
+   "/api/v1/auth/logout",
+   "/api/v1/auth/nonce",
+   "/api/v1/auth/user/:address",
+   "/api/v1/chains/:instanceId/marketplace/dapps",
+   "/api/v1/chains/:instanceId/marketplace/dapps/:dappId",
+   "/api/v1/chains/:instanceId/marketplace/dapps/:dappId/ratings",
+   "/api/v1/chains/:instanceId/metadata-submissions/tag",
+   "/api/v1/chains/:instanceId/pools",
+   "/api/v1/chains/:instanceId/pools/:hash",
+   "/api/v1/chains/:instanceId/token-info-submissions/selectors",
+   "/api/v1/chains/:instanceId/token-info-submissions{/:id}",
+   "/api/v1/chains/:instanceId/token-infos/:hash",
+   "/api/v1/chains/:instanceId/verified-addresses",
+   "/api/v1/chains/:instanceId/verified-addresses:type",
+   "/api/v1/config",
+   "/api/v1/counters",
+   "/api/v1/domains/:name",
+   "/api/v1/domains/:name/events",
+   "/api/v1/graphql",
+   "/api/v1/instances",
+   "/api/v1/interchain/bridges",
+   "/api/v1/interchain/chains",
+   "/api/v1/interchain/messages",
+   "/api/v1/interchain/messages/:id",
+   "/api/v1/interchain/transfers",
+   "/api/v1/lines",
+   "/api/v1/lines/:id",
+   "/api/v1/metadata",
+   "/api/v1/pages/contracts",
+   "/api/v1/pages/main",
+   "/api/v1/pages/multichain/main",
+   "/api/v1/pages/transactions",
+   "/api/v1/protocols",
+   "/api/v1/public-tag-types",
+   "/api/v1/stats/chain/:chainId/bridged-tokens",
+   "/api/v1/stats/chain/:chainId/messages-paths/received",
+   "/api/v1/stats/chain/:chainId/messages-paths/sent",
+   "/api/v1/stats/chains",
+   "/api/v1/tags:search",
+   "/api/v1/user/activity/rewards",
+   "/api/v1/user/activity/track/contract",
+   "/api/v1/user/activity/track/transaction",
+   "/api/v1/user/activity/track/usage",
+   "/api/v1/user/badges",
+   "/api/v1/user/balances",
+   "/api/v1/user/daily/check",
+   "/api/v1/user/daily/claim",
+   "/api/v1/user/referrals",
+   "/api/v2/addresses/",
+   "/api/v2/addresses/:hash",
+   "/api/v2/addresses/:hash/beacon/deposits",
+   "/api/v2/addresses/:hash/blocks-validated",
+   "/api/v2/addresses/:hash/celo/election-rewards",
+   "/api/v2/addresses/:hash/celo/election-rewards/csv",
+   "/api/v2/addresses/:hash/coin-balance-history",
+   "/api/v2/addresses/:hash/coin-balance-history-by-day",
+   "/api/v2/addresses/:hash/counters",
+   "/api/v2/addresses/:hash/internal-transactions",
+   "/api/v2/addresses/:hash/internal-transactions/csv",
+   "/api/v2/addresses/:hash/logs",
+   "/api/v2/addresses/:hash/logs/csv",
+   "/api/v2/addresses/:hash/nft",
+   "/api/v2/addresses/:hash/nft/collections",
+   "/api/v2/addresses/:hash/tabs-counters",
+   "/api/v2/addresses/:hash/token-balances",
+   "/api/v2/addresses/:hash/token-transfers",
+   "/api/v2/addresses/:hash/token-transfers/csv",
+   "/api/v2/addresses/:hash/tokens",
+   "/api/v2/addresses/:hash/transactions",
+   "/api/v2/addresses/:hash/transactions/csv",
+   "/api/v2/addresses/:hash/withdrawals",
+   "/api/v2/advanced-filters",
+   "/api/v2/advanced-filters/csv",
+   "/api/v2/advanced-filters/methods",
+   "/api/v2/arbitrum/batches",
+   "/api/v2/arbitrum/batches/:number",
+   "/api/v2/arbitrum/batches/count",
+   "/api/v2/arbitrum/batches/da/celestia/:height/:commitment",
+   "/api/v2/arbitrum/messages/:direction",
+   "/api/v2/arbitrum/messages/:direction/count",
+   "/api/v2/arbitrum/messages/claim/:id",
+   "/api/v2/arbitrum/messages/withdrawals/:hash",
+   "/api/v2/beacon/deposits",
+   "/api/v2/beacon/deposits/count",
+   "/api/v2/blobs/:hash",
+   "/api/v2/blocks",
+   "/api/v2/blocks/:height/countdown",
+   "/api/v2/blocks/:height_or_hash",
+   "/api/v2/blocks/:height_or_hash/beacon/deposits",
+   "/api/v2/blocks/:height_or_hash/internal-transactions",
+   "/api/v2/blocks/:height_or_hash/transactions",
+   "/api/v2/blocks/:height_or_hash/withdrawals",
+   "/api/v2/blocks/arbitrum-batch/:number",
+   "/api/v2/blocks/optimism-batch/:number",
+   "/api/v2/blocks/scroll-batch/:number",
+   "/api/v2/celo/epochs",
+   "/api/v2/celo/epochs/:number",
+   "/api/v2/celo/epochs/:number/election-rewards/:reward_type",
+   "/api/v2/config/backend",
+   "/api/v2/config/backend-version",
+   "/api/v2/config/celo",
+   "/api/v2/config/csv-export",
+   "/api/v2/config/smart-contracts/languages",
+   "/api/v2/csv-exports/:id",
+   "/api/v2/internal-transactions",
+   "/api/v2/key",
+   "/api/v2/main-page/arbitrum/batches/committed",
+   "/api/v2/main-page/arbitrum/batches/latest-number",
+   "/api/v2/main-page/arbitrum/messages/to-rollup",
+   "/api/v2/main-page/blocks",
+   "/api/v2/main-page/indexing-status",
+   "/api/v2/main-page/optimism-deposits",
+   "/api/v2/main-page/transactions",
+   "/api/v2/main-page/transactions/watchlist",
+   "/api/v2/main-page/zksync/batches/latest-number",
+   "/api/v2/optimism/batches",
+   "/api/v2/optimism/batches/:number",
+   "/api/v2/optimism/batches/count",
+   "/api/v2/optimism/batches/da/celestia/:height/:commitment",
+   "/api/v2/optimism/deposits",
+   "/api/v2/optimism/deposits/count",
+   "/api/v2/optimism/games",
+   "/api/v2/optimism/games/count",
+   "/api/v2/optimism/interop/messages",
+   "/api/v2/optimism/interop/messages/count",
+   "/api/v2/optimism/output-roots",
+   "/api/v2/optimism/output-roots/count",
+   "/api/v2/optimism/withdrawals",
+   "/api/v2/optimism/withdrawals/count",
+   "/api/v2/proxy/3rdparty/:name",
+   "/api/v2/proxy/3rdparty/noves-fi/addresses/:address/transactions",
+   "/api/v2/proxy/3rdparty/noves-fi/transaction-descriptions",
+   "/api/v2/proxy/3rdparty/noves-fi/transactions/:hash",
+   "/api/v2/proxy/3rdparty/solidityscan/smart-contracts/:hash/report",
+   "/api/v2/proxy/3rdparty/xname/addresses/:hash",
+   "/api/v2/proxy/account-abstraction/accounts/:hash",
+   "/api/v2/proxy/account-abstraction/operations",
+   "/api/v2/proxy/account-abstraction/operations/:hash",
+   "/api/v2/proxy/account-abstraction/operations/:hash/summary",
+   "/api/v2/proxy/metadata/addresses",
+   "/api/v2/scroll/batches",
+   "/api/v2/scroll/batches/:number",
+   "/api/v2/scroll/batches/count",
+   "/api/v2/scroll/deposits",
+   "/api/v2/scroll/deposits/count",
+   "/api/v2/scroll/withdrawals",
+   "/api/v2/scroll/withdrawals/count",
+   "/api/v2/search",
+   "/api/v2/search/check-redirect",
+   "/api/v2/search/quick",
+   "/api/v2/shibarium/deposits",
+   "/api/v2/shibarium/deposits/count",
+   "/api/v2/shibarium/withdrawals",
+   "/api/v2/shibarium/withdrawals/count",
+   "/api/v2/smart-contracts",
+   "/api/v2/smart-contracts/:hash",
+   "/api/v2/smart-contracts/:hash/audit-reports",
+   "/api/v2/smart-contracts/:hash/verification/via/:method",
+   "/api/v2/smart-contracts/counters",
+   "/api/v2/smart-contracts/verification/config",
+   "/api/v2/stats",
+   "/api/v2/stats/charts/market",
+   "/api/v2/stats/charts/secondary-coin-market",
+   "/api/v2/stats/charts/transactions",
+   "/api/v2/stats/hot-smart-contracts",
+   "/api/v2/tac/operations",
+   "/api/v2/tac/operations/:id",
+   "/api/v2/token-transfers",
+   "/api/v2/tokens",
+   "/api/v2/tokens/:hash",
+   "/api/v2/tokens/:hash/counters",
+   "/api/v2/tokens/:hash/holders",
+   "/api/v2/tokens/:hash/holders/csv",
+   "/api/v2/tokens/:hash/instances",
+   "/api/v2/tokens/:hash/instances/:id",
+   "/api/v2/tokens/:hash/instances/:id/holders",
+   "/api/v2/tokens/:hash/instances/:id/refetch-metadata",
+   "/api/v2/tokens/:hash/instances/:id/transfers",
+   "/api/v2/tokens/:hash/instances/:id/transfers-count",
+   "/api/v2/tokens/:hash/transfers",
+   "/api/v2/tokens/:hash/ui-multiplier-changes",
+   "/api/v2/tokens/bridged",
+   "/api/v2/transactions",
+   "/api/v2/transactions/:hash",
+   "/api/v2/transactions/:hash/blobs",
+   "/api/v2/transactions/:hash/external-transactions",
+   "/api/v2/transactions/:hash/fhe-operations",
+   "/api/v2/transactions/:hash/internal-transactions",
+   "/api/v2/transactions/:hash/logs",
+   "/api/v2/transactions/:hash/preview",
+   "/api/v2/transactions/:hash/raw-trace",
+   "/api/v2/transactions/:hash/state-changes",
+   "/api/v2/transactions/:hash/summary",
+   "/api/v2/transactions/:hash/token-transfers",
+   "/api/v2/transactions/arbitrum-batch/:number",
+   "/api/v2/transactions/execution-node/:hash",
+   "/api/v2/transactions/optimism-batch/:number",
+   "/api/v2/transactions/scroll-batch/:number",
+   "/api/v2/transactions/stats",
+   "/api/v2/transactions/watchlist",
+   "/api/v2/transactions/zksync-batch/:number",
+   "/api/v2/validators/blackfort",
+   "/api/v2/validators/blackfort/counters",
+   "/api/v2/validators/stability",
+   "/api/v2/validators/stability/counters",
+   "/api/v2/validators/zilliqa",
+   "/api/v2/validators/zilliqa/:bls_public_key",
+   "/api/v2/withdrawals",
+   "/api/v2/withdrawals/counters",
+   "/api/v2/zksync/batches",
+   "/api/v2/zksync/batches/:number",
+   "/api/v2/zksync/batches/count",
+   "/v1/trpc/clusters.getClusterById",
+   "/v1/trpc/names.get",
+   "/v1/trpc/names.getNamesByOwnerAddress",
+   "/v1/trpc/names.leaderboard",
+   "/v1/trpc/names.search"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/32lc0a245o1w2.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/32lc0a245o1w2.js",
+  "sha256": "f15765108096810fffc6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/2sbsqui4tz17l.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/2sbsqui4tz17l.js",
+  "sha256": "1aae5a6870e952e007f1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:06 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/2fgwk13sssfg3.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/2fgwk13sssfg3.js",
+  "sha256": "d829fc254c0fa3b70679",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3rv2_h-ostlmp.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3rv2_h-ostlmp.js",
+  "sha256": "046c3d29d0423c3038b4",
+  "routes": [
+   "/api/eval/",
+   "/api/features/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/2ognenp80e-w_.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/2ognenp80e-w_.js",
+  "sha256": "a8b8e0fb6487fd68df2d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0j731mqq8h0-r.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0j731mqq8h0-r.js",
+  "sha256": "4409a07131f1e960855d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/094fv1v6pz19m.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/094fv1v6pz19m.js",
+  "sha256": "37ced92f54d24af1d68f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1alekjv_r6-d1.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1alekjv_r6-d1.js",
+  "sha256": "2b306aca89aa6feaa4b9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1q6pzozja44xq.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1q6pzozja44xq.js",
+  "sha256": "509c1cbec8e53edafff5",
+  "routes": [
+   "/auth/profile"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1yvy26ekth3aj.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1yvy26ekth3aj.js",
+  "sha256": "52fa2ed277acd5a1341b",
+  "routes": [
+   "/api/config",
+   "/api/csrf",
+   "/api/healthz",
+   "/api/log",
+   "/api/metrics",
+   "/api/monitoring/invalid-api-schema",
+   "/api/proxy",
+   "/auth/profile"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0xqqfrayuqxsx.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0xqqfrayuqxsx.js",
+  "sha256": "cee93ea3d87c157af4fa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/26_mg6m-skm_y.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/26_mg6m-skm_y.js",
+  "sha256": "5b0d1075ae8dd9cdabc5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1tn8w11-yqfbc.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1tn8w11-yqfbc.js",
+  "sha256": "7e05662f7541e00b8aa3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0b5gmzidrv8fp.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0b5gmzidrv8fp.js",
+  "sha256": "29a823453e08cecc0dc2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1v_-34xooth28.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1v_-34xooth28.js",
+  "sha256": "c20caa52a7e6aa5b6c37",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/2nj2crgenuwi-.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/2nj2crgenuwi-.js",
+  "sha256": "99d26e65f4fcdaf00c9e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:07 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0_qokp6gk6dme.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0_qokp6gk6dme.js",
+  "sha256": "d521149b543909528d98",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/14pz8-hkffk5e.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/14pz8-hkffk5e.js",
+  "sha256": "64a98bcee699ea750bce",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/1htd_3vuizk2l.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/1htd_3vuizk2l.js",
+  "sha256": "7a8d1f706e74001def2d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0f3vn0r6edpp7.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0f3vn0r6edpp7.js",
+  "sha256": "a6efe5108e17205f684c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/36dezrbptif_d.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/36dezrbptif_d.js",
+  "sha256": "e7b867137a607ad6c8a0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/0gzqn2w5lb95l.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/0gzqn2w5lb95l.js",
+  "sha256": "6ef65e953aee62492d9a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/39hf-jo1p31qo.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/39hf-jo1p31qo.js",
+  "sha256": "61ea7f62a3758e1e2062",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3ceynbrorg331.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3ceynbrorg331.js",
+  "sha256": "7c3a5d902e94102c81d6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3jxat6y3p1syz.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3jxat6y3p1syz.js",
+  "sha256": "311c58b5dff0984b37e9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/253dh9y7j5snp.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/253dh9y7j5snp.js",
+  "sha256": "2914561f1991d251e78f",
+  "routes": [
+   "/api/v1/safes"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/2lurm2xgf1ptw.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/2lurm2xgf1ptw.js",
+  "sha256": "0ef3c8e7445dac736bd1",
+  "routes": [
+   "/api/config",
+   "/api/csrf",
+   "/api/healthz",
+   "/api/log",
+   "/api/metrics",
+   "/api/monitoring/invalid-api-schema",
+   "/api/proxy",
+   "/auth/profile"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:08 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3yjib6u-9lmou.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3yjib6u-9lmou.js",
+  "sha256": "24a0dd52cc409e0380aa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://explorer.testnet.arc.io/_next/static/chunks/3zw34vvtfp6bx.js": {
+  "last_url": "https://explorer.testnet.arc.io/_next/static/chunks/3zw34vvtfp6bx.js",
+  "sha256": "12a77319ef31c9f4a3c3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:10 UTC"
+ },
+ "https://studio.arc.io/assets/authModal-DZihTHPu.js": {
+  "last_url": "https://studio.arc.io/assets/authModal-DZihTHPu.js",
+  "sha256": "fb6404764574f9a9b412",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:12 UTC"
+ },
+ "https://studio.arc.io/assets/index-B5mS-cuD.js": {
+  "last_url": "https://studio.arc.io/assets/index-B5mS-cuD.js",
+  "sha256": "f55b9e2494a7c1144e43",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:12 UTC"
+ },
+ "https://studio.arc.io/assets/_index-C6TTSXBO.js": {
+  "last_url": "https://studio.arc.io/assets/_index-C6TTSXBO.js",
+  "sha256": "0b69aa1e68683ba48986",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:12 UTC"
+ },
+ "https://studio.arc.io/assets/Chat.client-oiH3oKs4.js": {
+  "last_url": "https://studio.arc.io/assets/Chat.client-oiH3oKs4.js",
+  "sha256": "63f638f96f865486b84a",
+  "routes": [
+   "/api/app-share",
+   "/api/apps",
+   "/api/chat/cancel",
+   "/api/feedback",
+   "/api/sandbox-pause",
+   "/api/usage"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:12 UTC"
+ },
+ "https://studio.arc.io/assets/ArcStudioWordmark-B9Fezl3l.js": {
+  "last_url": "https://studio.arc.io/assets/ArcStudioWordmark-B9Fezl3l.js",
+  "sha256": "8110279ab02a061192b4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ },
+ "https://studio.arc.io/assets/useBrowserPathname-CTyupTlb.js": {
+  "last_url": "https://studio.arc.io/assets/useBrowserPathname-CTyupTlb.js",
+  "sha256": "9e7fce954bba78965f9a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ },
+ "https://studio.arc.io/assets/mobile-By-maJAN.js": {
+  "last_url": "https://studio.arc.io/assets/mobile-By-maJAN.js",
+  "sha256": "842bd6083ba591bfb2b5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ },
+ "https://studio.arc.io/assets/BetaChip-pshVw7hf.js": {
+  "last_url": "https://studio.arc.io/assets/BetaChip-pshVw7hf.js",
+  "sha256": "99257a12ed08a435f1da",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ },
+ "https://studio.arc.io/assets/Footer-BSgyQai5.js": {
+  "last_url": "https://studio.arc.io/assets/Footer-BSgyQai5.js",
+  "sha256": "974c13765654b5fcb698",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ },
+ "https://studio.arc.io/assets/CopyButton-DzPLflJ9.js": {
+  "last_url": "https://studio.arc.io/assets/CopyButton-DzPLflJ9.js",
+  "sha256": "9266f238595de403bb27",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:24:13 UTC"
+ }
+}

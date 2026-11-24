@@ -1,0 +1,30 @@
+{
+ "https://developers.skyscanner.net/assets/js/runtime~main.HASH.js": {
+  "last_url": "https://developers.skyscanner.net/assets/js/runtime~main.1279d051.js",
+  "sha256": "0891ac60b28f0bf174eb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:18:28 UTC"
+ },
+ "https://developers.skyscanner.net/assets/js/main.HASH.js": {
+  "last_url": "https://developers.skyscanner.net/assets/js/main.b0a2a1d0.js",
+  "sha256": "a451ea76ebb824b8dc19",
+  "routes": [
+   "/api/autosuggest/",
+   "/api/carhire-agents/",
+   "/api/carhire-indicative/",
+   "/api/carhire-live-pricing/",
+   "/api/carriers/",
+   "/api/culture/",
+   "/api/flights-indicative/",
+   "/api/flights-live-pricing/",
+   "/api/geo/",
+   "/api/hotels-content/",
+   "/api/hotels-indicative/",
+   "/api/hotels-live/",
+   "/api/hotels-reviews/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-24 02:18:29 UTC"
+ }
+}
