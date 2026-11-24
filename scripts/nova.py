@@ -540,14 +540,21 @@ def _persist_findings(program: str, findings: list[dict], rebuild: bool = False)
     index = load_findings_index(program)
     saved = 0
     rejected = 0
+    per_type_saved: dict[str, int] = {}
     day_dir = FINDINGS_DIR / today_str() / program
     day_dir.mkdir(parents=True, exist_ok=True)
 
     for f in findings:
-        if f.get("type") == "dangling-cname":
+        ftype = f.get("type", "")
+        if ftype == "dangling-cname":
             continue
         h = _finding_dedupe_key(f)
         if not rebuild and h in index:
+            continue
+        # Prevent sibling CDN/cluster subdomains from flooding >3 identical-category reports in one run.
+        if per_type_saved.get(ftype, 0) >= 3:
+            append_finding_index(program, h)
+            index.add(h)
             continue
 
         f["program"] = program
@@ -575,6 +582,7 @@ def _persist_findings(program: str, findings: list[dict], rebuild: bool = False)
         with open(day_dir / f"{f['type']}-{h}.json", "w", encoding="utf-8") as fh:
             json.dump(f, fh, ensure_ascii=False, indent=2)
         saved += 1
+        per_type_saved[ftype] = per_type_saved.get(ftype, 0) + 1
         print(
             f"  [VALIDATED-LEAD] {h} {f['type']} "
             f"[{f['severity_hint'].upper()} | AI:{f['ai_score']}/100] -> {report_name}"
@@ -991,25 +999,33 @@ def check_takeover(host: str, policy: ProgramPolicy) -> dict | None:
 
 
 def check_cors(url: str) -> dict | None:
-    """Check arbitrary Origin reflection WITH Access-Control-Allow-Credentials: true."""
+    """Check arbitrary Origin reflection WITH Credentials: true and non-empty sensitive/stateful body."""
     canary = "https://nova-cors-canary.example.com"
     r, _ = http_get(url, extra_headers={"Origin": canary})
-    if r is None:
+    if r is None or r.status_code != 200:
         return None
     acao = r.headers.get("Access-Control-Allow-Origin", "")
     acac = r.headers.get("Access-Control-Allow-Credentials", "")
     if acao == canary and acac.lower() == "true":
+        body = getattr(r, "_nova_body", b"")[:2000].decode("utf-8", "ignore").strip()
+        # Empty 0-byte root pings or generic OK healthchecks (e.g. Algolia DSN nodes) leak no session data.
+        if len(body) < 30 or body.lower() in ('{}', '[]', '{"status":"ok"}', 'ok'):
+            return None
+        vary = r.headers.get("Vary", "").lower()
+        set_cookie = r.headers.get("Set-Cookie", "")
+        has_sensitive_data = any(m in body.lower() for m in API_SENSITIVE_MARKERS)
+        if not has_sensitive_data and not set_cookie and "cookie" not in vary:
+            return None
         parsed = urlparse(url)
-        body = getattr(r, "_nova_body", b"")[:500].decode("utf-8", "ignore")
         return {
             "type": "cors",
             "url": url,
             "host": parsed.netloc.lower(),
             "severity_hint": "high",
             "confidence": "strong",
-            "evidence": "ACAO reflects arbitrary Origin + Access-Control-Allow-Credentials: true",
+            "evidence": "ACAO reflects arbitrary Origin + Credentials: true on stateful/sensitive response",
             "request_evidence": f"GET {parsed.path or '/'} HTTP/1.1\nHost: {parsed.netloc}\nOrigin: {canary}",
-            "response_evidence": _format_resp_evidence(r, body),
+            "response_evidence": _format_resp_evidence(r, body[:500]),
             "next": "Uji pada endpoint terautentikasi untuk memastikan respons membawa data sensitif user.",
         }
     return None

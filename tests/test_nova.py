@@ -635,6 +635,37 @@ class TestNovaV22(unittest.TestCase):
         self.assertEqual(parsed[0]["wildcards"], ["*.midtiersaas.io"])
         self.assertEqual(parsed[0]["excludes"], ["status.midtiersaas.io"])
 
+    def test_check_cors_rejects_empty_dsn_ping_and_accepts_stateful_leak(self):
+        def fake_empty_cors(url, **kwargs):
+            r = MagicMock()
+            r.status_code = 200
+            r.headers = {
+                "Access-Control-Allow-Origin": "https://nova-cors-canary.example.com",
+                "Access-Control-Allow-Credentials": "true",
+                "Content-Length": "0",
+            }
+            r._nova_body = b""
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_empty_cors):
+            self.assertIsNone(nova.check_cors("https://2vwv4gxx2x-dsn.algolia.net/"))
+
+        def fake_real_cors(url, **kwargs):
+            r = MagicMock()
+            r.status_code = 200
+            r.headers = {
+                "Access-Control-Allow-Origin": "https://nova-cors-canary.example.com",
+                "Access-Control-Allow-Credentials": "true",
+                "Vary": "Origin, Cookie",
+            }
+            r._nova_body = b'{"email":"ceo@demo.org","token":"sess_live_991"}'
+            return r, None
+
+        with patch.object(nova, "http_get", side_effect=fake_real_cors):
+            hit = nova.check_cors("https://api.demo.org/v1/me")
+            self.assertIsNotNone(hit)
+            self.assertEqual(hit["type"], "cors")
+
 
 if __name__ == "__main__":
     unittest.main()
