@@ -62,10 +62,11 @@ jobs:
         run: python3 -m unittest discover -s tests -v
 
       - name: Install subfinder (binary release, fallback go)
-        timeout-minutes: 10
+        timeout-minutes: 5
+        continue-on-error: true
         run: |
-          TAG=$(curl -sf "https://api.github.com/repos/projectdiscovery/subfinder/releases/latest" \
-            | python3 -c "import json,sys; print(json.load(sys.stdin)['tag_name'].lstrip('v'))") || TAG=""
+          TAG=$(curl -sf -H "Authorization: Bearer ${{ github.token }}" "https://api.github.com/repos/projectdiscovery/subfinder/releases/latest" \
+            | python3 -c "import json,sys; print(json.load(sys.stdin)['tag_name'].lstrip('v'))") || TAG="2.6.8"
           if [ -n "$TAG" ]; then
             curl -sfL -o /tmp/sf.zip \
               "https://github.com/projectdiscovery/subfinder/releases/download/v${TAG}/subfinder_${TAG}_linux_amd64.zip" \
