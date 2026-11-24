@@ -1,0 +1,98 @@
+{
+ "_seeded": true,
+ "ote-login-otp.verisign.com": {
+  "url": "https://ote-login-otp.verisign.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "sugapi.verisign-grs.com": {
+  "url": "https://sugapi.verisign-grs.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://namestudioapi.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "dev.namestudioforsocial.com": {
+  "url": "http://dev.namestudioforsocial.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "corp.namestudioforsocial.com": {
+  "url": "http://corp.namestudioforsocial.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "developer.verisign.com": {
+  "url": "https://developer.verisign.com/devhub/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://developer.verisign.com/devhub/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "vpn.namestudioforsocial.com": {
+  "url": "http://vpn.namestudioforsocial.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "www.api.namestudio.com": {
+  "url": "http://www.api.namestudio.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "le-test.namestudioforsocial.com": {
+  "url": "http://le-test.namestudioforsocial.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ },
+ "auth-whois.verisign-grs.com": {
+  "url": "https://auth-whois.verisign-grs.com/webwhois-ui/index.jsp",
+  "http_status": 200,
+  "title": "Whois",
+  "redirect": "https://auth-whois.verisign-grs.com/webwhois-ui/index.jsp",
+  "scripts": [
+   "https://auth-whois.verisign-grs.com/webwhois-ui/js/epp-stat-ref.precompiled.js",
+   "https://auth-whois.verisign-grs.com/webwhois-ui/js/handlebars.runtime-v4.7.8.min.js",
+   "https://auth-whois.verisign-grs.com/webwhois-ui/js/local/all.js",
+   "https://auth-whois.verisign-grs.com/webwhois-ui/js/result-template.precompiled.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:17:50 UTC"
+ }
+}

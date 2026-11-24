@@ -1,0 +1,757 @@
+{
+ "_seeded": true,
+ "prod-global-auth.nu.com.co": {
+  "url": "https://prod-global-auth.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-s0-paparazzi.nu.com.co": {
+  "url": "https://staging-s0-paparazzi.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s1-dashiki.nu.com.mx": {
+  "url": "https://prod-s1-dashiki.nu.com.mx/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "api.nuinvest.com.br": {
+  "url": "https://api.nuinvest.com.br/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s19-dashiki.nubank.com.br": {
+  "url": "https://prod-s19-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-contracts.nu.com.co": {
+  "url": "https://staging-contracts.nu.com.co/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s7-dashiki.nubank.com.br": {
+  "url": "https://prod-s7-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-auth.nubank.com.br": {
+  "url": "https://prod-auth.nubank.com.br/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s13-dashiki.nubank.com.br": {
+  "url": "https://prod-s13-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s15-dashiki.nubank.com.br": {
+  "url": "https://prod-s15-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-cdn.nubank.com.br": {
+  "url": "https://staging-cdn.nubank.com.br/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "facebook-loginy.blog.nubank.com.br": {
+  "url": "http://facebook-loginy.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-s0-green-finn-nlb.nu.com.co": {
+  "url": "https://staging-s0-green-finn-nlb.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s0-dashiki.nubank.com.br": {
+  "url": "https://prod-s0-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "dev.blog.nubank.com.br": {
+  "url": "http://dev.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s6-dashiki.nubank.com.br": {
+  "url": "https://prod-s6-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "oauth2.nu.com.mx": {
+  "url": "https://oauth2.nu.com.mx/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-www.nu.com.co": {
+  "url": "https://staging-www.nu.com.co/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-oauth2.nubank.com.br": {
+  "url": "https://prod-oauth2.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "error-v2staticmyawsu.blog.nubank.com.br": {
+  "url": "http://error-v2staticmyawsu.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "api-dra.blog.nubank.com.br": {
+  "url": "http://api-dra.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s9-dashiki.nubank.com.br": {
+  "url": "https://prod-s9-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s0-dashiki.nu.com.mx": {
+  "url": "https://prod-s0-dashiki.nu.com.mx/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "api-management.nuinvest.com.br": {
+  "url": "https://api-management.nuinvest.com.br/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "gopaychina.blog.nubank.com.br": {
+  "url": "http://gopaychina.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "mail.staging-waf.nu.com.co": {
+  "url": "https://mail.staging-waf.nu.com.co/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-global-oauth-server.nu.com.mx": {
+  "url": "https://prod-global-oauth-server.nu.com.mx/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s14-dashiki.nubank.com.br": {
+  "url": "https://prod-s14-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "api16.blog.nubank.com.br": {
+  "url": "http://api16.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "account.nubank.com.br": {
+  "url": "https://account.nubank.com.br/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "alps-eu-betao.blog.nubank.com.br": {
+  "url": "http://alps-eu-betao.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "apporigin-idp-stage1.blog.nubank.com.br": {
+  "url": "http://apporigin-idp-stage1.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "beta.blog.nubank.com.br": {
+  "url": "http://beta.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "ftdr-ngeag-qabm.blog.nubank.com.br": {
+  "url": "http://ftdr-ngeag-qabm.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "dev3-publisho.blog.nubank.com.br": {
+  "url": "http://dev3-publisho.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s3-dashiki.nubank.com.br": {
+  "url": "https://prod-s3-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-www.rosetta-public-assets.nubank.com.br": {
+  "url": "https://staging-www.rosetta-public-assets.nubank.com.br/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "apiv1-demomobileu.blog.nubank.com.br": {
+  "url": "http://apiv1-demomobileu.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s10-dashiki.nubank.com.br": {
+  "url": "https://prod-s10-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s4-dashiki.nubank.com.br": {
+  "url": "https://prod-s4-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "debugaccount-backuphelporiginw.blog.nubank.com.br": {
+  "url": "http://debugaccount-backuphelporiginw.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-global-green-webapp-proxy-nlb.nu.com.mx": {
+  "url": "https://staging-global-green-webapp-proxy-nlb.nu.com.mx/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "gcpaccountexternal.blog.nubank.com.br": {
+  "url": "http://gcpaccountexternal.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s5-dashiki.nubank.com.br": {
+  "url": "https://prod-s5-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "pre-prod-api-management.nuinvest.com.br": {
+  "url": "https://pre-prod-api-management.nuinvest.com.br/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s18-dashiki.nubank.com.br": {
+  "url": "https://prod-s18-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "accountsetupy.blog.nubank.com.br": {
+  "url": "http://accountsetupy.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "staging.blog.nubank.com.br": {
+  "url": "http://staging.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "staging-global-webapp-proxy.nu.com.co": {
+  "url": "https://staging-global-webapp-proxy.nu.com.co/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "accounadmin6w.blog.nubank.com.br": {
+  "url": "http://accounadmin6w.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "estagio.nubank.com.br": {
+  "url": "https://estagio.nubank.com.br/",
+  "http_status": 200,
+  "title": "Programa de Estágio Nubank 2027",
+  "redirect": "",
+  "scripts": [
+   "https://estagio.nubank.com.br/assets/antd-EdAfV7Ek.js",
+   "https://estagio.nubank.com.br/assets/index-C5esQN0V.js",
+   "https://estagio.nubank.com.br/assets/vendor-BiIqkT7s.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-global-auth.nu.com.mx": {
+  "url": "https://prod-global-auth.nu.com.mx/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-global-auth.nubank.com.br": {
+  "url": "https://prod-global-auth.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "desktop-e2e-testing-99-1q.blog.nubank.com.br": {
+  "url": "http://desktop-e2e-testing-99-1q.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "api.blog.nubank.com.br": {
+  "url": "http://api.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s16-dashiki.nubank.com.br": {
+  "url": "https://prod-s16-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "api-siri-use1by.blog.nubank.com.br": {
+  "url": "http://api-siri-use1by.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "www.staging-waf.nu.com.co": {
+  "url": "https://www.staging-waf.nu.com.co/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "preview.blog.nubank.com.br": {
+  "url": "http://preview.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s0-green-dashiki-nlb.nu.com.co": {
+  "url": "https://prod-s0-green-dashiki-nlb.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s1-dashiki.nubank.com.br": {
+  "url": "https://prod-s1-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s0-paycasso.nu.com.co": {
+  "url": "https://prod-s0-paycasso.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "dev-api-management.nuinvest.com.br": {
+  "url": "https://dev-api-management.nuinvest.com.br/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s7-insurance-payments.nubank.com.br": {
+  "url": "https://prod-s7-insurance-payments.nubank.com.br/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "staging-liveness.nu.com.co": {
+  "url": "https://staging-liveness.nu.com.co/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s0-green-paycasso-nlb.nu.com.co": {
+  "url": "https://prod-s0-green-paycasso-nlb.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "prod-s12-dashiki.nubank.com.br": {
+  "url": "https://prod-s12-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "dev-admin10.blog.nubank.com.br": {
+  "url": "http://dev-admin10.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s0-dashiki.nu.com.co": {
+  "url": "https://prod-s0-dashiki.nu.com.co/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "opendata.api.nubank.com.br": {
+  "url": "https://opendata.api.nubank.com.br/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s8-dashiki.nubank.com.br": {
+  "url": "https://prod-s8-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "preview.nubank.com.br": {
+  "url": "https://preview.nubank.com.br/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://nubank.com.br/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "staging.nuinvest.com.br": {
+  "url": "https://staging.nuinvest.com.br/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ },
+ "dsg-stage1g.blog.nubank.com.br": {
+  "url": "http://dsg-stage1g.blog.nubank.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:42:58 UTC"
+ },
+ "prod-s17-dashiki.nubank.com.br": {
+  "url": "https://prod-s17-dashiki.nubank.com.br/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:47:55 UTC"
+ }
+}

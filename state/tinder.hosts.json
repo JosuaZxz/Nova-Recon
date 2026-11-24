@@ -1,0 +1,87 @@
+{
+ "_seeded": true,
+ "api-cloudfront-failover.gotinder.com": {
+  "url": "http://api-cloudfront-failover.gotinder.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "data.gotinder.com": {
+  "url": "https://data.gotinder.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "web.b.ue1az.gotinder.com": {
+  "url": "https://web.b.ue1az.gotinder.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "website-api.gotinder.com": {
+  "url": "https://website-api.gotinder.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "datarequests.gotinder.com": {
+  "url": "https://datarequests.gotinder.com/",
+  "http_status": 200,
+  "title": "Tinder Portal",
+  "redirect": "",
+  "scripts": [
+   "https://datarequests.gotinder.com/bundle.ac4b62f29af4b6325b61.js",
+   "https://datarequests.gotinder.com/bundle.bd6bc58bd1db1c9dbfc8.js",
+   "https://datarequests.gotinder.com/bundle.c18ca6e1a241fa4217fb.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "api.as1.gotinder.com": {
+  "url": "https://api.as1.gotinder.com/",
+  "http_status": 502,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "pay.tinder.com": {
+  "url": "https://pay.tinder.com/",
+  "http_status": 200,
+  "title": "Tinder | Dating, Make Friends &amp; Meet New People",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ },
+ "paystaging.tinder.com": {
+  "url": "https://paystaging.tinder.com/",
+  "http_status": 200,
+  "title": "Tinder | Dating, Make Friends &amp; Meet New People",
+  "redirect": "",
+  "scripts": [],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:20:37 UTC"
+ }
+}

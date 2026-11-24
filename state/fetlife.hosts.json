@@ -1,0 +1,233 @@
+{
+ "_seeded": true,
+ "picv2-c400.cdn.fetlife.com": {
+  "url": "https://picv2-c400.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicav2-u2000.cdn.fetlife.com": {
+  "url": "https://stpicav2-u2000.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stthumbv2-u200.cdn.fetlife.com": {
+  "url": "https://stthumbv2-u200.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicv2-u500.cdn.fetlife.com": {
+  "url": "https://stpicv2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "picv2-c50.cdn.fetlife.com": {
+  "url": "https://picv2-c50.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicv2-c400.cdn.fetlife.com": {
+  "url": "https://stpicv2-c400.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "thumbv2-u200.cdn.fetlife.com": {
+  "url": "https://thumbv2-u200.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "staging2.fetlife.com": {
+  "url": "https://staging2.fetlife.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://bitlove.cloudflareaccess.com/cdn-cgi/access/login/staging2.fetlife.com?kid=e56342b8a489c83658b462735d9d2ed10bd704202e2a5529f04e6c95103c9d92&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjV",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicav2-u500.cdn.fetlife.com": {
+  "url": "https://stpicav2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stwsv6-2.fetlife.com": {
+  "url": "https://stwsv6-2.fetlife.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "picav2-u500.cdn.fetlife.com": {
+  "url": "https://picav2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stwsv6.fetlife.com": {
+  "url": "https://stwsv6.fetlife.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "picav2-c50.cdn.fetlife.com": {
+  "url": "https://picav2-c50.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "picv2-u2000.cdn.fetlife.com": {
+  "url": "https://picv2-u2000.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "thumbv2-u500.cdn.fetlife.com": {
+  "url": "https://thumbv2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stthumbv2-u500.cdn.fetlife.com": {
+  "url": "https://stthumbv2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "staging.fetlife.com": {
+  "url": "https://staging.fetlife.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://bitlove.cloudflareaccess.com/cdn-cgi/access/login/staging.fetlife.com?kid=72ada64127d4139e7b657d4b7062674f0389ef6d1af6b7920df47ef121974e4e&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjVm",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "picv2-u500.cdn.fetlife.com": {
+  "url": "https://picv2-u500.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "wsv6.fetlife.com": {
+  "url": "https://wsv6.fetlife.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicv2-c160.cdn.fetlife.com": {
+  "url": "https://stpicv2-c160.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicav2-c400.cdn.fetlife.com": {
+  "url": "https://stpicav2-c400.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "thumbv2-u1000.cdn.fetlife.com": {
+  "url": "https://thumbv2-u1000.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ },
+ "stpicav2-c50.cdn.fetlife.com": {
+  "url": "https://stpicav2-c50.cdn.fetlife.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:51:54 UTC"
+ }
+}

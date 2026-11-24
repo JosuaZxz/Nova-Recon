@@ -1,0 +1,30 @@
+{
+ "https://auth-whois.verisign-grs.com/webwhois-ui/js/handlebars.runtime-v4.7.8.min.js": {
+  "last_url": "https://auth-whois.verisign-grs.com/webwhois-ui/js/handlebars.runtime-v4.7.8.min.js",
+  "sha256": "3fcae7d507e63e484800",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 23:17:50 UTC"
+ },
+ "https://auth-whois.verisign-grs.com/webwhois-ui/js/result-template.precompiled.js": {
+  "last_url": "https://auth-whois.verisign-grs.com/webwhois-ui/js/result-template.precompiled.js",
+  "sha256": "13e788933bc917711af6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 23:17:50 UTC"
+ },
+ "https://auth-whois.verisign-grs.com/webwhois-ui/js/epp-stat-ref.precompiled.js": {
+  "last_url": "https://auth-whois.verisign-grs.com/webwhois-ui/js/epp-stat-ref.precompiled.js",
+  "sha256": "54e2b94c26ae7349ced0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 23:17:50 UTC"
+ },
+ "https://auth-whois.verisign-grs.com/webwhois-ui/js/local/all.js": {
+  "last_url": "https://auth-whois.verisign-grs.com/webwhois-ui/js/local/all.js",
+  "sha256": "9726f8c3c015a4f4ff9d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-24 23:17:50 UTC"
+ }
+}

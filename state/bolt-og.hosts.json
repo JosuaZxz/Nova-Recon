@@ -1,0 +1,901 @@
+{
+ "_seeded": true,
+ "claim.prelive.bolt.eu": {
+  "url": "https://claim.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "business-invoice.prelive.bolt.eu": {
+  "url": "https://business-invoice.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "signup-prelive-bolt-eu.applog.prelive.bolt.eu": {
+  "url": "https://signup-prelive-bolt-eu.applog.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "ukraine-company.prelive.bolt.eu": {
+  "url": "https://ukraine-company.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "company-portal-broker.prelive.bolt.eu": {
+  "url": "https://company-portal-broker.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "applog.prelive.bolt.eu": {
+  "url": "https://applog.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "ghana-company.prelive.taxify.eu": {
+  "url": "https://ghana-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "pci.prelive.bolt.eu": {
+  "url": "https://pci.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "incident-reporting.taxify.eu": {
+  "url": "https://incident-reporting.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "apidocs.prelive.bolt.eu": {
+  "url": "https://apidocs.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "provider.applog.prelive.bolt.eu": {
+  "url": "https://provider.applog.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "translation.prelive.bolt.eu": {
+  "url": "https://translation.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "europe-admin.prelive.bolt.eu": {
+  "url": "https://europe-admin.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "files-foodpartner.prelive.bolt.eu": {
+  "url": "https://files-foodpartner.prelive.bolt.eu/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "rental-search.prelive.bolt.eu": {
+  "url": "https://rental-search.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "africa-company.prelive.taxify.eu": {
+  "url": "https://africa-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "rental-search.prelive.taxify.eu": {
+  "url": "https://rental-search.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "assets.careers-v3.bolt.eu": {
+  "url": "https://assets.careers-v3.bolt.eu/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "m.prelive.taxify.eu": {
+  "url": "https://m.prelive.taxify.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://bolt.eu/?utm_source=domain-redirect&utm_medium=m-prelive-taxify-eu",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "rider-broker.prelive.bolt.eu": {
+  "url": "https://rider-broker.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "driver-portal-csp.applog.bolt.eu": {
+  "url": "https://driver-portal-csp.applog.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "australia-admin.bolt.eu": {
+  "url": "https://australia-admin.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "m.prelive.bolt.eu": {
+  "url": "https://m.prelive.bolt.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://bolt.eu/?utm_source=domain-redirect&utm_medium=m-prelive-bolt-eu",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "delivery-reporting.bolt.eu": {
+  "url": "https://delivery-reporting.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "payments-bolt-eu.applog.prelive.bolt.eu": {
+  "url": "https://payments-bolt-eu.applog.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "australia-company.prelive.bolt.eu": {
+  "url": "https://australia-company.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "kenya-company.prelive.taxify.eu": {
+  "url": "https://kenya-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "www.partners.bolt.eu": {
+  "url": "https://partners.bolt.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://bolt.eu/driver/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "azerbaijan-company.prelive.bolt.eu": {
+  "url": "https://azerbaijan-company.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "delivery-reporting.prelive.bolt.eu": {
+  "url": "https://delivery-reporting.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "payment.prelive.taxify.eu": {
+  "url": "https://payment.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "registry.prelive.bolt.eu": {
+  "url": "https://registry.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "admin-panel-csp.applog.prelive.bolt.eu": {
+  "url": "https://admin-panel-csp.applog.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "signup.prelive.bolt.eu": {
+  "url": "https://signup.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Bolt Driver Signup",
+  "redirect": "",
+  "scripts": [
+   "https://signup.prelive.bolt.eu/driver/index.379fad7f.js",
+   "https://signup.prelive.bolt.eu/driver/index.f8b92def.js",
+   "https://signup.prelive.bolt.eu/driver/index.runtime.6a65ca7c.js",
+   "https://signup.prelive.bolt.eu/driver/index.runtime.f6b725c3.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "price-review.prelive.bolt.eu": {
+  "url": "https://price-review.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "rental-user.prelive.taxify.eu": {
+  "url": "https://rental-user.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "cms.bolt.eu": {
+  "url": "https://cms.bolt.eu/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://bolt.okta.com/oauth2/v1/authorize?client_id=0oavvox1kjKf87PFy417&redirect_uri=https%3A%2F%2Fcms.bolt.eu%2Foauth2%2Fidpresponse&response_type=code&scope=openid%20profile%20offline_access&state=",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "button.prelive.bolt.eu": {
+  "url": "https://button.prelive.bolt.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://ridebooker.prelive.bolt.eu/?source=buttonv1",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "southafrica-company.prelive.bolt.eu": {
+  "url": "https://southafrica-company.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "stories.prelive.bolt.eu": {
+  "url": "https://stories.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "adminc.ws.bolt.eu": {
+  "url": "https://adminc.ws.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "nigeria-company.prelive.bolt.eu": {
+  "url": "https://nigeria-company.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "fleets.prelive.bolt.eu": {
+  "url": "https://fleets.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Sign in | Bolt Fleet Portal",
+  "redirect": "",
+  "scripts": [
+   "https://fleets.prelive.bolt.eu/static/assets/Badge-DbaTQeIr.js",
+   "https://fleets.prelive.bolt.eu/static/assets/FileInfo-vsRt0-Gw.js",
+   "https://fleets.prelive.bolt.eu/static/assets/apiProvider-BxQbqCVG.js",
+   "https://fleets.prelive.bolt.eu/static/assets/index-Dxn5e0YW.js",
+   "https://fleets.prelive.bolt.eu/static/assets/pwa-Bfxq1APU.js",
+   "https://fleets.prelive.bolt.eu/static/assets/rolldown-runtime-S-ySWqyJ.js",
+   "https://fleets.prelive.bolt.eu/static/assets/useDiscoveryTooltip-CXSLQcWS.js",
+   "https://fleets.prelive.bolt.eu/static/assets/useIsStandalone-BDDl1l9q.js",
+   "https://fleets.prelive.bolt.eu/static/assets/usePwaInstallActions-hxCs7pcU.js",
+   "https://fleets.prelive.bolt.eu/static/assets/vendor-kalep-bQwRXo3f.js",
+   "https://fleets.prelive.bolt.eu/static/assets/vendor-maps-BThSdcaj.js",
+   "https://fleets.prelive.bolt.eu/static/assets/vendor-react-Yd7CJNNA.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "incident-reporting.bolt.eu": {
+  "url": "https://incident-reporting.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "global-rental.prelive.bolt.eu": {
+  "url": "https://global-rental.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "api.iam.bolt.eu": {
+  "url": "https://api.iam.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "driver-insurance.prelive.bolt.eu": {
+  "url": "https://driver-insurance.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "russia-company.prelive.taxify.eu": {
+  "url": "https://russia-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "admin.taxify.eu": {
+  "url": "https://admin.taxify.eu/",
+  "http_status": 403,
+  "title": "Admin Panel | Certificate needed",
+  "redirect": "",
+  "scripts": [
+   "https://static.bolt.eu/admin-framework/error-page/lottie-player.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "fleet-registration.prelive.taxify.eu": {
+  "url": "https://fleet-registration.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "user-billing-profile.prelive.taxify.eu": {
+  "url": "https://user-billing-profile.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "azerbaijan-admin.taxify.eu": {
+  "url": "https://azerbaijan-admin.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "careers.prelive.bolt.eu": {
+  "url": "https://careers.prelive.bolt.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://prelive.bolt.eu/en/careers/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "wms.prelive.bolt.eu": {
+  "url": "https://wms.prelive.bolt.eu/",
+  "http_status": 430,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "azerbaijan-company.prelive.taxify.eu": {
+  "url": "https://azerbaijan-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "firmware.prelive.bolt.eu": {
+  "url": "https://firmware.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "prelive.city.bolt.eu": {
+  "url": "https://prelive.city.bolt.eu/",
+  "http_status": 200,
+  "title": "Bolt City Mobility Dashboard",
+  "redirect": "",
+  "scripts": [
+   "https://prelive.city.bolt.eu/versions/7.0.0/static/js/main.7a49acf4.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "invoicing-report.prelive.taxify.eu": {
+  "url": "https://invoicing-report.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "vehicle.prelive.bolt.eu": {
+  "url": "https://vehicle.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Select a vehicle and drive | Bolt",
+  "redirect": "",
+  "scripts": [
+   "https://vehicle.prelive.bolt.eu/versions/3.2430.0/assets/index-DuVn1qpZ.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "wms-bolt-eu.applog.prelive.bolt.eu": {
+  "url": "https://wms-bolt-eu.applog.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "my.prelive.bolt.eu": {
+  "url": "https://my.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Office Attendance Tool | Bolt",
+  "redirect": "",
+  "scripts": [
+   "https://my.prelive.bolt.eu/versions/195.0.0-rc.feature_ipp_240_remove_old_csv_dialog/assets/index-CFH4Cltp.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "partners.food.bolt.eu": {
+  "url": "https://partners.food.bolt.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://bolt.eu/en/food/partner/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "user-portal-broker.prelive.bolt.eu": {
+  "url": "https://user-portal-broker.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "business.prelive.bolt.eu": {
+  "url": "https://business.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Bolt | Bolt for Business",
+  "redirect": "",
+  "scripts": [
+   "https://business.prelive.bolt.eu/current/assets/chunk.524.99d6335fbed8467c659e.js",
+   "https://business.prelive.bolt.eu/current/assets/chunk.669.b33d4f85a77700ab72f7.js",
+   "https://business.prelive.bolt.eu/current/assets/chunk.783.9a2813f4444c735017b5.js",
+   "https://business.prelive.bolt.eu/current/assets/taxify-business-portal-0fda106fd067d76f6e5c6787151a2cd2.js",
+   "https://business.prelive.bolt.eu/current/assets/vendor-27928280c18de374783a1388fee5856e.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "smart-pickups.prelive.taxify.eu": {
+  "url": "https://smart-pickups.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "rental-uploader.prelive.taxify.eu": {
+  "url": "https://rental-uploader.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "media.prelive.bolt.eu": {
+  "url": "https://media.prelive.bolt.eu/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "driver-broker.prelive.bolt.eu": {
+  "url": "https://driver-broker.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "westasia-admin.bolt.eu": {
+  "url": "https://westasia-admin.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "payment.prelive.bolt.eu": {
+  "url": "https://payment.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "files-foodpartner.bolt.eu": {
+  "url": "https://files-foodpartner.bolt.eu/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "price-review.prelive.taxify.eu": {
+  "url": "https://price-review.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "support.prelive.taxify.eu": {
+  "url": "https://support.prelive.taxify.eu/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://prelive.bolt.eu/en/support/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "fleet-auth.taxify.eu": {
+  "url": "https://fleet-auth.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "westeu-rental.prelive.bolt.eu": {
+  "url": "https://westeu-rental.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "translation.prelive.taxify.eu": {
+  "url": "https://translation.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "fleet-portal-csp.applog.prelive.bolt.eu": {
+  "url": "https://fleet-portal-csp.applog.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "europe-admin.bolt.eu": {
+  "url": "https://europe-admin.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "rental-invoice.prelive.bolt.eu": {
+  "url": "https://rental-invoice.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "admin.bolt.eu": {
+  "url": "https://admin.bolt.eu/",
+  "http_status": 403,
+  "title": "Admin Panel | Certificate needed",
+  "redirect": "",
+  "scripts": [
+   "https://static.bolt.eu/admin-framework/error-page/lottie-player.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "ukraine-company.prelive.taxify.eu": {
+  "url": "https://ukraine-company.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "device-info.prelive.taxify.eu": {
+  "url": "https://device-info.prelive.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "payments-bolt-eu-translate-goog.applog.prelive.bolt.eu": {
+  "url": "https://payments-bolt-eu-translate-goog.applog.prelive.bolt.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "delivery-admin.taxify.eu": {
+  "url": "https://delivery-admin.taxify.eu/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:22:02 UTC"
+ },
+ "aimarketplace.prelive.bolt.eu": {
+  "url": "https://aimarketplace.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Bolt AI Marketplace",
+  "redirect": "",
+  "scripts": [
+   "https://aimarketplace.prelive.bolt.eu/versions/103.0.0/assets/index-CfxfkOBY.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ },
+ "supportwebform.prelive.bolt.eu": {
+  "url": "https://supportwebform.prelive.bolt.eu/",
+  "http_status": 200,
+  "title": "Support",
+  "redirect": "",
+  "scripts": [
+   "https://supportwebform.prelive.bolt.eu/assets/index-CIDsH2cZ.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:26:04 UTC"
+ }
+}

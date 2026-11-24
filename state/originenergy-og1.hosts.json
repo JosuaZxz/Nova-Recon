@@ -1,0 +1,63 @@
+{
+ "_seeded": true,
+ "staging-connect.origindigital-pac.com.au": {
+  "url": "http://staging-connect.origindigital-pac.com.au/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ },
+ "api-prod.origindigital-pac.com.au": {
+  "url": "https://api-prod.origindigital-pac.com.au/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ },
+ "clientretention.api.odcdn.com.au": {
+  "url": "https://clientretention.api.odcdn.com.au/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ },
+ "id-preprod.origindigital-pac.com.au": {
+  "url": "http://id-preprod.origindigital-pac.com.au/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ },
+ "assets-digital.origindigital-pac.com.au": {
+  "url": "https://assets-digital.origindigital-pac.com.au/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ },
+ "staticsite-cdn-staging.origindigital-pac.com.au": {
+  "url": "https://staticsite-cdn-staging.origindigital-pac.com.au/",
+  "http_status": 403,
+  "title": "404 - Origin Energy",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 23:50:38 UTC"
+ }
+}
