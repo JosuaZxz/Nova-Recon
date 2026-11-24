@@ -1,0 +1,143 @@
+{
+ "_seeded": true,
+ "ca.soyoustart.com": {
+  "url": "https://ca.soyoustart.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.soyoustart.com/ca/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "eu.soyoustart.com": {
+  "url": "https://eu.soyoustart.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.soyoustart.com/index.xml",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "us.soyoustart.com": {
+  "url": "https://us.soyoustart.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.soyoustart.com/us/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "community.soyoustart.com": {
+  "url": "http://community.soyoustart.com/",
+  "http_status": 503,
+  "title": "Error 503: server unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "www.forum.soyoustart.com": {
+  "url": "https://www.forum.soyoustart.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.soyoustart.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "forum.soyoustart.com": {
+  "url": "https://forum.soyoustart.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.soyoustart.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "mail.soyoustart.com": {
+  "url": "http://mail.soyoustart.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.ovh.co.uk/mail/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "smtp.soyoustart.com": {
+  "url": "http://smtp.soyoustart.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.ovh.co.uk/mail/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "ca.api.soyoustart.com": {
+  "url": "https://ca.api.soyoustart.com/",
+  "http_status": 200,
+  "title": "So you Start Developers : Discover So you Start products API &amp; functions - So you Start",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "www.soyoustart.com": {
+  "url": "https://www.soyoustart.com/en/",
+  "http_status": 200,
+  "title": "So you Start: Dedicated servers, VPS and web hosting",
+  "redirect": "https://www.soyoustart.com/en/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "eu.api.soyoustart.com": {
+  "url": "https://eu.api.soyoustart.com/",
+  "http_status": 200,
+  "title": "So you Start Developers : Discover So you Start products API &amp; functions - So you Start",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "www.api.soyoustart.com": {
+  "url": "http://www.api.soyoustart.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://eu.api.soyoustart.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "api.soyoustart.com": {
+  "url": "http://api.soyoustart.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://eu.api.soyoustart.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ },
+ "soyoustart.com": {
+  "url": "https://www.soyoustart.com/en/",
+  "http_status": 200,
+  "title": "So you Start: Dedicated servers, VPS and web hosting",
+  "redirect": "https://www.soyoustart.com/en/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:44:02 UTC"
+ }
+}

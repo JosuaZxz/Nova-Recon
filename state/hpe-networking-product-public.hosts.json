@@ -1,0 +1,373 @@
+{
+ "_seeded": true,
+ "apigw-us-east-1.central.arubanetworks.com": {
+  "url": "https://apigw-us-east-1.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "ca1.api.central.arubanetworks.com": {
+  "url": "https://ca1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-uaenorth1.central.arubanetworks.com": {
+  "url": "https://apigw-uaenorth1.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "device-eu.central.arubanetworks.com": {
+  "url": "https://device-eu.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app2-eu.central.arubanetworks.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-apacsouth.central.arubanetworks.com": {
+  "url": "https://apigw-apacsouth.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "us5.api.central.arubanetworks.com": {
+  "url": "https://us5.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-ca.central.arubanetworks.com": {
+  "url": "https://apigw-ca.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "us6.api.central.arubanetworks.com": {
+  "url": "https://us6.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "jp1.api.central.arubanetworks.com": {
+  "url": "https://jp1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "ge1.api.central.arubanetworks.com": {
+  "url": "https://ge1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "de4.api.central.arubanetworks.com": {
+  "url": "https://de4.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "device-uswest4.central.arubanetworks.com": {
+  "url": "https://device-uswest4.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-uswest4.central.arubanetworks.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "portal-apaceast.central.arubanetworks.com": {
+  "url": "https://portal-apaceast.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-apaceast.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "portal.central.arubanetworks.com": {
+  "url": "https://portal.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "portal-prod2.central.arubanetworks.com": {
+  "url": "https://portal-prod2.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-prod2-ui.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-uswest5.central.arubanetworks.com": {
+  "url": "https://apigw-uswest5.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "app-attbeta.central.arubanetworks.com": {
+  "url": "https://app-attbeta.central.arubanetworks.com/nms",
+  "http_status": 302,
+  "title": "Redirecting...",
+  "redirect": "https://app-attbeta.central.arubanetworks.com/login?next=%2Fnms",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "portal-us-east-1.central.arubanetworks.com": {
+  "url": "https://portal-us-east-1.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-us-east-1.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "thdnaas.api.central.arubanetworks.com": {
+  "url": "https://thdnaas.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "ae1.api.central.arubanetworks.com": {
+  "url": "https://ae1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigettingstarted.central.arubanetworks.com": {
+  "url": "http://apigettingstarted.central.arubanetworks.com/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "stgthdnaas.api.central.arubanetworks.com": {
+  "url": "https://stgthdnaas.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "api-csp.central.arubanetworks.com": {
+  "url": "https://api-csp.central.arubanetworks.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "internal-portal.central.arubanetworks.com": {
+  "url": "https://internal-portal.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://internal-ui.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "in1.api.central.arubanetworks.com": {
+  "url": "https://in1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "device-eucentral2.central.arubanetworks.com": {
+  "url": "https://device-eucentral2.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-eucentral2.central.arubanetworks.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "au1.api.central.arubanetworks.com": {
+  "url": "https://au1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-eucentral3.central.arubanetworks.com": {
+  "url": "https://apigw-eucentral3.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "internal.api.central.arubanetworks.com": {
+  "url": "https://internal.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "device-ca.central.arubanetworks.com": {
+  "url": "https://device-ca.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-ca-ui.central.arubanetworks.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "de3.api.central.arubanetworks.com": {
+  "url": "https://de3.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "us1.api.central.arubanetworks.com": {
+  "url": "https://us1.api.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "portal-uswest4.central.arubanetworks.com": {
+  "url": "https://portal-uswest4.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-uswest4.central.arubanetworks.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "apigw-uswest4.central.arubanetworks.com": {
+  "url": "https://apigw-uswest4.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "qa.logs.cloudguest.central.arubanetworks.com": {
+  "url": "https://qa.logs.cloudguest.central.arubanetworks.com/_dashboards",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://hpe-greenlake-ops-stg.okta.com/oauth2/v1/authorize?nonce=a804cab2746f38b634a7500d46b49757&scope=openid%20email%20profile&client_id=0oa1h7oa6wkKhDVFO358&response_type=code&state=65d6a9d00598acf",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "device-apacsouth.central.arubanetworks.com": {
+  "url": "https://device-apacsouth.central.arubanetworks.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://app-apacsouth.central.arubanetworks.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ },
+ "api-ap.central.arubanetworks.com": {
+  "url": "https://api-ap.central.arubanetworks.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:30:24 UTC"
+ }
+}

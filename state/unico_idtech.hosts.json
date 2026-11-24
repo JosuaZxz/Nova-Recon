@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:45:24 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "liveness.dev.unico.app": {
   "url": "https://liveness.dev.unico.app/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:45:24 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "portal.safeapp.dev.unico.app": {
   "url": "https://portal.safeapp.dev.unico.app/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.datafortress.unico.app": {
   "url": "https://api.datafortress.unico.app/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:45:24 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.people.unico.app": {
   "url": "https://api.people.unico.app/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.backtest.unico.app": {
   "url": "https://api.backtest.unico.app/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:45:24 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.safeapp.unico.app": {
   "url": "https://api.safeapp.unico.app/",
@@ -244,8 +244,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 11:45:24 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.webhook.unico.app": {
   "url": "https://api.webhook.unico.app/",
@@ -329,7 +329,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "dashboard-dev.unico.app": {
   "url": "https://dashboard-dev.unico.app/",
@@ -363,7 +363,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "retry.uat.unico.app": {
   "url": "https://retry.uat.unico.app/",
@@ -371,18 +371,18 @@
   "title": "Unico",
   "redirect": "",
   "scripts": [
-   "https://retry.uat.unico.app/assets/buildApp-3n2GsBtw.js",
-   "https://retry.uat.unico.app/assets/index-wpzp8aLQ.js",
-   "https://retry.uat.unico.app/assets/vendor-genoma-CLAg5qFS.js",
-   "https://retry.uat.unico.app/assets/vendor-i18n-D36OXi9h.js",
-   "https://retry.uat.unico.app/assets/vendor-launchdarkly-DOcYOjad.js",
-   "https://retry.uat.unico.app/assets/vendor-monitoring-DNPU-cCc.js",
-   "https://retry.uat.unico.app/assets/vendor-react-Cd_hInXg.js",
-   "https://retry.uat.unico.app/assets/vendor-ui-DZpW7Bb3.js"
+   "https://retry.uat.unico.app/assets/buildApp-DD-ERKVC.js",
+   "https://retry.uat.unico.app/assets/index-CrgLI2LT.js",
+   "https://retry.uat.unico.app/assets/vendor-genoma-y7SDPn4H.js",
+   "https://retry.uat.unico.app/assets/vendor-i18n-BKGMeNBg.js",
+   "https://retry.uat.unico.app/assets/vendor-launchdarkly-jzHwOi-e.js",
+   "https://retry.uat.unico.app/assets/vendor-monitoring-Dl0n0Ebf.js",
+   "https://retry.uat.unico.app/assets/vendor-react-tGUYsVOb.js",
+   "https://retry.uat.unico.app/assets/vendor-ui-D6q-5jnK.js"
   ],
   "catchall": true,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "accounts.unico.app": {
   "url": "https://accounts.unico.app/",
@@ -421,8 +421,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "transactions.transactional.dev.unico.app": {
   "url": "https://transactions.transactional.dev.unico.app/",
@@ -442,7 +442,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.backtest.uat.unico.app": {
   "url": "https://api.backtest.uat.unico.app/",
@@ -452,7 +452,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.humantoken.uat.unico.app": {
   "url": "https://api.humantoken.uat.unico.app/",
@@ -462,7 +462,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "form.people.uat.unico.app": {
   "url": "https://form.people.uat.unico.app/",
@@ -479,8 +479,8 @@
    "https://form.people.uat.unico.app/runtime-es5.e134fef99d08b1021aa2.js"
   ],
   "catchall": true,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "id.test.unico.app": {
   "url": "https://id.test.unico.app/",
@@ -501,8 +501,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "admin.people.unico.app": {
   "url": "https://admin.people.unico.app/",
@@ -527,7 +527,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "dashboard.unico.app": {
   "url": "https://dashboard.unico.app/",
@@ -547,7 +547,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.shortener.dev.unico.app": {
   "url": "https://api.shortener.dev.unico.app/",
@@ -585,18 +585,18 @@
   "title": "Unico",
   "redirect": "",
   "scripts": [
-   "https://id.uat.unico.app/assets/buildApp-3n2GsBtw.js",
-   "https://id.uat.unico.app/assets/index-wpzp8aLQ.js",
-   "https://id.uat.unico.app/assets/vendor-genoma-CLAg5qFS.js",
-   "https://id.uat.unico.app/assets/vendor-i18n-D36OXi9h.js",
-   "https://id.uat.unico.app/assets/vendor-launchdarkly-DOcYOjad.js",
-   "https://id.uat.unico.app/assets/vendor-monitoring-DNPU-cCc.js",
-   "https://id.uat.unico.app/assets/vendor-react-Cd_hInXg.js",
-   "https://id.uat.unico.app/assets/vendor-ui-DZpW7Bb3.js"
+   "https://id.uat.unico.app/assets/buildApp-DD-ERKVC.js",
+   "https://id.uat.unico.app/assets/index-CrgLI2LT.js",
+   "https://id.uat.unico.app/assets/vendor-genoma-y7SDPn4H.js",
+   "https://id.uat.unico.app/assets/vendor-i18n-BKGMeNBg.js",
+   "https://id.uat.unico.app/assets/vendor-launchdarkly-jzHwOi-e.js",
+   "https://id.uat.unico.app/assets/vendor-monitoring-Dl0n0Ebf.js",
+   "https://id.uat.unico.app/assets/vendor-react-tGUYsVOb.js",
+   "https://id.uat.unico.app/assets/vendor-ui-D6q-5jnK.js"
   ],
   "catchall": true,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "portal.safeapp.uat.unico.app": {
   "url": "https://portal.safeapp.uat.unico.app/",
@@ -610,7 +610,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "fileserver.transactional.uat.unico.app": {
   "url": "https://fileserver.transactional.uat.unico.app/",
@@ -619,8 +619,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "sign.hr.uat.unico.app": {
   "url": "https://sign.hr.uat.unico.app/",
@@ -631,8 +631,8 @@
    "https://sign.hr.uat.unico.app/static/js/main.49ae45eb.js"
   ],
   "catchall": true,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "auth.dashboard.unico.app": {
   "url": "https://auth.dashboard.unico.app/auth/idp",
@@ -652,7 +652,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.client.safeapp.unico.app": {
   "url": "https://api.client.safeapp.unico.app/",
@@ -696,7 +696,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "download-test.unico.app": {
   "url": "https://download-test.unico.app/",
@@ -736,7 +736,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "ultimatum.uat.unico.app": {
   "url": "https://ultimatum.uat.unico.app/",
@@ -744,18 +744,18 @@
   "title": "Unico",
   "redirect": "",
   "scripts": [
-   "https://ultimatum.uat.unico.app/assets/buildApp-3n2GsBtw.js",
-   "https://ultimatum.uat.unico.app/assets/index-wpzp8aLQ.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-genoma-CLAg5qFS.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-i18n-D36OXi9h.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-launchdarkly-DOcYOjad.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-monitoring-DNPU-cCc.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-react-Cd_hInXg.js",
-   "https://ultimatum.uat.unico.app/assets/vendor-ui-DZpW7Bb3.js"
+   "https://ultimatum.uat.unico.app/assets/buildApp-DD-ERKVC.js",
+   "https://ultimatum.uat.unico.app/assets/index-CrgLI2LT.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-genoma-y7SDPn4H.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-i18n-BKGMeNBg.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-launchdarkly-jzHwOi-e.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-monitoring-Dl0n0Ebf.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-react-tGUYsVOb.js",
+   "https://ultimatum.uat.unico.app/assets/vendor-ui-D6q-5jnK.js"
   ],
   "catchall": true,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.cadastro.unico.app": {
   "url": "https://api.cadastro.unico.app/",
@@ -794,8 +794,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "portal.id.dev.unico.app": {
   "url": "https://portal.id.dev.unico.app/",
@@ -814,8 +814,8 @@
   "redirect": "",
   "scripts": [],
   "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "interesting": false,
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "ultimatum.dev.unico.app": {
   "url": "https://ultimatum.dev.unico.app/",
@@ -835,7 +835,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 15:26:33 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "api.safeapp.uat.unico.app": {
   "url": "https://api.safeapp.uat.unico.app/",
@@ -845,7 +845,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 11:44:22 UTC"
+  "last_checked": "2026-11-24 03:56:25 UTC"
  },
  "cadastro.unico.app": {
   "url": "https://cadastro.unico.app/",

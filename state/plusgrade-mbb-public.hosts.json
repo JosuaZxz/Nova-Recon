@@ -1,0 +1,573 @@
+{
+ "_seeded": true,
+ "admin-tor-st-platform.lxc.points.com": {
+  "url": "https://admin-tor-st-platform.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "uat.ssogateway.points.com": {
+  "url": "https://uat.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "ssogateway.points.com": {
+  "url": "https://ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "auction-ihg-staging.points.com": {
+  "url": "https://auction-ihg-staging.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "storefront-staging.lxc.points.com": {
+  "url": "https://storefront-staging.lxc.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "aeroplan-bg-sso-devu.lxc.points.com": {
+  "url": "https://aeroplan-bg-sso-devu.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "aeroplan-bg-sso-staging.lxc.points.com": {
+  "url": "https://aeroplan-bg-sso-staging.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "admin-tor-ft-platform.points.com": {
+  "url": "https://admin-tor-ft-platform.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "administratoru.lxc.points.com": {
+  "url": "https://administratoru.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "newpoints.points.com": {
+  "url": "https://newpoints.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "jreport-ng-st.lxc.points.com": {
+  "url": "https://jreport-ng-st.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "staging.lcp.points.com": {
+  "url": "https://staging.lcp.points.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "staging.points.com": {
+  "url": "https://staging.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "staging.buy.points.com": {
+  "url": "https://staging.buy.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "subscriptions-admin-console-ft.points.com": {
+  "url": "https://subscriptions-admin-console-ft.points.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "ft2.ssogateway.points.com": {
+  "url": "https://ft2.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "aws-per-platform-sandbox.lxc.points.com": {
+  "url": "https://aws-per-platform-sandbox.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "api.points.com": {
+  "url": "https://api.points.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://buy.points.com/unavailable/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "uat2.ssogateway.points.com": {
+  "url": "https://uat2.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "staging.storefronts.points.com": {
+  "url": "https://staging.storefronts.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "obuat.ssogateway.points.com": {
+  "url": "https://obuat.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "cf-storefront-staging2.points.com": {
+  "url": "https://cf-storefront-staging2.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "paymentlinkterms.points.com": {
+  "url": "https://paymentlinkterms.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "ft3.ssogateway.points.com": {
+  "url": "https://ft3.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "cf-storefront-staging-test.points.com": {
+  "url": "https://cf-storefront-staging-test.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "uat-access.points.com": {
+  "url": "https://uat-access.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "tor-ft-platform-sandbox.points.com": {
+  "url": "https://tor-ft-platform-sandbox.points.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "admin19.lxc.points.com": {
+  "url": "https://admin19.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "sso-uat-static.points.com": {
+  "url": "https://sso-uat-static.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "administratorsy.lxc.points.com": {
+  "url": "https://administratorsy.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "points-ssogateway-obuat.points.com": {
+  "url": "https://points-ssogateway-obuat.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "development.storefronts.points.com": {
+  "url": "http://development.storefronts.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "alaskapartnermiles.points.com": {
+  "url": "https://alaskapartnermiles.points.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://buy.points.com/unavailable/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "alaskapartnermilesadminy.lxc.points.com": {
+  "url": "https://alaskapartnermilesadminy.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "www.console-staging.lxc.points.com": {
+  "url": "http://www.console-staging.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "accounti.lxc.points.com": {
+  "url": "https://accounti.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "airmiles-staging-rewardops.lxc.points.com": {
+  "url": "https://airmiles-staging-rewardops.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "points-storefront-staging.points.com": {
+  "url": "https://points-storefront-staging.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "amtrak-uat.lxc.points.com": {
+  "url": "https://amtrak-uat.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "pt.ssogateway.points.com": {
+  "url": "https://pt.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "20storefront-staging.lxc.points.com": {
+  "url": "https://20storefront-staging.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "authorizationu.lxc.points.com": {
+  "url": "https://authorizationu.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "tableau-console-dashboards.points.com": {
+  "url": "https://tableau-console-dashboards.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "obuat.agent.points.com": {
+  "url": "https://obuat.agent.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "points-ssogateway.points.com": {
+  "url": "https://points-ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "cf-storefront-staging.points.com": {
+  "url": "https://cf-storefront-staging.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "sso2.points.com": {
+  "url": "https://sso2.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "console-ft.lxc.points.com": {
+  "url": "https://console-ft.lxc.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "sso-prd-static.points.com": {
+  "url": "https://sso-prd-static.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "ft6.ssogatewaybuy-unitedsecurewallet.points.com": {
+  "url": "https://ft6.ssogatewaybuy-unitedsecurewallet.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "ecorp.points.com": {
+  "url": "https://ecorp.points.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://buy.points.com/unavailable/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "staticfilesbutest.points.com": {
+  "url": "https://staticfilesbutest.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "obcon.ssogateway.points.com": {
+  "url": "https://obcon.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "storefront-staging.points.com": {
+  "url": "https://storefront-staging.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "jreport-ng.points.com": {
+  "url": "https://jreport-ng.points.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "obuat1.ssogateway.points.com": {
+  "url": "https://obuat1.ssogateway.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ },
+ "console.points.com": {
+  "url": "https://console.points.com/",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:40:50 UTC"
+ }
+}

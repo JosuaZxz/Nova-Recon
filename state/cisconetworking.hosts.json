@@ -1,0 +1,393 @@
+{
+ "_seeded": true,
+ "n31.dashboard.meraki.com": {
+  "url": "https://n31.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n31.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=31",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "dashboard.agosavi.mp.dev.ikarem.io": {
+  "url": "https://dashboard.agosavi.mp.dev.ikarem.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "gateway.nppam-gateway.usw.development.k8s.ikarem.io": {
+  "url": "https://gateway.nppam-gateway.usw.development.k8s.ikarem.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n854.dashboard.meraki.com": {
+  "url": "https://n854.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n854.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=854",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n876-spare.dashboard.meraki.com": {
+  "url": "https://n876-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n876.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=876&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1074.dashboard.meraki.com": {
+  "url": "https://n1074.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1074.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1074",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n483-spare.dashboard.meraki.com": {
+  "url": "https://n483-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n483.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=483&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n818.dashboard.meraki.com": {
+  "url": "https://n818.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n818.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=818",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1090.dashboard.meraki.com": {
+  "url": "https://n1090.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1090.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1090",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n610-spare.dashboard.meraki.com": {
+  "url": "https://n610-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n610.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=610&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n865.dashboard.meraki.com": {
+  "url": "https://n865.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n865.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=865",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n958-spare.dashboard.meraki.com": {
+  "url": "https://n958-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n958.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=958&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1082.dashboard.meraki.com": {
+  "url": "https://n1082.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1082.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1082",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1024.dashboard.meraki.com": {
+  "url": "https://n1024.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1024.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1024",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1162-spare.dashboard.meraki.com": {
+  "url": "https://n1162-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1162.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1162&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n98-spare.dashboard.meraki.com": {
+  "url": "https://n98-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n98.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=98&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n342-spare.dashboard.meraki.com": {
+  "url": "https://n342-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n342.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=342&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "gateway.nppam-gateway.use.staging.k8s.ikarem.io": {
+  "url": "https://gateway.nppam-gateway.use.staging.k8s.ikarem.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n820.dashboard.meraki.com": {
+  "url": "https://n820.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n820.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=820",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1105-spare.dashboard.meraki.com": {
+  "url": "https://n1105-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1105.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1105&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n638.dashboard.meraki.com": {
+  "url": "https://n638.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n638.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=638",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "apigwsystest.jn-fallback.artifactory.prod.ikarem.io": {
+  "url": "http://apigwsystest.jn-fallback.artifactory.prod.ikarem.io/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "ops-portal.ikarem.io": {
+  "url": "https://ops-portal.ikarem.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n763-spare.dashboard.meraki.com": {
+  "url": "https://n763-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n763.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=763&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "alertmanager.prometheus.mun.dc-management.k8s.ikarem.io": {
+  "url": "https://alertmanager.prometheus.mun.dc-management.k8s.ikarem.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n635.dashboard.meraki.com": {
+  "url": "https://n635.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n635.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=635",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n692.dashboard.meraki.com": {
+  "url": "https://n692.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n692.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=692",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "ios.sandbox.meraki.com": {
+  "url": "https://ios.sandbox.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.meraki.com/products/systems-manager/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n691.dashboard.meraki.com": {
+  "url": "https://n691.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n691.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=691",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n973-spare.dashboard.meraki.com": {
+  "url": "https://n973-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n973.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=973&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1130-spare.dashboard.meraki.com": {
+  "url": "https://n1130-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1130.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1130&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n210.dashboard.meraki.com": {
+  "url": "https://n210.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n210.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=210",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n737.dashboard.meraki.com": {
+  "url": "https://n737.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n737.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=737",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n1114.dashboard.meraki.com": {
+  "url": "https://n1114.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n1114.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=1114",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n451.dashboard.meraki.com": {
+  "url": "https://n451.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n451.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=451",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n648-spare.dashboard.meraki.com": {
+  "url": "https://n648-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n648.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=648&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n190-spare.dashboard.meraki.com": {
+  "url": "https://n190-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n190.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=190&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n205.dashboard.meraki.com": {
+  "url": "https://n205.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n205.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=205",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ },
+ "n493-spare.dashboard.meraki.com": {
+  "url": "https://n493-spare.dashboard.meraki.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://n493.dashboard.meraki.com/login/dashboard_login?go=%2F&sh=493&spare",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:26:17 UTC"
+ }
+}

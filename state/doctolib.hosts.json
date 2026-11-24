@@ -1,0 +1,374 @@
+{
+ "_seeded": true,
+ "connect-beta.siilo.com": {
+  "url": "https://connect-beta.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect-admin-beta.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "att-dev-nl.siilo.com": {
+  "url": "https://att-dev-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "web-beta.siilo.com": {
+  "url": "https://web-beta.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect-web-beta.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "scim-api.siilo.com": {
+  "url": "https://scim-api.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "admin-prod.siilo.com": {
+  "url": "https://admin-prod.siilo.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://connect-farming.doctolib.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "rs-dev.siilo.com": {
+  "url": "https://rs-dev.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "admin-dev.siilo.com": {
+  "url": "https://admin-dev.siilo.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://connect-farming-staging.doctolib.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "connect-dev.siilo.com": {
+  "url": "https://connect-dev.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect-admin-dev.doctolib.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "dev-nl-2.siilo.com": {
+  "url": "https://dev-nl-2.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "avt-dev-nl.siilo.com": {
+  "url": "https://avt-dev-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "siilo.com": {
+  "url": "https://siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "app-dev.siilo.com": {
+  "url": "https://app-dev.siilo.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.siilo.com/app",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "dev-nl.siilo.com": {
+  "url": "https://dev-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "avt-prod-nl.siilo.com": {
+  "url": "https://avt-prod-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "dev-origin.siilo.com": {
+  "url": "https://dev-origin.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "zendesk3.siilo.com": {
+  "url": "https://zendesk3.siilo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "prod-ios.siilo.com": {
+  "url": "https://prod-ios.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "web-lb.siilo.com": {
+  "url": "https://web-lb.siilo.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "connect.siilo.com": {
+  "url": "https://connect.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect-admin.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "dlb-prod.siilo.com": {
+  "url": "https://dlb-prod.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "acms-beta.siilo.com": {
+  "url": "https://acms-beta.siilo.com/",
+  "http_status": 200,
+  "title": "Doctolib Siilo - Partner CMS",
+  "redirect": "",
+  "scripts": [
+   "https://acms-beta.siilo.com/main.js",
+   "https://acms-beta.siilo.com/runtime.js",
+   "https://acms-beta.siilo.com/vendor.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "acms.siilo.com": {
+  "url": "https://acms.siilo.com/",
+  "http_status": 200,
+  "title": "Doctolib Siilo - Partner CMS",
+  "redirect": "",
+  "scripts": [
+   "https://acms.siilo.com/main.21f2d7248cbaee89.js",
+   "https://acms.siilo.com/runtime.ef9a072020ec725d.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "zendesk2.siilo.com": {
+  "url": "https://zendesk2.siilo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "zendesk1.siilo.com": {
+  "url": "https://zendesk1.siilo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "zendesk4.siilo.com": {
+  "url": "https://zendesk4.siilo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "att-prod-nl.siilo.com": {
+  "url": "https://att-prod-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "web.siilo.com": {
+  "url": "https://web.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect-web.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "prod-nl.siilo.com": {
+  "url": "https://prod-nl.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "rs-prod.siilo.com": {
+  "url": "https://rs-prod.siilo.com/",
+  "http_status": 429,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "link.siilo.com": {
+  "url": "https://link.siilo.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://connect.doctolib.com/app",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "www.siilo.com": {
+  "url": "https://www.siilo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://connect.doctolib.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "acms-dev.siilo.com": {
+  "url": "https://acms-dev.siilo.com/",
+  "http_status": 200,
+  "title": "Doctolib Siilo - Partner CMS",
+  "redirect": "",
+  "scripts": [
+   "https://acms-dev.siilo.com/main.js",
+   "https://acms-dev.siilo.com/runtime.js",
+   "https://acms-dev.siilo.com/vendor.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "static.siilo.com": {
+  "url": "https://static.siilo.com/",
+  "http_status": 200,
+  "title": "Oops",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "app.siilo.com": {
+  "url": "https://app.siilo.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.siilo.com/app",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "siilo-distribution.siilo.com": {
+  "url": "https://siilo-distribution.siilo.com/",
+  "http_status": 200,
+  "title": "Oops",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ },
+ "dev-bucket.siilo.com": {
+  "url": "https://dev-bucket.siilo.com/",
+  "http_status": 200,
+  "title": "Oops",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-24 03:42:56 UTC"
+ }
+}
