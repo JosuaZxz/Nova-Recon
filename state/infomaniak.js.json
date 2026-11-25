@@ -1,0 +1,110 @@
+{
+ "https://analytics.infomaniak.com/js/container_ZdkFKuKu.js": {
+  "last_url": "https://analytics.infomaniak.com/js/container_ZdkFKuKu.js",
+  "sha256": "11ffa0a6001cf9bbe76c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:47 UTC"
+ },
+ "https://openvpn-as.infomaniak.com/static/standalone/client/js/index-HASH.js": {
+  "last_url": "https://openvpn-as.infomaniak.com/static/standalone/client/js/index-fc5ddae22b5600a42775.js",
+  "sha256": "bca0dad4d08391969b79",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:49 UTC"
+ },
+ "https://app.jpc.infomaniak.com/global/GParams.js": {
+  "last_url": "https://app.jpc.infomaniak.com/global/GParams.js",
+  "sha256": "a25a8d7896476b2b7a7b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:50 UTC"
+ },
+ "https://app.jpc.infomaniak.com/3rdparty/pace/pace.min.js": {
+  "last_url": "https://app.jpc.infomaniak.com/3rdparty/pace/pace.min.js",
+  "sha256": "579a10a2485055e98833",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:52 UTC"
+ },
+ "https://app.jpc.infomaniak.com/optimum/js/690168266d9d707e0a424c6a3518f479.out.js": {
+  "last_url": "https://app.jpc.infomaniak.com/optimum/js/690168266d9d707e0a424c6a3518f479.out.js",
+  "sha256": "d370ff402c4bb2d8d736",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:54 UTC"
+ },
+ "https://app.jpc.infomaniak.com/optimum/js/commonmark.min.js": {
+  "last_url": "https://app.jpc.infomaniak.com/optimum/js/commonmark.min.js",
+  "sha256": "703db1b97f4e32175d2c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:56 UTC"
+ },
+ "https://app.jpe.infomaniak.com/global/GParams.js": {
+  "last_url": "https://app.jpe.infomaniak.com/global/GParams.js",
+  "sha256": "a25a8d7896476b2b7a7b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:58 UTC"
+ },
+ "https://app.jpe.infomaniak.com/3rdparty/pace/pace.min.js": {
+  "last_url": "https://app.jpe.infomaniak.com/3rdparty/pace/pace.min.js",
+  "sha256": "579a10a2485055e98833",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:12:58 UTC"
+ },
+ "https://app.jpe.infomaniak.com/optimum/js/690168266d9d707e0a424c6a3518f479.out.js": {
+  "last_url": "https://app.jpe.infomaniak.com/optimum/js/690168266d9d707e0a424c6a3518f479.out.js",
+  "sha256": "d370ff402c4bb2d8d736",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:00 UTC"
+ },
+ "https://app.jpe.infomaniak.com/optimum/js/commonmark.min.js": {
+  "last_url": "https://app.jpe.infomaniak.com/optimum/js/commonmark.min.js",
+  "sha256": "703db1b97f4e32175d2c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:01 UTC"
+ },
+ "https://wg-portal.infomaniak.com/api/v0/config/frontend.js": {
+  "last_url": "https://wg-portal.infomaniak.com/api/v0/config/frontend.js",
+  "sha256": "dc262140ef367b675768",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:34 UTC"
+ },
+ "https://wg-portal.infomaniak.com/app/assets/auth-Cr0jkkAh.js": {
+  "last_url": "https://wg-portal.infomaniak.com/app/assets/auth-Cr0jkkAh.js",
+  "sha256": "bdf6c8d6403c39bf3b13",
+  "routes": [
+   "/auth/login",
+   "/auth/logout",
+   "/auth/providers",
+   "/auth/session",
+   "/auth/webauthn/credentials",
+   "/auth/webauthn/login/finish",
+   "/auth/webauthn/login/start",
+   "/auth/webauthn/register/finish",
+   "/auth/webauthn/register/start"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:36 UTC"
+ },
+ "https://wg-portal.infomaniak.com/app/assets/index-p_yawHLU.js": {
+  "last_url": "https://wg-portal.infomaniak.com/app/assets/index-p_yawHLU.js",
+  "sha256": "39dad542cc55ef526330",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:35 UTC"
+ },
+ "https://wg-portal.infomaniak.com/app/assets/vue-i18n-C55ocZIa.js": {
+  "last_url": "https://wg-portal.infomaniak.com/app/assets/vue-i18n-C55ocZIa.js",
+  "sha256": "6d9c617669ecc4db9380",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 09:13:37 UTC"
+ }
+}
