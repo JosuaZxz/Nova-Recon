@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "authcade.deriv.cloud": {
   "url": "https://authcade.deriv.cloud/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "data-modeler.deriv.cloud": {
   "url": "https://data-modeler.deriv.cloud/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-cashier-crypto-iframe.deriv.com": {
   "url": "https://staging-cashier-crypto-iframe.deriv.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "secure-dfadmin.deriv.com": {
   "url": "https://secure-dfadmin.deriv.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "contest.deriv.com": {
   "url": "https://contest.deriv.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "core-api.deriv.com": {
   "url": "https://core-api.deriv.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "api.derivws.com": {
   "url": "https://api.derivws.com/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-bridge-api.deriv.cloud": {
   "url": "https://staging-bridge-api.deriv.cloud/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "login.deriv.com": {
   "url": "https://login.deriv.com/",
@@ -148,30 +148,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-kyc.deriv.com": {
   "url": "https://staging-kyc.deriv.com/",
-  "http_status": 200,
-  "title": "Deriv KYC v2",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
   "redirect": "",
-  "scripts": [
-   "https://staging-kyc.deriv.com/_next/static/chunks/1849-9e090232ef4d9b4c.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/1ee0abe3-4c45e22c2bffbb5e.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/2114-1ba5316bc73d24c5.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/3433-c8d46afd5c5157e0.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/4849-77e2389db0869d81.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/7617-76cddbb7c3019bda.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/7971-0f8ab565a294a03b.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/ac0bd126-6f9c2b3fde7f226e.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/app/layout-edf1c432ee972f0e.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/app/page-756f2df563fdfbaf.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/main-app-da1ad5b8bb2f0ed6.js",
-   "https://staging-kyc.deriv.com/_next/static/chunks/webpack-035f0ec01ac95cfe.js"
-  ],
+  "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-kyc-backoffice.deriv.cloud": {
   "url": "https://staging-kyc-backoffice.deriv.cloud/",
@@ -181,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "developers.deriv.com": {
   "url": "https://developers.deriv.com/",
@@ -222,7 +209,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-static.deriv.com": {
   "url": "https://staging-static.deriv.com/",
@@ -232,7 +219,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "xd4b-d4ka-fjga-taus-sv3s-e893.xano-prod.deriv.cloud": {
   "url": "https://xd4b-d4ka-fjga-taus-sv3s-e893.xano-prod.deriv.cloud/",
@@ -242,7 +229,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "templates-preview-developers.deriv.com": {
   "url": "https://templates-preview-developers.deriv.com/",
@@ -262,7 +249,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-bot.deriv.com": {
   "url": "https://staging-bot.deriv.com/",
@@ -272,7 +259,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-experts.deriv.com": {
   "url": "https://staging-experts.deriv.com/",
@@ -282,7 +269,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "preview-prod-backoffice-commissions.deriv.cloud": {
   "url": "https://preview-prod-backoffice-commissions.deriv.cloud/",
@@ -292,7 +279,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-charts.deriv.com": {
   "url": "https://staging-charts.deriv.com/",
@@ -305,7 +292,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-crypto-backoffice.deriv.cloud": {
   "url": "https://staging-crypto-backoffice.deriv.cloud/",
@@ -315,7 +302,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-api.deriv.com": {
   "url": "https://staging-api.deriv.com/",
@@ -325,7 +312,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-dbot.deriv.com": {
   "url": "https://staging-dbot.deriv.com/",
@@ -345,7 +332,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-traders.deriv.com": {
   "url": "https://staging-traders.deriv.com/",
@@ -355,7 +342,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "dev-mt5-demo-p01-ts03.deriv.cloud": {
   "url": "https://dev-mt5-demo-p01-ts03.deriv.cloud/",
@@ -365,7 +352,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "xd4b-d4ka-fjga-tuv1-bx50-2c0c.xano-prod.deriv.cloud": {
   "url": "https://xd4b-d4ka-fjga-tuv1-bx50-2c0c.xano-prod.deriv.cloud/",
@@ -375,7 +362,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "partnershub-assets.deriv.com": {
   "url": "https://partnershub-assets.deriv.com/",
@@ -395,7 +382,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-smartcharts.deriv.cloud": {
   "url": "https://staging-smartcharts.deriv.cloud/",
@@ -405,7 +392,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-developer.deriv.com": {
   "url": "https://staging-developer.deriv.com/",
@@ -415,7 +402,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "api.deriv.com": {
   "url": "https://api.deriv.com/",
@@ -435,7 +422,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-p2p.deriv.com": {
   "url": "https://staging-p2p.deriv.com/",
@@ -449,7 +436,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-app.deriv.com": {
   "url": "https://staging-app.deriv.com/",
@@ -469,7 +456,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-dtrader.deriv.com": {
   "url": "https://staging-dtrader.deriv.com/",
@@ -479,7 +466,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-dsmarttrader.deriv.com": {
   "url": "https://staging-dsmarttrader.deriv.com/",
@@ -489,7 +476,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-trading-flutter.deriv.com": {
   "url": "https://staging-trading-flutter.deriv.com/",
@@ -499,7 +486,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging-api-core.deriv.com": {
   "url": "https://staging-api-core.deriv.com/",
@@ -517,40 +504,40 @@
   "title": "",
   "redirect": "https://partners.deriv.com/welcome",
   "scripts": [
-   "https://partners.deriv.com/_next/static/chunks/3QzwWs89.js",
-   "https://partners.deriv.com/_next/static/chunks/B6tYenZ7.js",
-   "https://partners.deriv.com/_next/static/chunks/B8EtDH7O.js",
-   "https://partners.deriv.com/_next/static/chunks/BDZ-QNWY.js",
-   "https://partners.deriv.com/_next/static/chunks/BEYdLK8w.js",
-   "https://partners.deriv.com/_next/static/chunks/BId4Ty1x.js",
-   "https://partners.deriv.com/_next/static/chunks/BJWq_M31.js",
-   "https://partners.deriv.com/_next/static/chunks/BMfPps-y.js",
-   "https://partners.deriv.com/_next/static/chunks/BO70NvbP.js",
-   "https://partners.deriv.com/_next/static/chunks/BPANv26J.js",
-   "https://partners.deriv.com/_next/static/chunks/BQ2Kg134.js",
-   "https://partners.deriv.com/_next/static/chunks/BVIx2tFR.js",
-   "https://partners.deriv.com/_next/static/chunks/Bb5M5w41.js",
-   "https://partners.deriv.com/_next/static/chunks/BfogEXXo.js",
-   "https://partners.deriv.com/_next/static/chunks/BlMAC-td.js",
-   "https://partners.deriv.com/_next/static/chunks/BmZqAFBt.js",
-   "https://partners.deriv.com/_next/static/chunks/C0_dakDF.js",
-   "https://partners.deriv.com/_next/static/chunks/C1NVz39F.js",
-   "https://partners.deriv.com/_next/static/chunks/CHZsPH1Z.js",
-   "https://partners.deriv.com/_next/static/chunks/CN5XtTzX.js",
-   "https://partners.deriv.com/_next/static/chunks/CNmwrdw1.js",
-   "https://partners.deriv.com/_next/static/chunks/CS0BzIFn.js",
-   "https://partners.deriv.com/_next/static/chunks/CT3auSBQ.js",
-   "https://partners.deriv.com/_next/static/chunks/CVceGVfO.js",
-   "https://partners.deriv.com/_next/static/chunks/CXcVYif7.js",
-   "https://partners.deriv.com/_next/static/chunks/CaD1ohJj.js",
-   "https://partners.deriv.com/_next/static/chunks/Cd5ZRnos.js",
-   "https://partners.deriv.com/_next/static/chunks/ChQLylCq.js",
-   "https://partners.deriv.com/_next/static/chunks/ClvZ-pm6.js",
-   "https://partners.deriv.com/_next/static/chunks/CnAqXhsV.js"
+   "https://partners.deriv.com/_next/static/chunks/6wt8hZVx.js",
+   "https://partners.deriv.com/_next/static/chunks/7rEXHfeU.js",
+   "https://partners.deriv.com/_next/static/chunks/AVPFpwTq.js",
+   "https://partners.deriv.com/_next/static/chunks/BB2RCz_t.js",
+   "https://partners.deriv.com/_next/static/chunks/BJ_S_mp0.js",
+   "https://partners.deriv.com/_next/static/chunks/BJzjFy_I.js",
+   "https://partners.deriv.com/_next/static/chunks/BLiGlLfQ.js",
+   "https://partners.deriv.com/_next/static/chunks/BUEClLt0.js",
+   "https://partners.deriv.com/_next/static/chunks/BXWh193H.js",
+   "https://partners.deriv.com/_next/static/chunks/Be6TUAxG.js",
+   "https://partners.deriv.com/_next/static/chunks/BekJkqNN.js",
+   "https://partners.deriv.com/_next/static/chunks/BfdLdCDk.js",
+   "https://partners.deriv.com/_next/static/chunks/BgnYhuWs.js",
+   "https://partners.deriv.com/_next/static/chunks/Bjxa-y1E.js",
+   "https://partners.deriv.com/_next/static/chunks/BpYmDYPl.js",
+   "https://partners.deriv.com/_next/static/chunks/BrsjWzPY.js",
+   "https://partners.deriv.com/_next/static/chunks/Btf4Hd2s.js",
+   "https://partners.deriv.com/_next/static/chunks/C-X2KE2P.js",
+   "https://partners.deriv.com/_next/static/chunks/C25vzRux.js",
+   "https://partners.deriv.com/_next/static/chunks/C59B3iM_.js",
+   "https://partners.deriv.com/_next/static/chunks/CCJiZfGg.js",
+   "https://partners.deriv.com/_next/static/chunks/CG8-YRJY.js",
+   "https://partners.deriv.com/_next/static/chunks/CKMbYgZP.js",
+   "https://partners.deriv.com/_next/static/chunks/CLrgygM1.js",
+   "https://partners.deriv.com/_next/static/chunks/ClSr5sAP.js",
+   "https://partners.deriv.com/_next/static/chunks/Cmi6RbtR.js",
+   "https://partners.deriv.com/_next/static/chunks/CsTtj0mT.js",
+   "https://partners.deriv.com/_next/static/chunks/CsvIAKg0.js",
+   "https://partners.deriv.com/_next/static/chunks/Cv1DYrTN.js",
+   "https://partners.deriv.com/_next/static/chunks/CzAGXtmN.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
  },
  "staging.deriv.com": {
   "url": "https://staging.deriv.com/",
@@ -558,31 +545,488 @@
   "title": "Online broker for trading anytime, anywhere | Deriv",
   "redirect": "",
   "scripts": [
-   "https://staging.deriv.com/_next/static/chunks/1ededb357742fa90.js",
-   "https://staging.deriv.com/_next/static/chunks/20b7f91c7d8e0c98.js",
-   "https://staging.deriv.com/_next/static/chunks/41d60c29ad75ac87.js",
-   "https://staging.deriv.com/_next/static/chunks/437f595db11fcae0.js",
-   "https://staging.deriv.com/_next/static/chunks/46b77cf8ad0ec464.js",
-   "https://staging.deriv.com/_next/static/chunks/4fbc90348fce15a5.js",
-   "https://staging.deriv.com/_next/static/chunks/5e1f6f7d6ad08c71.js",
-   "https://staging.deriv.com/_next/static/chunks/6f8fd864da3d6770.js",
-   "https://staging.deriv.com/_next/static/chunks/739b12ab13fbb0b3.js",
-   "https://staging.deriv.com/_next/static/chunks/7c7b03029129d003.js",
-   "https://staging.deriv.com/_next/static/chunks/85655b2359824ecb.js",
+   "https://staging.deriv.com/_next/static/chunks/004d12805f0146aa.js",
+   "https://staging.deriv.com/_next/static/chunks/14d4f2b9b9e22645.js",
+   "https://staging.deriv.com/_next/static/chunks/1638d11d758f071e.js",
+   "https://staging.deriv.com/_next/static/chunks/205589e1c778bbdb.js",
+   "https://staging.deriv.com/_next/static/chunks/4169d30e83463d1e.js",
+   "https://staging.deriv.com/_next/static/chunks/4ceb55a0152381c7.js",
+   "https://staging.deriv.com/_next/static/chunks/4ee14463be2b136c.js",
+   "https://staging.deriv.com/_next/static/chunks/5d5c6d0844fab160.js",
+   "https://staging.deriv.com/_next/static/chunks/916b58c648d25822.js",
+   "https://staging.deriv.com/_next/static/chunks/a44235986dc198f3.js",
    "https://staging.deriv.com/_next/static/chunks/a6dad97d9634a72d.js",
-   "https://staging.deriv.com/_next/static/chunks/b52fe762db5b8130.js",
-   "https://staging.deriv.com/_next/static/chunks/bd0ea66bef8eb61e.js",
-   "https://staging.deriv.com/_next/static/chunks/c16efd9677d8c131.js",
-   "https://staging.deriv.com/_next/static/chunks/c2b4e1db4ca422b5.js",
-   "https://staging.deriv.com/_next/static/chunks/d96012bcfc98706a.js",
-   "https://staging.deriv.com/_next/static/chunks/e87e02814462557e.js",
-   "https://staging.deriv.com/_next/static/chunks/ebaadfe81f936d96.js",
-   "https://staging.deriv.com/_next/static/chunks/f0a99006841d8e36.js",
-   "https://staging.deriv.com/_next/static/chunks/fc997fc73fff6414.js",
-   "https://staging.deriv.com/_next/static/chunks/turbopack-98185b7c68f8d8c1.js"
+   "https://staging.deriv.com/_next/static/chunks/b17b7782ea718fd9.js",
+   "https://staging.deriv.com/_next/static/chunks/b65a54ccbcc896af.js",
+   "https://staging.deriv.com/_next/static/chunks/c041b50fef6c259c.js",
+   "https://staging.deriv.com/_next/static/chunks/c3d896226f57faa8.js",
+   "https://staging.deriv.com/_next/static/chunks/c51657352f81a36f.js",
+   "https://staging.deriv.com/_next/static/chunks/cd554336f2738ff1.js",
+   "https://staging.deriv.com/_next/static/chunks/cf02c12e3e73dd14.js",
+   "https://staging.deriv.com/_next/static/chunks/dcf0951b5a0e3b20.js",
+   "https://staging.deriv.com/_next/static/chunks/eb158bbc4d3bc71d.js",
+   "https://staging.deriv.com/_next/static/chunks/ec15b530f42a6dbb.js",
+   "https://staging.deriv.com/_next/static/chunks/turbopack-e9f556ca72ae8543.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:38:21 UTC"
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "test-api.deriv.com": {
+  "url": "https://test-api.deriv.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://derivcom.cloudflareaccess.com/cdn-cgi/access/login/test-api.deriv.com?kid=9fe8e1f291da834c832cf92c83f139f473c4d18cb1cee6d67b81d83540476c16&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImRj",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "beta-api.deriv.com": {
+  "url": "https://beta-api.deriv.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "http://developers.deriv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "developer.deriv.com": {
+  "url": "https://developer.deriv.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://developers.deriv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-api.derivws.com": {
+  "url": "https://staging-api.derivws.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-partners-academy.deriv.com": {
+  "url": "https://staging-partners-academy.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-blog.deriv.com": {
+  "url": "https://staging-blog.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "id-ct-uat3.deriv.com": {
+  "url": "https://id-ct-uat3.deriv.com/",
+  "http_status": 302,
+  "title": "Redirecting to https://chsandbox.id.ctrader.com/",
+  "redirect": "https://chsandbox.id.ctrader.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-dp2p.deriv.com": {
+  "url": "https://staging-dp2p.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-backoffice-commissions.deriv.cloud": {
+  "url": "https://staging-backoffice-commissions.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "oauth.deriv.com": {
+  "url": "https://oauth.deriv.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://deriv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "derivpay-poc.deriv.cloud": {
+  "url": "https://derivpay-poc.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-dev.deriv.cloud": {
+  "url": "https://staging-dev.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "derivpay-fe-poc.deriv.cloud": {
+  "url": "https://derivpay-fe-poc.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-swipe.deriv.com": {
+  "url": "https://staging-swipe.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "bridge-api.deriv.cloud": {
+  "url": "https://bridge-api.deriv.cloud/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-backoffice-synthetic-feed.deriv.cloud": {
+  "url": "https://staging-backoffice-synthetic-feed.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "api-core.deriv.com": {
+  "url": "https://api-core.deriv.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "xano-sandbox.deriv.cloud": {
+  "url": "https://xano-sandbox.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "dev-mt5-real-p01-ts01.deriv.cloud": {
+  "url": "https://dev-mt5-real-p01-ts01.deriv.cloud/",
+  "http_status": 403,
+  "title": "403",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "legacy-api.deriv.com": {
+  "url": "https://legacy-api.deriv.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://developers.deriv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "partners-app.deriv.com": {
+  "url": "https://partners-app.deriv.com/",
+  "http_status": 200,
+  "title": "Deriv Partners",
+  "redirect": "",
+  "scripts": [
+   "https://partners-app.deriv.com/automation_locators.js",
+   "https://partners-app.deriv.com/canvaskit/f3e3bad6a267/chromium/canvaskit.js",
+   "https://partners-app.deriv.com/main.dart.js?v=c437c58b9a80",
+   "https://partners-app.deriv.com/passkeys_bundle.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "id-ct-uat.deriv.com": {
+  "url": "https://id-ct-uat.deriv.com/",
+  "http_status": 401,
+  "title": "401 Authorization Required",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-api-partners.deriv.com": {
+  "url": "https://staging-api-partners.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-traders-academy.deriv.com": {
+  "url": "https://staging-traders-academy.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-backoffice.deriv.cloud": {
+  "url": "https://staging-backoffice.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-auth.deriv.cloud": {
+  "url": "https://staging-auth.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-templates-preview-developers.deriv.com": {
+  "url": "https://staging-templates-preview-developers.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "beta-dtrader.deriv.com": {
+  "url": "https://beta-dtrader.deriv.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://derivcom.cloudflareaccess.com/cdn-cgi/access/login/beta-dtrader.deriv.com?kid=4eefa91f237762e3b5415609ca8cfc3e6ca01ae8ac7a3d7d4d26a2ae2b93602d&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "bridge-api-zuplo.deriv.cloud": {
+  "url": "https://bridge-api-zuplo.deriv.cloud/",
+  "http_status": 403,
+  "title": "CNAME Cross-User Banned | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "internal.deriv.cloud": {
+  "url": "https://internal.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "auth.deriv.com": {
+  "url": "https://auth.deriv.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-smarttrader.deriv.com": {
+  "url": "https://staging-smarttrader.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-trade.deriv.com": {
+  "url": "https://staging-trade.deriv.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://staging.deriv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-derivprop.deriv.cloud": {
+  "url": "https://staging-derivprop.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:08:54 UTC"
+ },
+ "staging-p2p-backoffice.deriv.cloud": {
+  "url": "https://staging-p2p-backoffice.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "dev-mt5-demo-p01-ts01.deriv.cloud": {
+  "url": "https://dev-mt5-demo-p01-ts01.deriv.cloud/",
+  "http_status": 403,
+  "title": "403",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-auth.deriv.com": {
+  "url": "https://staging-auth.deriv.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "partner-tracking.deriv.com": {
+  "url": "https://partner-tracking.deriv.com/",
+  "http_status": 204,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-backoffice-feed-studio.deriv.cloud": {
+  "url": "https://staging-backoffice-feed-studio.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-home.deriv.com": {
+  "url": "https://staging-home.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "partners-academy.deriv.com": {
+  "url": "https://partners-academy.deriv.com/",
+  "http_status": 200,
+  "title": "Learn, grow, and earn with Deriv Partner Academy",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-partners.deriv.com": {
+  "url": "https://staging-partners.deriv.com/",
+  "http_status": 403,
+  "title": "Access Denied | WAF Block",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "staging-data.deriv.cloud": {
+  "url": "https://staging-data.deriv.cloud/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "dev-mt5-real-p02-ts01.deriv.cloud": {
+  "url": "https://dev-mt5-real-p02-ts01.deriv.cloud/",
+  "http_status": 403,
+  "title": "403",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
+ },
+ "ct-uat.deriv.com": {
+  "url": "https://ct-uat.deriv.com/",
+  "http_status": 200,
+  "title": "Deriv UAT cTrader | Open Trading Platform",
+  "redirect": "",
+  "scripts": [
+   "https://ct-uat.deriv.com/bundle/index-507a1154757686c4056e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:07:16 UTC"
  }
 }

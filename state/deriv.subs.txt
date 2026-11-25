@@ -18,12 +18,14 @@
 2.oauth.deriv.com
 209.derivws.com
 209.oauth.deriv.com
+2091.cashier.deriv.com
 221.derivws.com
 221.oauth.deriv.com
 222.cashier.deriv.com
 222.deriv.com
 222.derivws.com
 222.oauth.deriv.com
+223.oauth.deriv.com
 227.app.deriv.com
 227.cashier.deriv.com
 227.deriv.cloud
@@ -33,6 +35,7 @@
 228.oauth.deriv.com
 229.cashier.deriv.com
 229.derivws.com
+229.oauth.deriv.com
 232.oauth.deriv.com
 236.cashier.deriv.com
 236.derivws.com
@@ -43,6 +46,7 @@
 3c-dperillo2-middleware.dev.deriv.cloud
 3c-white-rabbit-middlewaree.dev.deriv.cloud
 3cloud.deriv.cloudcloud.deriv.cloud
+3com.deriv.dede.deriv.com
 3com.deriv.hrhr.deriv.com
 3comb.deriv.dede.deriv.com
 3comer.deriv.dede.deriv.com
@@ -65,6 +69,7 @@ accelerated-mt5.deriv.com
 account.derivws.com
 accounts.staging-home.deriv.com
 ad.deriv.cloud
+ad.deriv.com
 ad.derivws.com
 ad1.cashier.deriv.com
 ad9.oauth.deriv.com
@@ -85,6 +90,7 @@ af.deriv.com
 af02.deriv.com
 af03.deriv.com
 agapebabiesq.dev.deriv.cloud
+altervistam.org.cdn.deriv.com
 angular.dev.deriv.cloud
 apac.deriv.cloud
 api-core-aws.deriv.com
@@ -183,6 +189,7 @@ beta.derivws.com
 beta7.deriv.cloud
 beta7.derivws.com
 bf1.deriv.com
+binary.deriv.com
 binary5.deriv.com
 bitcoin.deriv.com
 bloba.core.derivws.com
@@ -206,8 +213,10 @@ bot.deriv.com
 bounty.deriv.com
 bounty7.deriv.com
 br.deriv.com
+braunschweig-appa.dev.deriv.cloud
 bridge-api-zuplo.deriv.cloud
 bridge-api.deriv.cloud
+brokerpilot-pg01.deriv.com
 brokerpilot-pg01w.deriv.com
 brokerpilot-pg01w.staging.deriv.cloud
 brokerpilot-web01.deriv.com
@@ -315,6 +324,7 @@ chronicledb01.deriv.com
 chronicledb01a.staging.deriv.cloud
 chroniclee.deriv.com
 ci-fs.deriv.cloud
+ci-fs.deriv.com
 clerk.staging-home.deriv.com
 client-deriving.deriv.cloud
 client-derivingo.deriv.cloud
@@ -362,12 +372,14 @@ commissions.deriv.cloud
 common01.deriv.com
 community.deriv.cloud
 communitya.deriv.cloud
+communityu.deriv.com
 companies.dev.deriv.cloud
 components.deriv.cloud
 components.deriv.com
 componentsc.deriv.com
 componentsk.deriv.cloud
 compute01.deriv.cloud
+compute01.deriv.com
 compute01a.deriv.com
 compute01c.deriv.cloud
 comu.dev.deriv.cloud
@@ -377,6 +389,7 @@ containersq.deriv.cloud
 contest.deriv.com
 controller.deriv.cloud
 controller.deriv.com
+controllerc.deriv.com
 controllery.deriv.cloud
 core-api.deriv.com
 core.deriv.cloud
@@ -568,6 +581,7 @@ dx-demo-api.deriv.com
 dx-demo-api7.deriv.com
 dx-demo.deriv.com
 dx-mobile.deriv.com
+dx-mobile9.deriv.com
 dx-webquotes.deriv.cloud
 dx.deriv.cloud
 dx.deriv.com
@@ -596,7 +610,9 @@ enterprise-api.deriv.cloud
 enterprise-api.deriv.com
 enterprise-apiq.deriv.cloud
 enterprise-dev.deriv.cloud
+enterprise-dev.deriv.com
 enterprise.deriv.cloud
+enterprise.deriv.com
 enterprisei.deriv.com
 enterprisek.deriv.cloud
 entryc.dev.deriv.cloud
@@ -638,6 +654,7 @@ extranet.derivws.com
 ezmobile.deriv.cloud
 ezmobile.deriv.com
 ezmobilee.deriv.com
+ezweb.deriv.com
 f.deriv.cloud
 f.deriv.com
 farhad.dev.deriv.cloud
@@ -716,6 +733,7 @@ home.deriv.com
 home.derivws.com
 homeg.derivws.com
 houston.derivws.com
+hrhr.deriv.com
 hub.deriv.com
 hub.frontend.derivws.com
 i.deriv.cloud
@@ -724,6 +742,7 @@ id-ct-uat.deriv.com
 id-ct-uat2.deriv.com
 id-ct-uat21.deriv.com
 id-ct-uat3.deriv.com
+id-ct-uat7.deriv.com
 id-ct.deriv.cloud
 id-ct.deriv.com
 ident.derivws.com
@@ -756,6 +775,7 @@ kroki-test.deriv.cloud
 kroki.deriv.cloud
 kroki.deriv.com
 kunden.derivws.com
+kws.deriv.com
 kyc-adaptor-staging.deriv.com
 kyc-adaptor.deriv.com
 kyc-backoffice.deriv.cloud
@@ -801,6 +821,7 @@ manager.deriv.com
 masterg.api.dev.deriv.cloud
 media.deriv.com
 metric.derivws.com
+mf-dbpri01.deriv.com
 mf-dbpri015.staging.deriv.cloud
 mfa-dfadmin.deriv.cloud
 mgmt.deriv.cloud
@@ -906,6 +927,7 @@ officem.deriv.cloud
 okta.deriv.com
 onfido.deriv.com
 oob.deriv.com
+openstack.deriv.com
 optimize.deriv.cloud
 optimize.deriv.com
 options.deriv.com
@@ -1068,6 +1090,7 @@ protection.deriv.com
 proxy01.deriv.cloud
 ptr275.info.deriv.com
 ptr275m.info.deriv.com
+ptr4659.deriv.com
 ptr6684.info.deriv.com
 ptr6684o.info.deriv.com
 ptr7661.deriv.com
@@ -1091,6 +1114,7 @@ rancher-staging.deriv.com
 rancher-stagings.deriv.cloud
 rancher.deriv.cloud
 ranchers.deriv.cloud
+real.deriv.com
 real01.deriv.cloud
 real01.deriv.com
 real02.deriv.com
@@ -1102,6 +1126,7 @@ redmine-api.deriv.cloud
 redmine-api.deriv.com
 redmine-qa.deriv.cloud
 redmine-staging.deriv.cloud
+redmine-staging.deriv.com
 redmine-test.deriv.cloud
 redmine-test.deriv.com
 redmine-x.deriv.cloud
@@ -1165,6 +1190,7 @@ staging-api-partners.deriv.com
 staging-api.deriv.cloud
 staging-api.deriv.com
 staging-api.derivws.com
+staging-apia.deriv.com
 staging-app-agent.deriv.com
 staging-app.deriv.cloud
 staging-app.deriv.com
@@ -1233,6 +1259,7 @@ staging-partners-academy.deriv.com
 staging-partners-app.deriv.com
 staging-partners-events.deriv.cloud
 staging-partners.deriv.com
+staging-partners3.deriv.com
 staging-partnershub.deriv.com
 staging-sg-hub.deriv.com
 staging-smartcharts.deriv.cloud
@@ -1285,6 +1312,8 @@ stagingg.cf-pages-deriv-app.deriv.com
 stagingg.deriv.cloud
 stagingi.cf-pages-sinbad.deriv.com
 stagingm.cf-pages-deriv-binary-static.deriv.com
+stagingm.cf-pages-deriv-developers-portal.deriv.com
+stagingq.cf-pages-app.deriv.com
 stagingrepository.deriv.cloud
 stagings.cf-pages-binary-bot.deriv.com
 stagings.cf-pages-deriv-com.deriv.com
@@ -1445,6 +1474,7 @@ www.academy.deriv.com
 www.api.deriv.com
 www.app.deriv.com
 www.besquare.deriv.com
+www.beta-eu.deriv.com
 www.beta.deriv.com
 www.blog.deriv.com
 www.bookstack.deriv.cloud
@@ -1453,6 +1483,7 @@ www.camunda-trial.deriv.cloud
 www.cashier.deriv.com
 www.cf-pages-deriv-app.deriv.com
 www.cf-pages-deriv-binary-bot.deriv.com
+www.cf-pages-deriv-binary-static.deriv.com
 www.cf-pages-deriv-com.deriv.com
 www.cf-pages-deriv-components.deriv.com
 www.cf-pages-deriv-developers-portal.deriv.com
@@ -1474,6 +1505,7 @@ www.dbot.deriv.com
 www.deriv.cloud
 www.deriv.com
 www.derivws.com
+www.dev-hub.deriv.com
 www.dev-mt5-demo-p01-ts01.deriv.cloud
 www.dev-mt5-demo-p01-ts03.deriv.cloud
 www.dev-mt5-real-p01-ts01.deriv.cloud
@@ -1504,6 +1536,7 @@ www.mt5-demo-web.deriv.com
 www.mt5-sg02.deriv.com
 www.mta-sts.deriv.com
 www.no404.cf-pages-deriv-app.deriv.com
+www.notfound.cf-pages-deriv-app.deriv.com
 www.oauth.deriv.com
 www.okta.deriv.com
 www.p2p.deriv.com
@@ -1523,6 +1556,7 @@ www.staging-app.deriv.com
 www.staging-bot.deriv.com
 www.staging-charts.deriv.com
 www.staging-dbot.deriv.com
+www.staging-eu.cf-pages-deriv-com.deriv.com
 www.staging-eu.deriv.com
 www.staging-event.deriv.com
 www.staging-hub.deriv.com

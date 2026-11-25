@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "test.swimlane.bitdefender.com": {
   "url": "https://test.swimlane.bitdefender.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "oem-central-stage.bitdefender.com": {
   "url": "https://oem-central-stage.bitdefender.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "sandbox-us.bitdefender.net": {
   "url": "https://sandbox-us.bitdefender.net/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "beta-central.bitdefender.com": {
   "url": "https://beta-central.bitdefender.com/",
@@ -53,7 +53,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "gz2-console.ms.gravityzone.bitdefender.com": {
   "url": "https://gz2-console.ms.gravityzone.bitdefender.com/",
@@ -70,7 +70,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "news.bitdefender.com": {
   "url": "https://news.bitdefender.com/",
@@ -80,7 +80,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "securepass-api.bitdefender.com": {
   "url": "https://securepass-api.bitdefender.com/",
@@ -90,7 +90,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "sandbox-portal-us-gcp.gravityzone.bitdefender.com": {
   "url": "https://sandbox-portal-us-gcp.gravityzone.bitdefender.com/",
@@ -100,7 +100,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "stratus-staging.ovh.gravityzone.bitdefender.com": {
   "url": "http://www.stratus-staging.ovh.gravityzone.bitdefender.com",
@@ -110,7 +110,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "app-stage.mdr.bitdefender.com": {
   "url": "https://app-stage.mdr.bitdefender.com:/en",
@@ -120,7 +120,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "csrtools-api.bitdefender.com": {
   "url": "https://csrtools-api.bitdefender.com/",
@@ -130,7 +130,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "beta.bitdefender.com": {
   "url": "https://beta.bitdefender.com/",
@@ -140,7 +140,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
  },
  "oemportal.bitdefender.com": {
   "url": "https://oemportal.bitdefender.com/sign-in",
@@ -150,6 +150,152 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 11:46:14 UTC"
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "cwautomate-api.rmm.bitdefender.com": {
+  "url": "https://cwautomate-api.rmm.bitdefender.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "account.bitdefender.com": {
+  "url": "https://account.bitdefender.com/",
+  "http_status": 200,
+  "title": "Bitdefender Account",
+  "redirect": "",
+  "scripts": [
+   "https://account.bitdefender.com/static/js/config.js?v=0.0.77",
+   "https://account.bitdefender.com/static/js/index-legacy.yZPImkhJ.js",
+   "https://account.bitdefender.com/static/js/index.ClOBlfRZ.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "oem-login.bitdefender.com": {
+  "url": "https://oem-login.bitdefender.com/central/redirect-url-not-found.html",
+  "http_status": 200,
+  "title": "Login",
+  "redirect": "https://oem-login.bitdefender.com/central/redirect-url-not-found.html",
+  "scripts": [
+   "https://oem-login.bitdefender.com/central/config.3.4.119-.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular-sanitize/angular-sanitize.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular-shims-placeholder/dist/angular-shims-placeholder.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular-ui-router/release/angular-ui-router.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular/v180/angular-animate.1.8.0.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular/v180/angular-cookies.1.8.0.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular/v180/angular-messages.1.8.0.min.js",
+   "https://oem-login.bitdefender.com/central/libs/angular/v180/angular.1.8.0.min.js",
+   "https://oem-login.bitdefender.com/central/libs/oclazyload/dist/ocLazyLoad.min.js",
+   "https://oem-login.bitdefender.com/central/libs/proof-of-work/pow.js",
+   "https://oem-login.bitdefender.com/central/libs/ua-parser-js/dist/ua-parser.min.js",
+   "https://oem-login.bitdefender.com/central/loginUI.3.4.119-.min.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "api.beta-account.bitdefender.com": {
+  "url": "https://api.beta-account.bitdefender.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "beta.push.bitdefender.net": {
+  "url": "https://beta.push.bitdefender.net/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "sandbox-portal-eu-gcp.gravityzone.bitdefender.com": {
+  "url": "https://sandbox-portal-eu-gcp.gravityzone.bitdefender.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "beta-connect-dm.bitdefender.net": {
+  "url": "https://beta-connect-dm.bitdefender.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "external-api.data.bitdefender.com": {
+  "url": "https://external-api.data.bitdefender.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "beta.nimbus.bitdefender.net": {
+  "url": "https://beta.nimbus.bitdefender.net/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "partners.elearning.bitdefender.com": {
+  "url": "https://partners.elearning.bitdefender.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://partners.elearning.bitdefender.com/learner/index-C_fG-GCK.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "gz1-console.ms.gravityzone.bitdefender.com": {
+  "url": "https://gz1-console.ms.gravityzone.bitdefender.com/",
+  "http_status": 200,
+  "title": "Bitdefender GravityZone",
+  "redirect": "",
+  "scripts": [
+   "https://gz1-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz1-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.app.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz1-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.bower.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz1-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz1-console.ms.gravityzone.bitdefender.com/static/zconsole/js/zconsole.zstrap.templates.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a",
+   "https://gz1-console.ms.gravityzone.bitdefender.com/zconfig.js?v=lHZlvxMgQIHFi1tgaKDD1DfuabjC6a"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
+ },
+ "api.beta-login.bitdefender.com": {
+  "url": "https://api.beta-login.bitdefender.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 23:20:54 UTC"
  }
 }
