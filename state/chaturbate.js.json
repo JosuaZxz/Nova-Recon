@@ -4,29 +4,77 @@
   "sha256": "33a564e8f3e10cc7681f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 02:37:37 UTC"
+  "updated": "2026-11-25 00:11:37 UTC"
  },
  "https://devportal.cb.dev/assets/newrelic.js": {
   "last_url": "https://devportal.cb.dev/assets/newrelic.js",
   "sha256": "d7c8f96145c1066da579",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 02:37:37 UTC"
+  "updated": "2026-11-25 00:11:37 UTC"
  },
  "https://devportal.cb.dev/7244.HASH.js": {
   "last_url": "https://devportal.cb.dev/7244.92c5a6e7.js",
-  "sha256": "81be324e57832c8af161",
+  "sha256": "53e14f24b0f96b473837",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 02:37:38 UTC"
+  "updated": "2026-11-25 00:11:37 UTC"
  },
  "https://devportal.cb.dev/bundle.HASH.js": {
   "last_url": "https://devportal.cb.dev/bundle.bb8cf169.js",
-  "sha256": "36f40aba4670bc40adc1",
+  "sha256": "834b183bd742cafee1d1",
   "routes": [
    "/api/v1/"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 02:37:38 UTC"
+  "updated": "2026-11-25 00:11:38 UTC"
+ },
+ "https://directory-v3-testbed.cb.dev/assets/newrelic.js": {
+  "last_url": "https://directory-v3-testbed.cb.dev/assets/newrelic.js",
+  "sha256": "97e55749d70f10698c26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:38 UTC"
+ },
+ "https://directory-v3-testbed.cb.dev/14.HASH.js": {
+  "last_url": "https://directory-v3-testbed.cb.dev/14.badc3ad6.js",
+  "sha256": "d852d26bd1afb581864a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:38 UTC"
+ },
+ "https://directory-v3-testbed.cb.dev/bundle.HASH.js": {
+  "last_url": "https://directory-v3-testbed.cb.dev/bundle.82567688.js",
+  "sha256": "60c743f7af6f1ccbbccc",
+  "routes": [
+   "/api/app/v1/",
+   "/api/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:39 UTC"
+ },
+ "https://directory-v3-live.cb.dev/assets/newrelic.js": {
+  "last_url": "https://directory-v3-live.cb.dev/assets/newrelic.js",
+  "sha256": "97e55749d70f10698c26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:39 UTC"
+ },
+ "https://directory-v3-live.cb.dev/14.HASH.js": {
+  "last_url": "https://directory-v3-live.cb.dev/14.badc3ad6.js",
+  "sha256": "a2b2dfd9e4d53e0a68c0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:39 UTC"
+ },
+ "https://directory-v3-live.cb.dev/bundle.HASH.js": {
+  "last_url": "https://directory-v3-live.cb.dev/bundle.82567688.js",
+  "sha256": "64784a4f9cae4f717f66",
+  "routes": [
+   "/api/app/v1/",
+   "/api/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-25 00:11:39 UTC"
  }
 }

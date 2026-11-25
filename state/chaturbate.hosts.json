@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "m.testbed.cb.dev": {
   "url": "https://m.testbed.cb.dev/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "admin.live.mmwebc.dev": {
   "url": "https://admin.live.mmwebc.dev/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "wildcard.web-testbed.cb.dev": {
   "url": "https://wildcard.web-testbed.cb.dev/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "mail.web-testbed.cb.dev": {
   "url": "https://mail.web-testbed.cb.dev/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "pt.testbed.cb.dev": {
   "url": "https://pt.testbed.cb.dev/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "de.testbed.cb.dev": {
   "url": "https://de.testbed.cb.dev/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "www.testbed.cb.dev": {
   "url": "https://www.testbed.cb.dev/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "es.testbed.cb.dev": {
   "url": "https://es.testbed.cb.dev/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "devportal.cb.dev": {
   "url": "https://devportal.cb.dev/",
@@ -103,7 +103,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "testbed.cb.dev": {
   "url": "https://www.testbed.cb.dev/",
@@ -113,7 +113,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "ru.testbed.cb.dev": {
   "url": "https://ru.testbed.cb.dev/",
@@ -123,7 +123,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
  },
  "beta.securegatewayaccess.com": {
   "url": "https://beta.securegatewayaccess.com/customer_support/",
@@ -133,6 +133,164 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 02:37:37 UTC"
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "report-uri.mmcdn.com": {
+  "url": "https://report-uri.mmcdn.com/",
+  "http_status": 200,
+  "title": "report-uri.mmcdn.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "report-uri.highwebmedia.com": {
+  "url": "https://report-uri.highwebmedia.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "directory-testbed.cb.dev": {
+  "url": "https://directory-testbed.cb.dev/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://directory-v3-testbed.cb.dev/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "wildcard.testbed.mmwebc.dev": {
+  "url": "https://wildcard.testbed.mmwebc.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "jenkins.live.mmwebc.dev": {
+  "url": "https://jenkins.live.mmwebc.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "web.static.mmcdn.com": {
+  "url": "https://web.static.mmcdn.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "directory-v3-testbed.cb.dev": {
+  "url": "https://directory-v3-testbed.cb.dev/",
+  "http_status": 200,
+  "title": "App Directory v3",
+  "redirect": "",
+  "scripts": [
+   "https://directory-v3-testbed.cb.dev/14.badc3ad6.js",
+   "https://directory-v3-testbed.cb.dev/assets/newrelic.js",
+   "https://directory-v3-testbed.cb.dev/bundle.82567688.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "it.testbed.cb.dev": {
+  "url": "https://it.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "www.web-testbed.cb.dev": {
+  "url": "https://www.web-testbed.cb.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "edge8-aus.live.mmcdn.com": {
+  "url": "https://edge8-aus.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "directory-v3-live.cb.dev": {
+  "url": "https://directory-v3-live.cb.dev/",
+  "http_status": 200,
+  "title": "App Directory v3",
+  "redirect": "",
+  "scripts": [
+   "https://directory-v3-live.cb.dev/14.badc3ad6.js",
+   "https://directory-v3-live.cb.dev/assets/newrelic.js",
+   "https://directory-v3-live.cb.dev/bundle.82567688.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "ko.testbed.cb.dev": {
+  "url": "https://ko.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "edge30-waw.live.mmcdn.com": {
+  "url": "https://edge30-waw.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "ja.testbed.cb.dev": {
+  "url": "https://ja.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
+ },
+ "fr.testbed.cb.dev": {
+  "url": "https://fr.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-25 00:11:36 UTC"
  }
 }
