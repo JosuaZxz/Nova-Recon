@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "api.classdojo.com": {
   "url": "https://api.classdojo.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "admin.multiplayer.classdojo.com": {
   "url": "https://admin.multiplayer.classdojo.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "video.api.marketplace.classdojo.com": {
   "url": "https://video.api.marketplace.classdojo.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "admin-dev.multiplayer.classdojo.com": {
   "url": "https://admin-dev.multiplayer.classdojo.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "ticket-staging.multiplayer.classdojo.com": {
   "url": "https://ticket-staging.multiplayer.classdojo.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "admin.dojo.me": {
   "url": "https://admin.dojo.me/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "restate-admin.multiplayer.classdojo.com": {
   "url": "https://restate-admin.multiplayer.classdojo.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-teach-static.classdojo.com": {
   "url": "https://new-teach-static.classdojo.com/",
@@ -86,40 +86,40 @@
   "title": "ClassDojo for Teachers",
   "redirect": "",
   "scripts": [
-   "https://new-teach-static.classdojo.com/assets/DDSBodyText-m65p_x3P.js",
+   "https://new-teach-static.classdojo.com/assets/DDSBodyText-BcGyeBWl.js",
    "https://new-teach-static.classdojo.com/assets/DDSBodyText.module-C3Q5PGQm.js",
-   "https://new-teach-static.classdojo.com/assets/DDSButton-BnMqrD-Z.js",
-   "https://new-teach-static.classdojo.com/assets/DDSDialog-eHvOmdVd.js",
-   "https://new-teach-static.classdojo.com/assets/DDSHeadlineText-CMALOMA7.js",
-   "https://new-teach-static.classdojo.com/assets/DDSIconButton-Ds4hbUgz.js",
+   "https://new-teach-static.classdojo.com/assets/DDSButton-CDnubF8t.js",
+   "https://new-teach-static.classdojo.com/assets/DDSDialog-C2b90sNI.js",
+   "https://new-teach-static.classdojo.com/assets/DDSHeadlineText-BCRz9_rr.js",
+   "https://new-teach-static.classdojo.com/assets/DDSIconButton-DpDSLRkO.js",
    "https://new-teach-static.classdojo.com/assets/DDSIconButton.module-BYHeWuHE.js",
-   "https://new-teach-static.classdojo.com/assets/DDSOverlaysRadixImport-B_6j1Dft.js",
-   "https://new-teach-static.classdojo.com/assets/DDSScrollLayout-abbY3oQD.js",
-   "https://new-teach-static.classdojo.com/assets/DDSToast-BBG9H2lq.js",
-   "https://new-teach-static.classdojo.com/assets/DDSTooltip-BnL9bE6h.js",
-   "https://new-teach-static.classdojo.com/assets/PendingSurface-DJ-SmRc_.js",
-   "https://new-teach-static.classdojo.com/assets/_fetchers-BqpgBjt4.js",
-   "https://new-teach-static.classdojo.com/assets/addMonths-DEbsw2IF.js",
-   "https://new-teach-static.classdojo.com/assets/auth-BLHJ5okM.js",
-   "https://new-teach-static.classdojo.com/assets/badge-states-CgoqTlQQ.js",
-   "https://new-teach-static.classdojo.com/assets/classroom-fetcher-GR94R9fp.js",
+   "https://new-teach-static.classdojo.com/assets/DDSOverlaysRadixImport-WqOq3oeI.js",
+   "https://new-teach-static.classdojo.com/assets/DDSScrollLayout-Dv-rTyas.js",
+   "https://new-teach-static.classdojo.com/assets/DDSToast-BCA96mHW.js",
+   "https://new-teach-static.classdojo.com/assets/DDSTooltip-BKknaNpk.js",
+   "https://new-teach-static.classdojo.com/assets/PendingSurface-BGcJcXNi.js",
+   "https://new-teach-static.classdojo.com/assets/_fetchers-BHESl7fS.js",
+   "https://new-teach-static.classdojo.com/assets/addMonths-2sZOJQGW.js",
+   "https://new-teach-static.classdojo.com/assets/auth-DOae4J3l.js",
+   "https://new-teach-static.classdojo.com/assets/badge-states-8olbjLpZ.js",
+   "https://new-teach-static.classdojo.com/assets/classroom-fetcher-C8KHpwlC.js",
    "https://new-teach-static.classdojo.com/assets/compact-BVd9n7xS.js",
-   "https://new-teach-static.classdojo.com/assets/comparison-D9YoEF71.js",
+   "https://new-teach-static.classdojo.com/assets/comparison-DrN3etRA.js",
    "https://new-teach-static.classdojo.com/assets/constants-BIqX12FA.js",
-   "https://new-teach-static.classdojo.com/assets/core-D00GJk88.js",
-   "https://new-teach-static.classdojo.com/assets/fetchers-DTAK4M2f.js",
+   "https://new-teach-static.classdojo.com/assets/core-4gnexCHU.js",
+   "https://new-teach-static.classdojo.com/assets/fetchers-DTWnBbcu.js",
    "https://new-teach-static.classdojo.com/assets/flatten-DcxvLLKh.js",
-   "https://new-teach-static.classdojo.com/assets/index-HEZQ7Xzw.js",
+   "https://new-teach-static.classdojo.com/assets/index-oGR317mL.js",
    "https://new-teach-static.classdojo.com/assets/isBuffer-BxScDr3Z.js",
-   "https://new-teach-static.classdojo.com/assets/isEqual-K52vuBQM.js",
+   "https://new-teach-static.classdojo.com/assets/isEqual-D5yLKQP9.js",
    "https://new-teach-static.classdojo.com/assets/isEqualsSameValueZero-CzrI1jdV.js",
    "https://new-teach-static.classdojo.com/assets/isIndex-Cq4PWQp4.js",
-   "https://new-teach-static.classdojo.com/assets/iteratee-DMY5ANXw.js",
+   "https://new-teach-static.classdojo.com/assets/iteratee-Ou4Moi21.js",
    "https://new-teach-static.classdojo.com/assets/location-DiicokLL.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "payments.classdojo.com": {
   "url": "https://payments.classdojo.com/",
@@ -129,7 +129,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "secrets.preview.classdojo.com": {
   "url": "https://secrets.preview.classdojo.com/",
@@ -139,7 +139,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-student-static.classdojo.com": {
   "url": "https://new-student-static.classdojo.com/",
@@ -147,38 +147,38 @@
   "title": "ClassDojo for Students",
   "redirect": "",
   "scripts": [
-   "https://new-student-static.classdojo.com/assets/DDSBodyText-lKQTgpaE.js",
+   "https://new-student-static.classdojo.com/assets/DDSBodyText-yk54tzFF.js",
    "https://new-student-static.classdojo.com/assets/DDSBodyText.module-oGAlvP6i.js",
-   "https://new-student-static.classdojo.com/assets/DDSButton-BISD-oWU.js",
-   "https://new-student-static.classdojo.com/assets/DDSHeadlineText-BLrtANMg.js",
-   "https://new-student-static.classdojo.com/assets/DDSIconButton-CuHbAOPr.js",
+   "https://new-student-static.classdojo.com/assets/DDSButton-CX0YSL94.js",
+   "https://new-student-static.classdojo.com/assets/DDSHeadlineText-CmRHk5Xz.js",
+   "https://new-student-static.classdojo.com/assets/DDSIconButton-8N7nVVsJ.js",
    "https://new-student-static.classdojo.com/assets/DDSIconButton.module-C-PFBSLi.js",
    "https://new-student-static.classdojo.com/assets/DDSLabelText.module-ULxynBEf.js",
-   "https://new-student-static.classdojo.com/assets/DDSOverlaysRadixImport-D4hZdUTM.js",
-   "https://new-student-static.classdojo.com/assets/ErrorPage-CFkf3Xc-.js",
-   "https://new-student-static.classdojo.com/assets/QueryClientProvider-B5E53O_p.js",
+   "https://new-student-static.classdojo.com/assets/DDSOverlaysRadixImport-B558slhz.js",
+   "https://new-student-static.classdojo.com/assets/ErrorPage-sVYEgyIZ.js",
+   "https://new-student-static.classdojo.com/assets/QueryClientProvider-BudvkdKB.js",
    "https://new-student-static.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
-   "https://new-student-static.classdojo.com/assets/core-UV2wrXiB.js",
+   "https://new-student-static.classdojo.com/assets/core-RnGYLBn4.js",
    "https://new-student-static.classdojo.com/assets/env-sQQfxbQL.js",
-   "https://new-student-static.classdojo.com/assets/file-upload-Dm3_YNIr.js",
-   "https://new-student-static.classdojo.com/assets/nessie-baTYNhV2.js",
-   "https://new-student-static.classdojo.com/assets/pendingSurfaceUtils-BDhF4esh.js",
+   "https://new-student-static.classdojo.com/assets/file-upload-DUarF73n.js",
+   "https://new-student-static.classdojo.com/assets/nessie-CSpTr7ok.js",
+   "https://new-student-static.classdojo.com/assets/pendingSurfaceUtils-09Z08igj.js",
    "https://new-student-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
-   "https://new-student-static.classdojo.com/assets/root-VzFMy_yL.js",
-   "https://new-student-static.classdojo.com/assets/session-language-store-C3nfPAYK.js",
-   "https://new-student-static.classdojo.com/assets/src-BlB6xmhM.js",
-   "https://new-student-static.classdojo.com/assets/src-DfYK1KDe.js",
-   "https://new-student-static.classdojo.com/assets/subDays-By8yu6ph.js",
+   "https://new-student-static.classdojo.com/assets/root-UxqUqAUF.js",
+   "https://new-student-static.classdojo.com/assets/session-language-store-D3MYhqBg.js",
+   "https://new-student-static.classdojo.com/assets/src-DB7Hi67L.js",
+   "https://new-student-static.classdojo.com/assets/src-DI0JfG0M.js",
+   "https://new-student-static.classdojo.com/assets/subDays-DVICJ-he.js",
    "https://new-student-static.classdojo.com/assets/timezoneContext-DjQrRPYG.js",
-   "https://new-student-static.classdojo.com/assets/toDate-BwNURpHR.js",
+   "https://new-student-static.classdojo.com/assets/toDate-Dw0R4JCA.js",
    "https://new-student-static.classdojo.com/assets/toInteger-BXnW-KqC.js",
-   "https://new-student-static.classdojo.com/assets/triggerBridge-CQwrpx5B.js",
+   "https://new-student-static.classdojo.com/assets/triggerBridge-CzWvQ395.js",
    "https://new-student-static.classdojo.com/assets/web-push-BmLDTb0z.js",
    "https://new-student-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "ws-dev.multiplayer.classdojo.com": {
   "url": "https://ws-dev.multiplayer.classdojo.com/",
@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-teach.classdojo.com": {
   "url": "https://new-teach.classdojo.com/",
@@ -196,40 +196,40 @@
   "title": "ClassDojo for Teachers",
   "redirect": "",
   "scripts": [
-   "https://new-teach.classdojo.com/assets/DDSBodyText-m65p_x3P.js",
+   "https://new-teach.classdojo.com/assets/DDSBodyText-BcGyeBWl.js",
    "https://new-teach.classdojo.com/assets/DDSBodyText.module-C3Q5PGQm.js",
-   "https://new-teach.classdojo.com/assets/DDSButton-BnMqrD-Z.js",
-   "https://new-teach.classdojo.com/assets/DDSDialog-eHvOmdVd.js",
-   "https://new-teach.classdojo.com/assets/DDSHeadlineText-CMALOMA7.js",
-   "https://new-teach.classdojo.com/assets/DDSIconButton-Ds4hbUgz.js",
+   "https://new-teach.classdojo.com/assets/DDSButton-CDnubF8t.js",
+   "https://new-teach.classdojo.com/assets/DDSDialog-C2b90sNI.js",
+   "https://new-teach.classdojo.com/assets/DDSHeadlineText-BCRz9_rr.js",
+   "https://new-teach.classdojo.com/assets/DDSIconButton-DpDSLRkO.js",
    "https://new-teach.classdojo.com/assets/DDSIconButton.module-BYHeWuHE.js",
-   "https://new-teach.classdojo.com/assets/DDSOverlaysRadixImport-B_6j1Dft.js",
-   "https://new-teach.classdojo.com/assets/DDSScrollLayout-abbY3oQD.js",
-   "https://new-teach.classdojo.com/assets/DDSToast-BBG9H2lq.js",
-   "https://new-teach.classdojo.com/assets/DDSTooltip-BnL9bE6h.js",
-   "https://new-teach.classdojo.com/assets/PendingSurface-DJ-SmRc_.js",
-   "https://new-teach.classdojo.com/assets/_fetchers-BqpgBjt4.js",
-   "https://new-teach.classdojo.com/assets/addMonths-DEbsw2IF.js",
-   "https://new-teach.classdojo.com/assets/auth-BLHJ5okM.js",
-   "https://new-teach.classdojo.com/assets/badge-states-CgoqTlQQ.js",
-   "https://new-teach.classdojo.com/assets/classroom-fetcher-GR94R9fp.js",
+   "https://new-teach.classdojo.com/assets/DDSOverlaysRadixImport-WqOq3oeI.js",
+   "https://new-teach.classdojo.com/assets/DDSScrollLayout-Dv-rTyas.js",
+   "https://new-teach.classdojo.com/assets/DDSToast-BCA96mHW.js",
+   "https://new-teach.classdojo.com/assets/DDSTooltip-BKknaNpk.js",
+   "https://new-teach.classdojo.com/assets/PendingSurface-BGcJcXNi.js",
+   "https://new-teach.classdojo.com/assets/_fetchers-BHESl7fS.js",
+   "https://new-teach.classdojo.com/assets/addMonths-2sZOJQGW.js",
+   "https://new-teach.classdojo.com/assets/auth-DOae4J3l.js",
+   "https://new-teach.classdojo.com/assets/badge-states-8olbjLpZ.js",
+   "https://new-teach.classdojo.com/assets/classroom-fetcher-C8KHpwlC.js",
    "https://new-teach.classdojo.com/assets/compact-BVd9n7xS.js",
-   "https://new-teach.classdojo.com/assets/comparison-D9YoEF71.js",
+   "https://new-teach.classdojo.com/assets/comparison-DrN3etRA.js",
    "https://new-teach.classdojo.com/assets/constants-BIqX12FA.js",
-   "https://new-teach.classdojo.com/assets/core-D00GJk88.js",
-   "https://new-teach.classdojo.com/assets/fetchers-DTAK4M2f.js",
+   "https://new-teach.classdojo.com/assets/core-4gnexCHU.js",
+   "https://new-teach.classdojo.com/assets/fetchers-DTWnBbcu.js",
    "https://new-teach.classdojo.com/assets/flatten-DcxvLLKh.js",
-   "https://new-teach.classdojo.com/assets/index-HEZQ7Xzw.js",
+   "https://new-teach.classdojo.com/assets/index-oGR317mL.js",
    "https://new-teach.classdojo.com/assets/isBuffer-BxScDr3Z.js",
-   "https://new-teach.classdojo.com/assets/isEqual-K52vuBQM.js",
+   "https://new-teach.classdojo.com/assets/isEqual-D5yLKQP9.js",
    "https://new-teach.classdojo.com/assets/isEqualsSameValueZero-CzrI1jdV.js",
    "https://new-teach.classdojo.com/assets/isIndex-Cq4PWQp4.js",
-   "https://new-teach.classdojo.com/assets/iteratee-DMY5ANXw.js",
+   "https://new-teach.classdojo.com/assets/iteratee-Ou4Moi21.js",
    "https://new-teach.classdojo.com/assets/location-DiicokLL.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "sfiles.classdojo.com": {
   "url": "https://sfiles.classdojo.com/",
@@ -239,7 +239,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-tutor-static.classdojo.com": {
   "url": "https://new-tutor-static.classdojo.com/",
@@ -247,40 +247,40 @@
   "title": "Dojo Tutor: Private online tutoring for kids",
   "redirect": "",
   "scripts": [
-   "https://new-tutor-static.classdojo.com/assets/DDSButton--frSpRRK.js",
+   "https://new-tutor-static.classdojo.com/assets/DDSButton-U2zWKK38.js",
    "https://new-tutor-static.classdojo.com/assets/DDSIconButton.module-B92CY29o.js",
-   "https://new-tutor-static.classdojo.com/assets/DDSOverlaysRadixImport-DCv_Gmyx.js",
-   "https://new-tutor-static.classdojo.com/assets/DDSToast-Dkg5thSu.js",
-   "https://new-tutor-static.classdojo.com/assets/DDSTooltip-DTw6kMuh.js",
-   "https://new-tutor-static.classdojo.com/assets/DeferredDialogRadixImport-Dx0HFBlo.js",
-   "https://new-tutor-static.classdojo.com/assets/PendingSurface-fd-c9Fpk.js",
-   "https://new-tutor-static.classdojo.com/assets/QueryClientProvider-8ntHm2y5.js",
-   "https://new-tutor-static.classdojo.com/assets/TranslationSafeText-d1TGUbVr.js",
-   "https://new-tutor-static.classdojo.com/assets/core-CxcMYfX0.js",
-   "https://new-tutor-static.classdojo.com/assets/dates-jn0riLZr.js",
+   "https://new-tutor-static.classdojo.com/assets/DDSOverlaysRadixImport-DYHhAG1p.js",
+   "https://new-tutor-static.classdojo.com/assets/DDSToast-Br46kJlP.js",
+   "https://new-tutor-static.classdojo.com/assets/DDSTooltip-BdJlVj7o.js",
+   "https://new-tutor-static.classdojo.com/assets/DeferredDialogRadixImport-zxqtehtv.js",
+   "https://new-tutor-static.classdojo.com/assets/PendingSurface-DZVubnEa.js",
+   "https://new-tutor-static.classdojo.com/assets/QueryClientProvider-fRGfnQip.js",
+   "https://new-tutor-static.classdojo.com/assets/TranslationSafeText-DBXW-anb.js",
+   "https://new-tutor-static.classdojo.com/assets/core-obauQb5v.js",
+   "https://new-tutor-static.classdojo.com/assets/dates-DIpXLuQf.js",
    "https://new-tutor-static.classdojo.com/assets/env-CyvP9fXI.js",
-   "https://new-tutor-static.classdojo.com/assets/index-EFkOkmsS.js",
-   "https://new-tutor-static.classdojo.com/assets/layerOverlay-CG1DmjZs.js",
-   "https://new-tutor-static.classdojo.com/assets/nessie-DmAp90c8.js",
-   "https://new-tutor-static.classdojo.com/assets/notification-JsuIdaW1.js",
-   "https://new-tutor-static.classdojo.com/assets/parse-BIktKf91.js",
-   "https://new-tutor-static.classdojo.com/assets/pendingSurfaceUtils-DDuS1xhN.js",
+   "https://new-tutor-static.classdojo.com/assets/index-CxNm_-JI.js",
+   "https://new-tutor-static.classdojo.com/assets/layerOverlay-Bcbe4OWc.js",
+   "https://new-tutor-static.classdojo.com/assets/nessie-bgr91r1C.js",
+   "https://new-tutor-static.classdojo.com/assets/notification-ClTRHMlr.js",
+   "https://new-tutor-static.classdojo.com/assets/parse-SEN_rjuO.js",
+   "https://new-tutor-static.classdojo.com/assets/pendingSurfaceUtils-C2paBlIy.js",
    "https://new-tutor-static.classdojo.com/assets/prop-types-DzlZt2kw.js",
-   "https://new-tutor-static.classdojo.com/assets/queryKey-CLelBIE7.js",
+   "https://new-tutor-static.classdojo.com/assets/queryKey-SrBALhxP.js",
    "https://new-tutor-static.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
-   "https://new-tutor-static.classdojo.com/assets/shim-Dd335YHV.js",
-   "https://new-tutor-static.classdojo.com/assets/src-BLUISlQd.js",
-   "https://new-tutor-static.classdojo.com/assets/src-DCMTd9z7.js",
-   "https://new-tutor-static.classdojo.com/assets/subHours-Wb9C72ae.js",
-   "https://new-tutor-static.classdojo.com/assets/triggerBridge-uj5lVjf4.js",
-   "https://new-tutor-static.classdojo.com/assets/useInfiniteQuery-DKNm5IRC.js",
-   "https://new-tutor-static.classdojo.com/assets/useMutation-DoL6qoEQ.js",
-   "https://new-tutor-static.classdojo.com/assets/useSession-CdPdwGsL.js",
+   "https://new-tutor-static.classdojo.com/assets/shim-bkpM079c.js",
+   "https://new-tutor-static.classdojo.com/assets/src-DSAp4SbC.js",
+   "https://new-tutor-static.classdojo.com/assets/src-qncfZmG_.js",
+   "https://new-tutor-static.classdojo.com/assets/subHours--H8poTlr.js",
+   "https://new-tutor-static.classdojo.com/assets/triggerBridge-C4iO-cnK.js",
+   "https://new-tutor-static.classdojo.com/assets/useInfiniteQuery-BQz4n9GJ.js",
+   "https://new-tutor-static.classdojo.com/assets/useMutation-DVQWcM6u.js",
+   "https://new-tutor-static.classdojo.com/assets/useSession-BTrgmt_7.js",
    "https://new-tutor-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-toolkit-static.classdojo.com": {
   "url": "https://new-toolkit-static.classdojo.com/",
@@ -288,13 +288,13 @@
   "title": "ClassDojo Toolkit",
   "redirect": "",
   "scripts": [
-   "https://new-toolkit-static.classdojo.com/assets/core-DxSCRWmC.js",
-   "https://new-toolkit-static.classdojo.com/assets/index-BCxchsh1.js",
+   "https://new-toolkit-static.classdojo.com/assets/core-D8TYTTF9.js",
+   "https://new-toolkit-static.classdojo.com/assets/index-Dj8uGGDy.js",
    "https://new-toolkit-static.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "ws.multiplayer.classdojo.com": {
   "url": "https://ws.multiplayer.classdojo.com/",
@@ -304,7 +304,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-student.classdojo.com": {
   "url": "https://new-student.classdojo.com/",
@@ -312,38 +312,38 @@
   "title": "ClassDojo for Students",
   "redirect": "",
   "scripts": [
-   "https://new-student.classdojo.com/assets/DDSBodyText-lKQTgpaE.js",
+   "https://new-student.classdojo.com/assets/DDSBodyText-yk54tzFF.js",
    "https://new-student.classdojo.com/assets/DDSBodyText.module-oGAlvP6i.js",
-   "https://new-student.classdojo.com/assets/DDSButton-BISD-oWU.js",
-   "https://new-student.classdojo.com/assets/DDSHeadlineText-BLrtANMg.js",
-   "https://new-student.classdojo.com/assets/DDSIconButton-CuHbAOPr.js",
+   "https://new-student.classdojo.com/assets/DDSButton-CX0YSL94.js",
+   "https://new-student.classdojo.com/assets/DDSHeadlineText-CmRHk5Xz.js",
+   "https://new-student.classdojo.com/assets/DDSIconButton-8N7nVVsJ.js",
    "https://new-student.classdojo.com/assets/DDSIconButton.module-C-PFBSLi.js",
    "https://new-student.classdojo.com/assets/DDSLabelText.module-ULxynBEf.js",
-   "https://new-student.classdojo.com/assets/DDSOverlaysRadixImport-D4hZdUTM.js",
-   "https://new-student.classdojo.com/assets/ErrorPage-CFkf3Xc-.js",
-   "https://new-student.classdojo.com/assets/QueryClientProvider-B5E53O_p.js",
+   "https://new-student.classdojo.com/assets/DDSOverlaysRadixImport-B558slhz.js",
+   "https://new-student.classdojo.com/assets/ErrorPage-sVYEgyIZ.js",
+   "https://new-student.classdojo.com/assets/QueryClientProvider-BudvkdKB.js",
    "https://new-student.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
-   "https://new-student.classdojo.com/assets/core-UV2wrXiB.js",
+   "https://new-student.classdojo.com/assets/core-RnGYLBn4.js",
    "https://new-student.classdojo.com/assets/env-sQQfxbQL.js",
-   "https://new-student.classdojo.com/assets/file-upload-Dm3_YNIr.js",
-   "https://new-student.classdojo.com/assets/nessie-baTYNhV2.js",
-   "https://new-student.classdojo.com/assets/pendingSurfaceUtils-BDhF4esh.js",
+   "https://new-student.classdojo.com/assets/file-upload-DUarF73n.js",
+   "https://new-student.classdojo.com/assets/nessie-CSpTr7ok.js",
+   "https://new-student.classdojo.com/assets/pendingSurfaceUtils-09Z08igj.js",
    "https://new-student.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
-   "https://new-student.classdojo.com/assets/root-VzFMy_yL.js",
-   "https://new-student.classdojo.com/assets/session-language-store-C3nfPAYK.js",
-   "https://new-student.classdojo.com/assets/src-BlB6xmhM.js",
-   "https://new-student.classdojo.com/assets/src-DfYK1KDe.js",
-   "https://new-student.classdojo.com/assets/subDays-By8yu6ph.js",
+   "https://new-student.classdojo.com/assets/root-UxqUqAUF.js",
+   "https://new-student.classdojo.com/assets/session-language-store-D3MYhqBg.js",
+   "https://new-student.classdojo.com/assets/src-DB7Hi67L.js",
+   "https://new-student.classdojo.com/assets/src-DI0JfG0M.js",
+   "https://new-student.classdojo.com/assets/subDays-DVICJ-he.js",
    "https://new-student.classdojo.com/assets/timezoneContext-DjQrRPYG.js",
-   "https://new-student.classdojo.com/assets/toDate-BwNURpHR.js",
+   "https://new-student.classdojo.com/assets/toDate-Dw0R4JCA.js",
    "https://new-student.classdojo.com/assets/toInteger-BXnW-KqC.js",
-   "https://new-student.classdojo.com/assets/triggerBridge-CQwrpx5B.js",
+   "https://new-student.classdojo.com/assets/triggerBridge-CzWvQ395.js",
    "https://new-student.classdojo.com/assets/web-push-BmLDTb0z.js",
    "https://new-student.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "tutor-test.classdojo.com": {
   "url": "https://tutor-test.classdojo.com/",
@@ -352,39 +352,39 @@
   "redirect": "",
   "scripts": [
    "https://plausible.classdojo.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js",
-   "https://tutor-test.classdojo.com/assets/DDSButton--frSpRRK.js",
+   "https://tutor-test.classdojo.com/assets/DDSButton-U2zWKK38.js",
    "https://tutor-test.classdojo.com/assets/DDSIconButton.module-B92CY29o.js",
-   "https://tutor-test.classdojo.com/assets/DDSOverlaysRadixImport-DCv_Gmyx.js",
-   "https://tutor-test.classdojo.com/assets/DDSToast-Dkg5thSu.js",
-   "https://tutor-test.classdojo.com/assets/DDSTooltip-DTw6kMuh.js",
-   "https://tutor-test.classdojo.com/assets/DeferredDialogRadixImport-Dx0HFBlo.js",
-   "https://tutor-test.classdojo.com/assets/PendingSurface-fd-c9Fpk.js",
-   "https://tutor-test.classdojo.com/assets/QueryClientProvider-8ntHm2y5.js",
-   "https://tutor-test.classdojo.com/assets/TranslationSafeText-d1TGUbVr.js",
-   "https://tutor-test.classdojo.com/assets/core-CxcMYfX0.js",
-   "https://tutor-test.classdojo.com/assets/dates-jn0riLZr.js",
+   "https://tutor-test.classdojo.com/assets/DDSOverlaysRadixImport-DYHhAG1p.js",
+   "https://tutor-test.classdojo.com/assets/DDSToast-Br46kJlP.js",
+   "https://tutor-test.classdojo.com/assets/DDSTooltip-BdJlVj7o.js",
+   "https://tutor-test.classdojo.com/assets/DeferredDialogRadixImport-zxqtehtv.js",
+   "https://tutor-test.classdojo.com/assets/PendingSurface-DZVubnEa.js",
+   "https://tutor-test.classdojo.com/assets/QueryClientProvider-fRGfnQip.js",
+   "https://tutor-test.classdojo.com/assets/TranslationSafeText-DBXW-anb.js",
+   "https://tutor-test.classdojo.com/assets/core-obauQb5v.js",
+   "https://tutor-test.classdojo.com/assets/dates-DIpXLuQf.js",
    "https://tutor-test.classdojo.com/assets/env-CyvP9fXI.js",
-   "https://tutor-test.classdojo.com/assets/index-EFkOkmsS.js",
-   "https://tutor-test.classdojo.com/assets/layerOverlay-CG1DmjZs.js",
-   "https://tutor-test.classdojo.com/assets/nessie-DmAp90c8.js",
-   "https://tutor-test.classdojo.com/assets/notification-JsuIdaW1.js",
-   "https://tutor-test.classdojo.com/assets/parse-BIktKf91.js",
-   "https://tutor-test.classdojo.com/assets/pendingSurfaceUtils-DDuS1xhN.js",
+   "https://tutor-test.classdojo.com/assets/index-CxNm_-JI.js",
+   "https://tutor-test.classdojo.com/assets/layerOverlay-Bcbe4OWc.js",
+   "https://tutor-test.classdojo.com/assets/nessie-bgr91r1C.js",
+   "https://tutor-test.classdojo.com/assets/notification-ClTRHMlr.js",
+   "https://tutor-test.classdojo.com/assets/parse-SEN_rjuO.js",
+   "https://tutor-test.classdojo.com/assets/pendingSurfaceUtils-C2paBlIy.js",
    "https://tutor-test.classdojo.com/assets/prop-types-DzlZt2kw.js",
-   "https://tutor-test.classdojo.com/assets/queryKey-CLelBIE7.js",
+   "https://tutor-test.classdojo.com/assets/queryKey-SrBALhxP.js",
    "https://tutor-test.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
-   "https://tutor-test.classdojo.com/assets/shim-Dd335YHV.js",
-   "https://tutor-test.classdojo.com/assets/src-BLUISlQd.js",
-   "https://tutor-test.classdojo.com/assets/src-DCMTd9z7.js",
-   "https://tutor-test.classdojo.com/assets/subHours-Wb9C72ae.js",
-   "https://tutor-test.classdojo.com/assets/triggerBridge-uj5lVjf4.js",
-   "https://tutor-test.classdojo.com/assets/useInfiniteQuery-DKNm5IRC.js",
-   "https://tutor-test.classdojo.com/assets/useMutation-DoL6qoEQ.js",
-   "https://tutor-test.classdojo.com/assets/useSession-CdPdwGsL.js"
+   "https://tutor-test.classdojo.com/assets/shim-bkpM079c.js",
+   "https://tutor-test.classdojo.com/assets/src-DSAp4SbC.js",
+   "https://tutor-test.classdojo.com/assets/src-qncfZmG_.js",
+   "https://tutor-test.classdojo.com/assets/subHours--H8poTlr.js",
+   "https://tutor-test.classdojo.com/assets/triggerBridge-C4iO-cnK.js",
+   "https://tutor-test.classdojo.com/assets/useInfiniteQuery-BQz4n9GJ.js",
+   "https://tutor-test.classdojo.com/assets/useMutation-DVQWcM6u.js",
+   "https://tutor-test.classdojo.com/assets/useSession-BTrgmt_7.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-toolkit.classdojo.com": {
   "url": "https://new-toolkit.classdojo.com/",
@@ -392,13 +392,13 @@
   "title": "ClassDojo Toolkit",
   "redirect": "",
   "scripts": [
-   "https://new-toolkit.classdojo.com/assets/core-DxSCRWmC.js",
-   "https://new-toolkit.classdojo.com/assets/index-BCxchsh1.js",
+   "https://new-toolkit.classdojo.com/assets/core-D8TYTTF9.js",
+   "https://new-toolkit.classdojo.com/assets/index-Dj8uGGDy.js",
    "https://new-toolkit.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-home-static.classdojo.com": {
   "url": "https://new-home-static.classdojo.com/",
@@ -406,26 +406,26 @@
   "title": "ClassDojo for Parents",
   "redirect": "",
   "scripts": [
-   "https://new-home-static.classdojo.com/assets/DDSButton-CbfSDPsE.js",
-   "https://new-home-static.classdojo.com/assets/QueryClientProvider-U7cFHbsg.js",
-   "https://new-home-static.classdojo.com/assets/callApi-DG53m8Za.js",
+   "https://new-home-static.classdojo.com/assets/DDSButton-DHLmrEeO.js",
+   "https://new-home-static.classdojo.com/assets/QueryClientProvider-544tFxnh.js",
+   "https://new-home-static.classdojo.com/assets/callApi-meGaY1wv.js",
    "https://new-home-static.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
-   "https://new-home-static.classdojo.com/assets/core-DWI3pgAY.js",
-   "https://new-home-static.classdojo.com/assets/dist-C98i6DzB.js",
-   "https://new-home-static.classdojo.com/assets/dist-CTDyHmzc.js",
+   "https://new-home-static.classdojo.com/assets/core-BIrKlAu_.js",
+   "https://new-home-static.classdojo.com/assets/dist-BF3oVMAT.js",
+   "https://new-home-static.classdojo.com/assets/dist-DXSzUe4b.js",
    "https://new-home-static.classdojo.com/assets/env-EQIumtMq.js",
-   "https://new-home-static.classdojo.com/assets/index-Dw7TGAlV.js",
-   "https://new-home-static.classdojo.com/assets/nessie-BPCBsLyP.js",
+   "https://new-home-static.classdojo.com/assets/index-B-1rvwUM.js",
+   "https://new-home-static.classdojo.com/assets/nessie-C6JalhPw.js",
    "https://new-home-static.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js",
-   "https://new-home-static.classdojo.com/assets/signup-BAhX96ke.js",
-   "https://new-home-static.classdojo.com/assets/src-YEui3Gks.js",
-   "https://new-home-static.classdojo.com/assets/src-o9NIocDI.js",
-   "https://new-home-static.classdojo.com/assets/toDate-lIAdzJoj.js",
+   "https://new-home-static.classdojo.com/assets/signup-CsoATdzV.js",
+   "https://new-home-static.classdojo.com/assets/src-DSnp6wtV.js",
+   "https://new-home-static.classdojo.com/assets/src-DqRZhCrj.js",
+   "https://new-home-static.classdojo.com/assets/toDate-CCYQ3vZA.js",
    "https://new-home-static.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-tutor.classdojo.com": {
   "url": "https://new-tutor.classdojo.com/",
@@ -433,40 +433,40 @@
   "title": "Dojo Tutor: Private online tutoring for kids",
   "redirect": "",
   "scripts": [
-   "https://new-tutor.classdojo.com/assets/DDSButton--frSpRRK.js",
+   "https://new-tutor.classdojo.com/assets/DDSButton-U2zWKK38.js",
    "https://new-tutor.classdojo.com/assets/DDSIconButton.module-B92CY29o.js",
-   "https://new-tutor.classdojo.com/assets/DDSOverlaysRadixImport-DCv_Gmyx.js",
-   "https://new-tutor.classdojo.com/assets/DDSToast-Dkg5thSu.js",
-   "https://new-tutor.classdojo.com/assets/DDSTooltip-DTw6kMuh.js",
-   "https://new-tutor.classdojo.com/assets/DeferredDialogRadixImport-Dx0HFBlo.js",
-   "https://new-tutor.classdojo.com/assets/PendingSurface-fd-c9Fpk.js",
-   "https://new-tutor.classdojo.com/assets/QueryClientProvider-8ntHm2y5.js",
-   "https://new-tutor.classdojo.com/assets/TranslationSafeText-d1TGUbVr.js",
-   "https://new-tutor.classdojo.com/assets/core-CxcMYfX0.js",
-   "https://new-tutor.classdojo.com/assets/dates-jn0riLZr.js",
+   "https://new-tutor.classdojo.com/assets/DDSOverlaysRadixImport-DYHhAG1p.js",
+   "https://new-tutor.classdojo.com/assets/DDSToast-Br46kJlP.js",
+   "https://new-tutor.classdojo.com/assets/DDSTooltip-BdJlVj7o.js",
+   "https://new-tutor.classdojo.com/assets/DeferredDialogRadixImport-zxqtehtv.js",
+   "https://new-tutor.classdojo.com/assets/PendingSurface-DZVubnEa.js",
+   "https://new-tutor.classdojo.com/assets/QueryClientProvider-fRGfnQip.js",
+   "https://new-tutor.classdojo.com/assets/TranslationSafeText-DBXW-anb.js",
+   "https://new-tutor.classdojo.com/assets/core-obauQb5v.js",
+   "https://new-tutor.classdojo.com/assets/dates-DIpXLuQf.js",
    "https://new-tutor.classdojo.com/assets/env-CyvP9fXI.js",
-   "https://new-tutor.classdojo.com/assets/index-EFkOkmsS.js",
-   "https://new-tutor.classdojo.com/assets/layerOverlay-CG1DmjZs.js",
-   "https://new-tutor.classdojo.com/assets/nessie-DmAp90c8.js",
-   "https://new-tutor.classdojo.com/assets/notification-JsuIdaW1.js",
-   "https://new-tutor.classdojo.com/assets/parse-BIktKf91.js",
-   "https://new-tutor.classdojo.com/assets/pendingSurfaceUtils-DDuS1xhN.js",
+   "https://new-tutor.classdojo.com/assets/index-CxNm_-JI.js",
+   "https://new-tutor.classdojo.com/assets/layerOverlay-Bcbe4OWc.js",
+   "https://new-tutor.classdojo.com/assets/nessie-bgr91r1C.js",
+   "https://new-tutor.classdojo.com/assets/notification-ClTRHMlr.js",
+   "https://new-tutor.classdojo.com/assets/parse-SEN_rjuO.js",
+   "https://new-tutor.classdojo.com/assets/pendingSurfaceUtils-C2paBlIy.js",
    "https://new-tutor.classdojo.com/assets/prop-types-DzlZt2kw.js",
-   "https://new-tutor.classdojo.com/assets/queryKey-CLelBIE7.js",
+   "https://new-tutor.classdojo.com/assets/queryKey-SrBALhxP.js",
    "https://new-tutor.classdojo.com/assets/rolldown-runtime-sPqB55HK.js",
-   "https://new-tutor.classdojo.com/assets/shim-Dd335YHV.js",
-   "https://new-tutor.classdojo.com/assets/src-BLUISlQd.js",
-   "https://new-tutor.classdojo.com/assets/src-DCMTd9z7.js",
-   "https://new-tutor.classdojo.com/assets/subHours-Wb9C72ae.js",
-   "https://new-tutor.classdojo.com/assets/triggerBridge-uj5lVjf4.js",
-   "https://new-tutor.classdojo.com/assets/useInfiniteQuery-DKNm5IRC.js",
-   "https://new-tutor.classdojo.com/assets/useMutation-DoL6qoEQ.js",
-   "https://new-tutor.classdojo.com/assets/useSession-CdPdwGsL.js",
+   "https://new-tutor.classdojo.com/assets/shim-bkpM079c.js",
+   "https://new-tutor.classdojo.com/assets/src-DSAp4SbC.js",
+   "https://new-tutor.classdojo.com/assets/src-qncfZmG_.js",
+   "https://new-tutor.classdojo.com/assets/subHours--H8poTlr.js",
+   "https://new-tutor.classdojo.com/assets/triggerBridge-C4iO-cnK.js",
+   "https://new-tutor.classdojo.com/assets/useInfiniteQuery-BQz4n9GJ.js",
+   "https://new-tutor.classdojo.com/assets/useMutation-DVQWcM6u.js",
+   "https://new-tutor.classdojo.com/assets/useSession-BTrgmt_7.js",
    "https://new-tutor.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-external.classdojo.com": {
   "url": "https://new-external.classdojo.com/",
@@ -507,7 +507,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "new-home.classdojo.com": {
   "url": "https://new-home.classdojo.com/",
@@ -515,26 +515,26 @@
   "title": "ClassDojo for Parents",
   "redirect": "",
   "scripts": [
-   "https://new-home.classdojo.com/assets/DDSButton-CbfSDPsE.js",
-   "https://new-home.classdojo.com/assets/QueryClientProvider-U7cFHbsg.js",
-   "https://new-home.classdojo.com/assets/callApi-DG53m8Za.js",
+   "https://new-home.classdojo.com/assets/DDSButton-DHLmrEeO.js",
+   "https://new-home.classdojo.com/assets/QueryClientProvider-544tFxnh.js",
+   "https://new-home.classdojo.com/assets/callApi-meGaY1wv.js",
    "https://new-home.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
-   "https://new-home.classdojo.com/assets/core-DWI3pgAY.js",
-   "https://new-home.classdojo.com/assets/dist-C98i6DzB.js",
-   "https://new-home.classdojo.com/assets/dist-CTDyHmzc.js",
+   "https://new-home.classdojo.com/assets/core-BIrKlAu_.js",
+   "https://new-home.classdojo.com/assets/dist-BF3oVMAT.js",
+   "https://new-home.classdojo.com/assets/dist-DXSzUe4b.js",
    "https://new-home.classdojo.com/assets/env-EQIumtMq.js",
-   "https://new-home.classdojo.com/assets/index-Dw7TGAlV.js",
-   "https://new-home.classdojo.com/assets/nessie-BPCBsLyP.js",
+   "https://new-home.classdojo.com/assets/index-B-1rvwUM.js",
+   "https://new-home.classdojo.com/assets/nessie-C6JalhPw.js",
    "https://new-home.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js",
-   "https://new-home.classdojo.com/assets/signup-BAhX96ke.js",
-   "https://new-home.classdojo.com/assets/src-YEui3Gks.js",
-   "https://new-home.classdojo.com/assets/src-o9NIocDI.js",
-   "https://new-home.classdojo.com/assets/toDate-lIAdzJoj.js",
+   "https://new-home.classdojo.com/assets/signup-CsoATdzV.js",
+   "https://new-home.classdojo.com/assets/src-DSnp6wtV.js",
+   "https://new-home.classdojo.com/assets/src-DqRZhCrj.js",
+   "https://new-home.classdojo.com/assets/toDate-CCYQ3vZA.js",
    "https://new-home.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "home.classdojo.com": {
   "url": "https://home.classdojo.com/",
@@ -542,26 +542,26 @@
   "title": "ClassDojo for Parents",
   "redirect": "",
   "scripts": [
-   "https://home.classdojo.com/assets/DDSButton-CbfSDPsE.js",
-   "https://home.classdojo.com/assets/QueryClientProvider-U7cFHbsg.js",
-   "https://home.classdojo.com/assets/callApi-DG53m8Za.js",
+   "https://home.classdojo.com/assets/DDSButton-DHLmrEeO.js",
+   "https://home.classdojo.com/assets/QueryClientProvider-544tFxnh.js",
+   "https://home.classdojo.com/assets/callApi-meGaY1wv.js",
    "https://home.classdojo.com/assets/classPrivateFieldGet2-Br5jEJCI.js",
-   "https://home.classdojo.com/assets/core-DWI3pgAY.js",
-   "https://home.classdojo.com/assets/dist-C98i6DzB.js",
-   "https://home.classdojo.com/assets/dist-CTDyHmzc.js",
+   "https://home.classdojo.com/assets/core-BIrKlAu_.js",
+   "https://home.classdojo.com/assets/dist-BF3oVMAT.js",
+   "https://home.classdojo.com/assets/dist-DXSzUe4b.js",
    "https://home.classdojo.com/assets/env-EQIumtMq.js",
-   "https://home.classdojo.com/assets/index-Dw7TGAlV.js",
-   "https://home.classdojo.com/assets/nessie-BPCBsLyP.js",
+   "https://home.classdojo.com/assets/index-B-1rvwUM.js",
+   "https://home.classdojo.com/assets/nessie-C6JalhPw.js",
    "https://home.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js",
-   "https://home.classdojo.com/assets/signup-BAhX96ke.js",
-   "https://home.classdojo.com/assets/src-YEui3Gks.js",
-   "https://home.classdojo.com/assets/src-o9NIocDI.js",
-   "https://home.classdojo.com/assets/toDate-lIAdzJoj.js",
+   "https://home.classdojo.com/assets/signup-CsoATdzV.js",
+   "https://home.classdojo.com/assets/src-DSnp6wtV.js",
+   "https://home.classdojo.com/assets/src-DqRZhCrj.js",
+   "https://home.classdojo.com/assets/toDate-CCYQ3vZA.js",
    "https://home.classdojo.com/browsersupportblocker.vZMk9XZP.min.js"
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "help.classdojo.com": {
   "url": "https://help.classdojo.com/hc/en-us",
@@ -571,7 +571,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "code-push-server.classdojo.com": {
   "url": "https://code-push-server.classdojo.com/",
@@ -581,7 +581,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "dojovideos-0.classdojo.com": {
   "url": "https://dojovideos-0.classdojo.com/",
@@ -591,7 +591,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "teach.classdojo.com": {
   "url": "https://teach.classdojo.com/",
@@ -599,40 +599,40 @@
   "title": "ClassDojo for Teachers",
   "redirect": "",
   "scripts": [
-   "https://teach.classdojo.com/assets/DDSBodyText-m65p_x3P.js",
+   "https://teach.classdojo.com/assets/DDSBodyText-BcGyeBWl.js",
    "https://teach.classdojo.com/assets/DDSBodyText.module-C3Q5PGQm.js",
-   "https://teach.classdojo.com/assets/DDSButton-BnMqrD-Z.js",
-   "https://teach.classdojo.com/assets/DDSDialog-eHvOmdVd.js",
-   "https://teach.classdojo.com/assets/DDSHeadlineText-CMALOMA7.js",
-   "https://teach.classdojo.com/assets/DDSIconButton-Ds4hbUgz.js",
+   "https://teach.classdojo.com/assets/DDSButton-CDnubF8t.js",
+   "https://teach.classdojo.com/assets/DDSDialog-C2b90sNI.js",
+   "https://teach.classdojo.com/assets/DDSHeadlineText-BCRz9_rr.js",
+   "https://teach.classdojo.com/assets/DDSIconButton-DpDSLRkO.js",
    "https://teach.classdojo.com/assets/DDSIconButton.module-BYHeWuHE.js",
-   "https://teach.classdojo.com/assets/DDSOverlaysRadixImport-B_6j1Dft.js",
-   "https://teach.classdojo.com/assets/DDSScrollLayout-abbY3oQD.js",
-   "https://teach.classdojo.com/assets/DDSToast-BBG9H2lq.js",
-   "https://teach.classdojo.com/assets/DDSTooltip-BnL9bE6h.js",
-   "https://teach.classdojo.com/assets/PendingSurface-DJ-SmRc_.js",
-   "https://teach.classdojo.com/assets/_fetchers-BqpgBjt4.js",
-   "https://teach.classdojo.com/assets/addMonths-DEbsw2IF.js",
-   "https://teach.classdojo.com/assets/auth-BLHJ5okM.js",
-   "https://teach.classdojo.com/assets/badge-states-CgoqTlQQ.js",
-   "https://teach.classdojo.com/assets/classroom-fetcher-GR94R9fp.js",
+   "https://teach.classdojo.com/assets/DDSOverlaysRadixImport-WqOq3oeI.js",
+   "https://teach.classdojo.com/assets/DDSScrollLayout-Dv-rTyas.js",
+   "https://teach.classdojo.com/assets/DDSToast-BCA96mHW.js",
+   "https://teach.classdojo.com/assets/DDSTooltip-BKknaNpk.js",
+   "https://teach.classdojo.com/assets/PendingSurface-BGcJcXNi.js",
+   "https://teach.classdojo.com/assets/_fetchers-BHESl7fS.js",
+   "https://teach.classdojo.com/assets/addMonths-2sZOJQGW.js",
+   "https://teach.classdojo.com/assets/auth-DOae4J3l.js",
+   "https://teach.classdojo.com/assets/badge-states-8olbjLpZ.js",
+   "https://teach.classdojo.com/assets/classroom-fetcher-C8KHpwlC.js",
    "https://teach.classdojo.com/assets/compact-BVd9n7xS.js",
-   "https://teach.classdojo.com/assets/comparison-D9YoEF71.js",
+   "https://teach.classdojo.com/assets/comparison-DrN3etRA.js",
    "https://teach.classdojo.com/assets/constants-BIqX12FA.js",
-   "https://teach.classdojo.com/assets/core-D00GJk88.js",
-   "https://teach.classdojo.com/assets/fetchers-DTAK4M2f.js",
+   "https://teach.classdojo.com/assets/core-4gnexCHU.js",
+   "https://teach.classdojo.com/assets/fetchers-DTWnBbcu.js",
    "https://teach.classdojo.com/assets/flatten-DcxvLLKh.js",
-   "https://teach.classdojo.com/assets/index-HEZQ7Xzw.js",
+   "https://teach.classdojo.com/assets/index-oGR317mL.js",
    "https://teach.classdojo.com/assets/isBuffer-BxScDr3Z.js",
-   "https://teach.classdojo.com/assets/isEqual-K52vuBQM.js",
+   "https://teach.classdojo.com/assets/isEqual-D5yLKQP9.js",
    "https://teach.classdojo.com/assets/isEqualsSameValueZero-CzrI1jdV.js",
    "https://teach.classdojo.com/assets/isIndex-Cq4PWQp4.js",
-   "https://teach.classdojo.com/assets/iteratee-DMY5ANXw.js",
+   "https://teach.classdojo.com/assets/iteratee-Ou4Moi21.js",
    "https://teach.classdojo.com/assets/location-DiicokLL.js"
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "mw.classdojo.com": {
   "url": "https://mw.classdojo.com/",
@@ -642,7 +642,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "www.dojo.me": {
   "url": "https://www.dojo.me/",
@@ -652,7 +652,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "dojovideos-7.classdojo.com": {
   "url": "https://dojovideos-7.classdojo.com/",
@@ -662,7 +662,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "www.marketplace.classdojo.com": {
   "url": "https://www.marketplace.classdojo.com/",
@@ -672,7 +672,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "mvsecret.classdojo.com": {
   "url": "https://mvsecret.classdojo.com/",
@@ -682,7 +682,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "sphotos.classdojo.com": {
   "url": "https://sphotos.classdojo.com/",
@@ -692,7 +692,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "share.classdojo.com": {
   "url": "https://share.classdojo.com/",
@@ -707,7 +707,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "static-tutor2.classdojo.com": {
   "url": "https://static-tutor2.classdojo.com/",
@@ -717,7 +717,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "sparks.classdojo.com": {
   "url": "https://sparks.classdojo.com/",
@@ -727,7 +727,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "community.classdojo.com": {
   "url": "https://community.classdojo.com/",
@@ -737,7 +737,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "artifacts-render.classdojo.com": {
   "url": "https://artifacts-render.classdojo.com/",
@@ -747,7 +747,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "link.classdojo.com": {
   "url": "https://link.classdojo.com/",
@@ -757,7 +757,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "toolkit.classdojo.com": {
   "url": "https://toolkit.classdojo.com/",
@@ -765,13 +765,13 @@
   "title": "ClassDojo Toolkit",
   "redirect": "",
   "scripts": [
-   "https://toolkit.classdojo.com/assets/core-DxSCRWmC.js",
-   "https://toolkit.classdojo.com/assets/index-BCxchsh1.js",
+   "https://toolkit.classdojo.com/assets/core-D8TYTTF9.js",
+   "https://toolkit.classdojo.com/assets/index-Dj8uGGDy.js",
    "https://toolkit.classdojo.com/assets/rolldown-runtime-Bm6mAuDu.js"
   ],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "sparks-app.classdojo.com": {
   "url": "https://sparks-app.classdojo.com/",
@@ -779,40 +779,40 @@
   "title": "Dojo Sparks",
   "redirect": "",
   "scripts": [
-   "https://sparks-app.classdojo.com/assets/AdjustableHeightContainer-Dkclmzl5.js",
-   "https://sparks-app.classdojo.com/assets/AlertDialog-BLzmzAO5.js",
-   "https://sparks-app.classdojo.com/assets/ArrowLeftSPIcon-CdUnloV8.js",
-   "https://sparks-app.classdojo.com/assets/ArrowSvgPrimitive-CcP7DOFz.js",
-   "https://sparks-app.classdojo.com/assets/AudioAssetsManager-C4r9P7hy.js",
-   "https://sparks-app.classdojo.com/assets/AutoSizedText-DN6aFrvk.js",
-   "https://sparks-app.classdojo.com/assets/CatchBoundary-DnPkDd6f.js",
-   "https://sparks-app.classdojo.com/assets/CrossSPIcon-y7GHpqCv.js",
-   "https://sparks-app.classdojo.com/assets/CurrentAudioPlayersRegistry-DK996ZVA.js",
-   "https://sparks-app.classdojo.com/assets/ErrorPageExitAppButton-UXqhjrW1.js",
-   "https://sparks-app.classdojo.com/assets/ExitAppButton-Byf5666l.js",
-   "https://sparks-app.classdojo.com/assets/GlobalTestingConfig-Dhz7-lgp.js",
-   "https://sparks-app.classdojo.com/assets/GraphemePhonemeDisplay-BnaV6QJt.js",
-   "https://sparks-app.classdojo.com/assets/InstructionModeContext-D70XHoWU.js",
-   "https://sparks-app.classdojo.com/assets/LandscapeEnforcerLayout-D-BJR462.js",
-   "https://sparks-app.classdojo.com/assets/LettersShapes-BVefiT-r.js",
-   "https://sparks-app.classdojo.com/assets/MotionConfigContext-Dp8nmhBY.js",
-   "https://sparks-app.classdojo.com/assets/PlaySolidSPIcon-DBfl5AE9.js",
-   "https://sparks-app.classdojo.com/assets/SFX-FcnhrVUI.js",
-   "https://sparks-app.classdojo.com/assets/ShapeComposer-BaiDP51o.js",
-   "https://sparks-app.classdojo.com/assets/Sticker-ByQ-rjOt.js",
-   "https://sparks-app.classdojo.com/assets/ToyButton-C23B9zef.js",
-   "https://sparks-app.classdojo.com/assets/ToyIconButton-B_i2vMKV.js",
-   "https://sparks-app.classdojo.com/assets/Track-BpofoM64.js",
-   "https://sparks-app.classdojo.com/assets/WordStickerButtonBar-BScIUBWh.js",
-   "https://sparks-app.classdojo.com/assets/XStateDebugger-BkJ6PO_y.js",
-   "https://sparks-app.classdojo.com/assets/XStateDebuggerContext-Bj0MKRie.js",
-   "https://sparks-app.classdojo.com/assets/_Set-CC3L1SIA.js",
-   "https://sparks-app.classdojo.com/assets/_baseIsEqual-BH0mORC5.js",
-   "https://sparks-app.classdojo.com/assets/activityDurationBaselines-BRIHKEaW.js"
+   "https://sparks-app.classdojo.com/assets/AdjustableHeightContainer-Bxg_8A8E.js",
+   "https://sparks-app.classdojo.com/assets/AlertDialog-ChRk2Gm9.js",
+   "https://sparks-app.classdojo.com/assets/ArrowLeftSPIcon-DqpkcXUb.js",
+   "https://sparks-app.classdojo.com/assets/ArrowSvgPrimitive-CNr4lEQd.js",
+   "https://sparks-app.classdojo.com/assets/AudioAssetsManager-DZB0EDRy.js",
+   "https://sparks-app.classdojo.com/assets/AutoSizedText-p_LWoR6V.js",
+   "https://sparks-app.classdojo.com/assets/CatchBoundary-DNDdca5-.js",
+   "https://sparks-app.classdojo.com/assets/CrossSPIcon-Dw2Q0n2b.js",
+   "https://sparks-app.classdojo.com/assets/CurrentAudioPlayersRegistry-YL-6qIWH.js",
+   "https://sparks-app.classdojo.com/assets/ErrorPageExitAppButton-BlE-SbQ8.js",
+   "https://sparks-app.classdojo.com/assets/ExitAppButton-DCNEWz_T.js",
+   "https://sparks-app.classdojo.com/assets/GlobalTestingConfig-BqZhB6A1.js",
+   "https://sparks-app.classdojo.com/assets/GraphemePhonemeDisplay-DqphlhiX.js",
+   "https://sparks-app.classdojo.com/assets/InstructionModeContext-C5T2Wmrc.js",
+   "https://sparks-app.classdojo.com/assets/LandscapeEnforcerLayout-BmrGtOQl.js",
+   "https://sparks-app.classdojo.com/assets/LettersShapes-P82G9mar.js",
+   "https://sparks-app.classdojo.com/assets/MotionConfigContext-Dvxn1JWq.js",
+   "https://sparks-app.classdojo.com/assets/PlaySolidSPIcon-CRO82eEL.js",
+   "https://sparks-app.classdojo.com/assets/SFX-yn_c327A.js",
+   "https://sparks-app.classdojo.com/assets/ShapeComposer-Df2QvipI.js",
+   "https://sparks-app.classdojo.com/assets/Sticker-KJUBjING.js",
+   "https://sparks-app.classdojo.com/assets/ToyButton-DUq2dbtA.js",
+   "https://sparks-app.classdojo.com/assets/ToyIconButton-KK74fJkb.js",
+   "https://sparks-app.classdojo.com/assets/Track-Bz8oCozk.js",
+   "https://sparks-app.classdojo.com/assets/WordStickerButtonBar-oXzegYcq.js",
+   "https://sparks-app.classdojo.com/assets/XStateDebugger-BJBynSbY.js",
+   "https://sparks-app.classdojo.com/assets/XStateDebuggerContext-Cc1Sj8wT.js",
+   "https://sparks-app.classdojo.com/assets/_Set-BzyNh_vm.js",
+   "https://sparks-app.classdojo.com/assets/_baseIsEqual-Cmwm7XWS.js",
+   "https://sparks-app.classdojo.com/assets/activityDurationBaselines-C9QS4CDU.js"
   ],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "www.classdojo.com": {
   "url": "https://www.classdojo.com/",
@@ -825,7 +825,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
  },
  "hs-avatars.classdojo.com": {
   "url": "https://hs-avatars.classdojo.com/",
@@ -835,6 +835,226 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:16:14 UTC"
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "dojovideos-2.classdojo.com": {
+  "url": "https://dojovideos-2.classdojo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "sdojophotobooks.classdojo.com": {
+  "url": "https://sdojophotobooks.classdojo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "restate-ingress.multiplayer.classdojo.com": {
+  "url": "https://restate-ingress.multiplayer.classdojo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "components.classdojo.com": {
+  "url": "https://components.classdojo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://components.internal.classdojo.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "mvperftier.classdojo.com": {
+  "url": "https://mvperftier.classdojo.com/",
+  "http_status": 200,
+  "title": "Perf Tier Override Admin",
+  "redirect": "",
+  "scripts": [
+   "https://mvperftier.classdojo.com/assets/index-Bx-wEs7E.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "billing.classdojo.com": {
+  "url": "https://billing.classdojo.com/",
+  "http_status": 204,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "dojotutor.classdojo.com": {
+  "url": "https://dojotutor.classdojo.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://tutor.classdojo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "svideos.classdojo.com": {
+  "url": "https://svideos.classdojo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "external.classdojo.com": {
+  "url": "https://external.classdojo.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://external.classdojo.com/browsersupportblocker.cd9f1603.min.js",
+   "https://external.classdojo.com/set-on-error-8.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "parent-android-web.classdojo.com": {
+  "url": "https://parent-android-web.classdojo.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:42:08 UTC"
+ },
+ "static.classdojo.com": {
+  "url": "https://static.classdojo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "studentpwa.classdojo.com": {
+  "url": "https://studentpwa.classdojo.com/",
+  "http_status": 200,
+  "title": "Student",
+  "redirect": "",
+  "scripts": [
+   "https://studentpwa.classdojo.com/_next/static/chunks/1268-b5e290cb2c1307b9.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/1487-0d0ec12d15e7384d.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/2599-3aaca1de639299ec.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/3030-f39742c00e84c299.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/3549-16a23288c107e597.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/6270-6a99352ed25e7721.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/6424-5d0cc88daaf047ff.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/6721-62125d54bc595acb.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/6761-2c1b061f3fa78f47.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/749-a6d2ec9cbc08a117.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/8497-45e5b0f403eb68e8.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/8764-776bd42d5ff402ba.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/9215-accfecdfe010c87c.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/framework-79bce4a3a540b080.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/main-cf6ec629aa2a46b8.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/pages/_app-91e19a887f37e232.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/pages/index-3deb1d470174b5fe.js",
+   "https://studentpwa.classdojo.com/_next/static/chunks/webpack-73f3aaa96a651a5a.js",
+   "https://studentpwa.classdojo.com/_next/static/l7VI84AzfUTb18OhYs2qR/_buildManifest.js",
+   "https://studentpwa.classdojo.com/_next/static/l7VI84AzfUTb18OhYs2qR/_ssgManifest.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "mentor.classdojo.com": {
+  "url": "https://mentor.classdojo.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://mentor.classdojo.com/auth/login?redirect=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:42:08 UTC"
+ },
+ "teach-static.classdojo.com": {
+  "url": "https://teach-static.classdojo.com/",
+  "http_status": 200,
+  "title": "ClassDojo for Teachers",
+  "redirect": "",
+  "scripts": [
+   "https://teach-static.classdojo.com/assets/DDSBodyText-BcGyeBWl.js",
+   "https://teach-static.classdojo.com/assets/DDSBodyText.module-C3Q5PGQm.js",
+   "https://teach-static.classdojo.com/assets/DDSButton-CDnubF8t.js",
+   "https://teach-static.classdojo.com/assets/DDSDialog-C2b90sNI.js",
+   "https://teach-static.classdojo.com/assets/DDSHeadlineText-BCRz9_rr.js",
+   "https://teach-static.classdojo.com/assets/DDSIconButton-DpDSLRkO.js",
+   "https://teach-static.classdojo.com/assets/DDSIconButton.module-BYHeWuHE.js",
+   "https://teach-static.classdojo.com/assets/DDSOverlaysRadixImport-WqOq3oeI.js",
+   "https://teach-static.classdojo.com/assets/DDSScrollLayout-Dv-rTyas.js",
+   "https://teach-static.classdojo.com/assets/DDSToast-BCA96mHW.js",
+   "https://teach-static.classdojo.com/assets/DDSTooltip-BKknaNpk.js",
+   "https://teach-static.classdojo.com/assets/PendingSurface-BGcJcXNi.js",
+   "https://teach-static.classdojo.com/assets/_fetchers-BHESl7fS.js",
+   "https://teach-static.classdojo.com/assets/addMonths-2sZOJQGW.js",
+   "https://teach-static.classdojo.com/assets/auth-DOae4J3l.js",
+   "https://teach-static.classdojo.com/assets/badge-states-8olbjLpZ.js",
+   "https://teach-static.classdojo.com/assets/classroom-fetcher-C8KHpwlC.js",
+   "https://teach-static.classdojo.com/assets/compact-BVd9n7xS.js",
+   "https://teach-static.classdojo.com/assets/comparison-DrN3etRA.js",
+   "https://teach-static.classdojo.com/assets/constants-BIqX12FA.js",
+   "https://teach-static.classdojo.com/assets/core-4gnexCHU.js",
+   "https://teach-static.classdojo.com/assets/fetchers-DTWnBbcu.js",
+   "https://teach-static.classdojo.com/assets/flatten-DcxvLLKh.js",
+   "https://teach-static.classdojo.com/assets/index-oGR317mL.js",
+   "https://teach-static.classdojo.com/assets/isBuffer-BxScDr3Z.js",
+   "https://teach-static.classdojo.com/assets/isEqual-D5yLKQP9.js",
+   "https://teach-static.classdojo.com/assets/isEqualsSameValueZero-CzrI1jdV.js",
+   "https://teach-static.classdojo.com/assets/isIndex-Cq4PWQp4.js",
+   "https://teach-static.classdojo.com/assets/iteratee-Ou4Moi21.js",
+   "https://teach-static.classdojo.com/assets/location-DiicokLL.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "classdojo.com": {
+  "url": "https://www.classdojo.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://www.classdojo.com/",
+  "scripts": [
+   "https://www.classdojo.com/browsersupportblocker.cd9f1603.min.js",
+   "https://www.classdojo.com/set-on-error-8.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
+ },
+ "ai.classdojo.com": {
+  "url": "https://ai.classdojo.com/",
+  "http_status": 200,
+  "title": "ClassDojo AI Sidekick",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:43:12 UTC"
  }
 }

@@ -4,7 +4,9 @@
 0.twcard-ext.transferwise.com
 00009.twcard-ext.transferwise.com
 00079.twcard-ext.transferwise.com
+0022e.twcard-ext.transferwise.com
 01-rfpo.twcard-ext.transferwise.com
+011.twcard-ext.transferwise.com
 01cb55.twcard-ext.transferwise.com
 02k.twcard-ext.transferwise.com
 05801.twcard-ext.transferwise.com
@@ -29,7 +31,9 @@
 15.1.twcard-ext.transferwise.com
 166.static.ip.wise.com
 168i.0.twcard-ext.transferwise.com
+168k.0.1.twcard-ext.transferwise.com
 18.transferwise.com
+189.transferwise.com
 190.transferwise.com
 1k.transferwise.com
 1pw-scim.transferwise.com
@@ -58,6 +62,7 @@
 235c.transferwise.com
 236.transferwise.com
 236.wise.com
+238.transferwise.com
 246.transferwise.com
 25491013m.wise.com
 25491013mo.wise.com
@@ -115,6 +120,7 @@ adelphi-assd04.transferwise.com
 adm.transferwise.com
 admin.transferwise.com
 admin.wise.com
+admink.transferwise.com
 admw.transferwise.com
 ads.ablink.info.wise.com
 ads.transferwise.com
@@ -155,6 +161,7 @@ app.wise.com
 appm.transferwise.com
 apps.transferwise.com
 apps.wise.com
+apps9.transferwise.com
 ar.ci1.transferwise.com
 ar.ci1.wise.com
 arti.transferwise.com
@@ -255,6 +262,7 @@ br.wise.com
 br5.transferwise.com
 brandhub.wise.com
 btgpactual.wise.com
+c.transferwise.com
 ca.transferwise.com
 ca.wise.com
 ca5.transferwise.com
@@ -327,10 +335,12 @@ cloud.wise.com
 cloudapp.transferwise.com
 cloudapp.wise.com
 cloudflare.transferwise.com
+cloudflarea.transferwise.com
 cloudk.transferwise.com
 clust.transferwise.com
 clustc.transferwise.com
 cms.transferwise.com
+cms.twcard-ext.transferwise.com
 cmsm.transferwise.com
 cn.cdn.transferwise.com
 cn.transferwise.com
@@ -414,6 +424,7 @@ dev5s.status.transferwise.com
 developer.transferwise.com
 developera.transferwise.com
 devi.transferwise.com
+df.wise.com
 dhcp.transferwise.com
 dhcp.wise.com
 dial.transferwise.com
@@ -458,6 +469,7 @@ ecec.transferwise.com
 eddanowsg.privcabinetgithub.twcard-ext.transferwise.com
 edge.ablink.info.wise.com
 edge.api.transferwise.com
+edst.transferwise.com
 edst.wise.com
 edsta.transferwise.com
 edu.transferwise.com
@@ -498,6 +510,7 @@ exchange.transferwise.com
 ext-btgpactual.transferwise.com
 ext-bv.transferwise.com
 ext-eddanowsg.transferwise.com
+ext-eddanowsgq.transferwise.com
 ext-inte.transferwise.com
 ext-internal.transferwise.com
 ext-pix.transferwise.com
@@ -585,6 +598,7 @@ govyty-api-docs-legacy.transferwise.com
 govyty-api-docs.transferwise.com
 govyty-api-docse.transferwise.com
 govyty-api-googlespot.transferwise.com
+govyty-api-mtls.transferwise.com
 govyty-api-mtlsc.transferwise.com
 govyty-api-sandbox-ninjas.transferwise.com
 govyty-api-sandbox-ninjass.transferwise.com
@@ -604,19 +618,24 @@ govyty-bootcamp-apis.transferwise.com
 govyty-bot.transferwise.com
 govyty-bpi-staging.transferwise.com
 govyty-bpi-stagingm.transferwise.com
+govyty-bpi.staging.transferwise.com
 govyty-bpi.transferwise.com
 govyty-brand.transferwise.com
 govyty-brandm.transferwise.com
 govyty-cabinetq.twcard-ext.transferwise.com
 govyty-careers.transferwise.com
+govyty-careersk.transferwise.com
 govyty-citi-signing.transferwise.com
 govyty-citi-signinge.transferwise.com
 govyty-content.transferwise.com
 govyty-dash-test.transferwise.com
+govyty-dash-testm.transferwise.com
 govyty-document-store.wise.com
 govyty-document-storey.wise.com
 govyty-exchange.transferwise.com
 govyty-exchanges.transferwise.com
+govyty-ext-internal.transferwise.com
+govyty-ext-internalw.transferwise.com
 govyty-ext-stp.transferwise.com
 govyty-ext.transferwise.com
 govyty-extu.transferwise.com
@@ -630,6 +649,7 @@ govyty-fra-vpn3.transferwise.com
 govyty-fra-vpn3w.transferwise.com
 govyty-googlespot.transferwise.com
 govyty-googlespotu.transferwise.com
+govyty-gtm.transferwise.com
 govyty-hdfc-indialinkv2-prod.wise.com
 govyty-hdfc-indialinkv2-prodm.wise.com
 govyty-hdfc-indialinkv2-uat.wise.com
@@ -649,6 +669,8 @@ govyty-jpm-signing.transferwise.com
 govyty-jpm-signinga.transferwise.com
 govyty-jpm.transferwise.com
 govyty-kbank.transferwise.com
+govyty-kbankm.transferwise.com
+govyty-kyc-test.transferwise.com
 govyty-kyc-testq.transferwise.com
 govyty-lookere.transferwise.com
 govyty-mailproxy1.transferwise.com
@@ -658,6 +680,7 @@ govyty-new-cards-api.transferwise.com
 govyty-new-cards-apim.transferwise.com
 govyty-ninjas.transferwise.com
 govyty-ocbc-my-signing.transferwise.com
+govyty-ocbc-my-uat-signing.transferwise.com
 govyty-ocbc-my-uat-signinge.transferwise.com
 govyty-ocbc-my-uat.transferwise.com
 govyty-ocbc-my-uatm.transferwise.com
@@ -672,8 +695,10 @@ govyty-patchtesting.wise.com
 govyty-patchtestingw.wise.com
 govyty-purple.transferwise.com
 govyty-purpley.transferwise.com
+govyty-rblindia.transferwise.com
 govyty-rblindiam.transferwise.com
 govyty-sandbox-restgw.transferwise.com
+govyty-sandbox-restgwm.transferwise.com
 govyty-status.transferwise.com
 govyty-statusm.transferwise.com
 govyty-support.transferwise.com
@@ -697,6 +722,7 @@ govyty-test.transferwise.com
 govyty-tw-card-announce.transferwise.com
 govyty-twcard-ext.transferwise.com
 govyty-twcard-extg.transferwise.com
+govyty-tweety.transferwise.com
 govyty-visa-twcard.transferwise.com
 govyty-visa.twcard-ext.transferwise.com
 govyty-votorantim.transferwise.com
@@ -738,6 +764,7 @@ govyty.battlestar.transferwise.com
 govyty.brand.transferwise.com
 govyty.filetransfers.transferwise.com
 govyty.new-cards-api.transferwise.com
+govyty.openbanking.transferwise.com
 govyty.rblindia.transferwise.com
 govyty.sandbox-restgw.transferwise.com
 govyty.status.transferwise.com
@@ -759,10 +786,12 @@ govytyablink.info.wise.com
 govytyablinkc.feedback.wise.com
 govytyablinks.info.transferwise.com
 govytyablinku.feedback.transferwise.com
+govytyaccounts.transferwise.com
 govytyadyen-notification-test.transferwise.com
 govytyadyen-notification-testm.transferwise.com
 govytyapi-docs-legacy.transferwise.com
 govytyapi-docs-legacyy.transferwise.com
+govytyapi-docs.transferwise.com
 govytyapi-docsc.transferwise.com
 govytyapi-googlespot.transferwise.com
 govytyapi-googlespot.wise.com
@@ -790,6 +819,8 @@ govytybd77flty.25491013m.wise.com
 govytybol-be-test.transferwise.com
 govytybol-be-testc.transferwise.com
 govytybol-be.transferwise.com
+govytybol.transferwise.com
+govytybolq.transferwise.com
 govytybootcamp-api.transferwise.com
 govytybootcamp-apik.transferwise.com
 govytybootstrap.transferwise.com
@@ -833,10 +864,12 @@ govytye.test-cards-api.wise.com
 govytye.www.citi-test.transferwise.com
 govytye.www.ocbc-my.transferwise.com
 govytye.www.yesbank.transferwise.com
+govytyee.transferwise.com
 govytyemail.prco.wise.com
 govytyemaili.gh-mail.wise.com
 govytyexchangei.transferwise.com
 govytyext-eddanowsg.transferwise.com
+govytyext-eddanowsgu.transferwise.com
 govytyext-internal.transferwise.com
 govytyext-stp.transferwise.com
 govytyext.transferwise.com
@@ -844,6 +877,7 @@ govytyexts.transferwise.com
 govytyfiletransfers.transferwise.com
 govytyfiletransfers.wise.com
 govytyfiletransfersu.transferwise.com
+govytyfinance.transferwise.com
 govytyfinanceo.transferwise.com
 govytyfra-vpn1.transferwise.com
 govytyfra-vpn1s.transferwise.com
@@ -853,6 +887,7 @@ govytyfra-vpn3.transferwise.com
 govytyfra-vpn3u.transferwise.com
 govytyfra-vpn5.transferwise.com
 govytyg.twcard-ext.transferwise.com
+govytygooglespot.transferwise.com
 govytygooglespotg.transferwise.com
 govytygtm.transferwise.com
 govytygtmy.transferwise.com
@@ -865,6 +900,7 @@ govytyinfo.transferwise.com
 govytyinfom.transferwise.com
 govytyjetco-apix-integration.transferwise.com
 govytyjetco-apix-integrationk.transferwise.com
+govytyjobs.transferwise.com
 govytyjobsq.transferwise.com
 govytyjpm-latam-signing.wise.com
 govytyjpm-latam-uat-signing.wise.com
@@ -879,8 +915,10 @@ govytykbank-uatk.transferwise.com
 govytykbank.transferwise.com
 govytykbankw.transferwise.com
 govytykyc-service.transferwise.com
+govytykyc-serviceo.transferwise.com
 govytykyc-test.transferwise.com
 govytylinks.transferwise.com
+govytylinksu.transferwise.com
 govytylooker.transferwise.com
 govytylookero.transferwise.com
 govytym.support.transferwise.com
@@ -927,6 +965,7 @@ govytypurpleq.transferwise.com
 govytyrblindia.transferwise.com
 govytyreview.transferwise.com
 govytyreviewu.transferwise.com
+govytys.api-sandbox-ninjas.transferwise.com
 govytys.bol-be-test.transferwise.com
 govytys.test-myinfo.transferwise.com
 govytys.votorantim.transferwise.com
@@ -949,6 +988,7 @@ govytytest-card-formc.wise.com
 govytytest-cards-api.wise.com
 govytytest-cards-apiq.wise.com
 govytytest-dcb.transferwise.com
+govytytest-dcbq.transferwise.com
 govytytest-myinfo.transferwise.com
 govytytest-myinfou.transferwise.com
 govytytest-ninjas.transferwise.com
@@ -976,6 +1016,8 @@ govytyvpn.transferwise.com
 govytyvpn2.transferwise.com
 govytyvpn2k.transferwise.com
 govytyvpn3.transferwise.com
+govytyvpn3m.transferwise.com
+govytyvpnold.transferwise.com
 govytyvpnold2.transferwise.com
 govytyvpnoldm.transferwise.com
 govytyvpny.transferwise.com
@@ -995,6 +1037,7 @@ govytywwwc.article.wise.com
 govytywwwc.jpm.transferwise.com
 govytywwwc.ocbc-my.transferwise.com
 govytywwwc.transferwise.com
+govytywwwe.ocbc.transferwise.com
 govytywwwg.jpm-latam-uat.wise.com
 govytywwwi.jpm-latam-signing.wise.com
 govytywwwk.api-sandbox.transferwise.com
@@ -1009,23 +1052,27 @@ govytywwws.ocbc-my-uat.transferwise.com
 govytywwwu.rblindia.transferwise.com
 govytywwww.jpm-latam.wise.com
 govytywwww.myinfo.transferwise.com
+govytywwwy.nbb-test.transferwise.com
 govytywwwy.ocbc-my-signing.transferwise.com
 govytyx1q.twcard-ext.transferwise.com
 govytyy.mailproxy1.transferwise.com
 govytyy.www.kbank.transferwise.com
 govytyy.www.myinfo.transferwise.com
 govytyyesbank.transferwise.com
+govytyzendesk1.transferwise.com
 govytyzendesk1s.transferwise.com
 govytyzendesk2.transferwise.com
 govytyzendesk2u.transferwise.com
 govytyzendesk3.transferwise.com
 govytyzendesk3u.transferwise.com
+govytyzendesk4.transferwise.com
 govytyzendesk4u.transferwise.com
 gq1.transferwise.com
 gq1.wise.com
 grafana.api.wise.com
 gtm.transferwise.com
 gtm.wise.com
+gtmg.transferwise.com
 gw-2a.transferwise.com
 gw-2a7.transferwise.com
 gw-accounts.transferwise.com
@@ -1037,6 +1084,7 @@ gw-api-mtls-in.transferwise.com
 gw-api-mtls-inw.transferwise.com
 gw-api-paypay.wise.com
 gw-api-paypayk.wise.com
+gw-api-sandbox.transferwise.com
 gw-api-sandboxc.transferwise.com
 gw-api.transferwise.com
 gw-assets.transferwise.com
@@ -1058,11 +1106,14 @@ gw-cards-apig.transferwise.com
 gw-cards-apiq.wise.com
 gw-challenge.transferwise.com
 gw-challenge9.transferwise.com
+gw-citi-test-signing.transferwise.com
+gw-citi-test.transferwise.com
 gw-citi-testa.transferwise.com
 gw-citi.transferwise.com
 gw-courses.twcard-ext.transferwise.com
 gw-dcb.transferwise.com
 gw-developer.transferwise.com
+gw-document-store.transferwise.com
 gw-document-storem.transferwise.com
 gw-drvpn.transferwise.com
 gw-ee.transferwise.com
@@ -1072,6 +1123,7 @@ gw-exchange.transferwise.com
 gw-ext-eddanowsg.transferwise.com
 gw-finance.transferwise.com
 gw-financeq.transferwise.com
+gw-fra-vpn2.transferwise.com
 gw-fra-vpn2e.transferwise.com
 gw-fra-vpn5.transferwise.com
 gw-fra-vpn5o.transferwise.com
@@ -1109,6 +1161,7 @@ gw-ocbc-my-uatc.transferwise.com
 gw-ocbc-my.transferwise.com
 gw-ocbc-myu.transferwise.com
 gw-ocbc.transferwise.com
+gw-ocg.transferwise.com
 gw-partner-files.transferwise.com
 gw-partner-filesu.transferwise.com
 gw-partners.transferwise.com
@@ -1146,10 +1199,12 @@ gw-wwwm.kbank-uat.transferwise.com
 gw-wwwm.ocbc-signing.transferwise.com
 gw-wwww.ocbc-my-uat-signing.transferwise.com
 gw-x1.twcard-ext.transferwise.com
+gw-zendesk1.transferwise.com
 gw-zendesk1.wise.com
 gw-zendesk1o.transferwise.com
 gw-zendesk1o.wise.com
 gw-zendesk2.wise.com
+gw-zendesk4.transferwise.com
 gw1.assets.transferwise.com
 gw1.bol-be.transferwise.com
 gw1.rblindia.transferwise.com
@@ -1159,11 +1214,15 @@ gw2a5.transferwise.com
 gw3.adyen-notification-test.transferwise.com
 gw3.au-cdrbanking-pub.wise.com
 gw3.jetco-apix-integration.transferwise.com
+gw3.oc.transferwise.com
+gw3.swift-bic.transferwise.com
 gw3.twcard-ext.wise.com
 gw5.card-form.transferwise.com
 gw5.postoffice.wise.com
+gw7.2a.transferwise.com
 gw7.careers.transferwise.com
 gw7.courses.twcard-ext.transferwise.com
+gw7.dash-test.transferwise.com
 gw7.ext-eddanowsg.transferwise.com
 gw7.www.api-sandbox.transferwise.com
 gw9.googlespot.transferwise.com
@@ -1207,6 +1266,7 @@ gwg.myinfo.transferwise.com
 gwg.vpnold.transferwise.com
 gwgooglespot.wise.com
 gwi.jpm-latam.wise.com
+gwi.o1612.abmail.info.transferwise.com
 gwi.www.citi.transferwise.com
 gwi.www.jpm-latam-uat-signing.wise.com
 gwi.www.jpm-signing.transferwise.com
@@ -1218,11 +1278,13 @@ gwloki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com
 gwm.ocbc-signing.transferwise.com
 gwm.www.kbank-uat.transferwise.com
 gwm.www.ocbc-signing.transferwise.com
+gwmail.transferwise.com
 gwmailproxy1.wise.com
 gwmailproxy1e.wise.com
 gwnbb-test.transferwise.com
 gwnbb-testa.transferwise.com
 gwnbb.transferwise.com
+gwnbbm.transferwise.com
 gwnc.transferwise.com
 gwnewsroom.wise.com
 gwnewsroomg.wise.com
@@ -1255,6 +1317,7 @@ gww.citi-test-signing.transferwise.com
 gww.ext-stp.transferwise.com
 gww.www.ninjas.transferwise.com
 gwwww.gtm.wise.com
+gwwww.ocbc-my-uat-signing.transferwise.com
 gwwww5.403.wise.com
 gwwwwa.ext-eddanowsg.transferwise.com
 gwwwwk.www2.wise.com
@@ -1300,6 +1363,7 @@ hpsscbl.transferwise.com
 hub.api.transferwise.com
 hub.wise.com
 icici.wise.com
+idm.transferwise.com
 idngw.wise.com
 images.cards-api.wise.com
 images.gtm.wise.com
@@ -1353,6 +1417,7 @@ kavintene.transferwise.com
 kbank-uat.transferwise.com
 kbank-uats.transferwise.com
 kbank.transferwise.com
+kbankk.transferwise.com
 kr.transferwise.com
 kubernetes.api.wise.com
 kunden.wise.com
@@ -1421,6 +1486,7 @@ mta-sts.owners.wise.com
 mta-sts.ses.transferwise.com
 mta-sts.ses.wise.com
 mta-sts.support.wise.com
+mtls-api.br-openfinance.wise.com
 mwww2.wise.com
 my.transferwise.com
 myinfo.transferwise.com
@@ -1448,6 +1514,7 @@ o1611.abmail.feedback.transferwise.com
 o1611c.abmail.feedback.transferwise.com
 o1612.abmail.info.transferwise.com
 o1688.abmail.info.transferwise.com
+o1688g.abmail.info.transferwise.com
 oc.transferwise.com
 ocbc-my-signing.transferwise.com
 ocbc-my-signingo.transferwise.com
@@ -1459,6 +1526,7 @@ ocbc-signing.transferwise.com
 ocbc.transferwise.com
 oci.transferwise.com
 openbanking.transferwise.com
+openbankings.transferwise.com
 org.cdn.transferwise.com
 org.cdn.wise.com
 owa.gtm.wise.com
@@ -1548,6 +1616,7 @@ support.transferwise.com
 swift-bic.transferwise.com
 swift-bici.transferwise.com
 syweb.transferwise.com
+t.transferwise.com
 tech-wiki.transferwise.com
 techg.transferwise.com
 test-battlestar.transferwise.com
@@ -1576,6 +1645,8 @@ twcard-ext.wise.com
 twcard-extq.transferwise.com
 twcard.transferwise.com
 twcard.wise.com
+tweety.transferwise.com
+u.transferwise.com
 u003ewww.transferwise.com
 uat.wise.com
 uk.transferwise.com
@@ -1597,6 +1668,7 @@ vpn.transferwise.com
 vpn.wise.com
 vpn2.transferwise.com
 vpn3.transferwise.com
+vpn3o.transferwise.com
 vpno.transferwise.com
 vpnold.transferwise.com
 vpnold2.transferwise.com
@@ -1626,7 +1698,9 @@ www.ablink.info.wise.com
 www.api-docs.transferwise.com
 www.api-docs.wise.com
 www.api-mtls-in.transferwise.com
+www.api-mtls.transferwise.com
 www.api-sandbox.transferwise.com
+www.api.transferwise.com
 www.api.wise.com
 www.au-cdrbanking-pub.wise.com
 www.bootstrap.transferwise.com
@@ -1670,6 +1744,7 @@ www.neptune.wise.com
 www.newsroom.wise.com
 www.nextcloud.transferwise.com
 www.ninjas.transferwise.com
+www.o1611.abmail.feedback.transferwise.com
 www.o1688.abmail.info.transferwise.com
 www.oc.transferwise.com
 www.ocbc-my-signing.transferwise.com
@@ -1678,6 +1753,7 @@ www.ocbc-my-uat.transferwise.com
 www.ocbc-my.transferwise.com
 www.ocbc-signing.transferwise.com
 www.ocbc.transferwise.com
+www.openbanking.transferwise.com
 www.platform.wise.com
 www.postoffice.wise.com
 www.preview-sst.wise.com
@@ -1717,7 +1793,10 @@ wwwk.gtm.wise.com
 wwwm.bpi-staging.transferwise.com
 wwwm.citi-test.transferwise.com
 wwwo.myinfo.transferwise.com
+wwwq.api-sandbox.transferwise.com
 wwww.ocbc-my-uat.transferwise.com
+wwww.transferwise.com
+wwwy.test-myinfo.transferwise.com
 x1.twcard-ext.transferwise.com
 xpriona.wise.com
 xprionas.wise.com

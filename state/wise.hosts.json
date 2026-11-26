@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api.wise.com": {
   "url": "https://api.wise.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api.wise-sandbox.com": {
   "url": "https://api.wise-sandbox.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "paypay.wise.com": {
   "url": "https://paypay.wise.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "verification-of-payee.wise.com": {
   "url": "https://verification-of-payee.wise.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api-paypay.wise.com": {
   "url": "https://api-paypay.wise.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "cards-api.transferwise.com": {
   "url": "https://cards-api.transferwise.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "preview-sst.wise.com": {
   "url": "https://preview-sst.wise.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com": {
   "url": "https://loki-v42zc5nx3sj7swjbm6zacmssmtcs2gck.wise.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api.transferwise.com": {
   "url": "https://api.transferwise.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api.br-openfinance.wise.com": {
   "url": "https://api.br-openfinance.wise.com/",
@@ -107,14 +107,14 @@
   "redirect": "",
   "scripts": [
    "https://api.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js",
-   "https://api.br-openfinance.wise.com/assets/index-CVYmhyOZ.js",
+   "https://api.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js",
    "https://api.br-openfinance.wise.com/assets/jsx-runtime-DUAcabCT.js",
    "https://api.br-openfinance.wise.com/assets/route-D9pXZdNP.js",
    "https://api.br-openfinance.wise.com/assets/webView--6nT_lkv.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "newsroom.wise.com": {
   "url": "https://newsroom.wise.com/en-NAM/",
@@ -124,7 +124,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api-docs.transferwise.com": {
   "url": "https://api-docs.transferwise.com/",
@@ -134,7 +134,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "api-docs.wise.com": {
   "url": "https://api-docs.wise.com/",
@@ -144,7 +144,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "cards-api.wise.com": {
   "url": "https://cards-api.wise.com/",
@@ -154,7 +154,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
  },
  "auth.br-openfinance.wise.com": {
   "url": "https://auth.br-openfinance.wise.com/",
@@ -163,13 +163,83 @@
   "redirect": "",
   "scripts": [
    "https://auth.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js",
-   "https://auth.br-openfinance.wise.com/assets/index-CVYmhyOZ.js",
+   "https://auth.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js",
    "https://auth.br-openfinance.wise.com/assets/jsx-runtime-DUAcabCT.js",
    "https://auth.br-openfinance.wise.com/assets/route-D9pXZdNP.js",
    "https://auth.br-openfinance.wise.com/assets/webView--6nT_lkv.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:20:47 UTC"
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "widgets.wise.com": {
+  "url": "https://widgets.wise.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "mta-sts.owners.wise.com": {
+  "url": "https://mta-sts.owners.wise.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "ablink.feedback.wise.com": {
+  "url": "https://ablink.feedback.wise.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "mta-sts.ses.transferwise.com": {
+  "url": "https://mta-sts.ses.transferwise.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "feedback.wise.com": {
+  "url": "https://feedback.wise.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://feedback.wise.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "neptune.wise.com": {
+  "url": "https://neptune.wise.com/",
+  "http_status": 403,
+  "title": "Wise — Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
+ },
+ "www.wise.com": {
+  "url": "https://wise.com/",
+  "http_status": 200,
+  "title": "Wise: The international account | Money without borders | Wise United States",
+  "redirect": "https://wise.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:46:22 UTC"
  }
 }

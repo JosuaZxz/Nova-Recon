@@ -2458,5 +2458,1681 @@
   "catchall": false,
   "interesting": true,
   "last_checked": "2026-11-25 08:24:57 UTC"
+ },
+ "1-0-v3-9.download.kdrive.infomaniak.com": {
+  "url": "https://1-0-v3-9.download.kdrive.infomaniak.com/",
+  "http_status": 502,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-v3-5.download.kdrive.infomaniak.com": {
+  "url": "https://0-v3-5.download.kdrive.infomaniak.com/",
+  "http_status": 502,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "developer.infomaniak.com": {
+  "url": "https://developer.infomaniak.com/",
+  "http_status": 200,
+  "title": "Infomaniak Developer Portal",
+  "redirect": "",
+  "scripts": [
+   "https://developer.infomaniak.com/js/app.js?id=48bd6e6649e1a9d98f9b4c061ea8f144",
+   "https://web-components.storage.infomaniak.com/current/init.js?project=developer"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-bcastdrive-admin28-cfgw.bcast.infomaniak.com": {
+  "url": "http://00o00-10-bcastdrive-admin28-cfgw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310ipv3-drive2015apolloc.bcast.infomaniak.com": {
+  "url": "http://00310ipv3-drive2015apolloc.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drive-eaccess-sqlaccounts.bcast.infomaniak.com": {
+  "url": "http://006hc10-drive-eaccess-sqlaccounts.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10ipv3-drivebrand.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10ipv3-drivebrand.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-ww171431-elasticbeanstalk-h.00jyc1ji840tgg3o.bcast.infomaniak.com": {
+  "url": "http://1-ww171431-elasticbeanstalk-h.00jyc1ji840tgg3o.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-dripantheone-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://006hc-10-dripantheone-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-dr7a2qcve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://004t4-10-dr7a2qcve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-d-kdrive-intram.bcast.infomaniak.com": {
+  "url": "http://006hc10-d-kdrive-intram.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10aprilbcastdrive-admin2.bcast.infomaniak.com": {
+  "url": "http://006hc-10aprilbcastdrive-admin2.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o11-drive-ipv2.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o11-drive-ipv2.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t410-clubnetherlandsgit.bcast.infomaniak.com": {
+  "url": "http://004t410-clubnetherlandsgit.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-wnewmail3110www-acc.003.bcast.infomaniak.com": {
+  "url": "http://1-wnewmail3110www-acc.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-oracle-eaccessoldappy.bcast.infomaniak.com": {
+  "url": "http://0056u-10-oracle-eaccessoldappy.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-10-kdrivewin30app.bcast.infomaniak.com": {
+  "url": "http://0-10-kdrivewin30app.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "003-10-drive-brazil-testbedq.bcast.infomaniak.com": {
+  "url": "http://003-10-drive-brazil-testbedq.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0031-win31-elasticbeaanntalk-h.bcast.infomaniak.com": {
+  "url": "http://0031-win31-elasticbeaanntalk-h.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-stag-kdrive-spring.00jyc1ji840tgg3o.bcast.infomaniak.com": {
+  "url": "http://1-stag-kdrive-spring.00jyc1ji840tgg3o.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10dl-qa-fwu.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10dl-qa-fwu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win53-auth.003.bcast.infomaniak.com": {
+  "url": "http://1-win53-auth.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-1-win31-elasticbeanstalk-ma.bcast.infomaniak.com": {
+  "url": "http://0-1-win31-elasticbeanstalk-ma.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "api.drive.infomaniak.com": {
+  "url": "https://api.drive.infomaniak.com/",
+  "http_status": 307,
+  "title": "Redirecting to https://login.infomaniak.com/authorize?scope=crypt_key+user_info+user_password+private+user_info_contact+",
+  "redirect": "https://login.infomaniak.com/authorize?scope=crypt_key+user_info+user_password+private+user_info_contact+user_email+accounts+users+profile_update+nas+mail+event+video+vod+web+housing+vps+affiliation+j",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win3110v63gn-accc.003.bcast.infomaniak.com": {
+  "url": "http://1-win3110v63gn-accc.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccess2021payment.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccess2021payment.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-isatickets-drivejenkins.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-isatickets-drivejenkins.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-drive-eaccessolsatisfactionpp.bcast.infomaniak.com": {
+  "url": "http://00o00-10-drive-eaccessolsatisfactionpp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-1-win31-beta.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-1-win31-beta.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eau5onoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eau5onoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-1-win31profileslasgita.bcast.infomaniak.com": {
+  "url": "http://004t4-1-win31profileslasgita.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccessoldaor8d1.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccessoldaor8d1.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-10-dr154p3ve-eaccessoldappy.bcast.infomaniak.com": {
+  "url": "http://0-10-dr154p3ve-eaccessoldappy.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10-drive-eaccessoldanewsgroups.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10-drive-eaccessoldanewsgroups.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "003-10-drive-eaccesso12dapp.bcast.infomaniak.com": {
+  "url": "http://003-10-drive-eaccesso12dapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drikerberose-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-drikerberose-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-drivfeeds-feedsaccfeedsssoldapp.bcast.infomaniak.com": {
+  "url": "http://004t4-10-drivfeeds-feedsaccfeedsssoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-drive-eaccessoldaccountsw.bcast.infomaniak.com": {
+  "url": "http://004t4-10-drive-eaccessoldaccountsw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t410-cidrive-api.bcast.infomaniak.com": {
+  "url": "http://004t410-cidrive-api.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "7v5wm.ftp.infomaniak.com": {
+  "url": "http://7v5wm.ftp.infomaniak.com/",
+  "http_status": 503,
+  "title": "web host not found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "infomed-idembox-inte.app.jpe.infomaniak.com": {
+  "url": "http://infomed-idembox-inte.app.jpe.infomaniak.com/",
+  "http_status": 500,
+  "title": "500 Internal server error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win74devops.0.bcast.infomaniak.com": {
+  "url": "http://1-win74devops.0.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-club-privatevpnk.bcast.infomaniak.com": {
+  "url": "http://006hc10-club-privatevpnk.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o1-win31-elasticbeanstalk-reflector.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o1-win31-elasticbeanstalk-reflector.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drive-eaccess0o0tqldapp.bcast.infomaniak.com": {
+  "url": "http://006hc10-drive-eaccess0o0tqldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-1-wtraduction-newn3110www-acc.bcast.infomaniak.com": {
+  "url": "http://006hc-1-wtraduction-newn3110www-acc.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10ipv3-drive2015cms.bcast.infomaniak.com": {
+  "url": "http://006hc10ipv3-drive2015cms.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-clubcontrolwebapp.bcast.infomaniak.com": {
+  "url": "http://00o00-10-clubcontrolwebapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-dr446e8ve-eaccessoldappu.bcast.infomaniak.com": {
+  "url": "http://006hc10-dr446e8ve-eaccessoldappu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "17-v3-6.download.kdrive.infomaniak.com": {
+  "url": "https://17-v3-6.download.kdrive.infomaniak.com/",
+  "http_status": 502,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-drive-eprivateessoldapp.bcast.infomaniak.com": {
+  "url": "http://00o00-10-drive-eprivateessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-1-win31-elasticbeatwtalk-h.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-1-win31-elasticbeatwtalk-h.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drcb6hbve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-drcb6hbve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-drive-eaccessollv4cmpp.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-drive-eaccessollv4cmpp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10dl-devopsprd.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10dl-devopsprd.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-eaccessoldalink.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-eaccessoldalink.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-drive-eaccessol5g01xpp.bcast.infomaniak.com": {
+  "url": "http://004t4-10-drive-eaccessol5g01xpp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-clubjconfluencec.bcast.infomaniak.com": {
+  "url": "http://0056u10-clubjconfluencec.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-drive-eacceherculesldapp.bcast.infomaniak.com": {
+  "url": "http://00o00-10-drive-eacceherculesldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-drive-eaccessolda5h8w05h8w0w.bcast.infomaniak.com": {
+  "url": "http://00310-drive-eaccessolda5h8w05h8w0w.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "admin2-api3.infomaniak.com": {
+  "url": "https://admin2-api3.infomaniak.com/",
+  "http_status": 503,
+  "title": "Infomaniak - service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-image-eaccessoldappw.bcast.infomaniak.com": {
+  "url": "http://0056u10-image-eaccessoldappw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-helprive-eaccessolhelpapp.bcast.infomaniak.com": {
+  "url": "http://006hc-10-helprive-eaccessolhelpapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-drive-eidpessoldapp.bcast.infomaniak.com": {
+  "url": "http://00o00-10-drive-eidpessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-cms-imaps-seo.003.bcast.infomaniak.com": {
+  "url": "http://1-cms-imaps-seo.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eaccessoldaja1bqja1bq.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eaccessoldaja1bqja1bq.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10dl-devopsprdu.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10dl-devopsprdu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "sandbox.kchat.infomaniak.com": {
+  "url": "https://sandbox.kchat.infomaniak.com/",
+  "http_status": 200,
+  "title": "kChat",
+  "redirect": "",
+  "scripts": [
+   "https://sandbox.kchat.infomaniak.com/static/app.d7ce4ece3d3a23d87a54.js",
+   "https://sandbox.kchat.infomaniak.com/static/remote_entry.js?bt=1793045215078"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10-drive-eaccessvj016ldapp.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10-drive-eaccessvj016ldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-11confluencew2-drive.bcast.infomaniak.com": {
+  "url": "http://006hc-11confluencew2-drive.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10-club-w-staging.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10-club-w-staging.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-1-win31-elasticbeanstalgy4ax-h.bcast.infomaniak.com": {
+  "url": "http://0056u-1-win31-elasticbeanstalgy4ax-h.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win31-developer-2.003.bcast.infomaniak.com": {
+  "url": "http://1-win31-developer-2.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drivuz85w-uz85waccuz85wssoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drivuz85w-uz85waccuz85wssoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t410-dr9w0c3ve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://004t410-dr9w0c3ve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-polandbeta.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-polandbeta.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccesscv1.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccesscv1.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-10-drive-eaccessold-pasteldappw.bcast.infomaniak.com": {
+  "url": "http://0-10-drive-eaccessold-pasteldappw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eamasteressoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eamasteressoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-eaccessoldar25in.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-eaccessoldar25in.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t410-cal-kdrive-squirrelmailorigin-elasticbeanstalk.bcast.infomaniak.com": {
+  "url": "http://004t410-cal-kdrive-squirrelmailorigin-elasticbeanstalk.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-2015paydrive.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-2015paydrive.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-1-win31-authregions.bcast.infomaniak.com": {
+  "url": "http://0056u-1-win31-authregions.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "003-10-drivsw5y7-sw5y7accsw5y7ssoldapp.bcast.infomaniak.com": {
+  "url": "http://003-10-drivsw5y7-sw5y7accsw5y7ssoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o1-auth.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o1-auth.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-edev16oldapp.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-edev16oldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win31-v1y.00jyc1ji840tgg3o.bcast.infomaniak.com": {
+  "url": "http://1-win31-v1y.00jyc1ji840tgg3o.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0055u10-drive-eaccesso93y8ldappk.bcast.infomaniak.com": {
+  "url": "http://0055u10-drive-eaccesso93y8ldappk.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eaccessovicunadapp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eaccessovicunadapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-dri831fce-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://004t4-10-dri831fce-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eaccessolwg4t6pp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eaccessolwg4t6pp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-stag-kdrive-ftpo.bcast.infomaniak.com": {
+  "url": "http://00310-stag-kdrive-ftpo.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-gm23b-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-gm23b-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10ipv3-drive-repou.bcast.infomaniak.com": {
+  "url": "http://0056u10ipv3-drive-repou.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "003-10-drive-eaccessoldafotow.bcast.infomaniak.com": {
+  "url": "http://003-10-drive-eaccessoldafotow.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-wprod-kdrive2-kub31-elasticbeanstalk-h.003.bcast.infomaniak.com": {
+  "url": "http://1-wprod-kdrive2-kub31-elasticbeanstalk-h.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-drive-eacce9t4nnldapp.bcast.infomaniak.com": {
+  "url": "http://00310-drive-eacce9t4nnldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0-10-drive-eaccessol0t8xfpp.bcast.infomaniak.com": {
+  "url": "http://0-10-drive-eaccessol0t8xfpp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-11kdrivecms4-push-14m.bcast.infomaniak.com": {
+  "url": "http://006hc-11kdrivecms4-push-14m.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10dltest.bcast.infomaniak.com": {
+  "url": "http://004t4-10dltest.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drive-eq38njessoldappu.bcast.infomaniak.com": {
+  "url": "http://006hc10-drive-eq38njessoldappu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o1-stag-kdrive-spring.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o1-stag-kdrive-spring.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eaccesswebappstag.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eaccesswebappstag.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-cw3zn-elasticbeanstalk-h.0.bcast.infomaniak.com": {
+  "url": "http://1-cw3zn-elasticbeanstalk-h.0.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-clubwebapp-stage.bcast.infomaniak.com": {
+  "url": "http://006hc-10-clubwebapp-stage.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-drive-eaccessoldwebinar.bcast.infomaniak.com": {
+  "url": "http://004t4-10-drive-eaccessoldwebinar.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-datao.bcast.infomaniak.com": {
+  "url": "http://004t4-10-datao.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-drive-eaccessodv1iodapp.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-drive-eaccessodv1iodapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-brazil-accounto.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-brazil-accounto.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "payer.infomaniak.com": {
+  "url": "https://payer.infomaniak.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://manager.infomaniak.com/accounts/accounting/renewal",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-accountsq.bcast.infomaniak.com": {
+  "url": "http://006hc-10-accountsq.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-data.bcast.infomaniak.com": {
+  "url": "http://004t4-10-data.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-1-qakdrive.bcast.infomaniak.com": {
+  "url": "http://006hc-1-qakdrive.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc11drive-ftpapi.bcast.infomaniak.com": {
+  "url": "http://006hc11drive-ftpapi.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-es31-elasticbeanstalk-ho.0.bcast.infomaniak.com": {
+  "url": "http://1-es31-elasticbeanstalk-ho.0.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-dhealthive-eaccessoldappq.bcast.infomaniak.com": {
+  "url": "http://00o00-10-dhealthive-eaccessoldappq.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10-club-admin.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10-club-admin.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10ipv3-k.bcast.infomaniak.com": {
+  "url": "http://006hc-10ipv3-k.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-drive-eaccesspass-accounts.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-drive-eaccesspass-accounts.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drcb6hbve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://006hc10-drcb6hbve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-1-win31-authr.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-1-win31-authr.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u1-d59ww-elasticbeanstalk-h.bcast.infomaniak.com": {
+  "url": "http://0056u1-d59ww-elasticbeanstalk-h.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccessoek9r6p.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccessoek9r6p.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10ipv3-2021u.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10ipv3-2021u.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-drte0have-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://00310-drte0have-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o10-drive-eju3kqessoldapp.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o10-drive-eju3kqessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-brand-speedtest4kdrivew.bcast.infomaniak.com": {
+  "url": "http://00310-brand-speedtest4kdrivew.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drive-eaccess-promotion-github.bcast.infomaniak.com": {
+  "url": "http://006hc10-drive-eaccess-promotion-github.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t411confluencew2-drivea.bcast.infomaniak.com": {
+  "url": "http://004t411confluencew2-drivea.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-driz15q3e-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-driz15q3e-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-2013-manage.003.bcast.infomaniak.com": {
+  "url": "http://1-2013-manage.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drijinxe-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drijinxe-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc1-win3preferences1-popsy.bcast.infomaniak.com": {
+  "url": "http://006hc1-win3preferences1-popsy.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win7cmsm.0.bcast.infomaniak.com": {
+  "url": "http://1-win7cmsm.0.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-win31jenkins.00jyc1ji840tgg3o.bcast.infomaniak.com": {
+  "url": "http://1-win31jenkins.00jyc1ji840tgg3o.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-1-win64-developer-va.bcast.infomaniak.com": {
+  "url": "http://00o00-1-win64-developer-va.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "10-ddrive-eaccessops.003.bcast.infomaniak.com": {
+  "url": "http://10-ddrive-eaccessops.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccesswl0qqldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccesswl0qqldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-drive-ezm0psessoldappw.bcast.infomaniak.com": {
+  "url": "http://004t4-10-drive-ezm0psessoldappw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0058u10dl-qa-2022.bcast.infomaniak.com": {
+  "url": "http://0058u10dl-qa-2022.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t410-drive-eaccessolr75umpp.bcast.infomaniak.com": {
+  "url": "http://004t410-drive-eaccessolr75umpp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-kdrive-squirrelmailstaging.bcast.infomaniak.com": {
+  "url": "http://00o00-10-kdrive-squirrelmailstaging.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-club-firewalladmine.bcast.infomaniak.com": {
+  "url": "http://006hc-10-club-firewalladmine.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "003-1110ipv3-drive2015e.bcast.infomaniak.com": {
+  "url": "http://003-1110ipv3-drive2015e.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-di51h9ive-eaccessoldappy.bcast.infomaniak.com": {
+  "url": "http://0056u10-di51h9ive-eaccessoldappy.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "teste.preprod.vod2.infomaniak.com": {
+  "url": "https://teste.preprod.vod2.infomaniak.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t411-uat-kdrivecms4.bcast.infomaniak.com": {
+  "url": "http://004t411-uat-kdrivecms4.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-isatickets-drive-account.bcast.infomaniak.com": {
+  "url": "http://0056u-10-isatickets-drive-account.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "004t4-10-dr154p3ve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://004t4-10-dr154p3ve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-kf9uc-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://0056u-10-kf9uc-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccessold-testing.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccessold-testing.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "develop-api2.infomaniak.com": {
+  "url": "https://develop-api2.infomaniak.com/",
+  "http_status": 503,
+  "title": "Infomaniak - service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccessopromodappu.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccessopromodappu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-10-drive-eaccess-sqlsso.bcast.infomaniak.com": {
+  "url": "http://0056u-10-drive-eaccess-sqlsso.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-dr154p3ve-eaccessoldapp.bcast.infomaniak.com": {
+  "url": "http://006hc-10-dr154p3ve-eaccessoldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10ipv3-billing.bcast.infomaniak.com": {
+  "url": "http://00o00-10ipv3-billing.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u10-drive-eaccessold-pasteldapp.bcast.infomaniak.com": {
+  "url": "http://0056u10-drive-eaccessold-pasteldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc10-drive-eaccessoldanewsgroups.bcast.infomaniak.com": {
+  "url": "http://006hc10-drive-eaccessoldanewsgroups.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "006hc-10-drive-eqy268oldapp.bcast.infomaniak.com": {
+  "url": "http://006hc-10-drive-eqy268oldapp.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "1-ew4qvin31-elasticbeanstalk-h.0.bcast.infomaniak.com": {
+  "url": "http://1-ew4qvin31-elasticbeanstalk-h.0.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-drive-eaccessox02s2pu.bcast.infomaniak.com": {
+  "url": "http://00310-drive-eaccessox02s2pu.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "0056u-11account-eaccess.bcast.infomaniak.com": {
+  "url": "http://0056u-11account-eaccess.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "10-club-privatevpn.003.bcast.infomaniak.com": {
+  "url": "http://10-club-privatevpn.003.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00o00-10-drive-eidpessoldappw.bcast.infomaniak.com": {
+  "url": "http://00o00-10-drive-eidpessoldappw.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-drive-eaccessold-node.bcast.infomaniak.com": {
+  "url": "http://00310-drive-eaccessold-node.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00310-clubcontrolqa.bcast.infomaniak.com": {
+  "url": "http://00310-clubcontrolqa.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
+ },
+ "00jyc1ji840tgg3o-10-10cloudflare-resolve-web.bcast.infomaniak.com": {
+  "url": "http://00jyc1ji840tgg3o-10-10cloudflare-resolve-web.bcast.infomaniak.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:51:35 UTC"
  }
 }

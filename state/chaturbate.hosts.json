@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "m.testbed.cb.dev": {
   "url": "https://m.testbed.cb.dev/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "admin.live.mmwebc.dev": {
   "url": "https://admin.live.mmwebc.dev/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "wildcard.web-testbed.cb.dev": {
   "url": "https://wildcard.web-testbed.cb.dev/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "mail.web-testbed.cb.dev": {
   "url": "https://mail.web-testbed.cb.dev/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "pt.testbed.cb.dev": {
   "url": "https://pt.testbed.cb.dev/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "de.testbed.cb.dev": {
   "url": "https://de.testbed.cb.dev/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "www.testbed.cb.dev": {
   "url": "https://www.testbed.cb.dev/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "es.testbed.cb.dev": {
   "url": "https://es.testbed.cb.dev/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "devportal.cb.dev": {
   "url": "https://devportal.cb.dev/",
@@ -103,7 +103,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "testbed.cb.dev": {
   "url": "https://www.testbed.cb.dev/",
@@ -113,7 +113,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "ru.testbed.cb.dev": {
   "url": "https://ru.testbed.cb.dev/",
@@ -123,7 +123,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "beta.securegatewayaccess.com": {
   "url": "https://beta.securegatewayaccess.com/customer_support/",
@@ -133,7 +133,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "report-uri.mmcdn.com": {
   "url": "https://report-uri.mmcdn.com/",
@@ -143,7 +143,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "report-uri.highwebmedia.com": {
   "url": "https://report-uri.highwebmedia.com/",
@@ -153,7 +153,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "directory-testbed.cb.dev": {
   "url": "https://directory-testbed.cb.dev/",
@@ -163,7 +163,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "wildcard.testbed.mmwebc.dev": {
   "url": "https://wildcard.testbed.mmwebc.dev/",
@@ -173,7 +173,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "jenkins.live.mmwebc.dev": {
   "url": "https://jenkins.live.mmwebc.dev/",
@@ -183,7 +183,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "web.static.mmcdn.com": {
   "url": "https://web.static.mmcdn.com/",
@@ -193,7 +193,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "directory-v3-testbed.cb.dev": {
   "url": "https://directory-v3-testbed.cb.dev/",
@@ -207,7 +207,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "it.testbed.cb.dev": {
   "url": "https://it.testbed.cb.dev/",
@@ -217,7 +217,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "www.web-testbed.cb.dev": {
   "url": "https://www.web-testbed.cb.dev/",
@@ -227,7 +227,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "edge8-aus.live.mmcdn.com": {
   "url": "https://edge8-aus.live.mmcdn.com/",
@@ -237,7 +237,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "directory-v3-live.cb.dev": {
   "url": "https://directory-v3-live.cb.dev/",
@@ -251,7 +251,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "ko.testbed.cb.dev": {
   "url": "https://ko.testbed.cb.dev/",
@@ -261,7 +261,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "edge30-waw.live.mmcdn.com": {
   "url": "https://edge30-waw.live.mmcdn.com/",
@@ -271,7 +271,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "ja.testbed.cb.dev": {
   "url": "https://ja.testbed.cb.dev/",
@@ -281,7 +281,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
  },
  "fr.testbed.cb.dev": {
   "url": "https://fr.testbed.cb.dev/",
@@ -291,6 +291,286 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 00:11:36 UTC"
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge20-chi.live.mmcdn.com": {
+  "url": "https://edge20-chi.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge20-atl.live.mmcdn.com": {
+  "url": "https://edge20-atl.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "live-nld.stream.highwebmedia.com": {
+  "url": "https://live-nld.stream.highwebmedia.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge20-ams.live.mmcdn.com": {
+  "url": "https://edge20-ams.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge16-aus.live.mmcdn.com": {
+  "url": "https://edge16-aus.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge12-aus.live.mmcdn.com": {
+  "url": "https://edge12-aus.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge1-atl.live.mmcdn.com": {
+  "url": "https://edge1-atl.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge22-sin.live.mmcdn.com": {
+  "url": "https://edge22-sin.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge18-hel.live.mmcdn.com": {
+  "url": "https://edge18-hel.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "stream.testbed.cb.dev": {
+  "url": "https://stream.testbed.cb.dev/",
+  "http_status": 200,
+  "title": "cbjpegstream",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "wildcard.live.mmwebc.dev": {
+  "url": "https://wildcard.live.mmwebc.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge15-nrt.live.mmcdn.com": {
+  "url": "https://edge15-nrt.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "a.live.mmwebc.dev": {
+  "url": "https://a.live.mmwebc.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "s3pv.highwebmedia.com": {
+  "url": "https://s3pv.highwebmedia.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge5-nrt.live.mmcdn.com": {
+  "url": "https://edge5-nrt.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "origin5-hel.live.mmcdn.com": {
+  "url": "https://origin5-hel.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge4-mad.live.mmcdn.com": {
+  "url": "https://edge4-mad.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "realtime.pa.highwebmedia.com": {
+  "url": "https://realtime.pa.highwebmedia.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge9-syd.live.mmcdn.com": {
+  "url": "https://edge9-syd.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "origin5-sof.live.mmcdn.com": {
+  "url": "https://origin5-sof.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "origin11-ash.live.mmcdn.com": {
+  "url": "https://origin11-ash.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge11-mad.live.mmcdn.com": {
+  "url": "https://edge11-mad.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "alb.live.mmcdn.com": {
+  "url": "https://alb.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge13-rtm.live.mmcdn.com": {
+  "url": "https://edge13-rtm.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "edge6-mad.live.mmcdn.com": {
+  "url": "https://edge6-mad.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "origin32-waw.live.mmcdn.com": {
+  "url": "https://origin32-waw.live.mmcdn.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "nr.mmcdn.com": {
+  "url": "https://nr.mmcdn.com/",
+  "http_status": 200,
+  "title": "nr.mmcdn.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
+ },
+ "e-fallback.pa.highwebmedia.com": {
+  "url": "https://e-fallback.pa.highwebmedia.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 22:37:58 UTC"
  }
 }

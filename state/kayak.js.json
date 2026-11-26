@@ -1,0 +1,12 @@
+{
+ "http://rights.kayak.com/assets/js/bundle.js": {
+  "last_url": "http://rights.kayak.com/assets/js/bundle.js",
+  "sha256": "abde310265be3e4895a5",
+  "routes": [
+   "/api/approval",
+   "/api/search"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-26 22:49:07 UTC"
+ }
+}

@@ -11,28 +11,28 @@
   "sha256": "afa9863e5c6f7611685a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:48 UTC"
+  "updated": "2026-11-26 22:46:23 UTC"
  },
  "https://api.br-openfinance.wise.com/assets/route-D9pXZdNP.js": {
   "last_url": "https://api.br-openfinance.wise.com/assets/route-D9pXZdNP.js",
   "sha256": "856e94c4f5b617f18f9a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:48 UTC"
+  "updated": "2026-11-26 22:46:23 UTC"
  },
  "https://api.br-openfinance.wise.com/assets/webView--6nT_lkv.js": {
   "last_url": "https://api.br-openfinance.wise.com/assets/webView--6nT_lkv.js",
   "sha256": "529efca929b50b5c23e4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:48 UTC"
+  "updated": "2026-11-26 22:46:23 UTC"
  },
  "https://api.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js": {
   "last_url": "https://api.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js",
   "sha256": "93616a92a27f3bd00400",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:48 UTC"
+  "updated": "2026-11-26 22:46:23 UTC"
  },
  "https://auth.br-openfinance.wise.com/assets/index-CVYmhyOZ.js": {
   "last_url": "https://auth.br-openfinance.wise.com/assets/index-CVYmhyOZ.js",
@@ -46,27 +46,41 @@
   "sha256": "afa9863e5c6f7611685a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:49 UTC"
+  "updated": "2026-11-26 22:46:24 UTC"
  },
  "https://auth.br-openfinance.wise.com/assets/route-D9pXZdNP.js": {
   "last_url": "https://auth.br-openfinance.wise.com/assets/route-D9pXZdNP.js",
   "sha256": "856e94c4f5b617f18f9a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:49 UTC"
+  "updated": "2026-11-26 22:46:24 UTC"
  },
  "https://auth.br-openfinance.wise.com/assets/webView--6nT_lkv.js": {
   "last_url": "https://auth.br-openfinance.wise.com/assets/webView--6nT_lkv.js",
   "sha256": "529efca929b50b5c23e4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:49 UTC"
+  "updated": "2026-11-26 22:46:24 UTC"
  },
  "https://auth.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js": {
   "last_url": "https://auth.br-openfinance.wise.com/assets/ErrorPage-t7nlFig6.js",
   "sha256": "93616a92a27f3bd00400",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 00:20:49 UTC"
+  "updated": "2026-11-26 22:46:24 UTC"
+ },
+ "https://api.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js": {
+  "last_url": "https://api.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js",
+  "sha256": "ff9f262af00599a4114e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 22:46:23 UTC"
+ },
+ "https://auth.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js": {
+  "last_url": "https://auth.br-openfinance.wise.com/assets/index-DD3Ml-Jh.js",
+  "sha256": "ff9f262af00599a4114e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 22:46:23 UTC"
  }
 }
