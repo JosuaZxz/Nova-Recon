@@ -29,6 +29,7 @@
 14a.gtld-servers.net
 157.225.206l.gtld-servers.net
 158-58-226-38llux1a.verisign.com
+17.mbv-ote-web.verisign-grs.com
 172800innsd.gtld-servers.net
 2.youcouldbe.com
 20.r1-r2.electra-fo.iad5.verisign.com
@@ -47,14 +48,17 @@
 2273.verisign-grs.com
 2273.youcouldbe.com
 2277.gtld-servers.net
+296.mbv-web.verisign-grs.com
 2a.youcouldbe.com
 33195innsa.gtld-servers.net
 33195innsb.gtld-servers.net
 33195innsc.gtld-servers.net
 3u-peer.corp-fo.szg1.verisign.com
+4.mbv-web.verisign-grs.com
 42q.157.225.206l.gtld-servers.net
 4ya3j7gc81hl6ustcsb5vfupir0xyzmvepjddnmh.gtld-servers.net
 52.youcouldbe.com
+670www.verisign-grs.com
 87.youcouldbe.com
 900.te0-0-0-0.r1.edge-fo.stk1.verisign.com
 900.xe-1-0-0.r1.edge-fo.ams1.verisign.com
@@ -69,6 +73,7 @@ a-root-servers-org.gslb.verisign.com
 a-root.brn1.core-fo.brn1.verisign.com
 a.gtld-servers.net
 a.mx.verisign-grs.com
+a.root-servers.net.nstld.verisign-grs.com
 a.youcouldbe.com
 a12.verisign.com
 a13.verisign.com
@@ -98,6 +103,7 @@ accounts.verisign.com
 accountsdr-otp.verisign.com
 accountsdr.verisign.com
 accountstatus.verisign.com
+acdist1.verisign-grs.com
 acdist2.verisign-grs.com
 acgpmg-mms.verisign-grs.com
 acgpmg-mmse.verisign-grs.com
@@ -590,6 +596,7 @@ bhdnsmon2.stk1.verisign.com
 bhdnsmon2.tko2.verisign.com
 bio.youcouldbe.com
 blackboard.verisign-grs.com
+blackboarda.verisign-grs.com
 blackhole-1.verisign-grs.com
 blackhole-1c.verisign-grs.com
 blackhole-2.verisign-grs.com
@@ -1084,6 +1091,7 @@ destinations.verisign.com
 dev.namestudioforsocial.com
 dev.verisign.com
 dev.youcouldbe.com
+dev1.verisign-grs.com
 dev13.verisign-grs.com
 dev2.verisign-grs.com
 dev2.youcouldbe.com
@@ -5459,6 +5467,7 @@ ipsapi.verisign.com
 ipv4-epp-auto.gslb.verisign.com
 ipv4-epp-ote.gslb.verisign.com
 ipv4-epp.gslb.verisign.com
+ipv4-webwhois-nic-name.gslb.verisign.com
 ipv4.epp-auto.verisign-grs.com
 ipv4.epp-ote-dr.verisign-grs.com
 ipv4.epp-ote.verisign-grs.com
@@ -5554,6 +5563,7 @@ jn1.rirs.elhel1.verisign.com
 jn1.rirs.elmow1.verisign.com
 jn2-40.rirs.elhnl1.verisign.com
 jn2.rirs.elhel1.verisign.com
+jobswhois.verisign-grs.com
 join.corparch.verisign.com
 join.verisign.com
 joshua.verisign.com
@@ -6347,6 +6357,7 @@ ote-accountsdr-otp.verisign.com
 ote-accountsdr.verisign.com
 ote-akms.verisign-grs.com
 ote-api-maldetector.verisign-grs.com
+ote-coreui-de.verisign-grs.com
 ote-coreui.gslb.verisign.com
 ote-coreui.verisign-grs.com
 ote-coreui.verisign.com
@@ -6641,6 +6652,7 @@ pv4.namestoreote.verisign-grs.com
 pvhs.verisign.com
 pvrm.verisign.com
 qa-akms.verisign-grs.com
+qa-api-domainscore.verisign-grs.com
 qa-auth-spa.verisign-grs.com
 qa-ciber.cleaing.verisign.com
 qa-contentservices.verisign.com
@@ -6660,8 +6672,10 @@ qa-domainscore.verisign.com
 qa-epedigree-priv.qa-fo.lks2.verisign.com
 qa-epedigree-pub.qa-fo.lks2.verisign.com
 qa-epptool-ctld.verisign-grs.com
+qa-epptool-ctlda.verisign-grs.com
 qa-feeds.weblogs.qa-fo.lks2.verisign.com
 qa-iargus.verisign-grs.com
+qa-isk-provisioning.verisign-grs.com
 qa-kms.verisign-grs.com
 qa-loadgen.lks2.verisign.com
 qa-master01.pub.qa-vcs-fo.lks2.verisign.com
@@ -6683,6 +6697,7 @@ qa-ps-wap10.verisign.com
 qa-ps-wap20.verisign.com
 qa-rcc.verisign-grs.com
 qa-regprofile.verisign.com
+qa-sslftp.verisign-grs.com
 qa-sslftp.verisign.com
 qa-stv-web.verisign-grs.com
 qa-wap11.verisign.com
@@ -8673,6 +8688,7 @@ www.ccrrp.verisign-grs.com
 www.cctest.verisign-grs.com
 www.ccwhois.verisign-grs.com
 www.client.verisign-grs.com
+www.colo-fo.ilg1.verisign-grs.com
 www.comnetote.verisign-grs.com
 www.coreui.verisign-grs.com
 www.csc3-2010-aia.verisign.com
@@ -8686,6 +8702,7 @@ www.dr-ote-coreui.verisign-grs.com
 www.e.gtld-servers.net
 www.enhancedsuggestions-beta.verisign-grs.com
 www.epp-auto.verisign-grs.com
+www.epp-ote-dr.verisign-grs.com
 www.epp-ote.verisign-grs.com
 www.epp.verisign-grs.com
 www.epptool-ctld.verisign-grs.com
@@ -8730,6 +8747,7 @@ www.mdns3.verisign-grs.com
 www.mx.verisign-grs.com
 www.namestoreepptest.verisign-grs.com
 www.namestoreote.verisign-grs.com
+www.namestoreoteftp.verisign-grs.com
 www.namestoretest.verisign-grs.com
 www.namestudio.com
 www.namestudioforsocial.com
@@ -8759,6 +8777,7 @@ www.startonline.verisign.com
 www.styleguide.verisign.com
 www.sugapi.verisign-grs.com
 www.test.securemobile.verisign.com
+www.testclient.verisign-grs.com
 www.tlab.verisign.com
 www.tracker.verisign-grs.com
 www.tvote.verisign-grs.com
@@ -8775,6 +8794,7 @@ www.verisignforms.verisign.com
 www.vsccrtcedgefwd1-ilg1.colo-fo.ilg1.verisign-grs.com
 www.whois-1.verisign-grs.com
 www.whois-2.verisign-grs.com
+www.whois.verisign-grs.com
 www.youcouldbe.com
 www.zms-kex-ote.verisign-grs.com
 www1.verisign.com

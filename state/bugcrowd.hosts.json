@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "login.hackers.bugcrowd.com": {
   "url": "https://login.hackers.bugcrowd.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "login.bugcrowd.com": {
   "url": "https://login.bugcrowd.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "identity.bugcrowd.com": {
   "url": "https://identity.bugcrowd.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "email.crowdcontrol.bugcrowd.com": {
   "url": "https://email.crowdcontrol.bugcrowd.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "security-awareness.bugcrowd.com": {
   "url": "https://security-awareness.bugcrowd.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "login.gov.bugcrowd.net": {
   "url": "https://login.gov.bugcrowd.net/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "api.bugcrowd.com": {
   "url": "https://api.bugcrowd.com/",
@@ -78,17 +78,36 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "preview.rl.bugcrowd.com": {
   "url": "https://preview.rl.bugcrowd.com/",
-  "http_status": 403,
-  "title": "Vercel Security Checkpoint",
+  "http_status": 200,
+  "title": "Savant Environments",
   "redirect": "",
-  "scripts": [],
+  "scripts": [
+   "https://clerk.rl.bugcrowd.com/npm/@clerk/clerk-js@6/dist/clerk.browser.js",
+   "https://clerk.rl.bugcrowd.com/npm/@clerk/ui@1/dist/ui.browser.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/033w1l1i4qlvl.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/084rlhcjwsvx7.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/0h9c4ckda4r2-.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/0qcfiyaow1dcr.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/0ws7t_wz4dvp7.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/1664ukdtlon96.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/1xa4e5r_lr43l.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/1zu5zq_lebcr5.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/2rr8n_xy_pzsy.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/34xsxa-33lwy0.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/39ibxt_b7zrfb.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/3mtghigkqmgn9.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/3n7zfry7sjo-4.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/3ufpzci483q92.js",
+   "https://preview.rl.bugcrowd.com/_next/static/immutable/chunks/turbopack-3gk31jsl6h2g4.js"
+  ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "ets-api.gov.bugcrowd.net": {
   "url": "https://ets-api.gov.bugcrowd.net/",
@@ -98,7 +117,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "explore.bugcrowd.com": {
   "url": "https://explore.bugcrowd.com/",
@@ -108,7 +127,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "assets.gov.bugcrowd.net": {
   "url": "https://assets.gov.bugcrowd.net/",
@@ -118,7 +137,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "api.gov.bugcrowd.net": {
   "url": "https://api.gov.bugcrowd.net/",
@@ -128,7 +147,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "collateral.bugcrowd.com": {
   "url": "https://collateral.bugcrowd.com/",
@@ -138,7 +157,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "gslink.bugcrowd.com": {
   "url": "http://gslink.bugcrowd.com/",
@@ -148,7 +167,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "login.hackers.gov.bugcrowd.net": {
   "url": "https://login.hackers.gov.bugcrowd.net/",
@@ -158,7 +177,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "gov.bugcrowd.net": {
   "url": "https://gov.bugcrowd.net/",
@@ -168,7 +187,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "files.bugcrowd.com": {
   "url": "https://files.bugcrowd.com/",
@@ -178,7 +197,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "stream.gov.bugcrowd.net": {
   "url": "https://stream.gov.bugcrowd.net/",
@@ -188,7 +207,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "levelup.bugcrowd.com": {
   "url": "https://levelup.bugcrowd.com/",
@@ -198,7 +217,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
  },
  "itmoah.bugcrowd.com": {
   "url": "https://itmoah.bugcrowd.com/",
@@ -208,6 +227,152 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:43:17 UTC"
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "mailgun.bugcrowd.com": {
+  "url": "https://mailgun.bugcrowd.com/",
+  "http_status": 200,
+  "title": "Bugcrowd | Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "docs.bugcrowd.com": {
+  "url": "https://docs.bugcrowd.com/",
+  "http_status": 200,
+  "title": "Bugcrowd Docs | Bugcrowd user documentation",
+  "redirect": "",
+  "scripts": [
+   "https://docs.bugcrowd.com/assets/js/main.js",
+   "https://docs.bugcrowd.com/assets/js/redoc.standalone.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "clerk.rl.bugcrowd.com": {
+  "url": "https://clerk.rl.bugcrowd.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "support.gov.bugcrowd.net": {
+  "url": "https://support.gov.bugcrowd.net/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "email.bugs.bugcrowd.com": {
+  "url": "https://email.bugs.bugcrowd.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "rl.bugcrowd.com": {
+  "url": "https://rl.bugcrowd.com/",
+  "http_status": 403,
+  "title": "Vercel Security Checkpoint",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "mcp.nextgen.bugcrowd.com": {
+  "url": "https://mcp.nextgen.bugcrowd.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "nextgen.bugcrowd.com": {
+  "url": "https://nextgen.bugcrowd.com/",
+  "http_status": 200,
+  "title": "NextGen - Bugcrowd",
+  "redirect": "",
+  "scripts": [
+   "https://nextgen.bugcrowd.com/assets/AccessDenied-C5NEUcK8.js",
+   "https://nextgen.bugcrowd.com/assets/BcBadgeAssetCriticality-CxKD6KI3.js",
+   "https://nextgen.bugcrowd.com/assets/BcBadgeCounter-C-nzgF5L.js",
+   "https://nextgen.bugcrowd.com/assets/BcBadgePriority-CqsLbhr-.js",
+   "https://nextgen.bugcrowd.com/assets/BcBadgeStatus-BkKtEEYQ.js",
+   "https://nextgen.bugcrowd.com/assets/BcBlankState-CE2MzPFI.js",
+   "https://nextgen.bugcrowd.com/assets/BcButton-ChZHtgF0.js",
+   "https://nextgen.bugcrowd.com/assets/BcFilterBar-BomhADbZ.js",
+   "https://nextgen.bugcrowd.com/assets/BcFormCheckbox-BkS29QOT.js",
+   "https://nextgen.bugcrowd.com/assets/BcFormError-HqjesfvK.js",
+   "https://nextgen.bugcrowd.com/assets/BcFormSelect-BOOQeAxn.js",
+   "https://nextgen.bugcrowd.com/assets/BcFormSwitch-CjBDaxme.js",
+   "https://nextgen.bugcrowd.com/assets/BcHeading-BQrV98xs.js",
+   "https://nextgen.bugcrowd.com/assets/BcIcon-BdIUALjW.js",
+   "https://nextgen.bugcrowd.com/assets/BcList-DS-66zZY.js",
+   "https://nextgen.bugcrowd.com/assets/BcPageAlert-DRg2q2i9.js",
+   "https://nextgen.bugcrowd.com/assets/BcSection-BBJ6B0Zi.js",
+   "https://nextgen.bugcrowd.com/assets/BcTable-DmXHSlik.js",
+   "https://nextgen.bugcrowd.com/assets/BcTableAdvanced-BXj-jFxU.js",
+   "https://nextgen.bugcrowd.com/assets/BcTextBreakWords-CH1ltTjc.js",
+   "https://nextgen.bugcrowd.com/assets/BcTextTime-D_90TCK7.js",
+   "https://nextgen.bugcrowd.com/assets/BcTooltip-oNLcJMuG.js",
+   "https://nextgen.bugcrowd.com/assets/CSPContext-4MAFKr8B.js",
+   "https://nextgen.bugcrowd.com/assets/CompositeRoot-CFt6tuc4.js",
+   "https://nextgen.bugcrowd.com/assets/DialogTrigger-CbG3MQ3G.js",
+   "https://nextgen.bugcrowd.com/assets/DirectionContext-SX24wN8O.js",
+   "https://nextgen.bugcrowd.com/assets/FindingStatusBadge-CZcXpURP.js",
+   "https://nextgen.bugcrowd.com/assets/FindingsTable-W2PulZK_.js",
+   "https://nextgen.bugcrowd.com/assets/ItemIndicator-DmsUqI5W.js",
+   "https://nextgen.bugcrowd.com/assets/Match--_zn4Fle.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "bugcrowd.com": {
+  "url": "https://www.bugcrowd.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://www.bugcrowd.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "hooks.gov.bugcrowd.net": {
+  "url": "https://hooks.gov.bugcrowd.net/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
+ },
+ "tracker.gov.bugcrowd.net": {
+  "url": "https://tracker.gov.bugcrowd.net/user/sign_in",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://tracker.gov.bugcrowd.net/user/sign_in",
+  "scripts": [
+   "https://assets.gov.bugcrowd.net/assets/splash-screen-app-64f77f68.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:02:53 UTC"
  }
 }

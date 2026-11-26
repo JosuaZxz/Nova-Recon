@@ -1,0 +1,491 @@
+{
+ "_seeded": true,
+ "preview.sgtm.arrowfilms.com": {
+  "url": "https://preview.sgtm.arrowfilms.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "testblog.lookfantastic.com": {
+  "url": "https://testblog.lookfantastic.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.lookfantastic.com/blog/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "preview.myprotein.com": {
+  "url": "https://preview.myprotein.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "preview.sgtm.myvitamins.com": {
+  "url": "https://preview.sgtm.myvitamins.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "uat.www.lookfantastic.com": {
+  "url": "https://uat.www.lookfantastic.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "preview.sgtm.lookfantastic.com": {
+  "url": "https://preview.sgtm.lookfantastic.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "test.www.lookfantastic.com": {
+  "url": "https://test.www.lookfantastic.com/",
+  "http_status": 410,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.fr-ca.myprotein.com": {
+  "url": "https://horizon-api.fr-ca.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.us.lookfantastic.com": {
+  "url": "http://horizon-api.us.lookfantastic.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.eu.lookfantastic.com": {
+  "url": "https://horizon-api.eu.lookfantastic.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.si.myprotein.com": {
+  "url": "https://horizon-api.si.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.au.myprotein.com": {
+  "url": "https://horizon-api.au.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.kz.myprotein.com": {
+  "url": "https://horizon-api.kz.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.cultbeauty.co.uk": {
+  "url": "https://horizon-api.www.cultbeauty.co.uk/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.myvitamins.com": {
+  "url": "https://horizon-api.www.myvitamins.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "uat.de.myprotein.com": {
+  "url": "https://uat.de.myprotein.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.arrowfilms.com": {
+  "url": "https://horizon-api.www.arrowfilms.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.us.myprotein.com": {
+  "url": "https://horizon-api.us.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.no.lookfantastic.com": {
+  "url": "http://horizon-api.no.lookfantastic.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "preview.sgtm.cultbeauty.co.uk": {
+  "url": "https://preview.sgtm.cultbeauty.co.uk/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "uat.www.myprotein.com": {
+  "url": "https://uat.www.myprotein.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "uat.www.myvitamins.com": {
+  "url": "https://uat.www.myvitamins.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.nl.myprotein.com": {
+  "url": "https://horizon-api.nl.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.lookfantastic.com": {
+  "url": "https://horizon-api.www.lookfantastic.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.mankind.co.uk": {
+  "url": "https://horizon-api.www.mankind.co.uk/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.de.myprotein.com": {
+  "url": "https://horizon-api.de.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.www.myprotein.com": {
+  "url": "https://horizon-api.www.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.ca.myprotein.com": {
+  "url": "https://horizon-api.ca.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "altitude.kz.myprotein.com": {
+  "url": "http://altitude.kz.myprotein.com/",
+  "http_status": 500,
+  "title": "Fastly error: unknown domain altitude.kz.myprotein.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "m.lookfantastic.com": {
+  "url": "https://m.lookfantastic.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.lookfantastic.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.nz.myprotein.com": {
+  "url": "https://horizon-api.nz.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "m.hr.myprotein.com": {
+  "url": "https://m.hr.myprotein.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "horizon-api.fr.myprotein.com": {
+  "url": "https://horizon-api.fr.myprotein.com/",
+  "http_status": 200,
+  "title": "Horizon",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "checkout.il.myprotein.com": {
+  "url": "https://checkout.il.myprotein.com/",
+  "http_status": 200,
+  "title": "Checkout Web Application",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "sgtm.ca.myprotein.com": {
+  "url": "https://sgtm.ca.myprotein.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "msoid.cultbeauty.co.uk": {
+  "url": "http://msoid.cultbeauty.co.uk/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "m.no.lookfantastic.com": {
+  "url": "https://m.no.lookfantastic.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "altitude.de.myprotein.com": {
+  "url": "http://altitude.de.myprotein.com/",
+  "http_status": 500,
+  "title": "Fastly error: unknown domain altitude.de.myprotein.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "checkout.de.myprotein.com": {
+  "url": "https://checkout.de.myprotein.com/",
+  "http_status": 200,
+  "title": "Checkout Web Application",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "origin-www.lookfantastic.com": {
+  "url": "http://origin-www.lookfantastic.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "www.cultbeauty.co.uk": {
+  "url": "https://www.cultbeauty.co.uk/",
+  "http_status": 200,
+  "title": "CULT BEAUTY | Home of Beauty Discovery | Up to 30% Off Black Friday",
+  "redirect": "",
+  "scripts": [
+   "https://sgtm.cultbeauty.co.uk/gtm.js?id=GTM-NRN5KBMF",
+   "https://www.cultbeauty.co.uk/ssr-assets/page.B9z3XYQ5.js",
+   "https://www.cultbeauty.co.uk/ssr-assets/trackerv90.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "lookfantastic.com": {
+  "url": "https://www.lookfantastic.com/",
+  "http_status": 200,
+  "title": "LOOKFANTASTIC - Beauty, Fragrances, Skincare &amp; Haircare",
+  "redirect": "https://www.lookfantastic.com/",
+  "scripts": [
+   "https://sgtm.lookfantastic.com/gtm.js?id=GTM-NHWTTFSL",
+   "https://www.lookfantastic.com/ssr-assets/trackerv90.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "ca.myprotein.com": {
+  "url": "https://ca.myprotein.com/",
+  "http_status": 200,
+  "title": "Sports Nutrition | Whey Protein &amp; Supplements  |  Myprotein CA",
+  "redirect": "",
+  "scripts": [
+   "https://ca.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+   "https://sgtm.ca.myprotein.com/gtm.js?id=GTM-TLLKQLXB"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "checkout.us.myprotein.com": {
+  "url": "https://checkout.us.myprotein.com/",
+  "http_status": 200,
+  "title": "Checkout Web Application",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "www.myvitamins.com": {
+  "url": "https://www.myvitamins.com/",
+  "http_status": 200,
+  "title": "Myvitamins | Vitamins, Minerals &amp; Supplements",
+  "redirect": "",
+  "scripts": [
+   "https://sgtm.myvitamins.com/gtm.js?id=GTM-KHKKJW9G",
+   "https://www.myvitamins.com/ssr-assets/page.B9z3XYQ5.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "au.myprotein.com": {
+  "url": "https://au.myprotein.com/",
+  "http_status": 200,
+  "title": "Fuel Your Ambition with the No.1 Online Sports Nutrition Brand | Myprotein AU",
+  "redirect": "",
+  "scripts": [
+   "https://au.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+   "https://sgtm.au.myprotein.com/gtm.js?id=GTM-TLLKQLXB"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ },
+ "arrowfilms.com": {
+  "url": "https://www.arrowfilms.com/",
+  "http_status": 200,
+  "title": "Arrow Films UK - Cult, Classic &amp; Horror  Movies",
+  "redirect": "https://www.arrowfilms.com/",
+  "scripts": [
+   "https://www.arrowfilms.com/ssr-assets/tracker22.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 10:23:14 UTC"
+ }
+}
