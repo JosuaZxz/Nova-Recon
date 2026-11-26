@@ -4,20 +4,48 @@
   "sha256": "a1b3edb21949c77f051c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:47:55 UTC"
+  "updated": "2026-11-26 13:59:07 UTC"
  },
  "https://estagio.nubank.com.br/assets/vendor-BiIqkT7s.js": {
   "last_url": "https://estagio.nubank.com.br/assets/vendor-BiIqkT7s.js",
   "sha256": "890f36502f4d37bec374",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:47:56 UTC"
+  "updated": "2026-11-26 13:59:07 UTC"
  },
  "https://estagio.nubank.com.br/assets/antd-EdAfV7Ek.js": {
   "last_url": "https://estagio.nubank.com.br/assets/antd-EdAfV7Ek.js",
   "sha256": "11ef6615bd6370fad755",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:47:56 UTC"
+  "updated": "2026-11-26 13:59:07 UTC"
+ },
+ "https://lpenterprise.nubank.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js": {
+  "last_url": "https://lpenterprise.nubank.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
+  "sha256": "670ef6db4f8e2233eb56",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 13:59:01 UTC"
+ },
+ "https://lpenterprise.nubank.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js": {
+  "last_url": "https://lpenterprise.nubank.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js",
+  "sha256": "cb5224674e43d02db003",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 13:59:01 UTC"
+ },
+ "https://lpenterprise.nubank.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js": {
+  "last_url": "https://lpenterprise.nubank.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js",
+  "sha256": "8da927b6b1240ffca432",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 13:59:01 UTC"
+ },
+ "https://lpenterprise.nubank.com.br/hs/scriptloader/49129220.js": {
+  "last_url": "https://lpenterprise.nubank.com.br/hs/scriptloader/49129220.js?businessUnitId=0",
+  "sha256": "7d09f8e7ce361802c7f1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 13:59:01 UTC"
  }
 }

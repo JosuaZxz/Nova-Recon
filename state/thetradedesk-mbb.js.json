@@ -4,7 +4,7 @@
   "sha256": "4dd77525422a6d8361f4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:55:58 UTC"
+  "updated": "2026-11-26 14:17:24 UTC"
  },
  "https://packages-qa.thetradedesk.com/static/js/main.f81c63d3.chunk.js": {
   "last_url": "https://packages-qa.thetradedesk.com/static/js/main.f81c63d3.chunk.js",
@@ -13,13 +13,48 @@
   "graphql_ops": [
    "CampaignAndFlights"
   ],
-  "updated": "2026-11-24 23:55:58 UTC"
+  "updated": "2026-11-26 14:17:24 UTC"
  },
  "https://partnersandbox.thetradedesk.com/dist/v3/assets/index-HASH.js": {
   "last_url": "https://partnersandbox.thetradedesk.com/dist/v3/assets/index-96e60637.js",
   "sha256": "043d6a4da53da36b4b50",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:55:59 UTC"
+  "updated": "2026-11-26 14:17:25 UTC"
+ },
+ "https://help.thetradedesk.com/gen/js/translations_en_US.HASH.js": {
+  "last_url": "https://help.thetradedesk.com/gen/js/translations_en_US.096e9611.js",
+  "sha256": "485485f508cb5f541943",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 14:17:25 UTC"
+ },
+ "https://help.thetradedesk.com/gen/js/site-bundle.BMDfG1S1.js": {
+  "last_url": "https://help.thetradedesk.com/gen/js/site-bundle.BMDfG1S1.js",
+  "sha256": "cbb7c3220a35efb99eca",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 14:17:26 UTC"
+ },
+ "https://int-openpath.sb.thetradedesk.com/js/app.HASH.js": {
+  "last_url": "https://int-openpath.sb.thetradedesk.com/js/app.9e5198652346da45ccc5.js",
+  "sha256": "c25db89fd8e57b63e4e5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 14:17:26 UTC"
+ },
+ "https://partner.thetradedesk.com/dist/v3/assets/index-HASH.js": {
+  "last_url": "https://partner.thetradedesk.com/dist/v3/assets/index-96e60637.js",
+  "sha256": "043d6a4da53da36b4b50",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 14:17:25 UTC"
+ },
+ "https://pages.thetradedesk.com/js/forms2/js/forms2.min.js": {
+  "last_url": "https://pages.thetradedesk.com/js/forms2/js/forms2.min.js",
+  "sha256": "df3ac4f7dae275e266c4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 14:17:08 UTC"
  }
 }

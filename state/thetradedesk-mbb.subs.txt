@@ -3,6 +3,7 @@
 1912044.careeralerts.thetradedesk.com
 1b3f3b96.acme.adsrvr.org
 1p-scim.thetradedesk.com
+2.adsrvr.org
 21417c99.acme.adsrvr.org
 2e648466.acme.adsrvr.org
 2k.use.adsrvr.org
@@ -47,6 +48,7 @@ admin.html5.adsrvr.org
 admin.ie1-bid.adsrvr.org
 admin.insight.adsrvr.org
 admin.kubernetes.adsrvr.org
+admina.use.adsrvr.org
 adpilot.thetradedesk.com
 adremovea.adsrvr.org
 ads.adsrvr.org
@@ -71,6 +73,7 @@ alert-gateway-staging.adsrvr.org
 alert-gateway-staginga.adsrvr.org
 alert-gateway.adsrvr.org
 alert-gatewayg.dev.gen.adsrvr.org
+alert-gatewayw.gen.adsrvr.org
 alert-webhook-receiver.gen.adsrvr.org
 alertgateway-testinternalg.kubernetes.adsrvr.org
 alertgateway.adsrvr.org
@@ -87,6 +90,7 @@ alertmanager-chronosgress-testy.use.adsrvr.org
 alertmanager-ingress-test.adsrvr.org
 alertmanager-ingress-test.gen.adsrvr.org
 alertmanager-ingress-testy.adsrvr.org
+alertmanager-monitoringplatform.dev.gen.adsrvr.org
 alertmanager-monitoringplatform.gen.adsrvr.org
 alertmanager.adsrvr.org
 alertmanagers.gen.adsrvr.org
@@ -111,6 +115,8 @@ apac-data-adobeu.adsrvr.org
 apac-data-oracle.adsrvr.org
 apac-data.adsrvr.org
 apac-datam.adsrvr.org
+apam.insight.adsrvr.org
+apazmatch-azapi-ukp.s3cazmatchnternal.kubernetes.adsrvr.org
 apazmatch-eur1-ukp.s3cazmatchnternal.kubernetes.adsrvr.org
 api-book1-ukp.s3cinternal.kubernetes.adsrvr.org
 api-east.adsrvr.org
@@ -131,6 +137,7 @@ api.jpn-bid-engimaogleernal.kubernetes.adsrvr.org
 api.kubernetes.adsrvr.org
 api.s3cguac.kubernetes.adsrvr.org
 api.s3cinternal.tiktok.kubernetes.adsrvr.org
+api.s3cinternalsuinventory-servicely-int.kubernetes.adsrvr.org
 api.s3cinternalsupply-int.kubernetes.adsrvr.org
 api.s3jpinternalsupply-int.kubernetes.adsrvr.org
 api.thetradedesk.com
@@ -169,6 +176,7 @@ aps-dc-int.adsrvr.org
 aps-dc-intk.adsrvr.org
 aps-insight.adsrvr.org
 aps.insight.adsrvr.org
+apt-dc-int.adsrvr.org
 apt-dc-ints.adsrvr.org
 apt.artifacts.adsrvr.org
 apt.match.adsrvr.org
@@ -176,8 +184,10 @@ apt3.insight.adsrvr.org
 ar.ci1.adsrvr.org
 ar5.ci1.kubernetes.adsrvr.org
 archive-db-ext.adsrvr.org
+archive-db.adsrvr.org
 archive-dbi.adsrvr.org
 archive.adsrvr.org
+archiveu.adsrvr.org
 argocd-cor.prod.uidapi.com
 argocd-core.prod.uidapi.com
 argocd-core9.prod.uidapi.com
@@ -245,6 +255,7 @@ auth.gen.adsrvr.org
 auth.thetradedesk.com
 auth1.use.adsrvr.org
 author.thetradedesk.com
+authorization-extsbo.gen.adsrvr.org
 authorization.adsrvr.org
 authorizationm.test.gen.adsrvr.org
 authpolicies.adsrvr.org
@@ -267,6 +278,7 @@ aza.adsrvr.org
 azad.adsrvr.org
 azauth.adsrvr.org
 azauthsb.adsrvr.org
+azauthsb7.adsrvr.org
 azdesk-cdn.adsrvr.org
 azdesk-cdnu.adsrvr.org
 azdesk-internal.adsrvr.org
@@ -274,6 +286,7 @@ azdesk-internalc.adsrvr.org
 azdesk-origin.adsrvr.org
 azdesk.adsrvr.org
 azdeskpreview-internal.adsrvr.org
+azdeskpreview-internal9.adsrvr.org
 azdeskpreview.adsrvr.org
 azenduser.adsrvr.org
 azhtml5.adsrvr.org
@@ -289,6 +302,8 @@ azpartner3.adsrvr.org
 azpartnersb.adsrvr.org
 azredis.adsrvr.org
 azredism.adsrvr.org
+azs.adsrvr.org
+azure.adsrvr.org
 azure.azmatch.adsrvr.org
 azv.adsrvr.org
 azvbe.adsrvr.org
@@ -300,6 +315,7 @@ bamboo-2021.adsrvr.org
 bamboo-2021c.adsrvr.org
 bamboo-archive.adsrvr.org
 bamboo-db.adsrvr.org
+bamboo-dev.adsrvr.org
 bamboo-dev01.adsrvr.org
 bamboo-devc.or2-eks-p-01.gen.adsrvr.org
 bamboo-lst.adsrvr.org
@@ -318,6 +334,7 @@ bamboodb-lst.adsrvr.org
 bamboodev-lst.adsrvr.org
 bamboodevdb-int.adsrvr.org
 bamboodevdb-inte.adsrvr.org
+bamboolst.adsrvr.org
 bamboolstw.adsrvr.org
 bamboosync-lst.adsrvr.org
 bamboosync.adsrvr.org
@@ -328,12 +345,14 @@ bastion-int.adsrvr.org
 bastion.adsrvr.org
 bastionw.kubernetes.adsrvr.org
 bb-data.adsrvr.org
+bb-datas.adsrvr.org
 be.adsrvr.org
 beta.d2.adsrvr.org
 beta.eur-bid-hubvisor.adsrvr.org
 beta.jp1-bid.adsrvr.org
 betac.kubernetes.adsrvr.org
 betaq.use.adsrvr.org
+bid001e.sin.adsrvr.org
 bid001o.ukp.adsrvr.org
 blog.auth.thetradedesk.com
 blog.insight.adsrvr.org
@@ -351,6 +370,7 @@ buildeventlservicedb-intg.use-fservicedb-intuse-bid-epsilservicedb-intneman2euc-
 buildpkgs.adsrvr.org
 buildpkgsk.adsrvr.org
 bulk-data.adsrvr.org
+bulk-datay.adsrvr.org
 bulkcreativeupdate.thetradedesk.com
 bulkcreativeupdateq.thetradedesk.com
 bvad01.thetradedesk.com
@@ -370,6 +390,7 @@ ca2-s3c-001.adsrvr.org
 ca2-s3c-001m.adsrvr.org
 ca2-s3c-002.adsrvr.org
 ca2-whisp.adsrvr.org
+ca2-whispg.adsrvr.org
 ca2-wop-001.adsrvr.org
 ca2-wop-002.adsrvr.org
 ca2-wop-002c.adsrvr.org
@@ -380,6 +401,7 @@ ca2-wop-004c.adsrvr.org
 ca2-wsp-001.adsrvr.org
 ca2-wsp-002.adsrvr.org
 ca2-wsp-002c.adsrvr.org
+ca2-wsp-int.adsrvr.org
 ca2-wsp-intc.adsrvr.org
 ca4-bid-test.adsrvr.org
 ca4-bid-testb.adsrvr.org
@@ -387,6 +409,7 @@ ca4-bid.adsrvr.org
 ca4-bidi.adsrvr.org
 ca4-consul.adsrvr.org
 ca4-data-int.adsrvr.org
+ca4-data.adsrvr.org
 ca4-datae.adsrvr.org
 ca4-dc-int.adsrvr.org
 ca4-echo-002.adsrvr.org
@@ -432,6 +455,7 @@ chat.desk.thetradedesk.com
 chef-int.adsrvr.org
 chef-ints.adsrvr.org
 chefremove.adsrvr.org
+chem.adsrvr.org
 chem3.gen.adsrvr.org
 chemy.use.adsrvr.org
 ci.adsrvr.org
@@ -463,10 +487,12 @@ clio-events.gen.adsrvr.org
 clio.gen.adsrvr.org
 cloud-temporal.gen.adsrvr.org
 cloud.adsrvr.org
+cloud5.use.adsrvr.org
 cloudc.adsrvr.org
 cloudspin-db.adsrvr.org
 cloudspin-dbclone-live.adsrvr.org
 cloudspin-dbclone-livee.adsrvr.org
+cloudspin-dbclone.adsrvr.org
 cloudspin-dbclone2.adsrvr.org
 cloudspin-dbclone3.adsrvr.org
 cloudspin-dbclone3o.adsrvr.org
@@ -484,8 +510,10 @@ cn2-bido.adsrvr.org
 cn3-data.adsrvr.org
 cn3-data9.adsrvr.org
 cn4-data.adsrvr.org
+cn4-datau.adsrvr.org
 cn4-dc-int.adsrvr.org
 cn5-data.adsrvr.org
+cn5-data9.adsrvr.org
 cn5-dc-int.adsrvr.org
 cn6-datam.adsrvr.org
 cn7-data.adsrvr.org
@@ -495,6 +523,7 @@ cna.rtb.adsrvr.org
 cnaa.rtb.adsrvr.org
 cnao.data.adsrvr.org
 co.adsrvr.org
+co3.uk.kubernetes.adsrvr.org
 coc.uk.adsrvr.org
 coe.kr.adsrvr.org
 collate-description-guard.gen.adsrvr.org
@@ -514,9 +543,11 @@ context-secondary-int.adsrvr.org
 context.adsrvr.org
 contexte.adsrvr.org
 coree.use.adsrvr.org
+corp.adsrvr.org
 corp.kubernetes.adsrvr.org
 corp.thetradedesk.com
 corpg.thetradedesk.com
+corpy.use.adsrvr.org
 creativebulkupdate.thetradedesk.com
 creativebulkupdate7.thetradedesk.com
 crm-data-uk1.thetradedesk.com
@@ -535,10 +566,12 @@ d3.adsrvr.org
 d4.adsrvr.org
 dash-int.adsrvr.org
 dash-inta.adsrvr.org
+dash-new.adsrvr.org
 dash-test.adsrvr.org
 dash-tests.adsrvr.org
 dash.adsrvr.org
 data-ca2.adsrvr.org
+data-cn2.adsrvr.org
 data-ingestion-staging.adsrvr.org
 data-ingestion.adsrvr.org
 data-oracle.adsrvr.org
@@ -577,12 +610,14 @@ de1-s3c-002c.adsrvr.org
 de1-wsp-001q.adsrvr.org
 de1-wsp-002c.adsrvr.org
 de2-bid-test.adsrvr.org
+de2-bid-testcloudfronternal.kubernetes.adsrvr.org
 de2-bid-testinternal.kubernetes.adsrvr.org
 de2-bid-testinternaly.kubernetes.adsrvr.org
 de2-bid.adsrvr.org
 de2-bidb4.adsrvr.org
 de2-bidc.adsrvr.org
 de2-data-int.adsrvr.org
+de2-data.adsrvr.org
 de2-datae.adsrvr.org
 de2-dc-int.adsrvr.org
 de2-whisp-int.adsrvr.org
@@ -612,8 +647,10 @@ demo.thetradedesk.com
 demo2.thetradedesk.com
 demo27.thetradedesk.com
 democ.use.adsrvr.org
+demotest.adsrvr.org
 demotestc.adsrvr.org
 desdb-int.adsrvr.org
+desdb-into.adsrvr.org
 desdb.adsrvr.org
 desdb001-int.adsrvr.org
 desdb001.adsrvr.org
@@ -634,6 +671,7 @@ desksb-elastatui.thetradedesk.com
 desksb.thetradedesk.com
 desksb2.thetradedesk.com
 desksbbqq.thetradedesk.com
+dev-context.adsrvr.org
 dev-contextk.adsrvr.org
 dev-netbox.adsrvr.org
 dev-netbox.dev.gen.adsrvr.org
@@ -651,6 +689,7 @@ dev02.adsrvr.org
 dev02c.adsrvr.org
 dev1.kubernetes.adsrvr.org
 dev1q.kubernetes.adsrvr.org
+dev3.docker.adsrvr.org
 devbot-staging.adsrvr.org
 devbot.adsrvr.org
 devk.gen.adsrvr.org
@@ -672,6 +711,7 @@ dns.jp1-bid-ga.adsrvr.org
 dns1.azmatch.adsrvr.org
 dns1.html5.adsrvr.org
 dns2.ad.adsrvr.org
+dnshealthcheck.adsrvr.org
 docker-dev.artifacts.adsrvr.org
 docker-devg.artifacts.adsrvr.org
 docker-prod.artifacts.adsrvr.org
@@ -706,6 +746,7 @@ dwdb.adsrvr.org
 e.thetradedesk.com
 e0.thetradedesk.com
 eagleeye.adsrvr.org
+eagleeyea.adsrvr.org
 eagleeyee.dev.gen.adsrvr.org
 ecat.adsrvr.org
 echo.test.gen.adsrvr.org
@@ -761,6 +802,7 @@ eua3.insight.adsrvr.org
 euac.tags.adsrvr.org
 euc-data.adsrvr.org
 euc-datac.adsrvr.org
+eur-bid-admanmedia.adsrvr.org
 eur-bid-admanmediac.adsrvr.org
 eur-bid-adyoulikeq.adsrvr.org
 eur-bid-aerserv.adsrvr.org
@@ -783,6 +825,7 @@ eur-bid-hubvisore.adsrvr.org
 eur-bid-hubvisorz.adsrvr.org
 eur-bid-index-service.kubernetes.adsrvr.org
 eur-bid-openpath.adsrvr.org
+eur-bid-openx.adsrvr.org
 eur-bid-ozone.adsrvr.org
 eur-bid-pubmatic.adsrvr.org
 eur-bid-pubmaticforemanproxy1m.kubernetes.adsrvr.org
@@ -794,12 +837,15 @@ eur-bid-pubmaticprovsqlmgmt-bi-ext.kubernetes.adsrvr.org
 eur-bid-quantum.adsrvr.org
 eur-bid-quantum.kubernetes.adsrvr.org
 eur-bid-rakuten.adsrvr.org
+eur-bid-rakutenk.adsrvr.org
 eur-bid-richaudience.adsrvr.org
 eur-bid-richaudiencek.adsrvr.org
+eur-bid-rubicon.adsrvr.org
 eur-bid-rubiconu.adsrvr.org
 eur-bid-smaato.adsrvr.org
 eur-bid-smartadserver.adsrvr.org
 eur-bid-smartadserveri.adsrvr.org
+eur-bid-smartstream.adsrvr.org
 eur-bid-smartstreamw.adsrvr.org
 eur-bid-spotx.adsrvr.org
 eur-bid-taboola.adsrvr.org
@@ -823,6 +869,7 @@ euw-dc-int.adsrvr.org
 euw-dc-inti.adsrvr.org
 euw-opbid.adsrvr.org
 euw-tracking-test.adsrvr.org
+euw-tracking-testw.adsrvr.org
 euw-tracking.adsrvr.org
 euw-trk-test1.adsrvr.org
 euw.fb.adsrvr.org
@@ -874,15 +921,19 @@ foreman-alertmanager-monilstiningplatform.use.adsrvr.org
 foreman-alertmanager-monitoringasg2latform.use.adsrvr.org
 foreman-alertmanager-monitoringcloudspin-dbclone3atform.use.adsrvr.org
 foreman-alertmanager-monitoringplatform.use.adsrvr.org
+foreman-alertmanager-monitoringpuse-bid-adyouliketform.use.adsrvr.org
 foreman-alertmanager-moniva9-trackingingplatform.use.adsrvr.org
 foreman-prod.adsrvr.org
 foreman-staging.adsrvr.org
 foreman-stagingm.adsrvr.org
 foreman.adsrvr.org
 foreman.use.adsrvr.org
+foremane.use.adsrvr.org
+foremanm.de2.use.adsrvr.org
 foremanprgtmy1.kubernetes.adsrvr.org
 foremanproxy1a.kubernetes.adsrvr.org
 foremanproxydeals-api.kubernetes.adsrvr.org
+foremanw.adsrvr.org
 foremde1nproxydede1ls-de1pi1.kubernetes.adsrvr.org
 foremuserprofile-extsbnproxy1o.kubernetes.adsrvr.org
 forum.d2.adsrvr.org
@@ -904,6 +955,7 @@ gandalf.adsrvr.org
 gandalfo.adsrvr.org
 gateway-az-2u.gen.adsrvr.org
 gateway-az-3.gen.adsrvr.org
+gateway-az-3m.gen.adsrvr.org
 gateway-az-prod.gen.adsrvr.org
 gateway-az.gen.adsrvr.org
 gateway-azm.dev.gen.adsrvr.org
@@ -927,12 +979,15 @@ gems.artifacts.adsrvr.org
 gen.adsrvr.org
 gen.kubernetes.adsrvr.org
 gen.use.adsrvr.org
+gen1.gen.adsrvr.org
 gen3.ops.adsrvr.org
 geng.prod.adsrvr.org
+geo-ng-apii.test.gen.adsrvr.org
 geo-ng-deg.test.gen.adsrvr.org
 geo-ng-webi.test.gen.adsrvr.org
 geodb.adsrvr.org
 geodb9.adsrvr.org
+geodbdev.adsrvr.org
 geodbdevm.adsrvr.org
 get.adsrvr.org
 gforcemarketing.thetradedesk.com
@@ -991,6 +1046,7 @@ hk-bid-theapplovinexchange.adsrvr.org
 hk-bid-theapplovinexchangei.adsrvr.org
 hk.thetradedesk.com
 hk2-phoenix.adsrvr.org
+hk3-bid-gtm.adsrvr.org
 hk3-bid-new.adsrvr.org
 hk3-bid-newc.adsrvr.org
 hk3-bid-old.adsrvr.org
@@ -999,13 +1055,18 @@ hk3-bid.adsrvr.org
 hk3-bidav.adsrvr.org
 hk3-bidw.adsrvr.org
 hk3-data.adsrvr.org
+hk3-dc-int.adsrvr.org
 hk3-echo-001.adsrvr.org
 hk3-echo-002.adsrvr.org
 hk3-echo-003.adsrvr.org
 hk3-s3c-001.adsrvr.org
+hk3-s3c-001k.adsrvr.org
+hk3-s3c-002.adsrvr.org
 hk3-whisp-int.adsrvr.org
 hk3-wsp-001.adsrvr.org
+hk3-wsp-001g.adsrvr.org
 hk3-wsp-002.adsrvr.org
+hk3-wsp2.adsrvr.org
 hka.thetradedesk.com
 hkad01.thetradedesk.com
 hkas.thetradedesk.com
@@ -1021,6 +1082,7 @@ hub.azv.adsrvr.org
 hub.eur-bid-hubvisor.adsrvr.org
 idp.adsrvr.org
 ie1-bid-ga.adsrvr.org
+ie1-bid-test.adsrvr.org
 ie1-bid.adsrvr.org
 ie1-openads-53319.gen.adsrvr.org
 ie1-openads.adsrvr.org
@@ -1030,10 +1092,12 @@ ie1.acme.adsrvr.org
 imap.cdn.thetradedesk.com
 imap.thetradedesk.com
 img.direct.adsrvr.org
+import.adsrvr.org
 incubator.thetradedesk.com
 info.thetradedesk.com
 info5.thetradedesk.com
 infradesc.gen.adsrvr.org
+infraplatform.adsrvr.org
 insight.adsrvr.org
 insight3.adsrvr.org
 instance-manager.gen.adsrvr.org
@@ -1060,6 +1124,7 @@ jenkins.js.adsrvr.org
 jira-dev.thetradedesk.com
 jira-sync.gen.adsrvr.org
 jira-test.adsrvr.org
+jira-testa.adsrvr.org
 jira.adsrvr.org
 jiraazure.thetradedesk.com
 jobalerts.thetradedesk.com
@@ -1173,6 +1238,7 @@ mx.jp1-bid.adsrvr.org
 my.azenduser.adsrvr.org
 my.azinsight.adsrvr.org
 my.cdn.thetradedesk.com
+naeast-match-azure.adsrvr.org
 nai.thetradedesk.com
 net-aegis-int.gen.adsrvr.org
 net-aegis.gen.adsrvr.org
@@ -1358,6 +1424,7 @@ sb.adsrvr.org
 sb.thetradedesk.com
 sbintdb.adsrvr.org
 secureflag.adsrvr.org
+secureflagw.adsrvr.org
 service-desk-mcp.gen.adsrvr.org
 service-now-mcp.gen.adsrvr.org
 servicedb-int.adsrvr.org
@@ -1441,6 +1508,7 @@ tableauapps.thetradedesk.com
 tags.adsrvr.org
 tailscale-webhooks.gen.adsrvr.org
 targeting-lst.adsrvr.org
+tddb-int.adsrvr.org
 tdid.adsrvr.org
 telemetry-ingest.gen.adsrvr.org
 terraform.pkgs.adsrvr.org
@@ -1462,6 +1530,7 @@ tester.adsrvr.org
 thales.adsrvr.org
 the4638-exp-e1.jabber.thetradedesk.com
 theparkinglot.adsrvr.org
+theparkinglotdb.adsrvr.org
 thetradedesk.com
 thoth.gen.adsrvr.org
 three-in-thirty.thetradedesk.com
@@ -1493,6 +1562,7 @@ u.update.adsrvr.org
 ui013.thetradedesk.com
 uk.adsrvr.org
 uk.kubernetes.adsrvr.org
+ukp.adsrvr.org
 update.adsrvr.org
 upload.eur-bid-openpath.adsrvr.org
 url4617.thetradedesk.com
@@ -1667,6 +1737,7 @@ www.ad.adsrvr.org
 www.adsrvr.org
 www.apac-bid-openpath.adsrvr.org
 www.api-gateway.sb.thetradedesk.com
+www.api.int.datapipe.adsrvr.org
 www.api.thetradedesk.com
 www.apisb.thetradedesk.com
 www.apt.artifacts.adsrvr.org
@@ -1710,6 +1781,7 @@ www.creativebulkupdate.thetradedesk.com
 www.crm-data-uk1.thetradedesk.com
 www.crm-data-vah.thetradedesk.com
 www.crm-data.thetradedesk.com
+www.data.adsrvr.org
 www.dco-ads.adsrvr.org
 www.de.thetradedesk.com
 www.de1-bid.adsrvr.org
@@ -1737,6 +1809,7 @@ www.engineering-competency-assessment-tool.adsrvr.org
 www.eur-bid-hubvisor.adsrvr.org
 www.eur-ukp.adsrvr.org
 www.euwdirect.adsrvr.org
+www.fb.adsrvr.org
 www.fleet.thetradedesk.com
 www.gateway-az-3.gen.adsrvr.org
 www.gateway.gen.adsrvr.org
@@ -1744,6 +1817,7 @@ www.gems.artifacts.adsrvr.org
 www.gen.adsrvr.org
 www.gitlab-dev-pages.adsrvr.org
 www.gitlab-pages.adsrvr.org
+www.gitlab.adsrvr.org
 www.global.prod.uidapi.com
 www.global.thetradedesk.com
 www.goodwaygroup.thetradedesk.com
@@ -1751,6 +1825,7 @@ www.guac.adsrvr.org
 www.harbor.thetradedesk.com
 www.helm.artifacts.adsrvr.org
 www.hkad01.thetradedesk.com
+www.html5.adsrvr.org
 www.http2.cdn.thetradedesk.com
 www.info.thetradedesk.com
 www.insight.adsrvr.org
@@ -1772,6 +1847,7 @@ www.maven.artifacts.adsrvr.org
 www.maven.buildpkgs.adsrvr.org
 www.mazda-dashboard.thetradedesk.com
 www.nex.adsrvr.org
+www.nexus.adsrvr.org
 www.npm.artifacts.adsrvr.org
 www.nps1.thetradedesk.com
 www.nps2.thetradedesk.com
@@ -1798,6 +1874,7 @@ www.preview-desk.thetradedesk.com
 www.preview-desksb.thetradedesk.com
 www.prod.docker.adsrvr.org
 www.prod.uidapi.com
+www.production-lts.docker.adsrvr.org
 www.production.docker.adsrvr.org
 www.proxy.docker.adsrvr.org
 www.pypi.artifacts.adsrvr.org
@@ -1824,6 +1901,7 @@ www.update.adsrvr.org
 www.use-tor.adsrvr.org
 www.use2.prod.uidapi.com
 www.usw-ca2.adsrvr.org
+www.usw-lax.adsrvr.org
 www.usw.prod.uidapi.com
 www.uswdirect.adsrvr.org
 www.uswfb.adsrvr.org

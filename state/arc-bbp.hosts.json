@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.quicknode.testnet.arc.io": {
   "url": "https://rpc.quicknode.testnet.arc.io/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "staging.arc.io": {
   "url": "https://staging.arc.io/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.testnet.arc.io": {
   "url": "https://rpc.testnet.arc.io/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.blockdaemon.testnet.arc.io": {
   "url": "https://rpc.blockdaemon.testnet.arc.io/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.quicknode.mainnet.arc.io": {
   "url": "https://rpc.quicknode.mainnet.arc.io/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "agentvm.arc.io": {
   "url": "https://agentvm.arc.io/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.mainnet.arc.io": {
   "url": "https://rpc.mainnet.arc.io/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "studio.arc.io": {
   "url": "https://studio.arc.io/",
@@ -119,7 +119,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "rpc.blockdaemon.mainnet.arc.io": {
   "url": "https://rpc.blockdaemon.mainnet.arc.io/",
@@ -129,7 +129,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "docs.arc.io": {
   "url": "https://docs.arc.io/",
@@ -139,7 +139,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "status.arc.io": {
   "url": "https://status.arc.io/",
@@ -149,7 +149,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "www.arc.io": {
   "url": "https://www.arc.io/",
@@ -159,7 +159,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "arc.io": {
   "url": "https://www.arc.io/",
@@ -169,7 +169,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  },
  "explorer.testnet.arc.io": {
   "url": "https://explorer.testnet.arc.io/",
@@ -210,6 +210,6 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:57:31 UTC"
+  "last_checked": "2026-11-26 14:19:09 UTC"
  }
 }
