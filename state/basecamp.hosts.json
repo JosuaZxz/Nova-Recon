@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "public.hey.com": {
   "url": "https://public.hey.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "usercontent.hey.com": {
   "url": "https://usercontent.hey.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "storage.hey.com": {
   "url": "https://storage.hey.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "hey.com": {
   "url": "https://www.hey.com/",
@@ -51,7 +51,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "mta-sts.hey.com": {
   "url": "https://mta-sts.hey.com/",
@@ -61,7 +61,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
  },
  "app.hey.com": {
   "url": "https://app.hey.com/sign_in",
@@ -71,6 +71,51 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 12:41:22 UTC"
+  "last_checked": "2026-11-26 03:19:39 UTC"
+ },
+ "api.hey.com": {
+  "url": "https://api.hey.com/",
+  "http_status": 404,
+  "title": "The page you were looking for doesn't exist (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:19:39 UTC"
+ },
+ "help.hey.com": {
+  "url": "https://help.hey.com/",
+  "http_status": 200,
+  "title": "HEY",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 03:19:39 UTC"
+ },
+ "world.hey.com": {
+  "url": "https://world.hey.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://www.hey.com/js/script.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 03:19:39 UTC"
+ },
+ "www.hey.com": {
+  "url": "https://www.hey.com/",
+  "http_status": 200,
+  "title": "HEY — A delightfully fresh take on email + calendar, from 37signals",
+  "redirect": "",
+  "scripts": [
+   "https://www.hey.com/assets/js/script.js?v=1.1.13",
+   "https://www.hey.com/js/script.outbound-links.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-26 03:19:39 UTC"
  }
 }

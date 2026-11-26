@@ -90,7 +90,7 @@
   "sha256": "6c5acbb82a46a4971660",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:23:07 UTC"
+  "updated": "2026-11-26 03:09:54 UTC"
  },
  "https://oauth.wallet.etoro.com/main.HASH.js": {
   "last_url": "https://oauth.wallet.etoro.com/main.b0e8b9760f8d5ee7e4a3.js",
@@ -99,7 +99,7 @@
    "/api/v1"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 01:23:07 UTC"
+  "updated": "2026-11-26 03:09:55 UTC"
  },
  "https://userstatsapi.etoro.com/Scripts/Word.js": {
   "last_url": "https://userstatsapi.etoro.com/Scripts/Word.js",
@@ -149,5 +149,203 @@
   "routes": [],
   "graphql_ops": [],
   "updated": "2026-11-24 12:33:45 UTC"
+ },
+ "https://por.etoro.com/chunk-AVJQPSXF.js": {
+  "last_url": "https://por.etoro.com/chunk-AVJQPSXF.js",
+  "sha256": "bb8df1c536876353973f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:35 UTC"
+ },
+ "https://por.etoro.com/chunk-EVBZJL4M.js": {
+  "last_url": "https://por.etoro.com/chunk-EVBZJL4M.js",
+  "sha256": "4f3f45d93f73534fa014",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:36 UTC"
+ },
+ "https://por.etoro.com/chunk-FJE3VJJW.js": {
+  "last_url": "https://por.etoro.com/chunk-FJE3VJJW.js",
+  "sha256": "0d6f8fa8d8d717bd842a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:36 UTC"
+ },
+ "https://por.etoro.com/chunk-JD2CSVPC.js": {
+  "last_url": "https://por.etoro.com/chunk-JD2CSVPC.js",
+  "sha256": "ebd0029a5558d19a9ba6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:36 UTC"
+ },
+ "https://por.etoro.com/main-MEAMHKX3.js": {
+  "last_url": "https://por.etoro.com/main-MEAMHKX3.js",
+  "sha256": "e6ca94b9d4d2c819c41d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:37 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0pv7hav7f_top.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0pv7hav7f_top.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "d9c0485180af910fe3bc",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0km4qya-osqkm.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0km4qya-osqkm.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "1ef355e73a970747f180",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0kcrujj3-sl3b.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0kcrujj3-sl3b.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "c2b353e624557198fe20",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/3mjb1y1k74xc-.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/3mjb1y1k74xc-.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "68f0c23fb3dc90f398e6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/34sg8bq-t06-u.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/34sg8bq-t06-u.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "ef1ffe6223f8139d524a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0vw7dg2a9kxgd.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0vw7dg2a9kxgd.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "95ab03c22618cb40d82a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/1zs6xo_cj66r2.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/1zs6xo_cj66r2.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "48937387b46ec691ec13",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/turbopack-0v_7va4h51f4o.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/turbopack-0v_7va4h51f4o.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "560f1aa003ae5d909933",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/43qcoi77z0jtz.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/43qcoi77z0jtz.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "eb02ae61d192426a3d14",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/3m4eat-lezlzs.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/3m4eat-lezlzs.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "9b8280af202b7997a0f1",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0byvxxms-tqoj.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0byvxxms-tqoj.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "e0f681f689798faf6011",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/146vf6rwdocar.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/146vf6rwdocar.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "ce6a4de92eb361da3a77",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0-c9dd8jubaro.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0-c9dd8jubaro.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "d254cb182aa3537eadc7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:38 UTC"
+ },
+ "https://goodwallet.etoro.com/_next/static/chunks/0cz1d0mv5g_q7.js": {
+  "last_url": "https://goodwallet.etoro.com/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=dpl_5CBLNEQZ74aNRF29eM6jA11xPGEh",
+  "sha256": "0973c1d64c88adc8e3c9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/0-4oo_oi06i0r.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/0-4oo_oi06i0r.js",
+  "sha256": "45a710b07607043bf695",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/012wpgz2us8mc.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/012wpgz2us8mc.js",
+  "sha256": "c2364a0623dbe833360d",
+  "routes": [
+   "/api/visits"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/03~yq9q893hmn.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/03~yq9q893hmn.js",
+  "sha256": "0973c1d64c88adc8e3c9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/043jqkfj~0mzs.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/043jqkfj~0mzs.js",
+  "sha256": "e80a40c5a0a57e2767cb",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/0d3shmwh5_nmn.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/0d3shmwh5_nmn.js",
+  "sha256": "a3ac200f3ab8bfa57cf7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/0m_p1bxtorv5i.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/0m_p1bxtorv5i.js",
+  "sha256": "204f4020f37e64c94f21",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/0n1bpogj.il~n.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/0n1bpogj.il~n.js",
+  "sha256": "e6bd4389e6acbfd8b084",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/0pqt~8bl3ukh4.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/0pqt~8bl3ukh4.js",
+  "sha256": "5261101892e2476e4346",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
+ },
+ "https://start.etoro.com/_next/static/chunks/turbopack-0.ylwx.8ztkb2.js": {
+  "last_url": "https://start.etoro.com/_next/static/chunks/turbopack-0.ylwx.8ztkb2.js",
+  "sha256": "2283a7a643b243879018",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:09:39 UTC"
  }
 }

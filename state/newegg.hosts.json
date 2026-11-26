@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "kbtest.newegg.com": {
   "url": "https://kbtest.newegg.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11wwwtestp.newegg.ca": {
   "url": "https://e11wwwtestp.newegg.ca/",
@@ -28,27 +28,27 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11wwwtest.newegg.ca": {
   "url": "https://e11wwwtest.newegg.ca/",
-  "http_status": 400,
-  "title": "Forbidden: 403 Error",
+  "http_status": 403,
+  "title": "Access Denied",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11stgtest-secure.newegg.ca": {
   "url": "https://e11stgtest-secure.newegg.ca/",
-  "http_status": 400,
-  "title": "Forbidden: 403 Error",
+  "http_status": 403,
+  "title": "Access Denied",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "pmtcardstestp.newegg.com": {
   "url": "https://pmtcardstestp.newegg.com/",
@@ -58,27 +58,27 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11sellerportaltest.newegg.com": {
   "url": "https://e11sellerportaltest.newegg.com/",
-  "http_status": 400,
-  "title": "Forbidden: 403 Error",
+  "http_status": 200,
+  "title": "Computer Parts, PC Components, Laptop Computers, LED LCD TV, Digital Cameras and more - Newegg.com",
   "redirect": "",
   "scripts": [],
-  "catchall": false,
+  "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "sellerportal.newegg.com": {
   "url": "https://sellerportal.newegg.com/v3",
-  "http_status": 302,
-  "title": "302 Found",
-  "redirect": "https://partner.newegg.com/euf/sellerportal/sign-in?returnUrl=https%3A%2F%2Fsellerportal.newegg.com%2Fv3",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "https://sellerportal.newegg.com/v3",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "metrics-staging.newegg.com": {
   "url": "https://metrics-staging.newegg.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "corporate.newegg.com": {
   "url": "https://corporate.newegg.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "developer.newegg.com": {
   "url": "https://developer.newegg.com/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11stgtest-image.newegg.com": {
   "url": "https://e11stgtest-image.newegg.com/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11stgtest.newegg.ca": {
   "url": "https://e11stgtest.newegg.ca/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "e11stgtest.newegg.com": {
   "url": "https://e11stgtest.newegg.com/",
@@ -138,7 +138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
  },
  "partner.newegg.com": {
   "url": "https://partner.newegg.com/",
@@ -152,8 +152,58 @@
    "https://partner.newegg.com/resources/js/vue.js",
    "https://partner.newegg.com/resources/neplatform.js?neweggStyle=true&noTheme=true"
   ],
-  "catchall": true,
+  "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:34:40 UTC"
+  "last_checked": "2026-11-26 03:12:04 UTC"
+ },
+ "e11wwwtest.newegg.com": {
+  "url": "https://e11wwwtest.newegg.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.newegg.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:12:04 UTC"
+ },
+ "metrics1-staging.newegg.com": {
+  "url": "https://metrics1-staging.newegg.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:12:04 UTC"
+ },
+ "e11ssltestp.newegg.com": {
+  "url": "https://e11ssltestp.newegg.com/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:12:04 UTC"
+ },
+ "stagingapis.newegg.com": {
+  "url": "https://stagingapis.newegg.com/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:12:04 UTC"
+ },
+ "e11sellerimagestest.newegg.com": {
+  "url": "https://e11sellerimagestest.newegg.com/",
+  "http_status": 400,
+  "title": "Forbidden: 403 Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:12:04 UTC"
  }
 }

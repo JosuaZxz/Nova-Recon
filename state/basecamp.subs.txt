@@ -75,6 +75,7 @@
 102b.world.hey.com
 102b5.world.hey.com
 102b9.hosted.hey.com
+102bi.forward.hey.com
 102c.relay.hey.com
 102d.relay.hey.com
 102e.hosted.hey.com
@@ -97,6 +98,7 @@
 228.hey.com
 229.hey.com
 231.hey.com
+232.hey.com
 233.hey.com
 234.hey.com
 236.hey.com
@@ -106,6 +108,7 @@
 33.hey.com
 3comdr.hey.nono.hey.com
 4.hey.com
+52.hey.com
 5532.hey.com
 57-180-213-3.host.hey.com
 5zpcsa.hey.com
@@ -121,15 +124,20 @@ ad.hey.com
 adc.hey.com
 admin.hey.com
 ads.hey.com
+adx.hey.com
 amer.hey.com
 ams.hey.com
 aol.hey.com
 ap.hey.com
+api-gateway.ls.hey.com
 api.api.api.hey.com
+api.api.hey.com
+api.hey.com
 apis.hey.com
 app.hey.com
 app.staging.hey.com
 apply.hey.com
+apps.hey.com
 ar.hey.com
 artifactory.hey.com
 assets.app.hey.com
@@ -172,6 +180,7 @@ build.hey.com
 business.hey.com
 businessc.hey.com
 c.hey.com
+ca.hey.com
 cable.hey.com
 campaign.hey.com
 campaigni.hey.com
@@ -183,12 +192,14 @@ cdn-broker-test.hey.com
 cdn.hey.com
 central.central.hey.com
 central.hey.com
+cf.hey.com
 chat.hey.com
 chi.hey.com
 ci1.hey.com
 client.hey.com
 clops.hey.com
 cloud.hey.com
+cluster.hey.com
 cmhqa1q.k8s.hey.com
 cmhqa2q.k8s.hey.com
 cmhqa3q.k8s.hey.com
@@ -227,6 +238,7 @@ developer.hey.com
 digitalpublishing.hey.com
 dir.hey.com
 dl.hey.com
+dns.hey.com
 dnsecho.hey.com
 do.hey.com
 docs.hey.com
@@ -236,6 +248,7 @@ dsa.hey.com
 dsl.hey.com
 dv.hey.com
 dyn.hey.com
+e.hey.com
 edr.hey.com
 ehost.hey.com
 em.hey.com
@@ -268,6 +281,7 @@ forward.hey.com
 fr.hey.com
 fra.hey.com
 frontend-qa.hey.com
+frontend-qas.hey.com
 fs.hey.com
 ftl.hey.com
 ftl.prod.ftl.hey.com
@@ -292,6 +306,7 @@ h.hey.com
 h1.hey.com
 happydays-clubmed.be.hey.com
 he.hey.com
+hello.hey.com
 help.hey.com
 hey.com
 hey.nono.hey.com
@@ -319,6 +334,7 @@ int.staging.hey.com
 internal.hey.com
 is.hey.com
 jordancran.hey.com
+jordancran9.hey.com
 k8s.hey.com
 lab.hey.com
 learn.hey.com
@@ -356,15 +372,18 @@ on.hey.com
 online.hey.com
 oob.hey.com
 op-mobile.hey.com
+opadev.hey.com
 ops.hey.com
 ord.hey.com
 origin.hey.com
+osp.hey.com
 ox6-test.hey.com
 pad.hey.com
 pan.hey.com
 partner.hey.com
 pbis-cf.hey.com
 pbis.hey.com
+pdc.hey.com
 phx.hey.com
 pic.hey.com
 pizza.hey.com
@@ -390,12 +409,14 @@ ra.hey.com
 rch.hey.com
 relay.hey.com
 renxt.hey.com
+rev.hey.com
 ros.hey.com
 rtp.hey.com
 rtpnc.hey.com
 rw-ash.hey.com
 s.hey.com
 s06.hey.com
+s3.hey.com
 safeframe.hey.com
 sales.hey.com
 sandbox.hey.com
@@ -414,6 +435,7 @@ sportsbook.hey.com
 sre.hey.com
 srv.hey.com
 ssb-dev.hey.com
+sso.hey.com
 stag.hey.com
 stage.hey.com
 staging.hey.com
@@ -457,6 +479,7 @@ whm.hey.com
 work-mx-anycast.app.hey.com
 work-mx.app.hey.com
 work-mx.hey.com
+work-mx9.app.hey.com
 work.mx-app.hey.com
 world.hey.com
 ww.hey.com
@@ -466,6 +489,8 @@ www.01a.relay.hey.com
 www.01a.trial.hey.com
 www.01a.world.hey.com
 www.01b.forward.hey.com
+www.01b.hosted.hey.com
+www.01b.relay.hey.com
 www.01b.trial.hey.com
 www.01b.world.hey.com
 www.01c.relay.hey.com
@@ -484,12 +509,15 @@ www.02c.relay.hey.com
 www.02d.relay.hey.com
 www.101a.forward.hey.com
 www.101a.hosted.hey.com
+www.101a.relay.hey.com
 www.101a.trial.hey.com
+www.101a.world.hey.com
 www.101b.forward.hey.com
 www.101b.hosted.hey.com
 www.101b.relay.hey.com
 www.101b.trial.hey.com
 www.101b.world.hey.com
+www.101c.relay.hey.com
 www.101c.trial.hey.com
 www.101d.relay.hey.com
 www.101d.trial.hey.com
@@ -510,6 +538,7 @@ www.app.hey.com
 www.forward.hey.com
 www.gopher.hey.com
 www.happydays-clubmed.be.hey.com
+www.help.hey.com
 www.hey.com
 www.home-mx.app.hey.com
 www.host.hey.com
@@ -528,4 +557,5 @@ www.work-mx.app.hey.com
 www.world.hey.com
 www.zatopek52.hey.com
 wwwk.zatopek52.hey.com
+wx.hey.com
 zatopek52.hey.com

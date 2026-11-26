@@ -4,7 +4,7 @@
   "sha256": "ddbcbbe83d96d41b1039",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 12:41:22 UTC"
+  "updated": "2026-11-26 03:19:39 UTC"
  },
  "https://www.hey.com/js/script.outbound-links.js": {
   "last_url": "https://www.hey.com/js/script.outbound-links.js",
@@ -13,6 +13,15 @@
    "/api/event"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 12:41:22 UTC"
+  "updated": "2026-11-26 03:19:39 UTC"
+ },
+ "https://www.hey.com/js/script.js": {
+  "last_url": "https://www.hey.com/js/script.js",
+  "sha256": "5a861fb6b5713ec9bed6",
+  "routes": [
+   "/api/event"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-26 03:19:39 UTC"
  }
 }

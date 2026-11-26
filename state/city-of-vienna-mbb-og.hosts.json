@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-abn-tekton-trigger.abn.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-abn-tekton-trigger.abn.cms-wien.magwien.gv.at/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "partnerschaft.wien.at": {
   "url": "https://partnerschaft.wien.at/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "wienkiauth.intern.wien.gv.at": {
   "url": "https://wienkiauth.intern.wien.gv.at/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "brigittenau.wien.at": {
   "url": "https://brigittenau.wien.at/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-prod-online-tekton-trigger.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-prod-online-tekton-trigger.cms-wien.magwien.gv.at/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "patientenportal.akhwien.at": {
   "url": "https://patientenportal.akhwien.at/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "viktorchristgasse.schule.wien.at": {
   "url": "https://viktorchristgasse.schule.wien.at/",
@@ -76,14 +76,14 @@
   "title": "Startseite - Mittelschule Viktor-Christ-Gasse - 905032",
   "redirect": "",
   "scripts": [
-   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441658392&/o/frontend-js-aui-web/aui/aui/aui.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex.js&/o/frontend-js-aui-web/aui/oop/oop.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/frontend-js-web/loader/config.js&/o/frontend-js-web/loader/loader.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js",
-   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441666982&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
+   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794358853691&/o/frontend-js-aui-web/aui/aui/aui.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex.js&/o/frontend-js-aui-web/aui/oop/oop.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/frontend-js-web/loader/config.js&/o/frontend-js-web/loader/loader.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js",
+   "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794358862949&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
    "https://viktorchristgasse.schule.wien.at/o/frontend-js-svg4everybody-web/index.js",
    "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.brigittenau.wien.gv.at": {
   "url": "https://www.brigittenau.wien.gv.at/",
@@ -93,7 +93,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "meet-t.uctest.wien.gv.at": {
   "url": "https://meet-t.uctest.wien.gv.at/",
@@ -108,7 +108,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "vpn.wgm.wien.at": {
   "url": "https://vpn.wgm.wien.at/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "nachhaltigkeitspreis.wien.gv.at": {
   "url": "https://nachhaltigkeitspreis.wien.gv.at/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.krisenmanagement.wien.at": {
   "url": "https://www.krisenmanagement.wien.at/",
@@ -138,7 +138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev14-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev14-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-prod2-tekton-trigger.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-prod2-tekton-trigger.cms-wien.magwien.gv.at/",
@@ -158,7 +158,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "partnerschaft.wien.gv.at": {
   "url": "https://partnerschaft.wien.gv.at/",
@@ -168,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "meinchatgptdev.wien.gv.at": {
   "url": "https://meinchatgptdev.wien.gv.at/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.krisenmanagement.wien.gv.at": {
   "url": "https://www.krisenmanagement.wien.gv.at/",
@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev1-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev1-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -198,7 +198,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "digital.wien.at": {
   "url": "https://digital.wien.at/",
@@ -208,7 +208,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.geoportal.wien.at": {
   "url": "https://www.geoportal.wien.at/",
@@ -218,7 +218,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev-online-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev-online-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -228,7 +228,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "krisenmanagement.wien.gv.at": {
   "url": "https://krisenmanagement.wien.gv.at/",
@@ -238,7 +238,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.partnerschaft.wien.at": {
   "url": "https://www.partnerschaft.wien.at/",
@@ -248,7 +248,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.digitales.wien.at": {
   "url": "https://www.digitales.wien.at/",
@@ -258,7 +258,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.digitales.wien.gv.at": {
   "url": "https://digitales.wien.gv.at/",
@@ -268,7 +268,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "hyzdok.dev.magwien.gv.at": {
   "url": "https://hyzdok.dev.magwien.gv.at/",
@@ -278,7 +278,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "vapi-preprod.intern.wien.gv.at": {
   "url": "http://vapi-preprod.intern.wien.gv.at/",
@@ -288,7 +288,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.nachhaltigkeitspreis.wien.gv.at": {
   "url": "https://www.nachhaltigkeitspreis.wien.gv.at/",
@@ -298,7 +298,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.digital.wien.at": {
   "url": "https://www.digital.wien.at/",
@@ -308,7 +308,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "geoportal.wien.at": {
   "url": "https://geoportal.wien.at/",
@@ -318,7 +318,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev10-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev10-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -328,7 +328,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "digital.wien.gv.at": {
   "url": "https://digital.wien.gv.at/",
@@ -338,7 +338,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "vapi.wien.at": {
   "url": "https://vapi.wien.at/",
@@ -348,7 +348,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "therapiezentrum-ybbs.gesundheitsverbund.at": {
   "url": "https://therapiezentrum-ybbs.gesundheitsverbund.at/",
@@ -358,7 +358,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev4-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev4-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -368,7 +368,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "geoportal.wien.gv.at": {
   "url": "https://geoportal.wien.gv.at/",
@@ -378,7 +378,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "therapie-zentrumybbs.gesundheitsverbund.at": {
   "url": "https://therapie-zentrumybbs.gesundheitsverbund.at/",
@@ -388,7 +388,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.smartdata.wien.gv.at": {
   "url": "https://www.smartdata.wien.gv.at/",
@@ -398,7 +398,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "www.nachhaltigkeitspreis.wien.at": {
   "url": "https://www.nachhaltigkeitspreis.wien.at/",
@@ -408,7 +408,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "nachhaltigkeitspreis.wien.at": {
   "url": "https://nachhaltigkeitspreis.wien.at/",
@@ -418,7 +418,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "smartdata.wien.gv.at": {
   "url": "https://smartdata.wien.gv.at/",
@@ -428,7 +428,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "krisenmanagement.wien.at": {
   "url": "https://krisenmanagement.wien.at/",
@@ -438,7 +438,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "stadtservicebotadmin.wien.gv.at": {
   "url": "https://stadtservicebotadmin.wien.gv.at/admin/ui/",
@@ -448,7 +448,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev9-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev9-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -458,7 +458,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "wibi.test.magwien.gv.at": {
   "url": "https://wibi.test.magwien.gv.at/",
@@ -473,7 +473,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-qs-tekton-trigger.qs.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-qs-tekton-trigger.qs.cms-wien.magwien.gv.at/",
@@ -483,7 +483,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-dev5-tekton-trigger.dev.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-dev5-tekton-trigger.dev.cms-wien.magwien.gv.at/",
@@ -493,7 +493,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "therapie-zentrum-ybbs.gesundheitsverbund.at": {
   "url": "https://therapie-zentrum-ybbs.gesundheitsverbund.at/",
@@ -503,7 +503,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "wienki-auth.intern.wien.gv.at": {
   "url": "https://wienki-auth.intern.wien.gv.at/",
@@ -513,7 +513,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "crgbs3-prod-standby-tekton-trigger.cms-wien.magwien.gv.at": {
   "url": "https://crgbs3-prod-standby-tekton-trigger.cms-wien.magwien.gv.at/",
@@ -523,7 +523,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "brigittenau.wien.gv.at": {
   "url": "https://brigittenau.wien.gv.at/",
@@ -533,7 +533,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "presse.wien.gv.at": {
   "url": "https://presse.wien.gv.at/",
@@ -541,13 +541,13 @@
   "title": "Aktuell - Presse-Service",
   "redirect": "",
   "scripts": [
-   "https://presse.wien.gv.at/RKSearch.WienAt.Customer-portlet/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795485762000",
-   "https://presse.wien.gv.at/html/portlet/dynamic_data_lists/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795485811000",
-   "https://presse.wien.gv.at/html/portlet/dynamic_data_mapping/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795485811000"
+   "https://presse.wien.gv.at/RKSearch.WienAt.Customer-portlet/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795658541000",
+   "https://presse.wien.gv.at/html/portlet/dynamic_data_lists/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795658597000",
+   "https://presse.wien.gv.at/html/portlet/dynamic_data_mapping/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795658597000"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
  },
  "wienki-preprod.intern.wien.gv.at": {
   "url": "https://wienki-preprod.intern.wien.gv.at/",
@@ -563,6 +563,215 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 12:30:01 UTC"
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "wibi-admin.test.magwien.gv.at": {
+  "url": "https://wibi-admin.test.magwien.gv.at/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "presse-dev.wien.gv.at": {
+  "url": "https://presse-dev.wien.gv.at/",
+  "http_status": 401,
+  "title": "401 Unauthorized",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "crgbs3-dev12-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev12-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "crgbs3-dev15-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev15-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "digitales.wien.at": {
+  "url": "https://digitales.wien.at/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://digitales.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "crgbs3-dev6-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev6-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "www.brigittenau.wien.at": {
+  "url": "https://www.brigittenau.wien.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/brigittenau/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "www.smartdata.wien.at": {
+  "url": "https://www.smartdata.wien.at/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "therapiezentrumybbs.gesundheitsverbund.at": {
+  "url": "https://therapiezentrumybbs.gesundheitsverbund.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://ybbs.gesundheitsverbund.at",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "ntw-jabber-t.uctest.wien.gv.at": {
+  "url": "https://ntw-jabber-t.uctest.wien.gv.at/",
+  "http_status": 403,
+  "title": "403 - Forbidden: Access is denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "crgbs3-dev8-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev8-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "crgbs3-dev7-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev7-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "www.partnerschaft.wien.gv.at": {
+  "url": "https://www.partnerschaft.wien.gv.at/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.wien.gv.at/verwaltung/personenwesen/ehe/index.html",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "crgbs3-dev3-tekton-trigger.dev.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-dev3-tekton-trigger.dev.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "crgbs3-prod-tekton-trigger.cms-wien.magwien.gv.at": {
+  "url": "https://crgbs3-prod-tekton-trigger.cms-wien.magwien.gv.at/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "www.digital.wien.gv.at": {
+  "url": "https://www.digital.wien.gv.at/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "smartdata.wien.at": {
+  "url": "https://smartdata.wien.at/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.wien.gv.at/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "sso.wien.gv.at": {
+  "url": "https://sso.wien.gv.at/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://sso.wien.gv.at/my.policy",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:04:57 UTC"
+ },
+ "stp-test.wien.gv.at": {
+  "url": "https://stp-test.wien.gv.at/",
+  "http_status": 200,
+  "title": "Standardportal - Stammportal",
+  "redirect": "",
+  "scripts": [
+   "https://stp-test.wien.gv.at/htmlgui/custom/javascript/custom_dynamic.js",
+   "https://stp-test.wien.gv.at/htmlgui/javascript/dynamic.js",
+   "https://stp-test.wien.gv.at/resources/scripts/base64url-arraybuffer.js",
+   "https://stp-test.wien.gv.at/resources/scripts/portal.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
+ },
+ "bildungsversprechen.wien.gv.at": {
+  "url": "https://bildungsversprechen.wien.gv.at/",
+  "http_status": 200,
+  "title": "Startseite - Das Wiener Bildungsversprechen",
+  "redirect": "",
+  "scripts": [
+   "https://bildungsversprechen.wien.gv.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441658392&/o/frontend-js-aui-web/aui/aui/aui.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex.js&/o/frontend-js-aui-web/aui/oop/oop.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/frontend-js-web/loader/config.js&/o/frontend-js-web/loader/loader.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js",
+   "https://bildungsversprechen.wien.gv.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441666982&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
+   "https://bildungsversprechen.wien.gv.at/o/frontend-js-svg4everybody-web/index.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 03:06:58 UTC"
  }
 }
