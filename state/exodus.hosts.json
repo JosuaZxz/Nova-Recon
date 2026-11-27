@@ -2,23 +2,23 @@
  "_seeded": true,
  "grafana.exodus.io": {
   "url": "https://grafana.exodus.io/",
-  "http_status": 302,
-  "title": "302 Found",
-  "redirect": "https://exodus.cloudflareaccess.com/cdn-cgi/access/login/grafana.exodus.io?kid=c9a869fefddd1c1ce0328a0bb6460a5ca3b333ae7e504ab6b3258a802204b9f7&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImQ2NmE",
-  "scripts": [],
-  "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
- },
- "pay.exodus.io": {
-  "url": "https://pay.exodus.io/",
-  "http_status": 404,
-  "title": "",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "pay.exodus.io": {
+  "url": "https://pay.exodus.io/",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "remote-config-dev.exodus.io": {
   "url": "https://remote-config-dev.exodus.io/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "admin.ai.exodus.com": {
   "url": "https://admin.ai.exodus.com/",
@@ -38,17 +38,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "pay-admin-d.exodus.io": {
   "url": "https://pay-admin-d.exodus.io/",
-  "http_status": 302,
-  "title": "",
-  "redirect": "https://vercel.com/sso-api?url=https%3A%2F%2Fpay-admin-d.exodus.io%2F&nonce=bfde84747a89b19cd0bf45c213cad08b5e47652545fd2c4c5a603ae783b279ea",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "substrate-api-sidecar.a.exodus.io": {
   "url": "https://substrate-api-sidecar.a.exodus.io/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "dash.a.exodus.io": {
   "url": "https://dash.a.exodus.io/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "solana-fee-payer.a.exodus.io": {
   "url": "https://solana-fee-payer.a.exodus.io/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "algo-api.a.exodus.io": {
   "url": "https://algo-api.a.exodus.io/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "assets-gateway-clarity-api.a.exodus.io": {
   "url": "https://assets-gateway-clarity-api.a.exodus.io/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "xqa.ai.exodus.com": {
   "url": "https://xqa.ai.exodus.com/",
@@ -108,17 +108,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "pay-admin.exodus.io": {
   "url": "https://pay-admin.exodus.io/",
-  "http_status": 302,
-  "title": "302 Found",
-  "redirect": "https://exodus.cloudflareaccess.com/cdn-cgi/access/login/pay-admin.exodus.io?kid=c7b22c4cb684180f3190931781442508852d22c91549d6ed318f8b867c1ce5c4&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImQ2N",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "xqa-artifacts.ai.exodus.com": {
   "url": "https://xqa-artifacts.ai.exodus.com/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "xqa-public.ai.exodus.com": {
   "url": "https://xqa-public.ai.exodus.com/",
@@ -138,27 +138,27 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "api-mainnet-magiceden.exodus.io": {
   "url": "https://api-mainnet-magiceden.exodus.io/",
-  "http_status": 400,
-  "title": "",
-  "redirect": "",
-  "scripts": [],
-  "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
- },
- "oauth-d.exodus.io": {
-  "url": "https://oauth-d.exodus.io/",
-  "http_status": 530,
+  "http_status": 403,
   "title": "Exodus - Firewall Triggered",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "oauth-d.exodus.io": {
+  "url": "https://oauth-d.exodus.io/",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "login.exodus.com": {
   "url": "https://login.exodus.com/",
@@ -168,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "data.ai.exodus.com": {
   "url": "https://data.ai.exodus.com/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "checkout-admin.exodus.com": {
   "url": "https://checkout-admin.exodus.com/",
@@ -188,17 +188,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "pay-d.exodus.io": {
   "url": "https://pay-d.exodus.io/",
-  "http_status": 302,
-  "title": "",
-  "redirect": "https://vercel.com/sso-api?url=https%3A%2F%2Fpay-d.exodus.io%2F&nonce=271036233aa7089578e335b9c7d8756ff89efd6917dff7f029d376134c3be4e5",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "dogecoin.a.exodus.io": {
   "url": "https://dogecoin.a.exodus.io/",
@@ -208,7 +208,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "xmr-proxy.a.exodus.io": {
   "url": "https://xmr-proxy.a.exodus.io/",
@@ -218,7 +218,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "tron-tv.a.exodus.io": {
   "url": "https://tron-tv.a.exodus.io/",
@@ -228,19 +228,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "turing-d.exodus.io": {
   "url": "https://turing-d.exodus.io/",
-  "http_status": 200,
-  "title": "Exodus Pay Safe Input",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
   "redirect": "",
-  "scripts": [
-   "https://turing-d.exodus.io/v1/assets/index-Bw-GLP1Z.js"
-  ],
+  "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "xqa-next.ai.exodus.com": {
   "url": "https://xqa-next.ai.exodus.com/",
@@ -268,7 +266,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "checkout-dashboard.exodus.com": {
   "url": "https://checkout-dashboard.exodus.com/sign-in",
@@ -292,7 +290,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "checkout-api.exodus.com": {
   "url": "https://checkout-api.exodus.com/",
@@ -311,7 +309,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "vgs.fiat.a.exodus.io": {
   "url": "https://vgs.fiat.a.exodus.io/",
@@ -319,40 +317,40 @@
   "title": "Buy crypto | XO Ramp",
   "redirect": "",
   "scripts": [
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0_8bzpp79pz7z.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0aa3t0ns1pxtk.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0pv-b6zspxps8.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0s6l53jptin_w.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0tudt-82sg-9w.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/15n39fp8f1_jn.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/15n6l8-174ey-.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/19iudbelda96z.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/1kudssn8jn66_.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/1ty92s5aok1g5.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2-r_t0ofbbq8u.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/21xfnf1hunvya.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/22ubo0_c6qarj.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/24q21f7rlu4_u.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/28mtl8n87f6x4.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/28z1sgmd3z2vi.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2fqjmtl9kcwc3.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2lrbh1_6uumpt.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2qsz56298rodv.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2z1o6q9z8pei1.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3-3il119ftdgr.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/328eho60xcna7.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/37pxra6wu2uga.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3fgvopp34u1gk.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3jbftisebw4-z.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3jc-hy5p802vr.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3pri-9v59ixjn.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3qp-c6wz3foc7.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352",
-   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3sklfpxu3ljxg.js?dpl=6466bc84b3efdbebc73a0ea85a45b080a4376352"
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0_8bzpp79pz7z.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0pv-b6zspxps8.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0s6l53jptin_w.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/0tudt-82sg-9w.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/12d_nkp8isqd9.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/15n39fp8f1_jn.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/15n6l8-174ey-.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/19efjrtstpoz3.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/19iudbelda96z.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/1kudssn8jn66_.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/1ty92s5aok1g5.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2-r_t0ofbbq8u.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/21xfnf1hunvya.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/24q21f7rlu4_u.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/28mtl8n87f6x4.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/28z1sgmd3z2vi.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2_4k5k494-jny.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2fqjmtl9kcwc3.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2lrbh1_6uumpt.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2qsz56298rodv.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2rjlmh5cro_hf.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/2z1o6q9z8pei1.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3-3il119ftdgr.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/328eho60xcna7.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/37pxra6wu2uga.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3fgvopp34u1gk.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3jc-hy5p802vr.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3qp-c6wz3foc7.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://vgs.fiat.a.exodus.io/_next/static/chunks/3sklfpxu3ljxg.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a"
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "metadata.exodus.io": {
   "url": "https://metadata.exodus.io/",
@@ -362,7 +360,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "polkadot-subscan.a.exodus.io": {
   "url": "https://polkadot-subscan.a.exodus.io/",
@@ -372,17 +370,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "deck.ot.exodus.com": {
   "url": "https://deck.ot.exodus.com/",
-  "http_status": 302,
-  "title": "302 Found",
-  "redirect": "https://ops-tooling.cloudflareaccess.com/cdn-cgi/access/login/deck.ot.exodus.com?kid=248e1c5b85a912afcf354b7180788b24c9531ad3e367239a32e8cc8642339e6e&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6I",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "bsc-clarity.a.exodus.io": {
   "url": "https://bsc-clarity.a.exodus.io/",
@@ -392,17 +390,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "ai-gateway-d.ot.exodus.com": {
   "url": "https://ai-gateway-d.ot.exodus.com/",
-  "http_status": 302,
-  "title": "302 Found",
-  "redirect": "https://ops-tooling.cloudflareaccess.com/cdn-cgi/access/login/ai-gateway-d.ot.exodus.com?kid=c9baefbaef151d3d4e55cfaed2989014be1326bdc7a8cfaa5ece8a38670d2888&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "updates.exodus.com": {
   "url": "https://updates.exodus.com/",
@@ -412,7 +410,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "downloads.exodus.com": {
   "url": "https://downloads.exodus.com/",
@@ -422,7 +420,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "algo.a.exodus.io": {
   "url": "https://algo.a.exodus.io/",
@@ -432,7 +430,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "aurora.a.exodus.io": {
   "url": "https://aurora.a.exodus.io/",
@@ -442,7 +440,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "fiat-prod-fallback.a.exodus.io": {
   "url": "https://fiat-prod-fallback.a.exodus.io/",
@@ -452,7 +450,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "events.ai.exodus.com": {
   "url": "https://events.ai.exodus.com/",
@@ -462,7 +460,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "kyc.a.exodus.io": {
   "url": "https://kyc.a.exodus.io/",
@@ -470,16 +468,16 @@
   "title": "404: This page could not be found.",
   "redirect": "",
   "scripts": [
-   "https://kyc.a.exodus.io/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44",
-   "https://kyc.a.exodus.io/_next/static/chunks/0tors0gntocjg.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44",
-   "https://kyc.a.exodus.io/_next/static/chunks/2uys1_jiap-42.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44",
-   "https://kyc.a.exodus.io/_next/static/chunks/2uz3l7tsfdz6u.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44",
-   "https://kyc.a.exodus.io/_next/static/chunks/39crkkwafhoxk.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44",
-   "https://kyc.a.exodus.io/_next/static/chunks/turbopack-3wxg_h-137bxr.js?dpl=5b5669e6b56cea840b2258bbe8689f658e4e3b44"
+   "https://kyc.a.exodus.io/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://kyc.a.exodus.io/_next/static/chunks/0jle0ipat2fkk.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://kyc.a.exodus.io/_next/static/chunks/16aq93dro341o.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://kyc.a.exodus.io/_next/static/chunks/2uz3l7tsfdz6u.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://kyc.a.exodus.io/_next/static/chunks/3etggheqx1z46.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a",
+   "https://kyc.a.exodus.io/_next/static/chunks/turbopack-3wxg_h-137bxr.js?dpl=a98908a955035883727bb1a08b10b6947b96ec4a"
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "support-lt.exodus.com": {
   "url": "https://support-lt.exodus.com/",
@@ -489,7 +487,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "tezos-p.a.exodus.io": {
   "url": "https://tezos-p.a.exodus.io/",
@@ -499,17 +497,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "aig-native-869-d.ot.exodus.com": {
   "url": "https://aig-native-869-d.ot.exodus.com/",
-  "http_status": 401,
-  "title": "",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "blog.exodus.com": {
   "url": "https://blog.exodus.com/",
@@ -519,17 +517,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "nifty.exodus.io": {
   "url": "https://nifty.exodus.io/",
-  "http_status": 530,
+  "http_status": 403,
   "title": "Exodus - Firewall Triggered",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "ct-cdn.a.exodus.io": {
   "url": "https://ct-cdn.a.exodus.io/",
@@ -539,7 +537,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "extension.exodus.com": {
   "url": "https://extension.exodus.com/",
@@ -549,7 +547,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "vet.a.exodus.io": {
   "url": "https://vet.a.exodus.io/doc/stoplight-ui/",
@@ -559,17 +557,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "inference-d.ot.exodus.com": {
   "url": "https://inference-d.ot.exodus.com/",
-  "http_status": 200,
-  "title": "Exodus AI Gateway",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "base-qn.a.exodus.io": {
   "url": "https://base-qn.a.exodus.io/",
@@ -579,7 +577,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "www.ai.exodus.com": {
   "url": "https://www.ai.exodus.com/",
@@ -607,7 +605,7 @@
   ],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
  },
  "pm-bounces.exodus.com": {
   "url": "http://pm-bounces.exodus.com/",
@@ -619,6 +617,195 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-25 23:16:17 UTC"
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "inference-cloudflare-d.ot.exodus.com": {
+  "url": "https://inference-cloudflare-d.ot.exodus.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "knowledge.ai.exodus.com": {
+  "url": "https://knowledge.ai.exodus.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://ops-tooling.cloudflareaccess.com/cdn-cgi/access/login/knowledge.ai.exodus.com?kid=5a4ad2a538fc8c98f3e35706bde0c63eac68b0dfe8c3b9b21112fbc29112ccc4&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "polkascan-substrate.a.exodus.io": {
+  "url": "https://polkascan-substrate.a.exodus.io/",
+  "http_status": 405,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "magiceden-bitcoin.a.exodus.io": {
+  "url": "https://magiceden-bitcoin.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "push.exodus.io": {
+  "url": "https://push.exodus.io/",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "atom4.a.exodus.io": {
+  "url": "https://atom4.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "avax-c.a.exodus.io": {
+  "url": "https://avax-c.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "simulation.a.exodus.io": {
+  "url": "https://simulation.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "bitcoincashnode.a.exodus.io": {
+  "url": "https://bitcoincashnode.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "bitcoin.a.exodus.io": {
+  "url": "https://bitcoin.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "digibyte-s.a.exodus.io": {
+  "url": "https://digibyte-s.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "ctr.a.exodus.io": {
+  "url": "https://ctr.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "ai.exodus.com": {
+  "url": "https://ai.exodus.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://ops-tooling.cloudflareaccess.com/cdn-cgi/access/login/ai.exodus.com?kid=33cd9f10fb01e3bee5676343abc19fac173f52d526b9c60ed8295e54145b327f&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImExND",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "nexotrack.exodus.io": {
+  "url": "https://nexotrack.exodus.io/",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "backup.exodus.io": {
+  "url": "https://backup.exodus.io/",
+  "http_status": 403,
+  "title": "Exodus - Firewall Triggered",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "arbitrum-one-clarity.a.exodus.io": {
+  "url": "https://arbitrum-one-clarity.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
+ },
+ "status.exchange.exodus.io": {
+  "url": "https://status.exchange.exodus.io/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://status.exchange.exodus.io/_nuxt/B3rjZTge.js",
+   "https://status.exchange.exodus.io/_nuxt/BRcVbvfT.js",
+   "https://status.exchange.exodus.io/_nuxt/C1A6WbAX.js",
+   "https://status.exchange.exodus.io/_nuxt/CyKACYZK.js",
+   "https://status.exchange.exodus.io/_nuxt/DGADQUUQ.js",
+   "https://status.exchange.exodus.io/_nuxt/IkC1909x.js",
+   "https://status.exchange.exodus.io/_nuxt/LF2Rneez.js",
+   "https://status.exchange.exodus.io/_nuxt/gZZjzygs.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:51 UTC"
+ },
+ "atom4-tendermint-proxy-s.a.exodus.io": {
+  "url": "https://atom4-tendermint-proxy-s.a.exodus.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 19:29:15 UTC"
  }
 }

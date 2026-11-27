@@ -4,21 +4,21 @@
   "sha256": "2726845b4b7c41cd8bf6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:11 UTC"
+  "updated": "2026-11-27 19:37:32 UTC"
  },
  "https://payments.bokundemo.com/_astro/hoisted.HASH.js": {
   "last_url": "https://payments.bokundemo.com/_astro/hoisted.fb07dade.js",
   "sha256": "265de9b9c7bf15dc512d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:11 UTC"
+  "updated": "2026-11-27 19:37:32 UTC"
  },
  "https://payments.bokuntest.com/_astro/hoisted.HASH.js": {
   "last_url": "https://payments.bokuntest.com/_astro/hoisted.fb07dade.js",
   "sha256": "265de9b9c7bf15dc512d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:11 UTC"
+  "updated": "2026-11-27 19:37:33 UTC"
  },
  "http://appstore-test.bokuntest.com/static/js/2.00acc6b4.chunk.js": {
   "last_url": "http://appstore-test.bokuntest.com/static/js/2.00acc6b4.chunk.js",
@@ -27,7 +27,7 @@
   "graphql_ops": [
    "IntrospectionQuery"
   ],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:33 UTC"
  },
  "http://appstore-test.bokuntest.com/static/js/main.63130877.chunk.js": {
   "last_url": "http://appstore-test.bokuntest.com/static/js/main.63130877.chunk.js",
@@ -75,49 +75,49 @@
    "WebhookDelete",
    "WebhookUpdate"
   ],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:34 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/webpack-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/webpack-7555adaf38b596b9.js",
   "sha256": "cca6d847a000d3de729f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:34 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/ed95e382-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/ed95e382-e73f0095f861428b.js",
   "sha256": "46db85db7b71d6d97603",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:34 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/86-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/86-38208c32f3052c1f.js",
   "sha256": "429c48d903a5343b6323",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:34 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/main-app-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/main-app-9809ba3da5efae14.js",
   "sha256": "b6e5f6171154bda0954c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:34 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/877-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/877-87e0379c22b1281d.js",
   "sha256": "99d6a56fd471a8eee461",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/440-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/440-5b59dabdee637362.js",
   "sha256": "5cc025ffb7811b1eafb5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/770-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/770-97827637392ce001.js",
@@ -136,28 +136,28 @@
    "/v1/subscribers"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/124-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/124-ff097a2b1607d5f1.js",
   "sha256": "82b7fd8f83174e6fc767",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/635-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/635-97d80b4500956a98.js",
   "sha256": "31b50ccc35e34c05a34a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/app/page-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/app/page-21bc6293f7ba0b95.js",
   "sha256": "77cdf870d42aabec1cf1",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/app/layout-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/app/layout-2b7c38b84c4b30ea.js",
@@ -166,90 +166,183 @@
    "/v1/events"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:12 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/webpack-HASH.js": {
-  "last_url": "https://bookings.bokundemo.com/_next/static/chunks/webpack-3f75f8d8362d1fc0.js",
+  "last_url": "https://bookings.bokundemo.com/_next/static/chunks/webpack-e0f484b41b6446da.js",
   "sha256": "9815d78009e9c3d61d05",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:35 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/87c73c54-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js",
   "sha256": "867778f627ca24fcdbf6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/18-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/18-d2d731f129776809.js",
   "sha256": "c24efcdcb595eeaea9e0",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/main-app-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/main-app-7b13489b43c77ae6.js",
   "sha256": "0decc6bed50cb97e4732",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/app/global-error-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/app/global-error-5217877e918a33cd.js",
   "sha256": "733edde090365c79bb4e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/2ed43723-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/2ed43723-c77113e734182561.js",
   "sha256": "9a855ec145a3b53d7f87",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/fe5635b5-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/fe5635b5-15df247f4cfd3ae5.js",
   "sha256": "cb6fed8f2b886340744e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/996-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/996-f3b60efd2ef59557.js",
   "sha256": "5fa8d15510b8c754bbec",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/3854-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/3854-83ca3216d2f52ac5.js",
   "sha256": "33855ecf56d282012cfa",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/5224-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/5224-c128fed0b20586b3.js",
   "sha256": "0a8f243a7f674c9e5aea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:13 UTC"
+  "updated": "2026-11-27 19:37:36 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/1306-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/1306-174188a1261e9a43.js",
   "sha256": "d82b624be2cee676583b",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:14 UTC"
+  "updated": "2026-11-27 19:37:37 UTC"
  },
  "https://bookings.bokundemo.com/_next/static/chunks/app/layout-HASH.js": {
   "last_url": "https://bookings.bokundemo.com/_next/static/chunks/app/layout-9100cee37f62bba2.js",
   "sha256": "997134fd9dbcd7163605",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 11:49:14 UTC"
+  "updated": "2026-11-27 19:37:37 UTC"
+ },
+ "https://appstore.bokundemo.com/assets/index-Ct628S83.js": {
+  "last_url": "https://appstore.bokundemo.com/assets/index-Ct628S83.js",
+  "sha256": "f083625fb8d7cd875f09",
+  "routes": [],
+  "graphql_ops": [
+   "IntrospectionQuery"
+  ],
+  "updated": "2026-11-27 19:37:18 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/webpack-e0f484b41b6446da.js",
+  "sha256": "2e0ae1efacdd5d14926d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:19 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/87c73c54-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js",
+  "sha256": "867778f627ca24fcdbf6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:19 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/18-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/18-d2d731f129776809.js",
+  "sha256": "c24efcdcb595eeaea9e0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:19 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/main-app-7b13489b43c77ae6.js",
+  "sha256": "0decc6bed50cb97e4732",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:19 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/app/global-error-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/app/global-error-5217877e918a33cd.js",
+  "sha256": "733edde090365c79bb4e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:19 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/2ed43723-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/2ed43723-c77113e734182561.js",
+  "sha256": "9a855ec145a3b53d7f87",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/fe5635b5-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/fe5635b5-15df247f4cfd3ae5.js",
+  "sha256": "cb6fed8f2b886340744e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/996-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/996-f3b60efd2ef59557.js",
+  "sha256": "5fa8d15510b8c754bbec",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/3854-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/3854-83ca3216d2f52ac5.js",
+  "sha256": "33855ecf56d282012cfa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/5224-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/5224-c128fed0b20586b3.js",
+  "sha256": "0a8f243a7f674c9e5aea",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/1306-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/1306-174188a1261e9a43.js",
+  "sha256": "d82b624be2cee676583b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
+ },
+ "https://bookings.bokuntest.com/_next/static/chunks/app/layout-HASH.js": {
+  "last_url": "https://bookings.bokuntest.com/_next/static/chunks/app/layout-9100cee37f62bba2.js",
+  "sha256": "997134fd9dbcd7163605",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 19:37:20 UTC"
  }
 }

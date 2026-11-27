@@ -4,7 +4,7 @@
   "sha256": "32e1970356bfcfa99cc5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:06:59 UTC"
+  "updated": "2026-11-27 19:57:32 UTC"
  },
  "https://viktorchristgasse.schule.wien.at/combo": {
   "last_url": "https://viktorchristgasse.schule.wien.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794358862949&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
@@ -13,28 +13,28 @@
    "/api/jsonws/invoke"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:04 UTC"
+  "updated": "2026-11-27 19:57:34 UTC"
  },
  "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js": {
   "last_url": "https://viktorchristgasse.schule.wien.at/o/swcms-theme/css/leaflet/leaflet.js",
   "sha256": "c837347a297c1a35852a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:07 UTC"
+  "updated": "2026-11-27 19:57:35 UTC"
  },
  "https://meet-t.uctest.wien.gv.at/modernizr.HASH.js": {
   "last_url": "https://meet-t.uctest.wien.gv.at/modernizr.a70fe97948957561da24.js",
   "sha256": "13a5f1d9381034ee87de",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:07 UTC"
+  "updated": "2026-11-27 19:57:36 UTC"
  },
  "https://meet-t.uctest.wien.gv.at/vendors~meeting.HASH.js": {
   "last_url": "https://meet-t.uctest.wien.gv.at/vendors~meeting.b90a2caac3ae57ff819d.js",
   "sha256": "e29e3e5468c72c9bf81f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:10 UTC"
+  "updated": "2026-11-27 19:57:37 UTC"
  },
  "https://meet-t.uctest.wien.gv.at/meeting.HASH.js": {
   "last_url": "https://meet-t.uctest.wien.gv.at/meeting.960eec3dbd8e2f2e2256.js",
@@ -44,127 +44,127 @@
    "/auth/sso/tokenRequest"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:12 UTC"
+  "updated": "2026-11-27 19:57:39 UTC"
  },
  "https://meet-t.uctest.wien.gv.at/script/unsupp.js": {
   "last_url": "https://meet-t.uctest.wien.gv.at/script/unsupp.js",
   "sha256": "03b9db09d8b736431cbc",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:12 UTC"
+  "updated": "2026-11-27 19:57:39 UTC"
  },
  "https://wibi.test.magwien.gv.at/libs/vendor.HASH.js": {
-  "last_url": "https://wibi.test.magwien.gv.at/libs/vendor.3ae3a7eb6d594d0fa045.js",
-  "sha256": "b89a0be3132234c772ab",
+  "last_url": "https://wibi.test.magwien.gv.at/libs/vendor.420a767639f183d647c6.js",
+  "sha256": "7d0064850b2bf2549d25",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:14 UTC"
+  "updated": "2026-11-27 19:57:41 UTC"
  },
  "https://wibi.test.magwien.gv.at/libs/app.HASH.js": {
-  "last_url": "https://wibi.test.magwien.gv.at/libs/app.3ae3a7eb6d594d0fa045.js",
-  "sha256": "9cd53e07e8f1a593f676",
+  "last_url": "https://wibi.test.magwien.gv.at/libs/app.420a767639f183d647c6.js",
+  "sha256": "e557a5a2063f95d37799",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:15 UTC"
+  "updated": "2026-11-27 19:57:42 UTC"
  },
  "https://wibi.test.magwien.gv.at/libs/babel.HASH.js": {
-  "last_url": "https://wibi.test.magwien.gv.at/libs/babel.3ae3a7eb6d594d0fa045.js",
-  "sha256": "80be83787e3d39860c82",
+  "last_url": "https://wibi.test.magwien.gv.at/libs/babel.420a767639f183d647c6.js",
+  "sha256": "35d52344fbb83986be4d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:17 UTC"
+  "updated": "2026-11-27 19:57:44 UTC"
  },
  "https://presse.wien.gv.at/html/portlet/dynamic_data_lists/js/main.js": {
-  "last_url": "https://presse.wien.gv.at/html/portlet/dynamic_data_lists/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795658597000",
+  "last_url": "https://presse.wien.gv.at/html/portlet/dynamic_data_lists/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795763275000",
   "sha256": "2283f150ba5476b75015",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:19 UTC"
+  "updated": "2026-11-27 19:57:46 UTC"
  },
  "https://presse.wien.gv.at/html/portlet/dynamic_data_mapping/js/main.js": {
-  "last_url": "https://presse.wien.gv.at/html/portlet/dynamic_data_mapping/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795658597000",
+  "last_url": "https://presse.wien.gv.at/html/portlet/dynamic_data_mapping/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=de_AT&amp;b=6204&amp;t=1795763275000",
   "sha256": "9419df9b043cf1238df4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:20 UTC"
+  "updated": "2026-11-27 19:57:46 UTC"
  },
  "https://wienki-preprod.intern.wien.gv.at/newAssets/index-DPMhm1_b.js": {
   "last_url": "https://wienki-preprod.intern.wien.gv.at/newAssets/index-DPMhm1_b.js",
   "sha256": "64a4a26deca667975aef",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:21 UTC"
+  "updated": "2026-11-27 19:57:47 UTC"
  },
  "https://wienki-preprod.intern.wien.gv.at/newAssets/preload-helper-BaNmt_Wr.js": {
   "last_url": "https://wienki-preprod.intern.wien.gv.at/newAssets/preload-helper-BaNmt_Wr.js",
   "sha256": "35a755c827b1af14105f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:21 UTC"
+  "updated": "2026-11-27 19:57:48 UTC"
  },
  "https://wienki-preprod.intern.wien.gv.at/newAssets/chonker-icons-ui-DuugnvEU.js": {
   "last_url": "https://wienki-preprod.intern.wien.gv.at/newAssets/chonker-icons-ui-DuugnvEU.js",
   "sha256": "c29f45b5866f1676046e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:22 UTC"
+  "updated": "2026-11-27 19:57:49 UTC"
  },
  "https://wienki-preprod.intern.wien.gv.at/newAssets/chonker-react-B9SDgVXE.js": {
   "last_url": "https://wienki-preprod.intern.wien.gv.at/newAssets/chonker-react-B9SDgVXE.js",
   "sha256": "ace64e2ee8742a024523",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:24 UTC"
+  "updated": "2026-11-27 19:57:50 UTC"
  },
  "https://wienki-preprod.intern.wien.gv.at/newAssets/client-T4DV6n7u.js": {
   "last_url": "https://wienki-preprod.intern.wien.gv.at/newAssets/client-T4DV6n7u.js",
   "sha256": "864e833af2645a85b003",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:24 UTC"
+  "updated": "2026-11-27 19:57:50 UTC"
  },
  "https://stp-test.wien.gv.at/resources/scripts/portal.js": {
   "last_url": "https://stp-test.wien.gv.at/resources/scripts/portal.js",
   "sha256": "2d2787a91c96c0ce7920",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:28 UTC"
+  "updated": "2026-11-27 19:57:51 UTC"
  },
  "https://stp-test.wien.gv.at/resources/scripts/base64url-arraybuffer.js": {
   "last_url": "https://stp-test.wien.gv.at/resources/scripts/base64url-arraybuffer.js",
   "sha256": "9700c98d04b8dfb2969e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:29 UTC"
+  "updated": "2026-11-27 19:57:52 UTC"
  },
  "https://stp-test.wien.gv.at/htmlgui/javascript/dynamic.js": {
   "last_url": "https://stp-test.wien.gv.at/htmlgui/javascript/dynamic.js",
   "sha256": "1fa2a6bf34fdd9bac1b7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:30 UTC"
+  "updated": "2026-11-27 19:57:53 UTC"
  },
  "https://stp-test.wien.gv.at/htmlgui/custom/javascript/custom_dynamic.js": {
   "last_url": "https://stp-test.wien.gv.at/htmlgui/custom/javascript/custom_dynamic.js",
   "sha256": "c2e4aab9bea62d844942",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:31 UTC"
+  "updated": "2026-11-27 19:57:54 UTC"
  },
  "https://bildungsversprechen.wien.gv.at/o/frontend-js-svg4everybody-web/index.js": {
   "last_url": "https://bildungsversprechen.wien.gv.at/o/frontend-js-svg4everybody-web/index.js",
   "sha256": "32e1970356bfcfa99cc5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:32 UTC"
+  "updated": "2026-11-27 19:57:55 UTC"
  },
  "https://bildungsversprechen.wien.gv.at/combo": {
-  "last_url": "https://bildungsversprechen.wien.gv.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794441666982&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
+  "last_url": "https://bildungsversprechen.wien.gv.at/combo?browserId=chrome&minifierType=js&languageId=de_AT&t=1794358862949&/o/vbg-theme-contributor/js/vorarlberg-util.min.js",
   "sha256": "81be447885297806e84a",
   "routes": [
    "/api/jsonws/invoke"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:07:36 UTC"
+  "updated": "2026-11-27 19:57:57 UTC"
  }
 }
