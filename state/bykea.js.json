@@ -1,14 +1,14 @@
 {
  "https://dispatchers.bykea.net/static/js/2.447177f7.chunk.js": {
   "last_url": "https://dispatchers.bykea.net/static/js/2.447177f7.chunk.js",
-  "sha256": "3f6f5f51659940f07743",
+  "sha256": "e53ab9f97c9f4903c855",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 11:01:12 UTC"
+  "updated": "2026-11-27 08:28:30 UTC"
  },
  "https://dispatchers.bykea.net/static/js/main.efc42e1b.chunk.js": {
   "last_url": "https://dispatchers.bykea.net/static/js/main.efc42e1b.chunk.js",
-  "sha256": "bff3b13c7be145df6473",
+  "sha256": "a766b6f8b5ced3c71931",
   "routes": [
    "/admin/cancel/trip",
    "/users/addUser",
@@ -16,20 +16,20 @@
    "/users/addUser/:id/update"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-25 11:01:13 UTC"
+  "updated": "2026-11-27 08:28:31 UTC"
  },
  "https://mis-pk.bykea.net/static/js/2.26b5da4e.chunk.js": {
   "last_url": "https://mis-pk.bykea.net/static/js/2.26b5da4e.chunk.js",
   "sha256": "f833218540fa488a9de6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 11:01:13 UTC"
+  "updated": "2026-11-27 08:28:31 UTC"
  },
  "https://mis-pk.bykea.net/static/js/main.7dfa96ab.chunk.js": {
   "last_url": "https://mis-pk.bykea.net/static/js/main.7dfa96ab.chunk.js",
   "sha256": "a5f9303f059316bbd49c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 11:01:14 UTC"
+  "updated": "2026-11-27 08:28:32 UTC"
  }
 }

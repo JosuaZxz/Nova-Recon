@@ -8,6 +8,26 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 11:00:18 UTC"
+  "last_checked": "2026-11-27 08:27:04 UTC"
+ },
+ "groups.boozt.com": {
+  "url": "http://groups.boozt.com/",
+  "http_status": 302,
+  "title": "302 Moved",
+  "redirect": "http://groups.google.com/a/boozt.com",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:27:04 UTC"
+ },
+ "image.email.booztlet.com": {
+  "url": "https://image.email.booztlet.com/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:27:04 UTC"
  }
 }

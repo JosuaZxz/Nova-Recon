@@ -6,16 +6,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://access-approvalw.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://access-approvalw.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://access-approvalw.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://access-approvalw.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://access-approvalw.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://access-approvalw.dev.dynatracelabs.com/suppress-errors.js",
-   "https://access-approvalw.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://access-approvalw.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "alumnia.dev.dynatracelabs.com": {
   "url": "https://alumnia.dev.dynatracelabs.com/",
@@ -23,16 +23,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://alumnia.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://alumnia.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://alumnia.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://alumnia.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://alumnia.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://alumnia.dev.dynatracelabs.com/suppress-errors.js",
-   "https://alumnia.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://alumnia.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "ocp.dev.dynatracelabs.com": {
   "url": "https://ocp.dev.dynatracelabs.com/",
@@ -40,16 +40,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://ocp.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://ocp.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://ocp.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://ocp.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://ocp.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://ocp.dev.dynatracelabs.com/suppress-errors.js",
-   "https://ocp.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://ocp.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dev.sprint.dynatracelabs.com": {
   "url": "https://dev.sprint.dynatracelabs.com/",
@@ -66,7 +66,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "bf03634upr.bf-dev.dynatracelabs.com": {
   "url": "https://bf03634upr.bf-dev.dynatracelabs.com/",
@@ -74,16 +74,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://bf03634upr.bf-dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://bf03634upr.bf-dev.dynatracelabs.com/main.3a09290e7724041d.js",
    "https://bf03634upr.bf-dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://bf03634upr.bf-dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://bf03634upr.bf-dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://bf03634upr.bf-dev.dynatracelabs.com/suppress-errors.js",
-   "https://bf03634upr.bf-dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://bf03634upr.bf-dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "w9virustotalu.sprint.dynatracelabs.com": {
   "url": "https://w9virustotalu.sprint.dynatracelabs.com/",
@@ -195,7 +195,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dev.hub.central.dynatracelabs.com": {
   "url": "https://dev.hub.central.dynatracelabs.com/",
@@ -205,7 +205,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mail.dev8.dev.apps.dynatracelabs.com": {
   "url": "https://mail.dev8.dev.apps.dynatracelabs.com/",
@@ -215,7 +215,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "www.dev102.dev.apps.dynatracelabs.com": {
   "url": "https://www.dev102.dev.apps.dynatracelabs.com/",
@@ -225,7 +225,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dev9.dev.apps.dynatracelabs.com": {
   "url": "https://dev9.dev.apps.dynatracelabs.com/",
@@ -235,7 +235,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "idpp-sandboxc.sprint.dynatracelabs.com": {
   "url": "https://idpp-sandboxc.sprint.dynatracelabs.com/",
@@ -252,7 +252,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "gdn-kban-testt.bf-sprint.dynatracelabs.com": {
   "url": "https://gdn-kban-testt.bf-sprint.dynatracelabs.com/",
@@ -269,7 +269,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "wildcard.dev2.dev.apps.dynatracelabs.com": {
   "url": "https://wildcard.dev2.dev.apps.dynatracelabs.com/",
@@ -279,7 +279,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "api.ace-tools.dynatracelabs.com": {
   "url": "https://api.ace-tools.dynatracelabs.com/",
@@ -289,17 +289,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "sandbox.access-approval.dynatracelabs.com": {
   "url": "https://sandbox.access-approval.dynatracelabs.com/oauth2/authorization/dynatrace-sso",
   "http_status": 302,
   "title": "",
-  "redirect": "https://sso-dev.dynatracelabs.com:443/oauth2/authorize?response_type=code&client_id=dt0s03.dynatrace-access-approval-customer-facing-ui-sandbox&scope=openid%20environment:roles:viewer&state=JDfMj3Qe1n",
+  "redirect": "https://sso-dev.dynatracelabs.com:443/oauth2/authorize?response_type=code&client_id=dt0s03.dynatrace-access-approval-customer-facing-ui-sandbox&scope=openid%20environment:roles:viewer&state=wPsnoOHRjO",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "www.dev201.dev.apps.dynatracelabs.com": {
   "url": "https://www.dev201.dev.apps.dynatracelabs.com/",
@@ -309,7 +309,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "kcs.success-staging.dynatracelabs.com": {
   "url": "https://kcs.success-staging.dynatracelabs.com/",
@@ -319,7 +319,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dev10.dev.da.dynatracelabs.com": {
   "url": "https://dev10.dev.da.dynatracelabs.com/",
@@ -329,7 +329,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "wildcard.srv.apigw.dev8.dtp.dynatracelabs.com": {
   "url": "https://wildcard.srv.apigw.dev8.dtp.dynatracelabs.com/",
@@ -339,7 +339,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "assistant-devk.sprint.dynatracelabs.com": {
   "url": "https://assistant-devk.sprint.dynatracelabs.com/",
@@ -356,7 +356,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "ofrep.dev.oc.fm.dynatracelabs.com": {
   "url": "https://ofrep.dev.oc.fm.dynatracelabs.com/",
@@ -366,7 +366,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "test.token.dynatracelabs.com": {
   "url": "https://test.token.dynatracelabs.com/",
@@ -376,7 +376,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "nimbusm.dev.sprint.dynatracelabs.com": {
   "url": "http://nimbusm.dev.sprint.dynatracelabs.com/",
@@ -393,7 +393,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "demo1.ocp.dev.dynatracelabs.com": {
   "url": "http://demo1.ocp.dev.dynatracelabs.com/",
@@ -401,16 +401,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "http://demo1.ocp.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "http://demo1.ocp.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "http://demo1.ocp.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "http://demo1.ocp.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "http://demo1.ocp.dev.dynatracelabs.com/styles.e818930122582801.js",
    "http://demo1.ocp.dev.dynatracelabs.com/suppress-errors.js",
-   "http://demo1.ocp.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "http://demo1.ocp.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "pap94091.dev.dynatracelabs.com": {
   "url": "https://pap94091.dev.dynatracelabs.com/",
@@ -418,11 +418,11 @@
   "title": "Login - Dynatrace",
   "redirect": "",
   "scripts": [
-   "https://pap94091.dev.dynatracelabs.com/ruxitagentjs_ICA1589ENPQRTUVXfghqrsu_10353261124143710.js"
+   "https://pap94091.dev.dynatracelabs.com/ruxitagentjs_ICA1589ENPQRTUVXfghqrsu_10353261126091629.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "email-controly.dev.sprint.dynatracelabs.com": {
   "url": "http://email-controly.dev.sprint.dynatracelabs.com/",
@@ -439,7 +439,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mail.srv.apigw.dev201.dtp.dynatracelabs.com": {
   "url": "https://mail.srv.apigw.dev201.dtp.dynatracelabs.com/",
@@ -449,7 +449,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mcsvc-ap-sandbox.dynatracelabs.com": {
   "url": "https://mcsvc-ap-sandbox.dynatracelabs.com/",
@@ -457,11 +457,11 @@
   "title": "mcsvc",
   "redirect": "",
   "scripts": [
-   "https://mcsvc-ap-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_10353261124143710.js"
+   "https://mcsvc-ap-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_10353261126091629.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "playground.spc-dev.dynatracelabs.com": {
   "url": "https://playground.spc-dev.dynatracelabs.com/",
@@ -471,7 +471,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "static.sso-sprint.dynatracelabs.com": {
   "url": "https://static.sso-sprint.dynatracelabs.com/",
@@ -481,7 +481,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "r2-upload.dev.us.fm.dynatracelabs.com": {
   "url": "https://r2-upload.dev.us.fm.dynatracelabs.com/",
@@ -491,7 +491,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "cluster-us-east-1-deve2e.dev.dynatracelabs.com": {
   "url": "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/",
@@ -499,16 +499,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/suppress-errors.js",
-   "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://cluster-us-east-1-deve2e.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "coimbus.dev.dynatracelabs.com": {
   "url": "https://coimbus.dev.dynatracelabs.com/",
@@ -516,16 +516,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://coimbus.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://coimbus.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://coimbus.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://coimbus.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://coimbus.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://coimbus.dev.dynatracelabs.com/suppress-errors.js",
-   "https://coimbus.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://coimbus.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dmi42586.dev.dynatracelabs.com": {
   "url": "https://dmi42586.dev.dynatracelabs.com/",
@@ -533,16 +533,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://dmi42586.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://dmi42586.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://dmi42586.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://dmi42586.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://dmi42586.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://dmi42586.dev.dynatracelabs.com/suppress-errors.js",
-   "https://dmi42586.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://dmi42586.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mail.srv.apigw.dev101.dtp.dynatracelabs.com": {
   "url": "https://mail.srv.apigw.dev101.dtp.dynatracelabs.com/",
@@ -552,7 +552,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "qnw57359.dev.dynatracelabs.com": {
   "url": "https://qnw57359.dev.dynatracelabs.com/",
@@ -560,16 +560,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://qnw57359.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://qnw57359.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://qnw57359.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://qnw57359.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://qnw57359.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://qnw57359.dev.dynatracelabs.com/suppress-errors.js",
-   "https://qnw57359.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://qnw57359.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "internalru.sprint.dynatracelabs.com": {
   "url": "https://internalru.sprint.dynatracelabs.com/",
@@ -586,7 +586,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mail.dev3.dev.da.dynatracelabs.com": {
   "url": "https://mail.dev3.dev.da.dynatracelabs.com/",
@@ -596,7 +596,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mcp.d1-dev.dynatracelabs.com": {
   "url": "https://mcp.d1-dev.dynatracelabs.com/",
@@ -606,7 +606,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "clientm.dev.dynatracelabs.com": {
   "url": "https://clientm.dev.dynatracelabs.com/",
@@ -614,16 +614,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://clientm.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://clientm.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://clientm.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://clientm.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://clientm.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://clientm.dev.dynatracelabs.com/suppress-errors.js",
-   "https://clientm.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://clientm.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "srv.dac.dev201.dtp.dynatracelabs.com": {
   "url": "https://srv.dac.dev201.dtp.dynatracelabs.com/",
@@ -633,7 +633,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "idpp-devi.sprint.dynatracelabs.com": {
   "url": "https://idpp-devi.sprint.dynatracelabs.com/",
@@ -650,7 +650,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "wildcard.srv.apigw.hard101.dtp.dynatracelabs.com": {
   "url": "https://wildcard.srv.apigw.hard101.dtp.dynatracelabs.com/",
@@ -660,7 +660,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "dev99.dev.apps.dynatracelabs.com": {
   "url": "https://dev99.dev.apps.dynatracelabs.com/",
@@ -670,7 +670,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "ci1.dev.dynatracelabs.com": {
   "url": "https://ci1.dev.dynatracelabs.com/",
@@ -678,16 +678,16 @@
   "title": "Account Management",
   "redirect": "https://myaccount-dev.dynatracelabs.com/410",
   "scripts": [
-   "https://ci1.dev.dynatracelabs.com/main.d28fbf1d60af0c94.js",
+   "https://ci1.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
    "https://ci1.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
    "https://ci1.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
    "https://ci1.dev.dynatracelabs.com/styles.e818930122582801.js",
    "https://ci1.dev.dynatracelabs.com/suppress-errors.js",
-   "https://ci1.dev.dynatracelabs.com/vendor.5b65a81630e940cd.js"
+   "https://ci1.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "umsaywsjuo.dev.apps.dynatracelabs.com": {
   "url": "https://umsaywsjuo.dev.apps.dynatracelabs.com/",
@@ -697,7 +697,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "api.university-staging.sprint.dynatracelabs.com": {
   "url": "http://api.university-staging.sprint.dynatracelabs.com/",
@@ -714,7 +714,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "www.srv.dac.dev8.dtp.dynatracelabs.com": {
   "url": "https://www.srv.dac.dev8.dtp.dynatracelabs.com/",
@@ -724,7 +724,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "www.dev8.dev.da.dynatracelabs.com": {
   "url": "https://www.dev8.dev.da.dynatracelabs.com/",
@@ -734,7 +734,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "apia.university-dev.sprint.dynatracelabs.com": {
   "url": "http://apia.university-dev.sprint.dynatracelabs.com/",
@@ -751,17 +751,17 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "account-dev.dynatracelabs.com": {
   "url": "https://account-dev.dynatracelabs.com:443/basweb/myaccount",
   "http_status": 302,
   "title": "",
-  "redirect": "https://sso-dev.dynatracelabs.com:443/saml2/login?SAMLRequest=fZJRT8IwFIXf%2FRVL37duZQNs2AxqiCQYCZs%2B%2BHYpF2iytdjbIf57B0jUxPjY5JzvnpzT0c2hqYM9OtLW5CyJYhagUXalzSZnz9UkHLKb4mpE0NRiJ8et35oFvrVIPhgTofOd",
+  "redirect": "https://sso-dev.dynatracelabs.com:443/saml2/login?SAMLRequest=fZJdb4IwGIXv9ytI76FQv7ARjJsxM3HRCO5id6V0WgOt61uY%2B%2FdD0UyTxcsm5zzvyTkdjY9l4dTCgNQqQoHnI0cornOpthHapDM3ROP4aQSsLMiBTiq7U2vxVQmwzgRAGNv4Xr",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "apps.cp-dev.pcf.dev.dynatracelabs.com": {
   "url": "http://apps.cp-dev.pcf.dev.dynatracelabs.com/",
@@ -830,12 +830,12 @@
   "title": "Login | Dynatrace",
   "redirect": "",
   "scripts": [
-   "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.a5d6b70ca4fd1878d04e.sso.js",
-   "https://test.sso-dev.dynatracelabs.com/ruxitagentjs_ICA15789MNPRTUVXfqrsuxz_10353261124143710.js"
+   "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.627e8e01bf06d9863536.sso.js",
+   "https://test.sso-dev.dynatracelabs.com/ruxitagentjs_ICA15789MNPRTUVXfqrsuxz_10353261126091629.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:57:39 UTC"
+  "last_checked": "2026-11-27 08:23:27 UTC"
  },
  "mail.dev201.dev.apps.dynatracelabs.com": {
   "url": "https://mail.dev201.dev.apps.dynatracelabs.com/",
@@ -846,5 +846,338 @@
   "catchall": false,
   "interesting": true,
   "last_checked": "2026-11-25 10:57:39 UTC"
+ },
+ "dev5.dev.da.dynatracelabs.com": {
+  "url": "https://dev5.dev.da.dynatracelabs.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "cf.dev.dynatracelabs.com": {
+  "url": "https://cf.dev.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-dev.dynatracelabs.com/410",
+  "scripts": [
+   "https://cf.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
+   "https://cf.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://cf.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://cf.dev.dynatracelabs.com/styles.e818930122582801.js",
+   "https://cf.dev.dynatracelabs.com/suppress-errors.js",
+   "https://cf.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "sso-sandboxg.sprint.dynatracelabs.com": {
+  "url": "https://sso-sandboxg.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "https://sso-sandboxg.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "https://sso-sandboxg.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://sso-sandboxg.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://sso-sandboxg.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "https://sso-sandboxg.sprint.dynatracelabs.com/suppress-errors.js",
+   "https://sso-sandboxg.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "davis-devy.sprint.dynatracelabs.com": {
+  "url": "https://davis-devy.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "https://davis-devy.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "https://davis-devy.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://davis-devy.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://davis-devy.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "https://davis-devy.sprint.dynatracelabs.com/suppress-errors.js",
+   "https://davis-devy.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "sse-ingest.dev.oc.fm.dynatracelabs.com": {
+  "url": "https://sse-ingest.dev.oc.fm.dynatracelabs.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "viptesty.sprint.dynatracelabs.com": {
+  "url": "https://viptesty.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "https://viptesty.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "https://viptesty.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://viptesty.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://viptesty.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "https://viptesty.sprint.dynatracelabs.com/suppress-errors.js",
+   "https://viptesty.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "ofrep.dev.eu.fm.dynatracelabs.com": {
+  "url": "https://ofrep.dev.eu.fm.dynatracelabs.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "cloudautomationm.dev.dynatracelabs.com": {
+  "url": "https://cloudautomationm.dev.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-dev.dynatracelabs.com/410",
+  "scripts": [
+   "https://cloudautomationm.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
+   "https://cloudautomationm.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://cloudautomationm.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://cloudautomationm.dev.dynatracelabs.com/styles.e818930122582801.js",
+   "https://cloudautomationm.dev.dynatracelabs.com/suppress-errors.js",
+   "https://cloudautomationm.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "tov08230.sprint.dynatracelabs.com": {
+  "url": "https://tov08230.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "https://tov08230.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "https://tov08230.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://tov08230.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://tov08230.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "https://tov08230.sprint.dynatracelabs.com/suppress-errors.js",
+   "https://tov08230.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "cdn.dev.hub.central.dynatracelabs.com": {
+  "url": "https://cdn.dev.hub.central.dynatracelabs.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "js-cdn2q.dev.dynatracelabs.com": {
+  "url": "https://js-cdn2q.dev.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-dev.dynatracelabs.com/410",
+  "scripts": [
+   "https://js-cdn2q.dev.dynatracelabs.com/main.12303103c0ebda5f.js",
+   "https://js-cdn2q.dev.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "https://js-cdn2q.dev.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "https://js-cdn2q.dev.dynatracelabs.com/styles.e818930122582801.js",
+   "https://js-cdn2q.dev.dynatracelabs.com/suppress-errors.js",
+   "https://js-cdn2q.dev.dynatracelabs.com/vendor.c0e40522590f40bc.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "timecockpit-api-gateway-prod.publicservices.dynatracelabs.com": {
+  "url": "https://timecockpit-api-gateway-prod.publicservices.dynatracelabs.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "mail.srv.apigw.dev103.dtp.dynatracelabs.com": {
+  "url": "https://mail.srv.apigw.dev103.dtp.dynatracelabs.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "slackbot.sso-sandbox.dynatracelabs.com": {
+  "url": "https://slackbot.sso-sandbox.dynatracelabs.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "learn-v2-stg.university.dynatracelabs.com": {
+  "url": "https://learn-v2-stg.university.dynatracelabs.com/",
+  "http_status": 200,
+  "title": "Dynatrace University",
+  "redirect": "",
+  "scripts": [
+   "https://learn-v2-stg.university.dynatracelabs.com/assets/index-5n_QM2FI.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "alliances.git.k3s.alliances.sprint.dynatracelabs.com": {
+  "url": "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/suppress-errors.js",
+   "http://alliances.git.k3s.alliances.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "mail.srv.apigw.dev8.dtp.dynatracelabs.com": {
+  "url": "https://mail.srv.apigw.dev8.dtp.dynatracelabs.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "community-sandbox.dynatracelabs.com": {
+  "url": "https://community-sandbox.dynatracelabs.com/auth/oidc",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://sso-dev.dynatracelabs.com/oauth2/authorize?client_id=dt0s11.discourse-community&code_challenge=c8LyW4bTwDqCKwYDMErUyZRBs6k5MKpyc9mB2UKd_jI&code_challenge_method=S256&nonce=985572536e56a9f98e7b",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com": {
+  "url": "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/suppress-errors.js",
+   "http://cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "wildcard.dev102.dev.apps.dynatracelabs.com": {
+  "url": "https://wildcard.dev102.dev.apps.dynatracelabs.com/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com": {
+  "url": "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/suppress-errors.js",
+   "http://flc-admin-stagingi.nimbus.dev.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "mcsvc-sandbox.dynatracelabs.com": {
+  "url": "https://mcsvc-sandbox.dynatracelabs.com/",
+  "http_status": 200,
+  "title": "mcsvc",
+  "redirect": "",
+  "scripts": [
+   "https://mcsvc-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_10353261126091629.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "gitu.k3s.alliances.sprint.dynatracelabs.com": {
+  "url": "http://gitu.k3s.alliances.sprint.dynatracelabs.com/",
+  "http_status": 302,
+  "title": "Account Management",
+  "redirect": "https://myaccount-hardening.dynatracelabs.com/410",
+  "scripts": [
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/main.a21e32464b2e10e2.js",
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/runtime.1b940da8631b08f6.js",
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/scripts.3de14a4057f1ffdf.js",
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/styles.e818930122582801.js",
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/suppress-errors.js",
+   "http://gitu.k3s.alliances.sprint.dynatracelabs.com/vendor.2e4a5bf2becc522e.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:22:34 UTC"
+ },
+ "learn-stg.alliances.dynatracelabs.com": {
+  "url": "https://learn-stg.alliances.dynatracelabs.com/",
+  "http_status": 200,
+  "title": "Technical alliances workshops",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
+ },
+ "mcsvc-dev.dynatracelabs.com": {
+  "url": "https://mcsvc-dev.dynatracelabs.com/",
+  "http_status": 200,
+  "title": "mcsvc",
+  "redirect": "",
+  "scripts": [
+   "https://mcsvc-dev.dynatracelabs.com/synthetic/v93/ruxitagentjs_ICA1589NPRTUXfqrsu_10353261126091629.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:23:27 UTC"
  }
 }

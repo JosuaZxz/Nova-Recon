@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "api.app.varonis.io": {
   "url": "https://api.app.varonis.io/",
@@ -198,7 +198,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "us-dc10.deployment.api.varonis.io": {
   "url": "https://us-dc10.deployment.api.varonis.io/",
@@ -222,7 +222,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "payoneer.varonis.io": {
   "url": "https://payoneer.varonis.io/",
@@ -236,7 +236,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "testcert.varonis.io": {
   "url": "https://testcert.varonis.io/",
@@ -280,7 +280,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "psg.deployment.api.varonis.io": {
   "url": "https://psg.deployment.api.varonis.io/",
@@ -334,7 +334,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "authuks.api.varonis.io": {
   "url": "https://authuks.api.varonis.io/",
@@ -354,7 +354,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 13:02:36 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "prereqtesteutenant.varonis.io": {
   "url": "https://prereqtesteutenant.varonis.io/",
@@ -368,7 +368,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "auth-us-dc05.api.varonis.io": {
   "url": "https://auth-us-dc05.api.varonis.io/",
@@ -378,7 +378,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 13:02:36 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "liveupdatemanager.varonis.com": {
   "url": "https://liveupdatemanager.varonis.com/",
@@ -388,7 +388,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "uae-dc01.deployment.api.varonis.io": {
   "url": "https://uae-dc01.deployment.api.varonis.io/",
@@ -398,7 +398,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 13:02:36 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "loginx.varonis.com": {
   "url": "https://loginx.varonis.com/",
@@ -408,7 +408,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "bistatedev-org.varonis.io": {
   "url": "https://bistatedev-org.varonis.io/",
@@ -422,7 +422,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "uat-help.varonis.com": {
   "url": "https://uat-help.varonis.com/s/",
@@ -432,7 +432,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "authupload.varonis.net": {
   "url": "https://authupload.varonis.net/",
@@ -442,7 +442,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "cbrecorp.varonis.io": {
   "url": "https://cbrecorp.varonis.io/",
@@ -456,7 +456,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "auth-us-dc08.api.varonis.io": {
   "url": "https://auth-us-dc08.api.varonis.io/",
@@ -466,7 +466,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "eastus2-registry-data.api.varonis.io": {
   "url": "https://eastus2-registry-data.api.varonis.io/",
@@ -476,7 +476,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "is-qa.varonis.com": {
   "url": "https://is-qa.varonis.com/",
@@ -486,7 +486,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "auth-eu-dc02.api.varonis.io": {
   "url": "https://auth-eu-dc02.api.varonis.io/",
@@ -496,7 +496,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "authus.api.varonis.io": {
   "url": "https://authus.api.varonis.io/",
@@ -506,7 +506,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "fdr01.deployment.api.varonis.io": {
   "url": "https://fdr01.deployment.api.varonis.io/",
@@ -516,7 +516,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "cloudatp-dashboard.varonis.com": {
   "url": "https://cloudatp-dashboard.varonis.com/",
@@ -526,7 +526,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "auth-eu-dc03.api.varonis.io": {
   "url": "https://auth-eu-dc03.api.varonis.io/",
@@ -536,7 +536,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "eu-dc04.deployment.api.varonis.io": {
   "url": "https://eu-dc04.deployment.api.varonis.io/",
@@ -546,7 +546,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "onboarding-stg.varonis.com": {
   "url": "https://onboarding-stg.varonis.com/",
@@ -556,7 +556,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "eu2.deployment.api.varonis.io": {
   "url": "https://eu2.deployment.api.varonis.io/",
@@ -566,7 +566,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "us-dc03.deployment.api.varonis.io": {
   "url": "https://us-dc03.deployment.api.varonis.io/",
@@ -576,7 +576,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "india-dc01.deployment.api.varonis.io": {
   "url": "https://india-dc01.deployment.api.varonis.io/",
@@ -586,7 +586,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "app.fdr.varonis.io": {
   "url": "https://app.fdr.varonis.io/",
@@ -605,7 +605,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "auth.api.varonis.io": {
   "url": "https://auth.api.varonis.io/",
@@ -615,7 +615,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "aue.deployment.api.varonis.io": {
   "url": "https://aue.deployment.api.varonis.io/",
@@ -625,7 +625,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "my-staging.varonis.io": {
   "url": "https://my-staging.varonis.io/",
@@ -635,7 +635,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "loginxcorp.varonis.com": {
   "url": "https://loginxcorp.varonis.com/",
@@ -645,7 +645,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "myvaronis-sf-stg-rd.varonis.com": {
   "url": "https://myvaronis-sf-stg-rd.varonis.com/",
@@ -655,7 +655,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "partneredu.varonis.com": {
   "url": "https://partneredu.varonis.com/",
@@ -665,7 +665,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "partners.varonis.com": {
   "url": "https://partners.varonis.com/",
@@ -675,7 +675,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "login.varonis.com": {
   "url": "https://login.varonis.com/",
@@ -685,7 +685,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "us-dc05.deployment.api.varonis.io": {
   "url": "https://us-dc05.deployment.api.varonis.io/",
@@ -695,7 +695,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "us.deployment.api.varonis.io": {
   "url": "https://us.deployment.api.varonis.io/",
@@ -705,7 +705,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "content-new.varonis.io": {
   "url": "https://content-new.varonis.io/",
@@ -715,7 +715,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "cac.deployment.api.varonis.io": {
   "url": "https://cac.deployment.api.varonis.io/",
@@ -725,7 +725,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "escalation-manager-service.varonis.com": {
   "url": "https://escalation-manager-service.varonis.com/",
@@ -735,7 +735,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "us-dc09.deployment.api.varonis.io": {
   "url": "https://us-dc09.deployment.api.varonis.io/",
@@ -745,7 +745,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "loginx-fdr.varonis.io": {
   "url": "https://loginx-fdr.varonis.io/",
@@ -755,7 +755,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:53:41 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "switzerland-dc01.deployment.api.varonis.io": {
   "url": "https://switzerland-dc01.deployment.api.varonis.io/",
@@ -779,7 +779,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "singapore-dc01.deployment.api.varonis.io": {
   "url": "https://singapore-dc01.deployment.api.varonis.io/",
@@ -799,7 +799,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "wsdevelopment.varonis.io": {
   "url": "https://wsdevelopment.varonis.io/",
@@ -813,7 +813,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "mdvpn.varonis.com": {
   "url": "https://mdvpn.varonis.com/",
@@ -833,7 +833,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "gassouth.varonis.io": {
   "url": "https://gassouth.varonis.io/",
@@ -847,7 +847,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "partners-cap.varonis.io": {
   "url": "https://partners-cap.varonis.io/",
@@ -861,7 +861,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "uat-central.varonis.com": {
   "url": "https://uat-central.varonis.com/s/",
@@ -871,7 +871,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "texascapital.varonis.io": {
   "url": "https://texascapital.varonis.io/",
@@ -885,7 +885,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "weu.deployment.api.varonis.io": {
   "url": "https://weu.deployment.api.varonis.io/",
@@ -909,7 +909,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "india-netsuite-api.varonis.com": {
   "url": "https://india-netsuite-api.varonis.com/",
@@ -933,7 +933,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "dev-help.varonis.com": {
   "url": "https://dev-help.varonis.com/s/",
@@ -943,7 +943,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
  },
  "is-uat.varonis.com": {
   "url": "https://is-uat.varonis.com/",
@@ -953,6 +953,704 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:54:31 UTC"
+  "last_checked": "2026-11-27 08:20:31 UTC"
+ },
+ "atlas.pentest.varonis.io": {
+  "url": "https://atlas.pentest.varonis.io/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:31 UTC"
+ },
+ "analytics-proxy.pentest.varonis.io": {
+  "url": "https://analytics-proxy.pentest.varonis.io/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "api-v2.pentest.varonis.io": {
+  "url": "https://api-v2.pentest.varonis.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "saas.pentest.varonis.io": {
+  "url": "https://saas.pentest.varonis.io/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:31 UTC"
+ },
+ "auth.pentest.varonis.io": {
+  "url": "https://auth.pentest.varonis.io/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "licensemgmt-salesforce.varonis.com": {
+  "url": "https://licensemgmt-salesforce.varonis.com/",
+  "http_status": 503,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "api.pentest.varonis.io": {
+  "url": "https://api.pentest.varonis.io/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:31 UTC"
+ },
+ "dedicated-amazon-dc01.deployment.api.varonis.io": {
+  "url": "https://dedicated-amazon-dc01.deployment.api.varonis.io/",
+  "http_status": 400,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "learn.varonis.com": {
+  "url": "https://learn.varonis.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "jp.varonis.com": {
+  "url": "https://jp.varonis.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "content.varonis.io": {
+  "url": "https://content.varonis.io/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "gsblink.varonis.com": {
+  "url": "https://gsblink.varonis.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "sfclusterprduks.varonis.io": {
+  "url": "https://sfclusterprduks.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "blobs.usw2.app.varonis.io": {
+  "url": "https://blobs.usw2.app.varonis.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "equitrust.varonis.io": {
+  "url": "https://equitrust.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "sfclusterpsg.varonis.io": {
+  "url": "https://sfclusterpsg.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.varonis.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "hhsc.varonis.io": {
+  "url": "https://hhsc.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "odgersberndtson.varonis.io": {
+  "url": "https://odgersberndtson.varonis.io/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://odgers.varonis.io/redirected",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "dallascounty.varonis.io": {
+  "url": "https://dallascounty.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "cityofpsl.varonis.io": {
+  "url": "https://cityofpsl.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "events.varonis.com": {
+  "url": "https://events.varonis.com/",
+  "http_status": 403,
+  "title": "varonis.com",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "generali.varonis.io": {
+  "url": "https://generali.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "gcefcu.varonis.io": {
+  "url": "https://gcefcu.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "nmdot-gov.varonis.io": {
+  "url": "https://nmdot-gov.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "burnet.varonis.io": {
+  "url": "https://burnet.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "fundsmith.varonis.io": {
+  "url": "https://fundsmith.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "abcsupply.varonis.io": {
+  "url": "https://abcsupply.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "sbdinc.varonis.io": {
+  "url": "https://sbdinc.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "aeltc.varonis.io": {
+  "url": "https://aeltc.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "eamc.varonis.io": {
+  "url": "https://eamc.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "dori.varonis.io": {
+  "url": "https://dori.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "cofaq.varonis.io": {
+  "url": "https://cofaq.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "eletrobras.varonis.io": {
+  "url": "https://eletrobras.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "dccc-edu.varonis.io": {
+  "url": "https://dccc-edu.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "blobs.app.varonis.io": {
+  "url": "https://blobs.app.varonis.io/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "copt-dp.varonis.io": {
+  "url": "https://copt-dp.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "ferrara.varonis.io": {
+  "url": "https://ferrara.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "cut-ac-za.varonis.io": {
+  "url": "https://cut-ac-za.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "heart.varonis.io": {
+  "url": "https://heart.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "highmarkhealth.varonis.io": {
+  "url": "https://highmarkhealth.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "stratasys.varonis.io": {
+  "url": "https://stratasys.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "gflenv.varonis.io": {
+  "url": "https://gflenv.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "corus.varonis.io": {
+  "url": "https://corus.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "upcic.varonis.io": {
+  "url": "https://upcic.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "bhsf.varonis.io": {
+  "url": "https://bhsf.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "csbs.varonis.io": {
+  "url": "https://csbs.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "covenant.varonis.io": {
+  "url": "https://covenant.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "dhpace.varonis.io": {
+  "url": "https://dhpace.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "cbn.varonis.io": {
+  "url": "https://cbn.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "farmcrediteast.varonis.io": {
+  "url": "https://farmcrediteast.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "sempra.varonis.io": {
+  "url": "https://sempra.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "griffithcompany.varonis.io": {
+  "url": "https://griffithcompany.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "gilbane.varonis.io": {
+  "url": "https://gilbane.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "dcyf.varonis.io": {
+  "url": "https://dcyf.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
+ },
+ "softcat.varonis.io": {
+  "url": "https://softcat.varonis.io/",
+  "http_status": 200,
+  "title": "Varonis",
+  "redirect": "",
+  "scripts": [
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/supported-browsers.js",
+   "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
+   "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js"
+  ],
+  "catchall": true,
+  "interesting": false,
+  "last_checked": "2026-11-27 08:20:02 UTC"
  }
 }
