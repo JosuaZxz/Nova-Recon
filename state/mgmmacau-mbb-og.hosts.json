@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "almangooneapi.mgm.mo": {
   "url": "https://almangooneapi.mgm.mo/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "preview-fanzone.mgm.mo": {
   "url": "https://preview-fanzone.mgm.mo/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "carparkapi.mgm.mo": {
   "url": "https://carparkapi.mgm.mo/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "scapi.tickets.mgm.mo": {
   "url": "https://scapi.tickets.mgm.mo/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "acapi.tickets.mgm.mo": {
   "url": "https://acapi.tickets.mgm.mo/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "taapi.tickets.mgm.mo": {
   "url": "https://taapi.tickets.mgm.mo/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "almangoonecms.mgm.mo": {
   "url": "https://almangoonecms.mgm.mo/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "box.tickets.mgm.mo": {
   "url": "https://box.tickets.mgm.mo/",
@@ -90,7 +90,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "mgmmacau.com": {
   "url": "https://mgmmacau.com/",
@@ -100,7 +100,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "support.mgm.mo": {
   "url": "https://support.mgm.mo/",
@@ -113,7 +113,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "adfs.mgm.mo": {
   "url": "https://adfs.mgm.mo/",
@@ -123,7 +123,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "mgmwebcdn.mgm.mo": {
   "url": "https://mgmwebcdn.mgm.mo/",
@@ -133,7 +133,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "ra.mgm.mo": {
   "url": "https://ra.mgm.mo/",
@@ -143,7 +143,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "essprint.mgm.mo": {
   "url": "https://essprint.mgm.mo/",
@@ -155,7 +155,7 @@
   ],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
  },
  "roster.mgm.mo": {
   "url": "https://roster.mgm.mo/my.logout.php3?errorcode=19",
@@ -168,6 +168,236 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 08:31:46 UTC"
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "mdls.mgm.mo": {
+  "url": "https://mdls.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "mlifeinsider.mgm.mo": {
+  "url": "https://mlifeinsider.mgm.mo/roster",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://ess.mgm.mo/roster",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "lmg.mgm.mo": {
+  "url": "https://lmg.mgm.mo/",
+  "http_status": 200,
+  "title": "React App",
+  "redirect": "",
+  "scripts": [
+   "https://lmg.mgm.mo/static/js/main.b57de812.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "dlbooking.mgm.mo": {
+  "url": "https://dlbooking.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "autodiscover.mgmmacau.com": {
+  "url": "https://autodiscover.mgmmacau.com/",
+  "http_status": 200,
+  "title": "Request Rejected",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "mlife.mo": {
+  "url": "https://mlife.mo/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "hybrid.mgm.mo": {
+  "url": "https://hybrid.mgm.mo/",
+  "http_status": 200,
+  "title": "Request Rejected",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "autodiscover.mgm.mo": {
+  "url": "https://autodiscover.mgm.mo/",
+  "http_status": 200,
+  "title": "Request Rejected",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "ews.mgmmacau.com": {
+  "url": "https://ews.mgmmacau.com/owa/",
+  "http_status": 302,
+  "title": "Object moved",
+  "redirect": "https://login.windows.net/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2fews.mgmmacau.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&resp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "mlifeinsider.mgmmacau.com": {
+  "url": "https://mlifeinsider.mgmmacau.com/roster",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://ess.mgm.mo/roster",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "jobs.mgm.mo": {
+  "url": "https://jobs.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "www.mgmmacau.com": {
+  "url": "https://www.mgmmacau.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://www.mgm.mo",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "hybrid.mgmmacau.com": {
+  "url": "https://hybrid.mgmmacau.com/",
+  "http_status": 200,
+  "title": "Request Rejected",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "jobs.mgmmacau.com": {
+  "url": "https://jobs.mgmmacau.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://jobs.mgm.mo",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "fanzone-cdn.mgm.mo": {
+  "url": "https://fanzone-cdn.mgm.mo/",
+  "http_status": 405,
+  "title": "405",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "fanzone.mgm.mo": {
+  "url": "https://fanzone.mgm.mo/en/home",
+  "http_status": 200,
+  "title": "Home | MGM Fan Zone",
+  "redirect": "https://fanzone.mgm.mo/en/home",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "www.mgm.mo": {
+  "url": "https://www.mgm.mo/en",
+  "http_status": 200,
+  "title": "MGM MACAU and MGM COTAI world-class entertainment",
+  "redirect": "https://www.mgm.mo/en",
+  "scripts": [
+   "https://www.mgm.mo/_next/static/chunks/1238-c91c156fd7bc0f4d.js",
+   "https://www.mgm.mo/_next/static/chunks/1930-89e84b4e7e4ffe1c.js",
+   "https://www.mgm.mo/_next/static/chunks/1936-07a6bf9864433e1b.js",
+   "https://www.mgm.mo/_next/static/chunks/3459-75719a9f328671a7.js",
+   "https://www.mgm.mo/_next/static/chunks/3473-97d18c076adad8d2.js",
+   "https://www.mgm.mo/_next/static/chunks/3635-13bc6518567e2fca.js",
+   "https://www.mgm.mo/_next/static/chunks/3716-126db6266848e8be.js",
+   "https://www.mgm.mo/_next/static/chunks/3794-907785a527d8128b.js",
+   "https://www.mgm.mo/_next/static/chunks/4901-ff9afbcdb89b6a90.js",
+   "https://www.mgm.mo/_next/static/chunks/4bd1b696-e356ca5ba0218e27.js",
+   "https://www.mgm.mo/_next/static/chunks/6259-547d1aa9e3338e5e.js",
+   "https://www.mgm.mo/_next/static/chunks/6558-bcba60214c0d682b.js",
+   "https://www.mgm.mo/_next/static/chunks/6609-078a8cdc853f87c6.js",
+   "https://www.mgm.mo/_next/static/chunks/7123-9ede03697742ed19.js",
+   "https://www.mgm.mo/_next/static/chunks/8287-f0c79b73dd2810e6.js",
+   "https://www.mgm.mo/_next/static/chunks/9015-a4375d3131c3609b.js",
+   "https://www.mgm.mo/_next/static/chunks/9436-4f49efc59f677592.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/%5B%5B...slugs%5D%5D/page-9fa9b366eae48903.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/layout-d5c6b6e350ad9ce0.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/layout-bf6e16a2875b4437.js",
+   "https://www.mgm.mo/_next/static/chunks/app/layout-15c958276f10c79c.js",
+   "https://www.mgm.mo/_next/static/chunks/main-app-dd34b0e775cca20f.js",
+   "https://www.mgm.mo/_next/static/chunks/webpack-cd9c2aec9e2f0e34.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
+ },
+ "mgm.mo": {
+  "url": "https://www.mgm.mo/en",
+  "http_status": 200,
+  "title": "MGM MACAU and MGM COTAI world-class entertainment",
+  "redirect": "https://www.mgm.mo/en",
+  "scripts": [
+   "https://www.mgm.mo/_next/static/chunks/1238-c91c156fd7bc0f4d.js",
+   "https://www.mgm.mo/_next/static/chunks/1930-89e84b4e7e4ffe1c.js",
+   "https://www.mgm.mo/_next/static/chunks/1936-07a6bf9864433e1b.js",
+   "https://www.mgm.mo/_next/static/chunks/3459-75719a9f328671a7.js",
+   "https://www.mgm.mo/_next/static/chunks/3473-97d18c076adad8d2.js",
+   "https://www.mgm.mo/_next/static/chunks/3635-13bc6518567e2fca.js",
+   "https://www.mgm.mo/_next/static/chunks/3716-126db6266848e8be.js",
+   "https://www.mgm.mo/_next/static/chunks/3794-907785a527d8128b.js",
+   "https://www.mgm.mo/_next/static/chunks/4901-ff9afbcdb89b6a90.js",
+   "https://www.mgm.mo/_next/static/chunks/4bd1b696-e356ca5ba0218e27.js",
+   "https://www.mgm.mo/_next/static/chunks/6259-547d1aa9e3338e5e.js",
+   "https://www.mgm.mo/_next/static/chunks/6558-bcba60214c0d682b.js",
+   "https://www.mgm.mo/_next/static/chunks/6609-078a8cdc853f87c6.js",
+   "https://www.mgm.mo/_next/static/chunks/7123-9ede03697742ed19.js",
+   "https://www.mgm.mo/_next/static/chunks/8287-f0c79b73dd2810e6.js",
+   "https://www.mgm.mo/_next/static/chunks/9015-a4375d3131c3609b.js",
+   "https://www.mgm.mo/_next/static/chunks/9436-4f49efc59f677592.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/%5B%5B...slugs%5D%5D/page-9fa9b366eae48903.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/layout-d5c6b6e350ad9ce0.js",
+   "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/layout-bf6e16a2875b4437.js",
+   "https://www.mgm.mo/_next/static/chunks/app/layout-15c958276f10c79c.js",
+   "https://www.mgm.mo/_next/static/chunks/main-app-dd34b0e775cca20f.js",
+   "https://www.mgm.mo/_next/static/chunks/webpack-cd9c2aec9e2f0e34.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-27 10:25:54 UTC"
  }
 }

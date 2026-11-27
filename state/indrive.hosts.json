@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "trustgame.indrive.com": {
   "url": "https://trustgame.indrive.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "api-gw-cf.latam-br.saea1.aws.indriverapp.com": {
   "url": "https://api-gw-cf.latam-br.saea1.aws.indriverapp.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "www.trustgame.indrive.com": {
   "url": "https://www.trustgame.indrive.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "static.securepay.aws.indriverapp.com": {
   "url": "https://static.securepay.aws.indriverapp.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "api-gw-cf.latam-mx.usea1.aws.indriverapp.com": {
   "url": "https://api-gw-cf.latam-mx.usea1.aws.indriverapp.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "api-gw-cf.latam.saea1.aws.indriverapp.com": {
   "url": "https://api-gw-cf.latam.saea1.aws.indriverapp.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "api-gw-cf.latam-co.saea1.aws.indriverapp.com": {
   "url": "https://api-gw-cf.latam-co.saea1.aws.indriverapp.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "www.api.platform.jlml.indrive.com": {
   "url": "https://api.platform.jlml.indrive.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "balance-api.eu-east-1.indriverapp.com": {
   "url": "https://balance-api.eu-east-1.indriverapp.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
  },
  "wpcms.indrive.com": {
   "url": "https://wpcms.indrive.com/wp-admin/",
@@ -108,6 +108,86 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:35:02 UTC"
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "api-gw-cf.euce1.indriverapp.com": {
+  "url": "https://api-gw-cf.euce1.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "api.platform.jlml.indrive.com": {
+  "url": "https://api.platform.jlml.indrive.com/",
+  "http_status": 404,
+  "title": "Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "api-gw-cf.mena-eg.euso1.aws.indriverapp.com": {
+  "url": "https://api-gw-cf.mena-eg.euso1.aws.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "api-gw-cf.africa.afso1.aws.indriverapp.com": {
+  "url": "https://api-gw-cf.africa.afso1.aws.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "api-gw-cf.sa.apse1.aws.indriverapp.com": {
+  "url": "https://api-gw-cf.sa.apse1.aws.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "pay-cf.euce1.indriverapp.com": {
+  "url": "https://pay-cf.euce1.indriverapp.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "sn-api-gw-cf.eu.euce1.aws.indriverapp.com": {
+  "url": "https://sn-api-gw-cf.eu.euce1.aws.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
+ },
+ "ab-api-gw-cf.global.aws.indriverapp.com": {
+  "url": "https://ab-api-gw-cf.global.aws.indriverapp.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:29:28 UTC"
  }
 }

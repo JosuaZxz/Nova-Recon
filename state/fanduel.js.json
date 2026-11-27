@@ -40,5 +40,47 @@
   "routes": [],
   "graphql_ops": [],
   "updated": "2026-11-25 22:51:49 UTC"
+ },
+ "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/index.js": {
+  "last_url": "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/index.js",
+  "sha256": "2fb679b0f2d339c902cd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:52 UTC"
+ },
+ "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/_app.js": {
+  "last_url": "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/_app.js",
+  "sha256": "b8989af927f3b4b538a5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:52 UTC"
+ },
+ "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/_error.js": {
+  "last_url": "https://login.tvg.com/_next/static/d1fmdk9~bg~jDRws9XRxz/pages/_error.js",
+  "sha256": "35bac2de705e7dee0c13",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:52 UTC"
+ },
+ "https://login.tvg.com/_next/static/runtime/webpack-HASH.js": {
+  "last_url": "https://login.tvg.com/_next/static/runtime/webpack-42652fa8b82c329c0559.js",
+  "sha256": "404ae79ad9b03e630477",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:52 UTC"
+ },
+ "https://login.tvg.com/_next/static/chunks/commons.HASH.js": {
+  "last_url": "https://login.tvg.com/_next/static/chunks/commons.3a9e8f4f2071dac08073.js",
+  "sha256": "c292f746d28223c5ca24",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:53 UTC"
+ },
+ "https://login.tvg.com/_next/static/runtime/main-HASH.js": {
+  "last_url": "https://login.tvg.com/_next/static/runtime/main-19bb844e60a9dc9251cd.js",
+  "sha256": "f22f4b2c432db5410278",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 10:37:53 UTC"
  }
 }

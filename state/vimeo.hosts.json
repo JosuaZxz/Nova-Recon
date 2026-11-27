@@ -318,7 +318,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "dash-ingest-dev.cloud.vimeo.com": {
   "url": "https://dash-ingest-dev.cloud.vimeo.com/",
@@ -338,7 +338,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "dev.vhx.tv": {
   "url": "https://dev.vhx.tv/",
@@ -351,7 +351,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "componeocovidevdemonmailserverm.vhx.tv": {
   "url": "https://componeocovidevdemonmailserverm.vhx.tv/",
@@ -405,23 +405,23 @@
  },
  "gws-qa.vhx.tv": {
   "url": "https://gws-qa.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "gcom-product-find-qa.vhx.tv": {
   "url": "https://gcom-product-find-qa.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "deafinitelydigital.vhx.tv": {
   "url": "https://deafinitelydigital.vhx.tv/",
@@ -435,43 +435,43 @@
  },
  "dirttv1.vhx.tv": {
   "url": "https://dirttv1.vhx.tv/",
-  "http_status": 301,
-  "title": "",
-  "redirect": "https://www.dirt.tv/",
-  "scripts": [],
-  "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
- },
- "blossom.vhx.tv": {
-  "url": "https://blossom.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "blossom.vhx.tv": {
+  "url": "https://blossom.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "tbnadtest.vhx.tv": {
   "url": "https://tbnadtest.vhx.tv/",
-  "http_status": 301,
-  "title": "",
-  "redirect": "https://watch.tbnnow.info/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "trevornoahlostintranslation.vhx.tv": {
   "url": "https://trevornoahlostintranslation.vhx.tv/",
-  "http_status": 301,
-  "title": "",
-  "redirect": "https://trevornoah.comedydirect.com/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "dash-ingest-2-dev.cloud.vimeo.com": {
   "url": "https://dash-ingest-2-dev.cloud.vimeo.com/",
@@ -481,37 +481,37 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "robbtvpremium.vhx.tv": {
   "url": "https://robbtvpremium.vhx.tv/",
-  "http_status": 301,
-  "title": "",
-  "redirect": "https://www.robbtv.com/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "nakednewsuncovered-mailin2.vhx.tv": {
   "url": "https://nakednewsuncovered-mailin2.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "beatauthorrecords.vhx.tv": {
   "url": "https://beatauthorrecords.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "corpstechnique.vhx.tv": {
   "url": "https://corpstechnique.vhx.tv/",
@@ -525,33 +525,33 @@
  },
  "megassociatesseminars.vhx.tv": {
   "url": "https://megassociatesseminars.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "tobetakei.vhx.tv": {
   "url": "https://tobetakei.vhx.tv/",
-  "http_status": 301,
-  "title": "",
-  "redirect": "https://www.tobetakei.com/",
-  "scripts": [],
-  "catchall": false,
-  "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
- },
- "nakednewsuncoveredbbs.vhx.tv": {
-  "url": "https://nakednewsuncoveredbbs.vhx.tv/",
-  "http_status": 404,
-  "title": "Not Found (404)",
+  "http_status": 429,
+  "title": "Just a moment...",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:23:34 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "nakednewsuncoveredbbs.vhx.tv": {
+  "url": "https://nakednewsuncoveredbbs.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "horseprotv1.vhx.tv": {
   "url": "https://horseprotv1.vhx.tv/",
@@ -611,7 +611,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "gcom-product-find-dev.vhx.tv": {
   "url": "https://gcom-product-find-dev.vhx.tv/",
@@ -641,7 +641,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "worlddancenewyork.vhx.tv": {
   "url": "https://worlddancenewyork.vhx.tv/",
@@ -661,7 +661,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "protestthehero.vhx.tv": {
   "url": "https://protestthehero.vhx.tv/",
@@ -901,7 +901,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 08:25:28 UTC"
+  "last_checked": "2026-11-27 10:17:59 UTC"
  },
  "bizzbuzzdigitalmarketing.vhx.tv": {
   "url": "https://bizzbuzzdigitalmarketing.vhx.tv/",
@@ -1372,5 +1372,1125 @@
   "catchall": false,
   "interesting": true,
   "last_checked": "2026-11-24 08:25:28 UTC"
+ },
+ "cim-api-uatk.vhx.tv": {
+  "url": "https://cim-api-uatk.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "alleytest.vhx.tv": {
+  "url": "https://alleytest.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "fltest.vhx.tv": {
+  "url": "https://fltest.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "dns1nakednewsuncovered.vhx.tv": {
+  "url": "https://dns1nakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nakednewsuncovered-mx0.vhx.tv": {
+  "url": "https://nakednewsuncovered-mx0.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "wwwnakednewsuncovered.vhx.tv": {
+  "url": "https://wwwnakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nakednewsuncovered-webmail.vhx.tv": {
+  "url": "https://nakednewsuncovered-webmail.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "knowledgeportaltv.vhx.tv": {
+  "url": "https://knowledgeportaltv.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "youssoundour.vhx.tv": {
+  "url": "https://youssoundour.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "nakednewsuncoveredsupport.vhx.tv": {
+  "url": "https://nakednewsuncoveredsupport.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "academycorporation.vhx.tv": {
+  "url": "https://academycorporation.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "glamourgesso.vhx.tv": {
+  "url": "https://glamourgesso.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "brightlightnews.vhx.tv": {
+  "url": "https://brightlightnews.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "gws-uathj.vhx.tv": {
+  "url": "https://gws-uathj.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "badmintonenglandtv.vhx.tv": {
+  "url": "https://badmintonenglandtv.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "meganderosavhxtv1.vhx.tv": {
+  "url": "https://meganderosavhxtv1.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "tpwpremium1.vhx.tv": {
+  "url": "https://tpwpremium1.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.tpwpremium.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "petv360.vhx.tv": {
+  "url": "https://petv360.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "mailchimpoauth.vimeo.com": {
+  "url": "https://mailchimpoauth.vimeo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://vimeo.com/settings/marketing/provider/mailchimp",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "chinasandbox1.china.vimeo.com": {
+  "url": "https://chinasandbox1.china.vimeo.com/",
+  "http_status": 403,
+  "title": "Vimeo / Something went wrong",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "faithpresents.vhx.tv": {
+  "url": "https://faithpresents.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "themovementprescription.vhx.tv": {
+  "url": "https://themovementprescription.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "paymentscanada.vhx.tv": {
+  "url": "https://paymentscanada.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "wawotv3.vhx.tv": {
+  "url": "https://wawotv3.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "presidentialproductions.vhx.tv": {
+  "url": "https://presidentialproductions.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "digitaldance2.vhx.tv": {
+  "url": "https://digitaldance2.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://tv.terminusmbt.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "tamaranewellwellness.vhx.tv": {
+  "url": "https://tamaranewellwellness.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "testcofiles.vhx.tv": {
+  "url": "https://testcofiles.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "passiondigitalallaccess.vhx.tv": {
+  "url": "https://passiondigitalallaccess.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.passiondigitalallaccess.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "magentodevelopment.vhx.tv": {
+  "url": "https://magentodevelopment.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "brillianttvsandbox.vhx.tv": {
+  "url": "https://brillianttvsandbox.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "vpncovetthyneighbor.vhx.tv": {
+  "url": "https://vpncovetthyneighbor.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nakednewsuncoveredtest.vhx.tv": {
+  "url": "https://nakednewsuncoveredtest.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "mx7nakednewsuncovered.vhx.tv": {
+  "url": "https://mx7nakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "trustgreedbulletsandbourbon.vhx.tv": {
+  "url": "https://trustgreedbulletsandbourbon.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "mx0nakednewsuncovered.vhx.tv": {
+  "url": "https://mx0nakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "autilityponeocovid19-sa-api.vhx.tv": {
+  "url": "https://autilityponeocovid19-sa-api.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "mx01nakednewsuncovered.vhx.tv": {
+  "url": "https://mx01nakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "ciostage.vhx.tv": {
+  "url": "https://ciostage.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "mm-digital.vhx.tv": {
+  "url": "https://mm-digital.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "risingstardigital.vhx.tv": {
+  "url": "https://risingstardigital.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "barrygreenevideolessons.vhx.tv": {
+  "url": "https://barrygreenevideolessons.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "devtvoffic.vhx.tv": {
+  "url": "https://devtvoffic.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "bbsnakednewsuncovered.vhx.tv": {
+  "url": "https://bbsnakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "pre.vhx.tv": {
+  "url": "https://pre.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "northwestgeorgiamedia.vhx.tv": {
+  "url": "https://northwestgeorgiamedia.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "starlord-dev.vimeo.com": {
+  "url": "https://starlord-dev.vimeo.com/",
+  "http_status": 415,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "videoapi-artax-us-west1-dev.cloud.vimeo.com": {
+  "url": "https://videoapi-artax-us-west1-dev.cloud.vimeo.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nakednewsuncovered-test.vhx.tv": {
+  "url": "https://nakednewsuncovered-test.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "ryosdrumlesson.vhx.tv": {
+  "url": "https://ryosdrumlesson.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "dynamicpilatestv.vhx.tv": {
+  "url": "https://dynamicpilatestv.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://app.dynamicpilatestv.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "renewalinternationalvideos.vhx.tv": {
+  "url": "https://renewalinternationalvideos.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "thezvirustest.vhx.tv": {
+  "url": "https://thezvirustest.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "informedpregnancy1.vhx.tv": {
+  "url": "https://informedpregnancy1.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.informedpregnancy.tv/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "meintraining.vhx.tv": {
+  "url": "https://meintraining.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "new.vhx.tv": {
+  "url": "https://new.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nightclubnewyork.vhx.tv": {
+  "url": "https://nightclubnewyork.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "energy-lessons.vhx.tv": {
+  "url": "https://energy-lessons.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.lessons.energy/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "activistgraduateschool.vhx.tv": {
+  "url": "https://activistgraduateschool.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.activistschool.org/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "southerneconomicdevelopmentcouncil.vhx.tv": {
+  "url": "https://southerneconomicdevelopmentcouncil.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "equalityequineauthentichearthorsemanship.vhx.tv": {
+  "url": "https://equalityequineauthentichearthorsemanship.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "oneislamtv1.vhx.tv": {
+  "url": "https://oneislamtv1.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.oneislam.tv/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "basic-nodejs-dev.vhx.tv": {
+  "url": "https://basic-nodejs-dev.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "auth.vhx.tv": {
+  "url": "https://auth.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://vimeo.com/ott/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "starshineworkshop.vhx.tv": {
+  "url": "https://starshineworkshop.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "thezvirusdev.vhx.tv": {
+  "url": "https://thezvirusdev.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "soulonewyork.vhx.tv": {
+  "url": "https://soulonewyork.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://live.soulonewyork.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "favunitetv2.vhx.tv": {
+  "url": "https://favunitetv2.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "integralyogatv1.vhx.tv": {
+  "url": "https://integralyogatv1.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "museumtrusteeassociation.vhx.tv": {
+  "url": "https://museumtrusteeassociation.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "nakednewsuncoveredmail.vhx.tv": {
+  "url": "https://nakednewsuncoveredmail.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "bodyselfietv1.vhx.tv": {
+  "url": "https://bodyselfietv1.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "thezvirus-vpn.vhx.tv": {
+  "url": "https://thezvirus-vpn.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "insidemontessori.vhx.tv": {
+  "url": "https://insidemontessori.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "gprecordsvideo3.vhx.tv": {
+  "url": "https://gprecordsvideo3.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "componeocovidevdemon.mx7-sa.vhx.tv": {
+  "url": "http://componeocovidevdemon.mx7-sa.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "thegreatestfight.vhx.tv": {
+  "url": "https://thegreatestfight.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "viewmaster-gke-dev-europe-west3.cloud.vimeo.com": {
+  "url": "https://viewmaster-gke-dev-europe-west3.cloud.vimeo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "elvigilantetest6.vhx.tv": {
+  "url": "https://elvigilantetest6.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "bedforddevil.vhx.tv": {
+  "url": "https://bedforddevil.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "newdawn.vhx.tv": {
+  "url": "https://newdawn.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "testsa.vhx.tv": {
+  "url": "https://testsa.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "dev.vimeo.com": {
+  "url": "https://dev.vimeo.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://developer.vimeo.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "newparadigmno.vhx.tv": {
+  "url": "https://newparadigmno.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "devolverdigital.vhx.tv": {
+  "url": "https://devolverdigital.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "checkout-dev.vimeo.com": {
+  "url": "https://checkout-dev.vimeo.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "autilityponeocovid19-sa-testc.vhx.tv": {
+  "url": "https://autilityponeocovid19-sa-testc.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "presnap.vhx.tv": {
+  "url": "https://presnap.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "webdevforyou.vhx.tv": {
+  "url": "https://webdevforyou.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "newell.vhx.tv": {
+  "url": "https://newell.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://watch.prismacolor.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "testautilityponeocovid19-sa.vhx.tv": {
+  "url": "https://testautilityponeocovid19-sa.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "cuplogin.vhx.tv": {
+  "url": "https://cuplogin.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "fittestcore.vhx.tv": {
+  "url": "https://fittestcore.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "portalsa.vhx.tv": {
+  "url": "https://portalsa.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "damedashstudios.vhx.tv": {
+  "url": "https://damedashstudios.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "guatemalatv.vhx.tv": {
+  "url": "https://guatemalatv.vhx.tv/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.guatemalaplus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "wowpresentsplus1.vhx.tv": {
+  "url": "https://wowpresentsplus1.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "lol-staging.vhx.tv": {
+  "url": "https://lol-staging.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "staticiv1.vhx.tv": {
+  "url": "https://staticiv1.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "coxpregnancyandbirthsupport.vhx.tv": {
+  "url": "https://coxpregnancyandbirthsupport.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "2019nakednewsuncovered.vhx.tv": {
+  "url": "https://2019nakednewsuncovered.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "arthousedigital.vhx.tv": {
+  "url": "https://arthousedigital.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "magnoliapictures.vhx.tv": {
+  "url": "https://magnoliapictures.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "newimportpipeline.vhx.tv": {
+  "url": "https://newimportpipeline.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "lightscamerafund12newyearmovie.vhx.tv": {
+  "url": "https://lightscamerafund12newyearmovie.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "childrenstheatredigital1.vhx.tv": {
+  "url": "https://childrenstheatredigital1.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "teachertoteacherpress.vhx.tv": {
+  "url": "https://teachertoteacherpress.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "passedbutpresent.vhx.tv": {
+  "url": "https://passedbutpresent.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
+ },
+ "gws-uat.vhx.tv": {
+  "url": "https://gws-uat.vhx.tv/",
+  "http_status": 404,
+  "title": "Not Found (404)",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "devcoronavirus-warning-banner.cofiles.vhx.tv": {
+  "url": "http://devcoronavirus-warning-banner.cofiles.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "componeocovidevdemon.sa.web.vhx.tv": {
+  "url": "http://componeocovidevdemon.sa.web.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:16:11 UTC"
+ },
+ "newblackcinemaplus.vhx.tv": {
+  "url": "https://newblackcinemaplus.vhx.tv/",
+  "http_status": 429,
+  "title": "Just a moment...",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-27 10:17:59 UTC"
  }
 }
