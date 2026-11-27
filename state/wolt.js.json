@@ -205,7 +205,7 @@
   "sha256": "5da14eec825c11290583",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:19:24 UTC"
+  "updated": "2026-11-27 22:52:30 UTC"
  },
  "https://corporate.wolt.com/main.HASH.js": {
   "last_url": "https://corporate.wolt.com/main.1ffcb486c24aa55b9461.js",
@@ -243,5 +243,56 @@
   ],
   "graphql_ops": [],
   "updated": "2026-11-26 10:19:25 UTC"
+ },
+ "https://fulfillment-admin.wolt.com/versioned/42bbc1dfddae9c905a0abdc0a563fac7fa9312a0/assets/index-BE_Hr02y.js": {
+  "last_url": "https://fulfillment-admin.wolt.com/versioned/42bbc1dfddae9c905a0abdc0a563fac7fa9312a0/assets/index-BE_Hr02y.js",
+  "sha256": "ffac0e08c249233b704b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:10 UTC"
+ },
+ "https://fulfillment-admin.wolt.com/versioned/42bbc1dfddae9c905a0abdc0a563fac7fa9312a0/assets/esm-DoZqMbrl.js": {
+  "last_url": "https://fulfillment-admin.wolt.com/versioned/42bbc1dfddae9c905a0abdc0a563fac7fa9312a0/assets/esm-DoZqMbrl.js",
+  "sha256": "b3f0a6d0ddc9254931aa",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:12 UTC"
+ },
+ "https://capital.wolt.com/env.js": {
+  "last_url": "https://capital.wolt.com/env.js",
+  "sha256": "051eb40b4f2151b96353",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:13 UTC"
+ },
+ "https://capital.wolt.com/assets/index-DMEZ-_gL.js": {
+  "last_url": "https://capital.wolt.com/assets/index-DMEZ-_gL.js",
+  "sha256": "f3032244e341fec16c47",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:14 UTC"
+ },
+ "https://capital.wolt.com/assets/react-DAX2MewJ.js": {
+  "last_url": "https://capital.wolt.com/assets/react-DAX2MewJ.js",
+  "sha256": "67e0e9bdd450f8df1c69",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:16 UTC"
+ },
+ "https://capital.wolt.com/assets/libs-Y8yjNF4U.js": {
+  "last_url": "https://capital.wolt.com/assets/libs-Y8yjNF4U.js",
+  "sha256": "d6768ee81d5e4b3934c3",
+  "routes": [
+   "/api/surveys/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:17 UTC"
+ },
+ "https://capital.wolt.com/assets/recharts-g87W8DyC.js": {
+  "last_url": "https://capital.wolt.com/assets/recharts-g87W8DyC.js",
+  "sha256": "6698f45f63c510f8842d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:52:18 UTC"
  }
 }

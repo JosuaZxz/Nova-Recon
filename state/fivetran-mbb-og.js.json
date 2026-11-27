@@ -32,14 +32,14 @@
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Cv5WBeW-.js",
-  "sha256": "995890ef904c63b54551",
+  "sha256": "705ff9597ce2cd81b84f",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:02 UTC"
+  "updated": "2026-11-27 22:27:12 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CCS_Weos.js",
@@ -63,12 +63,12 @@
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CUxGY42e.js",
-  "sha256": "f0b7c791739af345ee0a",
+  "sha256": "5be2d98db3f5c7d9a1dd",
   "routes": [
    "/api/ai/private"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:01 UTC"
+  "updated": "2026-11-27 22:27:11 UTC"
  },
  "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js": {
   "last_url": "https://eng-planning-dev.fivetran.com/assets/index-BfVzKwpl.js",
@@ -90,18 +90,18 @@
    "/auth/user"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:09 UTC"
+  "updated": "2026-11-27 22:27:21 UTC"
  },
  "https://usecase-catalog-test.qe.fivetran.com/config.js": {
   "last_url": "https://usecase-catalog-test.qe.fivetran.com/config.js",
   "sha256": "9e676761382a3ec03fa6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:09 UTC"
+  "updated": "2026-11-27 22:27:22 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-DUF1Kd-x.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-DUF1Kd-x.js",
-  "sha256": "d09eff8d56039fc8065d",
+  "sha256": "366139714aee32f11074",
   "routes": [
    "/api/ai/private",
    "/api/ai/private/agent/playground",
@@ -113,25 +113,25 @@
    "CostInsightsByJob",
    "ExposureTile"
   ],
-  "updated": "2026-11-26 03:17:10 UTC"
+  "updated": "2026-11-27 22:27:50 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-Eg9HVbKB.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/index-Eg9HVbKB.js",
-  "sha256": "77509663e3f2fc88257e",
+  "sha256": "03eb806ff48790fd02a6",
   "routes": [
    "/api/v2",
    "/api/v2/",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:12 UTC"
+  "updated": "2026-11-27 22:27:51 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/__vite-browser-external-D7Ct-6yo.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/3cec940b95a934b8e44efb0402d899711c7f15d8/assets/__vite-browser-external-D7Ct-6yo.js",
   "sha256": "18c7eb5102634686ac60",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:14 UTC"
+  "updated": "2026-11-27 22:27:51 UTC"
  },
  "https://dev-sriramr.dev.dbt.com/assets/index-BzuCl6oM.js": {
   "last_url": "https://dev-sriramr.dev.dbt.com/assets/index-BzuCl6oM.js",
@@ -405,14 +405,14 @@
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-BhqOtGUM.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-BhqOtGUM.js",
-  "sha256": "5273c51a8182e28a6d88",
+  "sha256": "42262e890617fd68b402",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:07 UTC"
+  "updated": "2026-11-27 22:27:16 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CPjzdy-V.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CPjzdy-V.js",
@@ -425,18 +425,18 @@
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-DSN1Lc78.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-DSN1Lc78.js",
-  "sha256": "e86c6afb86077e7d6422",
+  "sha256": "666628bbeaee5f483f50",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:04 UTC"
+  "updated": "2026-11-27 22:27:14 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CnEAcSFH.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-CnEAcSFH.js",
-  "sha256": "2847e40b35a78b85801b",
+  "sha256": "e919760ae270da0de028",
   "routes": [
    "/api/ai/private",
    "/api/v1/agents",
@@ -454,18 +454,18 @@
    "/api/v2/datasets"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:16:43 UTC"
+  "updated": "2026-11-27 22:27:18 UTC"
  },
  "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index--FnDrs6z.js": {
   "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index--FnDrs6z.js",
-  "sha256": "824d7fea519b67561749",
+  "sha256": "156cd07dbb5e82fcaf8f",
   "routes": [
    "/api/private",
    "/api/v2",
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:16:46 UTC"
+  "updated": "2026-11-27 22:27:19 UTC"
  },
  "https://semantic-layer.dev-arpit-evals.dev.dbt.com/assets/index-C8kLETPz.js": {
   "last_url": "https://semantic-layer.dev-arpit-evals.dev.dbt.com/assets/index-C8kLETPz.js",
@@ -475,7 +475,7 @@
    "/api/ai/private/v1/agents/run"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:16:49 UTC"
+  "updated": "2026-11-27 22:27:20 UTC"
  },
  "https://semantic-layer.dev-arpit-evals.dev.dbt.com/assets/index-B8Jxr2GW.js": {
   "last_url": "https://semantic-layer.dev-arpit-evals.dev.dbt.com/assets/index-B8Jxr2GW.js",
@@ -486,7 +486,7 @@
    "/api/v3"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:16:51 UTC"
+  "updated": "2026-11-27 22:27:20 UTC"
  },
  "https://newstatus.fivetran.com/assets/index-B7rauV-8.js": {
   "last_url": "https://newstatus.fivetran.com/assets/index-B7rauV-8.js",
@@ -496,7 +496,7 @@
    "/api/v1/subscriptions"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:16:52 UTC"
+  "updated": "2026-11-27 22:27:20 UTC"
  },
  "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-CLpmA47B.js": {
   "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/regionalService-CLpmA47B.js",
@@ -506,7 +506,7 @@
    "/api/v1/accounts"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 03:17:03 UTC"
+  "updated": "2026-11-27 22:27:20 UTC"
  },
  "https://eng-planning-dev.fivetran.com/assets/index--0zlGSir.js": {
   "last_url": "https://eng-planning-dev.fivetran.com/assets/index--0zlGSir.js",
@@ -705,5 +705,334 @@
   "routes": [],
   "graphql_ops": [],
   "updated": "2026-11-26 03:17:20 UTC"
+ },
+ "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Dv1-xQUC.js": {
+  "last_url": "https://cloud-ui.staging.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Dv1-xQUC.js",
+  "sha256": "0b5897da1d03036c9406",
+  "routes": [
+   "/api/ai/private"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:15 UTC"
+ },
+ "https://semantic-layer.dev-ftoledo-s12a-fabric-oauth-schema.dev.dbt.com/assets/index-DKktFS6c.js": {
+  "last_url": "https://semantic-layer.dev-ftoledo-s12a-fabric-oauth-schema.dev.dbt.com/assets/index-DKktFS6c.js",
+  "sha256": "af6eb4b70ea61c42fef7",
+  "routes": [
+   "/api/ai/private"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:49 UTC"
+ },
+ "https://semantic-layer.dev-ftoledo-s12a-fabric-oauth-schema.dev.dbt.com/assets/index-Akd0nwxT.js": {
+  "last_url": "https://semantic-layer.dev-ftoledo-s12a-fabric-oauth-schema.dev.dbt.com/assets/index-Akd0nwxT.js",
+  "sha256": "1f2de55d4db030fe27bc",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:50 UTC"
+ },
+ "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Dh0IfDcB.js": {
+  "last_url": "https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-Dh0IfDcB.js",
+  "sha256": "c1f8fd0d42070b9c582d",
+  "routes": [
+   "/api/ai/private"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:13 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/index-CVPpVKcL.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/index-CVPpVKcL.js",
+  "sha256": "42085c57976ff10af6c7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:55 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/jsx-runtime-w9AVxzFL.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/jsx-runtime-w9AVxzFL.js",
+  "sha256": "0acf6f9c92d28f677311",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:56 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/react-query.gen-Dv2Frkyq.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/react-query.gen-Dv2Frkyq.js",
+  "sha256": "c10f7e4397e0dc86a9b6",
+  "routes": [
+   "/api/agents",
+   "/api/auth/logout",
+   "/api/directory/teams",
+   "/api/directory/users",
+   "/api/hitl/action-types/{action_type_id}",
+   "/api/hitl/action-types/{action_type_id}/gating",
+   "/api/hitl/actions",
+   "/api/hitl/actions/{action_id}",
+   "/api/hitl/actions/{action_id}/assign",
+   "/api/hitl/actions/{action_id}/decision",
+   "/api/hitl/actions/{action_id}/reassign",
+   "/api/hitl/actions/{action_id}/timeline",
+   "/api/hitl/actions/{action_id}/view",
+   "/api/hitl/agents/{agent_id}/action-types",
+   "/api/hitl/agents/{agent_id}/webhooks",
+   "/api/hitl/audit",
+   "/api/hitl/dashboards",
+   "/api/hitl/escalation-policies",
+   "/api/hitl/escalation-policies/{policy_id}",
+   "/api/hitl/me",
+   "/api/hitl/me/delegation",
+   "/api/hitl/me/delegation/{delegation_id}",
+   "/api/hitl/me/notifications",
+   "/api/hitl/users/{user_id}/delegation",
+   "/api/hitl/users/{user_id}/delegation/{delegation_id}",
+   "/api/hitl/webhooks/{webhook_id}",
+   "/api/hitl/webhooks/{webhook_id}/test",
+   "/api/platform/agents/{agent_id}/api-keys",
+   "/api/platform/agents/{agent_id}/api-keys/{key_id}"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:56 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Button-ggV1_G_2.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Button-ggV1_G_2.js",
+  "sha256": "5aa3268bdd585c23beb9",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Loading-R6tF22gY.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Loading-R6tF22gY.js",
+  "sha256": "ee031752c2290b7a2658",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useMutation-AKmP3A5G.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useMutation-AKmP3A5G.js",
+  "sha256": "b5ae60c2d489daedbb77",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/utils-oxtaFoPy.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/utils-oxtaFoPy.js",
+  "sha256": "d441538be787eb35e1a7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useStore-Dbix7cVJ.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useStore-Dbix7cVJ.js",
+  "sha256": "4d519ddbeea45774970c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/ClientOnly-CgafHrhj.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/ClientOnly-CgafHrhj.js",
+  "sha256": "4ca75fa0c4d68228bccc",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useRouter-CwX65wrl.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useRouter-CwX65wrl.js",
+  "sha256": "5f18d0eb228a91e304ae",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:57 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Match-DVITPldB.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Match-DVITPldB.js",
+  "sha256": "073938f29b13a1942382",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:58 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useMatch-M7rWo7Bs.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useMatch-M7rWo7Bs.js",
+  "sha256": "c0aa3b92d3138bf3be96",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:58 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useParams-tgfza57A.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useParams-tgfza57A.js",
+  "sha256": "016a0d41db57f0cd5fdd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:58 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useSearch-BeUuNK1c.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useSearch-BeUuNK1c.js",
+  "sha256": "1f2292c60fe48ef142f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:58 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useNavigate-CqJZjptT.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useNavigate-CqJZjptT.js",
+  "sha256": "bbb38493b2151e0e192b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:58 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/DisplayTag-bqPDKcMy.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/DisplayTag-bqPDKcMy.js",
+  "sha256": "4fd5af5f4aee95f18c65",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Heading-dBmnrCRp.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Heading-dBmnrCRp.js",
+  "sha256": "7bac71832d6e2f9b54f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useAgents-XLjbEMEf.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useAgents-XLjbEMEf.js",
+  "sha256": "acc0528805787177606c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Stack-Bsz2QPe4.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Stack-Bsz2QPe4.js",
+  "sha256": "0cca4c511d3cdb66037c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/FiltersBar-DggjcYjU.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/FiltersBar-DggjcYjU.js",
+  "sha256": "b51984ca6c05233e2f2d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Paragraph-baXdHk7k.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Paragraph-baXdHk7k.js",
+  "sha256": "b8a9d04684748806767e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:26:59 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/PageLayout-CiHPeGxu.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/PageLayout-CiHPeGxu.js",
+  "sha256": "16b8695e876401dcfd33",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/schemas-Byu2O84M.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/schemas-Byu2O84M.js",
+  "sha256": "1f0fee88e9d09eb8d3de",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/useMe-B3qhB0id.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/useMe-B3qhB0id.js",
+  "sha256": "aec841246c3d933bb0f7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/Tag-0cGgsf6z.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/Tag-0cGgsf6z.js",
+  "sha256": "f65a61253a529014cbb5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/NullValue-D6OsckU6.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/NullValue-D6OsckU6.js",
+  "sha256": "29c62c54df01dacf0689",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/ConfidenceBar-DtJfDFPS.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/ConfidenceBar-DtJfDFPS.js",
+  "sha256": "9d4f837d037523c3563b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/make-B4QieJq9.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/make-B4QieJq9.js",
+  "sha256": "45f081399301108e0c47",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/relativeTime-BRxy6v04.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/relativeTime-BRxy6v04.js",
+  "sha256": "6b2a6b9290597905d866",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/utils-CTjgMlla.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/utils-CTjgMlla.js",
+  "sha256": "2663aa3a0fb55f42fe4f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:00 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/KindBadge-CuxUdr1K.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/KindBadge-CuxUdr1K.js",
+  "sha256": "95b07e76b737e8e6b2e5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:01 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/StatusBadge-BC92-Sd7.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/StatusBadge-BC92-Sd7.js",
+  "sha256": "3b4a7858c5d6c3beb581",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:01 UTC"
+ },
+ "https://staging.hitl.fivetran.com/assets/RowActionButton-fx1A2SRO.js": {
+  "last_url": "https://staging.hitl.fivetran.com/assets/RowActionButton-fx1A2SRO.js",
+  "sha256": "9aaae5e74d2e747a6402",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:01 UTC"
+ },
+ "https://eng-planning-dev.fivetran.com/assets/index-BHd_zuch.js": {
+  "last_url": "https://eng-planning-dev.fivetran.com/assets/index-BHd_zuch.js",
+  "sha256": "909e816a81a760698099",
+  "routes": [
+   "/auth/logout"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:21 UTC"
+ },
+ "https://dev-gui.dev.dbt.com/assets/index-Uiaan0fn.js": {
+  "last_url": "https://dev-gui.dev.dbt.com/assets/index-Uiaan0fn.js",
+  "sha256": "f300ef053c1e209b441e",
+  "routes": [
+   "/api/ai/private",
+   "/api/ai/private/v1/agents/run"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:22 UTC"
+ },
+ "https://dev-gui.dev.dbt.com/assets/index-pE1VCmPP.js": {
+  "last_url": "https://dev-gui.dev.dbt.com/assets/index-pE1VCmPP.js",
+  "sha256": "8ce459f4aebd94afcff2",
+  "routes": [
+   "/api/private",
+   "/api/v2",
+   "/api/v3"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:27:22 UTC"
  }
 }

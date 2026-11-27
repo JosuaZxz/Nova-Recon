@@ -1,86 +1,171 @@
 {
  "https://sgtm.cultbeauty.co.uk/gtm.js": {
   "last_url": "https://sgtm.cultbeauty.co.uk/gtm.js?id=GTM-NRN5KBMF",
-  "sha256": "8eb01f837dc1215c25fe",
+  "sha256": "7ff0cf4a2c1608618a1d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:31 UTC"
  },
  "https://www.cultbeauty.co.uk/ssr-assets/trackerv90.js": {
   "last_url": "https://www.cultbeauty.co.uk/ssr-assets/trackerv90.js",
   "sha256": "d8d99faa533e2bbcba84",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:31 UTC"
  },
  "https://www.cultbeauty.co.uk/ssr-assets/page.B9z3XYQ5.js": {
   "last_url": "https://www.cultbeauty.co.uk/ssr-assets/page.B9z3XYQ5.js",
   "sha256": "5e075cc7396b301474ba",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:31 UTC"
  },
  "https://sgtm.lookfantastic.com/gtm.js": {
   "last_url": "https://sgtm.lookfantastic.com/gtm.js?id=GTM-NHWTTFSL",
-  "sha256": "a2feb25d2e5a3b23dd7e",
+  "sha256": "a4ba2c810bbf5ec32ce5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:32 UTC"
  },
  "https://www.lookfantastic.com/ssr-assets/trackerv90.js": {
   "last_url": "https://www.lookfantastic.com/ssr-assets/trackerv90.js",
   "sha256": "d8d99faa533e2bbcba84",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:32 UTC"
  },
  "https://ca.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
   "last_url": "https://ca.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
   "sha256": "5e075cc7396b301474ba",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:15 UTC"
+  "updated": "2026-11-27 22:56:32 UTC"
  },
  "https://sgtm.ca.myprotein.com/gtm.js": {
   "last_url": "https://sgtm.ca.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
-  "sha256": "07c4f1f2d53aa993a2be",
+  "sha256": "94d912addb5060f553ea",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:16 UTC"
+  "updated": "2026-11-27 22:56:33 UTC"
  },
  "https://www.myvitamins.com/ssr-assets/page.B9z3XYQ5.js": {
   "last_url": "https://www.myvitamins.com/ssr-assets/page.B9z3XYQ5.js",
   "sha256": "5e075cc7396b301474ba",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:16 UTC"
+  "updated": "2026-11-27 22:56:33 UTC"
  },
  "https://sgtm.myvitamins.com/gtm.js": {
   "last_url": "https://sgtm.myvitamins.com/gtm.js?id=GTM-KHKKJW9G",
-  "sha256": "c3fe14a81e288a9c8e86",
+  "sha256": "8c28ce3a80b1c28f8404",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:16 UTC"
+  "updated": "2026-11-27 22:56:33 UTC"
  },
  "https://au.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
   "last_url": "https://au.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
   "sha256": "5e075cc7396b301474ba",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:16 UTC"
+  "updated": "2026-11-27 22:56:33 UTC"
  },
  "https://sgtm.au.myprotein.com/gtm.js": {
   "last_url": "https://sgtm.au.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
-  "sha256": "f626b4e6520ec20d5e76",
+  "sha256": "b6f9b568b80cc289b6e4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:17 UTC"
+  "updated": "2026-11-27 22:56:34 UTC"
  },
  "https://www.arrowfilms.com/ssr-assets/tracker22.js": {
   "last_url": "https://www.arrowfilms.com/ssr-assets/tracker22.js",
   "sha256": "6d23686666b2d3ee3200",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 10:23:17 UTC"
+  "updated": "2026-11-27 22:56:34 UTC"
+ },
+ "https://creators.lookfantastic.com/releases/2169c7ddb7cd2530b312f6ed09734615874264df/static/index-Dl5sd9UI.js": {
+  "last_url": "https://creators.lookfantastic.com/releases/2169c7ddb7cd2530b312f6ed09734615874264df/static/index-Dl5sd9UI.js",
+  "sha256": "595a1f61e3f64247e5f3",
+  "routes": [
+   "/v1/categories/primitives",
+   "/v1/integrations/meta/pixels/selected",
+   "/v1/merchant",
+   "/v1/pages",
+   "/v1/permalink",
+   "/v1/style",
+   "/v2/primitives/settings"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:35 UTC"
+ },
+ "https://fr-ca.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
+  "last_url": "https://fr-ca.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+  "sha256": "5e075cc7396b301474ba",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:35 UTC"
+ },
+ "https://sgtm.fr-ca.myprotein.com/gtm.js": {
+  "last_url": "https://sgtm.fr-ca.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
+  "sha256": "b05e625eb6c683873697",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:35 UTC"
+ },
+ "https://www.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
+  "last_url": "https://www.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+  "sha256": "5e075cc7396b301474ba",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:35 UTC"
+ },
+ "https://sgtm.myprotein.com/gtm.js": {
+  "last_url": "https://sgtm.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
+  "sha256": "28d7bab4183eb6868863",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:36 UTC"
+ },
+ "https://eu.lookfantastic.com/ssr-assets/trackerv90.js": {
+  "last_url": "https://eu.lookfantastic.com/ssr-assets/trackerv90.js",
+  "sha256": "d8d99faa533e2bbcba84",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:36 UTC"
+ },
+ "https://eu.lookfantastic.com/ssr-assets/page.B9z3XYQ5.js": {
+  "last_url": "https://eu.lookfantastic.com/ssr-assets/page.B9z3XYQ5.js",
+  "sha256": "5e075cc7396b301474ba",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:36 UTC"
+ },
+ "https://nz.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
+  "last_url": "https://nz.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+  "sha256": "5e075cc7396b301474ba",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:36 UTC"
+ },
+ "https://sgtm.nz.myprotein.com/gtm.js": {
+  "last_url": "https://sgtm.nz.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
+  "sha256": "b1f58b3de61ae1001841",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:37 UTC"
+ },
+ "https://si.myprotein.com/ssr-assets/page.B9z3XYQ5.js": {
+  "last_url": "https://si.myprotein.com/ssr-assets/page.B9z3XYQ5.js",
+  "sha256": "5e075cc7396b301474ba",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:37 UTC"
+ },
+ "https://sgtm.si.myprotein.com/gtm.js": {
+  "last_url": "https://sgtm.si.myprotein.com/gtm.js?id=GTM-TLLKQLXB",
+  "sha256": "7b0b5e0e775e790e64d6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-27 22:56:37 UTC"
  }
 }

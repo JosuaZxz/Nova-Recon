@@ -56,6 +56,7 @@ agentic.prod.dbt.com
 agentic.staging.dbt.com
 agents.fivetran.com
 agmtj.staging.aws.us-east-1.proxy.fivetran.com
+ai-exploratory-test.qe.fivetran.com
 ai-exploratory.qe.fivetran.com
 akostic.azure.polaris-09.staging.fivetran.com
 akostic.azure.polaris.staging.fivetran.com
@@ -77,10 +78,12 @@ amaysim9.getdbt.com
 analytics.auth.cloud.getdbt.com
 ap-northeast-1.aws.polaris.fivetran.com
 ap-northeast-1.aws.proxy.prod.fivetran.com
+ap-northeast-1.dlw-arm.fivetran.com
 ap-northeast-1.dlw.fivetran.com
 ap-northeast-1.proxy-internal.fivetran.com
 ap-northeast-1.proxy.fivetran.com
 ap-northeast-1.setup-tests.fivetran.com
+ap-northeast-1.transformations.fivetran.com
 ap-northeast-15.aws.proxy.prod.fivetran.com
 ap-northeast-2.aws.polaris.fivetran.com
 ap-northeast-2.aws.proxy.prod.fivetran.com
@@ -93,12 +96,14 @@ ap-south-1.setup-tests.fivetran.com
 ap-south-1.transformations.fivetran.com
 ap-southeast-1.aws.polaris.fivetran.com
 ap-southeast-1.aws.proxy.prod.fivetran.com
+ap-southeast-1.dlw-arm.fivetran.com
 ap-southeast-1.dlw.fivetran.com
 ap-southeast-1.setup-tests.fivetran.com
 ap-southeast-1.transformations.fivetran.com
 ap-southeast-2.aws.polaris.fivetran.com
 ap-southeast-2.aws.proxy.prod.fivetran.com
 ap-southeast-2.dlw-arm.fivetran.com
+ap-southeast-2.dlw.fivetran.com
 ap-southeast-2.proxy-internal.fivetran.com
 ap-southeast-2.proxy.fivetran.com
 ap-southeast-2.setup-tests.fivetran.com
@@ -188,6 +193,7 @@ app.staging.state.dbt.com
 app.state.dbt.com
 appw.fivetran.com
 aquila-capital.getdbt.com
+aquilacapital.getdbt.com
 argo-rollouts.int.c1.eu3.dbt.com
 argo-rollouts.int.c1.us3.dbt.com
 argo-rollouts.int.c1.us3.staging.dbt.com
@@ -353,8 +359,10 @@ australia-southeast1.setup-tests.fivetran.com
 australia-southeast1.transformations.fivetran.com
 australiaeast.azure.polaris.fivetran.com
 australiaeast.azure.proxy.prod.fivetran.com
+australiaeast.dlw-v2.fivetran.com
 australiaeast.proxy-internal.fivetran.com
 australiaeast.proxy.fivetran.com
+australiaeast.salame.fivetran.com
 australiaeast.setup-tests.fivetran.com
 auth.au.dbt.com
 auth.au2.dbt.com
@@ -389,6 +397,7 @@ auth.us5.dbt.com
 auth5.eu2.dbt.com
 autha.us3.dbt.com
 authb.getdbt.com
+authg.cloud.getdbt.com
 authi.us.staging.cloud.getdbt.com
 autho.us2.dbt.com
 authy.staging.cloud.getdbt.com
@@ -421,11 +430,13 @@ aws-mumbaig.setup-tests.fivetran.com
 aws-n-virginia.setup-tests.fivetran.com
 aws-n-virginia.staging.transformations.fivetran.com
 aws-n-virginia.transformations.fivetran.com
+aws-n-virginiaa.staging.transformations.fivetran.com
 aws-ohio.setup-tests.fivetran.com
 aws-ohio.transformations.fivetran.com
 aws-ohioy.transformations.fivetran.com
 aws-oregon.setup-tests.fivetran.com
 aws-oregon.transformations.fivetran.com
+aws-oregonk.setup-tests.fivetran.com
 aws.ap-northeast-1.dlw.fivetran.com
 aws.ap-northeast-1.proxy-internal.fivetran.com
 aws.ap-northeast-1.setup-tests.fivetran.com
@@ -437,6 +448,7 @@ aws.ap-south-1.proxy.fivetran.com
 aws.ap-south-1.setup-tests.fivetran.com
 aws.ap-south-1.transformations.fivetran.com
 aws.ap-southeast-1.dlw-arm.fivetran.com
+aws.ap-southeast-1.dlw.fivetran.com
 aws.ap-southeast-1.setup-tests.fivetran.com
 aws.ap-southeast-1.transformations.fivetran.com
 aws.ap-southeast-2.dlw-arm.fivetran.com
@@ -531,9 +543,11 @@ awsm.ap-northeast-1.setup-tests.fivetran.com
 awsm.ap-northeast-1.transformations.fivetran.com
 awsq.eu-west-1.setup-tests.fivetran.com
 awsu.ap-southeast-2.setup-tests.fivetran.com
+awsw.us-east-1.setup-tests.fivetran.com
 awsy.us-west-2.setup-tests.fivetran.com
 ay251.us1.dbt.com
 aztech.dbt.com
+aztech.getdbt.com
 azure-australiaeast.setup-tests.fivetran.com
 azure-australiaeast.transformations.fivetran.com
 azure-australiaeasto.transformations.fivetran.com
@@ -585,6 +599,7 @@ azure.eastus2.proxy.fivetran.com
 azure.eastus2.salame.fivetran.com
 azure.eastus2.setup-tests.fivetran.com
 azure.eastus2.transformations.fivetran.com
+azure.germanywestcentral.dlw.fivetran.com
 azure.germanywestcentral.proxy-internal.fivetran.com
 azure.germanywestcentral.proxy.fivetran.com
 azure.germanywestcentral.setup-tests.fivetran.com
@@ -602,7 +617,9 @@ azure.polaris.fivetran.com
 azure.polaris.staging.fivetran.com
 azure.proxy.prod.fivetran.com
 azure.proxy.staging.fivetran.com
+azure.southeastasia.dlw-v2.fivetran.com
 azure.southeastasia.dlw.fivetran.com
+azure.southeastasia.proxy.fivetran.com
 azure.southeastasia.setup-tests.fivetran.com
 azure.southeastasia.transformations.fivetran.com
 azure.switzerlandnorth.proxy-internal.fivetran.com
@@ -613,6 +630,7 @@ azure.uaenorth.dlw.fivetran.com
 azure.uaenorth.setup-tests.fivetran.com
 azure.uaenorth.transformations.fivetran.com
 azure.uksouth.dlw-v2.fivetran.com
+azure.uksouth.dlw.fivetran.com
 azure.uksouth.proxy-internal.fivetran.com
 azure.uksouth.proxy.fivetran.com
 azure.uksouth.salame.fivetran.com
@@ -798,6 +816,7 @@ brand.fivetran.com
 brande.fivetran.com
 brandq.fivetran.com
 brighte.getdbt.com
+brightea.getdbt.com
 bt-prod.us3.staging.dbt.com
 bt-prod5.us3.staging.dbt.com
 build-tracker.fivetran.com
@@ -850,12 +869,15 @@ california5.getdbt.com
 calix.getdbt.com
 calpers.dbt.com
 cambiahealth.getdbt.com
+cambiahealth7w.getdbt.com
 canada.setup-tests.fivetran.com
 canada.transformations.fivetran.com
 canadacentral.azure.polaris.fivetran.com
 canadacentral.azure.proxy.prod.fivetran.com
 canadacentral.dlw-v2.fivetran.com
 canadacentral.dlw.fivetran.com
+canadacentral.proxy.fivetran.com
+canadacentral.transformations.fivetran.com
 canadao.transformations.fivetran.com
 carlylegroup.dbt.com
 carlylegroup.getdbt.com
@@ -865,6 +887,8 @@ cdn.cms.fivetran.com
 cdn.dbt.com
 cdn.fivetran.com
 cdn.getdbt.com
+cdn5.fivetran.com
+cdnb.getdbt.com
 centralindia.azure.polaris.fivetran.com
 centralindia.azure.polaris.staging.fivetran.com
 centralindia.azure.proxy.prod.fivetran.com
@@ -1063,6 +1087,7 @@ cloud7.gusto.getdbt.com
 cloud7.kuda.getdbt.com
 cloud7.nyl.getdbt.com
 cloud7.roche.getdbt.com
+cloud7.uhg.getdbt.com
 cloud9.instacart.getdbt.com
 cloud9.one.getdbt.com
 cloud9.primarybid.getdbt.com
@@ -1094,6 +1119,7 @@ cloudq.pacificlife.getdbt.com
 cloudq.transpower.getdbt.com
 clouds.hellofresh.getdbt.com
 clouds.salesforce.getdbt.com
+clouds.zurich.privatelink.getdbt.com
 cloudu.aquilacapital.getdbt.com
 cloudu.southerncross.getdbt.com
 cloudu.southworks.getdbt.com
@@ -1127,6 +1153,7 @@ community-stagei.fivetran.com
 community.dremio.comcommunity.fivetran.com
 community.fivetran.com
 community.getdbt.com
+communityq.fivetran.com
 cona.dbt.com
 cona.getdbt.com
 connector-builder.fivetran.com
@@ -1144,6 +1171,7 @@ courses.getdbt.com
 coursesc.getdbt.com
 cpanel.dbt.com
 cpanel.jp.fivetran.com
+cpanele.jp.fivetran.com
 cq024.eu2.dbt.com
 credentials.getdbt.com
 credentials9.getdbt.com
@@ -1166,6 +1194,7 @@ datalakes.fivetran.com
 david.singletenant.getdbt.com
 david.singletenantazure.getdbt.com
 david5.singletenant.getdbt.com
+davido.singletenantazure.getdbt.com
 dbt-cloud.teleport.staging.cloud.getdbt.com
 dbt-cloudw.teleport.staging.cloud.getdbt.com
 dbt.com
@@ -1281,6 +1310,7 @@ dev-supritha.dev.dbt.com
 dev-tauhid.dev.dbt.com
 dev-terkelv.dev.dbt.com
 dev-tim.azure-dev.cloud.getdbt.com
+dev-timc.azure-dev.cloud.getdbt.com
 dev-tleustean.dev.dbt.com
 dev-toby.dev.dbt.com
 dev-trilok.dev.dbt.com
@@ -1319,6 +1349,7 @@ discourse.getdbt.com
 discourseu.getdbt.com
 discover.getdbt.com
 disney.getdbt.com
+disney6.getdbt.com
 djo.getdbt.com
 dlw-v2.fivetran.com
 dlw.fivetran.com
@@ -1342,6 +1373,7 @@ dr-eventsi.fivetran.com
 dr-webhooks.fivetran.com
 dr.orchestrator.fivetran.com
 drafts.collector.getdbt.com
+draftsa.collector.getdbt.com
 dropbox.getdbt.com
 dropbox7.getdbt.com
 ds1jh.staging.aws.us-east-1.proxy.fivetran.com
@@ -1405,6 +1437,7 @@ erfv0.staging.aws.us-east-1.proxy.fivetran.com
 eru6u.staging.aws.us-east-1.proxy.fivetran.com
 esrnz.getdbt.com
 esrnz6.getdbt.com
+esrnzc.getdbt.com
 eswanson-test.singletenant.getdbt.com
 eswanson-test7.singletenant.getdbt.com
 eswansontest.singletenant.getdbt.com
@@ -1413,8 +1446,10 @@ eu-central-1.aws.polaris.fivetran.com
 eu-central-1.aws.proxy.prod.fivetran.com
 eu-central-1.dlw-arm.fivetran.com
 eu-central-1.dlw.fivetran.com
+eu-central-1.proxy-internal.fivetran.com
 eu-central-1.proxy.fivetran.com
 eu-central-1.setup-tests.fivetran.com
+eu-central-1.transformations.fivetran.com
 eu-north-1.aws.polaris.fivetran.com
 eu-north-1.aws.proxy.prod.fivetran.com
 eu-north-1.setup-tests.fivetran.com
@@ -1460,6 +1495,7 @@ europe-west3.gcp.proxy.prod.fivetran.com
 europe-west3.proxy-internal.fivetran.com
 europe-west3.proxy.fivetran.com
 europe-west3.setup-tests.fivetran.com
+europe-west3.transformations.fivetran.com
 eventbus.collector.getdbt.com
 events.agent.fivetran.com
 events.fivetran.com
@@ -1524,6 +1560,7 @@ gcp.asia-southeast1.transformations.fivetran.com
 gcp.asia-southeast2.proxy-internal.fivetran.com
 gcp.asia-southeast2.setup-tests.fivetran.com
 gcp.asia-southeast2.transformations.fivetran.com
+gcp.australia-southeast1.proxy.fivetran.com
 gcp.australia-southeast1.salame.fivetran.com
 gcp.australia-southeast1.setup-tests.fivetran.com
 gcp.australia-southeast1.transformations.fivetran.com
@@ -1572,10 +1609,12 @@ gcp.us-east4.setup-tests.fivetran.com
 gcp.us-east4.transformations.fivetran.com
 gcp.us-west1.proxy-internal.fivetran.com
 gcp.us-west1.proxy.fivetran.com
+gcp.us-west1.salame.fivetran.com
 gcp.us-west1.setup-tests.fivetran.com
 gcp.us-west1.sync-metrics-service.fivetran.com
 gcp.us-west1.transformations.fivetran.com
 gcp.us.webhooks.fivetran.com
+gcp5.northamerica-northeast1.setup-tests.fivetran.com
 gcp9.eu.webhooks.fivetran.com
 gcpc.australia-southeast1.transformations.fivetran.com
 gcpg.asia-south1.transformations.fivetran.com
@@ -1622,6 +1661,8 @@ grail.getdbt.com
 grailxr.getdbt.com
 grow.getdbt.com
 growyr.getdbt.com
+gsl-account-mapping.global.dbt.com
+gsl-account-mapping.global.staging.dbt.com
 gsl-router.global.staging.dbt.com
 gsl.dev.dbt.com
 guj.getdbt.com
@@ -1647,6 +1688,7 @@ healthfirst.getdbt.com
 hello.dbtlabs.com
 hello.global.staging.dbt.com
 hellofresh.getdbt.com
+hellofresho.getdbt.com
 herbalife.getdbt.com
 heycar.getdbt.com
 heycarv.getdbt.com
@@ -1672,6 +1714,7 @@ hvr-mar-prod-us-east-2.prod.mar-s3-proxy.fivetran.com
 hvr-mar-staging-us-east-2.staging.mar-s3-proxy.fivetran.com
 hvr-staging.fivetran.com
 hvr.fivetran.com
+hvr1.fivetran.com
 hy094.us1.dbt.com
 hyop8.staging.aws.us-east-2.proxy.fivetran.com
 i6rqd.staging.aws.us-east-1.proxy.fivetran.com
@@ -1884,6 +1927,7 @@ int.kurtest.singletenantazure.getdbt.com
 int.kurttest.singletenantazure.getdbt.com
 int.migrationtest.dbtlabs.getdbt.com
 int.ndole.singletenant.getdbt.com
+int.ndole.singletenantazure.getdbt.com
 int.nlitest.singletenant.getdbt.com
 int.pov.affirm.getdbt.com
 int.pr.dbt.com
@@ -1908,6 +1952,7 @@ int.sandbox.cloud.getdbt.com
 int.sandbox.singletenant.getdbt.com
 int.sandbox.singletenantazure.getdbt.com
 int.sandbox.singletenantazure.privatelink.getdbt.com
+int.sectestdr.singletenantazure.getdbt.com
 int.securitytest.singletenant.getdbt.com
 int.securitytest.singletenantazure.getdbt.com
 int.singletenant.getdbt.com
@@ -1919,6 +1964,7 @@ int.staging.cirrus.getdbt.com
 int.staging.cloud.getdbt.com
 int.staging.infra-ops.getdbt.com
 int.staging.singletenant.getdbt.com
+int.staging.singletenantazure.getdbt.com
 int.str.staging.dbt.com
 int.test.cloud.getdbt.com
 int.timhotest.singletenant.getdbt.com
@@ -2954,6 +3000,7 @@ prod.peloton.getdbt.com
 prod.usaa.getdbt.com
 prod1.aws.ap-south-1.transformations.fivetran.com
 prod1.aws.ap-southeast-2.dlw-arm.fivetran.com
+prod1.azure.eastus2.dlw-v2.fivetran.com
 prod1.gcp.europe-west3.transformations.fivetran.com
 prod1.gcp.global.build-tracker.fivetran.com
 prod3.aws.eu-central-1.dlw-arm.fivetran.com
@@ -2979,10 +3026,12 @@ prodi.aws.eu-central-1.setup-tests.fivetran.com
 prodi.azure.centralus.transformations.fivetran.com
 prodk.azure.eastus2.transformations.fivetran.com
 prodm.aws.ap-southeast-1.setup-tests.fivetran.com
+prodm.gcp.asia-southeast1.setup-tests.fivetran.com
 prodm.gcp.us-east4.setup-tests.fivetran.com
 prodm.gcp.us-west1.sync-metrics-service.fivetran.com
 prodo.azure.australiaeast.setup-tests.fivetran.com
 prodo.azure.centralindia.proxy.fivetran.com
+prodq.aws.eu-west-2.proxy.fivetran.com
 prodq.aws.us-gov-west-1.setup-tests.fivetran.com
 prodq.gcp.asia-northeast1.setup-tests.fivetran.com
 produ.azure.centralus.setup-tests.fivetran.com
@@ -2990,6 +3039,7 @@ production-demo.fivetran.com
 prodw.aws.ca-central-1.dlw-arm.fivetran.com
 prodw.gcp.australia-southeast1.setup-tests.fivetran.com
 prody.azure.canadacentral.dlw-v2.fivetran.com
+prody.gcp.us-west1.salame.fivetran.com
 prometheus.auth.cloud.getdbt.com
 prototypes.fivetran.com
 proxy-internal.fivetran.com
@@ -3547,6 +3597,7 @@ smabs.prod.aws.us-east-2.proxy.fivetran.com
 smart.dbtlabs.com
 snowplow.events.fivetran.com
 solidigm.dbt.com
+solidigm.getdbt.com
 sonarsource.getdbt.com
 southeastasia.azure.polaris.fivetran.com
 southeastasia.azure.proxy.prod.fivetran.com
@@ -3772,6 +3823,7 @@ transportnsw3.getdbt.com
 transpower.getdbt.com
 triage.fivetran.com
 trust.getdbt.com
+trust4.fivetran.com
 trust4.getdbt.com
 trustly.getdbt.com
 trustlym.getdbt.com
@@ -3783,6 +3835,8 @@ u1t5f.staging.aws.us-east-1.proxy.fivetran.com
 u72ly.staging.aws.us-east-2.proxy.fivetran.com
 uaenorth.azure.polaris.fivetran.com
 uaenorth.azure.proxy.prod.fivetran.com
+uaenorth.dlw-v2.fivetran.com
+uaenorth.dlw.fivetran.com
 uaenorth.setup-tests.fivetran.com
 uaenorth.transformations.fivetran.com
 uat.cambiahealth.getdbt.com
@@ -3819,6 +3873,7 @@ uksouth.dlw.fivetran.com
 uksouth.proxy-internal.fivetran.com
 uksouth.proxy.fivetran.com
 uksouth.salame.fivetran.com
+uksouth.setup-tests.fivetran.com
 uksouth.transformations.fivetran.com
 ulfr4.staging.aws.us-east-1.proxy.fivetran.com
 ulg7z.staging.aws.us-east-1.proxy.fivetran.com
@@ -3855,6 +3910,7 @@ us-east-1.dlw2.fivetran.com
 us-east-1.proxy-internal.fivetran.com
 us-east-1.proxy.fivetran.com
 us-east-1.salame.fivetran.com
+us-east-1.setup-tests.fivetran.com
 us-east-1.transformations.fivetran.com
 us-east-2.aws.polaris.fivetran.com
 us-east-2.aws.polaris.staging.fivetran.com
@@ -3874,6 +3930,7 @@ us-east-2.aws.proxy.staging.fivetran.com
 us-east-2.aws.proxy.validation.dbt.com
 us-east-2.dlw-arm.fivetran.com
 us-east-2.dlw.fivetran.com
+us-east-2.proxy-internal.fivetran.com
 us-east-2.proxy.fivetran.com
 us-east-2.setup-tests.fivetran.com
 us-east1.aws.polaris.fivetran.com
@@ -3884,6 +3941,7 @@ us-east4.gcp.polaris.staging.fivetran.com
 us-east4.gcp.proxy.prod.fivetran.com
 us-east4.gcp.proxy.staging.fivetran.com
 us-east4.proxy-internal.fivetran.com
+us-east4.proxy.fivetran.com
 us-east4.proxy.qe.fivetran.com
 us-east4.salame.fivetran.com
 us-east4.setup-tests.fivetran.com
@@ -3917,7 +3975,9 @@ us-west1.gcp.proxy.staging.fivetran.com
 us-west1.proxy-internal.fivetran.com
 us-west1.proxy.fivetran.com
 us-west1.salame.fivetran.com
+us-west1.setup-tests.fivetran.com
 us-west1.sync-metrics-service.fivetran.com
+us-west1.transformations.fivetran.com
 us.lacework.getdbt.com
 us.setup-tests.fivetran.com
 us.staging.cloud.getdbt.com
@@ -4001,9 +4061,11 @@ westeurope.azure.polaris.fivetran.com
 westeurope.azure.proxy.prod.fivetran.com
 westeurope.dlw-v2.fivetran.com
 westeurope.dlw.fivetran.com
+westeurope.proxy-internal.fivetran.com
 westeurope.proxy.fivetran.com
 westeurope.salame.fivetran.com
 westeurope.setup-tests.fivetran.com
+westeurope.transformations.fivetran.com
 westtest.singletenant.getdbt.com
 westtest.singletenantazure.getdbt.com
 westus2.azure.polaris.fivetran.com
@@ -4178,10 +4240,12 @@ www.auth.au.dbt.com
 www.auth.emea.dbt.com
 www.auth.us.staging.dbt.com
 www.aws-apac-sydney.setup-tests.fivetran.com
+www.aws-apac-sydney.transformations.fivetran.com
 www.aws-frankfurt.setup-tests.fivetran.com
 www.aws-frankfurt.transformations.fivetran.com
 www.aws-ireland.setup-tests.fivetran.com
 www.aws-ireland.transformations.fivetran.com
+www.aws-london.setup-tests.fivetran.com
 www.aws-london.transformations.fivetran.com
 www.aws-n-virginia.staging.transformations.fivetran.com
 www.aws-n-virginia.transformations.fivetran.com
@@ -4225,16 +4289,19 @@ www.beta.aws-frankfurt.setup-tests.fivetran.com
 www.beta.aws-ireland.setup-tests.fivetran.com
 www.beta.aws-london.setup-tests.fivetran.com
 www.beta.aws-n-virginia.setup-tests.fivetran.com
+www.beta.aws-ohio.setup-tests.fivetran.com
 www.beta.aws-oregon.setup-tests.fivetran.com
 www.beta.aws.eu-central-1.setup-tests.fivetran.com
 www.beta.aws.eu-west-1.setup-tests.fivetran.com
 www.beta.azure-eastus2.setup-tests.fivetran.com
 www.beta.azure.uksouth.setup-tests.fivetran.com
+www.beta.azure.westeurope.setup-tests.fivetran.com
 www.beta.gcp.asia-south1.setup-tests.fivetran.com
 www.beta.staging.azure-eastus2.setup-tests.fivetran.com
 www.beta.staging.azure.eastus2.setup-tests.fivetran.com
 www.bhp.getdbt.com
 www.bid484o.8698602t.dbtlabs.com
+www.blockfi.getdbt.com
 www.blog.fivetran.com
 www.brighte.getdbt.com
 www.bunnings.dbt.com
@@ -4265,6 +4332,7 @@ www.centralindia.azure.proxy.prod.fivetran.com
 www.centralus.azure.polaris.fivetran.com
 www.centralus.azure.polaris.staging.fivetran.com
 www.centralus.azure.proxy.prod.fivetran.com
+www.chickfila.getdbt.com
 www.chs.getdbt.com
 www.cloud.amaysim.getdbt.com
 www.cloud.babbel.getdbt.com
@@ -4275,6 +4343,7 @@ www.cloud.chickfila.getdbt.com
 www.cloud.chs.getdbt.com
 www.cloud.cisco.getdbt.com
 www.cloud.elections-data.getdbt.com
+www.cloud.fil.getdbt.com
 www.cloud.getdbt.com
 www.cloud.grail.getdbt.com
 www.cloud.heycar.getdbt.com
@@ -4282,9 +4351,12 @@ www.cloud.medtronic.getdbt.com
 www.cloud.mercury.getdbt.com
 www.cloud.sharp.getdbt.com
 www.cloud.southerncross.getdbt.com
+www.cloud.trustly.getdbt.com
 www.cloud.ucsc.getdbt.com
 www.cloud.uhg.getdbt.com
 www.cloud.velliv.getdbt.com
+www.cloud.vestas.getdbt.com
+www.cloud.vfnz.getdbt.com
 www.cloud.virginmedia.getdbt.com
 www.cloud.visma.getdbt.com
 www.cloud.wwe.getdbt.com
@@ -4323,6 +4395,7 @@ www.events.getdbt.com
 www.fil.getdbt.com
 www.fivetran.com
 www.gcp.asia-south1.salame.fivetran.com
+www.gcp.asia-south1.transformations.fivetran.com
 www.gcp.us-central1.proxy.qe.fivetran.com
 www.gcp.us.webhooks.fivetran.com
 www.germanywestcentral.azure.proxy.prod.fivetran.com
@@ -4331,6 +4404,7 @@ www.getdbt.com
 www.global.dbt.com
 www.global.staging.dbt.com
 www.go.fivetran.com
+www.grail.getdbt.com
 www.hello.dbtlabs.com
 www.heycar.getdbt.com
 www.hub.getdbt.com
@@ -4360,6 +4434,7 @@ www.macquarie.dbt.com
 www.marketing-components.getdbt.com
 www.me-central2.gcp.polaris.fivetran.com
 www.me-central2.gcp.proxy.prod.fivetran.com
+www.medtronic.getdbt.com
 www.mercury.getdbt.com
 www.metadata.app-int.c1.us.staging.dbt.com
 www.metadata.app-int.c1.us1.dbt.com
@@ -4396,6 +4471,7 @@ www.metadata.validation.dbt.com
 www.metadata.wellstar.dbt.com
 www.mingle-dev-oauth.dev.dbt.com
 www.mufgrs-spectra.dbt.com
+www.myorg.cloud.getdbt.com
 www.next.docs.getdbt.com
 www.northamerica-northeast1.gcp.polaris.fivetran.com
 www.northamerica-northeast1.gcp.polaris.staging.fivetran.com
@@ -4448,6 +4524,7 @@ www.proxy.securitytest.singletenant.getdbt.com
 www.proxy.test.cloud.getdbt.com
 www.proxy.validation.dbt.com
 www.resources.fivetran.com
+www.roundup.getdbt.com
 www.salesforce.dbt.com
 www.schneider.dbt.com
 www.securitytest.singletenant.getdbt.com

@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "public.hey.com": {
   "url": "https://public.hey.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "usercontent.hey.com": {
   "url": "https://usercontent.hey.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "storage.hey.com": {
   "url": "https://storage.hey.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "hey.com": {
   "url": "https://www.hey.com/",
@@ -51,7 +51,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "mta-sts.hey.com": {
   "url": "https://mta-sts.hey.com/",
@@ -61,7 +61,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "app.hey.com": {
   "url": "https://app.hey.com/sign_in",
@@ -71,7 +71,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "api.hey.com": {
   "url": "https://api.hey.com/",
@@ -81,7 +81,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "help.hey.com": {
   "url": "https://help.hey.com/",
@@ -91,7 +91,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "world.hey.com": {
   "url": "https://world.hey.com/",
@@ -103,7 +103,7 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  },
  "www.hey.com": {
   "url": "https://www.hey.com/",
@@ -116,6 +116,6 @@
   ],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 03:19:39 UTC"
+  "last_checked": "2026-11-27 22:30:28 UTC"
  }
 }
