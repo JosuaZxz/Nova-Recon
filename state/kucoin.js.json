@@ -1,30 +1,30 @@
 {
  "https://kcs.kucoin.com/vendors.js": {
   "last_url": "https://kcs.kucoin.com/vendors.js?v=1.0.9",
-  "sha256": "435975420a739601b839",
+  "sha256": "02c0a323f0dea6a8d0ac",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 03:32:59 UTC"
+  "updated": "2026-11-26 23:31:13 UTC"
  },
  "https://kcs.kucoin.com/index.js": {
   "last_url": "https://kcs.kucoin.com/index.js?v=1.0.9",
-  "sha256": "0435af72471c81158906",
+  "sha256": "a59ff7f4ab0f0d25e504",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 03:32:59 UTC"
+  "updated": "2026-11-26 23:31:14 UTC"
  },
  "https://historical-data.kucoin.com/xss.min.js": {
   "last_url": "https://historical-data.kucoin.com/xss.min.js",
   "sha256": "775d9ce2719b0cec9394",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 03:32:58 UTC"
+  "updated": "2026-11-26 23:31:12 UTC"
  },
  "https://historical-data.kucoin.com/list.js": {
   "last_url": "https://historical-data.kucoin.com/list.js",
   "sha256": "f05848846fc114e0b0ae",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 03:32:58 UTC"
+  "updated": "2026-11-26 23:31:12 UTC"
  }
 }

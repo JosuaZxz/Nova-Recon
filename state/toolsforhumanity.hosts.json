@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "pulse-admin.toolsforhumanity.com": {
   "url": "https://pulse-admin.toolsforhumanity.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "bober-github.worldcoin.dev": {
   "url": "https://bober-github.worldcoin.dev/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "static.marble.app-backend.sandbox.toolsforhumanity.com": {
   "url": "https://static.marble.app-backend.sandbox.toolsforhumanity.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "test.orbapp.worldcoin.org": {
   "url": "https://test.orbapp.worldcoin.org/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "beta.orbapp.worldcoin.org": {
   "url": "https://beta.orbapp.worldcoin.org/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "pgadmin.sandbox.toolsforhumanity.com": {
   "url": "https://pgadmin.sandbox.toolsforhumanity.com/",
@@ -141,7 +141,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "config.api.staging.consumer.worldcoin.org": {
   "url": "https://config.api.staging.consumer.worldcoin.org/",
@@ -151,7 +151,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "attestation.sandbox.worldcoin.org": {
   "url": "https://attestation.sandbox.worldcoin.org/",
@@ -171,7 +171,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "temporal.sandbox.worldcoin.org": {
   "url": "https://temporal.sandbox.worldcoin.org/",
@@ -194,7 +194,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "deep-face-zoom-staging.toolsforhumanity.com": {
   "url": "https://deep-face-zoom-staging.toolsforhumanity.com/",
@@ -204,23 +204,23 @@
   "scripts": [
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/000hy4cnrbxsc.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/03av74pii2707.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/08_a5ago2cdq7.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/0cz1d0mv5g_q7.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/13-i7230vv58e.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/0m2wvpe-_fl2a.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/13mrsyg6nvjgx.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/1fboigxvrer-3.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/1606nxa-h2puo.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/1e7g8ennchre9.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/1fu5pfm0niw7g.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/1od_gzzarew84.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/21n6-73jkuz-n.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/2crm37cy4w3od.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/2o7rgx9gngdwv.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/323y6283vhjms.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/39e98d4y2lh2h.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/3_0ckbqbz5t2_.js",
-   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/3l3sjsdigyg6j.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/2y336lhbdgh84.js",
+   "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/30ka20jchr8h4.js",
    "https://deep-face-zoom-staging.toolsforhumanity.com/_next/static/chunks/turbopack-2u1d16houkiyo.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "temporalapi.worldcoin.dev": {
   "url": "https://temporalapi.worldcoin.dev/",
@@ -270,7 +270,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "developer-dashboard.toolsforhumanity.com": {
   "url": "https://developer-dashboard.toolsforhumanity.com/",
@@ -290,7 +290,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "jenkins.worldcoin.dev": {
   "url": "https://jenkins.worldcoin.dev/",
@@ -330,7 +330,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "staging.coreapp.worldcoin.org": {
   "url": "https://staging.coreapp.worldcoin.org/",
@@ -343,7 +343,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "stage.trading.toolsforhumanity.com": {
   "url": "https://stage.trading.toolsforhumanity.com/",
@@ -356,7 +356,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "staging.enterprise.toolsforhumanity.com": {
   "url": "https://staging.enterprise.toolsforhumanity.com/",
@@ -416,7 +416,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "assets.staging.enterprise.toolsforhumanity.com": {
   "url": "https://assets.staging.enterprise.toolsforhumanity.com/",
@@ -436,7 +436,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "paveldev.dev.orbapp.worldcoin.org": {
   "url": "https://paveldev.dev.orbapp.worldcoin.org/",
@@ -446,7 +446,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "mcp-portal.stage-analytics.worldcoin.dev": {
   "url": "https://mcp-portal.stage-analytics.worldcoin.dev/",
@@ -476,7 +476,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "usernames.sandbox.worldcoin.org": {
   "url": "https://usernames.sandbox.worldcoin.org/",
@@ -486,7 +486,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "auth.staging-developer.worldcoin.org": {
   "url": "https://auth.staging-developer.worldcoin.org/",
@@ -506,7 +506,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "api.test.orbapp.worldcoin.org": {
   "url": "https://api.test.orbapp.worldcoin.org/console",
@@ -516,7 +516,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "deep-face-zoom-ep-api.toolsforhumanity.com": {
   "url": "https://deep-face-zoom-ep-api.toolsforhumanity.com/",
@@ -526,7 +526,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "api.operator.worldcoin.org": {
   "url": "https://api.operator.worldcoin.org/",
@@ -576,7 +576,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "data.orb.worldcoin.org": {
   "url": "https://data.orb.worldcoin.org/",
@@ -586,7 +586,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "flamingo-attested.toolsforhumanity.com": {
   "url": "https://flamingo-attested.toolsforhumanity.com/",
@@ -596,7 +596,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "botpreventionaws.toolsforhumanity.com": {
   "url": "https://botpreventionaws.toolsforhumanity.com/",
@@ -626,7 +626,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "auth.stage.orb.worldcoin.org": {
   "url": "https://auth.stage.orb.worldcoin.org/",
@@ -646,7 +646,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "hasura-pipeline.developer.worldcoin.org": {
   "url": "https://hasura-pipeline.developer.worldcoin.org/",
@@ -676,7 +676,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "pgadmin.app-backend.worldcoin.dev": {
   "url": "http://pgadmin.app-backend.worldcoin.dev/",
@@ -726,7 +726,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "assets.usernames.sandbox.worldcoin.org": {
   "url": "https://assets.usernames.sandbox.worldcoin.org/",
@@ -736,7 +736,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "dashboard-miniprojects.ml-stage.worldcoin.org": {
   "url": "https://dashboard-miniprojects.ml-stage.worldcoin.org/",
@@ -777,7 +777,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "login.staging.enterprise.toolsforhumanity.com": {
   "url": "https://login.staging.enterprise.toolsforhumanity.com/",
@@ -807,7 +807,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "pgadmin.app-backend.toolsforhumanity.com": {
   "url": "http://pgadmin.app-backend.toolsforhumanity.com/",
@@ -827,7 +827,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "api.dev.enterprise.toolsforhumanity.com": {
   "url": "https://api.dev.enterprise.toolsforhumanity.com/",
@@ -850,7 +850,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "jwks.staging.coreapp.worldcoin.org": {
   "url": "https://jwks.staging.coreapp.worldcoin.org/",
@@ -860,7 +860,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "auth.staging.enterprise.toolsforhumanity.com": {
   "url": "https://auth.staging.enterprise.toolsforhumanity.com/",
@@ -930,7 +930,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "staging-developer.worldcoin.org": {
   "url": "https://staging-developer.worldcoin.org/",
@@ -960,7 +960,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "selfie-enrollment-stage.worldcoin.dev": {
   "url": "https://selfie-enrollment-stage.worldcoin.dev/",
@@ -978,11 +978,11 @@
   "title": "World IdP",
   "redirect": "",
   "scripts": [
-   "https://auth.worldcoin.dev/assets/index-CDxDYqCQ.js"
+   "https://auth.worldcoin.dev/assets/index-Dk8I9RG2.js"
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "flamingo-verifier-dev.worldcoin.dev": {
   "url": "https://flamingo-verifier-dev.worldcoin.dev/",
@@ -992,7 +992,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "deep-face-zoom-internal.toolsforhumanity.com": {
   "url": "https://deep-face-zoom-internal.toolsforhumanity.com/",
@@ -1002,23 +1002,23 @@
   "scripts": [
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/000hy4cnrbxsc.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/03av74pii2707.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/08_a5ago2cdq7.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/0cz1d0mv5g_q7.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/13-i7230vv58e.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/0m2wvpe-_fl2a.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/13mrsyg6nvjgx.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/1fboigxvrer-3.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/1606nxa-h2puo.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/1e7g8ennchre9.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/1fu5pfm0niw7g.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/1od_gzzarew84.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/21n6-73jkuz-n.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/2crm37cy4w3od.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/2o7rgx9gngdwv.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/323y6283vhjms.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/39e98d4y2lh2h.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/3_0ckbqbz5t2_.js",
-   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/3l3sjsdigyg6j.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/2y336lhbdgh84.js",
+   "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/30ka20jchr8h4.js",
    "https://deep-face-zoom-internal.toolsforhumanity.com/_next/static/chunks/turbopack-2u1d16houkiyo.js"
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "jssandbox.staging.coreapp.worldcoin.org": {
   "url": "https://jssandbox.staging.coreapp.worldcoin.org/",
@@ -1031,7 +1031,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "api.max.dev.orbapp.worldcoin.org": {
   "url": "https://api.max.dev.orbapp.worldcoin.org/console",
@@ -1041,7 +1041,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "api.michael.dev.orbapp.worldcoin.org": {
   "url": "https://api.michael.dev.orbapp.worldcoin.org/console",
@@ -1051,7 +1051,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
  },
  "hasura-pipeline.staging-developer.worldcoin.org": {
   "url": "https://hasura-pipeline.staging-developer.worldcoin.org/console",
@@ -1061,6 +1061,454 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-25 10:43:44 UTC"
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "dev-us.id-infra.worldcoin.dev": {
+  "url": "https://dev-us.id-infra.worldcoin.dev/",
+  "http_status": 521,
+  "title": "worldcoin.dev | 521: Web server is down",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.grechka.dev.orbapp.worldcoin.org": {
+  "url": "https://api.grechka.dev.orbapp.worldcoin.org/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.orbapp.worldcoin.org": {
+  "url": "https://api.orbapp.worldcoin.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "stage.clickwrap.toolsforhumanity.com": {
+  "url": "https://stage.clickwrap.toolsforhumanity.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/stage.clickwrap.toolsforhumanity.com?kid=43f0b55455d96a81f7378ed2039a29ad97f807b0e1eec5826ee31c77aea9bbac&meta=eyJ0eXAiOiJKV1QiLCJhbG",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "management.stage.orb.worldcoin.org": {
+  "url": "https://management.stage.orb.worldcoin.org/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "codecserver.sandbox.worldcoin.org": {
+  "url": "https://codecserver.sandbox.worldcoin.org/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/codecserver.sandbox.worldcoin.org?kid=c2bb3366a08e1361d66a2e7a331753d2948cf924d6b9f897af55f33c156f3777&meta=eyJ0eXAiOiJKV1QiLCJhbGciO",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "uat.orbapp.worldcoin.org": {
+  "url": "https://uat.orbapp.worldcoin.org/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "mobile-remote-assets-stage.worldcoin.dev": {
+  "url": "https://mobile-remote-assets-stage.worldcoin.dev/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "tfe-dev.worldcoin.dev": {
+  "url": "https://tfe-dev.worldcoin.dev/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/tfe-dev.worldcoin.dev?kid=7d7d60029b0cf0c125f60eb108f4421d8ea1f543ae0dd930889e8df5a5211680&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "app-backend-iam.sandbox.toolsforhumanity.com": {
+  "url": "https://app-backend-iam.sandbox.toolsforhumanity.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "blockchain-fleet-manager-dev.worldcoin.dev": {
+  "url": "https://blockchain-fleet-manager-dev.worldcoin.dev/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/blockchain-fleet-manager-dev.worldcoin.dev?kid=f7dcca495d6429e86d8e4e11fb52eb68e2e065035e0dc59dca450a9f6df2c7f8&meta=eyJ0eXAiOiJKV1Qi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "partnerdata-auth.analytics.worldcoin.org": {
+  "url": "https://partnerdata-auth.analytics.worldcoin.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "certauth.toolsforhumanity.com": {
+  "url": "https://certauth.toolsforhumanity.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "pgadmin.toolsforhumanity.com": {
+  "url": "https://pgadmin.toolsforhumanity.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/pgadmin.toolsforhumanity.com?kid=c5fdf1e77d1e7e7a5d217c7aba6f2ef7a5a721ec26ab87ae53103e60890583c6&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUz",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "temporalapi.worldcoin.org": {
+  "url": "https://temporalapi.worldcoin.org/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/temporalapi.worldcoin.org?kid=2fd73c9e0497e16685b43e1f93a1facf89b61c4ddf2f07f3260d66aa86007df4&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "staging.id.worldcoin.org": {
+  "url": "https://staging.id.worldcoin.org/",
+  "http_status": 307,
+  "title": "",
+  "redirect": "https://docs.world.org/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "sandbox.issuer-jp.stage-ap-northeast-1-crypto.worldcoin.dev": {
+  "url": "https://sandbox.issuer-jp.stage-ap-northeast-1-crypto.worldcoin.dev/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "mcp-portal.worldcoin.dev": {
+  "url": "https://mcp-portal.worldcoin.dev/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.staging.partner.worldcoin.org": {
+  "url": "https://api.staging.partner.worldcoin.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.partner.worldcoin.org": {
+  "url": "https://api.partner.worldcoin.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "auth.enterprise.toolsforhumanity.com": {
+  "url": "https://auth.enterprise.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "jssandbox.coreapp.worldcoin.org": {
+  "url": "https://jssandbox.coreapp.worldcoin.org/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://jssandbox.coreapp.worldcoin.org/assets_vjs/main-BdVkyZO6.js",
+   "https://jssandbox.coreapp.worldcoin.org/assets_vjs/routeAssumptions-DSu9wL8k.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "certauth.worldcoin.dev": {
+  "url": "https://certauth.worldcoin.dev/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "id.staging.enterprise.toolsforhumanity.com": {
+  "url": "https://id.staging.enterprise.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "openexchange-staging.toolsforhumanity.com": {
+  "url": "https://openexchange-staging.toolsforhumanity.com/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "di-migration-stage.worldcoin.dev": {
+  "url": "https://di-migration-stage.worldcoin.dev/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "login.enterprise.toolsforhumanity.com": {
+  "url": "https://login.enterprise.toolsforhumanity.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://enterprise.toolsforhumanity.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "flamingo-attested-stage.worldcoin.dev": {
+  "url": "https://flamingo-attested-stage.worldcoin.dev/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "assets.dev.enterprise.toolsforhumanity.com": {
+  "url": "https://assets.dev.enterprise.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.staging.enterprise.toolsforhumanity.com": {
+  "url": "https://api.staging.enterprise.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "staging-orbs.toolsforhumanity.com": {
+  "url": "https://staging-orbs.toolsforhumanity.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://orbs.worldcoin.dev/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "static.app-backend.sandbox.toolsforhumanity.com": {
+  "url": "https://static.app-backend.sandbox.toolsforhumanity.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "pgadmin.app-backend.sandbox.toolsforhumanity.com": {
+  "url": "http://pgadmin.app-backend.sandbox.toolsforhumanity.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://pgadmin.sandbox.toolsforhumanity.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "flamingo-verifier-stage.worldcoin.dev": {
+  "url": "https://flamingo-verifier-stage.worldcoin.dev/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "stage.metrics.worldcoin.org": {
+  "url": "https://stage.metrics.worldcoin.org/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "oauth-playground.toolsforhumanity.com": {
+  "url": "https://oauth-playground.toolsforhumanity.com/",
+  "http_status": 200,
+  "title": "World ID - OAuth Playground",
+  "redirect": "",
+  "scripts": [
+   "https://oauth-playground.toolsforhumanity.com/assets/index-pbaj9Qn-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:54:39 UTC"
+ },
+ "drizzle.dev.enterprise.toolsforhumanity.com": {
+  "url": "https://drizzle.dev.enterprise.toolsforhumanity.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://toolsforhumanity.cloudflareaccess.com/cdn-cgi/access/login/drizzle.dev.enterprise.toolsforhumanity.com?kid=976efbd0216817850445097d4c54f1b2493c510d75fffface59a617fd6b05b90&meta=eyJ0eXAiOiJKV1Q",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "issuer.stage-ap-northeast-1-crypto.worldcoin.dev": {
+  "url": "https://issuer.stage-ap-northeast-1-crypto.worldcoin.dev/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "deep-face-zoom-xaa-staging.toolsforhumanity.com": {
+  "url": "https://deep-face-zoom-xaa-staging.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "management.orb.worldcoin.org": {
+  "url": "https://management.orb.worldcoin.org/",
+  "http_status": 403,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "www.dev-us.id-infra.worldcoin.dev": {
+  "url": "https://www.dev-us.id-infra.worldcoin.dev/",
+  "http_status": 521,
+  "title": "worldcoin.dev | 521: Web server is down",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.stage.trading.toolsforhumanity.com": {
+  "url": "https://api.stage.trading.toolsforhumanity.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "partner.coreapp.worldcoin.org": {
+  "url": "https://partner.coreapp.worldcoin.org/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://partner.coreapp.worldcoin.org/assets_vjs/main-BdVkyZO6.js",
+   "https://partner.coreapp.worldcoin.org/assets_vjs/routeAssumptions-DSu9wL8k.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
+ },
+ "api.uat.orbapp.worldcoin.org": {
+  "url": "https://api.uat.orbapp.worldcoin.org/console",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://api.uat.orbapp.worldcoin.org/console",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-26 23:52:46 UTC"
  }
 }

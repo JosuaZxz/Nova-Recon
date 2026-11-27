@@ -8,17 +8,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "att-dev-nl.siilo.com": {
   "url": "https://att-dev-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 403,
   "title": "",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "web-beta.siilo.com": {
   "url": "https://web-beta.siilo.com/",
@@ -28,17 +28,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "scim-api.siilo.com": {
   "url": "https://scim-api.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "admin-prod.siilo.com": {
   "url": "https://admin-prod.siilo.com/",
@@ -48,17 +48,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "rs-dev.siilo.com": {
   "url": "https://rs-dev.siilo.com/",
-  "http_status": 429,
-  "title": "",
+  "http_status": 520,
+  "title": "Doctolib",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "admin-dev.siilo.com": {
   "url": "https://admin-dev.siilo.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "connect-dev.siilo.com": {
   "url": "https://connect-dev.siilo.com/",
@@ -78,27 +78,27 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "dev-nl-2.siilo.com": {
   "url": "https://dev-nl-2.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming-staging.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "avt-dev-nl.siilo.com": {
   "url": "https://avt-dev-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 403,
   "title": "",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "siilo.com": {
   "url": "https://siilo.com/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "app-dev.siilo.com": {
   "url": "https://app-dev.siilo.com/",
@@ -118,37 +118,37 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "dev-nl.siilo.com": {
   "url": "https://dev-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming-staging.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "avt-prod-nl.siilo.com": {
   "url": "https://avt-prod-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 403,
   "title": "",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "dev-origin.siilo.com": {
   "url": "https://dev-origin.siilo.com/",
-  "http_status": 429,
-  "title": "",
+  "http_status": 520,
+  "title": "Doctolib",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "zendesk3.siilo.com": {
   "url": "https://zendesk3.siilo.com/",
@@ -158,17 +158,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "prod-ios.siilo.com": {
   "url": "https://prod-ios.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "web-lb.siilo.com": {
   "url": "https://web-lb.siilo.com/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "connect.siilo.com": {
   "url": "https://connect.siilo.com/",
@@ -188,17 +188,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "dlb-prod.siilo.com": {
   "url": "https://dlb-prod.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "acms-beta.siilo.com": {
   "url": "https://acms-beta.siilo.com/",
@@ -212,7 +212,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "acms.siilo.com": {
   "url": "https://acms.siilo.com/",
@@ -225,7 +225,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "zendesk2.siilo.com": {
   "url": "https://zendesk2.siilo.com/",
@@ -235,7 +235,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "zendesk1.siilo.com": {
   "url": "https://zendesk1.siilo.com/",
@@ -245,7 +245,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "zendesk4.siilo.com": {
   "url": "https://zendesk4.siilo.com/",
@@ -255,17 +255,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "att-prod-nl.siilo.com": {
   "url": "https://att-prod-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 403,
   "title": "",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "web.siilo.com": {
   "url": "https://web.siilo.com/",
@@ -275,27 +275,27 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "prod-nl.siilo.com": {
   "url": "https://prod-nl.siilo.com/",
-  "http_status": 429,
+  "http_status": 302,
   "title": "",
-  "redirect": "",
+  "redirect": "https://connect-farming.doctolib.com/admlogin?target=%2F",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "rs-prod.siilo.com": {
   "url": "https://rs-prod.siilo.com/",
-  "http_status": 429,
-  "title": "",
+  "http_status": 520,
+  "title": "Doctolib",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "link.siilo.com": {
   "url": "https://link.siilo.com/",
@@ -305,7 +305,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "www.siilo.com": {
   "url": "https://www.siilo.com/",
@@ -315,7 +315,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "acms-dev.siilo.com": {
   "url": "https://acms-dev.siilo.com/",
@@ -329,7 +329,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "static.siilo.com": {
   "url": "https://static.siilo.com/",
@@ -339,7 +339,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "app.siilo.com": {
   "url": "https://app.siilo.com/",
@@ -349,7 +349,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "siilo-distribution.siilo.com": {
   "url": "https://siilo-distribution.siilo.com/",
@@ -359,7 +359,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  },
  "dev-bucket.siilo.com": {
   "url": "https://dev-bucket.siilo.com/",
@@ -369,6 +369,6 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 03:42:56 UTC"
+  "last_checked": "2026-11-26 23:39:15 UTC"
  }
 }

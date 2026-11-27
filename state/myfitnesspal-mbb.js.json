@@ -4,32 +4,32 @@
   "sha256": "0306a2fa06fad13d4ad0",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:05 UTC"
+  "updated": "2026-11-26 23:43:10 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/webpack-HASH.js": {
-  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/webpack-83b02920abbccd1a.js",
-  "sha256": "ff7610b0f63b5f9795a2",
+  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/webpack-bfc3afc0a1b44e1f.js",
+  "sha256": "b99413dfbb15203aa242",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:09 UTC"
+  "updated": "2026-11-26 23:43:10 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/framework-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/framework-63cc86054dd6049e.js",
   "sha256": "ef6ab8bd556c0e040a8d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:06 UTC"
+  "updated": "2026-11-26 23:43:10 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/main-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/main-f8b6b03ef7bf1e1a.js",
   "sha256": "ab774481878e804dc082",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:06 UTC"
+  "updated": "2026-11-26 23:43:10 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/_app-HASH.js": {
-  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/_app-689c22d04436f934.js",
-  "sha256": "f6078bb5decb6851902d",
+  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/_app-4790a6d387b60a75.js",
+  "sha256": "91aeb1e278b511398ebb",
   "routes": [
    "/api/auth/refresh-token-data",
    "/api/consent/status",
@@ -46,63 +46,63 @@
    "/api/services/users"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:10 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/963-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/963-d720ee4deb4b4759.js",
   "sha256": "79ca5fb6e1e241d182d7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/9004-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/9004-a66b953905f42978.js",
   "sha256": "7eab01e96f50e0feefef",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1314-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1314-352a15a603d4284a.js",
   "sha256": "19fafe78ba13a6ac0ab2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1475-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1475-bc4e1d8fe05212a0.js",
   "sha256": "9936d38fe923806f0c01",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1678-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/1678-a8c3d4d1f2052062.js",
   "sha256": "4f1aec9f3e049648c855",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/220-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/220-57573d8453c9e606.js",
   "sha256": "97fc802ff6065a25da15",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/5970-HASH.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/5970-e8dc91e06061267f.js",
   "sha256": "03d76666134e2e000ae9",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:07 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/logged-out-homepage-v2-HASH.js": {
-  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/logged-out-homepage-v2-834ed0aa284328ef.js",
-  "sha256": "234afc593d399efe65e8",
+  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/chunks/pages/logged-out-homepage-v2-4b7728f989a08160.js",
+  "sha256": "2dbd3c48cb3875bb4394",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:10 UTC"
+  "updated": "2026-11-26 23:43:11 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/o9lGTTNl1D1nfNE97WIQg/_buildManifest.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/o9lGTTNl1D1nfNE97WIQg/_buildManifest.js",
@@ -129,10 +129,10 @@
  },
  "https://preferences.myfitnesspal.com/assets/vendor-b1413f894743b6a6083e5e2580bca517ab0cb7f6b2e35ca833b9995b61bf2f06.js": {
   "last_url": "https://preferences.myfitnesspal.com/assets/vendor-b1413f894743b6a6083e5e2580bca517ab0cb7f6b2e35ca833b9995b61bf2f06.js",
-  "sha256": "1d0d7f83a657d6dd1550",
+  "sha256": "1cb5e890ee9d144a17bb",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:09 UTC"
+  "updated": "2026-11-26 23:43:12 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/n9E5_15P80S9dmlrSU5nT/_buildManifest.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/n9E5_15P80S9dmlrSU5nT/_buildManifest.js",
@@ -155,7 +155,7 @@
    "/api/v2"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-25 10:30:08 UTC"
+  "updated": "2026-11-26 23:43:12 UTC"
  },
  "https://web-assets.myfitnesspal.com/web-main/_next/static/Ag9QBtQw5NtJcdvVe3FpU/_buildManifest.js": {
   "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/Ag9QBtQw5NtJcdvVe3FpU/_buildManifest.js",
@@ -170,5 +170,19 @@
   "routes": [],
   "graphql_ops": [],
   "updated": "2026-11-25 10:30:10 UTC"
+ },
+ "https://web-assets.myfitnesspal.com/web-main/_next/static/730iLY0zKGBZS2xjAslt-/_buildManifest.js": {
+  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/730iLY0zKGBZS2xjAslt-/_buildManifest.js",
+  "sha256": "261f738bf5998114531a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 23:43:12 UTC"
+ },
+ "https://web-assets.myfitnesspal.com/web-main/_next/static/730iLY0zKGBZS2xjAslt-/_ssgManifest.js": {
+  "last_url": "https://web-assets.myfitnesspal.com/web-main/_next/static/730iLY0zKGBZS2xjAslt-/_ssgManifest.js",
+  "sha256": "6f5b4aa00d2f8d6aed99",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-26 23:43:12 UTC"
  }
 }
