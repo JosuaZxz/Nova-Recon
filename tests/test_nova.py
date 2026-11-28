@@ -587,14 +587,68 @@ class TestNovaV22(unittest.TestCase):
     def test_ai_gate_blocks_bare_sourcemap_and_mutationless_graphql(self):
         is_fp_sm, _ = ai_brief.deterministic_fp_check({"type": "sourcemap", "url": "https://a.com/a.js.map"})
         self.assertTrue(is_fp_sm)
-        is_fp_gql, _ = ai_brief.deterministic_fp_check(
+        is_fp_hc, _ = ai_brief.deterministic_fp_check(
+            {
+                "type": "host-change",
+                "url": "https://dev.loom.com/",
+                "response_evidence": "Previous State: HTTP 403 (title: Vercel Security Checkpoint)",
+            }
+        )
+        self.assertTrue(is_fp_hc)
+        is_fp_gql_med, _ = ai_brief.deterministic_fp_check(
             {"type": "graphql", "confidence": "medium", "url": "https://a.com/graphql"}
         )
-        self.assertTrue(is_fp_gql)
+        self.assertTrue(is_fp_gql_med)
         is_fp_gql_strong, _ = ai_brief.deterministic_fp_check(
-            {"type": "graphql", "confidence": "strong", "url": "https://a.com/graphql"}
+            {
+                "type": "graphql",
+                "confidence": "strong",
+                "url": "https://wildcard.website.bokundemo.com/api/graphql",
+            }
         )
-        self.assertFalse(is_fp_gql_strong)
+        self.assertTrue(is_fp_gql_strong)
+
+    def test_cloud_exposure_filters_third_party_static_banners_and_public_pricingfeed(self):
+        kayak_js = 'const img = "https://storage.googleapis.com/crowdriff-static/banner.png";'
+        deriv_js = 'const fb = "https://deriv-static-pricingfeedv2.firebaseio.com";'
+        corp_js = 'const rtdb = "https://corp-staging-rtdb.firebaseio.com";'
+
+        def fake_cloud_http(url, **kwargs):
+            r = MagicMock()
+            if "crowdriff-static" in url:
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/xml"}
+                r._nova_body = (
+                    b"<ListBucketResult><Name>crowdriff-static</Name>"
+                    b"<Contents><Key>/console/v4/collector/10269/banner_08a35ff8.png</Key></Contents>"
+                    b"<Contents><Key>/console/v4/collector/10269/banner_6f4f0160.jpg</Key></Contents>"
+                    b"</ListBucketResult>"
+                )
+                return r, None
+            if "deriv-static-pricingfeedv2.firebaseio.com" in url:
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"eu":true,"n8n":true,"row":true}'
+                return r, None
+            if "corp-staging-rtdb.firebaseio.com" in url:
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"users":true,"admin_config":true}'
+                return r, None
+            return None, "unexpected"
+
+        with patch.object(nova, "http_get", side_effect=fake_cloud_http):
+            self.assertEqual(
+                nova.verify_cloud_assets("http://rights.kayak.com/app.js", kayak_js, program="kayak"),
+                [],
+            )
+            self.assertEqual(
+                nova.verify_cloud_assets("https://staging.deriv.com/app.js", deriv_js, program="deriv"),
+                [],
+            )
+            hits = nova.verify_cloud_assets("https://app.demo.org/app.js", corp_js, program="demo")
+            self.assertEqual(len(hits), 1)
+            self.assertEqual(hits[0]["type"], "cloud-exposure")
 
     def test_scope_sync_filters_paid_wildcards_and_shared_hosting(self):
         import scope_sync

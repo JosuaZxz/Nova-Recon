@@ -18,6 +18,21 @@ WAF_OR_LOGIN_NOISE = (
     "access denied",
     "just a moment...",
     "cf-mitigated",
+    "vercel security checkpoint",
+    "firewall triggered",
+    "ddos-guard",
+    "incapsula incident id",
+    "sucuri website firewall",
+)
+
+DIRECT_IMPACT_TYPES = (
+    "exposure",
+    "takeover",
+    "js-secret",
+    "cors",
+    "unauth-api",
+    "cloud-takeover",
+    "cloud-exposure",
 )
 
 
@@ -31,17 +46,21 @@ def deterministic_fp_check(finding: dict) -> tuple[bool, str]:
     if ftype == "js-diff":
         return True, "JS route list alone is recon intel, not a reportable vulnerability without proven unauth data leak"
 
+    if ftype == "host-change":
+        return True, "Host status transition alone is recon intel, not a standalone vulnerability without proven exposure"
+
     if ftype == "sourcemap":
         return True, "Bare sourcemap without proven secret or unauthenticated API leak is Informative"
 
-    if ftype == "graphql" and finding.get("confidence") != "strong":
-        return True, "GraphQL introspection without exposed state-changing mutations is low-signal"
+    if ftype == "graphql":
+        return True, "GraphQL introspection alone without proven unauthenticated sensitive data leak is Informative (P5)"
 
     if ftype == "cors" and finding.get("severity_hint") != "high":
         return True, "CORS reflection without Access-Control-Allow-Credentials: true"
 
     res_ev = (finding.get("response_evidence") or "").lower()
-    if any(marker in res_ev for marker in WAF_OR_LOGIN_NOISE):
+    ev_txt = (finding.get("evidence") or "").lower()
+    if any(marker in res_ev or marker in ev_txt for marker in WAF_OR_LOGIN_NOISE):
         return True, "WAF block or challenge page detected in response evidence"
 
     if ftype == "exposure":
@@ -151,6 +170,14 @@ def _fallback_draft(finding: dict) -> dict:
     }
 
 
+def _eligible_for_fallback(finding: dict) -> bool:
+    """Only allow deterministic fallback reports for strong direct-impact bug categories."""
+    return (
+        finding.get("confidence") == "strong"
+        and finding.get("type") in DIRECT_IMPACT_TYPES
+    )
+
+
 def validate_and_draft_report(finding: dict) -> dict | None:
     """
     Validate a candidate finding via deterministic rules + Groq AI (if configured).
@@ -163,17 +190,9 @@ def validate_and_draft_report(finding: dict) -> dict | None:
 
     api_key = os.environ.get("GROQ_API_KEY", "").strip()
     if not api_key:
-        if finding.get("confidence") == "strong" and finding.get("type") in (
-            "exposure",
-            "takeover",
-            "js-secret",
-            "cors",
-            "unauth-api",
-            "cloud-takeover",
-            "cloud-exposure",
-        ):
+        if _eligible_for_fallback(finding):
             return _fallback_draft(finding)
-        finding["_rejection_reason"] = "No GROQ_API_KEY and finding is not strong-confidence direct proof"
+        finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
         return None
 
     model = os.environ.get("NOVA_AI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
@@ -239,7 +258,10 @@ def validate_and_draft_report(finding: dict) -> dict | None:
             timeout=40,
         )
         if resp.status_code != 200:
-            return _fallback_draft(finding)
+            if _eligible_for_fallback(finding):
+                return _fallback_draft(finding)
+            finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
+            return None
 
         content = resp.json()["choices"][0]["message"]["content"].strip()
         match = re.search(r"\{.*\}", content, re.DOTALL)
@@ -264,7 +286,10 @@ def validate_and_draft_report(finding: dict) -> dict | None:
             "remediation": parsed.get("remediation") or fallback["remediation"],
         }
     except Exception:
-        return _fallback_draft(finding)
+        if _eligible_for_fallback(finding):
+            return _fallback_draft(finding)
+        finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
+        return None
 
 
 def render_markdown_report(finding: dict, draft: dict) -> str:

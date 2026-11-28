@@ -1257,14 +1257,76 @@ def verify_extracted_routes(
     return findings
 
 
-def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
+STATIC_ASSET_EXTS = (
+    ".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp", ".ico",
+    ".css", ".woff", ".woff2", ".ttf", ".eot", ".mp4", ".mp3",
+)
+SENSITIVE_CLOUD_KEYS = (
+    "user", "account", "token", "secret", "pass", "admin", "customer",
+    "wallet", "key", "order", "payment", "session", "email", "private",
+    "cred", "auth", "internal", "config", "backup", "dump", "invoice",
+    "kyc", ".env", ".sql", ".bak", ".pem", ".csv",
+)
+BRAND_STOPWORDS = {
+    "mbb", "bbp", "public", "bounty", "bug", "og", "og1", "corp", "inc",
+    "com", "net", "org", "app", "api", "web", "dev", "prod", "stg",
+    "test", "stage", "staging", "cloud", "cdn", "static", "assets",
+    "media", "www", "http", "https",
+}
+
+
+def _extract_brand_tokens(
+    js_url: str, program: str = "", policy: ProgramPolicy | None = None
+) -> set[str]:
+    """Collect normalized brand tokens from program name, policy domains, and host."""
+    raw_sources = [program, urlparse(js_url).netloc]
+    if policy:
+        raw_sources.extend(policy.includes)
+    tokens: set[str] = set()
+    for src in raw_sources:
+        for tok in re.split(r"[^a-z0-9]+", str(src).lower()):
+            if len(tok) >= 3 and tok not in BRAND_STOPWORDS:
+                tokens.add(tok)
+    return tokens
+
+
+def _inspect_bucket_keys(xml_body: str) -> tuple[bool, bool]:
+    """Return (has_non_static_file, has_sensitive_key) from S3/GCS/Azure XML listings."""
+    keys = re.findall(r"<Key>([^<]+)</Key>", xml_body, re.IGNORECASE)
+    if "<EnumerationResults" in xml_body:
+        keys.extend(re.findall(r"<Name>([^<]+)</Name>", xml_body, re.IGNORECASE))
+    files = [k.strip() for k in keys if k.strip() and not k.strip().endswith("/")]
+    if not files:
+        return False, False
+    has_sensitive = any(marker in f.lower() for f in files for marker in SENSITIVE_CLOUD_KEYS)
+    has_non_static = any(not f.lower().endswith(STATIC_ASSET_EXTS) for f in files)
+    return has_non_static, has_sensitive
+
+
+def _is_first_party_cloud(
+    resource_name: str, brand_tokens: set[str], has_sensitive: bool = False
+) -> bool:
+    """Allow exposure if resource name matches target brand tokens or holds sensitive keys."""
+    if has_sensitive or not brand_tokens:
+        return True
+    res_l = resource_name.lower()
+    return any(tok in res_l for tok in brand_tokens)
+
+
+def verify_cloud_assets(
+    js_url: str,
+    js_text: str,
+    program: str = "",
+    policy: ProgramPolicy | None = None,
+) -> list[dict]:
     """
-    Verify AWS S3 buckets and Firebase Realtime DBs referenced inside a JS bundle
-    for unclaimed NoSuchBucket takeover or unauthenticated public data listing.
+    Verify AWS S3, Firebase Realtime DB, GCS, and Azure Blob references inside JS
+    for unclaimed NoSuchBucket takeover or first-party sensitive public exposure.
     """
     cloud = extract_cloud_urls(js_text)
     findings: list[dict] = []
     parsed_js = urlparse(js_url)
+    brand_tokens = _extract_brand_tokens(js_url, program=program, policy=policy)
 
     for s3_url in cloud.get("s3_urls", [])[:5]:
         r, _ = http_get(s3_url, max_bytes=16_000)
@@ -1291,6 +1353,9 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
                 }
             )
         elif r.status_code == 200 and "<ListBucketResult" in body and "<Contents>" in body:
+            has_non_static, has_sensitive = _inspect_bucket_keys(body)
+            if not has_non_static or not _is_first_party_cloud(bucket_name, brand_tokens, has_sensitive):
+                continue
             findings.append(
                 {
                     "type": "cloud-exposure",
@@ -1318,6 +1383,13 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
             and '"error"' not in body.lower()
         ):
             fb_host = urlparse(fb_url).netloc
+            body_l = body.lower()
+            has_sensitive = any(marker in body_l for marker in SENSITIVE_CLOUD_KEYS)
+            is_static_feed = any(m in fb_host.lower() for m in ("static", "public", "pricingfeed", "marketing"))
+            if is_static_feed and not has_sensitive:
+                continue
+            if not _is_first_party_cloud(fb_host, brand_tokens, has_sensitive):
+                continue
             findings.append(
                 {
                     "type": "cloud-exposure",
@@ -1338,6 +1410,10 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
             continue
         body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
         if "<ListBucketResult" in body and "<Contents>" in body:
+            gcs_bucket = urlparse(gcs_url).path.strip("/").split("/")[0]
+            has_non_static, has_sensitive = _inspect_bucket_keys(body)
+            if not has_non_static or not _is_first_party_cloud(gcs_bucket, brand_tokens, has_sensitive):
+                continue
             findings.append(
                 {
                     "type": "cloud-exposure",
@@ -1359,6 +1435,11 @@ def verify_cloud_assets(js_url: str, js_text: str) -> list[dict]:
         body = getattr(r, "_nova_body", b"").decode("utf-8", "ignore")
         if "<EnumerationResults" in body and "<Blob>" in body:
             az_parsed = urlparse(az_url)
+            has_non_static, has_sensitive = _inspect_bucket_keys(body)
+            if not has_non_static or not _is_first_party_cloud(
+                f"{az_parsed.netloc}{az_parsed.path}", brand_tokens, has_sensitive
+            ):
+                continue
             findings.append(
                 {
                     "type": "cloud-exposure",
@@ -1413,6 +1494,7 @@ def _fetch_and_analyze_js(
     policy: ProgramPolicy,
     js_state: dict,
     run_diff: bool = True,
+    program: str = "",
 ) -> list[dict]:
     """Fetch unique in-scope non-vendor JS bundles and verify secrets, cloud assets, sourcemaps, and routes."""
     findings = []
@@ -1439,7 +1521,7 @@ def _fetch_and_analyze_js(
             continue
 
         findings.extend(scan_js_secrets(body, js_url))
-        findings.extend(verify_cloud_assets(js_url, body))
+        findings.extend(verify_cloud_assets(js_url, body, program=program, policy=policy))
 
         if run_diff:
             entry, diff_finding = diff_js_bundle(js_url, body, js_state, is_interesting)
@@ -1472,7 +1554,7 @@ def _fetch_and_analyze_js(
                         sm_body = getattr(sm_resp, "_nova_body", b"").decode("utf-8", "ignore")
                         if ('"mappings"' in sm_body or '"sources"' in sm_body) and not sm_body.lstrip().startswith("<"):
                             findings.extend(scan_js_secrets(sm_body, sm_url))
-                            findings.extend(verify_cloud_assets(sm_url, sm_body))
+                            findings.extend(verify_cloud_assets(sm_url, sm_body, program=program, policy=policy))
                             sm_intel = extract_js_intel(sm_body, sm_url)
                             if sm_intel["routes"]:
                                 findings.extend(verify_extracted_routes(js_url, sm_intel["routes"][:12], policy))
@@ -1524,7 +1606,7 @@ def cmd_verify(args) -> None:
             html_body = res.get("body") or ""
             if html_body:
                 findings.extend(scan_js_secrets(html_body, url))
-                findings.extend(verify_cloud_assets(url, html_body))
+                findings.extend(verify_cloud_assets(url, html_body, program=program, policy=policy))
             f = check_cors(base)
             if f:
                 findings.append(f)
@@ -1553,7 +1635,7 @@ def cmd_verify(args) -> None:
                 js_targets.append((s_url, h_interesting))
 
     if js_targets:
-        findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True))
+        findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True, program=program))
         save_js_state(STATE_DIR, program, js_state)
 
     takeover_pool: set[str] = set()
@@ -1675,13 +1757,30 @@ def cmd_diff(args) -> None:
     js_targets: list[tuple[str, bool]] = []
     stamp = now_utc()
 
+    WAF_PREV_TITLES = (
+        "vercel security checkpoint",
+        "firewall triggered",
+        "just a moment",
+        "attention required",
+    )
     for res in refreshed:
         host = res["host"]
         prev = hosts_state.get(host, {})
         if res.get("url") and res.get("http_status"):
             transition = detect_host_transition(host, prev, res)
-            if transition:
-                findings.append(transition)
+            prev_title = (prev.get("title") or "").lower()
+            if transition and not res.get("catchall") and not any(m in prev_title for m in WAF_PREV_TITLES):
+                # Treat genuine -> 200 transitions as verification triggers, not standalone reports.
+                base = f"{urlparse(res['url']).scheme}://{urlparse(res['url']).netloc}"
+                findings.extend(check_exposures(base, False))
+                cors_hit = check_cors(base)
+                if cors_hit:
+                    findings.append(cors_hit)
+                findings.extend(check_openapi_routes(base, policy))
+                html_body = res.get("body") or ""
+                if html_body:
+                    findings.extend(scan_js_secrets(html_body, res["url"]))
+                    findings.extend(verify_cloud_assets(res["url"], html_body, program=program, policy=policy))
             hosts_state[host] = {
                 "url": res["url"],
                 "http_status": res["http_status"],
@@ -1699,7 +1798,7 @@ def cmd_diff(args) -> None:
 
     if js_targets:
         js_state = load_js_state(STATE_DIR, program)
-        findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True))
+        findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True, program=program))
         save_js_state(STATE_DIR, program, js_state)
 
     save_hosts_state(program, hosts_state)
