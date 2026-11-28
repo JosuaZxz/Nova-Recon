@@ -78,6 +78,7 @@ admin.deriv.com
 admin.derivws.com
 admin.dev.deriv.cloud
 admin.home.deriv.com
+admindb01.deriv.com
 admindb01a.staging.deriv.cloud
 admindb01o.deriv.com
 admine.dev.deriv.cloud
@@ -227,7 +228,9 @@ brokerpilot.deriv.com
 brokerpilotm.deriv.com
 buffer.dev.deriv.cloud
 bug-bounty.deriv.com
+bug-bounty1.deriv.com
 bug.deriv.com
+builders.deriv.com
 c.derivws.com
 camunda-demo.deriv.cloud
 camunda-staging.deriv.cloud
@@ -311,6 +314,7 @@ cf1.derivws.com
 cf2.derivws.com
 cf7.bot.deriv.com
 ch.dev.deriv.cloud
+chartflow.deriv.com
 charts.deriv.com
 chat.deriv.com
 chat.frontend.derivws.com
@@ -976,6 +980,14 @@ portainer-testu.deriv.cloud
 portal.deriv.cloud
 ppp.deriv.cloud
 ppp.deriv.com
+pr-1009-traders.deriv.cloud
+pr-1028-traders.deriv.cloud
+pr-1031-traders.deriv.cloud
+pr-1033-traders.deriv.cloud
+pr-1035-traders.deriv.cloud
+pr-1040-traders.deriv.cloud
+pr-1041-traders.deriv.cloud
+pr-1057-traders.deriv.cloud
 pr-11-traders.deriv.com
 pr-13-traders.deriv.com
 pr-14-traders.deriv.com
@@ -1209,6 +1221,8 @@ staging-bot.deriv.com
 staging-bota.deriv.com
 staging-bridge-api-zuplo.deriv.cloud
 staging-bridge-api.deriv.cloud
+staging-builders.deriv.com
+staging-cashier-crypto-iframe.deriv.cloud
 staging-cashier-crypto-iframe.deriv.com
 staging-charts.deriv.cloud
 staging-charts.deriv.com

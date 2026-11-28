@@ -4,21 +4,21 @@
   "sha256": "2726845b4b7c41cd8bf6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 19:37:32 UTC"
+  "updated": "2026-11-28 09:51:39 UTC"
  },
  "https://payments.bokundemo.com/_astro/hoisted.HASH.js": {
   "last_url": "https://payments.bokundemo.com/_astro/hoisted.fb07dade.js",
   "sha256": "265de9b9c7bf15dc512d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 19:37:32 UTC"
+  "updated": "2026-11-28 09:51:39 UTC"
  },
  "https://payments.bokuntest.com/_astro/hoisted.HASH.js": {
   "last_url": "https://payments.bokuntest.com/_astro/hoisted.fb07dade.js",
   "sha256": "265de9b9c7bf15dc512d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 19:37:33 UTC"
+  "updated": "2026-11-28 09:51:40 UTC"
  },
  "http://appstore-test.bokuntest.com/static/js/2.00acc6b4.chunk.js": {
   "last_url": "http://appstore-test.bokuntest.com/static/js/2.00acc6b4.chunk.js",
@@ -27,7 +27,7 @@
   "graphql_ops": [
    "IntrospectionQuery"
   ],
-  "updated": "2026-11-27 19:37:33 UTC"
+  "updated": "2026-11-28 09:51:40 UTC"
  },
  "http://appstore-test.bokuntest.com/static/js/main.63130877.chunk.js": {
   "last_url": "http://appstore-test.bokuntest.com/static/js/main.63130877.chunk.js",
@@ -75,7 +75,7 @@
    "WebhookDelete",
    "WebhookUpdate"
   ],
-  "updated": "2026-11-27 19:37:34 UTC"
+  "updated": "2026-11-28 09:51:41 UTC"
  },
  "https://www.housetrip.com/_next/static/chunks/webpack-HASH.js": {
   "last_url": "https://www.housetrip.com/_next/static/chunks/webpack-7555adaf38b596b9.js",
@@ -254,12 +254,12 @@
  },
  "https://appstore.bokundemo.com/assets/index-Ct628S83.js": {
   "last_url": "https://appstore.bokundemo.com/assets/index-Ct628S83.js",
-  "sha256": "f083625fb8d7cd875f09",
+  "sha256": "c7430263d7df6ec6678d",
   "routes": [],
   "graphql_ops": [
    "IntrospectionQuery"
   ],
-  "updated": "2026-11-27 19:37:18 UTC"
+  "updated": "2026-11-28 09:51:41 UTC"
  },
  "https://bookings.bokuntest.com/_next/static/chunks/webpack-HASH.js": {
   "last_url": "https://bookings.bokuntest.com/_next/static/chunks/webpack-e0f484b41b6446da.js",
