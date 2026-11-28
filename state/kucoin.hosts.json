@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "openapi-v2.kucoin.com": {
   "url": "https://openapi-v2.kucoin.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "pay.kucoin.com": {
   "url": "https://pay.kucoin.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "express.kucoin.com": {
   "url": "https://express.kucoin.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "assets-v2.kucoin.com": {
   "url": "https://assets-v2.kucoin.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "paypci.kucoin.com": {
   "url": "https://paypci.kucoin.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "api-futures.kucoin.com": {
   "url": "https://api-futures.kucoin.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "trade-v2.kucoin.com": {
   "url": "https://trade-v2.kucoin.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "news.kucoin.com": {
   "url": "https://news.kucoin.com/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "api-broker.kucoin.com": {
   "url": "https://api-broker.kucoin.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "trade.kucoin.com": {
   "url": "https://trade.kucoin.com/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "kitchen-v2.kucoin.com": {
   "url": "https://kitchen-v2.kucoin.com/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "frontend-helper.kucoin.com": {
   "url": "https://frontend-helper.kucoin.com/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "pay-sandbox.kucoin.com": {
   "url": "https://pay-sandbox.kucoin.com/",
@@ -138,7 +138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "token-info.kucoin.com": {
   "url": "https://token-info.kucoin.com/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "kcs.kucoin.com": {
   "url": "https://kcs.kucoin.com/",
@@ -161,7 +161,7 @@
   ],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "www.kucoin.com": {
   "url": "https://www.kucoin.com/",
@@ -171,7 +171,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "historical-data.kucoin.com": {
   "url": "https://historical-data.kucoin.com/",
@@ -184,7 +184,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "assethub.kucoin.com": {
   "url": "https://assethub.kucoin.com/",
@@ -194,7 +194,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "zendesk3.kucoin.com": {
   "url": "https://zendesk3.kucoin.com/",
@@ -204,7 +204,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "m.kucoin.com": {
   "url": "https://m.kucoin.com/",
@@ -214,7 +214,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "kucoin.com": {
   "url": "https://www.kucoin.com/",
@@ -224,7 +224,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "kcs-info.kucoin.com": {
   "url": "https://kcs-info.kucoin.com/",
@@ -234,7 +234,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "link.kucoin.com": {
   "url": "https://link.kucoin.com/",
@@ -244,7 +244,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "assets.kucoin.com": {
   "url": "https://assets.kucoin.com/",
@@ -254,7 +254,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "bigdata-scfx-push.kucoin.com": {
   "url": "https://bigdata-scfx-push.kucoin.com/",
@@ -264,7 +264,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
  },
  "trace.kucoin.com": {
   "url": "https://trace.kucoin.com/",
@@ -274,6 +274,66 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-26 23:31:11 UTC"
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "channel-callback.kucoin.com": {
+  "url": "https://channel-callback.kucoin.com/",
+  "http_status": 403,
+  "title": "Attention Required! | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "futures.kucoin.com": {
+  "url": "https://futures.kucoin.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.kucoin.com/futures/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "robot.kucoin.com": {
+  "url": "https://robot.kucoin.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.kucoin.com/trading-bot/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "land.kucoin.com": {
+  "url": "https://land.kucoin.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.kucoin.com/land/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "support.kucoin.com": {
+  "url": "https://support.kucoin.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://www.kucoin.com/support",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
+ },
+ "assets-currency.kucoin.com": {
+  "url": "https://assets-currency.kucoin.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:35:57 UTC"
  }
 }

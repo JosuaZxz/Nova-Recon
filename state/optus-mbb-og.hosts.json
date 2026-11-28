@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "dev.products.api.optus.com.au": {
   "url": "https://dev.products.api.optus.com.au/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "gnp.onboarding.telco-api.optus.com.au": {
   "url": "https://gnp.onboarding.telco-api.optus.com.au/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ndisuat.optus.com.au": {
   "url": "https://ndisuat.optus.com.au/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "staging-auth.enterprise.optus.com.au": {
   "url": "https://staging-auth.enterprise.optus.com.au/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "pet.apigee.optus.com.au": {
   "url": "https://pet.apigee.optus.com.au/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "appsec-test.optus.com.au": {
   "url": "https://appsec-test.optus.com.au/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "dev.dcm.service-gateway.optus.com.au": {
   "url": "https://dev.dcm.service-gateway.optus.com.au/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "devicecentre-ext.apps.gnp.aws.optus.com.au": {
   "url": "http://devicecentre-ext.apps.gnp.aws.optus.com.au/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit5.dcm.b2b-gateway.optus.com.au": {
   "url": "https://sit5.dcm.b2b-gateway.optus.com.au/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "corporateflex.optus.com.au": {
   "url": "https://corporateflex.optus.com.au/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit2.auth.optus.com.au": {
   "url": "https://sit2.auth.optus.com.au/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat-hn.console.optus.com.au": {
   "url": "https://uat-hn.console.optus.com.au/",
@@ -138,17 +138,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "stg-b2b-gateway.optus.com.au": {
   "url": "https://stg-b2b-gateway.optus.com.au/",
   "http_status": 403,
-  "title": "Access Denied",
+  "title": "Error",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit2.bhn.b2b-gateway.optus.com.au": {
   "url": "https://sit2.bhn.b2b-gateway.optus.com.au/",
@@ -158,7 +158,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit8.bhn.b2b-gateway.optus.com.au": {
   "url": "https://sit8.bhn.b2b-gateway.optus.com.au/",
@@ -168,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "mywholesaletest.optus.com.au": {
   "url": "https://mywholesaletest.optus.com.au/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat-gateway.optus.com.au": {
   "url": "https://uat-gateway.optus.com.au/",
@@ -198,7 +198,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit.auth.optus.com.au": {
   "url": "https://sit.auth.optus.com.au/",
@@ -208,7 +208,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit8.dcm.b2b-gateway.optus.com.au": {
   "url": "https://sit8.dcm.b2b-gateway.optus.com.au/",
@@ -218,7 +218,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "staging-gateway.optus.com.au": {
   "url": "https://staging-gateway.optus.com.au/",
@@ -238,7 +238,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "mywholesaleuat.optus.com.au": {
   "url": "https://mywholesaleuat.optus.com.au/",
@@ -252,7 +252,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat-shop.optus.com.au": {
   "url": "https://uat-shop.optus.com.au/",
@@ -262,7 +262,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "express.optus.com.au": {
   "url": "https://express.optus.com.au/",
@@ -272,7 +272,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:35:19 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ppt.obapi.optus.com.au": {
   "url": "https://ppt.obapi.optus.com.au/",
@@ -664,17 +664,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ppt-b2b-gateway.optus.com.au": {
   "url": "https://ppt-b2b-gateway.optus.com.au/",
   "http_status": 403,
-  "title": "Error",
+  "title": "Access Denied",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ms.www-uat.apps.gnp.aws.optus.com.au": {
   "url": "http://ms.www-uat.apps.gnp.aws.optus.com.au/",
@@ -684,7 +684,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ndispreprod.optus.com.au": {
   "url": "https://ndispreprod.optus.com.au/",
@@ -694,7 +694,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "pet.auth.telco-api.optus.com.au": {
   "url": "https://pet.auth.telco-api.optus.com.au/",
@@ -704,7 +704,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ebapi.optus.com.au": {
   "url": "https://ebapi.optus.com.au/",
@@ -714,17 +714,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat-b2b-gateway.optus.com.au": {
   "url": "https://uat-b2b-gateway.optus.com.au/",
   "http_status": 403,
-  "title": "Error",
+  "title": "Access Denied",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat.dcm.b2b-gateway.optus.com.au": {
   "url": "https://uat.dcm.b2b-gateway.optus.com.au/",
@@ -734,7 +734,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "dev.service-gateway.optus.com.au": {
   "url": "https://dev.service-gateway.optus.com.au/",
@@ -744,7 +744,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit4.dcm.b2b-gateway.optus.com.au": {
   "url": "https://sit4.dcm.b2b-gateway.optus.com.au/",
@@ -754,7 +754,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat-ebapi.optus.com.au": {
   "url": "https://uat-ebapi.optus.com.au/",
@@ -764,7 +764,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "pet.partner.store.optus.com.au": {
   "url": "https://pet.partner.store.optus.com.au/",
@@ -774,7 +774,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "staging-shop.optus.com.au": {
   "url": "https://staging-shop.optus.com.au/",
@@ -784,7 +784,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit6.bhn.b2b-gateway.optus.com.au": {
   "url": "https://sit6.bhn.b2b-gateway.optus.com.au/",
@@ -794,7 +794,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "agentwidgets-uat.optus.com.au": {
   "url": "https://agentwidgets-uat.optus.com.au/",
@@ -804,7 +804,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat.links.optus.com.au": {
   "url": "https://uat.links.optus.com.au/",
@@ -814,7 +814,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "auth.optus.com.au": {
   "url": "https://auth.optus.com.au/",
@@ -824,7 +824,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "pay.optus.com.au": {
   "url": "https://pay.optus.com.au/",
@@ -844,7 +844,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ndisdev.optus.com.au": {
   "url": "https://ndisdev.optus.com.au/",
@@ -854,7 +854,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "obapiv2.optus.com.au": {
   "url": "https://obapiv2.optus.com.au/",
@@ -866,7 +866,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "oeauth.optus.com.au": {
   "url": "https://oeauth.optus.com.au/",
@@ -886,7 +886,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "apidev.optus.com.au": {
   "url": "https://apidev.optus.com.au/",
@@ -899,7 +899,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "www-uat.optus.com.au": {
   "url": "https://www-uat.optus.com.au/",
@@ -909,7 +909,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "apidev-test.optus.com.au": {
   "url": "https://apidev-test.optus.com.au/",
@@ -922,7 +922,7 @@
   ],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat.partner.store.optus.com.au": {
   "url": "https://uat.partner.store.optus.com.au/",
@@ -932,7 +932,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "cfs2auth.optus.com.au": {
   "url": "https://cfs2auth.optus.com.au/logon/LogonPoint/tmindex.html",
@@ -948,7 +948,7 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "dev.auth.optus.com.au": {
   "url": "https://dev.auth.optus.com.au/",
@@ -958,7 +958,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "partner.connect.optus.com.au": {
   "url": "https://partner.connect.optus.com.au/logon/LogonPoint/index.html",
@@ -968,17 +968,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit7-b2b-gateway.optus.com.au": {
   "url": "https://sit7-b2b-gateway.optus.com.au/",
   "http_status": 403,
-  "title": "Error",
+  "title": "Access Denied",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "ndistest.optus.com.au": {
   "url": "https://ndistest.optus.com.au/",
@@ -988,7 +988,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "gnp.service.telco-api.optus.com.au": {
   "url": "https://gnp.service.telco-api.optus.com.au/",
@@ -998,7 +998,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit7.bhn.b2b-gateway.optus.com.au": {
   "url": "https://sit7.bhn.b2b-gateway.optus.com.au/",
@@ -1008,7 +1008,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "pet.service.telco-api.optus.com.au": {
   "url": "https://pet.service.telco-api.optus.com.au/",
@@ -1018,7 +1018,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "uat.aem.b2b-gateway.optus.com.au": {
   "url": "https://uat.aem.b2b-gateway.optus.com.au/",
@@ -1028,7 +1028,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "gnp.auth.telco-api.optus.com.au": {
   "url": "https://gnp.auth.telco-api.optus.com.au/",
@@ -1038,16 +1038,402 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:39:11 UTC"
  },
  "sit3-b2b-gateway.optus.com.au": {
   "url": "https://sit3-b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:39:11 UTC"
+ },
+ "pet-ebapi.optus.com.au": {
+  "url": "https://pet-ebapi.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "pet.bhn.b2b-gateway.optus.com.au": {
+  "url": "https://pet.bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit.bhn.b2b-gateway.optus.com.au": {
+  "url": "https://sit.bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "gnp.api.services.optus.com.au": {
+  "url": "https://gnp.api.services.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "bhn.b2b-gateway.optus.com.au": {
+  "url": "https://bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit4.auth.optus.com.au": {
+  "url": "https://sit4.auth.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "pet-b2b-gateway.optus.com.au": {
+  "url": "https://pet-b2b-gateway.optus.com.au/",
   "http_status": 403,
   "title": "Error",
   "redirect": "",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 23:33:25 UTC"
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit-b2b-gateway.optus.com.au": {
+  "url": "https://sit-b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit.products.api.optus.com.au": {
+  "url": "https://sit.products.api.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.bhn.b2b-gateway.optus.com.au": {
+  "url": "https://ppt.bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.aem.b2b-gateway.optus.com.au": {
+  "url": "https://ppt.aem.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "id-stg.apps.aws.optus.com.au": {
+  "url": "http://id-stg.apps.aws.optus.com.au/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit.partner.store.optus.com.au": {
+  "url": "https://sit.partner.store.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "stg-gateway.optus.com.au": {
+  "url": "https://stg-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit-ebapi.optus.com.au": {
+  "url": "https://sit-ebapi.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "uat.sfmc.optus.com.au": {
+  "url": "https://uat.sfmc.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.dcm.b2b-gateway.optus.com.au": {
+  "url": "https://ppt.dcm.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "uat2.partner.store.optus.com.au": {
+  "url": "https://uat2.partner.store.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit2.dcm.b2b-gateway.optus.com.au": {
+  "url": "https://sit2.dcm.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ddosportal.optus.com.au": {
+  "url": "https://ddosportal.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "stg.products.api.optus.com.au": {
+  "url": "https://stg.products.api.optus.com.au/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "uat3.partner.store.optus.com.au": {
+  "url": "https://uat3.partner.store.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit3.bhn.b2b-gateway.optus.com.au": {
+  "url": "https://sit3.bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "devicehelp.optus.com.au": {
+  "url": "https://devicehelp.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit.aem.b2b-gateway.optus.com.au": {
+  "url": "https://sit.aem.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "product-uat.optus.com.au": {
+  "url": "https://product-uat.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.login.optus.com.au": {
+  "url": "https://ppt.login.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit4.bhn.b2b-gateway.optus.com.au": {
+  "url": "https://sit4.bhn.b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit5-b2b-gateway.optus.com.au": {
+  "url": "https://sit5-b2b-gateway.optus.com.au/",
+  "http_status": 403,
+  "title": "Error",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "auth.enterprise.optus.com.au": {
+  "url": "https://auth.enterprise.optus.com.au/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://enterprise.optus.com.au/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "naasapilab.optus.com.au": {
+  "url": "https://naasapilab.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit3.auth.optus.com.au": {
+  "url": "https://sit3.auth.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.onboarding.telco-api.optus.com.au": {
+  "url": "https://ppt.onboarding.telco-api.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "uat.auth.optus.com.au": {
+  "url": "https://uat.auth.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "adfsauth.optus.com.au": {
+  "url": "https://adfsauth.optus.com.au/logon/LogonPoint/tmindex.html",
+  "http_status": 200,
+  "title": "NetScaler AAA",
+  "redirect": "https://adfsauth.optus.com.au/logon/LogonPoint/tmindex.html",
+  "scripts": [
+   "https://adfsauth.optus.com.au/logon/LogonPoint/init.js",
+   "https://adfsauth.optus.com.au/logon/LogonPoint/receiver/js/external/elliptic.min.js",
+   "https://adfsauth.optus.com.au/logon/LogonPoint/receiver/js/external/hammer.min.js",
+   "https://adfsauth.optus.com.au/logon/LogonPoint/receiver/js/external/slick.min.js",
+   "https://adfsauth.optus.com.au/logon/LogonPoint/receiver/js/external/velocity.min.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "www.accessories.optus.com.au": {
+  "url": "https://www.accessories.optus.com.au/",
+  "http_status": 403,
+  "title": "Access Denied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "sit.obapiv2.optus.com.au": {
+  "url": "https://sit.obapiv2.optus.com.au/",
+  "http_status": 200,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
+ },
+ "ppt.obapiv2.optus.com.au": {
+  "url": "https://ppt.obapiv2.optus.com.au/",
+  "http_status": 200,
+  "title": "403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:37:43 UTC"
  }
 }

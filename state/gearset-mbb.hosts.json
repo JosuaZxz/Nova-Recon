@@ -1,0 +1,74 @@
+{
+ "_seeded": true,
+ "hipaa.staging.gearset.com": {
+  "url": "https://hipaa.staging.gearset.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ },
+ "us.staging.gearset.com": {
+  "url": "https://us.staging.gearset.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ },
+ "eu.staging.gearset.com": {
+  "url": "https://eu.staging.gearset.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ },
+ "ca.staging.gearset.com": {
+  "url": "https://ca.staging.gearset.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ },
+ "au.staging.gearset.com": {
+  "url": "https://au.staging.gearset.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ },
+ "staging.gearset.com": {
+  "url": "https://staging.gearset.com/",
+  "http_status": 200,
+  "title": "Login | Gearset",
+  "redirect": "",
+  "scripts": [
+   "https://staging.gearset.com/app_head.js?v=c0cc8dc495d2f3314e6c",
+   "https://staging.gearset.com/chatgpt-analytics-init.js?v=26763",
+   "https://staging.gearset.com/google-enhanced-conversion-init.js?v=26763",
+   "https://staging.gearset.com/hubspot-analytics-init.js?v=26763",
+   "https://staging.gearset.com/linkedinTagManager.js?v=166bf73710773ee989b0",
+   "https://staging.gearset.com/monaco_head.js?v=b3aed9da9e66c8fdcd6a",
+   "https://staging.gearset.com/raygun-init.js?v=26763",
+   "https://staging.gearset.com/ruler-analytics-init.js?v=26763",
+   "https://staging.gearset.com/stackadapt-analytics-init.js?v=26763",
+   "https://staging.gearset.com/vendors_head.js?v=d2369e1afa8f750f16c8"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 03:18:24 UTC"
+ }
+}

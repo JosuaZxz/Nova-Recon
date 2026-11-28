@@ -1,0 +1,204 @@
+{
+ "_seeded": true,
+ "uat-api.unigen.ai.unisys.com": {
+  "url": "https://uat-api.unigen.ai.unisys.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "mcd-us-test.sea.unisys.com": {
+  "url": "https://mcd-us-test.sea.unisys.com/",
+  "http_status": 502,
+  "title": "502 Bad Gateway",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "reportingservice.unifysquare.com": {
+  "url": "https://reportingservice.unifysquare.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "eip360-uat.ito.unisys.com": {
+  "url": "https://eip360-uat.ito.unisys.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "bcolcallback.inteliserveuat.unisys.com": {
+  "url": "https://bcolcallback.inteliserveuat.unisys.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "powersuite-api.unifysquare.com": {
+  "url": "https://powersuite-api.unifysquare.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "ai-catalogue.cvt-dev.unisys.com": {
+  "url": "https://ai-catalogue.cvt-dev.unisys.com/",
+  "http_status": 403,
+  "title": "Azure Static Web Apps - 403: Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "unigen-translate.uat.ai.unisys.com": {
+  "url": "https://unigen-translate.uat.ai.unisys.com/",
+  "http_status": 200,
+  "title": "Unisys Document Translator",
+  "redirect": "",
+  "scripts": [
+   "https://unigen-translate.uat.ai.unisys.com/assets/index-GGDQ75tx.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "unigen.uat.ai.unisys.com": {
+  "url": "https://unigen.uat.ai.unisys.com/",
+  "http_status": 200,
+  "title": "Unisys Knowledge Assistant",
+  "redirect": "",
+  "scripts": [
+   "https://unigen.uat.ai.unisys.com/assets/d3-DoZqx4g-.js",
+   "https://unigen.uat.ai.unisys.com/assets/index-ES_NkEGE.js",
+   "https://unigen.uat.ai.unisys.com/assets/msal-CHbqGS5h.js",
+   "https://unigen.uat.ai.unisys.com/assets/recharts-BrwMfWH-.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "www.ssg-dev.unifysquare.com": {
+  "url": "http://www.ssg-dev.unifysquare.com/",
+  "http_status": 404,
+  "title": "Page not found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "genesyschat.inteliserveuat.unisys.com": {
+  "url": "https://genesyschat.inteliserveuat.unisys.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://genesyschat.inteliserveuat.unisys.com/scripts/custom.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "sink.preview.powersuite.unifysquare.com": {
+  "url": "https://sink.preview.powersuite.unifysquare.com/",
+  "http_status": 502,
+  "title": "502 Bad Gateway",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "callhomeuat.ito.unisys.com": {
+  "url": "https://callhomeuat.ito.unisys.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "api-emea-dss.unisys.com": {
+  "url": "https://api-emea-dss.unisys.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "prod-api-eur.unigen.ai.unisys.com": {
+  "url": "https://prod-api-eur.unigen.ai.unisys.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "reports.dev.fsip.unisys.com": {
+  "url": "https://reports.dev.fsip.unisys.com/",
+  "http_status": 403,
+  "title": "Web App - Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "dashboards.unigen.ai.unisys.com": {
+  "url": "https://dashboards.unigen.ai.unisys.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://dashboards.unigen.ai.unisys.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "wwwdev.unisys.com": {
+  "url": "https://wwwdev.unisys.com/",
+  "http_status": 200,
+  "title": "Global Technology Solutions &#x2013; Keep Breaking Through | Unisys",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ },
+ "unigen-translate.dev.ai.unisys.com": {
+  "url": "https://unigen-translate.dev.ai.unisys.com/",
+  "http_status": 200,
+  "title": "Unisys Document Translator",
+  "redirect": "",
+  "scripts": [
+   "https://unigen-translate.dev.ai.unisys.com/assets/index-GGDQ75tx.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:28:13 UTC"
+ }
+}

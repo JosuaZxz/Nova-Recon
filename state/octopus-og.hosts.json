@@ -1,0 +1,889 @@
+{
+ "_seeded": true,
+ "api-auth.a.dev.octopus.com": {
+  "url": "https://api-auth.a.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "account.octopus.com": {
+  "url": "https://account.octopus.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "id.preprod.octopus.com": {
+  "url": "https://id.preprod.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.preprod.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "id.e2etsta.dev.octopus.com": {
+  "url": "https://id.e2etsta.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.e2etsta.dev.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.e2etsta.dev.octopus.com": {
+  "url": "https://m2m.auth.e2etsta.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.e2etsta.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "auth.octopus.com": {
+  "url": "https://auth.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "preprod-features.octopus.com": {
+  "url": "https://preprod-features.octopus.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api.billing.c.dev.octopus.com": {
+  "url": "https://api.billing.c.dev.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api.billing.b.dev.octopus.com": {
+  "url": "https://api.billing.b.dev.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api-auth.b.dev.octopus.com": {
+  "url": "https://api-auth.b.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.b.dev.octopus.com": {
+  "url": "https://m2m.auth.b.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.b.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "prerelease.apt.octopus.com": {
+  "url": "https://prerelease.apt.octopus.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "billing.a.dev.octopus.com": {
+  "url": "https://billing.a.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://billing.a.dev.octopus.com/186.769bf23e5e123cffe74c.hashedasset.js",
+   "https://billing.a.dev.octopus.com/302.ddb6b82a9f3cd6a29094.hashedasset.js",
+   "https://billing.a.dev.octopus.com/318.a0bb2226fc88c87c037e.hashedasset.js",
+   "https://billing.a.dev.octopus.com/343.6f6310206622104014e2.hashedasset.js",
+   "https://billing.a.dev.octopus.com/433.dec791b9ec5016aa0b99.hashedasset.js",
+   "https://billing.a.dev.octopus.com/469.13164b85c97fad26330f.hashedasset.js",
+   "https://billing.a.dev.octopus.com/506.774c2f42deed7cad65bb.hashedasset.js",
+   "https://billing.a.dev.octopus.com/726.18cbd10e2769f334eeb6.hashedasset.js",
+   "https://billing.a.dev.octopus.com/814.2052f04ef1d04fa09ac2.hashedasset.js",
+   "https://billing.a.dev.octopus.com/945.1d3c61aeb28c80c913d5.hashedasset.js",
+   "https://billing.a.dev.octopus.com/app-main.f9b0b10decf6f84c1451.hashedasset.js",
+   "https://billing.a.dev.octopus.com/main.089de862725388e15639.hashedasset.js",
+   "https://billing.a.dev.octopus.com/manifest.45bff609a873151eb3fb.hashedasset.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "handbook.c.dev.octopus.com": {
+  "url": "https://handbook.c.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Introduction  | Octopus Handbook",
+  "redirect": "",
+  "scripts": [
+   "https://handbook.c.dev.octopus.com/js/search.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.preprod.octopus.com": {
+  "url": "https://m2m.auth.preprod.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.preprod.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "handbook.a.dev.octopus.com": {
+  "url": "https://handbook.a.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Introduction  | Octopus Handbook",
+  "redirect": "",
+  "scripts": [
+   "https://handbook.a.dev.octopus.com/js/search.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "auth.preprod.octopus.com": {
+  "url": "https://auth.preprod.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login.microsoftonline.com/18eb006b-c3c8-4a72-93cd-fe4b293f82ee/oauth2/v2.0/authorize?client_id=509e2ddd-2cf1-456a-9c95-a7846f97c382&redirect_uri=https%3A%2F%2Fauth.preprod.octopus.com%2Fsignin",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.deva.dev.octopus.com": {
+  "url": "http://m2m.auth.deva.dev.octopus.com/",
+  "http_status": 409,
+  "title": "DNS resolution error | m2m.auth.deva.dev.octopus.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "email-subscriptions-dev.octopus.com": {
+  "url": "https://email-subscriptions-dev.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.e2etstb.dev.octopus.com": {
+  "url": "https://m2m.auth.e2etstb.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.e2etstb.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "billing.c.dev.octopus.com": {
+  "url": "https://billing.c.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://billing.c.dev.octopus.com/186.594a848ba14b968af92f.hashedasset.js",
+   "https://billing.c.dev.octopus.com/302.d99559a49c578831b387.hashedasset.js",
+   "https://billing.c.dev.octopus.com/318.8e561dec0af5c8bf4354.hashedasset.js",
+   "https://billing.c.dev.octopus.com/343.c081e6c6da46f2c4cf97.hashedasset.js",
+   "https://billing.c.dev.octopus.com/433.6bf80774805917ce7670.hashedasset.js",
+   "https://billing.c.dev.octopus.com/469.13164b85c97fad26330f.hashedasset.js",
+   "https://billing.c.dev.octopus.com/506.6e94eb85ad467c223a64.hashedasset.js",
+   "https://billing.c.dev.octopus.com/670.13d8efbdf78006e1465a.hashedasset.js",
+   "https://billing.c.dev.octopus.com/726.0404deb41b24f35812c6.hashedasset.js",
+   "https://billing.c.dev.octopus.com/945.4233bf0566e7fafe1081.hashedasset.js",
+   "https://billing.c.dev.octopus.com/app-main.b38001000532df82d9e0.hashedasset.js",
+   "https://billing.c.dev.octopus.com/main.31b0c5002a6ad8b49625.hashedasset.js",
+   "https://billing.c.dev.octopus.com/manifest.7f7d02aea3786f9564db.hashedasset.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "auth.c.dev.octopus.com": {
+  "url": "https://auth.c.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login.microsoftonline.com/18eb006b-c3c8-4a72-93cd-fe4b293f82ee/oauth2/v2.0/authorize?client_id=b94f4269-532f-47ea-afbc-a4873cc8809c&redirect_uri=https%3A%2F%2Fauth.c.dev.octopus.com%2Fsignin-o",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.test.dev.octopus.com": {
+  "url": "https://m2m.auth.test.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.test.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "githubactionsworkflowgenerator.octopus.com": {
+  "url": "https://githubactionsworkflowgenerator.octopus.com/",
+  "http_status": 200,
+  "title": "Pipeline Builder",
+  "redirect": "",
+  "scripts": [
+   "https://githubactionsworkflowgenerator.octopus.com/static/js/2.78cd17f1.chunk.js",
+   "https://githubactionsworkflowgenerator.octopus.com/static/js/main.86c63e66.chunk.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "a.dev.octopus.com": {
+  "url": "https://a.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://a.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "jiraconnectapp.octopus.com": {
+  "url": "https://jiraconnectapp.octopus.com/Jira/atlassian-connect.json",
+  "http_status": 200,
+  "title": "",
+  "redirect": "https://jiraconnectapp.octopus.com/Jira/atlassian-connect.json",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api.billing.octopus.com": {
+  "url": "https://api.billing.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "aiproxy-eu-test.octopus.com": {
+  "url": "https://aiproxy-eu-test.octopus.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "id.devb.dev.octopus.com": {
+  "url": "http://id.devb.dev.octopus.com/",
+  "http_status": 404,
+  "title": "Page not found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "jenkinspipelinegenerator.octopus.com": {
+  "url": "https://jenkinspipelinegenerator.octopus.com/",
+  "http_status": 200,
+  "title": "Pipeline Builder",
+  "redirect": "",
+  "scripts": [
+   "https://jenkinspipelinegenerator.octopus.com/static/js/2.78cd17f1.chunk.js",
+   "https://jenkinspipelinegenerator.octopus.com/static/js/main.86c63e66.chunk.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "url4744.a.dev.octopus.com": {
+  "url": "https://url4744.a.dev.octopus.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "aiproxy-global-test.octopus.com": {
+  "url": "https://aiproxy-global-test.octopus.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api.billing.a.dev.octopus.com": {
+  "url": "https://api.billing.a.dev.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "billing.preprod.octopus.com": {
+  "url": "https://billing.preprod.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://billing.preprod.octopus.com/186.594a848ba14b968af92f.hashedasset.js",
+   "https://billing.preprod.octopus.com/302.d99559a49c578831b387.hashedasset.js",
+   "https://billing.preprod.octopus.com/318.8e561dec0af5c8bf4354.hashedasset.js",
+   "https://billing.preprod.octopus.com/343.c081e6c6da46f2c4cf97.hashedasset.js",
+   "https://billing.preprod.octopus.com/433.6bf80774805917ce7670.hashedasset.js",
+   "https://billing.preprod.octopus.com/469.13164b85c97fad26330f.hashedasset.js",
+   "https://billing.preprod.octopus.com/506.6e94eb85ad467c223a64.hashedasset.js",
+   "https://billing.preprod.octopus.com/670.13d8efbdf78006e1465a.hashedasset.js",
+   "https://billing.preprod.octopus.com/726.0404deb41b24f35812c6.hashedasset.js",
+   "https://billing.preprod.octopus.com/945.4233bf0566e7fafe1081.hashedasset.js",
+   "https://billing.preprod.octopus.com/app-main.b38001000532df82d9e0.hashedasset.js",
+   "https://billing.preprod.octopus.com/main.31b0c5002a6ad8b49625.hashedasset.js",
+   "https://billing.preprod.octopus.com/manifest.7f7d02aea3786f9564db.hashedasset.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "url4744.b.dev.octopus.com": {
+  "url": "https://url4744.b.dev.octopus.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "auth.e2etest.dev.octopus.com": {
+  "url": "https://auth.e2etest.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Error: Access denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.devc.dev.octopus.com": {
+  "url": "http://m2m.auth.devc.dev.octopus.com/",
+  "http_status": 409,
+  "title": "DNS resolution error | m2m.auth.devc.dev.octopus.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "www.c.dev.octopus.com": {
+  "url": "https://c.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "https://c.dev.octopus.com/",
+  "scripts": [
+   "https://c.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "confluence.hq.octopus.com": {
+  "url": "https://confluence.hq.octopus.com/wiki",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://confluence.hq.octopus.com/login?application=confluence&dest-url=%2Fwiki%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "aueast.preprod.otel.octopus.com": {
+  "url": "https://aueast.preprod.otel.octopus.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.c.dev.octopus.com": {
+  "url": "https://m2m.auth.c.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.c.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "m2m.auth.a.dev.octopus.com": {
+  "url": "https://m2m.auth.a.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.a.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "auth.e2etsta.dev.octopus.com": {
+  "url": "https://auth.e2etsta.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Error: Access denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "www.a.dev.octopus.com": {
+  "url": "https://a.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "https://a.dev.octopus.com/",
+  "scripts": [
+   "https://a.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "id.b.dev.octopus.com": {
+  "url": "https://id.b.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.b.dev.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "m2m.auth.e2etest.dev.octopus.com": {
+  "url": "https://m2m.auth.e2etest.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.e2etest.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "id.e2etstb.dev.octopus.com": {
+  "url": "https://id.e2etstb.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.e2etstb.dev.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "auth.e2etstb.dev.octopus.com": {
+  "url": "https://auth.e2etstb.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Error: Access denied.",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "b.dev.octopus.com": {
+  "url": "https://b.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus - The software delivery platform for DevOps teams and agents - Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://b.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "githubapp.octopus.com": {
+  "url": "https://githubapp.octopus.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "m2m.auth.devb.dev.octopus.com": {
+  "url": "http://m2m.auth.devb.dev.octopus.com/",
+  "http_status": 409,
+  "title": "DNS resolution error | m2m.auth.devb.dev.octopus.com | Cloudflare",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "confluence.octopus.com": {
+  "url": "https://confluence.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://confluence.hq.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "c.dev.octopus.com": {
+  "url": "https://c.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://c.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "aiproxy-test.octopus.com": {
+  "url": "https://aiproxy-test.octopus.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "prerelease.rpm.octopus.com": {
+  "url": "https://prerelease.rpm.octopus.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "portal-sandbox.octopus.com": {
+  "url": "https://portal-sandbox.octopus.com/hc/en-us",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "https://portal-sandbox.octopus.com/hc/en-us",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "preprod-githubapp.octopus.com": {
+  "url": "https://preprod-githubapp.octopus.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "auth.b.dev.octopus.com": {
+  "url": "https://auth.b.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login.microsoftonline.com/18eb006b-c3c8-4a72-93cd-fe4b293f82ee/oauth2/v2.0/authorize?client_id=b94f4269-532f-47ea-afbc-a4873cc8809c&redirect_uri=https%3A%2F%2Fauth.b.dev.octopus.com%2Fsignin-o",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "billing.b.dev.octopus.com": {
+  "url": "https://billing.b.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://billing.b.dev.octopus.com/199.e47dfb1e7ff4b1cb9f4f.hashedasset.js",
+   "https://billing.b.dev.octopus.com/302.d99559a49c578831b387.hashedasset.js",
+   "https://billing.b.dev.octopus.com/318.8e561dec0af5c8bf4354.hashedasset.js",
+   "https://billing.b.dev.octopus.com/343.c081e6c6da46f2c4cf97.hashedasset.js",
+   "https://billing.b.dev.octopus.com/433.6bf80774805917ce7670.hashedasset.js",
+   "https://billing.b.dev.octopus.com/469.13164b85c97fad26330f.hashedasset.js",
+   "https://billing.b.dev.octopus.com/506.6e94eb85ad467c223a64.hashedasset.js",
+   "https://billing.b.dev.octopus.com/670.b32f653eb5770ad1dd1b.hashedasset.js",
+   "https://billing.b.dev.octopus.com/726.0404deb41b24f35812c6.hashedasset.js",
+   "https://billing.b.dev.octopus.com/945.4233bf0566e7fafe1081.hashedasset.js",
+   "https://billing.b.dev.octopus.com/app-main.ea6250a0dea83e0d1563.hashedasset.js",
+   "https://billing.b.dev.octopus.com/main.2f1f47edc77eb02f5224.hashedasset.js",
+   "https://billing.b.dev.octopus.com/manifest.7f7d02aea3786f9564db.hashedasset.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api-auth.preprod.octopus.com": {
+  "url": "https://api-auth.preprod.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "auth.a.dev.octopus.com": {
+  "url": "https://auth.a.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://login.microsoftonline.com/18eb006b-c3c8-4a72-93cd-fe4b293f82ee/oauth2/v2.0/authorize?client_id=b94f4269-532f-47ea-afbc-a4873cc8809c&redirect_uri=https%3A%2F%2Fauth.a.dev.octopus.com%2Fsignin-o",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "api-auth.e2etstb.dev.octopus.com": {
+  "url": "https://api-auth.e2etstb.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "m2m.auth.octopus.com": {
+  "url": "https://m2m.auth.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "id.c.dev.octopus.com": {
+  "url": "https://id.c.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.c.dev.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "url4744.preprod.octopus.com": {
+  "url": "https://url4744.preprod.octopus.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "m2m.auth.devapi.dev.octopus.com": {
+  "url": "https://m2m.auth.devapi.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://auth.devapi.dev.octopus.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "api-auth.e2etest.dev.octopus.com": {
+  "url": "https://api-auth.e2etest.dev.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api-auth.e2etsta.dev.octopus.com": {
+  "url": "https://api-auth.e2etsta.dev.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "westus2.preprod.otel.octopus.com": {
+  "url": "https://westus2.preprod.otel.octopus.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "url4744.c.dev.octopus.com": {
+  "url": "https://url4744.c.dev.octopus.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "id.a.dev.octopus.com": {
+  "url": "https://id.a.dev.octopus.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://id.a.dev.octopus.com/Account/Login?ReturnUrl=%2F",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:19:59 UTC"
+ },
+ "api.billing.preprod.octopus.com": {
+  "url": "https://api.billing.preprod.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "api-auth.octopus.com": {
+  "url": "https://api-auth.octopus.com/",
+  "http_status": 403,
+  "title": "Service unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "handbook.preprod.octopus.com": {
+  "url": "https://handbook.preprod.octopus.com/",
+  "http_status": 200,
+  "title": "Introduction  | Octopus Handbook",
+  "redirect": "",
+  "scripts": [
+   "https://handbook.preprod.octopus.com/js/search.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "handbook.b.dev.octopus.com": {
+  "url": "https://handbook.b.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Introduction  | Octopus Handbook",
+  "redirect": "",
+  "scripts": [
+   "https://handbook.b.dev.octopus.com/js/search.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "octopusworkflowbuilder-test.octopus.com": {
+  "url": "https://octopusworkflowbuilder-test.octopus.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "portal.octopus.com": {
+  "url": "https://portal.octopus.com/hc/en-us",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "https://portal.octopus.com/hc/en-us",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "www.b.dev.octopus.com": {
+  "url": "https://b.dev.octopus.com/",
+  "http_status": 200,
+  "title": "Octopus - The software delivery platform for DevOps teams and agents - Octopus Deploy",
+  "redirect": "https://b.dev.octopus.com/",
+  "scripts": [
+   "https://b.dev.octopus.com/octopus-public/assets/marketoFormHelper.js?v=mZfkOPeNsXzLCpJD7aItplRCtk5XVLbO5ZvCjxfExRs"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "www.preprod.octopus.com": {
+  "url": "https://preprod.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "https://preprod.octopus.com/",
+  "scripts": [
+   "https://preprod.octopus.com/octopus-public/assets/marketoFormHelper.js?v=W16WcA6CyGmkyQ5xLwgbL3_yreFrDqzZ9SJLTUkut50"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ },
+ "preprod.octopus.com": {
+  "url": "https://preprod.octopus.com/",
+  "http_status": 200,
+  "title": "Continuous Deployment &amp; Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+  "redirect": "",
+  "scripts": [
+   "https://preprod.octopus.com/octopus-public/assets/marketoFormHelper.js?v=W16WcA6CyGmkyQ5xLwgbL3_yreFrDqzZ9SJLTUkut50"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 03:24:01 UTC"
+ }
+}
