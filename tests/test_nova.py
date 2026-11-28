@@ -916,6 +916,43 @@ class TestNovaV22(unittest.TestCase):
                 self.assertIn("legacy-tm.demo.org", checked_takeover_hosts)
                 self.assertNotIn("evil.otherdomain.com", checked_takeover_hosts)
 
+    def test_encrypted_findings_vault_roundtrip_and_tamper_rejection(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            sdir, fdir = root / "state", root / "findings"
+            rep_dir = fdir / "2026-11-28" / "demo"
+            rep_dir.mkdir(parents=True)
+            (rep_dir / "REPORT-demo-takeover-abc.md").write_text(
+                "# Confidential Takeover Report\nSecret PoC details", encoding="utf-8"
+            )
+            (rep_dir / "takeover-abc.json").write_text('{"type":"takeover"}', encoding="utf-8")
+
+            with (
+                patch.object(nova, "STATE_DIR", sdir),
+                patch.object(nova, "FINDINGS_DIR", fdir),
+            ):
+                count = nova.encrypt_findings_vault(secret="unit-test-vault-key")
+                self.assertEqual(count, 2)
+                enc_text = (sdir / nova.VAULT_FILENAME).read_text(encoding="utf-8")
+                self.assertNotIn("Confidential Takeover Report", enc_text)
+
+                with self.assertRaises(ValueError):
+                    nova.decrypt_findings_vault(secret="wrong-vault-key", out_dir=root / "out")
+
+                restored = nova.decrypt_findings_vault(
+                    secret="unit-test-vault-key", out_dir=root / "restored"
+                )
+                self.assertEqual(
+                    restored,
+                    ["2026-11-28/demo/REPORT-demo-takeover-abc.md", "2026-11-28/demo/takeover-abc.json"],
+                )
+                self.assertEqual(
+                    (root / "restored" / "2026-11-28" / "demo" / "REPORT-demo-takeover-abc.md").read_text(
+                        encoding="utf-8"
+                    ),
+                    "# Confidential Takeover Report\nSecret PoC details",
+                )
+
 
 if __name__ == "__main__":
     unittest.main()

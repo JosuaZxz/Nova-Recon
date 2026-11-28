@@ -20,9 +20,11 @@ Deps: requests (satu-satunya dependency eksternal).
 from __future__ import annotations
 
 import argparse
+import base64
 import concurrent.futures
 from datetime import datetime, timezone
 import hashlib
+import hmac
 import json
 import os
 from pathlib import Path
@@ -34,6 +36,7 @@ import sys
 import threading
 import time
 from urllib.parse import urljoin, urlparse
+import zlib
 
 SCRIPTS_DIR = Path(__file__).resolve().parent
 if str(SCRIPTS_DIR) not in sys.path:
@@ -104,10 +107,12 @@ except Exception:
 MAX_CONC = int(os.environ.get("NOVA_MAX_CONC", "12"))
 REQ_DELAY = float(os.environ.get("NOVA_REQ_DELAY", "0.12"))
 HTTP_TIMEOUT = int(os.environ.get("NOVA_TIMEOUT", "9"))
+socket.setdefaulttimeout(HTTP_TIMEOUT)
 PER_HOST_CAP = int(os.environ.get("NOVA_PER_HOST_CAP", "45"))
 MAX_NEW_PROBE = int(os.environ.get("NOVA_MAX_NEW_PROBE", "250"))
 MAX_JS_FETCH = int(os.environ.get("NOVA_MAX_JS", "150"))
 DIFF_BUDGET = int(os.environ.get("NOVA_DIFF_BUDGET", "60"))
+VERIFY_BUDGET = int(os.environ.get("NOVA_VERIFY_BUDGET", "160"))
 MAX_TRACKED_HOSTS = int(os.environ.get("NOVA_MAX_TRACKED_HOSTS", "1200"))
 SEED_CAP = int(os.environ.get("NOVA_SEED_CAP", "1000"))
 
@@ -291,10 +296,17 @@ def http_get(
             data=body,
         )
         chunk = b""
-        for part in r.iter_content(chunk_size=65536):
-            chunk += part
-            if len(chunk) >= max_bytes:
-                break
+        t0 = time.monotonic()
+        try:
+            for part in r.iter_content(chunk_size=65536):
+                chunk += part
+                if len(chunk) >= max_bytes or (time.monotonic() - t0 > HTTP_TIMEOUT + 4):
+                    break
+        finally:
+            try:
+                r.close()
+            except Exception:
+                pass
         r._nova_body = chunk
         return r, None
     except requests.exceptions.SSLError:
@@ -1560,6 +1572,7 @@ def _fetch_and_analyze_js(
     run_diff: bool = True,
     program: str = "",
     out_subs: set[str] | None = None,
+    deadline: float | None = None,
 ) -> list[dict]:
     """Fetch unique in-scope non-vendor JS bundles and verify secrets, cloud assets, sourcemaps, and AI-hunted routes."""
     findings = []
@@ -1570,6 +1583,8 @@ def _fetch_and_analyze_js(
     scope_roots = _query_root_roots(policy)
 
     for js_url, is_interesting in js_targets:
+        if deadline and time.monotonic() > deadline:
+            break
         if fetched >= MAX_JS_FETCH:
             break
         js_url = js_url.strip()
@@ -1687,59 +1702,76 @@ def cmd_verify(args) -> None:
                 continue
 
     LIMITER.reset_hosts()
+    verify_start = time.monotonic()
+    verify_deadline = verify_start + VERIFY_BUDGET
     findings: list[dict] = []
     js_targets: list[tuple[str, bool]] = []
     ai_host_candidates: list[dict] = []
     host_urls: dict[str, str] = {}
 
-    for res in probe_results:
+    def _verify_single_host(res: dict):
         host = res.get("host", "")
         url = res.get("url")
-        if not url or not policy.in_scope(host):
-            continue
+        if not url or not policy.in_scope(host) or time.monotonic() > verify_deadline:
+            return [], [], None, None
         status = res.get("http_status")
         interesting = is_interesting_host(host, policy)
         is_catchall = bool(res.get("catchall", False))
         # Allow 404/405 on interesting subdomains because REST/GraphQL API servers rarely map GET /.
         if status not in (200, 401, 403) and not (interesting and status in (404, 405)):
-            continue
+            return [], [], None, None
         base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
-        host_urls[host] = base
-        if not is_catchall and (interesting or status == 200) and len(ai_host_candidates) < 4:
-            ai_host_candidates.append(
-                {
-                    "host": host,
-                    "http_status": status,
-                    "title": res.get("title") or "",
-                    "server": res.get("server") or "",
-                    "body_head": (res.get("body") or "")[:240],
-                }
-            )
-        findings.extend(check_exposures(base, is_catchall))
-        if status == 200 and not is_catchall:
+        ai_meta = None
+        if not is_catchall and (interesting or status == 200):
+            ai_meta = {
+                "host": host,
+                "http_status": status,
+                "title": res.get("title") or "",
+                "server": res.get("server") or "",
+                "body_head": (res.get("body") or "")[:240],
+            }
+        local_findings: list[dict] = []
+        local_findings.extend(check_exposures(base, is_catchall))
+        if status == 200 and not is_catchall and time.monotonic() <= verify_deadline:
             html_body = res.get("body") or ""
             if html_body:
-                findings.extend(scan_js_secrets(html_body, url))
-                findings.extend(verify_cloud_assets(url, html_body, program=program, policy=policy))
+                local_findings.extend(scan_js_secrets(html_body, url))
+                local_findings.extend(verify_cloud_assets(url, html_body, program=program, policy=policy))
             f = check_cors(base)
             if f:
-                findings.append(f)
+                local_findings.append(f)
             f = check_graphql(base, program=program)
             if f:
-                findings.append(f)
+                local_findings.append(f)
             if interesting:
-                findings.extend(check_openapi_routes(base, policy))
-        elif interesting and status in (401, 403, 404, 405) and not is_catchall:
+                local_findings.extend(check_openapi_routes(base, policy))
+        elif interesting and status in (401, 403, 404, 405) and not is_catchall and time.monotonic() <= verify_deadline:
             f = check_graphql(base, program=program)
             if f:
-                findings.append(f)
-            findings.extend(check_openapi_routes(base, policy))
-        for js_url in res.get("scripts", []):
-            js_targets.append((js_url, interesting))
+                local_findings.append(f)
+            local_findings.extend(check_openapi_routes(base, policy))
+        local_js = [(js_url, interesting) for js_url in res.get("scripts", [])]
+        return local_findings, local_js, ai_meta, (host, base)
 
-    if ai_host_candidates:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, min(MAX_CONC, 10))) as ex:
+        futs = [ex.submit(_verify_single_host, res) for res in probe_results]
+        for fut in concurrent.futures.as_completed(futs):
+            try:
+                loc_f, loc_js, ai_meta, host_pair = fut.result()
+            except Exception:
+                continue
+            findings.extend(loc_f)
+            js_targets.extend(loc_js)
+            if host_pair:
+                host_urls[host_pair[0]] = host_pair[1]
+            if ai_meta and len(ai_host_candidates) < 4:
+                ai_host_candidates.append(ai_meta)
+
+    if ai_host_candidates and time.monotonic() <= verify_deadline:
         ai_paths_map = ai_suggest_host_paths(program, ai_host_candidates)
         for h_name, paths in ai_paths_map.items():
+            if time.monotonic() > verify_deadline:
+                break
             base_url = host_urls.get(h_name)
             if base_url and paths:
                 findings.extend(verify_extracted_routes(base_url + "/", paths, policy))
@@ -1756,7 +1788,7 @@ def cmd_verify(args) -> None:
                 js_targets.append((s_url, h_interesting))
 
     js_discovered_subs: set[str] = set()
-    if js_targets:
+    if js_targets and time.monotonic() <= verify_deadline:
         findings.extend(
             _fetch_and_analyze_js(
                 js_targets,
@@ -1765,6 +1797,7 @@ def cmd_verify(args) -> None:
                 run_diff=True,
                 program=program,
                 out_subs=js_discovered_subs,
+                deadline=verify_deadline,
             )
         )
         save_js_state(STATE_DIR, program, js_state)
@@ -2062,6 +2095,128 @@ def tg_send_report_documents(day_dir: Path) -> int:
     return sent
 
 
+VAULT_HEADER = b"NV1"
+VAULT_FILENAME = "_findings_vault.enc"
+
+
+def _get_vault_key() -> str:
+    """Resolve encryption key from environment or gitignored .env.local."""
+    for env_name in ("NVIDIA_API_KEY", "GROQ_API_KEY", "TELEGRAM_TOKEN"):
+        val = os.environ.get(env_name, "").strip()
+        if val:
+            return val
+    env_file = ROOT / ".env.local"
+    if env_file.exists():
+        for line in env_file.read_text(encoding="utf-8", errors="ignore").splitlines():
+            line = line.strip()
+            if "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                if k.strip() in ("NVIDIA_API_KEY", "GROQ_API_KEY", "TELEGRAM_TOKEN") and v.strip():
+                    return v.strip()
+    return ""
+
+
+def _xor_keystream(data: bytes, key: bytes, nonce: bytes) -> bytes:
+    """XOR data against a SHA-256 counter-mode keystream derived from (key, nonce)."""
+    out = bytearray(len(data))
+    offset = 0
+    counter = 0
+    total = len(data)
+    while offset < total:
+        block = hashlib.sha256(key + nonce + counter.to_bytes(4, "big")).digest()
+        end = min(offset + 32, total)
+        for i in range(end - offset):
+            out[offset + i] = data[offset + i] ^ block[i]
+        offset = end
+        counter += 1
+    return bytes(out)
+
+
+def encrypt_findings_vault(secret: str | None = None) -> int:
+    """Compress and authenticate-encrypt recent reports/briefings into state/_findings_vault.enc."""
+    key_str = (secret if secret is not None else _get_vault_key()).strip()
+    if not key_str or not FINDINGS_DIR.exists():
+        return 0
+
+    candidates = [
+        p
+        for p in FINDINGS_DIR.rglob("*")
+        if p.is_file() and p.suffix in (".md", ".json")
+    ]
+    candidates.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    bundle: dict[str, str] = {}
+    for p in candidates[:40]:
+        rel = p.relative_to(FINDINGS_DIR).as_posix()
+        try:
+            bundle[rel] = p.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+    if not bundle:
+        return 0
+
+    compressed = zlib.compress(json.dumps(bundle, ensure_ascii=False).encode("utf-8"), level=6)
+    salt = os.urandom(16)
+    nonce = os.urandom(16)
+    dk = hashlib.pbkdf2_hmac("sha256", key_str.encode("utf-8"), salt, 50_000, dklen=64)
+    enc_key, mac_key = dk[:32], dk[32:]
+    ct = _xor_keystream(compressed, enc_key, nonce)
+    tag = hmac.new(mac_key, salt + nonce + ct, hashlib.sha256).digest()
+    payload = base64.b64encode(VAULT_HEADER + salt + nonce + tag + ct).decode("ascii")
+
+    STATE_DIR.mkdir(exist_ok=True)
+    (STATE_DIR / VAULT_FILENAME).write_text(payload + "\n", encoding="utf-8")
+    return len(bundle)
+
+
+def decrypt_findings_vault(secret: str | None = None, out_dir: Path | None = None) -> list[str]:
+    """Authenticate and decrypt state/_findings_vault.enc back into findings/."""
+    vault_path = STATE_DIR / VAULT_FILENAME
+    if not vault_path.exists():
+        return []
+    key_str = (secret if secret is not None else _get_vault_key()).strip()
+    if not key_str:
+        raise ValueError("Missing vault secret key (set NVIDIA_API_KEY / GROQ_API_KEY or .env.local)")
+
+    raw = base64.b64decode(vault_path.read_text(encoding="ascii").strip())
+    if len(raw) < 3 + 16 + 16 + 32 or raw[:3] != VAULT_HEADER:
+        raise ValueError("Malformed findings vault header")
+    salt = raw[3:19]
+    nonce = raw[19:35]
+    tag = raw[35:67]
+    ct = raw[67:]
+
+    dk = hashlib.pbkdf2_hmac("sha256", key_str.encode("utf-8"), salt, 50_000, dklen=64)
+    enc_key, mac_key = dk[:32], dk[32:]
+    expected_tag = hmac.new(mac_key, salt + nonce + ct, hashlib.sha256).digest()
+    if not hmac.compare_digest(tag, expected_tag):
+        raise ValueError("Invalid vault key or tampered ciphertext")
+
+    compressed = _xor_keystream(ct, enc_key, nonce)
+    bundle = json.loads(zlib.decompress(compressed).decode("utf-8"))
+    target_root = (out_dir or FINDINGS_DIR).resolve()
+    target_root.mkdir(parents=True, exist_ok=True)
+    restored: list[str] = []
+    for rel, content in bundle.items():
+        dest = (target_root / rel).resolve()
+        if not str(dest).startswith(str(target_root)):
+            continue
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(content, encoding="utf-8")
+        restored.append(rel)
+    return sorted(restored)
+
+
+def cmd_pull_findings(args) -> None:
+    """Decrypt state/_findings_vault.enc into local findings/ directory."""
+    restored = decrypt_findings_vault()
+    if not restored:
+        print("[=] Belum ada _findings_vault.enc di state/.")
+        return
+    print(f"[+] Vault decrypted: {len(restored)} file dipulihkan ke findings/:")
+    for rel in restored:
+        print(f"    - findings/{rel}")
+
+
 def cmd_brief(args) -> None:
     """Generate daily briefing Markdown and dispatch briefing + REPORT-*.md files via Telegram."""
     findings = collect_findings(args.date)
@@ -2085,6 +2240,13 @@ def cmd_brief(args) -> None:
     FINDINGS_DIR.mkdir(exist_ok=True)
     out = FINDINGS_DIR / f"BRIEFING-{day}.md"
     out.write_text(text, encoding="utf-8")
+
+    try:
+        vault_cnt = encrypt_findings_vault()
+        if vault_cnt:
+            print(f"[+] Vault tersinkron: {vault_cnt} file terenkripsi ke state/{VAULT_FILENAME}")
+    except Exception as e:
+        print(f"[!] Vault sync skipped: {type(e).__name__}")
 
     msg_ok = False
     docs_sent = 0
@@ -2231,6 +2393,9 @@ def main() -> None:
     s.add_argument("--force", action="store_true")
     s.add_argument("--no-ai", action="store_true")
     s.set_defaults(func=cmd_brief)
+
+    s = sub.add_parser("pull-findings", help="dekripsi state/_findings_vault.enc ke folder findings/")
+    s.set_defaults(func=cmd_pull_findings)
 
     s = sub.add_parser("run", help="pipeline lengkap utk target pilihan / semua")
     s.add_argument("--programs", default=None, help="koma-separated; default _focus.txt atau semua")

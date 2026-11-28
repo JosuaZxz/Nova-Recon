@@ -33,6 +33,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     env:
+      PYTHONUNBUFFERED: "1"
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
       NOVA_MAX_CONC: "24"
       NOVA_REQ_DELAY: "0.06"
       NOVA_PER_HOST_CAP: "45"
@@ -40,6 +42,7 @@ jobs:
       NOVA_MAX_JS: "150"
       NOVA_DIFF_BUDGET: "60"
       NOVA_MONITOR_BUDGET: "90"
+      NOVA_VERIFY_BUDGET: "150"
       NOVA_TAKEOVER_CAP: "2000"
       # Aktifkan bila menguji program Intigriti yang mewajibkan header peneliti:
       # NOVA_EXTRA_HEADERS: '{"X-Intigriti-Username":"${{ secrets.INTIGRITI_USERNAME }}"}'
@@ -118,15 +121,15 @@ jobs:
             echo "- Diproses pada batch ini (target $K): \`$PROGS\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: NOVA - monitor/probe/verify/diff per program (36m soft deadline)
+      - name: NOVA - monitor/probe/verify/diff per program (32m soft deadline)
         run: |
           START_TS=$(date +%s)
           IFS=',' read -ra PROGS <<< "${{ steps.pick.outputs.programs }}"
           DONE_CNT=0
           for P in "${PROGS[@]}"; do
             ELAPSED=$(( $(date +%s) - START_TS ))
-            if [ "$ELAPSED" -gt 2160 ]; then
-              echo "[time-guard] Sudah berjalan ${ELAPSED}s (>36m). Hentikan loop dengan aman agar brief & commit state selalu tuntas."
+            if [ "$ELAPSED" -gt 1920 ]; then
+              echo "[time-guard] Sudah berjalan ${ELAPSED}s (>32m). Hentikan loop dengan aman agar brief & commit state selalu tuntas."
               break
             fi
             P=$(echo "$P" | xargs)
@@ -138,10 +141,10 @@ jobs:
             if [ -s "data/$P/subfinder_roots.txt" ]; then
               timeout 90s subfinder -dL "data/$P/subfinder_roots.txt" -all -silent -max-time 1 -o "data/$P/subfinder.txt" 2>/dev/null || true
             fi
-            python3 scripts/nova.py monitor --program "$P" --merge-file "data/$P/subfinder.txt"
-            python3 scripts/nova.py probe --program "$P"
-            python3 scripts/nova.py verify --program "$P"
-            python3 scripts/nova.py diff --program "$P"
+            timeout 120s python3 scripts/nova.py monitor --program "$P" --merge-file "data/$P/subfinder.txt" || echo "[!] monitor timeout/error pada $P"
+            timeout 150s python3 scripts/nova.py probe --program "$P" || echo "[!] probe timeout/error pada $P"
+            timeout 210s python3 scripts/nova.py verify --program "$P" || echo "[!] verify timeout/error pada $P"
+            timeout 120s python3 scripts/nova.py diff --program "$P" || echo "[!] diff timeout/error pada $P"
             rm -rf "data/$P"
             DONE_CNT=$(( DONE_CNT + 1 ))
           done
