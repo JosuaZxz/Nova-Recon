@@ -784,6 +784,138 @@ class TestNovaV22(unittest.TestCase):
             )
             self.assertEqual(seen_urls, [ai_brief.GROQ_API_URL, ai_brief.NVIDIA_API_URL])
 
+    def test_parameterized_routes_and_full_in_scope_urls_are_verified(self):
+        policy = scope_guard.ProgramPolicy(program="demo", includes=["*.demo.org"])
+
+        def fake_http(url, **kwargs):
+            r = MagicMock()
+            if url == "https://portal.demo.org/api/v1/users/1":
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"id":1,"email":"admin@demo.org","is_admin":true,"role":"owner"}'
+                return r, None
+            if url == "https://api-internal.demo.org/v1/export":
+                r.status_code = 200
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"records":[{"email":"ops@demo.org","client_secret":"s3cr3t_val_9911"}]}'
+                return r, None
+            r.status_code = 404
+            r.headers = {"Content-Type": "application/json"}
+            r._nova_body = b'{"error":"not found"}'
+            return r, None
+
+        with (
+            patch.object(nova, "http_get", side_effect=fake_http),
+            patch.dict("os.environ", {"GROQ_API_KEY": "", "NVIDIA_API_KEY": ""}),
+        ):
+            hits = nova.verify_extracted_routes(
+                "https://portal.demo.org/app.js",
+                ["/api/v1/users/{id}"],
+                policy,
+            )
+            self.assertEqual(len(hits), 1)
+            self.assertEqual(hits[0]["url"], "https://portal.demo.org/api/v1/users/1")
+
+            full_hits = nova.verify_extracted_routes(
+                "https://portal.demo.org/app.js",
+                ["https://api-internal.demo.org/v1/export"],
+                policy,
+            )
+            self.assertEqual(len(full_hits), 1)
+            self.assertEqual(full_hits[0]["url"], "https://api-internal.demo.org/v1/export")
+
+    def test_ai_hunter_discovers_js_endpoints_subdomains_and_host_paths(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            tdir, sdir, ddir, fdir = root / "targets", root / "state", root / "data", root / "findings"
+            tdir.mkdir()
+            sdir.mkdir()
+            (ddir / "demo").mkdir(parents=True)
+            fdir.mkdir()
+            (tdir / "demo.txt").write_text("*.demo.org\n", encoding="utf-8")
+            probe_rec = {
+                "host": "api-admin.demo.org",
+                "url": "https://api-admin.demo.org/",
+                "http_status": 404,
+                "server": "nginx",
+                "title": "Admin API",
+                "catchall": False,
+                "scripts": ["https://api-admin.demo.org/static/bundle.js"],
+                "body": '{"status":404}',
+            }
+            (ddir / "demo" / "probe.jsonl").write_text(json.dumps(probe_rec) + "\n", encoding="utf-8")
+            (ddir / "demo" / "new.txt").write_text("", encoding="utf-8")
+
+            def fake_llm(prompt, max_tokens=1500, fast=False, required_key="verdict"):
+                if "hosts" in prompt.lower() and "fingerprint" in prompt.lower():
+                    return {"api-admin.demo.org": ["/v2/internal/audit"]}
+                if "js hunter" in prompt.lower():
+                    return {
+                        "endpoints": ["/internal/tenant-dump"],
+                        "subdomains": ["legacy-tm.demo.org", "evil.otherdomain.com"],
+                        "secrets": [],
+                    }
+                if "triage auditor" in prompt.lower():
+                    return {
+                        "verdict": "VALID",
+                        "confidence_score": 93,
+                        "rejection_reason": "",
+                        "title": "Unauthenticated Sensitive API Leak via AI Hunter",
+                        "severity": "high",
+                        "summary": "AI hunter uncovered unauthenticated admin endpoint.",
+                        "technical_analysis": "Confirmed 200 OK JSON leak.",
+                        "steps_to_reproduce": ["1. GET endpoint"],
+                        "impact": "Sensitive data exposure.",
+                        "remediation": "Enforce auth.",
+                    }
+                return None
+
+            def fake_http(url, **kwargs):
+                r = MagicMock()
+                if url == "https://api-admin.demo.org/v2/internal/audit":
+                    r.status_code = 200
+                    r.headers = {"Content-Type": "application/json"}
+                    r._nova_body = b'{"users":[{"email":"ceo@demo.org","permissions":["admin"]}]}'
+                    return r, None
+                if url == "https://api-admin.demo.org/static/bundle.js":
+                    r.status_code = 200
+                    r.headers = {"Content-Type": "application/javascript"}
+                    r._nova_body = b'const cfg = fetch(base + "/internal/tenant-dump");'
+                    return r, None
+                if url == "https://api-admin.demo.org/internal/tenant-dump":
+                    r.status_code = 200
+                    r.headers = {"Content-Type": "application/json"}
+                    r._nova_body = b'{"credentials":[{"api_key":"live_secret_9911","email":"root@demo.org"}]}'
+                    return r, None
+                r.status_code = 404
+                r.headers = {"Content-Type": "application/json"}
+                r._nova_body = b'{"error":"not found"}'
+                return r, None
+
+            checked_takeover_hosts = []
+
+            def fake_takeover(host, policy):
+                checked_takeover_hosts.append(host)
+                return None
+
+            with (
+                patch.object(nova, "TARGETS_DIR", tdir),
+                patch.object(nova, "STATE_DIR", sdir),
+                patch.object(nova, "DATA_DIR", ddir),
+                patch.object(nova, "FINDINGS_DIR", fdir),
+                patch.object(nova, "http_get", side_effect=fake_http),
+                patch.object(nova, "check_takeover", side_effect=fake_takeover),
+                patch("ai_brief._query_llm_providers", side_effect=fake_llm),
+                patch.dict("os.environ", {"GROQ_API_KEY": "", "NVIDIA_API_KEY": "nv-test-key"}),
+            ):
+                nova.cmd_verify(
+                    argparse.Namespace(program="demo", probe_file=None, new_file=None, rebuild=False)
+                )
+                reports = list((fdir / nova.today_str() / "demo").glob("REPORT-demo-unauth-api-*.md"))
+                self.assertEqual(len(reports), 2)
+                self.assertIn("legacy-tm.demo.org", checked_takeover_hosts)
+                self.assertNotIn("evil.otherdomain.com", checked_takeover_hosts)
+
 
 if __name__ == "__main__":
     unittest.main()

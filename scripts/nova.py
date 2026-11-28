@@ -40,17 +40,26 @@ if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
 from ai_brief import (  # noqa: E402
+    ai_classify_json_response,
+    ai_hunt_js_bundle,
+    ai_suggest_host_paths,
     render_markdown_report,
     summarize_findings,
     validate_and_draft_report,
 )
 from js_intel import (  # noqa: E402
+    FP_CONTEXT_HINTS,
+    HIGH_SIGNAL_ROUTE_KW,
+    _has_real_entropy,
     canonical_js_key,
     diff_js_bundle,
     extract_cloud_urls,
+    extract_high_signal_snippets,
+    extract_in_scope_hosts_and_urls,
     extract_js_intel,
     is_vendor_js,
     load_js_state,
+    normalize_parameterized_routes,
     redact,
     save_js_state,
     scan_js_secrets,
@@ -1189,32 +1198,51 @@ API_SENSITIVE_MARKERS = (
     '"phone":',
     '"balance":',
     '"credentials":',
+    '"ssn":',
+    '"phone_number":',
+    '"credit_card":',
+    '"iban":',
+    '"api_secret":',
+    '"client_secret":',
+    '"jwt":',
+    '"session_id":',
+    '"internal_ip":',
+    '"db_host":',
+    '"permissions":',
+    '"is_admin":',
+    '"superadmin"',
 )
 
 
 def verify_extracted_routes(
-    js_url: str, routes: list[str], policy: ProgramPolicy
+    js_url: str,
+    routes: list[str],
+    policy: ProgramPolicy,
+    allow_ai_inspect: bool = True,
 ) -> list[dict]:
     """
-    Politely test extracted JS API routes (GET + Accept: application/json) and
-    only report endpoints that return 200 OK JSON with sensitive data + pass canary check.
+    Politely test extracted/normalized JS API routes or full URLs (GET + Accept: application/json)
+    and report endpoints that return 200 OK JSON with sensitive data + pass canary check.
     """
     parsed_js = urlparse(js_url)
     base_origin = f"{parsed_js.scheme}://{parsed_js.netloc}"
-    if not policy.in_scope(base_origin):
-        return []
 
+    normalized = normalize_parameterized_routes(routes)
     concrete = [
         r
-        for r in routes
-        if r.startswith("/")
-        and ":" not in r
-        and "{" not in r
-        and not any(pub in r.lower() for pub in ("/public/", "/country-list", "/config/web", "/login", "/signin"))
+        for r in normalized
+        if not any(pub in r.lower() for pub in ("/public/", "/country-list", "/config/web", "/login", "/signin"))
     ]
     findings = []
-    for route in concrete[:6]:
-        target_url = base_origin + route
+    ai_checks_done = 0
+    for route in concrete[:8]:
+        target_url = route if route.startswith(("http://", "https://")) else base_origin + route
+        if not policy.in_scope(target_url):
+            continue
+        parsed_target = urlparse(target_url)
+        target_origin = f"{parsed_target.scheme}://{parsed_target.netloc}"
+        target_path = parsed_target.path or "/"
+
         r, _ = http_get(target_url, extra_headers={"Accept": "application/json"}, max_bytes=30_000)
         if r is None or r.status_code != 200:
             continue
@@ -1225,13 +1253,11 @@ def verify_extracted_routes(
         body_l = body.lower()
         if any(err in body_l for err in API_ERROR_MARKERS):
             continue
-        if not any(sens in body_l for sens in API_SENSITIVE_MARKERS):
-            continue
 
-        # Double-tap canary on the same API prefix
-        parent = route.rsplit("/", 1)[0] or "/api"
+        # Double-tap canary on the same API prefix before checking markers / invoking AI.
+        parent = target_path.rsplit("/", 1)[0] or "/api"
         rc, _ = http_get(
-            f"{base_origin}{parent}/nova-canary-{random.randint(10000, 99999)}",
+            f"{target_origin}{parent}/nova-canary-{random.randint(10000, 99999)}",
             extra_headers={"Accept": "application/json"},
             max_bytes=8000,
         )
@@ -1240,15 +1266,26 @@ def verify_extracted_routes(
             if c_body[:1] in ("{", "[") and abs(len(c_body) - len(body)) < 80:
                 continue
 
+        ev_note = f"Unauthenticated 200 OK JSON on route {target_path} (from {parsed_js.path or '/'})"
+        if not any(sens in body_l for sens in API_SENSITIVE_MARKERS):
+            if allow_ai_inspect and ai_checks_done < 2 and any(kw in target_url.lower() for kw in HIGH_SIGNAL_ROUTE_KW):
+                ai_checks_done += 1
+                is_sens, ai_summary = ai_classify_json_response(target_url, body[:800])
+                if not is_sens:
+                    continue
+                ev_note = f"{ev_note} | {ai_summary}"
+            else:
+                continue
+
         findings.append(
             {
                 "type": "unauth-api",
                 "url": target_url,
-                "host": parsed_js.netloc.lower(),
+                "host": parsed_target.netloc.lower(),
                 "severity_hint": "high",
                 "confidence": "strong",
-                "evidence": f"Unauthenticated 200 OK JSON on JS route {route} (from {parsed_js.path})",
-                "request_evidence": f"GET {route} HTTP/1.1\nHost: {parsed_js.netloc}\nAccept: application/json",
+                "evidence": ev_note[:240],
+                "request_evidence": f"GET {target_path} HTTP/1.1\nHost: {parsed_target.netloc}\nAccept: application/json",
                 "response_evidence": _format_resp_evidence(r, _redact_body_secrets(body[:800])),
                 "next": "Verifikasi di browser incognito bahwa data JSON yang dikembalikan adalah data sensitif/internal tanpa login.",
             }
@@ -1489,18 +1526,48 @@ def check_openapi_routes(base_url: str, policy: ProgramPolicy) -> list[dict]:
     return []
 
 
+MAX_AI_JS_HUNTS = 4
+
+
+def _build_ai_secret_finding(js_url: str, js_body: str, sec_name: str, val: str) -> dict | None:
+    """Validate an AI-spotted secret literally exists in the bundle and passes entropy/FP checks."""
+    if not val or len(val) < 16 or val not in js_body or not _has_real_entropy(val):
+        return None
+    idx = js_body.find(val)
+    raw_ctx = js_body[max(0, idx - 100) : idx + len(val) + 100]
+    if any(hint in raw_ctx.lower() for hint in FP_CONTEXT_HINTS):
+        return None
+    parsed = urlparse(js_url)
+    redacted = redact(val, 5)
+    safe_snippet = raw_ctx.replace(val, redacted).replace("\n", " ").strip()[:300]
+    return {
+        "type": "js-secret",
+        "url": js_url,
+        "host": parsed.netloc.lower(),
+        "severity_hint": "critical",
+        "confidence": "strong",
+        "evidence": f"{sec_name} (AI-hunter): {redacted}",
+        "request_evidence": f"GET {parsed.path or '/'} HTTP/1.1\nHost: {parsed.netloc}",
+        "response_evidence": f"HTTP/1.1 200 OK\nContent-Type: application/javascript\n\n... {safe_snippet} ...",
+        "next": "Verifikasi validitas token secara pasif (jangan eksekusi write/destruct), cek scope program sebelum report.",
+    }
+
+
 def _fetch_and_analyze_js(
     js_targets: list[tuple[str, bool]],
     policy: ProgramPolicy,
     js_state: dict,
     run_diff: bool = True,
     program: str = "",
+    out_subs: set[str] | None = None,
 ) -> list[dict]:
-    """Fetch unique in-scope non-vendor JS bundles and verify secrets, cloud assets, sourcemaps, and routes."""
+    """Fetch unique in-scope non-vendor JS bundles and verify secrets, cloud assets, sourcemaps, and AI-hunted routes."""
     findings = []
     seen_urls: set[str] = set()
     fetched = 0
     hidden_maps_checked = 0
+    ai_hunts_done = 0
+    scope_roots = _query_root_roots(policy)
 
     for js_url, is_interesting in js_targets:
         if fetched >= MAX_JS_FETCH:
@@ -1523,14 +1590,24 @@ def _fetch_and_analyze_js(
         findings.extend(scan_js_secrets(body, js_url))
         findings.extend(verify_cloud_assets(js_url, body, program=program, policy=policy))
 
+        det_subs, det_api_urls = extract_in_scope_hosts_and_urls(body, scope_roots)
+        if out_subs is not None:
+            for sub in det_subs:
+                if policy.in_scope(sub):
+                    out_subs.add(sub)
+
         if run_diff:
             entry, diff_finding = diff_js_bundle(js_url, body, js_state, is_interesting)
             is_unseen = bool(entry and entry.get("_unseen_hash"))
-            candidate_routes = (
+            candidate_routes = list(
                 (diff_finding.get("added_routes") if diff_finding else None)
                 or (entry.get("_added_routes") if entry else None)
                 or []
             )
+            for u in det_api_urls:
+                if u not in candidate_routes:
+                    candidate_routes.append(u)
+
             sm_url = (
                 (diff_finding.get("sourcemap_url") if diff_finding else None)
                 or (entry.get("_sourcemap_url") if entry else None)
@@ -1539,6 +1616,30 @@ def _fetch_and_analyze_js(
                 js_state[canonical_js_key(js_url)] = entry
 
             if is_unseen or diff_finding is not None:
+                if ai_hunts_done < MAX_AI_JS_HUNTS:
+                    snippets = extract_high_signal_snippets(body)
+                    if is_interesting or snippets:
+                        ai_hunts_done += 1
+                        hunt = ai_hunt_js_bundle(
+                            js_url,
+                            snippets or body[:3000],
+                            program=program,
+                            scope_roots=scope_roots,
+                        )
+                        for ep in hunt.get("endpoints", []):
+                            if ep not in candidate_routes:
+                                candidate_routes.append(ep)
+                        if out_subs is not None:
+                            for sub in hunt.get("subdomains", []):
+                                if policy.in_scope(sub):
+                                    out_subs.add(sub)
+                        for sec in hunt.get("secrets", []):
+                            sec_hit = _build_ai_secret_finding(
+                                js_url, body, sec.get("name", "AI Secret"), sec.get("value", "")
+                            )
+                            if sec_hit:
+                                findings.append(sec_hit)
+
                 if candidate_routes:
                     findings.extend(verify_extracted_routes(js_url, candidate_routes, policy))
 
@@ -1562,7 +1663,7 @@ def _fetch_and_analyze_js(
 
 
 def cmd_verify(args) -> None:
-    """Verify exposures, CORS, GraphQL, JS secrets, and takeover on newly probed hosts."""
+    """Verify exposures, CORS, GraphQL, JS secrets, AI-predicted endpoints, and takeover on probed hosts."""
     program = args.program
     policy = load_program_policy(program, TARGETS_DIR)
     if not policy.includes:
@@ -1588,6 +1689,8 @@ def cmd_verify(args) -> None:
     LIMITER.reset_hosts()
     findings: list[dict] = []
     js_targets: list[tuple[str, bool]] = []
+    ai_host_candidates: list[dict] = []
+    host_urls: dict[str, str] = {}
 
     for res in probe_results:
         host = res.get("host", "")
@@ -1601,6 +1704,17 @@ def cmd_verify(args) -> None:
         if status not in (200, 401, 403) and not (interesting and status in (404, 405)):
             continue
         base = f"{urlparse(url).scheme}://{urlparse(url).netloc}"
+        host_urls[host] = base
+        if not is_catchall and (interesting or status == 200) and len(ai_host_candidates) < 4:
+            ai_host_candidates.append(
+                {
+                    "host": host,
+                    "http_status": status,
+                    "title": res.get("title") or "",
+                    "server": res.get("server") or "",
+                    "body_head": (res.get("body") or "")[:240],
+                }
+            )
         findings.extend(check_exposures(base, is_catchall))
         if status == 200 and not is_catchall:
             html_body = res.get("body") or ""
@@ -1623,6 +1737,13 @@ def cmd_verify(args) -> None:
         for js_url in res.get("scripts", []):
             js_targets.append((js_url, interesting))
 
+    if ai_host_candidates:
+        ai_paths_map = ai_suggest_host_paths(program, ai_host_candidates)
+        for h_name, paths in ai_paths_map.items():
+            base_url = host_urls.get(h_name)
+            if base_url and paths:
+                findings.extend(verify_extracted_routes(base_url + "/", paths, policy))
+
     # Recover any scripts recorded in hosts.json that were skipped by earlier per-host caps.
     js_state = load_js_state(STATE_DIR, program)
     hosts_snapshot = load_hosts_state(program)
@@ -1634,11 +1755,31 @@ def cmd_verify(args) -> None:
             if canonical_js_key(s_url) not in js_state:
                 js_targets.append((s_url, h_interesting))
 
+    js_discovered_subs: set[str] = set()
     if js_targets:
-        findings.extend(_fetch_and_analyze_js(js_targets, policy, js_state, run_diff=True, program=program))
+        findings.extend(
+            _fetch_and_analyze_js(
+                js_targets,
+                policy,
+                js_state,
+                run_diff=True,
+                program=program,
+                out_subs=js_discovered_subs,
+            )
+        )
         save_js_state(STATE_DIR, program, js_state)
 
     takeover_pool: set[str] = set()
+    if js_discovered_subs:
+        known_subs = load_state(program)
+        fresh_js_subs = {s for s in js_discovered_subs if s not in known_subs and policy.in_scope(s)}
+        if fresh_js_subs:
+            save_state(program, known_subs | fresh_js_subs)
+            old_q = load_queue(program)
+            save_queue(program, old_q | fresh_js_subs)
+            takeover_pool |= fresh_js_subs
+            print(f"    [+] JS/AI hunter menemukan {len(fresh_js_subs)} subdomain in-scope baru")
+
     if new_file.exists():
         takeover_pool |= {
             line.strip()
@@ -1930,10 +2071,11 @@ def cmd_brief(args) -> None:
     tok_state = "SET" if TG_TOKEN else "MISSING"
     gen_state = "SET" if TG_GENERAL else "MISSING"
     dat_state = "SET" if TG_DATA else "MISSING"
-    ai_state = "SET" if os.environ.get("GROQ_API_KEY", "").strip() else "MISSING"
+    groq_state = "SET" if os.environ.get("GROQ_API_KEY", "").strip() else "MISSING"
+    nv_state = "SET" if os.environ.get("NVIDIA_API_KEY", "").strip() else "MISSING"
     print(
         f"[*] Config status: TELEGRAM_TOKEN={tok_state} | GENERAL_ID={gen_state} | "
-        f"DATA_ID={dat_state} | GROQ_API_KEY={ai_state}"
+        f"DATA_ID={dat_state} | AI_KEYS=GROQ:{groq_state},NVIDIA:{nv_state}"
     )
 
     if not findings and args.send_telegram and not args.force:
@@ -1982,7 +2124,7 @@ def cmd_brief(args) -> None:
             with open(step_summary, "a", encoding="utf-8") as sf:
                 sf.write(
                     f"\n### Status Validasi & Telegram\n"
-                    f"- Secrets: `TELEGRAM_TOKEN={tok_state}`, `GENERAL_ID={gen_state}`, `DATA_ID={dat_state}`, `GROQ_API_KEY={ai_state}`\n"
+                    f"- Secrets: `TELEGRAM_TOKEN={tok_state}`, `GENERAL_ID={gen_state}`, `DATA_ID={dat_state}`, `GROQ={groq_state}`, `NVIDIA={nv_state}`\n"
                     f"- Laporan Valid (Lolos AI Gate): **{len(findings)}**\n"
                     f"- Terkirim ke Telegram: pesan=`{msg_ok}`, dokumen laporan=`{docs_sent}`\n"
                 )

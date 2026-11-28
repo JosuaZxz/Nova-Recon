@@ -150,6 +150,18 @@ SECRET_PATTERNS = (
             r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----[A-Za-z0-9+/=\r\n\\n]{220,}-----END [A-Z ]*?PRIVATE KEY-----"
         ),
     ),
+    (
+        "Hardcoded Bearer JWT",
+        re.compile(
+            r"Bearer\s+(eyJ[A-Za-z0-9_\-]{20,}\.eyJ[A-Za-z0-9_\-]{20,}\.[A-Za-z0-9_\-]{20,})"
+        ),
+    ),
+    (
+        "Hardcoded Basic Auth header",
+        re.compile(
+            r"""['"]Authorization['"]\s*:\s*['"]Basic\s+([A-Za-z0-9+/]{24,}={0,2})['"]"""
+        ),
+    ),
 )
 
 FP_CONTEXT_HINTS = (
@@ -276,7 +288,7 @@ def _has_real_entropy(token: str) -> bool:
     """Reject low-entropy or repeated dummy strings."""
     core = re.sub(
         r"^(AKIA|gh[pousr]_|github_pat_|glpat-|[sr]k_live_|xox[baprs]-|SG\.|re_|xkeysib-|"
-        r"key-|sk-proj-|sk-ant-api03-|gsk_|hf_|shp(?:at|ca|ss|pa)_|npm_|dp\.[a-z]{2}\.|lin_api_|sk\.)",
+        r"key-|sk-proj-|sk-ant-api03-|gsk_|hf_|shp(?:at|ca|ss|pa)_|npm_|dp\.[a-z]{2}\.|lin_api_|sk\.|eyJ)",
         "",
         token,
     )
@@ -466,3 +478,96 @@ def diff_js_bundle(
         "next": "Review manual di browser/proxy: uji kontrol akses (IDOR/authz) pada endpoint atau operasi baru sesuai scope.",
     }
     return entry, finding
+
+
+_PARAM_VAR_RE = re.compile(r"(?:\$\{[^}]+\}|\{[^}]+\}|:[a-zA-Z0-9_]+)")
+_FULL_URL_RE = re.compile(r"""https?://([a-z0-9.\-_]{3,120})(/[a-zA-Z0-9_\-./:?=&]{4,100})?""", re.IGNORECASE)
+_SNIPPET_MARKERS = (
+    "fetch(",
+    "axios.",
+    ".get(",
+    "Authorization",
+    "Bearer ",
+    "apiKey",
+    "client_secret",
+    "internal",
+    "admin",
+    "graphql",
+    "swagger",
+    "openapi",
+    "process.env",
+    "NEXT_PUBLIC_",
+    "window.__",
+)
+
+
+def normalize_parameterized_routes(routes: list[str]) -> list[str]:
+    """Convert parameterized paths/URLs into safe, concrete GET verification candidates."""
+    out: list[str] = []
+    seen: set[str] = set()
+    for raw in routes:
+        r = str(raw or "").strip()
+        if not r or not (r.startswith("/") or r.startswith(("http://", "https://"))):
+            continue
+        if _PARAM_VAR_RE.search(r):
+            for sample in ("1", "me"):
+                cand = _PARAM_VAR_RE.sub(sample, r)
+                if cand not in seen and " " not in cand and "'" not in cand and '"' not in cand:
+                    seen.add(cand)
+                    out.append(cand)
+        else:
+            if r not in seen and " " not in r and "'" not in r and '"' not in r:
+                seen.add(r)
+                out.append(r)
+    return out
+
+
+def extract_in_scope_hosts_and_urls(js_text: str, scope_roots: list[str]) -> tuple[list[str], list[str]]:
+    """Extract deterministic in-scope subdomains and full API URLs from active JS code."""
+    active_code = JS_BLOCK_COMMENT_RE.sub(" ", JS_LINE_COMMENT_RE.sub(" ", js_text))
+    roots = [r.lower().lstrip("*.").strip(".") for r in (scope_roots or []) if r]
+    subs: set[str] = set()
+    api_urls: set[str] = set()
+    if not roots:
+        return [], []
+    for m in _FULL_URL_RE.finditer(active_code):
+        host = m.group(1).lower().strip(".")
+        path = m.group(2) or ""
+        if not any(host == root or host.endswith("." + root) for root in roots):
+            continue
+        subs.add(host)
+        lower_p = path.lower()
+        if path and any(kw in lower_p for kw in ("/api/", "/v1/", "/v2/", "/v3/", "/internal/", "/admin/", "/graphql", "/export", "/users", "/swagger", "/openapi")):
+            if not any(part in lower_p for part in IGNORE_ROUTE_PARTS):
+                api_urls.add(f"https://{host}{path}")
+    return sorted(subs)[:40], sorted(api_urls)[:25]
+
+
+def extract_high_signal_snippets(js_text: str, max_chars: int = 3500) -> str:
+    """Extract deduplicated +-140 char windows around high-signal markers in active JS code."""
+    active_code = JS_BLOCK_COMMENT_RE.sub(" ", JS_LINE_COMMENT_RE.sub(" ", js_text))
+    if not active_code:
+        return ""
+    windows: list[str] = []
+    seen_ranges: list[tuple[int, int]] = []
+    lower = active_code.lower()
+    for marker in _SNIPPET_MARKERS:
+        m_low = marker.lower()
+        idx = 0
+        hits = 0
+        while hits < 3:
+            pos = lower.find(m_low, idx)
+            if pos == -1:
+                break
+            idx = pos + len(marker)
+            start = max(0, pos - 140)
+            end = min(len(active_code), pos + len(marker) + 140)
+            if any(not (end <= s or start >= e) for s, e in seen_ranges):
+                continue
+            seen_ranges.append((start, end))
+            snippet = active_code[start:end].replace("\n", " ").strip()
+            if snippet:
+                windows.append(snippet)
+            hits += 1
+    combined = "\n---\n".join(windows)
+    return combined[:max_chars]

@@ -183,8 +183,8 @@ def _eligible_for_fallback(finding: dict) -> bool:
     )
 
 
-def _parse_llm_response(resp_json: dict) -> dict | None:
-    """Extract and parse the JSON verdict object from an OpenAI-compatible chat response."""
+def _parse_llm_response(resp_json: dict, required_key: str | None = "verdict") -> dict | None:
+    """Extract and parse a JSON object from an OpenAI-compatible chat response."""
     try:
         choices = resp_json.get("choices") or []
         if not choices:
@@ -195,13 +195,23 @@ def _parse_llm_response(resp_json: dict) -> dict | None:
         text = str(content).strip()
         match = re.search(r"\{.*\}", text, re.DOTALL)
         parsed = json.loads(match.group(0) if match else text)
-        return parsed if isinstance(parsed, dict) and "verdict" in parsed else None
+        if not isinstance(parsed, dict):
+            return None
+        if required_key and required_key not in parsed:
+            return None
+        return parsed
     except Exception:
         return None
 
 
-def _query_llm_providers(prompt: str) -> dict | None:
+def _query_llm_providers(
+    prompt: str,
+    max_tokens: int = 1500,
+    fast: bool = False,
+    required_key: str | None = "verdict",
+) -> dict | None:
     """Query Groq first, then fail over automatically to NVIDIA NIM models."""
+    req_timeout = 20 if fast else 35
     groq_key = os.environ.get("GROQ_API_KEY", "").strip()
     if groq_key:
         groq_model = os.environ.get("NOVA_AI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
@@ -216,13 +226,13 @@ def _query_llm_providers(prompt: str) -> dict | None:
                     "model": groq_model,
                     "messages": [{"role": "user", "content": prompt}],
                     "temperature": 0.1,
-                    "max_tokens": 1100,
+                    "max_tokens": min(max_tokens, 1100) if fast else max_tokens,
                     "response_format": {"type": "json_object"},
                 },
-                timeout=35,
+                timeout=req_timeout,
             )
             if resp.status_code == 200:
-                parsed = _parse_llm_response(resp.json())
+                parsed = _parse_llm_response(resp.json(), required_key=required_key)
                 if parsed is not None:
                     return parsed
         except Exception:
@@ -231,10 +241,15 @@ def _query_llm_providers(prompt: str) -> dict | None:
     nvidia_key = os.environ.get("NVIDIA_API_KEY", "").strip()
     if nvidia_key:
         override_model = os.environ.get("NOVA_NVIDIA_MODEL", "").strip()
+        base_models = (
+            ("nvidia/nemotron-3.5-lightning-30b-a3b", "nvidia/nemotron-3-ultra-550b-a55b")
+            if fast
+            else DEFAULT_NVIDIA_MODELS
+        )
         candidates = []
         if override_model:
             candidates.append(override_model)
-        for m in DEFAULT_NVIDIA_MODELS:
+        for m in base_models:
             if m not in candidates:
                 candidates.append(m)
 
@@ -250,19 +265,176 @@ def _query_llm_providers(prompt: str) -> dict | None:
                         "model": nv_model,
                         "messages": [{"role": "user", "content": prompt}],
                         "temperature": 0.1,
-                        "max_tokens": 1500,
+                        "max_tokens": max_tokens,
                         "chat_template_kwargs": {"enable_thinking": False},
                     },
-                    timeout=35,
+                    timeout=req_timeout,
                 )
                 if resp.status_code == 200:
-                    parsed = _parse_llm_response(resp.json())
+                    parsed = _parse_llm_response(resp.json(), required_key=required_key)
                     if parsed is not None:
                         return parsed
             except Exception:
                 continue
 
     return None
+
+
+_UNSAFE_ACTION_KW = ("delete", "remove", "reset", "logout", "drop", "destroy", "revoke")
+
+
+def _has_ai_credentials() -> bool:
+    return bool(
+        os.environ.get("GROQ_API_KEY", "").strip()
+        or os.environ.get("NVIDIA_API_KEY", "").strip()
+    )
+
+
+def _sanitize_endpoint(ep: str) -> str | None:
+    if not isinstance(ep, str):
+        return None
+    s = ep.strip()
+    if not s or len(s) > 160 or any(c in s for c in (" ", "'", '"', "<", ">", "\n", "\r")):
+        return None
+    if not (s.startswith("/") or s.startswith(("http://", "https://"))):
+        return None
+    low = s.lower()
+    if any(kw in low for kw in _UNSAFE_ACTION_KW):
+        return None
+    return s
+
+
+def ai_hunt_js_bundle(
+    js_url: str,
+    snippet_text: str,
+    program: str = "",
+    scope_roots: list[str] | None = None,
+) -> dict:
+    """Ask AI to actively reconstruct GET endpoints, in-scope subdomains, and real secrets from JS snippets."""
+    empty = {"endpoints": [], "subdomains": [], "secrets": []}
+    if not snippet_text or not snippet_text.strip() or not _has_ai_credentials():
+        return empty
+
+    roots = [r.lower().lstrip("*.").strip(".") for r in (scope_roots or []) if r]
+    prompt = (
+        "You are an automated Read-Only Bug Bounty JS Hunter.\n"
+        f"Program: {program or 'target'} | In-scope root domains: {', '.join(roots[:8]) or 'same origin'}\n"
+        f"Source JS URL: {js_url}\n\n"
+        "Analyze the JavaScript code snippets below and extract ONLY concrete, non-destructive targets:\n"
+        "1. 'endpoints': up to 10 read-only GET API routes or full URLs reconstructed from variables/concatenation/template literals (replace path parameters like :id or {id} with 1 or me; never include destructive delete/reset/logout actions).\n"
+        "2. 'subdomains': up to 10 in-scope subdomains referenced anywhere in the snippets.\n"
+        "3. 'secrets': up to 3 genuine leaked backend/service credentials or high-privilege tokens (skip public publishable keys, test keys, or placeholders) as {\"name\": \"...\", \"value\": \"...\"}.\n\n"
+        "Return ONLY raw JSON: {\"endpoints\": [...], \"subdomains\": [...], \"secrets\": [...]}\n\n"
+        f"SNIPPETS:\n{snippet_text[:3500]}"
+    )
+    parsed = _query_llm_providers(prompt, max_tokens=700, fast=True, required_key=None)
+    if not parsed:
+        return empty
+
+    endpoints: list[str] = []
+    for raw in (parsed.get("endpoints") or [])[:12]:
+        clean = _sanitize_endpoint(raw)
+        if clean and clean not in endpoints:
+            endpoints.append(clean)
+        if len(endpoints) >= 10:
+            break
+
+    subdomains: list[str] = []
+    for raw in (parsed.get("subdomains") or [])[:15]:
+        if not isinstance(raw, str):
+            continue
+        h = raw.strip().lower().rstrip(".")
+        if not h or " " in h or "/" in h:
+            continue
+        if roots and not any(h == r or h.endswith("." + r) for r in roots):
+            continue
+        if h not in subdomains:
+            subdomains.append(h)
+        if len(subdomains) >= 10:
+            break
+
+    secrets: list[dict] = []
+    for item in (parsed.get("secrets") or [])[:5]:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("name") or "AI-detected secret").strip()[:60]
+        val = str(item.get("value") or "").strip()
+        if len(val) >= 16:
+            secrets.append({"name": name, "value": val})
+        if len(secrets) >= 3:
+            break
+
+    return {"endpoints": endpoints, "subdomains": subdomains, "secrets": secrets}
+
+
+def ai_suggest_host_paths(program: str, hosts_meta: list[dict]) -> dict[str, list[str]]:
+    """Fingerprint up to 4 live hosts in one batch and predict read-only GET API/config paths."""
+    if not hosts_meta or not _has_ai_credentials():
+        return {}
+
+    compact = []
+    for item in hosts_meta[:4]:
+        compact.append(
+            {
+                "host": str(item.get("host", "")),
+                "http_status": item.get("http_status"),
+                "title": str(item.get("title") or "")[:80],
+                "server": str(item.get("server") or "")[:60],
+                "body_head": str(item.get("body_head") or "")[:240],
+            }
+        )
+    prompt = (
+        "You are an automated Read-Only Bug Bounty Recon Strategist.\n"
+        f"Program: {program}\n"
+        "Fingerprint each host below from its status, title, Server header, and body snippet, and predict up to 4 high-value, strictly read-only GET paths to check for unauthenticated API/config/schema leaks (e.g., /api/v1/users, /api/v1/config, /v2/keys, /realms/master/.well-known/openid-configuration, /api/swagger.json). Never suggest destructive paths.\n"
+        "Return ONLY raw JSON mapping hostname -> array of path strings starting with '/'.\n\n"
+        f"HOSTS:\n{json.dumps(compact, ensure_ascii=False)}"
+    )
+    parsed = _query_llm_providers(prompt, max_tokens=600, fast=True, required_key=None)
+    if not parsed:
+        return {}
+
+    out: dict[str, list[str]] = {}
+    valid_hosts = {c["host"] for c in compact if c["host"]}
+    for host, paths in parsed.items():
+        if host not in valid_hosts or not isinstance(paths, list):
+            continue
+        cleaned: list[str] = []
+        for p in paths[:6]:
+            s = _sanitize_endpoint(p)
+            if s and s.startswith("/") and len(s) <= 120 and s not in cleaned:
+                cleaned.append(s)
+            if len(cleaned) >= 4:
+                break
+        if cleaned:
+            out[host] = cleaned
+    return out
+
+
+def ai_classify_json_response(url: str, body_excerpt: str) -> tuple[bool, str]:
+    """Use AI to classify whether an unauthenticated 200 OK JSON body leaks sensitive data."""
+    if not _has_ai_credentials() or len((body_excerpt or "").strip()) < 40:
+        return False, ""
+
+    prompt = (
+        "You are a Security Triage Analyst classifying an unauthenticated HTTP 200 JSON response.\n"
+        f"URL: {url}\n"
+        "Decide if this response leaks sensitive private/internal/user data (PII, emails, credentials, tokens, internal config, tenant/user records, permission dumps) vs harmless public metadata (translations, locales, public UI flags, public marketing catalog).\n"
+        'Return ONLY JSON: {"is_sensitive": true/false, "confidence_score": 0 to 100, "evidence_summary": "short summary"}\n\n'
+        f"JSON EXCERPT:\n{body_excerpt[:800]}"
+    )
+    parsed = _query_llm_providers(prompt, max_tokens=250, fast=True, required_key=None)
+    if not parsed:
+        return False, ""
+    try:
+        is_sens = bool(parsed.get("is_sensitive") is True)
+        score = int(parsed.get("confidence_score") or 0)
+        summary = str(parsed.get("evidence_summary") or "").strip()[:180]
+        if is_sens and score >= 80:
+            return True, summary or "AI classified response as leaking sensitive unauthenticated data"
+    except Exception:
+        pass
+    return False, ""
 
 
 def validate_and_draft_report(finding: dict) -> dict | None:
