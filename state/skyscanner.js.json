@@ -1,14 +1,14 @@
 {
  "https://developers.skyscanner.net/assets/js/runtime~main.HASH.js": {
-  "last_url": "https://developers.skyscanner.net/assets/js/runtime~main.1279d051.js",
-  "sha256": "0891ac60b28f0bf174eb",
+  "last_url": "https://developers.skyscanner.net/assets/js/runtime~main.0e32e3ae.js",
+  "sha256": "ed4213eb15e2796ec0ae",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 14:15:21 UTC"
+  "updated": "2026-11-28 03:16:01 UTC"
  },
  "https://developers.skyscanner.net/assets/js/main.HASH.js": {
   "last_url": "https://developers.skyscanner.net/assets/js/main.b0a2a1d0.js",
-  "sha256": "e91abfd225c87894d37b",
+  "sha256": "d0f4cacee072144f1c40",
   "routes": [
    "/api/autosuggest/",
    "/api/carhire-agents/",
@@ -25,13 +25,13 @@
    "/api/hotels-reviews/"
   ],
   "graphql_ops": [],
-  "updated": "2026-11-26 14:15:22 UTC"
+  "updated": "2026-11-28 03:16:02 UTC"
  },
  "https://www.skyscanner.net/sttc/px/captcha-v2/static/js/main.HASH.js": {
   "last_url": "https://www.skyscanner.net/sttc/px/captcha-v2/static/js/main.81dbcf5a.js",
   "sha256": "b4010bc7f8a069c14a50",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 14:15:22 UTC"
+  "updated": "2026-11-28 03:16:02 UTC"
  }
 }

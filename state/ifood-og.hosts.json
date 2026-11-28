@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:39:18 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "payments-api-crqa2.sandbox.zoop.ws": {
   "url": "https://payments-api-crqa2.sandbox.zoop.ws/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:39:18 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.jud.staging.zoop.ws": {
   "url": "https://api.jud.staging.zoop.ws/",
@@ -298,7 +298,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.jud.zoop.ws": {
   "url": "https://api.jud.zoop.ws/",
@@ -308,7 +308,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "smart-api.staging.zoop.ws": {
   "url": "https://smart-api.staging.zoop.ws/",
@@ -318,7 +318,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.magapay.minhaconta.zoop.com.br": {
   "url": "http://www.magapay.minhaconta.zoop.com.br/",
@@ -328,7 +328,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "cartexpress.minhaconta.zoop.com.br": {
   "url": "https://cartexpress.minhaconta.zoop.com.br/",
@@ -338,7 +338,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.tipay.minhaconta.zoop.com.br": {
   "url": "http://www.tipay.minhaconta.zoop.com.br/",
@@ -348,7 +348,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "livrepay.minhaconta.zoop.com.br": {
   "url": "https://livrepay.minhaconta.zoop.com.br/",
@@ -358,7 +358,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "beta.minhaconta.zoop.com.br": {
   "url": "https://beta.minhaconta.zoop.com.br/",
@@ -368,7 +368,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "paycati.minhaconta.zoop.com.br": {
   "url": "https://paycati.minhaconta.zoop.com.br/",
@@ -378,7 +378,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.spotpay.minhaconta.zoop.com.br": {
   "url": "http://www.spotpay.minhaconta.zoop.com.br/",
@@ -388,7 +388,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.banking.zoop.ws": {
   "url": "https://api.banking.zoop.ws/",
@@ -398,7 +398,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.da.homolog.zoop.ws": {
   "url": "https://api.da.homolog.zoop.ws/",
@@ -408,7 +408,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "sti3pay.minhaconta.zoop.com.br": {
   "url": "https://sti3pay.minhaconta.zoop.com.br/",
@@ -418,7 +418,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.da.staging.zoop.ws": {
   "url": "https://api.da.staging.zoop.ws/",
@@ -428,7 +428,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.ra.staging.zoop.ws": {
   "url": "https://api.ra.staging.zoop.ws/",
@@ -438,7 +438,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "tksgopay.minhaconta.zoop.com.br": {
   "url": "https://tksgopay.minhaconta.zoop.com.br/",
@@ -448,7 +448,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.payments.homolog.zoop.ws": {
   "url": "https://api.payments.homolog.zoop.ws/",
@@ -458,7 +458,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "rv-tokenization-develop.zoop.ws": {
   "url": "https://rv-tokenization-develop.zoop.ws/",
@@ -468,7 +468,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.payments.staging.zoop.ws": {
   "url": "https://api.payments.staging.zoop.ws/",
@@ -478,7 +478,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "zucopay.minhaconta.zoop.com.br": {
   "url": "https://zucopay.minhaconta.zoop.com.br/",
@@ -488,7 +488,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.atapay.minhaconta.zoop.com.br": {
   "url": "http://www.atapay.minhaconta.zoop.com.br/",
@@ -498,7 +498,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.reobotepay.minhaconta.zoop.com.br": {
   "url": "http://www.reobotepay.minhaconta.zoop.com.br/",
@@ -508,7 +508,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "impay.minhaconta.zoop.com.br": {
   "url": "https://impay.minhaconta.zoop.com.br/",
@@ -518,7 +518,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "lumenpay.minhaconta.zoop.com.br": {
   "url": "https://lumenpay.minhaconta.zoop.com.br/",
@@ -528,7 +528,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "munizpay.minhaconta.zoop.com.br": {
   "url": "https://munizpay.minhaconta.zoop.com.br/",
@@ -538,7 +538,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.beta.minhaconta.zoop.com.br": {
   "url": "http://www.beta.minhaconta.zoop.com.br/",
@@ -548,7 +548,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "movilepay.minhaconta.zoop.com.br": {
   "url": "https://movilepay.minhaconta.zoop.com.br/",
@@ -558,7 +558,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "tipay.minhaconta.zoop.com.br": {
   "url": "https://tipay.minhaconta.zoop.com.br/",
@@ -568,7 +568,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "payments.api.preprod.zoop.ws": {
   "url": "https://payments.api.preprod.zoop.ws/",
@@ -578,7 +578,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.paytimefintech.minhaconta.zoop.com.br": {
   "url": "http://www.paytimefintech.minhaconta.zoop.com.br/",
@@ -588,7 +588,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "payments.api.staging.zoop.ws": {
   "url": "https://payments.api.staging.zoop.ws/",
@@ -598,7 +598,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:33:30 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "dinpay.minhaconta.zoop.com.br": {
   "url": "https://dinpay.minhaconta.zoop.com.br/",
@@ -928,7 +928,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.zoop.ws": {
   "url": "https://api.zoop.ws/",
@@ -938,7 +938,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "apigw-legacy.zoop.ws": {
   "url": "https://apigw-legacy.zoop.ws/",
@@ -948,7 +948,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "apigw-sandbox.zoop.ws": {
   "url": "https://apigw-sandbox.zoop.ws/",
@@ -958,7 +958,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "solispay.minhaconta.zoop.com.br": {
   "url": "https://solispay.minhaconta.zoop.com.br/",
@@ -968,7 +968,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "spotpay.minhaconta.zoop.com.br": {
   "url": "https://spotpay.minhaconta.zoop.com.br/",
@@ -978,7 +978,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "northpay.minhaconta.zoop.com.br": {
   "url": "https://northpay.minhaconta.zoop.com.br/",
@@ -988,7 +988,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "reobotepay.minhaconta.zoop.com.br": {
   "url": "https://reobotepay.minhaconta.zoop.com.br/",
@@ -998,7 +998,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.ra.sandbox.zoop.ws": {
   "url": "https://api.ra.sandbox.zoop.ws/",
@@ -1008,7 +1008,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "sandbox-api-cdn.zoop.com.br": {
   "url": "https://sandbox-api-cdn.zoop.com.br/",
@@ -1018,7 +1018,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "unboxpay.minhaconta.zoop.com.br": {
   "url": "https://unboxpay.minhaconta.zoop.com.br/",
@@ -1028,7 +1028,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "initpay.minhaconta.zoop.com.br": {
   "url": "https://initpay.minhaconta.zoop.com.br/",
@@ -1038,7 +1038,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "auth-staging.zoop.ws": {
   "url": "https://auth-staging.zoop.ws/",
@@ -1058,7 +1058,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "payboox.minhaconta.zoop.com.br": {
   "url": "https://payboox.minhaconta.zoop.com.br/",
@@ -1068,7 +1068,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "manager.minhaconta.zoop.com.br": {
   "url": "https://manager.minhaconta.zoop.com.br/",
@@ -1078,7 +1078,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "banking-api.staging.zoop.ws": {
   "url": "https://banking-api.staging.zoop.ws/",
@@ -1088,7 +1088,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "dash-production.zoop.ws": {
   "url": "https://dash-production.zoop.ws/",
@@ -1098,7 +1098,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "api.nupay-events-receiver.staging.zoop.ws": {
   "url": "https://api.nupay-events-receiver.staging.zoop.ws/",
@@ -1108,7 +1108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "payments.zoop.ws": {
   "url": "https://payments.zoop.ws/",
@@ -1118,7 +1118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "yespay.minhaconta.zoop.com.br": {
   "url": "https://yespay.minhaconta.zoop.com.br/",
@@ -1128,7 +1128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "officepay.minhaconta.zoop.com.br": {
   "url": "https://officepay.minhaconta.zoop.com.br/",
@@ -1138,7 +1138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "atapay.minhaconta.zoop.com.br": {
   "url": "https://atapay.minhaconta.zoop.com.br/",
@@ -1148,7 +1148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "suedpay.minhaconta.zoop.com.br": {
   "url": "https://suedpay.minhaconta.zoop.com.br/",
@@ -1158,7 +1158,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.munizpay.dash.zoop.com.br": {
   "url": "http://www.munizpay.dash.zoop.com.br/",
@@ -1168,7 +1168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "www.geolistpay.minhaconta.zoop.com.br": {
   "url": "http://www.geolistpay.minhaconta.zoop.com.br/",
@@ -1178,7 +1178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "eventogyn.minhaconta.zoop.com.br": {
   "url": "https://eventogyn.minhaconta.zoop.com.br/",
@@ -1238,7 +1238,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "sandbox-api.zoop.com.br": {
   "url": "https://sandbox-api.zoop.com.br/",
@@ -1248,7 +1248,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-26 10:36:20 UTC"
+  "last_checked": "2026-11-28 02:50:15 UTC"
  },
  "lightpag.minhaconta.zoop.com.br": {
   "url": "https://lightpag.minhaconta.zoop.com.br/",
@@ -1960,5 +1960,985 @@
   "catchall": false,
   "interesting": false,
   "last_checked": "2026-11-26 10:36:20 UTC"
+ },
+ "officebank.dash.zoop.com.br": {
+  "url": "https://officebank.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "bempaggo.minhaconta.zoop.com.br": {
+  "url": "https://bempaggo.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ciclo.minhaconta.zoop.com.br": {
+  "url": "https://ciclo.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "amplimed.minhaconta.zoop.com.br": {
+  "url": "https://amplimed.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "notfound.minhaconta.zoop.com.br": {
+  "url": "https://notfound.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "converso.minhaconta.zoop.com.br": {
+  "url": "https://converso.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "odonto.minhaconta.zoop.com.br": {
+  "url": "https://odonto.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ligero.minhaconta.zoop.com.br": {
+  "url": "https://ligero.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "00c44529-wap.minhaconta.zoop.com.br": {
+  "url": "https://00c44529-wap.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "fidelicards.minhaconta.zoop.com.br": {
+  "url": "https://fidelicards.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "pagninja.minhaconta.zoop.com.br": {
+  "url": "https://pagninja.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "cashfast9.minhaconta.zoop.com.br": {
+  "url": "https://cashfast9.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "clubeorganico.minhaconta.zoop.com.br": {
+  "url": "https://clubeorganico.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "iscash.dash.zoop.com.br": {
+  "url": "https://iscash.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "mail.vendas.zoop.com.br": {
+  "url": "https://mail.vendas.zoop.com.br/",
+  "http_status": 404,
+  "title": "Error 404 | Page not found",
+  "redirect": "",
+  "scripts": [
+   "https://mail.vendas.zoop.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
+   "https://mail.vendas.zoop.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js",
+   "https://mail.vendas.zoop.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js",
+   "https://mail.vendas.zoop.com.br/hs/scriptloader/46444526.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "paggx.minhaconta.zoop.com.br": {
+  "url": "https://paggx.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "rumotecnologia.minhaconta.zoop.com.br": {
+  "url": "https://rumotecnologia.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "2swebbanking.minhaconta.zoop.com.br": {
+  "url": "https://2swebbanking.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "brcard.dash.zoop.com.br": {
+  "url": "https://brcard.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "movilepay.com.br": {
+  "url": "https://movilepay.com.br/",
+  "http_status": 200,
+  "title": "movilepay.com.br",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "qrcode-h.zoop.com.br": {
+  "url": "https://qrcode-h.zoop.com.br/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ciclo7.minhaconta.zoop.com.br": {
+  "url": "https://ciclo7.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.ppg.minhaconta.zoop.com.br": {
+  "url": "http://www.ppg.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "iscash.minhaconta.zoop.com.br": {
+  "url": "https://iscash.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "impag.minhaconta.zoop.com.br": {
+  "url": "https://impag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "agendei.minhaconta.zoop.com.br": {
+  "url": "https://agendei.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ares.minhaconta.zoop.com.br": {
+  "url": "https://ares.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "gjota.minhaconta.zoop.com.br": {
+  "url": "https://gjota.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "plynpag.minhaconta.zoop.com.br": {
+  "url": "https://plynpag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "comunicacao-hs.zoop.com.br": {
+  "url": "https://comunicacao-hs.zoop.com.br/",
+  "http_status": 404,
+  "title": "Error 404 | Page not found",
+  "redirect": "",
+  "scripts": [
+   "https://comunicacao-hs.zoop.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
+   "https://comunicacao-hs.zoop.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js",
+   "https://comunicacao-hs.zoop.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js",
+   "https://comunicacao-hs.zoop.com.br/hs/scriptloader/46444526.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "movilepay.com": {
+  "url": "https://www.movilepay.com/",
+  "http_status": 503,
+  "title": "Service Unavailable",
+  "redirect": "https://www.movilepay.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "unbanked.minhaconta.zoop.com.br": {
+  "url": "https://unbanked.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "bpass.dash.zoop.com.br": {
+  "url": "https://bpass.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "zec.zoop.ws": {
+  "url": "https://zec.zoop.ws/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.novaxs.minhaconta.zoop.com.br": {
+  "url": "http://www.novaxs.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "sixbank.minhaconta.zoop.com.br": {
+  "url": "https://sixbank.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.cashfast.minhaconta.zoop.com.br": {
+  "url": "http://www.cashfast.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "rixvoip.minhaconta.zoop.com.br": {
+  "url": "https://rixvoip.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "creditt.minhaconta.zoop.com.br": {
+  "url": "https://creditt.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "url4024.zoop.com.br": {
+  "url": "http://url4024.zoop.com.br/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "mail.dash.zoop.com.br": {
+  "url": "https://mail.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "link.zoop.ws": {
+  "url": "https://link.zoop.ws/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.minhaconta.zoop.com.br": {
+  "url": "https://www.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "status.zoop.com.br": {
+  "url": "https://status.zoop.com.br/",
+  "http_status": 200,
+  "title": "Zoop Status",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.plynpag.minhaconta.zoop.com.br": {
+  "url": "http://www.plynpag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "vitalitybanck.dash.zoop.com.br": {
+  "url": "https://vitalitybanck.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.dash.zoop.com.br": {
+  "url": "https://www.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.aqbank.minhaconta.zoop.com.br": {
+  "url": "http://www.aqbank.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "officebank.minhaconta.zoop.com.br": {
+  "url": "https://officebank.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.odonto.minhaconta.zoop.com.br": {
+  "url": "http://www.odonto.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "brcard.minhaconta.zoop.com.br": {
+  "url": "https://brcard.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "webei.minhaconta.zoop.com.br": {
+  "url": "https://webei.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "descontanet.minhaconta.zoop.com.br": {
+  "url": "https://descontanet.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "legacybank.minhaconta.zoop.com.br": {
+  "url": "https://legacybank.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.ciclo.minhaconta.zoop.com.br": {
+  "url": "http://www.ciclo.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "sponte.minhaconta.zoop.com.br": {
+  "url": "https://sponte.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "checkout.dash.zoop.com.br": {
+  "url": "https://checkout.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ppg.minhaconta.zoop.com.br": {
+  "url": "https://ppg.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "voa.minhaconta.zoop.com.br": {
+  "url": "https://voa.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "veloxpag.minhaconta.zoop.com.br": {
+  "url": "https://veloxpag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.converso.minhaconta.zoop.com.br": {
+  "url": "http://www.converso.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.brcard.minhaconta.zoop.com.br": {
+  "url": "http://www.brcard.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.sponte.minhaconta.zoop.com.br": {
+  "url": "http://www.sponte.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "cashfast.minhaconta.zoop.com.br": {
+  "url": "https://cashfast.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "mkt.zoop.com.br": {
+  "url": "https://mkt.zoop.com.br/",
+  "http_status": 404,
+  "title": "Error 404 | Page not found",
+  "redirect": "",
+  "scripts": [
+   "https://mkt.zoop.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
+   "https://mkt.zoop.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js",
+   "https://mkt.zoop.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js",
+   "https://mkt.zoop.com.br/hs/scriptloader/46444526.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "webgestor.minhaconta.zoop.com.br": {
+  "url": "https://webgestor.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.legacybank.minhaconta.zoop.com.br": {
+  "url": "http://www.legacybank.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "gopag.minhaconta.zoop.com.br": {
+  "url": "https://gopag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.recebix.minhaconta.zoop.com.br": {
+  "url": "http://www.recebix.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.wildcard.minhaconta.zoop.com.br": {
+  "url": "http://www.wildcard.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "blog.zoop.com.br": {
+  "url": "https://blog.zoop.com.br/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://zoop.blog/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "wildcard.dash.zoop.com.br": {
+  "url": "https://wildcard.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.movilepay.com.br": {
+  "url": "https://movilepay.com.br/",
+  "http_status": 200,
+  "title": "movilepay.com.br",
+  "redirect": "https://movilepay.com.br/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "codpag.minhaconta.zoop.com.br": {
+  "url": "https://codpag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "giropagamentos.minhaconta.zoop.com.br": {
+  "url": "https://giropagamentos.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "pagtodos.minhaconta.zoop.com.br": {
+  "url": "https://pagtodos.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "bluecard.minhaconta.zoop.com.br": {
+  "url": "https://bluecard.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "mwpagamentos.minhaconta.zoop.com.br": {
+  "url": "https://mwpagamentos.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "karpospag.minhaconta.zoop.com.br": {
+  "url": "https://karpospag.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "saipos.minhaconta.zoop.com.br": {
+  "url": "https://saipos.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.movilepay.com": {
+  "url": "https://www.movilepay.com/",
+  "http_status": 503,
+  "title": "Service Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "info.zoop.com.br": {
+  "url": "https://info.zoop.com.br/",
+  "http_status": 404,
+  "title": "Error 404 | Page not found",
+  "redirect": "",
+  "scripts": [
+   "https://info.zoop.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
+   "https://info.zoop.com.br/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js",
+   "https://info.zoop.com.br/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js",
+   "https://info.zoop.com.br/hs/scriptloader/46444526.js"
+  ],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "1.dash.zoop.com.br": {
+  "url": "https://1.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "103.dash.zoop.com.br": {
+  "url": "https://103.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "115.dash.zoop.com.br": {
+  "url": "https://115.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.flexpagg.minhaconta.zoop.com.br": {
+  "url": "http://www.flexpagg.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "118.dash.zoop.com.br": {
+  "url": "https://118.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "119.dash.zoop.com.br": {
+  "url": "https://119.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "125.dash.zoop.com.br": {
+  "url": "https://125.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "190.dash.zoop.com.br": {
+  "url": "https://190.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.credmax.minhaconta.zoop.com.br": {
+  "url": "http://www.credmax.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "2.dash.zoop.com.br": {
+  "url": "https://2.dash.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.ligero.minhaconta.zoop.com.br": {
+  "url": "http://www.ligero.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.voa.minhaconta.zoop.com.br": {
+  "url": "http://www.voa.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "www.recebee.minhaconta.zoop.com.br": {
+  "url": "http://www.recebee.minhaconta.zoop.com.br/",
+  "http_status": 403,
+  "title": "Azion - Default error page",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
+ },
+ "ajuda.zoop.com.br": {
+  "url": "https://ajuda.zoop.com.br/hc/pt-br",
+  "http_status": 403,
+  "title": "Just a moment...",
+  "redirect": "https://ajuda.zoop.com.br/hc/pt-br",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 02:48:29 UTC"
  }
 }

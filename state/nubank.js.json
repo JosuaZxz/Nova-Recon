@@ -4,21 +4,21 @@
   "sha256": "a1b3edb21949c77f051c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 13:59:07 UTC"
+  "updated": "2026-11-28 03:06:47 UTC"
  },
  "https://estagio.nubank.com.br/assets/vendor-BiIqkT7s.js": {
   "last_url": "https://estagio.nubank.com.br/assets/vendor-BiIqkT7s.js",
   "sha256": "890f36502f4d37bec374",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 13:59:07 UTC"
+  "updated": "2026-11-28 03:06:47 UTC"
  },
  "https://estagio.nubank.com.br/assets/antd-EdAfV7Ek.js": {
   "last_url": "https://estagio.nubank.com.br/assets/antd-EdAfV7Ek.js",
   "sha256": "11ef6615bd6370fad755",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-26 13:59:07 UTC"
+  "updated": "2026-11-28 03:06:47 UTC"
  },
  "https://lpenterprise.nubank.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js": {
   "last_url": "https://lpenterprise.nubank.com.br/hs/hsstatic/HubspotToolsMenu/static-1.640/js/index.js",
@@ -47,5 +47,333 @@
   "routes": [],
   "graphql_ops": [],
   "updated": "2026-11-26 13:59:01 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/webpack-3227b36c131bf32e.js",
+  "sha256": "8ea07ddffe5358a5628a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/framework-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/framework-97862ef36bc4065f.js",
+  "sha256": "13936d15e51ad77be0fd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/main-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/main-2c24244ecc665bec.js",
+  "sha256": "abb52679e7165a5e9c2b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/pages/_app-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/pages/_app-e79d3e91c6c19ba1.js",
+  "sha256": "0da520fbcad0c2b829ed",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/8230-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/8230-251e23b7a24ff307.js",
+  "sha256": "21edaa8bac26228ee9d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/4587-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/4587-0bf1907092403fd4.js",
+  "sha256": "00982e743846e34a17e3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/1451-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/1451-7c3763395ae93d2b.js",
+  "sha256": "86ada49cbc37f59a9be6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/621-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/621-65f81bc48316d006.js",
+  "sha256": "310cc8567e1b002bab3c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/2413-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/2413-4d3dc9581a5be0b8.js",
+  "sha256": "838e7545f5b6fb7856e3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:34 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/1268-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/1268-19179fb5f688160a.js",
+  "sha256": "a3add23853e02a6e0447",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/5677-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/5677-aeef4f541311ea32.js",
+  "sha256": "e1054a32c1860258dd26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/8653-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/8653-ce501139781891c0.js",
+  "sha256": "4e832233718d55192a5f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/chunks/pages/index-HASH.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/chunks/pages/index-793db53210694b1f.js",
+  "sha256": "a1a6afb354c28d2bf6ad",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_buildManifest.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_buildManifest.js",
+  "sha256": "688b941fe9603236198d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://www.blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_ssgManifest.js": {
+  "last_url": "https://www.blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_ssgManifest.js",
+  "sha256": "ddeea69d511685214577",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/webpack-1950ee8e6f90bc4d.js",
+  "sha256": "1b7e9710601ead90c9cd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/4a7b0c69-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/4a7b0c69-0e87a128c3d05721.js",
+  "sha256": "f587eebd2ad106433460",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/5d015edf-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/5d015edf-8f2a0d525ce6613f.js",
+  "sha256": "5eabd5cecda518dbc68e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/4bd1b696-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/4bd1b696-4295c44fb9c0d3b2.js",
+  "sha256": "51667494172ecd6cfae0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/98-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/98-5b5222245ddc779e.js",
+  "sha256": "377ec3f2c2e0e967b311",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/main-app-99131497752a6dd9.js",
+  "sha256": "ebb4b3fdbcd61f1dfb30",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:35 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/62-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/62-f69e9bb190fabb94.js",
+  "sha256": "f9fbc781196af9f2a671",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/670-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/670-4a08c0c4fd5c31a3.js",
+  "sha256": "356788a149924a2e167d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/global-error-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/global-error-32f161d85d35f2d5.js",
+  "sha256": "86322d1dbd4fd79cceb6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/225f8dbd-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/225f8dbd-66de3c6ab057007a.js",
+  "sha256": "05e475c4a6c0413c5f72",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/62726604-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/62726604-99d2c26f05e2ed94.js",
+  "sha256": "65c042f0a7a687871e45",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/17-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/17-eac416aa91831488.js",
+  "sha256": "53c0ccc29d2ba861bbe7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/565-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/565-bf1b3fdd4269dae9.js",
+  "sha256": "732135cfeef4a1d56714",
+  "routes": [
+   "/users/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:36 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/615-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/615-fede09289843301d.js",
+  "sha256": "a0f99f03ffc9b68bfd86",
+  "routes": [
+   "/api/auto-reply-evaluation/evaluate",
+   "/api/discovery",
+   "/api/inviter/"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:37 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/%5B%5B...slugs%5D%5D/page-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/%5B%5B...slugs%5D%5D/page-c22a30ba9fc66a24.js",
+  "sha256": "410aee40def5e152aad7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:37 UTC"
+ },
+ "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/layout-HASH.js": {
+  "last_url": "https://static.nubank.com.br/ea95d40a1a5e91c022c9e889924cc31561dc1cf5/_next/static/chunks/app/layout-630dff953bad88cb.js",
+  "sha256": "bd9e678c1754a5513c2b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/webpack-3227b36c131bf32e.js",
+  "sha256": "8ea07ddffe5358a5628a",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/framework-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/framework-97862ef36bc4065f.js",
+  "sha256": "13936d15e51ad77be0fd",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/main-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/main-2c24244ecc665bec.js",
+  "sha256": "abb52679e7165a5e9c2b",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/pages/_app-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/pages/_app-e79d3e91c6c19ba1.js",
+  "sha256": "0da520fbcad0c2b829ed",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/8230-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/8230-251e23b7a24ff307.js",
+  "sha256": "21edaa8bac26228ee9d8",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/4587-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/4587-0bf1907092403fd4.js",
+  "sha256": "00982e743846e34a17e3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/1451-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/1451-7c3763395ae93d2b.js",
+  "sha256": "86ada49cbc37f59a9be6",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/621-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/621-65f81bc48316d006.js",
+  "sha256": "310cc8567e1b002bab3c",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/2413-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/2413-4d3dc9581a5be0b8.js",
+  "sha256": "838e7545f5b6fb7856e3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/1268-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/1268-19179fb5f688160a.js",
+  "sha256": "a3add23853e02a6e0447",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/5677-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/5677-aeef4f541311ea32.js",
+  "sha256": "e1054a32c1860258dd26",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:38 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/8653-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/8653-ce501139781891c0.js",
+  "sha256": "4e832233718d55192a5f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:39 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/chunks/pages/index-HASH.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/chunks/pages/index-793db53210694b1f.js",
+  "sha256": "a1a6afb354c28d2bf6ad",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:39 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_buildManifest.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_buildManifest.js",
+  "sha256": "688b941fe9603236198d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:39 UTC"
+ },
+ "https://blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_ssgManifest.js": {
+  "last_url": "https://blog.nubank.com.br/_next/static/6FM3tYeEaBsOjPTz28KOM/_ssgManifest.js",
+  "sha256": "ddeea69d511685214577",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 03:06:39 UTC"
  }
 }

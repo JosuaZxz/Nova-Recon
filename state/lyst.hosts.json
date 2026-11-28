@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "cms2.lystit.com": {
   "url": "https://cms2.lystit.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "lap-preview.lystit.com": {
   "url": "https://lap-preview.lystit.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "cdntest.lystit.com": {
   "url": "https://cdntest.lystit.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "feeds-fashionclip-opensearch-dashboards.lystit.com": {
   "url": "https://feeds-fashionclip-opensearch-dashboards.lystit.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "braze-api-pr-640-web-public-cloudflare-alb.eks-1-32.cztio.lystit.com": {
   "url": "https://braze-api-pr-640-web-public-cloudflare-alb.eks-1-32.cztio.lystit.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "braze-api-pr-641-web-public-cloudflare-alb.eks-1-32.cztio.lystit.com": {
   "url": "https://braze-api-pr-641-web-public-cloudflare-alb.eks-1-32.cztio.lystit.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "dashboard-eks-website-1-32.lystit.com": {
   "url": "https://dashboard-eks-website-1-32.lystit.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
  },
  "shopping-cart-staging-external-us.lystit.com": {
   "url": "https://shopping-cart-staging-external-us.lystit.com/",
@@ -88,6 +88,78 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:36:14 UTC"
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "confluence.lystit.com": {
+  "url": "https://confluence.lystit.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://lyst.atlassian.net/wiki/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "cms2-pr-206-web-cloudflare-alb.eks-1-32.cztio.lystit.com": {
+  "url": "https://cms2-pr-206-web-cloudflare-alb.eks-1-32.cztio.lystit.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://lyst.cloudflareaccess.com/cdn-cgi/access/login/cms2-pr-206-web-cloudflare-alb.eks-1-32.cztio.lystit.com?kid=0a081a576d578f8c2bcd8a8327c36a94c05439854f965c75523e02f89283bab7&meta=eyJ0eXAiOiJKV1",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "grafana-eks-website-1-32.lystit.com": {
+  "url": "https://grafana-eks-website-1-32.lystit.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://lyst.cloudflareaccess.com/cdn-cgi/access/login/grafana-eks-website-1-32.lystit.com?kid=60c4ad87058579c9347fd18deec7babb1bda947499144cc9ab149d54cad5f90a&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiI",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "grafana.lystit.com": {
+  "url": "https://grafana.lystit.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://lyst.cloudflareaccess.com/cdn-cgi/access/login/grafana.lystit.com?kid=b8b405e3d8572d3c45e19efcd1118b6427d5bc9f503a6087d7491a5cd1493ba5&meta=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImM3ZWZi",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "mobile-api-pr-4217-web-private-cloudflare-alb.eks-1-32.cztio.lystit.com": {
+  "url": "https://mobile-api-pr-4217-web-private-cloudflare-alb.eks-1-32.cztio.lystit.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://lyst.cloudflareaccess.com/cdn-cgi/access/login/mobile-api-pr-4217-web-private-cloudflare-alb.eks-1-32.cztio.lystit.com?kid=a2722250a7dbf3a1c51c3431037b6ace713511e4332305087276add7f58018a6&meta",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "jira.lystit.com": {
+  "url": "https://jira.lystit.com/",
+  "http_status": 301,
+  "title": "301 Moved Permanently",
+  "redirect": "https://lyst.atlassian.net/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
+ },
+ "openvpn.lystit.com": {
+  "url": "https://openvpn.lystit.com/",
+  "http_status": 200,
+  "title": "Access server client portal",
+  "redirect": "",
+  "scripts": [
+   "https://openvpn.lystit.com/static/standalone/client/js/index-fc5ddae22b5600a42775.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:53:04 UTC"
  }
 }

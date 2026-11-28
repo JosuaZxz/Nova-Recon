@@ -4,13 +4,213 @@
   "sha256": "719e3883bf91a1c311d8",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:39:42 UTC"
+  "updated": "2026-11-28 02:55:51 UTC"
  },
  "https://staging-scim-1pass.soundcloud.org/app/index.HASH.js": {
   "last_url": "https://staging-scim-1pass.soundcloud.org/app/index.b444ee68.js",
   "sha256": "fd548a0cff968f91ee0f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-24 23:39:43 UTC"
+  "updated": "2026-11-28 02:55:52 UTC"
+ },
+ "https://cast-new.soundcloud.com/assets/chromecast-receiver-HASH.js": {
+  "last_url": "https://cast-new.soundcloud.com/assets/chromecast-receiver-095d5de0.js",
+  "sha256": "03f38db079037733c1f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:52 UTC"
+ },
+ "https://w.soundcloud.com/player/api.js": {
+  "last_url": "https://w.soundcloud.com/player/api.js",
+  "sha256": "0d812ad43eed50901840",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:52 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/7f9a4d97d2578051.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/7f9a4d97d2578051.js",
+  "sha256": "0a55aebb69bccd947b51",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:52 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/2fe28200718bad00.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/2fe28200718bad00.js",
+  "sha256": "83421204559cca760f36",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:53 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/8d4d786ba351b0f5.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/8d4d786ba351b0f5.js",
+  "sha256": "f8db7a1495f5c860209f",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:53 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/b0ee37af3e870210.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/b0ee37af3e870210.js",
+  "sha256": "c324017d77516e63b23e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:53 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/b4bc859fe5b3956b.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/b4bc859fe5b3956b.js",
+  "sha256": "b91788c4ac43ddc2b99f",
+  "routes": [
+   "/api/settings/list",
+   "/api/users/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:53 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/c68bd6acd254e32e.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/c68bd6acd254e32e.js",
+  "sha256": "7b7fefe9bd11e94fb4ab",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:53 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/turbopack-HASH.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/turbopack-dbb564e758da645d.js",
+  "sha256": "bccd074f0d1a31e08069",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/dcdbefc1a6d2b8db.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/dcdbefc1a6d2b8db.js",
+  "sha256": "85e0529a63809f40f5f5",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/chunks/2c0af5ed4217968a.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/chunks/2c0af5ed4217968a.js",
+  "sha256": "2d929c41072cf2892e3a",
+  "routes": [
+   "/api/users/me"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_ssgManifest.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_ssgManifest.js",
+  "sha256": "653f3e53e89b4f8548ff",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_buildManifest.js": {
+  "last_url": "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_buildManifest.js",
+  "sha256": "6832f6317e92e0cd2c91",
+  "routes": [
+   "/admin/BannedArtistsTable",
+   "/admin/BannedTracksTable",
+   "/admin/banned-content",
+   "/admin/users",
+   "/admin/users/CreateUserModal",
+   "/admin/users/EditUserModal",
+   "/admin/users/UsersTable",
+   "/api/admin-actions/_query",
+   "/api/admin-actions/get-banned-artists",
+   "/api/admin-actions/get-banned-tracks",
+   "/api/admin-actions/hide-artist",
+   "/api/admin-actions/hide-track",
+   "/api/admin-actions/unhide-artist",
+   "/api/admin-actions/unhide-track",
+   "/api/artists/_query",
+   "/api/artists/helpers/agentic/filterFragments",
+   "/api/artists/list",
+   "/api/auth/_query",
+   "/api/auth/revoke",
+   "/api/catalog/_query",
+   "/api/catalog/data-by-id",
+   "/api/catalog/helpers/agentic/filterFragments",
+   "/api/catalog/list",
+   "/api/charts/_query",
+   "/api/charts/available-charts",
+   "/api/charts/data-by-id",
+   "/api/charts/list",
+   "/api/charts/shared-tags",
+   "/api/favorites/_query",
+   "/api/favorites/artist-delete",
+   "/api/favorites/artist-save",
+   "/api/favorites/artists-list",
+   "/api/favorites/track-delete",
+   "/api/favorites/track-save",
+   "/api/favorites/tracks-list",
+   "/api/helpers/agentic",
+   "/api/helpers/bqRowToTableData",
+   "/api/helpers/constants",
+   "/api/helpers/credentials",
+   "/api/helpers/fetcher",
+   "/api/helpers/getTableDataByTrackIds",
+   "/api/helpers/getTrackRows",
+   "/api/helpers/parseRangeFilters",
+   "/api/helpers/prepareCountryFilter",
+   "/api/helpers/prepareFilter",
+   "/api/helpers/prepareListenedTracksFilter",
+   "/api/helpers/prepareP100Filter",
+   "/api/helpers/preparePage",
+   "/api/helpers/prepareRemixFilter",
+   "/api/helpers/prepareSort",
+   "/api/helpers/prepareSortOrder",
+   "/api/helpers/prepareUndesirableFilter",
+   "/api/scout/_query",
+   "/api/scout/helpers/agentic/filterFragments",
+   "/api/settings/_query",
+   "/api/settings/helpers/agentic/filterFragments",
+   "/api/settings/list",
+   "/api/settings/save",
+   "/api/users/_query",
+   "/api/users/check-exists",
+   "/api/users/create",
+   "/api/users/list",
+   "/api/users/me",
+   "/api/users/update",
+   "/api/vision/_query",
+   "/api/vision/data",
+   "/api/vision/details",
+   "/api/vision/quick-hits",
+   "/api/vision/scene-data",
+   "/api/vision/secnd-level-data",
+   "/api/vision/summary"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://dwt.soundcloud.com/tags.js": {
+  "last_url": "https://dwt.soundcloud.com/tags.js",
+  "sha256": "1c99beb1fc7166d59c65",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://cast-beta.soundcloud.com/assets/chromecast-receiver-HASH.js": {
+  "last_url": "https://cast-beta.soundcloud.com/assets/chromecast-receiver-095d5de0.js",
+  "sha256": "03f38db079037733c1f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://invite.soundcloud.com/core.js": {
+  "last_url": "https://invite.soundcloud.com/core.js",
+  "sha256": "16a7df718a0a3b449c2d",
+  "routes": [
+   "/api/v4/debug/logs",
+   "/api/v4/debug/metrics",
+   "/api/v5/token"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:54 UTC"
+ },
+ "https://developers.soundcloud.com/assets/application-66afef9566e52eeb710b8ab0295ed19398dde7b79f0e67e024c4f6a1e401a949.js": {
+  "last_url": "https://developers.soundcloud.com/assets/application-66afef9566e52eeb710b8ab0295ed19398dde7b79f0e67e024c4f6a1e401a949.js",
+  "sha256": "a77d7a35e69b95eb9297",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 02:55:55 UTC"
  }
 }

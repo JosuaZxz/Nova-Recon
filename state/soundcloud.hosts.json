@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "grafana-cs.soundcloud.org": {
   "url": "https://grafana-cs.soundcloud.org/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "ar-dashboard.l.soundcloud.com": {
   "url": "https://ar-dashboard.l.soundcloud.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-partners.soundcloud.com": {
   "url": "https://api-partners.soundcloud.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "users.cs-staging.soundcloud.com": {
   "url": "https://users.cs-staging.soundcloud.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "media.cms-test-staging.soundcloud.com": {
   "url": "https://media.cms-test-staging.soundcloud.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-v2.soundcloud.com": {
   "url": "https://api-v2.soundcloud.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "dev.coupons.martech.soundcloud.com": {
   "url": "https://dev.coupons.martech.soundcloud.com/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "sonar-staging.soundcloud.org": {
   "url": "https://sonar-staging.soundcloud.org/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-creator-services.soundcloud.com": {
   "url": "https://api-creator-services.soundcloud.com/",
@@ -98,7 +98,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "alertmanager.soundcloud.org": {
   "url": "https://alertmanager.soundcloud.org/",
@@ -108,7 +108,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "docker-proxy-dev-internal.soundcloud.org": {
   "url": "https://docker-proxy-dev-internal.soundcloud.org/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "git-proxy-dev-internal.soundcloud.org": {
   "url": "https://git-proxy-dev-internal.soundcloud.org/",
@@ -128,7 +128,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "backstage.soundcloud.com": {
   "url": "https://backstage.soundcloud.com/",
@@ -138,7 +138,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "stage.coupons.martech.soundcloud.com": {
   "url": "https://stage.coupons.martech.soundcloud.com/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "jira.soundcloud.com": {
   "url": "https://jira.soundcloud.com/",
@@ -158,7 +158,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "dashboard.soundcloud.com": {
   "url": "https://dashboard.soundcloud.com/",
@@ -168,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "systraf-test.soundcloud.com": {
   "url": "https://systraf-test.soundcloud.com/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-partners-staging.soundcloud.com": {
   "url": "https://api-partners-staging.soundcloud.com/",
@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "dev.api.lastfm.integrate.soundcloud.com": {
   "url": "https://dev.api.lastfm.integrate.soundcloud.com/",
@@ -198,7 +198,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "soundtest.soundcloud.com": {
   "url": "https://soundtest.soundcloud.com/",
@@ -208,7 +208,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-mobile-staging.soundcloud.com": {
   "url": "https://api-mobile-staging.soundcloud.com/",
@@ -218,7 +218,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-auth.soundcloud.com": {
   "url": "https://api-auth.soundcloud.com/",
@@ -228,7 +228,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "echo-test.soundcloud.org": {
   "url": "https://echo-test.soundcloud.org/",
@@ -238,7 +238,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "media.cms-test-dev.soundcloud.com": {
   "url": "https://media.cms-test-dev.soundcloud.com/",
@@ -248,7 +248,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-pss.soundcloud.com": {
   "url": "https://api-pss.soundcloud.com/",
@@ -258,7 +258,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "periskop-staging.soundcloud.org": {
   "url": "https://periskop-staging.soundcloud.org/",
@@ -268,7 +268,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "events-api.soundcloud.com": {
   "url": "https://events-api.soundcloud.com/",
@@ -278,7 +278,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "community-staging.soundcloud.org": {
   "url": "https://community-staging.soundcloud.org/",
@@ -288,7 +288,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-staging-mobi.soundcloud.com": {
   "url": "https://api-staging-mobi.soundcloud.com/",
@@ -298,7 +298,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api.lastfm.integrate.soundcloud.com": {
   "url": "https://api.lastfm.integrate.soundcloud.com/",
@@ -308,7 +308,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "k8s-api-ac.soundcloud.org": {
   "url": "https://k8s-api-ac.soundcloud.org/",
@@ -318,7 +318,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "mastering-staging-c76abee92f.soundcloud.com": {
   "url": "https://mastering-staging-c76abee92f.soundcloud.com/",
@@ -328,7 +328,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "in-app-tool-staging.soundcloud.org": {
   "url": "https://in-app-tool-staging.soundcloud.org/",
@@ -338,7 +338,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "cms.soundcloud.org": {
   "url": "https://cms.soundcloud.org/",
@@ -348,7 +348,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "dashboard-prod.soundcloud.org": {
   "url": "https://dashboard-prod.soundcloud.org/",
@@ -358,7 +358,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "backstage-staging.soundcloud.org": {
   "url": "https://backstage-staging.soundcloud.org/",
@@ -368,7 +368,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-curators.soundcloud.com": {
   "url": "https://api-curators.soundcloud.com/",
@@ -378,7 +378,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "api-mobile-beta.soundcloud.com": {
   "url": "https://api-mobile-beta.soundcloud.com/",
@@ -388,7 +388,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "url1220.reporting.soundcloud.com": {
   "url": "https://url1220.reporting.soundcloud.com/",
@@ -418,7 +418,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
  },
  "jira.soundcloud.org": {
   "url": "https://jira.soundcloud.org/",
@@ -451,6 +451,391 @@
   ],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-24 23:39:42 UTC"
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "dev.api.sonos.integrate.soundcloud.com": {
+  "url": "https://dev.api.sonos.integrate.soundcloud.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "api-deck.soundcloud.com": {
+  "url": "https://api-deck.soundcloud.com/",
+  "http_status": 405,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "api-mobile.soundcloud.com": {
+  "url": "https://api-mobile.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "api-labs.soundcloud.com": {
+  "url": "https://api-labs.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "deck-staging.soundcloud.org": {
+  "url": "https://deck-staging.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "actions-webhook.build-test.soundcloud.org": {
+  "url": "https://actions-webhook.build-test.soundcloud.org/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "api-mobile-alpha.soundcloud.com": {
+  "url": "https://api-mobile-alpha.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "labs-staging.soundcloud.org": {
+  "url": "https://labs-staging.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "grafana-cs-staging.soundcloud.org": {
+  "url": "https://grafana-cs-staging.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "backstage.soundcloud.org": {
+  "url": "https://backstage.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "api-staging-v2.soundcloud.com": {
+  "url": "https://api-staging-v2.soundcloud.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "grafana.soundcloud.org": {
+  "url": "https://grafana.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "sheerid-staging.soundcloud.com": {
+  "url": "https://sheerid-staging.soundcloud.com/",
+  "http_status": 405,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "users-cs-staging.soundcloud.org": {
+  "url": "https://users-cs-staging.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "api-insights.soundcloud.com": {
+  "url": "https://api-insights.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "grafana-staging.soundcloud.org": {
+  "url": "https://grafana-staging.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "docker-dev-internal.soundcloud.org": {
+  "url": "https://docker-dev-internal.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "k8s-api-ab.soundcloud.org": {
+  "url": "https://k8s-api-ab.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "jira-staging.soundcloud.com": {
+  "url": "https://jira-staging.soundcloud.com/",
+  "http_status": 403,
+  "title": "Something went wrong - SoundCloud",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "links.login.soundcloud.com": {
+  "url": "https://links.login.soundcloud.com/",
+  "http_status": 404,
+  "title": "404 Not Found",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "api-fortune.soundcloud.com": {
+  "url": "https://api-fortune.soundcloud.com/",
+  "http_status": 405,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "test.soundcloud.com": {
+  "url": "https://test.soundcloud.com/",
+  "http_status": 200,
+  "title": "SoundCloud",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "apt-dev-internal.soundcloud.org": {
+  "url": "https://apt-dev-internal.soundcloud.org/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://accounts.google.com/o/oauth2/v2/auth?hd=*&client_id=138009452611-sjeieq88qlhfp7ti9t4aotqarhhb8erm.apps.googleusercontent.com&response_type=code&scope=openid+email&redirect_uri=https://iap.goog",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "test.igf.soundcloud.com": {
+  "url": "https://test.igf.soundcloud.com/",
+  "http_status": 403,
+  "title": "Error 403 Forbidden",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "buckster-staging.soundcloud.com": {
+  "url": "https://buckster-staging.soundcloud.com/",
+  "http_status": 403,
+  "title": "Something went wrong - SoundCloud",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "api-widget.soundcloud.com": {
+  "url": "https://api-widget.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "staging.api.lastfm.integrate.soundcloud.com": {
+  "url": "https://staging.api.lastfm.integrate.soundcloud.com/",
+  "http_status": 503,
+  "title": "503 Service Temporarily Unavailable",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "developer.soundcloud.com": {
+  "url": "https://developer.soundcloud.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://developers.soundcloud.com/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:54:29 UTC"
+ },
+ "cast-new.soundcloud.com": {
+  "url": "https://cast-new.soundcloud.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://cast-new.soundcloud.com/assets/chromecast-receiver-095d5de0.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "staging.api.sonos.integrate.soundcloud.com": {
+  "url": "https://staging.api.sonos.integrate.soundcloud.com/",
+  "http_status": 403,
+  "title": "ERROR: The request could not be satisfied",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "api-insights-alpha.soundcloud.com": {
+  "url": "https://api-insights-alpha.soundcloud.com/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "ar-dashboard.soundcloud.com": {
+  "url": "https://ar-dashboard.soundcloud.com/",
+  "http_status": 200,
+  "title": "SoundCloud A&amp;R Dashboard | Discover artists with SoundCloud",
+  "redirect": "",
+  "scripts": [
+   "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_buildManifest.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/V1gEVtSK7edjxwwqCROY4/_ssgManifest.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/2c0af5ed4217968a.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/2fe28200718bad00.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/7f9a4d97d2578051.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/8d4d786ba351b0f5.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/b0ee37af3e870210.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/b4bc859fe5b3956b.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/c68bd6acd254e32e.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/dcdbefc1a6d2b8db.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/turbopack-4ac2e37dbbfce35c.js",
+   "https://ar-dashboard.soundcloud.com/_next/static/chunks/turbopack-dbb564e758da645d.js",
+   "https://w.soundcloud.com/player/api.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "soundcouch-beta.soundcloud.com": {
+  "url": "https://soundcouch-beta.soundcloud.com/",
+  "http_status": 200,
+  "title": "SoundCloud",
+  "redirect": "",
+  "scripts": [
+   "https://dwt.soundcloud.com/tags.js"
+  ],
+  "catchall": true,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "cast-beta.soundcloud.com": {
+  "url": "https://cast-beta.soundcloud.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [
+   "https://cast-beta.soundcloud.com/assets/chromecast-receiver-095d5de0.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "checkout-staging.soundcloud.com": {
+  "url": "https://checkout-staging.soundcloud.com/go",
+  "http_status": 200,
+  "title": "Discover more with SoundCloud Go+",
+  "redirect": "https://checkout-staging.soundcloud.com/go",
+  "scripts": [
+   "https://dwt.soundcloud.com/tags.js",
+   "https://invite.soundcloud.com/core.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
+ },
+ "developers.soundcloud.com": {
+  "url": "https://developers.soundcloud.com/",
+  "http_status": 200,
+  "title": "SoundCloud Developers",
+  "redirect": "",
+  "scripts": [
+   "https://developers.soundcloud.com/assets/application-66afef9566e52eeb710b8ab0295ed19398dde7b79f0e67e024c4f6a1e401a949.js"
+  ],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 02:55:51 UTC"
  }
 }
