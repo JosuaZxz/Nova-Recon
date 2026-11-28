@@ -23,6 +23,7 @@
 0-0-0-authtoolkit.preprod-facade-server.acquisition.grammarlyaws.com
 0-0-0-beta-admin.preprod-facade-server.acquisition.grammarlyaws.com
 0-0-0-beta-test.preprod-facade-server.acquisition.grammarlyaws.com
+0-0-0-beta.preprod-facade-server.acquisition.grammarlyaws.com
 0-0-0-betaadmin.preprod-facade-server.acquisition.grammarlyaws.com
 0-0-0-betadev.preprod-facade-server.acquisition.grammarlyaws.com
 0-0-0-betatest.preprod-facade-server.acquisition.grammarlyaws.com
@@ -466,6 +467,7 @@
 1045snx.artifactory-public.artifactory.grammarly.io
 1045snx.artifactory.grammarly.io
 1045thebeat.artifactory-public.artifactory.grammarly.io
+1045thebeat.artifactory.grammarly.io
 104634o.artifactory.grammarly.io
 1046487796q.artifactory.grammarly.io
 1046rtlk.artifactory-public.artifactory.grammarly.io
@@ -498,6 +500,7 @@
 107.pro.denali-fb.grammarly.com
 107.region.denali-fb.grammarly.com
 109.artifactory.grammarly.io
+109.cert.denali-fb.grammarly.com
 109.email.denali-fb.grammarly.com
 109.private.denali-fb.grammarly.com
 109.scan.denali-fb.grammarly.com
@@ -799,6 +802,7 @@
 12v.beta.denali-fb.grammarly.com
 12v.brand.denali-fb.grammarly.com
 12v.elastic.denali-fb.grammarly.com
+12v.events.denali-fb.grammarly.com
 12v.gateway.denali-fb.grammarly.com
 12v.git.denali-fb.grammarly.com
 12v.oid.denali-fb.grammarly.com
@@ -858,6 +862,7 @@
 13.grammarlyaws.com
 130.grammarlyaws.com
 132.grammarlyaws.com
+1323.grammarlyaws.com
 1324.artifactory.grammarly.io
 135.artifactory.grammarly.io
 135.grammarlyaws.com
@@ -962,6 +967,7 @@
 17372717.artifactory-public.artifactory.grammarly.io
 17372717.artifactory.grammarly.io
 1738.grammarly.com
+1738c.grammarly.com
 17457.artifactory-public.artifactory.grammarly.io
 17457y.artifactory.grammarly.io
 1747277.artifactory.grammarly.io
@@ -1044,6 +1050,7 @@
 1ag.artifactory.grammarly.io
 1b.grammarlyaws.com
 1b9bfef3f737f7b810322f43e3e84581.grammarly.io
+1c-server.grammarlyaws.com
 1c-server.it.grammarlyaws.com
 1c-servers.grammarlyaws.com
 1c.finance.grammarlyaws.com
@@ -1247,6 +1254,7 @@
 837010e.assets.preprod-design-system.grammarlyaws.com
 837010e.grammarlyaws.com
 83c64d8.assets.preprod-design-system.grammarlyaws.com
+83c64d8o.assets.preprod-design-system.grammarlyaws.com
 83e33738cdbc34ecf57cf6b17901b962.grammarly.io
 87.grammarly.com
 87.grammarly.io
@@ -1474,6 +1482,7 @@ administratorso.grammarlyaws.com
 adminka-balto.proofit.grammarly.io
 adminka.acme.superhuman.com
 adminka.grammarly.com
+adminka.palantir.superhuman.com
 adminkai.grammarly.com
 adminlb.grammarly.com
 adminlbs.grammarly.com
@@ -1667,6 +1676,7 @@ airflowg.proofit.grammarlyaws.com
 airflowg.qa-core.grammarlyaws.com
 airflowg.qa-nlp-processing.grammarlyaws.com
 airflowm.prod-sessions-ke-ingest.grammarlyaws.com
+airflowq.meta.db.data-warehouse.grammarlyaws.com
 airflowq.preprod-data-warehouse.grammarlyaws.com
 airflowu.core-prod.grammarlyaws.com
 aiv-app1.adm.denali-fb.grammarly.com
@@ -2265,6 +2275,7 @@ api.grammarly.io
 api.grammarlyaws.com
 api.institution.grammarly.com
 api.mise-private.grammarly.com
+api.palantir.superhuman.com
 api.payments.grammarly.com
 api.platformer.platform.grammarlyaws.com
 api.platformer.qa-platform.grammarlyaws.com
@@ -2538,6 +2549,7 @@ auth7.denali-fb.grammarly.com
 auth9.staging.coda.io
 authafa.denali-fb.grammarly.com
 authenticate.grammarly.com
+authenticate.grammarlyaws.com
 authenticatek.grammarlyaws.com
 authenticateu.grammarly.com
 authentication.grammarlyaws.com
@@ -2588,6 +2600,7 @@ aws.grammarly.io
 aws.grammarlyaws.com
 aws.in.grammarly.com
 aws7.grammarlyaws.com
+aws9.grammarly.io
 awsdata02.grammarly.io
 awsdata027.grammarly.io
 awsglobalaccelerator.com.grammarly.io
@@ -2619,6 +2632,7 @@ bagwell.0day.artifactory.grammarly.io
 baijin5.112.artifactory.grammarly.io
 balancer-hp1.grammarly.com
 balancer-hp1q.grammarly.com
+balancer-hp2.grammarly.com
 balancer-hp2k.grammarly.com
 balancer.grammarly.com
 balancer0.grammarly.com
@@ -2987,6 +3001,7 @@ ci.auth.grammarly.com
 ci.denali-fb.grammarly.com
 ci.grammarly.com
 ci.grammarly.io
+ci.grammarlyaws.com
 ci.image.send.grammarly.com
 ci1.grammarly.com
 ci1.grammarly.io
@@ -3379,6 +3394,7 @@ datacatu.qa-nlp-processing.grammarlyaws.com
 dataingovernment.114.artifactory.grammarly.io
 datam.grammarly.com
 datapageraw.grammarly.com
+dataq.grammarlyaws.com
 datareport.grammarly.com
 datareport.grammarlyaws.com
 datareport.preprod-gdpr-export.grammarlyaws.com
@@ -3444,6 +3460,7 @@ db.prod-gromocode.grammarlyaws.com
 db.prod-institution.grammarlyaws.com
 db.prod-mercury.grammarlyaws.com
 db.qa-analytics.grammarlyaws.com
+db.qa-gb-harvester.grammarlyaws.com
 db.qa-gitlab.platform.grammarlyaws.com
 db.qa-gramms.grammarlyaws.com
 db.qa-irbis.grammarlyaws.com
@@ -3497,6 +3514,7 @@ dby.preprod-mercury.grammarlyaws.com
 dby.qa-gromocode.grammarlyaws.com
 dc-01.corp.grammarly.com
 dc-02.corp.grammarly.com
+dc-02.grammarlyaws.com
 dc.grammarlyaws.com
 dc3.grammarly.com
 dc3.grammarlyaws.com
@@ -3634,6 +3652,7 @@ devk.admin.dev.grammarly.io
 devk.grammarlyaws.com
 devops.denali-fb.grammarly.com
 devops.grammarly.com
+devops.grammarlyaws.com
 devopsapp.grammarly.com
 devopsg.denali-fb.grammarly.com
 devopspro.grammarly.com
@@ -3654,6 +3673,7 @@ devu.network-auth.grammarly.io
 dhcp.grammarly.com
 dhcp.grammarly.io
 dhcp.grammarlyaws.com
+dhcp7.grammarly.com
 dhcp9.grammarlyaws.com
 diagnostics.grammarly.com
 diajakbisasuksesdbso.11pa.artifactory.grammarly.io
@@ -3913,6 +3933,7 @@ elastic.denali-fb.grammarly.com
 elastic.grammarly.com
 elastic.grammarly.io
 elastic.grammarlyaws.com
+elasticbeanstalk.grammarlyaws.com
 elasticbeanstalk18taigamei.artifactory.grammarly.io
 elasticbeanstalko.grammarlyaws.com
 elastici.grammarly.io
@@ -3957,6 +3978,7 @@ emailfeedback.grammarly.com
 emailfeedbackg.grammarly.com
 emailm.gh-mail.grammarly.com
 emails.db.data-warehouse.grammarlyaws.com
+emails.grammarlyaws.com
 embed-customy.adhoc.coda.io
 embeddings-indexing.adhoc.coda.io
 embeddings-querying.adhoc.coda.io
@@ -3980,6 +4002,7 @@ emule.118k.artifactory.grammarly.io
 en.coda.io
 en.grammarly.com
 en.grammarly.io
+en.grammarlyaws.com
 en5.grammarly.com
 en5.grammarlyaws.com
 enactus9.18h.artifactory.grammarly.io
@@ -4197,6 +4220,7 @@ f-log-mobile-ios-retail.grammarly.io
 f-log-mobile-ios-retaily.grammarly.io
 f-log-mobile-ios.grammarly.io
 f-log-mobile-ios.grammarlyaws.com
+f-log-mobile-ioso.grammarlyaws.com
 f-log-mobile.grammarly.io
 f-log-notetaker.grammarly.io
 f-log-null.grammarly.io
@@ -4273,6 +4297,7 @@ feature.grammarlyaws.com
 features-docker.artifactory6.artifactory.grammarly.io
 features.grammarlyaws.com
 fed5.artifactory.grammarly.io
+federalreporter.1192.artifactory.grammarly.io
 fedog.grammarly.io
 fedogc.grammarly.io
 fedoragfx3.168.artifactory.grammarly.io
@@ -4421,6 +4446,7 @@ fw-afpagew.denali-fb.grammarly.com
 fw.denali-fb.grammarly.com
 fw.grammarly.com
 fw.grammarlyaws.com
+fw7.grammarlyaws.com
 g-mail.grammarly.com
 g-mail.internal.grammarly.com
 g.grammarly.io
@@ -4444,6 +4470,7 @@ gates.grammarlyaws.com
 gates.preprod-experimentation.grammarlyaws.com
 gates.prod-experimentation.grammarlyaws.com
 gates.qa-experimentation.grammarlyaws.com
+gatesm.preprod-experimentation.grammarlyaws.com
 gatess.prod-experimentation.grammarlyaws.com
 gateway-plane.argo.grammarly.io
 gateway.acme.superhuman.com
@@ -4458,6 +4485,7 @@ gateway.grammarlyaws.com
 gateway.gwplane.grammarly.io
 gateway.id.superhuman.com
 gateway.k8s-green.qa-core.grammarlyaws.com
+gateway.palantir.superhuman.com
 gateway.superhuman.com
 gatewayg.grammarly.com
 gatewaypage.grammarly.com
@@ -4466,6 +4494,7 @@ gb-audit-log-es.preprod-gb-audit-log.grammarlyaws.com
 gb-audit-log-es.prod-gb-audit-log.grammarlyaws.com
 gb-audit-log-es.qa-gb-audit-log.grammarlyaws.com
 gb-audit-log-esi.preprod-gb-audit-log.grammarlyaws.com
+gb-audit-log-esw.grammarlyaws.com
 gb-audit-log.grammarlyaws.com
 gb-audit-log.preprod-gb-audit-log.grammarlyaws.com
 gb-audit-log.prod-gb-audit-log.grammarlyaws.com
@@ -4984,6 +5013,7 @@ gw.grammarly.com
 gw.grammarlyaws.com
 gw7.grammarlyaws.com
 gwy.denali-fb.grammarly.com
+gyrocopter.grammarlyaws.com
 gyrocopter.qa-platform.grammarlyaws.com
 gyrocopterw.grammarlyaws.com
 h1onboarder.grammarlyaws.com
@@ -5106,6 +5136,7 @@ iam-plink-test-albo.qa-platform.grammarlyaws.com
 iam-plink-test-asg.qa-platform.grammarlyaws.com
 iam-plink-test-asgg.qa-platform.grammarlyaws.com
 ibm.com.grammarly.com
+id.acme.superhuman.com
 id.grammarly.com
 id.superhuman.com
 identity-admin-preprod.auth-prod.grammarlyaws.com
@@ -5238,6 +5269,7 @@ january.grammarlyaws.com
 jenkins.ai-editor.femetrics.grammarly.io
 jenkins.f-log-at.grammarly.io
 jenkins.grammarly.com
+jenkins.grammarlyaws.com
 jenkinsm.grammarly.com
 jf68o4d501.grammarly.com
 jim-01.grammarly.io
@@ -5713,6 +5745,7 @@ nlp-researchq.grammarlyaws.com
 nlplab.grammarly.io
 node.coda.io
 node.denali-fb.grammarly.com
+nomos.private.acme.superhuman.com
 northamerica.grammarly.com
 notetaker-edge.prod-data-plane.grammarlyaws.com
 notetaker.femetrics.grammarly.io
@@ -5912,6 +5945,7 @@ parent.packs-auth.adhoc.coda.io
 parentk.packs-auth.adhoc.coda.io
 partner.denali-fb.grammarly.com
 partners.grammarly.com
+partnersu.grammarly.com
 pass.denali-fb.grammarly.com
 pass.grammarlyaws.com
 passpages3v.grammarly.com
@@ -6077,6 +6111,7 @@ preprod-facade-int-db-cluster.grammarlyaws.com
 preprod-facade-int-private.acquisition.grammarlyaws.com
 preprod-facade-int-private.grammarlyaws.com
 preprod-facade-int-private.preprod-acquisition-web.grammarlyaws.com
+preprod-facade-int.grammarlyaws.com
 preprod-facade-int.private.acquisition.grammarlyaws.com
 preprod-facade-private.preprod-acquisition-web.grammarlyaws.com
 preprod-facade-server.acquisition.grammarlyaws.com
@@ -6133,6 +6168,7 @@ preprod-knowledge-hub.grammarlyaws.com
 preprod-lms-service.grammarlyaws.com
 preprod-lms-service.preprod-lms-service.grammarlyaws.com
 preprod-login-extra.preprod-auth.grammarlyaws.com
+preprod-login-extrao.preprod-auth.grammarlyaws.com
 preprod-login.grammarlyaws.com
 preprod-login.preprod-auth.grammarlyaws.com
 preprod-loginw.preprod-auth.grammarlyaws.com
@@ -6171,6 +6207,7 @@ preprod-payments-private-api.preprod-billing.grammarlyaws.com
 preprod-payments-private.preprod-billing.grammarlyaws.com
 preprod-payments-webhooks.preprod-billing.grammarlyaws.com
 preprod-pmt-grpctest.grammarlyaws.com
+preprod-pmt-grpcui.grammarlyaws.com
 preprod-pp-proxy-backend-proto.preprod-core.grammarlyaws.com
 preprod-preprod-db-cluster.grammarlyaws.com
 preprod-privacy.grammarlyaws.com
@@ -6330,6 +6367,7 @@ privateg.qa-ekms.grammarlyaws.com
 privatei.prod-odml.grammarlyaws.com
 privatek.proofit.grammarly.io
 privatem.preprod-watchtower.grammarlyaws.com
+privatew.qa-proofit.grammarlyaws.com
 privatew.qa-watchtower.grammarlyaws.com
 privatew.subscription.grammarlyaws.com
 privv2.grammarly.com
@@ -6359,6 +6397,7 @@ prod-clang-toolkiti.grammarlyaws.com
 prod-client-platform.grammarlyaws.com
 prod-cloud-bridge-gate.core-prod.grammarlyaws.com
 prod-cloud-bridge-gate.grammarlyaws.com
+prod-cloud-ke-ingest.grammarlyaws.com
 prod-cloud-ke-ingesty.grammarlyaws.com
 prod-cloud-ke.grammarlyaws.com
 prod-cloud-kew.grammarlyaws.com
@@ -6565,6 +6604,7 @@ prod-hackermango-releases.prod-platform-plane.grammarlyaws.com
 prod-hackermango-testbank.prod-hackermango.grammarlyaws.com
 prod-hackermango.grammarlyaws.com
 prod-hwr-service.prod-hwr.grammarlyaws.com
+prod-hwr.grammarlyaws.com
 prod-institution-private.acquisition.grammarlyaws.com
 prod-institution-privateu.acquisition.grammarlyaws.com
 prod-institution-ui.acquisition.grammarlyaws.com
@@ -6642,11 +6682,13 @@ prod-red-valleya.grammarlyaws.com
 prod-red-zone-proxy.grammarlyaws.com
 prod-red-zone-proxyw.grammarlyaws.com
 prod-redirect-admin.acquisition.grammarlyaws.com
+prod-redirect-admin.grammarlyaws.com
 prod-redirect-internal.acquisition.grammarlyaws.com
 prod-redirect-internal.grammarlyaws.com
 prod-redirect.acquisition.grammarlyaws.com
 prod-redirect.grammarlyaws.com
 prod-redwall.grammarlyaws.com
+prod-redwalli.grammarlyaws.com
 prod-sales.grammarlyaws.com
 prod-salesk.grammarlyaws.com
 prod-salomon-lab.prod-platform-plane.grammarlyaws.com
@@ -6807,6 +6849,7 @@ qa-analytics-db.db.qa-analytics.grammarlyaws.com
 qa-analytics.grammarlyaws.com
 qa-analyticse.grammarlyaws.com
 qa-android.grammarlyaws.com
+qa-androidw.grammarlyaws.com
 qa-anniversary-swag-store.grammarlyaws.com
 qa-anniversary-swag-storem.grammarlyaws.com
 qa-artifactory.artifactory.qa-platform.grammarlyaws.com
@@ -6827,6 +6870,7 @@ qa-billing-api.qa-billing.grammarlyaws.com
 qa-billing-api.subscription.grammarlyaws.com
 qa-billing-apik.subscription.grammarlyaws.com
 qa-billing-apiw.qa-billing.grammarlyaws.com
+qa-billing-db-cluster.grammarlyaws.com
 qa-billing-db.grammarlyaws.com
 qa-billing-db.subscription.grammarlyaws.com
 qa-billing-dbo.subscription.grammarlyaws.com
@@ -6844,6 +6888,7 @@ qa-billing.qa-billing.grammarlyaws.com
 qa-billing.subscription.grammarlyaws.com
 qa-brand-tones.grammarlyaws.com
 qa-brand-tonesg.grammarlyaws.com
+qa-casa-bonita-gp-gateway.qa-prodsec.grammarlyaws.com
 qa-casa-bonita-gp-julie.qa-prodsec.grammarlyaws.com
 qa-casa-bonita-gp-molly.qa-prodsec.grammarlyaws.com
 qa-casa-bonita-gp.qa-prodsec.grammarlyaws.com
@@ -6899,6 +6944,7 @@ qa-demo-editor.acquisition.grammarlyaws.com
 qa-demo-editorm.acquisition.grammarlyaws.com
 qa-demo-golang-ecs.qa-platform.grammarlyaws.com
 qa-demo-golang-ecsq.qa-platform.grammarlyaws.com
+qa-demo-java-akiryiak.grammarlyaws.com
 qa-demo-java-akiryiak.qa-platform.grammarlyaws.com
 qa-denali-plugins-extra.qa-hackweek-2023.grammarlyaws.com
 qa-denali-plugins-n-blue-extra.qa-hackweek-2023.grammarlyaws.com
@@ -6940,6 +6986,7 @@ qa-experimentk.data.grammarlyaws.com
 qa-experimentm.acquisition.grammarlyaws.com
 qa-facade-int-db-cluster.grammarlyaws.com
 qa-facade-int-private.acquisition.grammarlyaws.com
+qa-facade-int-private.grammarlyaws.com
 qa-facade-int-private.qa-acquisition-web.grammarlyaws.com
 qa-facade-int.grammarlyaws.com
 qa-facade-int.private.acquisition.grammarlyaws.com
@@ -6987,6 +7034,7 @@ qa-gitlab-settings-enforcer.qa-platform.grammarlyaws.com
 qa-gitlab.platform.grammarlyaws.com
 qa-gitlabc.platform.grammarlyaws.com
 qa-gitopser.qa-platform.grammarlyaws.com
+qa-go-test-maryna.grammarlyaws.com
 qa-go-test-maryna.sandbox.grammarlyaws.com
 qa-go-test-marynao.sandbox.grammarlyaws.com
 qa-golden-demo.grammarlyaws.com
@@ -7127,6 +7175,7 @@ qa-my-demo-repoo.qa-hackweek-2023.grammarlyaws.com
 qa-my-hackweek-project.qa-hackweek-2023.grammarlyaws.com
 qa-new-hackweek-project.qa-hackweek-2023.grammarlyaws.com
 qa-nlp-processing.grammarlyaws.com
+qa-nlp-processingk.grammarlyaws.com
 qa-nomos.qa-institution.grammarlyaws.com
 qa-officeaddin.grammarlyaws.com
 qa-on-call-bot-cron.qa-platform.grammarlyaws.com
@@ -7304,10 +7353,12 @@ qa-uphookhub.qa-uphookhub.grammarlyaws.com
 qa-verifi-integration-private.qa-disputes.grammarlyaws.com
 qa-vox.grammarlyaws.com
 qa-vpc.grammarlyaws.com
+qa-watchtower.grammarlyaws.com
 qa-webserver.grammarlyaws.com
 qa-webserver.sandbox.grammarlyaws.com
 qa-webservere.sandbox.grammarlyaws.com
 qa-workspaces.grammarlyaws.com
+qa-writing-guidelines.grammarlyaws.com
 qa-writing-guidelines.qa-writing-guidelines.grammarlyaws.com
 qa-writing-guidelines9.grammarlyaws.com
 qa-writing-score.grammarlyaws.com
@@ -7684,6 +7735,7 @@ serengeti-private.prod-serengeti.grammarlyaws.com
 serengeti-private.qa-serengeti.grammarlyaws.com
 serengeti-privatey.preprod-serengeti.grammarlyaws.com
 serengeti-privatey.qa-serengeti.grammarlyaws.com
+serengeti.grammarlyaws.com
 server.grammarlyaws.com
 service.denali-fb.grammarly.com
 service.grammarly.io
@@ -7791,6 +7843,7 @@ speak.qa-speakerly.grammarlyaws.com
 speaka.prod-speakerly.grammarlyaws.com
 speaka.qa-speakerly.grammarlyaws.com
 speake.grammarly.com
+speakerly.grammarlyaws.com
 speakerly.qa-speakerly.grammarlyaws.com
 specs.grammarlyaws.com
 spellcheck-elb.grammarly.com
@@ -7949,6 +8002,7 @@ support.grammarly.com
 support.grammarly.io
 support.qa-subscription.grammarlyaws.com
 support.subscription.grammarlyaws.com
+support@grammarly.com
 supporte.grammarly.com
 supportg.grammarly.io
 svn01.grammarly.io
@@ -8022,6 +8076,7 @@ tokensc.grammarly.com
 toolbar.adhoc.coda.io
 toolbar.fetcher.adhoc.coda.io
 toolbara.fetcher.adhoc.coda.io
+toolkit.grammarlyaws.com
 topology-b.qa-security-testing.grammarlyaws.com
 torii-private.grammarly.com
 torii-privates.grammarly.com
@@ -8113,6 +8168,7 @@ us-east-1.bixby.qa-data-ingestion.grammarlyaws.com
 us-east-1.vpce.grammarly.com
 us-west-2.bixby-internal.prod-data-ingestion.grammarlyaws.com
 us-west-2.bixby.prod-data-ingestion.grammarlyaws.com
+us-west-2.grammarlyaws.com
 us-west-2.internal.coda.io
 us-west-2.prod-data-ingestion.grammarlyaws.com
 us-west-2q.internal.coda.io
@@ -8239,6 +8295,7 @@ voxc.core-prod.grammarlyaws.com
 voxq.qa-vox.grammarlyaws.com
 voxw.prod-vox.grammarlyaws.com
 voxy.preprod-vox.grammarlyaws.com
+vpc.grammarlyaws.com
 vpce-datacat-auth-regular.nlp-processing.grammarlyaws.com
 vpce-datacat-auth-regular.qa-nlp-processing.grammarlyaws.com
 vpce-datacat-red.preprod-nlp-processing.grammarlyaws.com
@@ -8396,6 +8453,7 @@ wcdn.fetcher.adhoc.coda.io
 wcdn1.adhoc.coda.io
 wcdne.docservice.adhoc.coda.io
 wcdnq.fetcher.adhoc.coda.io
+wcpibj.grammarlyaws.com
 wcprdtesmwac01.grammarly.io
 wcqa-temp.grammarlyaws.com
 wcuk4epa.grammarly.io
@@ -8407,6 +8465,7 @@ weaccess-cn02.grammarlyaws.com
 weaknessisourpower.dapi.grammarly.com
 web-21.grammarlyaws.com
 web-acc.grammarlyaws.com
+web-desarrollo.grammarlyaws.com
 web.ai-editor.femetrics.grammarly.io
 web.app.grammarly.com
 web.capi.grammarly.com
@@ -8523,6 +8582,7 @@ www.3fa7fe2.assets.preprod-design-system.grammarlyaws.com
 www.65bdbdc.assets.preprod-design-system.grammarlyaws.com
 www.7cfbc00.assets.preprod-design-system.grammarlyaws.com
 www.83c64d8.assets.preprod-design-system.grammarlyaws.com
+www.93dd71a.assets.preprod-design-system.grammarlyaws.com
 www.a735f07.assets.preprod-design-system.grammarlyaws.com
 www.access-manager.private.grammarly.com
 www.account-internal.grammarly.io
@@ -8556,6 +8616,7 @@ www.antiviruspre1747277.cave17457.artifactory.grammarly.io
 www.antiviruspre1747277.dmail1043hallelujahfm.artifactory.grammarly.io
 www.antiviruspre1747277.wb1046487796.artifactory.grammarly.io
 www.antiviruspre1747277bf-1041.artifactory.grammarly.io
+www.antiviruspre1747277ftp2004231.artifactory.grammarly.io
 www.antiviruspre1747277reshaquariumprertifactory-public.artifactory.grammarly.io
 www.antiviruspre1747277yk041jackfm.artifactory.grammarly.io
 www.antiviruspre5-850-6aagx18-cadde.artifactory.grammarly.io
@@ -8660,6 +8721,7 @@ www.download-windows.grammarly.com
 www.download.superhuman.com
 www.dox-private.core-prod.grammarlyaws.com
 www.dox-private.grammarly.com
+www.dox.core-prod.grammarlyaws.com
 www.dox.grammarly.com
 www.ed.grammarly.com
 www.emojis.superhuman.com
@@ -8821,6 +8883,7 @@ www.properties.preprod-experimentation.grammarlyaws.com
 www.properties.prod-experimentation.grammarlyaws.com
 www.properties.qa-experimentation.grammarlyaws.com
 www.public-static.it.grammarly.io
+www.q2cvgvu1r1-1-1365.artifactory.grammarly.io
 www.qa-anniversary-swag-store.grammarlyaws.com
 www.qa-cortex-glean-connector.qa-platform.grammarlyaws.com
 www.qa-facade-server.acquisition.grammarlyaws.com
@@ -8855,6 +8918,7 @@ www.sentinel.grammarly.com
 www.sentinel.private.grammarly.com
 www.site.adhoc.coda.io
 www.speak.prod-speakerly.grammarlyaws.com
+www.speak.qa-speakerly.grammarlyaws.com
 www.sso.grammarly.com
 www.sso.private.grammarly.com
 www.staging.coda.io
@@ -8967,3 +9031,4 @@ zoommarlye.qa-core.grammarlyaws.com
 zoommarlyi.core-prod.grammarlyaws.com
 zoommarlyo.private.qa-core.grammarlyaws.com
 zpa-vm-adfs.grammarly.io
+zt.grammarlyaws.com

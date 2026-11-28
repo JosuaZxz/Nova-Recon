@@ -7,7 +7,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-23 12:51:25 UTC"
+  "last_checked": "2026-11-28 06:37:36 UTC"
  },
  "alight.hypr.com": {
   "url": "https://alight.hypr.com/",
@@ -17,6 +17,26 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-23 12:51:25 UTC"
+  "last_checked": "2026-11-28 06:37:36 UTC"
+ },
+ "sparknet.hypr.com": {
+  "url": "https://sparknet.hypr.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://sparknet.hypr.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:37:36 UTC"
+ },
+ "heartland-test.hypr.com": {
+  "url": "https://heartland-test.hypr.com/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://heartland-test.hypr.com/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:37:36 UTC"
  }
 }

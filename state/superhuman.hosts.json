@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "github-webhook.aspect-workflows.grammarly.io": {
   "url": "https://github-webhook.aspect-workflows.grammarly.io/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "qa-payments-webhooks.qa-billing.grammarlyaws.com": {
   "url": "https://qa-payments-webhooks.qa-billing.grammarlyaws.com/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "datareport.prod-gdpr-export.grammarlyaws.com": {
   "url": "https://datareport.prod-gdpr-export.grammarlyaws.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "origin.staging.coda.io": {
   "url": "https://origin.staging.coda.io/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "iosapp-beta.grammarly.com": {
   "url": "https://iosapp-beta.grammarly.com/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": true,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "admin.head.coda.io": {
   "url": "https://admin.head.coda.io/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
  },
  "config-qa.extension.grammarly.com": {
   "url": "https://config-qa.extension.grammarly.com/",
@@ -78,6 +78,86 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-23 14:43:13 UTC"
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "preferences.superhuman.com": {
+  "url": "https://preferences.superhuman.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://superhuman.com/mail/preferences",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "qa-billing-events.qa-billing.grammarlyaws.com": {
+  "url": "https://qa-billing-events.qa-billing.grammarlyaws.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "resume-builder.prod-we-sandbox.grammarlyaws.com": {
+  "url": "https://resume-builder.prod-we-sandbox.grammarlyaws.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "api.payments.grammarly.com": {
+  "url": "https://api.payments.grammarly.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "portal.superhuman.com": {
+  "url": "https://portal.superhuman.com/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://www.notion.so/superhuman/portal-superhuman-com-050aa522c30f4b1d9cccc2ce04caba00",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "event-manager.platform.grammarlyaws.com": {
+  "url": "https://event-manager.platform.grammarlyaws.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "applet-bundles.qa-client-platform.grammarlyaws.com": {
+  "url": "https://applet-bundles.qa-client-platform.grammarlyaws.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
+ },
+ "applet-bundles.prod-partner-platform.grammarlyaws.com": {
+  "url": "https://applet-bundles.prod-partner-platform.grammarlyaws.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:42:10 UTC"
  }
 }

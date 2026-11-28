@@ -4,209 +4,288 @@
   "sha256": "1c1b58c11dde36fde957",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:25:54 UTC"
+  "updated": "2026-11-28 07:01:22 UTC"
  },
  "https://support.mgm.mo/content/portal.js": {
   "last_url": "https://support.mgm.mo/content/portal.js",
   "sha256": "55c164f38ae165e92ece",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:25:55 UTC"
+  "updated": "2026-11-28 07:01:23 UTC"
  },
  "https://essprint.mgm.mo/static/js/main.HASH.js": {
   "last_url": "https://essprint.mgm.mo/static/js/main.6434eca4.js",
-  "sha256": "67ab21be9a28943047af",
+  "sha256": "e74c777b58e84fda83fe",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:25:58 UTC"
+  "updated": "2026-11-28 07:01:26 UTC"
  },
  "https://roster.mgm.mo/public/include/js/common.js": {
   "last_url": "https://roster.mgm.mo/public/include/js/common.js",
   "sha256": "20c1ea7795d7aa5f539b",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:00 UTC"
+  "updated": "2026-11-28 07:01:28 UTC"
  },
  "https://roster.mgm.mo/public/include/js/u_plugin.js": {
   "last_url": "https://roster.mgm.mo/public/include/js/u_plugin.js",
   "sha256": "827e5746a19ee37010e7",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:04 UTC"
+  "updated": "2026-11-28 07:01:30 UTC"
  },
  "https://box.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js": {
   "last_url": "https://box.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js",
   "sha256": "b8d4c55484dfeaa9f7c4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:44 UTC"
+  "updated": "2026-11-28 07:02:13 UTC"
  },
  "https://lmg.mgm.mo/static/js/main.HASH.js": {
   "last_url": "https://lmg.mgm.mo/static/js/main.b57de812.js",
   "sha256": "62d1f07cbe456b2fd9e5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:10 UTC"
+  "updated": "2026-11-28 07:01:35 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/webpack-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/webpack-cd9c2aec9e2f0e34.js",
   "sha256": "699b3504628bf5ccc694",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:11 UTC"
+  "updated": "2026-11-28 07:01:36 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/4bd1b696-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/4bd1b696-e356ca5ba0218e27.js",
   "sha256": "7ff5b8537a37e131618d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:13 UTC"
+  "updated": "2026-11-28 07:01:38 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/3794-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/3794-907785a527d8128b.js",
   "sha256": "a856a3d676eed80db5c5",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:15 UTC"
+  "updated": "2026-11-28 07:01:40 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/main-app-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/main-app-dd34b0e775cca20f.js",
   "sha256": "699a03a2007d82b8fad3",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:16 UTC"
+  "updated": "2026-11-28 07:01:41 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/app/layout-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/app/layout-15c958276f10c79c.js",
   "sha256": "ceaf87d51d8ab08a6a81",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:17 UTC"
+  "updated": "2026-11-28 07:01:42 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/1930-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/1930-89e84b4e7e4ffe1c.js",
   "sha256": "539eea3d13006c347775",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:18 UTC"
+  "updated": "2026-11-28 07:01:43 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/6558-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/6558-bcba60214c0d682b.js",
   "sha256": "3cff6cb2d8ebebb28baf",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:19 UTC"
+  "updated": "2026-11-28 07:01:44 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/7123-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/7123-9ede03697742ed19.js",
   "sha256": "6a7803a6c91264b85661",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:21 UTC"
+  "updated": "2026-11-28 07:01:45 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/1936-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/1936-07a6bf9864433e1b.js",
   "sha256": "4a04f1a3968f9fb60ba2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:22 UTC"
+  "updated": "2026-11-28 07:01:46 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/6259-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/6259-547d1aa9e3338e5e.js",
   "sha256": "7036a2e895d2869d7ba4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:24 UTC"
+  "updated": "2026-11-28 07:01:47 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/3635-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/3635-13bc6518567e2fca.js",
   "sha256": "f5f3c87488c02afdbb1d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:25 UTC"
+  "updated": "2026-11-28 07:01:49 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/1238-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/1238-c91c156fd7bc0f4d.js",
   "sha256": "c679698cb35cd80be026",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:26 UTC"
+  "updated": "2026-11-28 07:01:50 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/4901-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/4901-ff9afbcdb89b6a90.js",
   "sha256": "a6eae59f0fe2de0999ef",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:27 UTC"
+  "updated": "2026-11-28 07:01:51 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/9015-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/9015-a4375d3131c3609b.js",
   "sha256": "d7d11d352130b1a9874e",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:28 UTC"
+  "updated": "2026-11-28 07:01:52 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/8287-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/8287-f0c79b73dd2810e6.js",
   "sha256": "c2b01332cb53866108e8",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:29 UTC"
+  "updated": "2026-11-28 07:01:53 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/layout-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/layout-d5c6b6e350ad9ce0.js",
   "sha256": "4d54fdd9ba462762861f",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:30 UTC"
+  "updated": "2026-11-28 07:01:54 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/3459-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/3459-75719a9f328671a7.js",
   "sha256": "5bf34168f021d5c91896",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:33 UTC"
+  "updated": "2026-11-28 07:01:55 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/3473-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/3473-97d18c076adad8d2.js",
   "sha256": "29bc2e353d87466cbb5c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:34 UTC"
+  "updated": "2026-11-28 07:01:56 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/3716-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/3716-126db6266848e8be.js",
   "sha256": "c7eb017b3bc1e63d8712",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:35 UTC"
+  "updated": "2026-11-28 07:01:57 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/9436-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/9436-4f49efc59f677592.js",
   "sha256": "b3a41712d75af8114752",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:37 UTC"
+  "updated": "2026-11-28 07:01:58 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/%5B%5B...slugs%5D%5D/page-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/(default)/%5B%5B...slugs%5D%5D/page-9fa9b366eae48903.js",
   "sha256": "91d6af0663a53370552a",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:38 UTC"
+  "updated": "2026-11-28 07:01:59 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/6609-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/6609-078a8cdc853f87c6.js",
   "sha256": "bc82aec4c22ce9660e75",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:40 UTC"
+  "updated": "2026-11-28 07:02:00 UTC"
  },
  "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/layout-HASH.js": {
   "last_url": "https://www.mgm.mo/_next/static/chunks/app/%5Blocale%5D/layout-bf6e16a2875b4437.js",
   "sha256": "35101d37c48eb3d1eb56",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 10:26:41 UTC"
+  "updated": "2026-11-28 07:02:01 UTC"
+ },
+ "https://booking.mgm.mo/umi.HASH.js": {
+  "last_url": "https://booking.mgm.mo/umi.d5e5631a.js",
+  "sha256": "08699754407f898c84c0",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:13 UTC"
+ },
+ "https://macau2049.mgm.mo/_next/static/chunks/webpack-HASH.js": {
+  "last_url": "https://macau2049.mgm.mo/_next/static/chunks/webpack-b623a12fcac73669.js",
+  "sha256": "6f4994df040bb9221648",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:03 UTC"
+ },
+ "https://macau2049.mgm.mo/_next/static/chunks/4bd1b696-HASH.js": {
+  "last_url": "https://macau2049.mgm.mo/_next/static/chunks/4bd1b696-f82fe462562149b6.js",
+  "sha256": "37241cd3183b7a3ec7a3",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:04 UTC"
+ },
+ "https://macau2049.mgm.mo/_next/static/chunks/684-HASH.js": {
+  "last_url": "https://macau2049.mgm.mo/_next/static/chunks/684-a019c84c3bbe3f20.js",
+  "sha256": "878eb9b7c9af5da7cb1e",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:06 UTC"
+ },
+ "https://macau2049.mgm.mo/_next/static/chunks/main-app-HASH.js": {
+  "last_url": "https://macau2049.mgm.mo/_next/static/chunks/main-app-0c27fd738a33261a.js",
+  "sha256": "c3734120c93f0f157ed7",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:07 UTC"
+ },
+ "https://museum.mgm.mo/asset/js/_lib/jsencrypt.min.js": {
+  "last_url": "https://museum.mgm.mo/asset/js/_lib/jsencrypt.min.js?t=1768885055",
+  "sha256": "9a83909cb8e36dc0d01d",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:08 UTC"
+ },
+ "https://museum.mgm.mo/asset/js/common.min.js": {
+  "last_url": "https://museum.mgm.mo/asset/js/common.min.js?t=1772180190",
+  "sha256": "dffd3cc9eec2f32eebd5",
+  "routes": [
+   "/api/form/public_key"
+  ],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:09 UTC"
+ },
+ "https://agents.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js": {
+  "last_url": "https://agents.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js",
+  "sha256": "b8d4c55484dfeaa9f7c4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:14 UTC"
+ },
+ "https://superset.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js": {
+  "last_url": "https://superset.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js",
+  "sha256": "b8d4c55484dfeaa9f7c4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:14 UTC"
+ },
+ "https://www.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js": {
+  "last_url": "https://www.tickets.mgm.mo/kramericaindustries.ac_v2.lib.js",
+  "sha256": "b8d4c55484dfeaa9f7c4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:15 UTC"
+ },
+ "https://tickets.mgm.mo/kramericaindustries.ac_v2.lib.js": {
+  "last_url": "https://tickets.mgm.mo/kramericaindustries.ac_v2.lib.js",
+  "sha256": "b8d4c55484dfeaa9f7c4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 07:02:15 UTC"
  }
 }

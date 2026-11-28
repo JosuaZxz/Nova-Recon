@@ -8,7 +8,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "client-beta.global.chalet.8x8.com": {
   "url": "https://client-beta.global.chalet.8x8.com/",
@@ -18,7 +18,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.us3.pvp.packet8.net": {
   "url": "https://v8.us3.pvp.packet8.net/",
@@ -28,7 +28,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "files.test.chalet.8x8.com": {
   "url": "https://files.test.chalet.8x8.com/",
@@ -38,7 +38,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "api.global.chalet.8x8.com": {
   "url": "https://api.global.chalet.8x8.com/",
@@ -48,7 +48,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8-debu.us3.staging.pvp.packet8.net": {
   "url": "https://v8-debu.us3.staging.pvp.packet8.net/",
@@ -58,7 +58,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "api.uk.chalet.8x8.com": {
   "url": "https://api.uk.chalet.8x8.com/",
@@ -68,7 +68,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.sg2.pvp.packet8.net": {
   "url": "https://v8.sg2.pvp.packet8.net/",
@@ -78,7 +78,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.us4.pvp.packet8.net": {
   "url": "https://v8.us4.pvp.packet8.net/",
@@ -88,7 +88,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "wavefront-prometheus-ec2-dev.platformdevops.8x8cloud.net": {
   "url": "https://wavefront-prometheus-ec2-dev.platformdevops.8x8cloud.net/",
@@ -98,17 +98,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "wiki.platformdevops.8x8cloud.net": {
   "url": "https://wiki.platformdevops.8x8cloud.net/",
   "http_status": 302,
   "title": "302 Found",
-  "redirect": "https://github.com/pages/auth?nonce=8f28e1b9-98b5-4b15-8605-d29fd8d93080&page_id=36936485&path=Lw",
+  "redirect": "https://github.com/pages/auth?nonce=e82a28f3-f26c-4b6a-8ae5-8066c7d54729&page_id=36936485&path=Lw",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "gate-beta-acc-services-env-a-accbeta1iad-us-ashburn-1.analytics-staging.oci.infra8.8x8cloud.net": {
   "url": "https://gate-beta-acc-services-env-a-accbeta1iad-us-ashburn-1.analytics-staging.oci.infra8.8x8cloud.net/",
@@ -118,7 +118,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.uk4.pvp.packet8.net": {
   "url": "https://v8.uk4.pvp.packet8.net/",
@@ -128,17 +128,17 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "cloud8.devrel.8x8cloud.net": {
   "url": "https://cloud8.devrel.8x8cloud.net/",
   "http_status": 302,
   "title": "302 Found",
-  "redirect": "https://github.com/pages/auth?nonce=5b17052a-31c8-4cef-8d6a-87570ff58efd&page_id=43457406&path=Lw",
+  "redirect": "https://github.com/pages/auth?nonce=9df3217d-2dc4-4d38-af5d-e8942d3cce5f&page_id=43457406&path=Lw",
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.au4.pvp.packet8.net": {
   "url": "https://v8.au4.pvp.packet8.net/",
@@ -148,7 +148,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.sy2.pvp.packet8.net": {
   "url": "https://v8.sy2.pvp.packet8.net/",
@@ -158,7 +158,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "cceb-api.uk.chalet.8x8.com": {
   "url": "https://cceb-api.uk.chalet.8x8.com/",
@@ -168,7 +168,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "v8.stg1.staging.pvp.packet8.net": {
   "url": "https://v8.stg1.staging.pvp.packet8.net/",
@@ -178,7 +178,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "files.staging.chalet.8x8.com": {
   "url": "https://files.staging.chalet.8x8.com/",
@@ -188,7 +188,7 @@
   "scripts": [],
   "catchall": false,
   "interesting": true,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
  },
  "platform-fe-p01-iad.o11y-prod.oci.infra8.8x8cloud.net": {
   "url": "https://platform-fe-p01-iad.o11y-prod.oci.infra8.8x8cloud.net/",
@@ -198,6 +198,66 @@
   "scripts": [],
   "catchall": false,
   "interesting": false,
-  "last_checked": "2026-11-27 10:10:54 UTC"
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "socmate-sitrep.8x8cloud.net": {
+  "url": "https://socmate-sitrep.8x8cloud.net/",
+  "http_status": 302,
+  "title": "302 Found",
+  "redirect": "https://github.com/pages/auth?nonce=a7652b98-5586-4b8c-bc13-63cd196bb9f2&page_id=86273408&path=Lw",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "files.us-east.chalet.8x8.com": {
+  "url": "https://files.us-east.chalet.8x8.com/",
+  "http_status": 404,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "files-cdn.us-east.chalet.8x8.com": {
+  "url": "https://files-cdn.us-east.chalet.8x8.com/",
+  "http_status": 403,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "gateway-acc-services-env-a-s01-ap-sydney-1.analytics-production.oci.infra8.8x8cloud.net": {
+  "url": "https://gateway-acc-services-env-a-s01-ap-sydney-1.analytics-production.oci.infra8.8x8cloud.net/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "pubtools.private.8x8cloud.net": {
+  "url": "https://pubtools.private.8x8cloud.net/",
+  "http_status": 302,
+  "title": "",
+  "redirect": "https://pubtools.private.8x8cloud.net/login",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
+ },
+ "gateway-acc-services-env-a-s01-us-phoenix-1.analytics-production.oci.infra8.8x8cloud.net": {
+  "url": "https://gateway-acc-services-env-a-s01-us-phoenix-1.analytics-production.oci.infra8.8x8cloud.net/",
+  "http_status": 401,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": false,
+  "last_checked": "2026-11-28 06:53:59 UTC"
  }
 }

@@ -1,0 +1,23 @@
+{
+ "_seeded": true,
+ "beta.bot.semrush.com": {
+  "url": "http://beta.bot.semrush.com/",
+  "http_status": 301,
+  "title": "",
+  "redirect": "https://www.semrush.com:443/",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:44:46 UTC"
+ },
+ "da.publicapi.semrush.com": {
+  "url": "https://da.publicapi.semrush.com/",
+  "http_status": 200,
+  "title": "",
+  "redirect": "",
+  "scripts": [],
+  "catchall": false,
+  "interesting": true,
+  "last_checked": "2026-11-28 06:44:46 UTC"
+ }
+}

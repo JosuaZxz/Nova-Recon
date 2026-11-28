@@ -5,6 +5,7 @@
 1.packet8.net
 11-ipamk.staging.sjc01.us-west.8x8cloud.net
 112.8x8cloud.net
+118.ip.packet8.net
 1185.diag.packet8.net
 1185.lssbc.packet8.net
 1185.outlvl1-l3-sjo.packet8.net
@@ -18,6 +19,7 @@
 1215.lssbc.packet8.net
 1215.outlvl1-l3-sjo.packet8.net
 1219.mediaswitch15-eqix-sjo.packet8.net
+121a.ip.packet8.net
 121a.ntp-eqix-sjo.packet8.net
 121k.store1.packet8.net
 122.8x8cloud.net
@@ -298,6 +300,7 @@
 1928417129.packet8.net
 192841713.packet8.net
 1928417130.packet8.net
+1928417131.packet8.net
 1928417132.packet8.net
 1928417133.packet8.net
 1928417134.packet8.net
@@ -320,26 +323,33 @@
 1928417151.packet8.net
 1928417152.packet8.net
 1928417153.packet8.net
+1928417154.packet8.net
 1928417155.packet8.net
 1928417156.packet8.net
+1928417157.packet8.net
 1928417158.packet8.net
 1928417159.packet8.net
 192841716.packet8.net
 1928417160.packet8.net
+1928417162.packet8.net
 1928417165.packet8.net
 1928417166.packet8.net
+1928417167.packet8.net
 1928417168.packet8.net
 1928417169.packet8.net
+1928417170.packet8.net
 1928417171.packet8.net
 1928417172.packet8.net
 1928417173.packet8.net
 1928417174.packet8.net
+1928417175.packet8.net
 1928417176.packet8.net
 1928417178.packet8.net
 1928417179.packet8.net
 192841718.packet8.net
 1928417180.packet8.net
 1928417181.packet8.net
+1928417182.packet8.net
 1928417183.packet8.net
 1928417184.packet8.net
 1928417185.packet8.net
@@ -350,8 +360,10 @@
 1928417190.packet8.net
 1928417191.packet8.net
 1928417192.packet8.net
+1928417193.packet8.net
 1928417194.packet8.net
 1928417195.packet8.net
+1928417197.packet8.net
 1928417198.packet8.net
 1928417199.packet8.net
 19284172.packet8.net
@@ -384,12 +396,15 @@
 1928417226.packet8.net
 1928417227.packet8.net
 1928417228.packet8.net
+1928417229.packet8.net
+192841723.packet8.net
 1928417230.packet8.net
 1928417232.packet8.net
 1928417233.packet8.net
 1928417234.packet8.net
 1928417236.packet8.net
 1928417238.packet8.net
+1928417239.packet8.net
 192841724.packet8.net
 1928417240.packet8.net
 1928417242.packet8.net
@@ -413,14 +428,17 @@
 192841730.packet8.net
 192841732.packet8.net
 192841733.packet8.net
+192841734.packet8.net
 192841736.packet8.net
 192841737.packet8.net
 192841738.packet8.net
+192841739.packet8.net
 19284174.packet8.net
 192841740.packet8.net
 192841741.packet8.net
 192841743.packet8.net
 192841744.packet8.net
+192841745.packet8.net
 192841748.packet8.net
 192841749.packet8.net
 19284175.packet8.net
@@ -430,6 +448,7 @@
 192841753.packet8.net
 192841754.packet8.net
 192841756.packet8.net
+192841757.packet8.net
 192841758.packet8.net
 192841759.packet8.net
 192841760.packet8.net
@@ -439,6 +458,7 @@
 192841765.packet8.net
 192841766.packet8.net
 192841767.packet8.net
+192841768.packet8.net
 192841769.packet8.net
 19284177.packet8.net
 192841770.packet8.net
@@ -451,6 +471,7 @@
 192841779.packet8.net
 19284178.packet8.net
 192841780.packet8.net
+192841783.packet8.net
 192841784.packet8.net
 192841786.packet8.net
 192841787.packet8.net
@@ -459,11 +480,13 @@
 19284179.packet8.net
 192841790.packet8.net
 192841791.packet8.net
+192841793.packet8.net
 192841794.packet8.net
 192841795.packet8.net
 192841796.packet8.net
 192841797.packet8.net
 192841798.packet8.net
+192841799.packet8.net
 192_84_17_0.packet8.net
 192_84_17_1.packet8.net
 192_84_17_10.packet8.net
@@ -746,8 +769,10 @@
 222o.ns2-vo.packet8.net
 222q.vp.packet8.net
 222u.wiki.platformdevops.8x8cloud.net
+2235.lssbc.packet8.net
 2235.outlvl1-l3-sjo.packet8.net
 223k.store1.packet8.net
+223o.mediaswitch15-eqix-sjo.packet8.net
 227.adsbc-hk1.packet8.net
 227.atlantis-grc-eightxeight.prod.aws.infra8.8x8cloud.net
 227.buycom.packet8.net
@@ -755,6 +780,7 @@
 227.hellodirect.packet8.net
 227.lssbc.packet8.net
 227.mon-stage.svc.8x8cloud.net
+227.p10.packet8.net
 227.p22.packet8.net
 227.p8t.us
 227.p8turna2-dc6.p8t.us
@@ -769,6 +795,7 @@
 2275.mailman3-dc6.packet8.net
 2275.outlvl1-l3-sjo.packet8.net
 2275.stuna1-l3.p8t.us
+2275.tdsystemax.packet8.net
 2277.atlantis-cloudflare.prod.aws.infra8.8x8cloud.net
 2277.cpemgr.packet8.net
 2277.ivr04-eq.p8t.us
@@ -797,6 +824,7 @@
 229.mon-stage.svc.8x8cloud.net
 229.oper8.8x8cloud.net
 229.p22.packet8.net
+2295.ipssbc.packet8.net
 2295.ntp-eqix-sjo.packet8.net
 2295.outlvl1-l3-sjo.packet8.net
 2299.gtm101-au.8x8cloud.net
@@ -806,6 +834,7 @@
 229k.ns2-vo.packet8.net
 229k.store1.packet8.net
 229m.gtm102-eq.8x8cloud.net
+229q.vp.packet8.net
 229s.lssbc.packet8.net
 229u.wiki.platformdevops.8x8cloud.net
 2325.lssbc.packet8.net
@@ -815,6 +844,7 @@
 232c.ntp-eqix-sjo.packet8.net
 232k.store1.packet8.net
 232q.vp.packet8.net
+236.atlantis-cloudflare.prod.aws.infra8.8x8cloud.net
 236.atlantis-grc-eightxeight.prod.aws.infra8.8x8cloud.net
 236.mon-stage.svc.8x8cloud.net
 2361.ip.packet8.net
@@ -825,6 +855,7 @@
 236m.gtm102-eq.8x8cloud.net
 236s.lssbc.packet8.net
 236u.wiki.platformdevops.8x8cloud.net
+25.voretail.packet8.net
 2c.ip.packet8.net
 2e.lssbc.packet8.net
 2g8b0i5wklxrt41ug.ntp2.packet8.net
@@ -838,6 +869,7 @@
 33i.store1.packet8.net
 52.p22.packet8.net
 523.lssbc.packet8.net
+527.ntp-eqix-sjo.packet8.net
 52i.store1.packet8.net
 61mta.staging.8x8cloud.net
 7sjc31a-block05.staging.sjc01.us-west.8x8cloud.net
@@ -869,6 +901,7 @@
 8xus-west.sjc11a-block84.staging.sjc01.us-west.8x8cloud.net
 9idm.staging.sjc01.us-west.8x8cloud.net
 a.8x8cloud.net
+a03.top.8x8cloud.net
 a13.top.8x8cloud.net
 a1loghost-sjc01ak.staging.sjc01.us-west.8x8cloud.net
 a23.top.8x8cloud.net
@@ -916,6 +949,7 @@ adsbc.packet8.net
 adsrv.8x8cloud.net
 adsrv5.8x8cloud.net
 adssbc.packet8.net
+adssbc9.packet8.net
 adssbcuk.packet8.net
 advanced.vo.packet8.net
 advancedglobalw.vo.packet8.net
@@ -923,6 +957,7 @@ advancedmedicineo.vo.packet8.net
 adw.lssbc.packet8.net
 affiliates.hostauth.staging.sjc01.us-west.8x8cloud.net
 alambic-origin.packet8.net
+alambic-originu.packet8.net
 alambic.packet8.net
 allied3.vo.packet8.net
 allied4c.vo.packet8.net
@@ -1052,6 +1087,7 @@ br.8x8cloud.net
 broker-dev-local-acc-debug-tools-env-a.us-ashburn-1.analytics-acceptance.oci.infra8.8x8cloud.net
 business.8x8cloud.net
 business.packet8.net
+business5.packet8.net
 businessboston.vo.packet8.net
 businesssolutions6m.vo.packet8.net
 businessw.8x8cloud.net
@@ -1078,6 +1114,7 @@ cc.8x8cloud.net
 cc1.outlvl1-l3-sjo.packet8.net
 cc3.api.8x8cloud.net
 cc9.p22.packet8.net
+cca.ntp-eqix-sjo.packet8.net
 ccc.packet8.net
 cceb-api.uk.chalet.8x8.com
 cceb-docs.chalet.8x8.com
@@ -1115,6 +1152,7 @@ clicktracku.preview.staging.sjc01.us-west.8x8cloud.net
 client-beta.global.chalet.8x8.com
 client-betaa.global.chalet.8x8.com
 client.8x8cloud.net
+client.global.chalet.8x8.com
 client1.8x8cloud.net
 clients.8x8cloud.net
 clients3.8x8cloud.net
@@ -1198,6 +1236,7 @@ coms.cpemgr.packet8.net
 coms.ntp-eqix-sjo.packet8.net
 comunity.packet8.net
 comunityc.packet8.net
+comw.tdsystemax.packet8.net
 concord.vo.packet8.net
 connect.8x8cloud.net
 connect9.8x8cloud.net
@@ -1220,6 +1259,7 @@ corp.store1.packet8.net
 corp.voretail.packet8.net
 corp.vp.packet8.net
 corp.wiki.platformdevops.8x8cloud.net
+corp1.dnd.packet8.net
 corp5.targus1-eqix-sjo.packet8.net
 corp7.outlvl1-l3-sjo.packet8.net
 corp9.ntp-eqix-sjo.packet8.net
@@ -1249,6 +1289,7 @@ cs.store1.packet8.net
 cs1.mon-stage.svc.8x8cloud.net
 cs3.ipssbc.packet8.net
 cs3.ntp-eqix-sjo.packet8.net
+cs3.outlvl1-l3-sjo.packet8.net
 cs9.p22.packet8.net
 csc.atlantis-cloudflare.prod.aws.infra8.8x8cloud.net
 cse.8x8cloud.net
@@ -1257,6 +1298,7 @@ css.wiki.platformdevops.8x8cloud.net
 ctrl.8x8cloud.net
 cursc.mx1.packet8.net
 cusa.packet8.net
+cust-sjc89b-block01sjc51a-block03.staging.sjc01.us-west.8x8cloud.net
 cust-sjc89b-block01sjc53a-block01.staging.sjc01.us-west.8x8cloud.net
 cust-sjc89b-block31sjc51a-block01.staging.sjc01.us-west.8x8cloud.net
 cust.p8t.us
@@ -1303,9 +1345,11 @@ dc3.8x8cloud.net
 dc31.8x8cloud.net
 dcs.8x8cloud.net
 de.8x8cloud.net
+deai.8x8cloud.net
 demo.8x8cloud.net
 demo.atlantis-grc-eightxeight.prod.aws.infra8.8x8cloud.net
 demo.gtm101-au.8x8cloud.net
+demo.ipssbc.packet8.net
 demo.oper8.8x8cloud.net
 demo.p10.packet8.net
 demo.p22.packet8.net
@@ -1319,6 +1363,7 @@ demo7.outlvl1-l3-sjo.packet8.net
 demoa.vp.packet8.net
 democ.lssbc.packet8.net
 demoe.ntp-eqix-sjo.packet8.net
+demoe.switchboard4-eqix-sjo.packet8.net
 demog.atlantis-cloudflare.prod.aws.infra8.8x8cloud.net
 demoi.denver.auth.staging.sjc01.us-west.8x8cloud.net
 demom.gtm101-thw.8x8cloud.net
@@ -1344,6 +1389,7 @@ deva.gtm101-au.8x8cloud.net
 devc.hydra.packet8.net
 devc.switchboard4-eqix-sjo.packet8.net
 deve.p10.packet8.net
+deve.p22.packet8.net
 devel.8x8cloud.net
 devel1.8x8cloud.net
 develop-loghost-sjc46b.staging.sjc01.us-west.8x8cloud.net
@@ -1380,6 +1426,7 @@ dhcp.mediaswitch15-eqix-sjo.packet8.net
 dhcp.p22.packet8.net
 dhcp.voretail.packet8.net
 dhcp5.lssbc.packet8.net
+dhcp7.outlvl1-l3-sjo.packet8.net
 dhcpc.ip.packet8.net
 dhig5.dm.8x8cloud.net
 diag.packet8.net
@@ -1436,11 +1483,13 @@ dsl5.mon-stage.svc.8x8cloud.net
 dsl9.gtm101-au.8x8cloud.net
 dsla.ip.packet8.net
 dsla.lssbc.packet8.net
+dsla.store1.packet8.net
 dsla.switchboard4-eqix-sjo.packet8.net
 dslc.ntp-eqix-sjo.packet8.net
 dslc.switchboard3-eqix-sjo.packet8.net
 dslk.gtm101-thw.8x8cloud.net
 dslm.gtm102-eq.8x8cloud.net
+dslq.vp.packet8.net
 dslu.wiki.platformdevops.8x8cloud.net
 dtm.1loghost-sjc01b.staging.sjc01.us-west.8x8cloud.net
 dungeonsm.test.oci.chalet.8x8.com
@@ -1448,6 +1497,7 @@ dynamicconsultinge.vo.packet8.net
 eaccountings.vo.packet8.net
 ebus-nonprod.aws.infra8.8x8cloud.net
 ec.8x8cloud.net
+ecom5.patchmgmt.staging.sjc01.us-west.8x8cloud.net
 edu.8x8cloud.net
 education.8x8cloud.net
 educations.8x8cloud.net
@@ -1478,6 +1528,7 @@ engg.61mta.staging.8x8cloud.net
 engineering-sjc01bm.staging.sjc01.us-west.8x8cloud.net
 engineering.8x8cloud.net
 engsvc.aws.infra8.8x8cloud.net
+enterprise.vo.packet8.net
 eps1.packet8.net
 eps1a.packet8.net
 es.8x8cloud.net
@@ -1507,6 +1558,7 @@ ezproxy.lib.8x8cloud.net
 ezproxy5.8x8cloud.net
 ezproxye.library.8x8cloud.net
 faas-pilot.8x8cloud.net
+faas-prod.8x8cloud.net
 faas-prodc.8x8cloud.net
 familyk.ipam.staging.sjc01.us-west.8x8cloud.net
 fanbasesolutionse.vo.packet8.net
@@ -1516,6 +1568,7 @@ faxapp01-us1.faas-prod.8x8cloud.net
 faxapp02-eq.vo-fax-prod.8x8cloud.net
 faxapp02-us1.faas-prod.8x8cloud.net
 faxapp02.vo-fax-pilot.8x8cloud.net
+faxapp03-eq.vo-fax-prod.8x8cloud.net
 faxapp03-us1.faas-prod.8x8cloud.net
 faxapp03.vo-fax-pilot.8x8cloud.net
 faxapp04-eq.vo-fax-prod.8x8cloud.net
@@ -1646,6 +1699,7 @@ hostauth.staging.sjc01.us-west.8x8cloud.net
 hostauthc.staging.sjc01.us-west.8x8cloud.net
 hp.8x8cloud.net
 hrefweb.packet8.net
+hrefwebe.packet8.net
 hrefwwwa.packet8.net
 hydra.packet8.net
 idm.prod.sjc01.us-west.8x8cloud.net
@@ -1679,6 +1733,7 @@ ipsbc.packet8.net
 ipsbcuk.packet8.net
 ipssbc.packet8.net
 istiotest.cloud-mgmt.8x8cloud.net
+it.8x8cloud.net
 itcs.8x8cloud.net
 itunes.8x8cloud.net
 ivr04-eq.p8t.us
@@ -1696,6 +1751,7 @@ law.8x8cloud.net
 lib.8x8cloud.net
 library.8x8cloud.net
 linkshare.packet8.net
+linkshare1.packet8.net
 loghost-sjc01a.prod.sjc01.us-west.8x8cloud.net
 loghost-sjc01a.staging.sjc01.us-west.8x8cloud.net
 loghost-sjc01b-secure.staging.sjc01.us-west.8x8cloud.net
@@ -1836,10 +1892,13 @@ ns12.packet8.net
 ns127.packet8.net
 ns2-eqix-sjo.packet8.net
 ns2-l3-sjo.packet8.net
+ns2-l3-sjoe.packet8.net
 ns2-vo.packet8.net
+ns2-voe.packet8.net
 ns2.p8t.us
 ns2.packet8.net
 ns3-vo.packet8.net
+ns3-vo5.packet8.net
 ns3.p8t.us
 ns4-vo.packet8.net
 ns4.p8t.us
@@ -1866,8 +1925,10 @@ oci.chalet.8x8.com
 oci.infra8.8x8cloud.net
 ocio.8x8cloud.net
 octo7-repo.cloud-mgmt.8x8cloud.net
+officedepot.packet8.net
 officemaxe.packet8.net
 okta-aws.cloud-mgmt.8x8cloud.net
+okta-awsy.cloud-mgmt.8x8cloud.net
 onprem.infra8.8x8cloud.net
 onpremw.infra8.8x8cloud.net
 oper8.8x8cloud.net
@@ -1955,6 +2016,7 @@ prod.8x8cloud.net
 prod.aws.infra8.8x8cloud.net
 prod.sjc01.us-west.8x8cloud.net
 prodw.aws.infra8.8x8cloud.net
+promotions.packet8.net
 promotions3.packet8.net
 proxy1-l3-sjo.packet8.net
 proxy2-eqix-sjo.packet8.net
@@ -2028,6 +2090,7 @@ spaf.packet8.net
 spaf9.packet8.net
 spe.8x8cloud.net
 sr.packet8.net
+st1b-dc63.packet8.net
 st2a-eq.packet8.net
 stage.chalet.8x8.com
 stageg.chalet.8x8.com
@@ -2138,6 +2201,7 @@ us-eastk.chalet.8x8.com
 us-west.8x8cloud.net
 us-westk.8x8cloud.net
 usbank-loghost-sjc78a.staging.sjc01.us-west.8x8cloud.net
+userk.packet8.net
 usw2.cloud8-dev.aws.infra8.8x8cloud.net
 v-hostauth.staging.sjc01.us-west.8x8cloud.net
 v.8x8cloud.net
@@ -2233,6 +2297,7 @@ www.192-84-16-89.packet8.net
 www.192-84-16-92.packet8.net
 www.192841711.packet8.net
 www.192841712.packet8.net
+www.192841713.packet8.net
 www.192841714.packet8.net
 www.192841715.packet8.net
 www.192841717.packet8.net
@@ -2255,6 +2320,7 @@ www.8x8cloud.net
 www.aastraconf.packet8.net
 www.acd.packet8.net
 www.activate.packet8.net
+www.admin.packet8.net
 www.analytics-acceptance.oci.infra8.8x8cloud.net
 www.analytics-production.oci.infra8.8x8cloud.net
 www.analytics-staging.oci.infra8.8x8cloud.net
@@ -2299,6 +2365,7 @@ www.ns10.packet8.net
 www.ns11.packet8.net
 www.ns12.packet8.net
 www.ns2-eqix-sjo.packet8.net
+www.ns2-l3-sjo.packet8.net
 www.ns2.p8t.us
 www.ns3.p8t.us
 www.ns4.p8t.us
@@ -2326,6 +2393,7 @@ www.p8t.us
 www.packet8.net
 www.panpxy.packet8.net
 www.pcsbc.packet8.net
+www.peerproxy1-eqix-sjo.packet8.net
 www.peerproxy1-l3-sjo.packet8.net
 www.phpipam.cloud-mgmt.8x8cloud.net
 www.pitabed.vo.packet8.net
@@ -2341,11 +2409,13 @@ www.shared-svcs-nonprod.aws.infra8.8x8cloud.net
 www.svc.8x8cloud.net
 www.telebay.packet8.net
 www.teleport.8x8-shared-svcs-prod.aws.infra8.8x8cloud.net
+www.tun0-l3-sjo.packet8.net
 www.turn1-l3-sjo.packet8.net
 www.vcc-development.oci.infra8.8x8cloud.net
 www.vcc-staging.oci.infra8.8x8cloud.net
 www.vo.packet8.net
 www.vodssbc.packet8.net
+www.voiptest.packet8.net
 www.vom-notify.packet8.net
 www.wavefront-prometheus-ec2-dev.platformdevops.8x8cloud.net
 www.wiki.platformdevops.8x8cloud.net
