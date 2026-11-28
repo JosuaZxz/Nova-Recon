@@ -10,6 +10,11 @@ import requests
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
+NVIDIA_API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+DEFAULT_NVIDIA_MODELS = (
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+)
 
 WAF_OR_LOGIN_NOISE = (
     "attention required! | cloudflare",
@@ -178,9 +183,91 @@ def _eligible_for_fallback(finding: dict) -> bool:
     )
 
 
+def _parse_llm_response(resp_json: dict) -> dict | None:
+    """Extract and parse the JSON verdict object from an OpenAI-compatible chat response."""
+    try:
+        choices = resp_json.get("choices") or []
+        if not choices:
+            return None
+        content = (choices[0].get("message") or {}).get("content")
+        if not content:
+            return None
+        text = str(content).strip()
+        match = re.search(r"\{.*\}", text, re.DOTALL)
+        parsed = json.loads(match.group(0) if match else text)
+        return parsed if isinstance(parsed, dict) and "verdict" in parsed else None
+    except Exception:
+        return None
+
+
+def _query_llm_providers(prompt: str) -> dict | None:
+    """Query Groq first, then fail over automatically to NVIDIA NIM models."""
+    groq_key = os.environ.get("GROQ_API_KEY", "").strip()
+    if groq_key:
+        groq_model = os.environ.get("NOVA_AI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
+        try:
+            resp = requests.post(
+                GROQ_API_URL,
+                headers={
+                    "Authorization": f"Bearer {groq_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": groq_model,
+                    "messages": [{"role": "user", "content": prompt}],
+                    "temperature": 0.1,
+                    "max_tokens": 1100,
+                    "response_format": {"type": "json_object"},
+                },
+                timeout=35,
+            )
+            if resp.status_code == 200:
+                parsed = _parse_llm_response(resp.json())
+                if parsed is not None:
+                    return parsed
+        except Exception:
+            pass
+
+    nvidia_key = os.environ.get("NVIDIA_API_KEY", "").strip()
+    if nvidia_key:
+        override_model = os.environ.get("NOVA_NVIDIA_MODEL", "").strip()
+        candidates = []
+        if override_model:
+            candidates.append(override_model)
+        for m in DEFAULT_NVIDIA_MODELS:
+            if m not in candidates:
+                candidates.append(m)
+
+        for nv_model in candidates:
+            try:
+                resp = requests.post(
+                    NVIDIA_API_URL,
+                    headers={
+                        "Authorization": f"Bearer {nvidia_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json={
+                        "model": nv_model,
+                        "messages": [{"role": "user", "content": prompt}],
+                        "temperature": 0.1,
+                        "max_tokens": 1500,
+                        "chat_template_kwargs": {"enable_thinking": False},
+                    },
+                    timeout=35,
+                )
+                if resp.status_code == 200:
+                    parsed = _parse_llm_response(resp.json())
+                    if parsed is not None:
+                        return parsed
+            except Exception:
+                continue
+
+    return None
+
+
 def validate_and_draft_report(finding: dict) -> dict | None:
     """
-    Validate a candidate finding via deterministic rules + Groq AI (if configured).
+    Validate a candidate finding via deterministic rules + Groq / NVIDIA AI (if configured).
     Returns a report draft dict if VALID, or None if rejected as a FALSE_POSITIVE.
     """
     is_fp, reason = deterministic_fp_check(finding)
@@ -188,14 +275,14 @@ def validate_and_draft_report(finding: dict) -> dict | None:
         finding["_rejection_reason"] = reason
         return None
 
-    api_key = os.environ.get("GROQ_API_KEY", "").strip()
-    if not api_key:
+    groq_key = os.environ.get("GROQ_API_KEY", "").strip()
+    nvidia_key = os.environ.get("NVIDIA_API_KEY", "").strip()
+    if not groq_key and not nvidia_key:
         if _eligible_for_fallback(finding):
             return _fallback_draft(finding)
         finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
         return None
 
-    model = os.environ.get("NOVA_AI_MODEL", DEFAULT_MODEL).strip() or DEFAULT_MODEL
     payload_ctx = {
         "program": finding.get("program", ""),
         "type": finding.get("type", ""),
@@ -241,55 +328,38 @@ def validate_and_draft_report(finding: dict) -> dict | None:
         f"CANDIDATE DATA:\n{json.dumps(payload_ctx, ensure_ascii=False)}"
     )
 
-    try:
-        resp = requests.post(
-            GROQ_API_URL,
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": model,
-                "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.1,
-                "max_tokens": 1100,
-                "response_format": {"type": "json_object"},
-            },
-            timeout=40,
-        )
-        if resp.status_code != 200:
-            if _eligible_for_fallback(finding):
-                return _fallback_draft(finding)
-            finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
-            return None
-
-        content = resp.json()["choices"][0]["message"]["content"].strip()
-        match = re.search(r"\{.*\}", content, re.DOTALL)
-        parsed = json.loads(match.group(0) if match else content)
-
-        verdict = str(parsed.get("verdict", "")).upper()
-        score = int(parsed.get("confidence_score") or 0)
-        if verdict == "FALSE_POSITIVE" or score < 65:
-            finding["_rejection_reason"] = parsed.get("rejection_reason") or f"AI score {score} < 65"
-            return None
-
-        fallback = _fallback_draft(finding)
-        return {
-            "verdict": "VALID",
-            "confidence_score": score,
-            "title": parsed.get("title") or fallback["title"],
-            "severity": (parsed.get("severity") or fallback["severity"]).lower(),
-            "summary": parsed.get("summary") or fallback["summary"],
-            "technical_analysis": parsed.get("technical_analysis") or fallback["technical_analysis"],
-            "steps_to_reproduce": parsed.get("steps_to_reproduce") or fallback["steps_to_reproduce"],
-            "impact": parsed.get("impact") or fallback["impact"],
-            "remediation": parsed.get("remediation") or fallback["remediation"],
-        }
-    except Exception:
+    parsed = _query_llm_providers(prompt)
+    if parsed is None:
         if _eligible_for_fallback(finding):
             return _fallback_draft(finding)
         finding["_rejection_reason"] = "Fallback rejected non-direct or medium-confidence finding"
         return None
+
+    try:
+        verdict = str(parsed.get("verdict", "")).upper()
+        score = int(parsed.get("confidence_score") or 0)
+    except Exception:
+        if _eligible_for_fallback(finding):
+            return _fallback_draft(finding)
+        finding["_rejection_reason"] = "Fallback rejected malformed AI verdict"
+        return None
+
+    if verdict == "FALSE_POSITIVE" or score < 65:
+        finding["_rejection_reason"] = parsed.get("rejection_reason") or f"AI score {score} < 65"
+        return None
+
+    fallback = _fallback_draft(finding)
+    return {
+        "verdict": "VALID",
+        "confidence_score": score,
+        "title": parsed.get("title") or fallback["title"],
+        "severity": (parsed.get("severity") or fallback["severity"]).lower(),
+        "summary": parsed.get("summary") or fallback["summary"],
+        "technical_analysis": parsed.get("technical_analysis") or fallback["technical_analysis"],
+        "steps_to_reproduce": parsed.get("steps_to_reproduce") or fallback["steps_to_reproduce"],
+        "impact": parsed.get("impact") or fallback["impact"],
+        "remediation": parsed.get("remediation") or fallback["remediation"],
+    }
 
 
 def render_markdown_report(finding: dict, draft: dict) -> str:

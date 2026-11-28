@@ -720,6 +720,70 @@ class TestNovaV22(unittest.TestCase):
             self.assertIsNotNone(hit)
             self.assertEqual(hit["type"], "cors")
 
+    def test_ai_gatekeeper_falls_back_to_nvidia_when_groq_fails(self):
+        candidate = {
+            "program": "etoro-mbb-og",
+            "type": "takeover",
+            "url": "https://candle-src.etoro.com",
+            "host": "candle-src.etoro.com",
+            "severity_hint": "high",
+            "confidence": "strong",
+            "evidence": "Dual-DoH NXDOMAIN on prod-candle.trafficmanager.net",
+            "request_evidence": "dig candle-src.etoro.com CNAME +short",
+            "response_evidence": "Cloudflare DoH: NXDOMAIN\nGoogle DoH: NXDOMAIN",
+        }
+        seen_urls = []
+
+        def fake_post(url, **kwargs):
+            seen_urls.append(url)
+            resp = MagicMock()
+            if url == ai_brief.GROQ_API_URL:
+                resp.status_code = 429
+                return resp
+            if url == ai_brief.NVIDIA_API_URL:
+                resp.status_code = 200
+                resp.json.return_value = {
+                    "choices": [
+                        {
+                            "message": {
+                                "content": json.dumps(
+                                    {
+                                        "verdict": "VALID",
+                                        "confidence_score": 91,
+                                        "rejection_reason": "",
+                                        "title": "Subdomain Takeover via Dangling Azure Traffic Manager on candle-src.etoro.com",
+                                        "severity": "high",
+                                        "summary": "Verified dangling CNAME to prod-candle.trafficmanager.net.",
+                                        "technical_analysis": "Dual-DoH resolvers return NXDOMAIN.",
+                                        "steps_to_reproduce": ["1. Query CNAME record"],
+                                        "impact": "Subdomain takeover risk under etoro.com.",
+                                        "remediation": "Remove dangling CNAME record.",
+                                    }
+                                )
+                            }
+                        }
+                    ]
+                }
+                return resp
+            resp.status_code = 500
+            return resp
+
+        with (
+            patch.dict(
+                "os.environ",
+                {"GROQ_API_KEY": "broken-groq-key", "NVIDIA_API_KEY": "test-nvidia-key"},
+            ),
+            patch("ai_brief.requests.post", side_effect=fake_post),
+        ):
+            draft = ai_brief.validate_and_draft_report(candidate)
+            self.assertIsNotNone(draft)
+            self.assertEqual(draft["confidence_score"], 91)
+            self.assertEqual(
+                draft["title"],
+                "Subdomain Takeover via Dangling Azure Traffic Manager on candle-src.etoro.com",
+            )
+            self.assertEqual(seen_urls, [ai_brief.GROQ_API_URL, ai_brief.NVIDIA_API_URL])
+
 
 if __name__ == "__main__":
     unittest.main()
