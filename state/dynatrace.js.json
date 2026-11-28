@@ -4,21 +4,21 @@
   "sha256": "1a9572768669b391deec",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:28 UTC"
+  "updated": "2026-11-28 04:07:58 UTC"
  },
  "https://mcsvc-ap-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_HASH.js": {
   "last_url": "https://mcsvc-ap-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_10353261126091629.js",
   "sha256": "c9ae4a26d39b5d7c8700",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:29 UTC"
+  "updated": "2026-11-28 04:07:59 UTC"
  },
  "https://test.sso-dev.dynatracelabs.com/ruxitagentjs_ICA15789MNPRTUVXfqrsuxz_HASH.js": {
   "last_url": "https://test.sso-dev.dynatracelabs.com/ruxitagentjs_ICA15789MNPRTUVXfqrsuxz_10353261126091629.js",
   "sha256": "fabcb0620bfb62109d38",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:30 UTC"
+  "updated": "2026-11-28 04:08:00 UTC"
  },
  "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.a5d6b70ca4fd1878d04e.sso.js": {
   "last_url": "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.a5d6b70ca4fd1878d04e.sso.js",
@@ -32,27 +32,34 @@
   "sha256": "a47aac25f1d3da5cdaae",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:30 UTC"
+  "updated": "2026-11-28 04:08:00 UTC"
  },
  "https://mcsvc-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_HASH.js": {
   "last_url": "https://mcsvc-sandbox.dynatracelabs.com/ruxitagentjs_ICA1589EMNPQRTUVXfghqrstux_10353261126091629.js",
   "sha256": "668e8be60c9f544eb0cd",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:31 UTC"
+  "updated": "2026-11-28 04:08:01 UTC"
  },
  "https://mcsvc-dev.dynatracelabs.com/synthetic/v93/ruxitagentjs_ICA1589NPRTUXfqrsu_HASH.js": {
   "last_url": "https://mcsvc-dev.dynatracelabs.com/synthetic/v93/ruxitagentjs_ICA1589NPRTUXfqrsu_10353261126091629.js",
   "sha256": "d8694779dc6f370126e4",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:31 UTC"
+  "updated": "2026-11-28 04:08:02 UTC"
  },
  "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.627e8e01bf06d9863536.sso.js": {
   "last_url": "https://static.test.sso-dev.dynatracelabs.com/static/gen/js/login.cache.627e8e01bf06d9863536.sso.js",
   "sha256": "62d1fca1e474a01ed556",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:23:30 UTC"
+  "updated": "2026-11-28 04:08:00 UTC"
+ },
+ "https://js-cdn.dynatracelabs.com/jstag/145e049b9b1/bf50643tmj/1ebdae37281bddae_complete.js": {
+  "last_url": "https://js-cdn.dynatracelabs.com/jstag/145e049b9b1/bf50643tmj/1ebdae37281bddae_complete.js",
+  "sha256": "5167c5e55432d5e2cac4",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 04:08:02 UTC"
  }
 }

@@ -884,6 +884,7 @@ ml.worldcoin.org
 mlu.worldcoin.org
 mlw.worldcoin.dev
 mobile-api.test.orbapp.worldcoin.org
+mobile-links-test.worldcoin.org
 mobile-remote-assets-prod.worldcoin.org
 mobile-remote-assets-stage.worldcoin.dev
 mobile.test.orbapp.worldcoin.org
@@ -1128,7 +1129,11 @@ signup-batching.stage-crypto.worldcoin.dev
 signup-batching.stage-crypto.worldcoin.org
 signup-batchingy.stage-crypto.worldcoin.dev
 signup-document-secure.crypto.worldcoin.org
+signup-document-secure.stage-crypto.worldcoin.org
 signup-document.crypto.worldcoin.org
+signup-document.stage-crypto.worldcoin.org
+signup-orb-ethereum.stage-crypto.worldcoin.org
+signup-phone-ethereum.stage-crypto.worldcoin.org
 signup-v2.stage-crypto.worldcoin.dev
 signup-v2y.stage-crypto.worldcoin.dev
 signup.crypto.worldcoin.dev

@@ -4,70 +4,70 @@
   "sha256": "fddd1730e28e0b2078f2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:31 UTC"
+  "updated": "2026-11-28 04:05:04 UTC"
  },
  "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js": {
   "last_url": "https://content.varonis.io/WebDA/30.0.489/assets/unsupported-browser/validate-browser-version.js",
   "sha256": "9c0b738fb60a892aa5bf",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:31 UTC"
+  "updated": "2026-11-28 04:05:04 UTC"
  },
  "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js": {
   "last_url": "https://content.varonis.io/WebDA/30.0.489/urlPrefix.js",
   "sha256": "d24e69d221d742605393",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:31 UTC"
+  "updated": "2026-11-28 04:05:04 UTC"
  },
  "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/supported-browsers.js": {
   "last_url": "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/supported-browsers.js",
   "sha256": "fddd1730e28e0b2078f2",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:32 UTC"
+  "updated": "2026-11-28 04:05:11 UTC"
  },
  "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/validate-browser-version.js": {
   "last_url": "https://content.varonis.io/WebDA/28.0.357/assets/unsupported-browser/validate-browser-version.js",
   "sha256": "9c0b738fb60a892aa5bf",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:32 UTC"
+  "updated": "2026-11-28 04:05:12 UTC"
  },
  "https://content.varonis.io/WebDA/28.0.357/urlPrefix.js": {
   "last_url": "https://content.varonis.io/WebDA/28.0.357/urlPrefix.js",
   "sha256": "d24e69d221d742605393",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:33 UTC"
+  "updated": "2026-11-28 04:05:12 UTC"
  },
  "https://app.fdr.varonis.io/runtime.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/runtime.45a2d5ede20f8623.js",
   "sha256": "64764da91d5e1f7a3e3d",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:33 UTC"
+  "updated": "2026-11-28 04:05:12 UTC"
  },
  "https://app.fdr.varonis.io/css.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/css.45a2d5ede20f8623.js",
   "sha256": "6b5d611dc037512c0ca6",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:33 UTC"
+  "updated": "2026-11-28 04:05:12 UTC"
  },
  "https://app.fdr.varonis.io/react.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/react.45a2d5ede20f8623.js",
   "sha256": "86da030b8d3756f521e9",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:34 UTC"
+  "updated": "2026-11-28 04:05:12 UTC"
  },
  "https://app.fdr.varonis.io/antd.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/antd.45a2d5ede20f8623.js",
   "sha256": "2e81a92ed7a131276786",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:34 UTC"
+  "updated": "2026-11-28 04:05:13 UTC"
  },
  "https://app.fdr.varonis.io/apollo.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/apollo.45a2d5ede20f8623.js",
@@ -76,27 +76,48 @@
   "graphql_ops": [
    "IntrospectionQuery"
   ],
-  "updated": "2026-11-27 08:20:34 UTC"
+  "updated": "2026-11-28 04:05:13 UTC"
  },
  "https://app.fdr.varonis.io/30657.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/30657.45a2d5ede20f8623.js",
   "sha256": "59560b34190592fffbaa",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:34 UTC"
+  "updated": "2026-11-28 04:05:13 UTC"
  },
  "https://app.fdr.varonis.io/92995.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/92995.45a2d5ede20f8623.js",
-  "sha256": "6fe60f0f1ff703b61ac0",
+  "sha256": "b8d67f45efc9cc05607c",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:35 UTC"
+  "updated": "2026-11-28 04:05:13 UTC"
  },
  "https://app.fdr.varonis.io/main.HASH.js": {
   "last_url": "https://app.fdr.varonis.io/main.45a2d5ede20f8623.js",
   "sha256": "49c44f873f8ba25f583b",
   "routes": [],
   "graphql_ops": [],
-  "updated": "2026-11-27 08:20:35 UTC"
+  "updated": "2026-11-28 04:05:15 UTC"
+ },
+ "https://content.varonis.io/WebDA/30.0.501/assets/unsupported-browser/supported-browsers.js": {
+  "last_url": "https://content.varonis.io/WebDA/30.0.501/assets/unsupported-browser/supported-browsers.js",
+  "sha256": "fddd1730e28e0b2078f2",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 04:05:11 UTC"
+ },
+ "https://content.varonis.io/WebDA/30.0.501/assets/unsupported-browser/validate-browser-version.js": {
+  "last_url": "https://content.varonis.io/WebDA/30.0.501/assets/unsupported-browser/validate-browser-version.js",
+  "sha256": "9c0b738fb60a892aa5bf",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 04:05:11 UTC"
+ },
+ "https://content.varonis.io/WebDA/30.0.501/urlPrefix.js": {
+  "last_url": "https://content.varonis.io/WebDA/30.0.501/urlPrefix.js",
+  "sha256": "d24e69d221d742605393",
+  "routes": [],
+  "graphql_ops": [],
+  "updated": "2026-11-28 04:05:11 UTC"
  }
 }

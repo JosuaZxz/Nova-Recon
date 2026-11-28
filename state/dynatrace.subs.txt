@@ -31,6 +31,7 @@
 32141.dynatracelabs.com
 34fa.dynatracelabs.com
 3c.dynatracelabs.com
+4.dynatracelabs.com
 43a1.dynatracelabs.com
 4814.dynatracelabs.com
 4814y.dynatracelabs.com
@@ -65,6 +66,7 @@ a.spine-boogaloo.internal.dynatracelabs.com
 abarca.davis.dynatracelabs.com
 abarcaq.davis.dynatracelabs.com
 abc123.dynatracelabs.com
+abc1234.dynatracelabs.com
 abc12345.dynatracelabs.com
 abc123459.dynatracelabs.com
 abc123i.sprint.dynatracelabs.com
@@ -165,6 +167,7 @@ access.tomek.staging.bietl.dynatracelabs.com
 access.zhrkac.sandbox.bietl.dynatracelabs.com
 accessc.dev-synthetic.internal.dynatracelabs.com
 accesse.mike-sf.sandbox.bietl.dynatracelabs.com
+accesse.stg-snd-ola.staging.bietl.dynatracelabs.com
 accessg.artur-sf.sandbox.bietl.dynatracelabs.com
 accessg.skruk.sandbox.bietl.dynatracelabs.com
 accessg.stg-snd-maksym.staging.bietl.dynatracelabs.com
@@ -191,6 +194,7 @@ accessw.ewelina.sandbox.bietl.dynatracelabs.com
 accessw.kuba.sandbox.bietl.dynatracelabs.com
 accessw.michal.staging.bietl.dynatracelabs.com
 accessw.michall.staging.bietl.dynatracelabs.com
+accessw.prod.bietl.dynatracelabs.com
 accessw.stg-snd-klang.staging.bietl.dynatracelabs.com
 accessy.klang.staging.bietl.dynatracelabs.com
 acci.dynatracelabs.com
@@ -203,6 +207,7 @@ account-loadtest.sprint.dynatracelabs.com
 account-loadtestw.internal.dynatracelabs.com
 account-sandbox.dynatracelabs.com
 account-sandbox.internal.dynatracelabs.com
+account-sandboxw.dynatracelabs.com
 account-sprint.dynatracelabs.com
 account-sprintg.dynatracelabs.com
 account-test.university-dev.dynatracelabs.com
@@ -267,12 +272,14 @@ admin-web-ui.dynatracelabs.com
 admin-web-ui.spine-dev.internal.dynatracelabs.com
 admin-web-ui.spine-hardening.internal.dynatracelabs.com
 admin-web-uio.dynatracelabs.com
+admin-web-uiu.digitrans-staging.dynatracelabs.com
 admin-web.dynatracelabs.com
 admin-web.spine-dev.internal.dynatracelabs.com
 admin-web.spine-hardening.internal.dynatracelabs.com
 admin-webi.spine-dev.internal.dynatracelabs.com
 admin-webk.dynatracelabs.com
 admin-webs.spine-hardening.internal.dynatracelabs.com
+admin.dynatracelabs.com
 admin.myaccount-dev.dynatracelabs.com
 admin.myaccount-dev.university-dev.dynatracelabs.com
 admin.myaccount-hardening.dynatracelabs.com
@@ -280,6 +287,7 @@ admin.myaccount.spine-dev.internal.dynatracelabs.com
 admin.myaccount.university-dev.dynatracelabs.com
 adminc.myaccount.university-dev.dynatracelabs.com
 administrator.dynatracelabs.com
+administratore.dynatracelabs.com
 administrators.dynatracelabs.com
 administratorsk.dynatracelabs.com
 admink.myaccount-dev.university-dev.dynatracelabs.com
@@ -312,6 +320,7 @@ aks.dynatracelabs.com
 aks3.dynatracelabs.com
 alb-serhii-test.account-dev.dynatracelabs.com
 alb-test.account-dev.dynatracelabs.com
+alb.dynatracelabs.com
 albe.dynatracelabs.com
 alliances.alliances.sprint.apps.dynatracelabs.com
 alliances.apps.sprint.dynatracelabs.com
@@ -392,6 +401,7 @@ api-hardeningo.internal.sprint.dynatracelabs.com
 api-helm.nimbus.dev.dynatracelabs.com
 api-staging.dynatracelabs.com
 api-staging.nimbus.dev.dynatracelabs.com
+api-stagingm.dynatracelabs.com
 api-stagingu.nimbus.dev.sprint.dynatracelabs.com
 api-v2.dynatracelabs.com
 api-v2.spine-dev.internal.dynatracelabs.com
@@ -442,6 +452,7 @@ api1.myaccount-dev.dynatracelabs.com
 apia.demo2.ocp.dev.dynatracelabs.com
 apia.university-dev.sprint.dynatracelabs.com
 apic.dynatracelabs.com
+apic.internal.ace-tools.sprint.dynatracelabs.com
 apidocs.dynatracelabs.com
 apig.mobileagent.downloads.sprint.dynatracelabs.com
 apigateway-loadtest.appframework.internal.dynatracelabs.com
@@ -483,6 +494,7 @@ apigw.dev7.dtp.internal.dynatracelabs.com
 apigw.dev8.dtp.dynatracelabs.com
 apigw.dev8.dtp.internal.dynatracelabs.com
 apigw.dev9.dtp.internal.dynatracelabs.com
+apigw.dev99.dtp.dynatracelabs.com
 apigw.dev99.dtp.internal.dynatracelabs.com
 apigw.hard1.dtp.dynatracelabs.com
 apigw.hard1.dtp.internal.dynatracelabs.com
@@ -500,6 +512,7 @@ apigwc.hard1.dtp.dynatracelabs.com
 apigwe.dev6.dtp.dynatracelabs.com
 apigwi.dev4.dtp.dynatracelabs.com
 apigwi.dev5.dtp.dynatracelabs.com
+apigwi.dev8.dtp.dynatracelabs.com
 apigwk.hard101.dtp.dynatracelabs.com
 apigwk.hard3.dtp.dynatracelabs.com
 apigwk.hard4.dtp.dynatracelabs.com
@@ -563,6 +576,7 @@ apprt.dev203.dtp.internal.dynatracelabs.com
 apprt.dev204.dtp.internal.dynatracelabs.com
 apprt.dev205.dtp.internal.dynatracelabs.com
 apprt.dev6.dtp.internal.dynatracelabs.com
+apprt.dynatracelabs.com
 apprt.hard101.dtp.internal.dynatracelabs.com
 apprt.hard201.dtp.internal.dynatracelabs.com
 apprtk.dev103.dtp.internal.dynatracelabs.com
@@ -767,6 +781,7 @@ assistant-experimentalc.sprint.dynatracelabs.com
 assistant-origin.d1-dev.dynatracelabs.com
 assistant-origin.d1-staging.dynatracelabs.com
 assistant-sprint.dynatracelabs.com
+assistant-sprint.sprint.dynatracelabs.com
 assistant-sprintu.dynatracelabs.com
 assistant.d1-dev.dynatracelabs.com
 assistant.d1-staging.dynatracelabs.com
@@ -979,10 +994,12 @@ beacon.dok.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 beacon.dok.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 beacon.dok.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 beacon.dok.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+beacon.dok.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 beata-sf.sandbox.bietl.dynatracelabs.com
 beata.dynatracelabs.com
 beata.sandbox.bietl.dynatracelabs.com
 beata.staging.bietl.dynatracelabs.com
+beataa.staging.bietl.dynatracelabs.com
 beba37a5.dynatracelabs.com
 beer-frontend.spine-dev.internal.dynatracelabs.com
 beer-frontend.spine-hardening.internal.dynatracelabs.com
@@ -1031,6 +1048,7 @@ bf47048mqyc.bf-sprint.dynatracelabs.com
 bf47104cmx.bf-sprint.dynatracelabs.com
 bf49960xxn.dynatracelabs.com
 bf49960xxnc.bf-sprint.dynatracelabs.com
+bf50643tmj.bf-sprint.dynatracelabs.com
 bf53884kjd.bf-sprint.dynatracelabs.com
 bf53938kot.bf-sprint.dynatracelabs.com
 bf56145ubb.bf-sprint.dynatracelabs.com
@@ -1107,6 +1125,7 @@ boomi-bff.spine-dev.internal.dynatracelabs.com
 boomi-bff.spine-hardening.internal.dynatracelabs.com
 boomi-bffm.spine-dev.internal.dynatracelabs.com
 boomi-bffm.spine-hardening.internal.dynatracelabs.com
+boomi-bffu.dynatracelabs.com
 boomi.dynatracelabs.com
 boost.dynatracelabs.com
 bootcamp.sprint.dynatracelabs.com
@@ -1117,6 +1136,7 @@ brand.dynatracelabs.com
 btf32722.dynatracelabs.com
 btf32722a.dynatracelabs.com
 btf32722y.sprint.dynatracelabs.com
+buckets.dynatracelabs.com
 budget.dwh-connector.spine-dev.internal.dynatracelabs.com
 budget.dwh-connector.spine-hardening.internal.dynatracelabs.com
 budget.dynatracelabs.com
@@ -1124,6 +1144,7 @@ bugreporter.dynatracelabs.com
 bugreporter.prod.bietl.dynatracelabs.com
 bulkhostc.sprint.dynatracelabs.com
 bulkhoste.sprint.apps.dynatracelabs.com
+bwg49630.dynatracelabs.com
 bwg496309.dynatracelabs.com
 bzx46563.dynatracelabs.com
 bzx46563e.dynatracelabs.com
@@ -1163,6 +1184,7 @@ cd-dev.dynatracelabs.com
 cd-dev.internal.dynatracelabs.com
 cd-sandbox.dynatracelabs.com
 cd-sandbox.internal.dynatracelabs.com
+cd.dynatracelabs.com
 cd.internal.dynatracelabs.com
 cddp-5794-a.dok.cd-sandbox.internal.dynatracelabs.com
 cddp-5794-aa.dok.cd-sandbox.internal.dynatracelabs.com
@@ -1217,6 +1239,7 @@ chair1a.spine-dev.internal.dynatracelabs.com
 chairc.spine-hardening.internal.dynatracelabs.com
 channels-test.spine-dev.internal.dynatracelabs.com
 channels.dynatracelabs.com
+channels.spine-dev.internal.dynatracelabs.com
 channelse.dynatracelabs.com
 chat-dev-fix-sus-3214-405.spine-dev.internal.dynatracelabs.com
 chat-dev-fix-sus-3214-405c.dynatracelabs.com
@@ -1301,6 +1324,7 @@ cloudcontrol-deva.dynatracelabs.com
 cloudcontrol-sandbox.dynatracelabs.com
 cloudcontrol-sandboxc.internal.dynatracelabs.com
 cloudcontrol-sandboxm.dynatracelabs.com
+cloudcontrol-sprint.dynatracelabs.com
 cloudcontrol-sprinta.internal.dynatracelabs.com
 cloudcontrol-sprintg.dynatracelabs.com
 cloudcontrol.davis.dynatracelabs.com
@@ -1320,6 +1344,7 @@ cluster-us-east-1-cluster-acceptancee2e.sprint.sprint.dynatracelabs.com
 cluster-us-east-1-dev-94e11f0f-03bd-43a1-8822-8ad1ad1cca56.dynatracelabs.com
 cluster-us-east-1-deve2e.dev.dynatracelabs.com
 cluster-us-east-1-deve2eu.dev.sprint.dynatracelabs.com
+cluster-us-east-1-hackerone.dynatracelabs.com
 cluster-us-east-1-hackeroneq.sprint.dynatracelabs.com
 cluster-us-west-2-hrd-07a35e5a-8fcb-4897-b465-24ea34c30ebe.dynatracelabs.com
 cluster-us-west-2-hrd-07a35e5a-8fcb-4897-b465-24ea34c30ebe.internal.dynatracelabs.com
@@ -1327,6 +1352,7 @@ cluster.cl-managed.demo.spine-dev.internal.dynatracelabs.com
 cluster.classic-managed.demo.university-dev.dynatracelabs.com
 cluster.dps-la-managed.demo.spine-dev.internal.dynatracelabs.com
 cluster.dps-la-managed.demo.university-dev.dynatracelabs.com
+cluster.dynatracelabs.com
 cluster.seaotter-dev.dynatracelabs.com
 cluster.xeco-dev.dynatracelabs.com
 cluster.xeco-hardening.dynatracelabs.com
@@ -1373,6 +1399,7 @@ compliance.spine-dev.internal.dynatracelabs.com
 compliance.spine-hardening.internal.dynatracelabs.com
 compliancei.dynatracelabs.com
 compliances.spine-dev.internal.dynatracelabs.com
+comu.ar.ci1.dev.dynatracelabs.com
 comu.internal.dynatracelabs.com
 concourse-dev-green.nimbus.dev.dynatracelabs.com
 concourse-dev-greene.nimbus.dev.dynatracelabs.com
@@ -1414,6 +1441,7 @@ consumption-svc.digitrans-prod.dynatracelabs.com
 consumption-svc.digitrans-staging.dynatracelabs.com
 consumption-svc.dtw-skunkworks.dynatracelabs.com
 consumption-svc.dynatracelabs.com
+consumption-svcs.digitrans-staging.dynatracelabs.com
 consumption-svcu.digitrans-prod.dynatracelabs.com
 consumptioni.dynatracelabs.com
 consumptionw.internal.dynatracelabs.com
@@ -1529,6 +1557,8 @@ dac-tenants.dac.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 dac-tenants.dac.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 dac-tenants.dac.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 dac-tenants.dac.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+dac-tenants.dac.dta-eph-dtaop-20261127-79ed.anywhere.internal.dynatracelabs.com
+dac-tenants.dac.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 dac.da-dev1.anywhere.internal.dynatracelabs.com
 dac.dev10.dtp.internal.dynatracelabs.com
 dac.dev101.dtp.internal.dynatracelabs.com
@@ -1575,6 +1605,8 @@ dac.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 dac.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 dac.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 dac.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+dac.dta-eph-dtaop-20261127-79ed.anywhere.internal.dynatracelabs.com
+dac.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 dac.hard1.dtp.internal.dynatracelabs.com
 dac.hard101.dtp.internal.dynatracelabs.com
 dac.hard2.dtp.internal.dynatracelabs.com
@@ -1603,6 +1635,7 @@ data.dynatracelabs.com
 datafeed-dayy.dynatracelabs.com
 datafeed-dev1.dynatracelabs.com
 datafeed-dev1e.dynatracelabs.com
+datafeed-int1.dynatracelabs.com
 datafeed-release.dynatracelabs.com
 datafeed-sprint.dynatracelabs.com
 datafeed-sprinti.dynatracelabs.com
@@ -1693,6 +1726,7 @@ demo-deployment.demo6.appframework.internal.dynatracelabs.com
 demo-deployment.demo7.appframework.internal.dynatracelabs.com
 demo-deployment.demo8.appframework.internal.dynatracelabs.com
 demo-deployment.demo9.appframework.internal.dynatracelabs.com
+demo-deployment.dynatracelabs.com
 demo-deploymentw.dynatracelabs.com
 demo-managed.dev.dynatracelabs.com
 demo-managed.dynatracelabs.com
@@ -1703,6 +1737,7 @@ demo-ocp-4-11-guu84124.nimbus.dev.dynatracelabs.com
 demo-pcf-2-10.demo-pcf.nimbus.dev.dynatracelabs.com
 demo-pcf-2-10.dynatracelabs.com
 demo-pcf-2-10o.dynatracelabs.com
+demo-pcf-2-10u.demo-pcf.nimbus.dev.dynatracelabs.com
 demo-pcf.dynatracelabs.com
 demo-pcf.nimbus.dev.dynatracelabs.com
 demo-pcfk.nimbus.dev.dynatracelabs.com
@@ -1777,10 +1812,12 @@ demo22.appframework.internal.dynatracelabs.com
 demo22.dynatracelabs.com
 demo22.platform-internal.appframework.internal.dynatracelabs.com
 demo23.appframework.internal.dynatracelabs.com
+demo23.dynatracelabs.com
 demo23.ocp.dev.dynatracelabs.com
 demo23.platform-internal.appframework.internal.dynatracelabs.com
 demo23c.appframework.internal.dynatracelabs.com
 demo24.appframework.internal.dynatracelabs.com
+demo24.dynatracelabs.com
 demo24.platform-internal.appframework.internal.dynatracelabs.com
 demo24w.appframework.internal.dynatracelabs.com
 demo25.appframework.internal.dynatracelabs.com
@@ -1820,6 +1857,7 @@ demo33.dynatracelabs.com
 demo33.platform-internal.appframework.internal.dynatracelabs.com
 demo33e.appframework.internal.dynatracelabs.com
 demo34.appframework.internal.dynatracelabs.com
+demo34.dynatracelabs.com
 demo34.platform-internal.appframework.internal.dynatracelabs.com
 demo34s.appframework.internal.dynatracelabs.com
 demo35.appframework.internal.dynatracelabs.com
@@ -1839,6 +1877,7 @@ demo38.platform-internal.appframework.internal.dynatracelabs.com
 demo39.appframework.internal.dynatracelabs.com
 demo39.dynatracelabs.com
 demo39.platform-internal.appframework.internal.dynatracelabs.com
+demo39s.appframework.internal.dynatracelabs.com
 demo4.appframework.internal.dynatracelabs.com
 demo4.dynatracelabs.com
 demo4.platform-internal.appframework.internal.dynatracelabs.com
@@ -2041,6 +2080,7 @@ dev103o.dtp.internal.dynatracelabs.com
 dev104.dev.apps.dynatracelabs.com
 dev104.dtp.dynatracelabs.com
 dev104.dtp.internal.dynatracelabs.com
+dev104k.dev.apps.dynatracelabs.com
 dev105.dev.apps.dynatracelabs.com
 dev105.dtp.internal.dynatracelabs.com
 dev1k.dynatracelabs.com
@@ -2088,6 +2128,7 @@ dev5.dev.da.dynatracelabs.com
 dev5.dtp.dynatracelabs.com
 dev5.dtp.internal.dynatracelabs.com
 dev5.dynatracelabs.com
+dev5i.dtp.internal.dynatracelabs.com
 dev5s.dev.apps.dynatracelabs.com
 dev6.dev.apps.dynatracelabs.com
 dev6.dtp.dynatracelabs.com
@@ -2106,6 +2147,7 @@ dev8.dev.apps.dynatracelabs.com
 dev8.dev.da.dynatracelabs.com
 dev8.dtp.dynatracelabs.com
 dev8.dtp.internal.dynatracelabs.com
+dev8.dynatracelabs.com
 dev85.dtp.dynatracelabs.com
 dev8k.dtp.internal.dynatracelabs.com
 dev9.dev.apps.dynatracelabs.com
@@ -2196,12 +2238,14 @@ disaster-recovery.dynatracelabs.com
 disaster-recovery.internal.dynatracelabs.com
 disaster-recoveryi.dynatracelabs.com
 disaster.dynatracelabs.com
+disasterk.internal.dynatracelabs.com
 disasteru.dynatracelabs.com
 dkq52907.dynatracelabs.com
 dkq52907.sprint.internal.dynatracelabs.com
 dkq52907o.dynatracelabs.com
 dmg.spine-dev.internal.dynatracelabs.com
 dmi42586.dev.dynatracelabs.com
+dmi42586.dynatracelabs.com
 dmi42586o.dynatracelabs.com
 dmi42586w.dev.sprint.dynatracelabs.com
 dmx39356.dynatracelabs.com
@@ -2210,6 +2254,7 @@ dmx39356o.dynatracelabs.com
 dna.dynatracelabs.com
 dns-test.dio-sandbox.internal.dynatracelabs.com
 dns2.internal.dynatracelabs.com
+doaks-prod.dynatracelabs.com
 doaks-prod9.dynatracelabs.com
 docgen.success-staging.dynatracelabs.com
 docker.dynatracelabs.com
@@ -2267,6 +2312,7 @@ dok.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 dok.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 dok.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 dok.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+dok.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 dok.dynatracelabs.com
 dok.tf-cd-dev.internal.dynatracelabs.com
 dok.vault-cd-dev.internal.dynatracelabs.com
@@ -2291,6 +2337,7 @@ dps-la-saas.demo.spine-dev.internal.dynatracelabs.com
 dps-la-saas.demo.spine-hardening.internal.dynatracelabs.com
 dps-la-saasu.demo.spine-dev.internal.dynatracelabs.com
 dps-texas.davis.dynatracelabs.com
+dps.dynatracelabs.com
 dropppsy.sprint.dynatracelabs.com
 drtest.juno-dev.internal.dynatracelabs.com
 dryice.davis.dynatracelabs.com
@@ -2362,6 +2409,10 @@ dta-eph-dtaop-20261126-9cbd.apps.anywhere.internal.dynatracelabs.com
 dta-eph-dtaop-20261126-9cbd.apps.internal.anywhere.internal.dynatracelabs.com
 dta-eph-dtaop-20261126-fcd8.apps.anywhere.internal.dynatracelabs.com
 dta-eph-dtaop-20261126-fcd8.apps.internal.anywhere.internal.dynatracelabs.com
+dta-eph-dtaop-20261127-79ed.apps.anywhere.internal.dynatracelabs.com
+dta-eph-dtaop-20261127-79ed.apps.internal.anywhere.internal.dynatracelabs.com
+dta-eph-dtaop-20261127-933b.apps.anywhere.internal.dynatracelabs.com
+dta-eph-dtaop-20261127-933b.apps.internal.anywhere.internal.dynatracelabs.com
 dtac.success-dev.dynatracelabs.com
 dtac.success-staging.dynatracelabs.com
 dtecustoms-dev.dynatracelabs.com
@@ -2395,6 +2446,7 @@ dtw-ace-dev.dynatracelabs.com
 dtw-ace-skunkworks.dynatracelabs.com
 dtw-skunkworks.dynatracelabs.com
 dtw.dynatracelabs.com
+dtwg.dynatracelabs.com
 dul85304o.sprint.dynatracelabs.com
 dwh-connector.dynatracelabs.com
 dwh-connector.spine-dev.internal.dynatracelabs.com
@@ -2466,6 +2518,7 @@ echoi.dynatracelabs.com
 ecosystem-map.tae.dynatracelabs.com
 edavis-for-alb-lambda.dynatracelabs.com
 edge-cmp-release-svc-dev.juno-dev.internal.dynatracelabs.com
+edge.dynatracelabs.com
 edgeu.dynatracelabs.com
 ef.dynatracelabs.com
 eirini.nimbus.dev.dynatracelabs.com
@@ -2492,6 +2545,7 @@ emea9.dynatracelabs.com
 emeai.dev.dynatracelabs.com
 emilp-pa991-poc.dev.threat-intel.appsec.dynatracelabs.com
 employee.dynatracelabs.com
+employeeg.dynatracelabs.com
 employment-gov-au.davis.dynatracelabs.com
 encryption.dynatracelabs.com
 encryption.spine-dev.internal.dynatracelabs.com
@@ -2582,6 +2636,7 @@ events.dynatracelabs.com
 events.fm.dynatracelabs.com
 events.spine-dev.internal.dynatracelabs.com
 events.spine-hardening.internal.dynatracelabs.com
+eventsa.spine-hardening.internal.dynatracelabs.com
 ewc99691.dynatracelabs.com
 ewc99691e.dynatracelabs.com
 ewc99691o.sprint.dynatracelabs.com
@@ -2615,6 +2670,7 @@ export.spine-dev.internal.dynatracelabs.com
 ext.dynatracelabs.com
 ext7.dynatracelabs.com
 external.dynatracelabs.com
+externale.dynatracelabs.com
 extranetq.dev.dynatracelabs.com
 f.dynatracelabs.com
 f1.sandbox.bietl.dynatracelabs.com
@@ -2858,6 +2914,7 @@ grail.dta-eph-dtaop-20261126-0299.anywhere.internal.dynatracelabs.com
 grail.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 grail.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 grail.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+grail.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 grail.dtp-dev3-grail.dev.ingress.internal.dynatracelabs.com
 grail.dtpaws-dev3.dev.ingress.internal.dynatracelabs.com
 grail.dynatracelabs.com
@@ -2896,6 +2953,7 @@ gzl42324.dynatracelabs.com
 gzl42324.sprint.dynatracelabs.com
 h624.spine-dev.internal.dynatracelabs.com
 h639.spine-dev.internal.dynatracelabs.com
+h646.spine-dev.internal.dynatracelabs.com
 h684.spine-dev.internal.dynatracelabs.com
 h6stbik2ciwi7kl2kdepz3ko7vbycmys-oox42271.hard4.sprint.apps.dynatracelabs.com
 ha.liftr.dev.azure.cloud.dynatracelabs.com
@@ -3096,6 +3154,7 @@ hub-apis.perms.spine-dev.internal.dynatracelabs.com
 hub-apis.spine-hardening.internal.dynatracelabs.com
 hub-apiu.django.spine-dev.internal.dynatracelabs.com
 hub-apiu.nginx.spine-dev.internal.dynatracelabs.com
+hub-apiw.api-v2.spine-dev.internal.dynatracelabs.com
 hub-apiw.iam-test.spine-dev.internal.dynatracelabs.com
 hub-apiw.lima.spine-dev.internal.dynatracelabs.com
 hub-apiy.fcs.spine-dev.internal.dynatracelabs.com
@@ -3349,12 +3408,14 @@ idmui-dev.internal.dynatracelabs.com
 idmui-devmanaged.internal.dynatracelabs.com
 idmui-devmanagedy.internal.dynatracelabs.com
 idmui-devo.internal.sprint.dynatracelabs.com
+idmui-sandbox.dynatracelabs.com
 idmui-sandbox.internal.dynatracelabs.com
 idmui-sprint.dynatracelabs.com
 idmui-sprint.internal.dynatracelabs.com
 idmui-sprintm.internal.sprint.dynatracelabs.com
 idmui-test.internal.dynatracelabs.com
 idmui-testo.internal.dynatracelabs.com
+idmui-tests.internal.sprint.dynatracelabs.com
 idocs-preview.spc-dev.dynatracelabs.com
 idocs-preview.xeco-dev.dynatracelabs.com
 idocs.spc-dev.dynatracelabs.com
@@ -3460,6 +3521,7 @@ internal.dok.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 internal.dok.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 internal.dok.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 internal.dok.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+internal.dok.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 internal.dtw-skunkworks.dynatracelabs.com
 internal.dynatracelabs.com
 internal.heimdall.dynatracelabs.com
@@ -3489,6 +3551,7 @@ iripvtemzf-1.sprint.dynatracelabs.com
 iripvtemzf.sprint.dynatracelabs.com
 issue-management-service.dynatracelabs.com
 issue-management-service.spine-dev.internal.dynatracelabs.com
+issue.dynatracelabs.com
 istio.deus-dev.internal.dynatracelabs.com
 istio.dynatracelabs.com
 j35i0ko1vn74pdcy.sprint.dynatracelabs.com
@@ -3605,6 +3668,7 @@ jwx05250.dynatracelabs.com
 jxw01498.dynatracelabs.com
 jzj80554.dynatracelabs.com
 k3s.alliances.dynatracelabs.com
+k3s.alliances.sprint.apps.dynatracelabs.com
 k3s.alliances.sprint.dynatracelabs.com
 k3s.dynatracelabs.com
 k4jmzjadsqy3tm6m.sprint.dynatracelabs.com
@@ -3628,6 +3692,7 @@ keptn.dtw-ace-skunkworks.dynatracelabs.com
 keptn.dynatracelabs.com
 keptn.keptn-demo.alliances.dynatracelabs.com
 keptn.spine-dev.internal.dynatracelabs.com
+keptnk.appframework.internal.dynatracelabs.com
 keptnk.spine-dev.internal.dynatracelabs.com
 keptnu.k3s.alliances.dynatracelabs.com
 keybroker.spine-dev.internal.dynatracelabs.com
@@ -3644,6 +3709,7 @@ kube-api-legacy.dtp.cd-sandbox.internal.dynatracelabs.com
 kube-api.dtp.cd-sandbox.internal.dynatracelabs.com
 kube-api.dtp.cd.internal.dynatracelabs.com
 kubernetes.dynatracelabs.com
+kyh87588.dynatracelabs.com
 kzh92931.dynatracelabs.com
 kzh92931y.sprint.dynatracelabs.com
 lctest-svc.dtw-skunkworks.dynatracelabs.com
@@ -3700,6 +3766,7 @@ lima-processing.spine-dev.internal.dynatracelabs.com
 lima-processing.spine-hardening.internal.dynatracelabs.com
 lima-rated-consumption.dynatracelabs.com
 lima-rated-consumption.spine-dev.internal.dynatracelabs.com
+lima-rated.dynatracelabs.com
 lima-rated.spine-dev.internal.dynatracelabs.com
 lima-rated.spine-hardening.internal.dynatracelabs.com
 lima-ratedc.spine-hardening.internal.dynatracelabs.com
@@ -3736,6 +3803,7 @@ lix67868y.sprint.dynatracelabs.com
 lkwqsouprx.dynatracelabs.com
 llbc24775.dynatracelabs.com
 llbc24775y.sprint.dynatracelabs.com
+lnj79393.dynatracelabs.com
 lnj79393.sprint.dynatracelabs.com
 load-testing.dac.dev203.dtp.internal.dynatracelabs.com
 load-testing.dev103.dtp.internal.dynatracelabs.com
@@ -3792,6 +3860,7 @@ loginq.sys.at-pcf-2-10.nimbus.dev.dynatracelabs.com
 logins.sys.at-pcf-2-13.nimbus.dev.dynatracelabs.com
 logins.sys.at-pcf-5-0.nimbus.dev.dynatracelabs.com
 logins.sys.flar-test.nimbus.dev.dynatracelabs.com
+loginu.sys.at-oscf.nimbus.dev.dynatracelabs.com
 loginu.sys.manual-test.nimbus.dev.dynatracelabs.com
 longhorn.ajoskowski.cd-sandbox.internal.dynatracelabs.com
 longhorn.argo-dok-sandbox.internal.dynatracelabs.com
@@ -3805,6 +3874,7 @@ lrd28544.dynatracelabs.com
 lrx09136.dynatracelabs.com
 lwp00649.dynatracelabs.com
 lya39705.dynatracelabs.com
+lya39705i.sprint.dynatracelabs.com
 m.internal.dynatracelabs.com
 machine.dynatracelabs.com
 maersk.davis.dynatracelabs.com
@@ -4119,6 +4189,7 @@ marketplace.gcp.alliances.dynatracelabs.com
 marketplace.spine-dev.internal.dynatracelabs.com
 marketplace.spine-hardening.internal.dynatracelabs.com
 marketplacespecial.gcp.alliances.dynatracelabs.com
+marketplacespeciali.gcp.alliances.dynatracelabs.com
 marketplacew.gcp.alliances.dynatracelabs.com
 master.apl.dynatracelabs.com
 masters.apl.dynatracelabs.com
@@ -4332,6 +4403,8 @@ mgmt.us-west-2.sandbox.iam.internal.dynatracelabs.com
 mgmta.apigw.dev102.dtp.internal.dynatracelabs.com
 mgmtc.grail.dev6.dtp.internal.dynatracelabs.com
 mgmte.plsrv.dev3.dtp.internal.dynatracelabs.com
+mgmti.apigw.hard4.dtp.internal.dynatracelabs.com
+mgmti.apprt.hard101.dtp.internal.dynatracelabs.com
 mgmtm.apigw.dev1.dtp.internal.dynatracelabs.com
 mgmto.grail.hard101.dtp.internal.dynatracelabs.com
 mgmtq.apprt.dev101.dtp.internal.dynatracelabs.com
@@ -4342,6 +4415,7 @@ mgmtq.plsrv.dev8.dtp.internal.dynatracelabs.com
 mgmtq.plsrv.hard1.dtp.internal.dynatracelabs.com
 mgmts.apprt.dev103.dtp.internal.dynatracelabs.com
 mgmts.grail.dev2.dtp.internal.dynatracelabs.com
+mgmts.plsrv.hard2.dtp.internal.dynatracelabs.com
 mgmtu.apigw.hard2.dtp.internal.dynatracelabs.com
 mgmtw.apigw.dev101.dtp.internal.dynatracelabs.com
 mgmtw.apigw.dev104.dtp.internal.dynatracelabs.com
@@ -4519,6 +4593,7 @@ openshift4.dev.dynatracelabs.com
 ops.dynatracelabs.com
 ops.v2.keybroker.spine-dev.internal.dynatracelabs.com
 ops.v2.keybroker.spine-hardening.internal.dynatracelabs.com
+oqe26465.dynatracelabs.com
 oqr47576.dynatracelabs.com
 oqr47576.sprint.apps.dynatracelabs.com
 orders-service.dynatracelabs.com
@@ -4549,6 +4624,7 @@ otel-demo.tae.dynatracelabs.com
 otel.dynatracelabs.com
 outage-service.dynatracelabs.com
 outage-service.spine-dev.internal.dynatracelabs.com
+outage.dynatracelabs.com
 outageservice-dev.dynatracelabs.com
 outageservice-sandbox.dynatracelabs.com
 outageservice-staging.dynatracelabs.com
@@ -4615,6 +4691,7 @@ pks.pcfeu.dev.dynatracelabs.com
 pks.pks-tf-useast2.cf.dev.dynatracelabs.com
 platform-docs.dtp.cd.internal.dynatracelabs.com
 platform-docs.dynatracelabs.com
+platform-docsq.dtp.cd.internal.dynatracelabs.com
 platform-internal.appframework.internal.dynatracelabs.com
 platform-internal.dynatracelabs.com
 platform.dynatracelabs.com
@@ -4701,6 +4778,8 @@ plsrv.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 plsrv.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 plsrv.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 plsrv.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+plsrv.dta-eph-dtaop-20261127-79ed.anywhere.internal.dynatracelabs.com
+plsrv.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 plsrv.dynatracelabs.com
 plsrv.hard1.dtp.internal.dynatracelabs.com
 plsrv.hard101.dtp.internal.dynatracelabs.com
@@ -4711,6 +4790,7 @@ plsrv.hard4.dtp.internal.dynatracelabs.com
 pme36357.dynatracelabs.com
 pme36357y.sprint.dynatracelabs.com
 pml0036h.sprint.apps.dynatracelabs.com
+polldubh.dynatracelabs.com
 polldubh.prod.bietl.dynatracelabs.com
 portalday-cr01.dynatracelabs.com
 portalday-cr02.dynatracelabs.com
@@ -4914,6 +4994,7 @@ runecast-evaluation.devops-services.dynatracelabs.com
 runecast-evaluationy.devops-services.dynatracelabs.com
 s.sprint.dynatracelabs.com
 s3-buckets.dok.cd-sandbox.internal.dynatracelabs.com
+s3-buckets.dynatracelabs.com
 s3-proxy.developers.spine-dev.internal.dynatracelabs.com
 s3.dynatracelabs.com
 saas-gateway.spine-dev.internal.dynatracelabs.com
@@ -5352,6 +5433,7 @@ sso-dev.dynatracelabs.com
 sso-dev.internal.dynatracelabs.com
 sso-dev.sprint.dynatracelabs.com
 sso-devmanaged.internal.dynatracelabs.com
+sso-devw.internal.dynatracelabs.com
 sso-mock-iam-test.dynatracelabs.com
 sso-mock-iam-test.internal.dynatracelabs.com
 sso-sandbox.dynatracelabs.com
@@ -5365,6 +5447,8 @@ sso-test.dynatracelabs.com
 sso-test.internal.dynatracelabs.com
 sso-testi.internal.dynatracelabs.com
 sso.dynatracelabs.com
+stage.dynatracelabs.com
+stage10pso.sprint.dynatracelabs.com
 staging.demoability.dynatracelabs.com
 staging.internal.dynatracelabs.com
 staging.juno-ape.internal.dynatracelabs.com
@@ -5386,6 +5470,7 @@ stencil-svc.digitrans-dev.dynatracelabs.com
 stencil-svc.dtw-skunkworks.dynatracelabs.com
 stencil-svc.skunkbox.dynatracelabs.com
 stencil-svcs.dtw-skunkworks.dynatracelabs.com
+stf76929.dynatracelabs.com
 stf76929.sprint.dynatracelabs.com
 stg-k8s.dev.dynatracelabs.com
 stg-snd-andrzej.dynatracelabs.com
@@ -5503,6 +5588,7 @@ store-cmso.h639.spine-dev.internal.dynatracelabs.com
 store-cmso.imports.spine-dev.internal.dynatracelabs.com
 store-cmss.guni.spine-dev.internal.dynatracelabs.com
 store-cmss.h684.spine-dev.internal.dynatracelabs.com
+store-cmss.images.spine-dev.internal.dynatracelabs.com
 store-cmss.t1234.spine-dev.internal.dynatracelabs.com
 store-cmsu.h616.spine-dev.internal.dynatracelabs.com
 store-cmsu.h624.spine-dev.internal.dynatracelabs.com
@@ -5544,6 +5630,7 @@ switcher-days.dynatracelabs.com
 switcher-releasew.dynatracelabs.com
 switcher-sprint.dynatracelabs.com
 sword-performance.davis.dynatracelabs.com
+swp02651.dynatracelabs.com
 swp02651y.sprint.dynatracelabs.com
 syb31902q.sprint.dynatracelabs.com
 synth-api-kstest.dev-synthetic.dynatracelabs.com
@@ -5599,6 +5686,7 @@ sysg.at-pcf-2-13-managed.nimbus.dev.dynatracelabs.com
 sysi.akishkin-at-pcf-2-13.nimbus.dev.dynatracelabs.com
 syso.at-pcf-2-13.nimbus.dev.dynatracelabs.com
 syss.at-pcf-2-12.nimbus.dev.dynatracelabs.com
+syss.at-pcf-6-0-managed.nimbus.dev.dynatracelabs.com
 syss.at-pcf-debug.nimbus.dev.dynatracelabs.com
 system.cf.dev.dynatracelabs.com
 system.pcfeu.dev.dynatracelabs.com
@@ -5653,6 +5741,8 @@ tenants.dac.dta-eph-dtaop-20261126-3e64.anywhere.internal.dynatracelabs.com
 tenants.dac.dta-eph-dtaop-20261126-4273.anywhere.internal.dynatracelabs.com
 tenants.dac.dta-eph-dtaop-20261126-9cbd.anywhere.internal.dynatracelabs.com
 tenants.dac.dta-eph-dtaop-20261126-fcd8.anywhere.internal.dynatracelabs.com
+tenants.dac.dta-eph-dtaop-20261127-79ed.anywhere.internal.dynatracelabs.com
+tenants.dac.dta-eph-dtaop-20261127-933b.anywhere.internal.dynatracelabs.com
 test-alb.internal.dynatracelabs.com
 test-albk.internal.dynatracelabs.com
 test-chain-verify-2.spine-dev.internal.dynatracelabs.com
@@ -5766,6 +5856,7 @@ token-exchange-svcw.digitrans-prod.dynatracelabs.com
 token-exchange.spine-dev.internal.dynatracelabs.com
 token-exchange.spine-hardening.internal.dynatracelabs.com
 token-exchangeq.spine-dev.internal.dynatracelabs.com
+token.dynatracelabs.com
 tole.appframework.internal.dynatracelabs.com
 tole.dynatracelabs.com
 tolew.appframework.internal.dynatracelabs.com
@@ -5775,6 +5866,7 @@ toolbar.dynatracelabs.com
 tormey.dynatracelabs.com
 tov08230.dynatracelabs.com
 tov08230.sprint.dynatracelabs.com
+tower.dynatracelabs.com
 traffic.dynatracelabs.com
 train.dynatracelabs.com
 travisperkins.davis.dynatracelabs.com
@@ -5841,6 +5933,7 @@ uaay.sys.at-pcf-2-7.nimbus.dev.dynatracelabs.com
 uap09929u.sprint.dynatracelabs.com
 uat.dynatracelabs.com
 uem.dynatracelabs.com
+uemk.dynatracelabs.com
 ufo.dev.dynatracelabs.com
 ugt66702.dynatracelabs.com
 ugt66702y.sprint.dynatracelabs.com
@@ -5857,6 +5950,7 @@ ui.soc-toolkit.cns.research.dynatracelabs.com
 uitestautomation.dynatracelabs.com
 uiu.appframework.internal.dynatracelabs.com
 ulg34769.dynatracelabs.com
+ulg34769y.sprint.dynatracelabs.com
 ultraapi-day.dynatracelabs.com
 ultraapi-dayu.dynatracelabs.com
 ultraapi-sprint.dynatracelabs.com
@@ -5989,6 +6083,7 @@ virginiaitmq.dynatracelabs.com
 virustotal.dynatracelabs.com
 virustotal.sprint.dynatracelabs.com
 virustotali.sprint.dynatracelabs.com
+vof85405g.sprint.dynatracelabs.com
 vpa60071.dynatracelabs.com
 vpce.developers.spine-dev.internal.dynatracelabs.com
 vph98389.dynatracelabs.com
@@ -6380,6 +6475,7 @@ www.api.lima-consumption.spine-dev.internal.dynatracelabs.com
 www.api.lima-consumption.spine-hardening.internal.dynatracelabs.com
 www.apigw-public.da-dev1.anywhere.internal.dynatracelabs.com
 www.apigw.da-dev1.anywhere.internal.dynatracelabs.com
+www.appframework.internal.dynatracelabs.com
 www.apps.anywhere.internal.dynatracelabs.com
 www.apps.at-pcf-10-3.nimbus.dev.dynatracelabs.com
 www.apps.at-pcf-2-11.nimbus.dev.dynatracelabs.com
@@ -6423,6 +6519,7 @@ www.demo2.appframework.internal.dynatracelabs.com
 www.demo20.appframework.internal.dynatracelabs.com
 www.demo21.appframework.internal.dynatracelabs.com
 www.demo22.appframework.internal.dynatracelabs.com
+www.demo23.appframework.internal.dynatracelabs.com
 www.demo24.appframework.internal.dynatracelabs.com
 www.demo25.appframework.internal.dynatracelabs.com
 www.demo26.appframework.internal.dynatracelabs.com
@@ -6732,6 +6829,7 @@ www.srv.us-east-1.test.iam.internal.dynatracelabs.com
 www.srv.us-west-2.dev.iam.internal.dynatracelabs.com
 www.srv.us-west-2.sandbox.iam.internal.dynatracelabs.com
 www.staging.juno-ape.internal.dynatracelabs.com
+www.store-cms.feed.spine-dev.internal.dynatracelabs.com
 www.sys.at-pcf-10-3.nimbus.dev.dynatracelabs.com
 www.sys.at-pcf-2-11.nimbus.dev.dynatracelabs.com
 www.testing.ada.spine-dev.internal.dynatracelabs.com
@@ -6790,6 +6888,7 @@ zhs76074i.sprint.dynatracelabs.com
 zoominfo.davis.dynatracelabs.com
 zoominfos.davis.dynatracelabs.com
 ztn45169.dynatracelabs.com
+zyl73619.dynatracelabs.com
 zyl73619y.sprint.dynatracelabs.com
 zzyy.dtw-skunkworks.dynatracelabs.com
 zzyys.dtw-skunkworks.dynatracelabs.com
